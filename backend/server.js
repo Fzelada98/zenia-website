@@ -365,63 +365,58 @@ app.post('/webhook/booking', rateLimit, async (req, res) => {
   fs.writeFileSync(bookingFile, JSON.stringify(booking, null, 2), 'utf-8');
   console.log(`\nNEW BOOKING [${id}] ${company} (${size}, ${area})`);
 
-  // Respond immediately
-  res.json({ status: 'received', id });
-
-  // Process in background using a promise chain (stays alive on Render)
+  // Process synchronously (keeps Render connection alive until done)
   if (!isBudgetExceeded()) {
-    processBooking(booking, bookingFile, company, size, area, id).catch(err => {
-      console.error(`  FATAL ERROR for ${company}: ${err.message}`);
-    });
+    try {
+      booking.status = 'processing';
+      booking.updatedAt = new Date().toISOString();
+      fs.writeFileSync(bookingFile, JSON.stringify(booking, null, 2), 'utf-8');
+
+      console.log(`  Generating call script for ${company}...`);
+      const startTime = Date.now();
+      const html = await generateCallScript(company, size, area);
+      const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
+
+      if (!html || html.trim().length < 100) {
+        throw new Error('Script too short or empty');
+      }
+
+      // Save HTML briefing in company folder
+      const sanitized = company.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 50);
+      const companyDir = path.join(BRIEFINGS_DIR, sanitized, 'call-scripts');
+      if (!fs.existsSync(companyDir)) fs.mkdirSync(companyDir, { recursive: true });
+
+      const date = new Date().toISOString().split('T')[0];
+      const shortId = id.split('-')[0];
+      const filename = `${date}_call-script_${shortId}.html`;
+      const filepath = path.join(companyDir, filename);
+      fs.writeFileSync(filepath, html, 'utf-8');
+
+      booking.status = 'done';
+      booking.briefingFile = `${sanitized}/call-scripts/${filename}`;
+      booking.updatedAt = new Date().toISOString();
+      fs.writeFileSync(bookingFile, JSON.stringify(booking, null, 2), 'utf-8');
+
+      console.log(`  DONE: ${company} (${elapsed}s, ${html.length} chars) -> ${sanitized}/call-scripts/${filename}`);
+
+      // Send email notification
+      await sendCallScriptNotification(booking, html, filename);
+      console.log('');
+
+      res.json({ status: 'done', id, file: booking.briefingFile });
+
+    } catch (err) {
+      console.error(`  ERROR generating script for ${company}: ${err.message}`);
+      booking.status = 'error';
+      booking.error = err.message;
+      booking.updatedAt = new Date().toISOString();
+      fs.writeFileSync(bookingFile, JSON.stringify(booking, null, 2), 'utf-8');
+      res.json({ status: 'error', id, error: err.message });
+    }
+  } else {
+    res.json({ status: 'received', id, note: 'Budget exceeded' });
   }
 });
-
-// Background processing function (keeps Node event loop alive)
-async function processBooking(booking, bookingFile, company, size, area, id) {
-  try {
-    booking.status = 'processing';
-    booking.updatedAt = new Date().toISOString();
-    fs.writeFileSync(bookingFile, JSON.stringify(booking, null, 2), 'utf-8');
-
-    console.log(`  Generating call script for ${company}...`);
-    const startTime = Date.now();
-    const html = await generateCallScript(company, size, area);
-    const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
-
-    if (!html || html.trim().length < 100) {
-      throw new Error('Script too short or empty');
-    }
-
-    // Save HTML briefing in company folder
-    const sanitized = company.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 50);
-    const companyDir = path.join(BRIEFINGS_DIR, sanitized, 'call-scripts');
-    if (!fs.existsSync(companyDir)) fs.mkdirSync(companyDir, { recursive: true });
-
-    const date = new Date().toISOString().split('T')[0];
-    const shortId = id.split('-')[0];
-    const filename = `${date}_call-script_${shortId}.html`;
-    const filepath = path.join(companyDir, filename);
-    fs.writeFileSync(filepath, html, 'utf-8');
-
-    booking.status = 'done';
-    booking.briefingFile = `${sanitized}/call-scripts/${filename}`;
-    booking.updatedAt = new Date().toISOString();
-    fs.writeFileSync(bookingFile, JSON.stringify(booking, null, 2), 'utf-8');
-
-    console.log(`  DONE: ${company} (${elapsed}s, ${html.length} chars) -> ${sanitized}/call-scripts/${filename}`);
-
-    // Send email notification
-    await sendCallScriptNotification(booking, html, filename);
-    console.log('');
-
-  } catch (err) {
-    console.error(`  ERROR generating script for ${company}: ${err.message}`);
-    booking.status = 'error';
-    booking.error = err.message;
-    booking.updatedAt = new Date().toISOString();
-    fs.writeFileSync(bookingFile, JSON.stringify(booking, null, 2), 'utf-8');
-  }
-}
 
 // ADMIN: List pending bookings
 app.get('/bookings/pending', requireAdminKey, (req, res) => {

@@ -526,38 +526,6 @@ a { color: inherit; text-decoration: none; }
   width: 100%;
   height: 100%;
 }
-.booking-next-btn {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10002;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 12px 24px;
-  background: var(--primary);
-  color: #fff;
-  border: none;
-  border-radius: var(--radius-full);
-  font-family: inherit;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
-  transition: all 0.25s ease;
-  animation: fadeInUp 0.3s ease;
-}
-.booking-next-btn:hover {
-  background: var(--primary-deep);
-  transform: translateX(-50%) translateY(-2px);
-  box-shadow: 0 6px 28px rgba(59, 130, 246, 0.5);
-}
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateX(-50%) translateY(10px); }
-  to { opacity: 1; transform: translateX(-50%) translateY(0); }
-}
-
 /* Step 2: Questionnaire */
 .booking-step-form {
   display: flex;
@@ -1178,10 +1146,6 @@ a { color: inherit; text-decoration: none; }
     <!-- Step 1: Calendly -->
     <div class="booking-step booking-step-calendly active" id="bookingStep1">
       <div class="calendly-inline-widget" data-url="https://calendly.com/zeladauriartef/30min?hide_gdpr_banner=1&background_color=111827&text_color=f1f5f9&primary_color=3B82F6"></div>
-      <button class="booking-next-btn" id="bookingNextBtn" onclick="showStep(2)" style="display:none">
-        <span id="nextBtnText">Time selected? Continue</span>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-      </button>
     </div>
 
     <!-- Step 2: Questionnaire -->
@@ -1715,10 +1679,8 @@ function openCalendly(e) {
   e.preventDefault();
   bookingStep = 1;
   showStep(1);
-  document.getElementById('bookingNextBtn').style.display = 'none';
   document.getElementById('bookingModal').classList.add('active');
   document.body.style.overflow = 'hidden';
-  startNextBtnFallback();
 }
 
 function closeBooking() {
@@ -1777,8 +1739,7 @@ function translateForm() {
     noticeText: 'Prepararemos un breve analisis de oportunidades AI para tu empresa antes de la llamada.',
     confirmTitle: '¡Todo listo!',
     confirmDesc: 'Analizaremos tu empresa antes de la llamada y llegaremos preparados con oportunidades AI personalizadas para tu negocio.',
-    confirmCloseBtn: 'Cerrar',
-    nextBtnText: '¿Hora seleccionada? Continuar'
+    confirmCloseBtn: 'Cerrar'
   };
   Object.keys(t).forEach(function(id) {
     var el = document.getElementById(id);
@@ -1808,29 +1769,15 @@ function submitBookingForm(e) {
 
 // Listen for Calendly events
 window.addEventListener('message', function(e) {
-  if (!e.data || !e.data.event) return;
-  // Auto-advance when booking is confirmed
-  if (e.data.event === 'calendly.event_scheduled') {
-    showStep(2);
-    return;
+  var data = e.data;
+  if (typeof data === 'string') {
+    try { data = JSON.parse(data); } catch(err) { return; }
   }
-  // Show "Continue" button when user picks a date/time
-  if (e.data.event === 'calendly.date_and_time_selected' ||
-      e.data.event === 'calendly.event_type_viewed') {
-    setTimeout(function() {
-      var btn = document.getElementById('bookingNextBtn');
-      if (btn && bookingStep === 1) btn.style.display = 'flex';
-    }, 3000);
+  if (!data || !data.event) return;
+  if (data.event === 'calendly.event_scheduled') {
+    showStep(2);
   }
 });
-
-// Fallback: show next button after 8 seconds in case events don't fire
-function startNextBtnFallback() {
-  setTimeout(function() {
-    var btn = document.getElementById('bookingNextBtn');
-    if (btn && bookingStep === 1) btn.style.display = 'flex';
-  }, 8000);
-}
 
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') closeBooking();

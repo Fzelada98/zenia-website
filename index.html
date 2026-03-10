@@ -441,8 +441,8 @@ a { color: inherit; text-decoration: none; }
   .footer-columns { flex-direction: column; gap: 32px; }
 }
 
-/* Calendly Modal */
-.calendly-overlay {
+/* Booking Modal */
+.booking-overlay {
   position: fixed;
   inset: 0;
   z-index: 10000;
@@ -454,17 +454,17 @@ a { color: inherit; text-decoration: none; }
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
-.calendly-overlay.active {
+.booking-overlay.active {
   opacity: 1;
   visibility: visible;
 }
-.calendly-overlay-bg {
+.booking-overlay-bg {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(8px);
 }
-.calendly-modal {
+.booking-modal {
   position: relative;
   width: 90%;
   max-width: 680px;
@@ -478,10 +478,10 @@ a { color: inherit; text-decoration: none; }
   transition: transform 0.3s ease;
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
 }
-.calendly-overlay.active .calendly-modal {
+.booking-overlay.active .booking-modal {
   transform: scale(1) translateY(0);
 }
-.calendly-modal-close {
+.booking-modal-close {
   position: absolute;
   top: 12px;
   right: 12px;
@@ -499,13 +499,277 @@ a { color: inherit; text-decoration: none; }
   justify-content: center;
   transition: color 0.2s, border-color 0.2s;
 }
-.calendly-modal-close:hover {
+.booking-modal-close:hover {
   color: var(--text-primary);
   border-color: var(--border-hover);
 }
-.calendly-modal .calendly-inline-widget {
+
+/* Booking Steps */
+.booking-step {
+  position: absolute;
+  inset: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.booking-step.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(40px);
+}
+.booking-step.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+
+/* Step 1: Calendly */
+.booking-step-calendly .calendly-inline-widget {
   width: 100%;
   height: 100%;
+}
+.booking-next-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10002;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 24px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-full);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
+  transition: all 0.25s ease;
+  animation: fadeInUp 0.3s ease;
+}
+.booking-next-btn:hover {
+  background: var(--primary-deep);
+  transform: translateX(-50%) translateY(-2px);
+  box-shadow: 0 6px 28px rgba(59, 130, 246, 0.5);
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateX(-50%) translateY(10px); }
+  to { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+/* Step 2: Questionnaire */
+.booking-step-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 40px;
+  height: 100%;
+  overflow-y: auto;
+}
+.booking-form-inner {
+  width: 100%;
+  max-width: 420px;
+}
+.booking-form-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+.booking-form-icon {
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 18px;
+  background: var(--glow-blue);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.booking-form-icon svg {
+  width: 24px;
+  height: 24px;
+  color: var(--primary);
+}
+.booking-form-header h3 {
+  font-size: 1.35rem;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+.booking-form-header p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Form Fields */
+.booking-field {
+  margin-bottom: 20px;
+}
+.booking-field label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  letter-spacing: 0.3px;
+}
+.booking-field input,
+.booking-field select {
+  width: 100%;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 15px;
+  transition: border-color 0.2s, background 0.2s;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.booking-field input::placeholder {
+  color: var(--text-muted);
+}
+.booking-field input:focus,
+.booking-field select:focus {
+  border-color: var(--primary);
+  background: rgba(59, 130, 246, 0.04);
+}
+.booking-field select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2394A3B8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 40px;
+}
+.booking-field select option {
+  background: var(--bg-surface);
+  color: var(--text-primary);
+}
+
+/* Submit Button */
+.booking-submit {
+  width: 100%;
+  padding: 16px 32px;
+  margin-top: 8px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-full);
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3), 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.booking-submit:hover {
+  background: var(--primary-deep);
+  box-shadow: 0 0 32px rgba(59, 130, 246, 0.45), 0 8px 24px rgba(0, 0, 0, 0.3);
+  transform: translateY(-1px);
+}
+
+/* Analysis Notice */
+.booking-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 24px;
+  padding: 14px 16px;
+  background: rgba(59, 130, 246, 0.06);
+  border: 1px solid rgba(59, 130, 246, 0.12);
+  border-radius: var(--radius-md);
+}
+.booking-notice svg {
+  width: 18px;
+  height: 18px;
+  color: var(--primary);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.booking-notice p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Step 3: Confirmation */
+.booking-step-confirm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 40px;
+  height: 100%;
+  text-align: center;
+}
+.booking-confirm-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 24px;
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.booking-confirm-icon svg {
+  width: 28px;
+  height: 28px;
+  color: #22C55E;
+}
+.booking-step-confirm h3 {
+  font-size: 1.4rem;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+.booking-step-confirm p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  max-width: 380px;
+  line-height: 1.7;
+}
+.booking-confirm-close {
+  margin-top: 32px;
+  padding: 12px 28px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.booking-confirm-close:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--border-hover);
+}
+
+/* Progress indicator */
+.booking-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 10002;
+  display: flex;
+}
+.booking-progress-bar {
+  height: 100%;
+  transition: width 0.4s ease;
+  background: linear-gradient(90deg, var(--primary), var(--accent-violet));
+  border-radius: 0 2px 2px 0;
+}
+
+@media (max-width: 768px) {
+  .booking-step-form { padding: 36px 24px; }
+  .booking-step-confirm { padding: 36px 24px; }
 }
 </style>
 </head>
@@ -904,12 +1168,76 @@ a { color: inherit; text-decoration: none; }
   </div>
 </section>
 
-<!-- CALENDLY MODAL -->
-<div class="calendly-overlay" id="calendlyModal">
-  <div class="calendly-overlay-bg" onclick="closeCalendly()"></div>
-  <div class="calendly-modal">
-    <button class="calendly-modal-close" onclick="closeCalendly()">&times;</button>
-    <div class="calendly-inline-widget" data-url="https://calendly.com/zeladauriartef/30min?hide_gdpr_banner=1&background_color=111827&text_color=f1f5f9&primary_color=3B82F6"></div>
+<!-- BOOKING MODAL -->
+<div class="booking-overlay" id="bookingModal">
+  <div class="booking-overlay-bg" onclick="closeBooking()"></div>
+  <div class="booking-modal">
+    <div class="booking-progress"><div class="booking-progress-bar" id="bookingProgress" style="width:50%"></div></div>
+    <button class="booking-modal-close" onclick="closeBooking()">&times;</button>
+
+    <!-- Step 1: Calendly -->
+    <div class="booking-step booking-step-calendly active" id="bookingStep1">
+      <div class="calendly-inline-widget" data-url="https://calendly.com/zeladauriartef/30min?hide_gdpr_banner=1&background_color=111827&text_color=f1f5f9&primary_color=3B82F6"></div>
+      <button class="booking-next-btn" id="bookingNextBtn" onclick="showStep(2)" style="display:none">
+        <span id="nextBtnText">Time selected? Continue</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+
+    <!-- Step 2: Questionnaire -->
+    <div class="booking-step booking-step-form hidden" id="bookingStep2">
+      <div class="booking-form-inner">
+        <div class="booking-form-header">
+          <div class="booking-form-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <h3 id="formTitle">Help us prepare your session</h3>
+          <p id="formDesc">3 quick questions so we can make the most of your time</p>
+        </div>
+        <form id="bookingForm" onsubmit="submitBookingForm(event)">
+          <div class="booking-field">
+            <label id="labelCompany">Company name</label>
+            <input type="text" id="companyName" placeholder="Enter your company name" required>
+          </div>
+          <div class="booking-field">
+            <label id="labelSize">Company size</label>
+            <select id="companySize" required>
+              <option value="" disabled selected id="optSizeDefault">Select...</option>
+              <option value="1-10" id="optSize1">1-10 employees</option>
+              <option value="10-50" id="optSize2">10-50 employees</option>
+              <option value="50-200" id="optSize3">50-200 employees</option>
+              <option value="200+" id="optSize4">200+ employees</option>
+            </select>
+          </div>
+          <div class="booking-field">
+            <label id="labelArea">Which area would you most like to improve?</label>
+            <select id="companyArea" required>
+              <option value="" disabled selected id="optAreaDefault">Select...</option>
+              <option value="Sales" id="optArea1">Sales</option>
+              <option value="Customer Support" id="optArea2">Customer Support</option>
+              <option value="Operations" id="optArea3">Operations</option>
+              <option value="Internal Productivity" id="optArea4">Internal Productivity</option>
+              <option value="Not sure yet" id="optArea5">Not sure yet</option>
+            </select>
+          </div>
+          <button type="submit" class="booking-submit" id="formSubmitBtn">Confirm Booking</button>
+          <div class="booking-notice">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+            <p id="noticeText">We will prepare a brief AI opportunity analysis for your company before the call.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Step 3: Confirmation -->
+    <div class="booking-step booking-step-confirm hidden" id="bookingStep3">
+      <div class="booking-confirm-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h3 id="confirmTitle">You're all set!</h3>
+      <p id="confirmDesc">We'll analyze your company before the call and come prepared with tailored AI opportunities for your business.</p>
+      <button class="booking-confirm-close" onclick="closeBooking()" id="confirmCloseBtn">Close</button>
+    </div>
   </div>
 </div>
 
@@ -1380,17 +1708,132 @@ applyTranslations(detectLanguage());
 </script>
 <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <script>
+// Booking modal state
+let bookingStep = 1;
+
 function openCalendly(e) {
   e.preventDefault();
-  document.getElementById('calendlyModal').classList.add('active');
+  bookingStep = 1;
+  showStep(1);
+  document.getElementById('bookingNextBtn').style.display = 'none';
+  document.getElementById('bookingModal').classList.add('active');
   document.body.style.overflow = 'hidden';
+  startNextBtnFallback();
 }
-function closeCalendly() {
-  document.getElementById('calendlyModal').classList.remove('active');
+
+function closeBooking() {
+  const modal = document.getElementById('bookingModal');
+  modal.classList.remove('active');
   document.body.style.overflow = '';
+  // Reset form after close animation
+  setTimeout(function() {
+    document.getElementById('bookingForm').reset();
+    showStep(1);
+  }, 350);
 }
+
+function showStep(step) {
+  bookingStep = step;
+  var steps = [
+    document.getElementById('bookingStep1'),
+    document.getElementById('bookingStep2'),
+    document.getElementById('bookingStep3')
+  ];
+  steps.forEach(function(s, i) {
+    if (i + 1 === step) {
+      s.classList.remove('hidden');
+      s.classList.add('active');
+    } else {
+      s.classList.add('hidden');
+      s.classList.remove('active');
+    }
+  });
+  var progress = step === 1 ? 50 : step === 2 ? 80 : 100;
+  document.getElementById('bookingProgress').style.width = progress + '%';
+
+  // Apply translations to form if in Spanish
+  if (currentLang === 'es') translateForm();
+}
+
+function translateForm() {
+  var t = {
+    formTitle: 'Ayudanos a preparar tu sesion',
+    formDesc: '3 preguntas rapidas para aprovechar al maximo tu tiempo',
+    labelCompany: 'Nombre de la empresa',
+    labelSize: 'Tamaño de la empresa',
+    labelArea: '¿Que area te gustaria mejorar mas?',
+    optSizeDefault: 'Seleccionar...',
+    optSize1: '1-10 empleados',
+    optSize2: '10-50 empleados',
+    optSize3: '50-200 empleados',
+    optSize4: '200+ empleados',
+    optAreaDefault: 'Seleccionar...',
+    optArea1: 'Ventas',
+    optArea2: 'Atencion al Cliente',
+    optArea3: 'Operaciones',
+    optArea4: 'Productividad Interna',
+    optArea5: 'No estoy seguro',
+    formSubmitBtn: 'Confirmar Reserva',
+    noticeText: 'Prepararemos un breve analisis de oportunidades AI para tu empresa antes de la llamada.',
+    confirmTitle: '¡Todo listo!',
+    confirmDesc: 'Analizaremos tu empresa antes de la llamada y llegaremos preparados con oportunidades AI personalizadas para tu negocio.',
+    confirmCloseBtn: 'Cerrar',
+    nextBtnText: '¿Hora seleccionada? Continuar'
+  };
+  Object.keys(t).forEach(function(id) {
+    var el = document.getElementById(id);
+    if (el) {
+      if (el.tagName === 'INPUT') el.placeholder = t[id];
+      else if (el.tagName === 'OPTION') el.textContent = t[id];
+      else el.textContent = t[id];
+    }
+  });
+}
+
+function submitBookingForm(e) {
+  e.preventDefault();
+  var data = {
+    company: document.getElementById('companyName').value,
+    size: document.getElementById('companySize').value,
+    area: document.getElementById('companyArea').value,
+    timestamp: new Date().toISOString()
+  };
+  // Store locally for now (can be connected to backend/webhook later)
+  var bookings = JSON.parse(localStorage.getItem('zenia-bookings') || '[]');
+  bookings.push(data);
+  localStorage.setItem('zenia-bookings', JSON.stringify(bookings));
+  console.log('Booking data:', data);
+  showStep(3);
+}
+
+// Listen for Calendly events
+window.addEventListener('message', function(e) {
+  if (!e.data || !e.data.event) return;
+  // Auto-advance when booking is confirmed
+  if (e.data.event === 'calendly.event_scheduled') {
+    showStep(2);
+    return;
+  }
+  // Show "Continue" button when user picks a date/time
+  if (e.data.event === 'calendly.date_and_time_selected' ||
+      e.data.event === 'calendly.event_type_viewed') {
+    setTimeout(function() {
+      var btn = document.getElementById('bookingNextBtn');
+      if (btn && bookingStep === 1) btn.style.display = 'flex';
+    }, 3000);
+  }
+});
+
+// Fallback: show next button after 8 seconds in case events don't fire
+function startNextBtnFallback() {
+  setTimeout(function() {
+    var btn = document.getElementById('bookingNextBtn');
+    if (btn && bookingStep === 1) btn.style.display = 'flex';
+  }, 8000);
+}
+
 document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') closeCalendly();
+  if (e.key === 'Escape') closeBooking();
 });
 </script>
 </body>

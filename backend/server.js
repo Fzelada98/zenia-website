@@ -235,7 +235,7 @@ async function generateCallScript(company, size, area) {
 // EMAIL NOTIFICATIONS (Resend HTTP API)
 // ============================================================
 const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
-const NOTIFY_EMAIL = process.env.NOTIFY_EMAIL || 'fabrizzio.zelada@zeniapartners.com';
+const NOTIFY_EMAIL = process.env.NOTIFY_EMAIL || 'zeladauriartef@gmail.com';
 
 async function sendCallScriptNotification(booking, html, filename) {
   if (!process.env.RESEND_API_KEY) {

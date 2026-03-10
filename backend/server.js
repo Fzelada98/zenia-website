@@ -254,11 +254,15 @@ ${researchHtml}
 
 <hr class="divider">
 
+<div class="section"><h2>Call Script (30 min)</h2></div>
+
 ${phases1to3Html}
 
 ${phases4to6Html}
 
 <hr class="divider">
+
+<div class="section"><h2>Objection Playbook (Belfort Loop)</h2></div>
 
 ${objectionsHtml}
 

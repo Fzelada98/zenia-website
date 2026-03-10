@@ -418,6 +418,31 @@ app.post('/webhook/booking', rateLimit, async (req, res) => {
   }
 });
 
+// ADMIN: Test email (no API credits used)
+app.get('/test-email', requireAdminKey, async (req, res) => {
+  const config = {
+    GMAIL_USER: process.env.GMAIL_USER ? 'SET' : 'MISSING',
+    GMAIL_APP_PASSWORD: process.env.GMAIL_APP_PASSWORD ? 'SET' : 'MISSING',
+    NOTIFY_EMAIL: process.env.NOTIFY_EMAIL || process.env.GMAIL_USER || 'MISSING',
+  };
+
+  if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
+    return res.json({ error: 'Email not configured', config });
+  }
+
+  try {
+    await emailTransporter.sendMail({
+      from: `"Alfred - ZENIA" <${process.env.GMAIL_USER}>`,
+      to: NOTIFY_EMAIL,
+      subject: 'ZENIA Test - Email Working',
+      html: '<p>Si ves esto, el email funciona correctamente desde Render.</p>',
+    });
+    res.json({ status: 'sent', config, to: NOTIFY_EMAIL });
+  } catch (err) {
+    res.json({ status: 'error', error: err.message, config });
+  }
+});
+
 // ADMIN: List pending bookings
 app.get('/bookings/pending', requireAdminKey, (req, res) => {
   const bookings = loadBookingsByStatus('pending');

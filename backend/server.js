@@ -4,7 +4,7 @@ const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
-const nodemailer = require('nodemailer');
+const { Resend } = require('resend');
 const Anthropic = require('@anthropic-ai/sdk');
 const { SYSTEM_PROMPT_PART1, SYSTEM_PROMPT_PART2, SYSTEM_PROMPT_PART3, buildUserPromptPart1, buildUserPromptPart2, buildUserPromptPart3 } = require('./research-prompt');
 
@@ -232,21 +232,14 @@ async function generateCallScript(company, size, area) {
 }
 
 // ============================================================
-// EMAIL NOTIFICATIONS (Gmail SMTP)
+// EMAIL NOTIFICATIONS (Resend HTTP API)
 // ============================================================
-const emailTransporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: process.env.GMAIL_USER,
-    pass: process.env.GMAIL_APP_PASSWORD,
-  },
-});
-
-const NOTIFY_EMAIL = process.env.NOTIFY_EMAIL || process.env.GMAIL_USER;
+const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
+const NOTIFY_EMAIL = process.env.NOTIFY_EMAIL || 'fabrizzio.zelada@zeniapartners.com';
 
 async function sendCallScriptNotification(booking, html, filename) {
-  if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
-    console.log('  Email not configured, skipping notification');
+  if (!process.env.RESEND_API_KEY) {
+    console.log('  Email not configured (RESEND_API_KEY missing), skipping notification');
     return;
   }
 
@@ -300,19 +293,18 @@ async function sendCallScriptNotification(booking, html, filename) {
 </div>`;
 
   try {
-    await emailTransporter.sendMail({
-      from: `"Alfred - ZENIA" <${process.env.GMAIL_USER}>`,
-      replyTo: NOTIFY_EMAIL,
-      to: NOTIFY_EMAIL,
+    const { data, error } = await resend.emails.send({
+      from: 'Alfred - ZENIA <onboarding@resend.dev>',
+      to: [NOTIFY_EMAIL],
       subject: `ZENIA Call Prep: ${company} (${area})`,
       html: emailHtml,
       attachments: [{
         filename: `call-script_${company.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.html`,
-        content: html,
-        contentType: 'text/html',
+        content: Buffer.from(html).toString('base64'),
       }],
     });
-    console.log(`  Email sent to ${NOTIFY_EMAIL}`);
+    if (error) throw new Error(error.message);
+    console.log(`  Email sent to ${NOTIFY_EMAIL} (id: ${data?.id})`);
   } catch (err) {
     console.error(`  Email error: ${err.message}`);
   }
@@ -421,23 +413,23 @@ app.post('/webhook/booking', rateLimit, async (req, res) => {
 // ADMIN: Test email (no API credits used)
 app.get('/test-email', requireAdminKey, async (req, res) => {
   const config = {
-    GMAIL_USER: process.env.GMAIL_USER ? 'SET' : 'MISSING',
-    GMAIL_APP_PASSWORD: process.env.GMAIL_APP_PASSWORD ? 'SET' : 'MISSING',
-    NOTIFY_EMAIL: process.env.NOTIFY_EMAIL || process.env.GMAIL_USER || 'MISSING',
+    RESEND_API_KEY: process.env.RESEND_API_KEY ? 'SET' : 'MISSING',
+    NOTIFY_EMAIL,
   };
 
-  if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
-    return res.json({ error: 'Email not configured', config });
+  if (!process.env.RESEND_API_KEY) {
+    return res.json({ error: 'Email not configured - add RESEND_API_KEY', config });
   }
 
   try {
-    await emailTransporter.sendMail({
-      from: `"Alfred - ZENIA" <${process.env.GMAIL_USER}>`,
-      to: NOTIFY_EMAIL,
+    const { data, error } = await resend.emails.send({
+      from: 'Alfred - ZENIA <onboarding@resend.dev>',
+      to: [NOTIFY_EMAIL],
       subject: 'ZENIA Test - Email Working',
       html: '<p>Si ves esto, el email funciona correctamente desde Render.</p>',
     });
-    res.json({ status: 'sent', config, to: NOTIFY_EMAIL });
+    if (error) throw new Error(error.message);
+    res.json({ status: 'sent', config, emailId: data?.id });
   } catch (err) {
     res.json({ status: 'error', error: err.message, config });
   }

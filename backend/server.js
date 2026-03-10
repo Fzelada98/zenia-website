@@ -240,9 +240,20 @@ async function generateCallScript(company, size, area) {
   let finalHtml;
   if (part1Html.includes('<!-- SCRIPT_INSERT -->')) {
     finalHtml = part1Html.replace('<!-- SCRIPT_INSERT -->', insertContent);
+  } else if (/<\/body>/i.test(part1Html)) {
+    finalHtml = part1Html.replace(/<\/body>/i, insertContent + '\n</body>');
+  } else if (/<\/html>/i.test(part1Html)) {
+    finalHtml = part1Html.replace(/<\/html>/i, insertContent + '\n</body></html>');
   } else {
-    finalHtml = part1Html.replace('</body>', insertContent + '\n</body>');
+    // Fallback: just concatenate everything
+    finalHtml = part1Html + '\n' + insertContent + '\n</body></html>';
   }
+
+  // Log assembly method for debugging
+  if (part1Html.includes('<!-- SCRIPT_INSERT -->')) console.log('  Assembly: SCRIPT_INSERT marker');
+  else if (/<\/body>/i.test(part1Html)) console.log('  Assembly: </body> fallback');
+  else if (/<\/html>/i.test(part1Html)) console.log('  Assembly: </html> fallback');
+  else console.log('  Assembly: concatenation fallback');
 
   return finalHtml;
 }

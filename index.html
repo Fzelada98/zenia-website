@@ -1759,11 +1759,24 @@ function submitBookingForm(e) {
     area: document.getElementById('companyArea').value,
     timestamp: new Date().toISOString()
   };
-  // Store locally for now (can be connected to backend/webhook later)
+
+  // Store locally as backup
   var bookings = JSON.parse(localStorage.getItem('zenia-bookings') || '[]');
   bookings.push(data);
   localStorage.setItem('zenia-bookings', JSON.stringify(bookings));
-  console.log('Booking data:', data);
+
+  // Send to ZENIA Research Agent backend to auto-generate briefing
+  var WEBHOOK_URL = window.ZENIA_WEBHOOK_URL || 'https://zenia-backend-y6hp.onrender.com/webhook/booking';
+  fetch(WEBHOOK_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+  }).then(function(r) {
+    console.log('Briefing generation triggered for:', data.company);
+  }).catch(function(err) {
+    console.warn('Webhook not reachable, data saved locally:', err.message);
+  });
+
   showStep(3);
 }
 

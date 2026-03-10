@@ -1,0 +1,16 @@
+{
+  "name": "zenia-booking-server",
+  "version": "2.0.0",
+  "description": "ZENIA booking server - receives and stores booking data",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "nodemailer": "^6.10.1"
+  }
+}

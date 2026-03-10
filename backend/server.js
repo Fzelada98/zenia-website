@@ -176,6 +176,104 @@ function requireAdminKey(req, res, next) {
 }
 
 // ============================================================
+// FIXED HTML TEMPLATE (uniform styling for all scripts)
+// ============================================================
+function buildHtmlTemplate(company, size, area, researchHtml, phases1to3Html, phases4to6Html, objectionsHtml) {
+  return `<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZENIA Call Script: ${company}</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; background: #f8f9fa; color: #1a1a2e; line-height: 1.6; padding: 24px; max-width: 900px; margin: 0 auto; }
+  h1 { font-size: 28px; color: #1a1a2e; margin-bottom: 4px; }
+  h2 { font-size: 20px; color: #2d3436; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid #e0e0e0; }
+  h3 { font-size: 17px; color: #fff; margin: 0; }
+  h4 { font-size: 15px; color: #1a73e8; margin: 16px 0 8px 0; padding: 6px 0; border-left: 3px solid #1a73e8; padding-left: 10px; }
+  p { margin-bottom: 8px; font-size: 14px; }
+  ul { margin: 8px 0 16px 20px; }
+  li { margin-bottom: 6px; font-size: 14px; }
+  blockquote { border-left: 3px solid #f39c12; background: #fffdf5; padding: 10px 14px; margin: 8px 0; font-style: italic; font-size: 14px; color: #2d3436; }
+
+  .header { background: #1a1a2e; color: #fff; padding: 24px; border-radius: 10px; margin-bottom: 24px; }
+  .header h1 { color: #fff; }
+  .header .subtitle { color: #a0a0c0; font-size: 14px; margin-top: 4px; }
+
+  .section { background: #fff; border-radius: 10px; padding: 20px 24px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+
+  .anchor-phrase { font-size: 20px; font-weight: 700; color: #e17055; font-style: italic; text-align: center; padding: 16px; background: #fff5f3; border-radius: 8px; }
+
+  .phase { background: #fff; border-radius: 10px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); overflow: hidden; }
+  .phase-header { background: #1a1a2e; padding: 14px 20px; display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .phase-content { padding: 20px 24px; }
+
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+  .badge-tone { background: #f39c12; color: #fff; }
+  .badge-read { background: #00b894; color: #fff; }
+  .badge-time { background: #6c5ce7; color: #fff; }
+  .badge-anchor { background: #e17055; color: #fff; }
+
+  .script-text { background: #f8f9fa; border-radius: 8px; padding: 12px 16px; margin: 8px 0; font-size: 14px; line-height: 1.7; }
+  .script-text strong { color: #1a1a2e; }
+
+  .tactical-note { background: #fffde7; border-left: 3px solid #f39c12; padding: 8px 12px; margin: 10px 0; font-size: 13px; color: #5d4037; font-style: italic; }
+
+  .objection { background: #fff; border-radius: 10px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); overflow: hidden; }
+  .objection-header { background: #2d3436; padding: 12px 20px; display: flex; align-items: center; gap: 12px; }
+  .objection-header h4 { color: #fff; margin: 0; border: none; padding: 0; font-size: 14px; }
+  .objection-number { background: #e17055; color: #fff; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; flex-shrink: 0; }
+  .objection-content { padding: 16px 20px; }
+
+  .divider { border: none; border-top: 2px dashed #e0e0e0; margin: 32px 0; }
+
+  @media print {
+    body { padding: 12px; background: #fff; }
+    .phase-header, .objection-header, .header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .section, .phase, .objection { break-inside: avoid; box-shadow: none; border: 1px solid #e0e0e0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>ZENIA Call Script: ${company}</h1>
+  <p class="subtitle">${area} | ${size} empleados | Generado: ${new Date().toLocaleDateString('es-PE', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+</div>
+
+<!-- ==================== RESEARCH & PREP ==================== -->
+${researchHtml}
+
+<hr class="divider">
+
+<!-- ==================== PHASES 1-3 ==================== -->
+<div class="section">
+  <h2>Call Script - Fases 1 a 3</h2>
+</div>
+${phases1to3Html}
+
+<hr class="divider">
+
+<!-- ==================== PHASES 4-6 ==================== -->
+<div class="section">
+  <h2>Call Script - Fases 4 a 6</h2>
+</div>
+${phases4to6Html}
+
+<hr class="divider">
+
+<!-- ==================== OBJECTION PLAYBOOK ==================== -->
+<div class="section">
+  <h2>Objection Playbook (Belfort Loop)</h2>
+</div>
+${objectionsHtml}
+
+</body>
+</html>`;
+}
+
+// ============================================================
 // GENERATE CALL SCRIPT (Claude API)
 // ============================================================
 async function generateCallScript(company, size, area) {
@@ -235,25 +333,9 @@ async function generateCallScript(company, size, area) {
   console.log(`  [4/4] Objections: ${response3.usage.output_tokens} out | $${usage3.cost.toFixed(4)}`);
   console.log(`  Total: $${totalCallCost.toFixed(4)} | Month: $${usage3.totalCost.toFixed(4)} / $${MONTHLY_BUDGET}`);
 
-  // === COMBINE: Insert Parts 2a+2b+3 into Part 1 ===
-  const insertContent = `\n${part2aHtml}\n\n${part2bHtml}\n\n${part3Html}\n`;
-  let finalHtml;
-  if (part1Html.includes('<!-- SCRIPT_INSERT -->')) {
-    finalHtml = part1Html.replace('<!-- SCRIPT_INSERT -->', insertContent);
-  } else if (/<\/body>/i.test(part1Html)) {
-    finalHtml = part1Html.replace(/<\/body>/i, insertContent + '\n</body>');
-  } else if (/<\/html>/i.test(part1Html)) {
-    finalHtml = part1Html.replace(/<\/html>/i, insertContent + '\n</body></html>');
-  } else {
-    // Fallback: just concatenate everything
-    finalHtml = part1Html + '\n' + insertContent + '\n</body></html>';
-  }
-
-  // Log assembly method for debugging
-  if (part1Html.includes('<!-- SCRIPT_INSERT -->')) console.log('  Assembly: SCRIPT_INSERT marker');
-  else if (/<\/body>/i.test(part1Html)) console.log('  Assembly: </body> fallback');
-  else if (/<\/html>/i.test(part1Html)) console.log('  Assembly: </html> fallback');
-  else console.log('  Assembly: concatenation fallback');
+  // === COMBINE: Fixed HTML template + content from all 4 calls ===
+  const finalHtml = buildHtmlTemplate(company, size, area, part1Html, part2aHtml, part2bHtml, part3Html);
+  console.log('  Assembly: fixed template');
 
   return finalHtml;
 }

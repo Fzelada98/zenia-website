@@ -6,7 +6,7 @@ const path = require('path');
 const crypto = require('crypto');
 const { Resend } = require('resend');
 const Anthropic = require('@anthropic-ai/sdk');
-const { SYSTEM_PROMPT_PART1, SYSTEM_PROMPT_PART2, SYSTEM_PROMPT_PART3, buildUserPromptPart1, buildUserPromptPart2, buildUserPromptPart3 } = require('./research-prompt');
+const { SYSTEM_PROMPT_PART1, SYSTEM_PROMPT_PART2A, SYSTEM_PROMPT_PART2B, SYSTEM_PROMPT_PART3, buildUserPromptPart1, buildUserPromptPart2A, buildUserPromptPart2B, buildUserPromptPart3 } = require('./research-prompt');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -179,10 +179,10 @@ function requireAdminKey(req, res, next) {
 // GENERATE CALL SCRIPT (Claude API)
 // ============================================================
 async function generateCallScript(company, size, area) {
-  // === ALL 3 CALLS IN PARALLEL (faster, avoids Render timeout) ===
-  console.log(`  Generating all 3 parts in parallel...`);
+  // === ALL 4 CALLS IN PARALLEL (split phases 1-3 / 4-6 for full detail) ===
+  console.log(`  Generating all 4 parts in parallel...`);
 
-  const [response1, response2, response3] = await Promise.all([
+  const [response1, response2a, response2b, response3] = await Promise.all([
     anthropic.messages.create({
       model: 'claude-haiku-4-5-20251001',
       max_tokens: 8192,
@@ -192,8 +192,14 @@ async function generateCallScript(company, size, area) {
     anthropic.messages.create({
       model: 'claude-haiku-4-5-20251001',
       max_tokens: 8192,
-      system: SYSTEM_PROMPT_PART2,
-      messages: [{ role: 'user', content: buildUserPromptPart2(company, size, area, '') }],
+      system: SYSTEM_PROMPT_PART2A,
+      messages: [{ role: 'user', content: buildUserPromptPart2A(company, size, area, '') }],
+    }),
+    anthropic.messages.create({
+      model: 'claude-haiku-4-5-20251001',
+      max_tokens: 8192,
+      system: SYSTEM_PROMPT_PART2B,
+      messages: [{ role: 'user', content: buildUserPromptPart2B(company, size, area, '') }],
     }),
     anthropic.messages.create({
       model: 'claude-haiku-4-5-20251001',
@@ -203,24 +209,34 @@ async function generateCallScript(company, size, area) {
     }),
   ]);
 
-  const extractText = (r) => r.content.filter(b => b.type === 'text').map(b => b.text).join('');
+  // Extract text and strip markdown code fences
+  const extractText = (r) => {
+    let text = r.content.filter(b => b.type === 'text').map(b => b.text).join('');
+    // Strip ```html ... ``` code fences that Haiku sometimes adds
+    text = text.replace(/^```(?:html)?\s*\n?/i, '').replace(/\n?```\s*$/i, '');
+    return text.trim();
+  };
+
   const part1Html = extractText(response1);
-  const part2Html = extractText(response2);
+  const part2aHtml = extractText(response2a);
+  const part2bHtml = extractText(response2b);
   const part3Html = extractText(response3);
 
-  // Record usage for all 3
+  // Record usage for all 4
   const usage1 = recordUsage(response1.usage.input_tokens, response1.usage.output_tokens);
-  const usage2 = recordUsage(response2.usage.input_tokens, response2.usage.output_tokens);
+  const usage2a = recordUsage(response2a.usage.input_tokens, response2a.usage.output_tokens);
+  const usage2b = recordUsage(response2b.usage.input_tokens, response2b.usage.output_tokens);
   const usage3 = recordUsage(response3.usage.input_tokens, response3.usage.output_tokens);
-  const totalCallCost = usage1.cost + usage2.cost + usage3.cost;
+  const totalCallCost = usage1.cost + usage2a.cost + usage2b.cost + usage3.cost;
 
-  console.log(`  [1/3] Tokens: ${response1.usage.input_tokens} in / ${response1.usage.output_tokens} out | $${usage1.cost.toFixed(4)}`);
-  console.log(`  [2/3] Tokens: ${response2.usage.input_tokens} in / ${response2.usage.output_tokens} out | $${usage2.cost.toFixed(4)}`);
-  console.log(`  [3/3] Tokens: ${response3.usage.input_tokens} in / ${response3.usage.output_tokens} out | $${usage3.cost.toFixed(4)}`);
+  console.log(`  [1/4] Research:   ${response1.usage.output_tokens} out | $${usage1.cost.toFixed(4)}`);
+  console.log(`  [2/4] Phases 1-3: ${response2a.usage.output_tokens} out | $${usage2a.cost.toFixed(4)}`);
+  console.log(`  [3/4] Phases 4-6: ${response2b.usage.output_tokens} out | $${usage2b.cost.toFixed(4)}`);
+  console.log(`  [4/4] Objections: ${response3.usage.output_tokens} out | $${usage3.cost.toFixed(4)}`);
   console.log(`  Total: $${totalCallCost.toFixed(4)} | Month: $${usage3.totalCost.toFixed(4)} / $${MONTHLY_BUDGET}`);
 
-  // === COMBINE: Insert Parts 2+3 into Part 1 ===
-  const insertContent = `\n${part2Html}\n\n${part3Html}\n`;
+  // === COMBINE: Insert Parts 2a+2b+3 into Part 1 ===
+  const insertContent = `\n${part2aHtml}\n\n${part2bHtml}\n\n${part3Html}\n`;
   let finalHtml;
   if (part1Html.includes('<!-- SCRIPT_INSERT -->')) {
     finalHtml = part1Html.replace('<!-- SCRIPT_INSERT -->', insertContent);

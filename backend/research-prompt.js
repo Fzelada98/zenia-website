@@ -61,59 +61,111 @@ HTML requirements:
 - Print-friendly (@media print)
 - Use class names: section, anchor-phrase, pain-section, insight-section, opportunity-card, tone-badge, read-badge, anchor-badge, timing, tactical-note, script-text, phase-content
 
-Output ONLY HTML. Start with <!DOCTYPE html>, end with </html>.`;
+CRITICAL: Output ONLY raw HTML. NO markdown. NO code fences. NO backticks. Start with <!DOCTYPE html>, end with </html>.`;
 
 
 // ============================================================
-// CALL 2: The Full 6-Phase Script
+// CALL 2A: Phases 1-3 (Opening, Pain Discovery, Insight)
 // ============================================================
-const SYSTEM_PROMPT_PART2 = `${SHARED_CONTEXT}
+const SYSTEM_PROMPT_PART2A = `${SHARED_CONTEXT}
 
-THE ANCHOR PHRASE: Use the anchor phrase provided in the user message 3x:
-1. Phase 2: Reflect back
-2. Phase 4: Solution intro
-3. Phase 6: Final close
+THE ANCHOR PHRASE: Use the anchor phrase provided in the user message. Deploy it in Phase 2 when pain crystallizes.
 
 READING THE CLIENT (Micro-Signals) - include [READ] markers:
 - Positive: Implementation questions, mention stakeholders, share details
 - Caution: Monosyllables, checking time
 - Danger: "Sounds like other pitches", "No budget", "Send me info" -- pivot responses included
 
-YOUR TASK: Generate the COMPLETE 6-PHASE CALL SCRIPT.
+YOUR TASK: Generate PHASES 1-3 of the call script. Be EXHAUSTIVE. Each phase must be LONG and DETAILED.
 
 PHASE 1 -- FRAME SETTING & RAPPORT (0:00 - 3:00) [TONE: Calm authority]
-- Reference specific company facts, position as strategic convo, plant anchor seed
-- 3+ branching paths with exact dialogue
+- Opening line referencing a specific company fact (shows homework)
+- Frame: "This is a strategic conversation, not a sales pitch"
+- Plant the anchor seed subtly
+- 3+ branching paths (warm/neutral/cold reception) with EXACT word-for-word dialogue
+- Include [TONE] direction before each path
+- Include specific transition phrases to Phase 2
 
 PHASE 2 -- PAIN DISCOVERY (3:00 - 10:00) [TONE: Genuine curiosity]
-- Calibrated "How"/"What" questions (Voss), labeling emotions, let them talk 70%
+- 4-5 calibrated "How"/"What" questions (Chris Voss style) - each question must be word-for-word
+- Labeling emotions technique: "It seems like...", "It sounds like..."
+- Let them talk 70% rule - include notes on when to stay silent
 - Deploy anchor phrase when pain crystallizes
-- 3+ branching paths with exact dialogue
+- 3+ branching paths based on their responses (engaged/guarded/redirecting)
+- Each path: full word-for-word dialogue with tactical notes
+- Include follow-up probing questions for each path
 
 PHASE 3 -- INSIGHT BOMB (10:00 - 15:00) [TONE: Conspiratorial whisper]
-- Validate -> Reframe bigger -> Reveal competitive threat -> Bridge to ZENIA
-- 2-3 industry-specific insights
-- 3+ branching paths
+- Step 1: Validate their pain ("You're right, and it's actually worse than you think...")
+- Step 2: Reframe bigger (connect to industry-wide shift)
+- Step 3: Reveal competitive threat (specific competitors or market forces)
+- Step 4: Bridge to ZENIA as the solution
+- 2-3 industry-specific insights with data points
+- 3+ branching paths with exact dialogue
+- [TONE] shift markers within the phase
+
+OUTPUT FORMAT - CRITICAL RULES:
+- Output ONLY raw HTML. NO markdown. NO code fences. NO backticks.
+- Start directly with <div class="section">
+- Each phase as a <details open> block with <summary>
+- Summary format: <summary><strong>PHASE N: NAME (TIME)</strong> <span class="tone-badge">TONE</span> <span class="read-badge">READ</span></summary>
+- Inside each phase: <div class="phase-content"> with multiple <div class="script-text"> blocks
+- Label branching paths with <h4>PATH A/B/C: Description</h4>
+- Use <p class="tactical-note"> for tactical instructions
+- Use <blockquote> for exact phrases to say
+- NEVER output markdown. NEVER wrap in code fences. Start with < end with >.`;
+
+
+// ============================================================
+// CALL 2B: Phases 4-6 (Solution, Urgency, Close)
+// ============================================================
+const SYSTEM_PROMPT_PART2B = `${SHARED_CONTEXT}
+
+THE ANCHOR PHRASE: Use the anchor phrase provided in the user message. Reference it in Phase 4 (solution intro) and Phase 6 (final close).
+
+READING THE CLIENT (Micro-Signals) - include [READ] markers throughout.
+
+YOUR TASK: Generate PHASES 4-6 of the call script. Be EXHAUSTIVE. Each phase must be LONG and DETAILED.
 
 PHASE 4 -- SOLUTION VISION (15:00 - 23:00) [TONE: Controlled excitement] [ANCHOR callback]
-- 2-3 AI opportunities connected to pain, Before/After with metrics
-- Micro-commitment: "Which has biggest impact?"
-- 3+ branching paths
+- Transition: "Based on what you've shared, here's what I'm seeing..."
+- Present 2-3 AI solutions directly connected to their stated pain
+- For EACH solution: Before scenario (their current pain) → After scenario (with ZENIA) with specific metrics/timeframes
+- Anchor phrase callback: tie solution to their core tension
+- Micro-commitment question: "Of these, which would have the biggest impact on your team right now?"
+- 3+ branching paths based on their reaction (excited/analytical/skeptical)
+- Each path: full word-for-word dialogue, follow-up questions, deepening techniques
 
 PHASE 5 -- IMPACT & URGENCY (23:00 - 27:00) [TONE: Calm authority]
-- Loss frame first, competitive threat, cost of delay, specific numbers
-- 3+ branching paths
+- Loss frame FIRST: "Every week without this, your team is..."
+- Competitive threat: specific competitors or market forces moving faster
+- Cost of delay: concrete numbers (hours wasted, revenue leaked, opportunities missed)
+- Future pacing: "Imagine 90 days from now..."
+- 3+ branching paths with exact dialogue
+- Handle the "we're not in a rush" objection within this phase
 
 PHASE 6 -- NATURAL CLOSE (27:00 - 30:00) [TONE: Matter-of-fact certainty] [ANCHOR callback]
-- Next step = only logical move
-- If yes: lock date. If hesitate: Voss label -> loop. If "talk to team": walkthrough. If "send info": counter with 15-min together.
-- NEVER end without scheduled next action
+- Transition: "So here's what makes sense as a next step..."
+- Present next step as the ONLY logical conclusion (not a choice)
+- Final anchor phrase callback
+- 4 specific close scenarios with FULL dialogue:
+  * Path A: They say YES → lock specific date, confirm attendees, set agenda
+  * Path B: They HESITATE → Voss label ("It seems like something's holding you back"), then loop back to value
+  * Path C: "Need to talk to team" → offer to do a 15-min walkthrough with the team, position yourself as helping THEM sell internally
+  * Path D: "Send me info" → "I could, but in my experience a deck doesn't capture the nuance. How about 15 minutes together where I walk you through it?"
+- NEVER end without a scheduled next action - include exact fallback phrases
+- Final impression: leave them thinking about the cost of inaction
 
-OUTPUT: HTML content only (NO <!DOCTYPE>, NO <html>/<head>/<body> tags).
-Generate a <div class="section"> containing <h2> and then each phase as a <details>/<summary> block.
-Each phase must include: [TONE] badge, [READ] badge, timing info, and multiple script-text blocks with branching paths.
-Use classes: section, tone-badge, read-badge, anchor-badge, timing, tactical-note, script-text, phase-content.
-Output ONLY HTML content. No markdown, no code fences.`;
+OUTPUT FORMAT - CRITICAL RULES:
+- Output ONLY raw HTML. NO markdown. NO code fences. NO backticks.
+- Start directly with <div class="section">
+- Each phase as a <details open> block with <summary>
+- Summary format: <summary><strong>PHASE N: NAME (TIME)</strong> <span class="tone-badge">TONE</span> <span class="read-badge">READ</span></summary>
+- Inside each phase: <div class="phase-content"> with multiple <div class="script-text"> blocks
+- Label branching paths with <h4>PATH A/B/C: Description</h4>
+- Use <p class="tactical-note"> for tactical instructions
+- Use <blockquote> for exact phrases to say
+- NEVER output markdown. NEVER wrap in code fences. Start with < end with >.`;
 
 
 // ============================================================
@@ -161,7 +213,7 @@ OUTPUT: HTML content only (NO <!DOCTYPE>, NO <html>/<head>/<body>).
 Each objection in its own <details>/<summary> block inside a <div class="section">.
 Use classes: section, tactical-note, script-text.
 Style objection headers with numbered badges.
-Output ONLY HTML content. No markdown, no code fences.`;
+CRITICAL: Output ONLY raw HTML. NO markdown. NO code fences. NO backticks. Start with <div, end with </div>.`;
 
 
 // ============================================================
@@ -177,15 +229,26 @@ Area: ${areaOfInterest}
 Think deeply about this company first. Be specific. Output the full HTML document with sections 1-5 and the <!-- SCRIPT_INSERT --> marker.`;
 }
 
-function buildUserPromptPart2(companyName, companySize, areaOfInterest, anchorPhrase) {
-  return `Generate the COMPLETE 6-Phase Call Script for:
+function buildUserPromptPart2A(companyName, companySize, areaOfInterest, anchorPhrase) {
+  return `Generate PHASES 1-3 of the call script for:
 
 Company: ${companyName}
 Size: ${companySize} employees
 Area: ${areaOfInterest}
 Anchor Phrase: "${anchorPhrase || 'infer from company context'}"
 
-Write ALL 6 PHASES. Each phase needs [TONE] and [READ] badges, timing, and 3+ branching paths with word-for-word dialogue. Output only the HTML content (no DOCTYPE/html/head/body tags).`;
+Write PHASES 1, 2, and 3 ONLY. Each phase needs [TONE] and [READ] badges, timing, and 3+ branching paths with COMPLETE word-for-word dialogue. Be exhaustive - use ALL available tokens. Every path must have full sentences the consultant reads aloud. Output ONLY raw HTML - no markdown, no code fences.`;
+}
+
+function buildUserPromptPart2B(companyName, companySize, areaOfInterest, anchorPhrase) {
+  return `Generate PHASES 4-6 of the call script for:
+
+Company: ${companyName}
+Size: ${companySize} employees
+Area: ${areaOfInterest}
+Anchor Phrase: "${anchorPhrase || 'infer from company context'}"
+
+Write PHASES 4, 5, and 6 ONLY. Each phase needs [TONE] and [READ] badges, timing, and 3+ branching paths with COMPLETE word-for-word dialogue. Be exhaustive - use ALL available tokens. Phase 6 MUST include 4 close scenarios (yes/hesitate/team/send-info) with full dialogue. Output ONLY raw HTML - no markdown, no code fences.`;
 }
 
 function buildUserPromptPart3(companyName, companySize, areaOfInterest, anchorPhrase) {
@@ -201,9 +264,11 @@ Write ALL 8 objections with full Belfort Loop dialogue for each. Every response 
 
 module.exports = {
   SYSTEM_PROMPT_PART1,
-  SYSTEM_PROMPT_PART2,
+  SYSTEM_PROMPT_PART2A,
+  SYSTEM_PROMPT_PART2B,
   SYSTEM_PROMPT_PART3,
   buildUserPromptPart1,
-  buildUserPromptPart2,
+  buildUserPromptPart2A,
+  buildUserPromptPart2B,
   buildUserPromptPart3,
 };

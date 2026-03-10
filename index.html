@@ -1751,12 +1751,16 @@ function translateForm() {
   });
 }
 
+// Store Calendly scheduled time
+var zeniaCallScheduled = null;
+
 function submitBookingForm(e) {
   e.preventDefault();
   var data = {
     company: document.getElementById('companyName').value,
     size: document.getElementById('companySize').value,
     area: document.getElementById('companyArea').value,
+    callScheduled: zeniaCallScheduled,
     timestamp: new Date().toISOString()
   };
 
@@ -1788,6 +1792,10 @@ window.addEventListener('message', function(e) {
   }
   if (!data || !data.event) return;
   if (data.event === 'calendly.event_scheduled') {
+    // Capture scheduled event time from Calendly payload
+    if (data.payload && data.payload.event && data.payload.event.start_time) {
+      zeniaCallScheduled = data.payload.event.start_time;
+    }
     showStep(2);
   }
 });

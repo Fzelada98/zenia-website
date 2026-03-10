@@ -188,48 +188,56 @@ function buildHtmlTemplate(company, size, area, researchHtml, phases1to3Html, ph
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; background: #f8f9fa; color: #1a1a2e; line-height: 1.6; padding: 24px; max-width: 900px; margin: 0 auto; }
-  h1 { font-size: 28px; color: #1a1a2e; margin-bottom: 4px; }
-  h2 { font-size: 20px; color: #2d3436; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid #e0e0e0; }
-  h3 { font-size: 17px; color: #fff; margin: 0; }
-  h4 { font-size: 15px; color: #1a73e8; margin: 16px 0 8px 0; padding: 6px 0; border-left: 3px solid #1a73e8; padding-left: 10px; }
-  p { margin-bottom: 8px; font-size: 14px; }
-  ul { margin: 8px 0 16px 20px; }
-  li { margin-bottom: 6px; font-size: 14px; }
-  blockquote { border-left: 3px solid #f39c12; background: #fffdf5; padding: 10px 14px; margin: 8px 0; font-style: italic; font-size: 14px; color: #2d3436; }
+  h1 { font-size: 26px; color: #1a1a2e; margin-bottom: 4px; }
+  h2 { font-size: 18px; color: #2d3436; margin-bottom: 10px; padding-bottom: 6px; border-bottom: 2px solid #e0e0e0; }
+  h3 { font-size: 16px; color: #fff; margin: 0; }
+  h4 { font-size: 14px; color: #1a73e8; margin: 12px 0 6px 0; border-left: 3px solid #1a73e8; padding-left: 10px; }
+  p { margin-bottom: 6px; font-size: 13.5px; }
+  ul { margin: 6px 0 12px 20px; }
+  li { margin-bottom: 4px; font-size: 13.5px; }
+  blockquote { border-left: 3px solid #f39c12; background: #fffdf5; padding: 8px 12px; margin: 6px 0; font-style: italic; font-size: 13.5px; color: #2d3436; }
+  details { margin-bottom: 8px; }
+  summary { cursor: pointer; user-select: none; }
+  summary::-webkit-details-marker { display: none; }
+  summary::marker { content: ''; }
 
-  .header { background: #1a1a2e; color: #fff; padding: 24px; border-radius: 10px; margin-bottom: 24px; }
+  .header { background: #1a1a2e; color: #fff; padding: 20px 24px; border-radius: 10px; margin-bottom: 20px; }
   .header h1 { color: #fff; }
-  .header .subtitle { color: #a0a0c0; font-size: 14px; margin-top: 4px; }
+  .header .subtitle { color: #a0a0c0; font-size: 13px; margin-top: 4px; }
 
-  .section { background: #fff; border-radius: 10px; padding: 20px 24px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+  .section { background: #fff; border-radius: 10px; padding: 16px 20px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
 
-  .anchor-phrase { font-size: 20px; font-weight: 700; color: #e17055; font-style: italic; text-align: center; padding: 16px; background: #fff5f3; border-radius: 8px; }
+  .anchor-phrase { font-size: 18px; font-weight: 700; color: #e17055; font-style: italic; text-align: center; padding: 14px; background: #fff5f3; border-radius: 8px; }
 
-  .phase { background: #fff; border-radius: 10px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); overflow: hidden; }
-  .phase-header { background: #1a1a2e; padding: 14px 20px; display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
-  .phase-content { padding: 20px 24px; }
+  .phase { background: #fff; border-radius: 10px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); overflow: hidden; }
+  .phase-header { background: #1a1a2e; padding: 12px 20px; display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .phase-header::before { content: '\\25B6'; color: #6c5ce7; margin-right: 4px; font-size: 10px; }
+  details[open] > summary .phase-header::before { content: '\\25BC'; }
+  .phase-content { padding: 16px 20px; }
 
-  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+  .badge { display: inline-block; padding: 2px 9px; border-radius: 20px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
   .badge-tone { background: #f39c12; color: #fff; }
   .badge-read { background: #00b894; color: #fff; }
   .badge-time { background: #6c5ce7; color: #fff; }
   .badge-anchor { background: #e17055; color: #fff; }
 
-  .script-text { background: #f8f9fa; border-radius: 8px; padding: 12px 16px; margin: 8px 0; font-size: 14px; line-height: 1.7; }
+  .script-text { background: #f8f9fa; border-radius: 6px; padding: 10px 14px; margin: 6px 0; font-size: 13.5px; line-height: 1.6; }
   .script-text strong { color: #1a1a2e; }
 
-  .tactical-note { background: #fffde7; border-left: 3px solid #f39c12; padding: 8px 12px; margin: 10px 0; font-size: 13px; color: #5d4037; font-style: italic; }
+  .tactical-note { background: #fffde7; border-left: 3px solid #f39c12; padding: 6px 10px; margin: 8px 0; font-size: 12.5px; color: #5d4037; font-style: italic; }
 
-  .objection { background: #fff; border-radius: 10px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); overflow: hidden; }
-  .objection-header { background: #2d3436; padding: 12px 20px; display: flex; align-items: center; gap: 12px; }
-  .objection-header h4 { color: #fff; margin: 0; border: none; padding: 0; font-size: 14px; }
-  .objection-number { background: #e17055; color: #fff; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; flex-shrink: 0; }
-  .objection-content { padding: 16px 20px; }
+  .objection { background: #fff; border-radius: 10px; margin-bottom: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); overflow: hidden; }
+  .objection-header { background: #2d3436; padding: 10px 16px; display: flex; align-items: center; gap: 10px; }
+  .objection-header h4 { color: #fff; margin: 0; border: none; padding: 0; font-size: 13px; }
+  .objection-number { background: #e17055; color: #fff; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 12px; flex-shrink: 0; }
+  .objection-content { padding: 12px 16px; }
 
-  .divider { border: none; border-top: 2px dashed #e0e0e0; margin: 32px 0; }
+  .divider { border: none; border-top: 2px dashed #e0e0e0; margin: 24px 0; }
 
   @media print {
-    body { padding: 12px; background: #fff; }
+    body { padding: 10px; background: #fff; }
+    details { open: true; }
+    details[open] > summary { display: block; }
     .phase-header, .objection-header, .header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     .section, .phase, .objection { break-inside: avoid; box-shadow: none; border: 1px solid #e0e0e0; }
   }
@@ -239,35 +247,52 @@ function buildHtmlTemplate(company, size, area, researchHtml, phases1to3Html, ph
 
 <div class="header">
   <h1>ZENIA Call Script: ${company}</h1>
-  <p class="subtitle">${area} | ${size} empleados | Generado: ${new Date().toLocaleDateString('es-PE', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+  <p class="subtitle">${area} | ${size} empleados | ${new Date().toLocaleDateString('es-PE', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
 </div>
 
-<!-- ==================== RESEARCH & PREP ==================== -->
 ${researchHtml}
 
 <hr class="divider">
 
-<!-- ==================== PHASES 1-3 ==================== -->
-<div class="section">
-  <h2>Call Script - Fases 1 a 3</h2>
-</div>
 ${phases1to3Html}
 
-<hr class="divider">
-
-<!-- ==================== PHASES 4-6 ==================== -->
-<div class="section">
-  <h2>Call Script - Fases 4 a 6</h2>
-</div>
 ${phases4to6Html}
 
 <hr class="divider">
 
-<!-- ==================== OBJECTION PLAYBOOK ==================== -->
-<div class="section">
-  <h2>Objection Playbook (Belfort Loop)</h2>
-</div>
 ${objectionsHtml}
+
+<script>
+// Wrap each .phase in a collapsible <details> if not already
+document.querySelectorAll('.phase').forEach(function(phase) {
+  if (phase.parentElement.tagName === 'DETAILS') return;
+  var details = document.createElement('details');
+  var summary = document.createElement('summary');
+  var header = phase.querySelector('.phase-header');
+  if (header) {
+    summary.appendChild(header.cloneNode(true));
+    header.remove();
+  }
+  phase.parentNode.insertBefore(details, phase);
+  details.appendChild(summary);
+  details.appendChild(phase);
+  details.open = true;
+});
+// Wrap each .objection in a collapsible <details> if not already
+document.querySelectorAll('.objection').forEach(function(obj) {
+  if (obj.parentElement.tagName === 'DETAILS') return;
+  var details = document.createElement('details');
+  var summary = document.createElement('summary');
+  var header = obj.querySelector('.objection-header');
+  if (header) {
+    summary.appendChild(header.cloneNode(true));
+    header.remove();
+  }
+  obj.parentNode.insertBefore(details, obj);
+  details.appendChild(summary);
+  details.appendChild(obj);
+});
+</script>
 
 </body>
 </html>`;

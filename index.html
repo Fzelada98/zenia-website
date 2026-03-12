@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ZENIA | AI Consulting & Business Automation | Strategy, Agents & Systems</title>
-<meta name="description" content="ZENIA designs and deploys AI systems that transform business operations. From strategy to custom AI agents — measurable results for ambitious companies. Book a free consultation.">
+<title>ZENIA | AI Consulting & Automation | Consultoría IA & Automatización</title>
+<meta name="description" content="ZENIA designs and deploys AI systems that transform business operations. | Diseñamos e implementamos sistemas de IA que transforman operaciones de negocio.">
 
 <!-- Favicon -->
 <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
@@ -21,8 +21,8 @@
 <!-- SEO: Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ZENIA">
-<meta property="og:title" content="ZENIA | AI Consulting & Business Automation">
-<meta property="og:description" content="We design and deploy AI systems that transform business operations. Strategy, automation, and custom AI agents with measurable impact.">
+<meta property="og:title" content="ZENIA | AI Systems for Business | Sistemas de IA para Empresas">
+<meta property="og:description" content="Custom AI systems & automation for ambitious companies. | Sistemas de IA y automatización a medida para empresas ambiciosas.">
 <meta property="og:url" content="https://zeniapartners.com/">
 <meta property="og:image" content="https://zeniapartners.com/assets/images/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -32,8 +32,8 @@
 
 <!-- SEO: Twitter Cards -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="ZENIA | AI Consulting & Business Automation">
-<meta name="twitter:description" content="We design and deploy AI systems that transform business operations. Strategy, automation, and custom AI agents with measurable impact.">
+<meta name="twitter:title" content="ZENIA | AI Systems for Business | Sistemas de IA para Empresas">
+<meta name="twitter:description" content="Custom AI systems & automation for ambitious companies. | Sistemas de IA y automatización a medida para empresas ambiciosas.">
 <meta name="twitter:image" content="https://zeniapartners.com/assets/images/og-image.png">
 
 <!-- SEO: Additional meta -->
@@ -106,7 +106,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
 <!-- Stylesheet -->
-<link rel="stylesheet" href="styles/main.css?v=2">
+<link rel="stylesheet" href="styles/main.css?v=3">
 </head>
 <body>
 
@@ -123,10 +123,6 @@
       <li><a href="#impact" data-i18n="nav.impact">Impact</a></li>
     </ul>
     <div class="nav-right">
-      <div class="lang-switch">
-        <button class="lang-btn active" data-lang="en" onclick="setLang('en')">EN</button>
-        <button class="lang-btn" data-lang="es" onclick="setLang('es')">ES</button>
-      </div>
       <div class="nav-cta"><a href="#" onclick="openCalendly(event)" class="btn btn-primary" data-i18n="nav.cta">Get Started</a></div>
     </div>
     <button class="nav-mobile-toggle" id="navToggle" aria-label="Toggle menu">
@@ -574,13 +570,39 @@
 </footer>
 
 <!-- Scripts: i18n + main run immediately for translations & nav -->
-<script src="js/i18n.js?v=2"></script>
-<script src="js/main.js?v=2"></script>
+<script src="js/i18n.js?v=3"></script>
+<script src="js/main.js?v=3"></script>
 <script defer src="js/booking.js"></script>
 
 <!-- Three.js: defer both to unblock first paint, defer preserves order -->
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script defer src="js/animation.js"></script>
+
+<!-- Language Selection Modal -->
+<div id="langModal" class="lang-modal" style="display:none">
+  <div class="lang-modal-backdrop"></div>
+  <div class="lang-modal-card">
+    <div class="lang-modal-logo">
+      <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="lmg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#3B82F6"/><stop offset="100%" stop-color="#8B5CF6"/></linearGradient></defs>
+        <circle cx="50" cy="50" r="46" stroke="url(#lmg)" stroke-width="4" fill="none"/>
+        <path d="M30 72 L50 28 L70 72" stroke="url(#lmg)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+    </div>
+    <p class="lang-modal-title">Choose your language</p>
+    <p class="lang-modal-subtitle">Elige tu idioma</p>
+    <div class="lang-modal-buttons">
+      <button class="lang-modal-btn" onclick="pickLang('en')">
+        <span class="lang-modal-flag">EN</span>
+        <span>English</span>
+      </button>
+      <button class="lang-modal-btn" onclick="pickLang('es')">
+        <span class="lang-modal-flag">ES</span>
+        <span>Español</span>
+      </button>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>

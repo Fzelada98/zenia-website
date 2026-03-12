@@ -280,8 +280,7 @@ function detectLanguage() {
   if (param && translations[param]) return param;
   var stored = localStorage.getItem('zenia-lang');
   if (stored && translations[stored]) return stored;
-  var bl = (navigator.language || navigator.userLanguage || 'en').substring(0, 2).toLowerCase();
-  return bl === 'es' ? 'es' : 'en';
+  return null; // no preference yet — show modal
 }
 
 function applyTranslations(lang) {
@@ -290,12 +289,20 @@ function applyTranslations(lang) {
   var d = translations[lang];
   document.querySelectorAll('[data-i18n]').forEach(function(el) { var k = el.getAttribute('data-i18n'); if (d[k] !== undefined) el.innerHTML = d[k]; });
   document.querySelectorAll('[data-i18n-html]').forEach(function(el) { var k = el.getAttribute('data-i18n-html'); if (d[k] !== undefined) el.innerHTML = d[k]; });
-  document.querySelectorAll('.lang-btn').forEach(function(btn) { btn.classList.toggle('active', btn.getAttribute('data-lang') === lang); });
   document.title = lang === 'es' ? 'ZENIA \u2014 Sistemas de IA para Empresas de Nueva Generaci\u00f3n' : 'ZENIA \u2014 AI Systems for Next-Generation Companies';
   localStorage.setItem('zenia-lang', lang);
 }
 
-function setLang(lang) { applyTranslations(lang); }
+function pickLang(lang) {
+  var modal = document.getElementById('langModal');
+  if (modal) modal.style.display = 'none';
+  applyTranslations(lang);
+}
+
+function showLangModal() {
+  var modal = document.getElementById('langModal');
+  if (modal) modal.style.display = 'flex';
+}
 
 // Expose for inline onclick handlers
 window.setLang = setLang;

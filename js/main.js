@@ -49,4 +49,11 @@ if (navToggle) {
 }
 
 // Initialize language
-applyTranslations(detectLanguage());
+var detectedLang = detectLanguage();
+if (detectedLang) {
+  applyTranslations(detectedLang);
+} else {
+  // No preference saved — default to English while modal shows
+  applyTranslations('en');
+  showLangModal();
+}

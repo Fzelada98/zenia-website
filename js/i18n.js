@@ -306,4 +306,6 @@ function showLangModal() {
 
 // Expose for inline onclick handlers
 window.setLang = setLang;
+window.pickLang = pickLang;
+window.showLangModal = showLangModal;
 window.getCurrentLang = function() { return currentLang; };

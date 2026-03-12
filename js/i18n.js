@@ -278,7 +278,7 @@ function detectLanguage() {
   var url = new URLSearchParams(window.location.search);
   var param = url.get('lang');
   if (param && translations[param]) return param;
-  var stored = localStorage.getItem('zenia-lang');
+  var stored = localStorage.getItem('zenia-lang-v2');
   if (stored && translations[stored]) return stored;
   return null; // no preference yet — show modal
 }
@@ -290,7 +290,7 @@ function applyTranslations(lang) {
   document.querySelectorAll('[data-i18n]').forEach(function(el) { var k = el.getAttribute('data-i18n'); if (d[k] !== undefined) el.innerHTML = d[k]; });
   document.querySelectorAll('[data-i18n-html]').forEach(function(el) { var k = el.getAttribute('data-i18n-html'); if (d[k] !== undefined) el.innerHTML = d[k]; });
   document.title = lang === 'es' ? 'ZENIA \u2014 Sistemas de IA para Empresas de Nueva Generaci\u00f3n' : 'ZENIA \u2014 AI Systems for Next-Generation Companies';
-  localStorage.setItem('zenia-lang', lang);
+  localStorage.setItem('zenia-lang-v2', lang);
 }
 
 function pickLang(lang) {

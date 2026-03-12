@@ -1,0 +1,11 @@
+# robots.txt for zeniapartners.com
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://zeniapartners.com/sitemap.xml
+
+# Block backend/API paths (served from different domain, but just in case)
+Disallow: /backend/
+Disallow: /reports/
+Disallow: /.claude/

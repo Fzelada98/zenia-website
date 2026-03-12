@@ -3,750 +3,119 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ZENIA — Go Beyond</title>
-<meta name="description" content="ZENIA helps ambitious companies redesign operations with AI systems. Strategy, automation, and agent deployment that deliver measurable business impact.">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<title>ZENIA | AI Consulting & Business Automation | Strategy, Agents & Systems</title>
+<meta name="description" content="ZENIA designs and deploys AI systems that transform business operations. From strategy to custom AI agents — measurable results for ambitious companies. Book a free consultation.">
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+<link rel="apple-touch-icon" href="assets/icons/favicon.svg">
+
+<!-- SEO: Canonical URL -->
+<link rel="canonical" href="https://zeniapartners.com/">
+
+<!-- SEO: hreflang for EN/ES -->
+<link rel="alternate" hreflang="en" href="https://zeniapartners.com/">
+<link rel="alternate" hreflang="es" href="https://zeniapartners.com/">
+<link rel="alternate" hreflang="x-default" href="https://zeniapartners.com/">
+
+<!-- SEO: Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ZENIA">
+<meta property="og:title" content="ZENIA | AI Consulting & Business Automation">
+<meta property="og:description" content="We design and deploy AI systems that transform business operations. Strategy, automation, and custom AI agents with measurable impact.">
+<meta property="og:url" content="https://zeniapartners.com/">
+<meta property="og:image" content="https://zeniapartners.com/assets/images/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="es_ES">
+
+<!-- SEO: Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ZENIA | AI Consulting & Business Automation">
+<meta name="twitter:description" content="We design and deploy AI systems that transform business operations. Strategy, automation, and custom AI agents with measurable impact.">
+<meta name="twitter:image" content="https://zeniapartners.com/assets/images/og-image.png">
+
+<!-- SEO: Additional meta -->
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="author" content="ZENIA">
+<meta name="theme-color" content="#0A0F1C">
+
+<!-- SEO: JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://zeniapartners.com/#organization",
+      "name": "ZENIA",
+      "url": "https://zeniapartners.com",
+      "description": "AI consulting and business automation firm. We design and deploy AI systems, custom agents, and automation strategies for ambitious companies.",
+      "email": "fabrizzio.zelada@zeniapartners.com",
+      "foundingDate": "2025",
+      "areaServed": ["Latin America", "Spain", "United States"],
+      "serviceType": ["AI Consulting", "Business Process Automation", "AI Agent Development", "Digital Transformation"],
+      "knowsAbout": ["Artificial Intelligence", "Machine Learning", "Business Automation", "AI Agents", "Process Optimization"]
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://zeniapartners.com/#service",
+      "name": "ZENIA AI Consulting",
+      "provider": {"@id": "https://zeniapartners.com/#organization"},
+      "url": "https://zeniapartners.com",
+      "description": "End-to-end AI consulting: from strategy assessment to custom AI agent deployment. We help companies automate operations and achieve measurable business impact.",
+      "areaServed": ["Latin America", "Spain", "United States"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "AI Services",
+        "itemListElement": [
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI Strategy & Assessment", "description": "Comprehensive analysis of AI opportunities within your business operations"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Workflow Automation", "description": "Design and implementation of AI-powered workflow automation systems"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI Agent Deployment", "description": "Custom AI agent development and deployment for business processes"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Custom AI-Powered Tools", "description": "Bespoke AI tools and SaaS solutions tailored to your business needs"}}
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://zeniapartners.com/#website",
+      "name": "ZENIA",
+      "url": "https://zeniapartners.com",
+      "publisher": {"@id": "https://zeniapartners.com/#organization"},
+      "inLanguage": ["en", "es"]
+    }
+  ]
+}
+</script>
+
+<!-- Performance: preconnect to CDNs -->
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+<link rel="preconnect" href="https://assets.calendly.com">
+<link rel="dns-prefetch" href="https://assets.calendly.com">
+<link rel="dns-prefetch" href="https://zenia-backend-y6hp.onrender.com">
+
+<!-- Preload Three.js so it downloads early while DOM parses -->
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" as="script" crossorigin>
+
+<!-- Google Fonts: only 400+700 (reduced weight set) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-<style>
-:root {
-  --primary: #3B82F6;
-  --primary-deep: #2563EB;
-  --accent-violet: #6366F1;
-  --bg-dark: #0A0F1C;
-  --bg-surface: #111827;
-  --bg-card: rgba(17, 24, 39, 0.6);
-  --bg-card-hover: rgba(30, 41, 59, 0.5);
-  --border: rgba(148, 163, 184, 0.08);
-  --border-hover: rgba(59, 130, 246, 0.2);
-  --text-primary: #F1F5F9;
-  --text-secondary: #94A3B8;
-  --text-muted: #64748B;
-  --glow-blue: rgba(59, 130, 246, 0.15);
-  --glow-violet: rgba(99, 102, 241, 0.12);
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 16px;
-  --radius-xl: 24px;
-  --radius-full: 9999px;
-}
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  color: var(--text-primary);
-  background: var(--bg-dark);
-  line-height: 1.6;
-  overflow-x: hidden;
-}
-h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.15; letter-spacing: -0.02em; }
-h1 { font-size: clamp(2.75rem, 5.5vw, 4.5rem); font-weight: 800; letter-spacing: -0.035em; }
-h2 { font-size: clamp(2rem, 3.5vw, 3rem); }
-h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
-p { color: var(--text-secondary); }
-a { color: inherit; text-decoration: none; }
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" as="style">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-.section { padding: 120px 0; position: relative; }
-.section-label {
-  display: inline-flex; align-items: center; gap: 8px;
-  font-size: 13px; font-weight: 600; color: var(--primary);
-  text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 20px;
-}
-.section-label::before {
-  content: ''; width: 8px; height: 8px; background: var(--primary);
-  border-radius: 50%; display: inline-block;
-}
-.section-title { margin-bottom: 20px; }
-.section-desc { font-size: 1.125rem; color: var(--text-secondary); max-width: 560px; line-height: 1.7; }
-.text-center { text-align: center; }
-.text-center .section-desc { margin-left: auto; margin-right: auto; }
-.text-gradient {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--accent-violet) 100%);
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-}
-
-/* Buttons */
-.btn {
-  display: inline-flex; align-items: center; gap: 8px;
-  font-family: inherit; font-size: 15px; font-weight: 600;
-  padding: 14px 28px; border-radius: var(--radius-full);
-  border: none; cursor: pointer;
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); white-space: nowrap;
-}
-.btn-primary {
-  background: var(--primary); color: #fff;
-  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3), 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-.btn-primary:hover {
-  background: var(--primary-deep);
-  box-shadow: 0 0 32px rgba(59, 130, 246, 0.45), 0 8px 24px rgba(0, 0, 0, 0.3);
-  transform: translateY(-1px);
-}
-.btn-secondary {
-  background: rgba(255, 255, 255, 0.06); color: var(--text-primary);
-  border: 1px solid var(--border); backdrop-filter: blur(8px);
-}
-.btn-secondary:hover { background: rgba(255, 255, 255, 0.1); border-color: var(--border-hover); }
-.btn-ghost {
-  background: none; color: var(--primary); padding: 14px 8px;
-}
-.btn-ghost:hover { color: var(--accent-violet); }
-.btn-arrow::after { content: '\2192'; transition: transform 0.2s; }
-.btn-arrow:hover::after { transform: translateX(3px); }
-
-/* Zenia Logo Mark */
-.zenia-mark {
-  width: 36px; height: 36px; background: var(--primary);
-  border-radius: 10px; display: flex; align-items: center;
-  justify-content: center; position: relative; flex-shrink: 0;
-}
-.zenia-mark::after {
-  content: ''; width: 16px; height: 16px;
-  border: 2.5px solid #fff; border-radius: 50%; position: absolute;
-}
-.zenia-mark--sm { width: 32px; height: 32px; border-radius: 8px; }
-.zenia-mark--sm::after { width: 14px; height: 14px; border-width: 2px; }
-
-/* Navigation */
-.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 0 24px; transition: all 0.3s; }
-.nav.scrolled {
-  background: rgba(10, 15, 28, 0.85);
-  backdrop-filter: blur(20px) saturate(180%);
-  border-bottom: 1px solid var(--border);
-}
-.nav-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 72px; }
-.nav-logo { display: flex; align-items: center; gap: 12px; }
-.nav-logo-text { font-size: 20px; font-weight: 800; letter-spacing: -0.5px; color: #fff; }
-.nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
-.nav-links a { font-size: 14px; font-weight: 500; color: var(--text-secondary); transition: color 0.2s; }
-.nav-links a:hover { color: #fff; }
-.nav-right { display: flex; align-items: center; gap: 16px; }
-.nav-cta .btn { padding: 10px 22px; font-size: 14px; }
-.lang-switch {
-  display: flex; align-items: center;
-  background: rgba(255, 255, 255, 0.06); border: 1px solid var(--border);
-  border-radius: var(--radius-full); overflow: hidden;
-}
-.lang-btn {
-  background: none; border: none; color: var(--text-muted);
-  font-family: inherit; font-size: 12px; font-weight: 600;
-  padding: 6px 12px; cursor: pointer; transition: all 0.2s; letter-spacing: 0.5px;
-}
-.lang-btn.active { background: rgba(59, 130, 246, 0.15); color: var(--primary); }
-.lang-btn:hover:not(.active) { color: var(--text-primary); }
-.nav-mobile-toggle { display: none; background: none; border: none; color: #fff; cursor: pointer; padding: 8px; }
-
-/* Hero */
-.hero { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; padding-top: 72px; }
-.hero-bg { position: absolute; inset: 0; overflow: hidden; }
-.hero-bg::after {
-  content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 300px;
-  background: linear-gradient(to top, var(--bg-dark), transparent);
-  z-index: 2;
-}
-.hero-bg-top {
-  position: absolute; top: 0; left: 0; right: 0; height: 200px;
-  background: linear-gradient(to bottom, var(--bg-dark), transparent);
-  z-index: 2;
-}
-#glsl-canvas {
-  position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1;
-}
-.hero .container { position: relative; z-index: 2; text-align: center; }
-.hero-badge {
-  display: inline-flex; align-items: center; gap: 8px; padding: 8px 18px;
-  background: rgba(59, 130, 246, 0.08); border: 1px solid rgba(59, 130, 246, 0.15);
-  border-radius: var(--radius-full); font-size: 13px; font-weight: 500;
-  color: var(--primary); margin-bottom: 32px;
-}
-.hero-badge .dot { width: 6px; height: 6px; background: var(--primary); border-radius: 50%; animation: pulse-dot 2s ease-in-out infinite; }
-@keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
-.hero h1 { max-width: 800px; margin: 0 auto 28px; }
-.hero-subtitle { font-size: clamp(1.05rem, 1.8vw, 1.2rem); color: var(--text-secondary); max-width: 580px; margin: 0 auto 44px; line-height: 1.7; }
-.hero-actions { display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 80px; }
-
-/* Hero Booking Card */
-.hero-booking { max-width: 640px; margin: 0 auto; }
-.hero-booking-card {
-  background: linear-gradient(145deg, rgba(17, 24, 39, 0.9), rgba(15, 23, 42, 0.95));
-  border: 1px solid var(--border); border-radius: var(--radius-lg);
-  padding: 40px 48px; backdrop-filter: blur(20px); position: relative; overflow: hidden; text-align: center;
-}
-.hero-booking-card::before {
-  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.4), rgba(99, 102, 241, 0.4), transparent);
-}
-.hero-booking-icon { width: 56px; height: 56px; margin: 0 auto 20px; background: var(--glow-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
-.hero-booking-icon svg { width: 24px; height: 24px; color: var(--primary); }
-.hero-booking-card h3 { font-size: 1.3rem; color: var(--text-primary); margin-bottom: 8px; }
-.hero-booking-card > p { font-size: 14px; color: var(--text-muted); margin-bottom: 24px; line-height: 1.6; }
-.hero-booking-features { display: flex; justify-content: center; gap: 24px; margin-bottom: 28px; flex-wrap: wrap; }
-.hero-booking-features span { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--text-secondary); }
-.hero-booking-features span::before { content: ''; width: 6px; height: 6px; background: var(--primary); border-radius: 50%; flex-shrink: 0; }
-.hero-booking-card .btn { width: 100%; justify-content: center; padding: 16px 32px; font-size: 16px; }
-
-/* Impact Metrics Bar */
-.metrics-bar {
-  padding: 80px 0;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  position: relative;
-  overflow: hidden;
-}
-.metrics-bar::before {
-  content: ''; position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(59, 130, 246, 0.02) 0%, transparent 100%);
-}
-.metrics-bar .container { position: relative; z-index: 2; }
-.metrics-bar-title {
-  text-align: center; margin-bottom: 48px;
-}
-.metrics-bar-title h2 {
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
-  margin-bottom: 12px;
-}
-.metrics-bar-title p {
-  font-size: 15px; color: var(--text-muted); max-width: 500px; margin: 0 auto;
-}
-.metrics-grid {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
-}
-.metric-item {
-  text-align: center; padding: 32px 20px;
-  background: var(--bg-card); border: 1px solid var(--border);
-  border-radius: var(--radius-lg); backdrop-filter: blur(8px);
-  transition: all 0.3s;
-}
-.metric-item:hover { border-color: var(--border-hover); }
-.metric-value {
-  font-size: clamp(2rem, 3.5vw, 2.75rem); font-weight: 800;
-  letter-spacing: -0.03em; line-height: 1; margin-bottom: 8px;
-}
-.metric-item h4 { font-size: 14px; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; }
-.metric-item p { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
-
-/* Trust */
-.trust { padding: 60px 0 100px; }
-.trust-label { text-align: center; font-size: 13px; font-weight: 500; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 40px; }
-.trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
-.trust-item {
-  text-align: center; padding: 28px 20px; background: var(--bg-card);
-  border: 1px solid var(--border); border-radius: var(--radius-md);
-  backdrop-filter: blur(8px); transition: all 0.3s;
-}
-.trust-item:hover { border-color: var(--border-hover); background: var(--bg-card-hover); }
-.trust-item .trust-icon { width: 40px; height: 40px; margin: 0 auto 14px; background: var(--glow-blue); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; }
-.trust-item .trust-icon svg { width: 20px; height: 20px; color: var(--primary); }
-.trust-item h4 { font-size: 14px; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; }
-.trust-item p { font-size: 13px; color: var(--text-muted); }
-
-/* Tailor-Made */
-.tailor { padding: 120px 0; position: relative; overflow: hidden; }
-.tailor::before { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 0%, rgba(59, 130, 246, 0.03) 50%, transparent 100%); }
-.tailor .container { position: relative; z-index: 2; }
-.tailor-content { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-.tailor-text h2 { margin-bottom: 24px; }
-.tailor-text > p { font-size: 1.05rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 36px; }
-.tailor-points { display: flex; flex-direction: column; gap: 20px; }
-.tailor-point { display: flex; gap: 16px; align-items: flex-start; }
-.tailor-point-icon { width: 40px; height: 40px; min-width: 40px; background: var(--glow-blue); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; }
-.tailor-point-icon svg { width: 20px; height: 20px; color: var(--primary); }
-.tailor-point h4 { font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; }
-.tailor-point p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
-.tailor-visual { display: flex; flex-direction: column; gap: 16px; }
-.tailor-card { padding: 28px 32px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); backdrop-filter: blur(8px); transition: all 0.3s; }
-.tailor-card:hover { border-color: var(--border-hover); }
-.tailor-card-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: var(--primary); margin-bottom: 8px; }
-.tailor-card h4 { font-size: 17px; font-weight: 700; color: var(--text-primary); margin-bottom: 6px; }
-.tailor-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
-.tailor-card--highlight { border-color: rgba(59, 130, 246, 0.2); background: linear-gradient(145deg, rgba(59, 130, 246, 0.06), rgba(99, 102, 241, 0.04)); }
-
-/* AI Opportunities */
-.opportunities { padding: 120px 0; position: relative; }
-.opp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 48px; }
-.opp-card {
-  padding: 32px; background: var(--bg-card); border: 1px solid var(--border);
-  border-radius: var(--radius-lg); backdrop-filter: blur(8px); transition: all 0.3s;
-  position: relative; overflow: hidden;
-}
-.opp-card:hover { border-color: var(--border-hover); transform: translateY(-3px); }
-.opp-card-number {
-  position: absolute; top: 20px; right: 24px;
-  font-size: 48px; font-weight: 900; line-height: 1;
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(99, 102, 241, 0.04));
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-}
-.opp-icon { width: 44px; height: 44px; background: var(--glow-blue); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
-.opp-icon svg { width: 22px; height: 22px; color: var(--primary); }
-.opp-card h3 { font-size: 1.05rem; color: var(--text-primary); margin-bottom: 10px; }
-.opp-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.7; }
-.opp-cta { text-align: center; margin-top: 48px; }
-
-/* Services */
-.services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 60px; }
-.service-card {
-  padding: 40px; background: var(--bg-card); border: 1px solid var(--border);
-  border-radius: var(--radius-lg); backdrop-filter: blur(8px);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden;
-}
-.service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--primary), var(--accent-violet)); opacity: 0; transition: opacity 0.3s; }
-.service-card:hover { border-color: var(--border-hover); background: var(--bg-card-hover); transform: translateY(-4px); }
-.service-card:hover::before { opacity: 1; }
-.service-icon { width: 52px; height: 52px; background: var(--glow-blue); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; margin-bottom: 24px; }
-.service-icon svg { width: 24px; height: 24px; color: var(--primary); }
-.service-card h3 { color: var(--text-primary); margin-bottom: 12px; }
-.service-card p { font-size: 15px; line-height: 1.7; color: var(--text-secondary); }
-.service-card--featured {
-  grid-column: 1 / -1; display: grid; grid-template-columns: auto 1fr; gap: 32px; align-items: start;
-  border-color: rgba(59, 130, 246, 0.15);
-  background: linear-gradient(145deg, rgba(59, 130, 246, 0.04), rgba(99, 102, 241, 0.02));
-}
-.service-card--featured .service-icon { margin-bottom: 0; width: 60px; height: 60px; }
-.service-card--featured .service-card-body h3 { margin-bottom: 8px; }
-.service-featured-badge { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--accent-violet); margin-bottom: 12px; }
-
-/* Process */
-.process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 60px; position: relative; }
-.process-steps::before { content: ''; position: absolute; top: 40px; left: 12.5%; right: 12.5%; height: 2px; background: linear-gradient(90deg, var(--primary), var(--accent-violet), var(--primary)); opacity: 0.2; }
-.process-step { text-align: center; position: relative; }
-.step-number { width: 56px; height: 56px; margin: 0 auto 24px; background: var(--bg-surface); border: 2px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 700; color: var(--primary); position: relative; z-index: 2; transition: all 0.3s; }
-.process-step:hover .step-number { border-color: var(--primary); background: var(--glow-blue); box-shadow: 0 0 24px rgba(59, 130, 246, 0.2); }
-.process-step h3 { color: var(--text-primary); margin-bottom: 10px; font-size: 1.1rem; }
-.process-step p { font-size: 14px; color: var(--text-secondary); line-height: 1.7; }
-
-/* Impact */
-.impact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 60px; }
-.impact-card { padding: 40px 32px; text-align: center; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); backdrop-filter: blur(8px); transition: all 0.3s; }
-.impact-card:hover { border-color: var(--border-hover); }
-.impact-number { font-size: clamp(2.5rem, 4vw, 3.5rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1; margin-bottom: 8px; }
-.impact-card h4 { font-size: 16px; font-weight: 600; color: var(--text-primary); margin-bottom: 8px; }
-.impact-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
-
-/* Strategic Vision */
-.vision {
-  padding: 120px 0; position: relative; overflow: hidden;
-}
-.vision::before {
-  content: ''; position: absolute; inset: 0;
-  background: linear-gradient(180deg, transparent, rgba(59, 130, 246, 0.03), transparent);
-}
-.vision .container { position: relative; z-index: 2; }
-.vision-content {
-  max-width: 800px; margin: 0 auto; text-align: center;
-}
-.vision-content h2 { margin-bottom: 32px; }
-.vision-body { display: flex; flex-direction: column; gap: 24px; margin-bottom: 48px; }
-.vision-body p {
-  font-size: 1.1rem; color: var(--text-secondary); line-height: 1.8; max-width: 680px; margin: 0 auto;
-}
-.vision-pillars {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 16px;
-}
-.vision-pillar {
-  padding: 32px 24px; background: var(--bg-card); border: 1px solid var(--border);
-  border-radius: var(--radius-lg); text-align: center; transition: all 0.3s;
-}
-.vision-pillar:hover { border-color: var(--border-hover); }
-.vision-pillar h4 { font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 8px; }
-.vision-pillar p { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
-.vision-pillar-icon {
-  width: 48px; height: 48px; margin: 0 auto 16px;
-  background: var(--glow-blue); border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-}
-.vision-pillar-icon svg { width: 22px; height: 22px; color: var(--primary); }
-
-/* CTA */
-.cta-section { padding: 120px 0 140px; position: relative; overflow: hidden; }
-.cta-section::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 800px; height: 800px; background: radial-gradient(circle, rgba(59, 130, 246, 0.08), rgba(99, 102, 241, 0.04), transparent 60%); border-radius: 50%; }
-.cta-box { position: relative; z-index: 2; max-width: 680px; margin: 0 auto; text-align: center; }
-.cta-box h2 { margin-bottom: 20px; }
-.cta-box > p { font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 40px; line-height: 1.7; }
-.cta-actions { display: flex; align-items: center; justify-content: center; gap: 16px; }
-
-/* Footer */
-.footer { border-top: 1px solid var(--border); padding: 60px 0 40px; }
-.footer-inner { display: flex; justify-content: space-between; align-items: start; margin-bottom: 48px; }
-.footer-brand { max-width: 300px; }
-.footer-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
-.footer-logo span { font-size: 18px; font-weight: 800; color: #fff; letter-spacing: -0.5px; }
-.footer-tagline { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 16px; }
-.footer-brand > p { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
-.footer-columns { display: flex; gap: 80px; }
-.footer-col h5 { font-size: 13px; font-weight: 600; color: var(--text-primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
-.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-.footer-col ul a { font-size: 14px; color: var(--text-muted); transition: color 0.2s; }
-.footer-col ul a:hover { color: var(--text-primary); }
-.footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 32px; border-top: 1px solid var(--border); }
-.footer-bottom p { font-size: 13px; color: var(--text-muted); }
-.footer-founder { font-size: 13px; color: var(--text-muted); }
-.footer-founder span { color: var(--text-secondary); }
-.footer-social { display: flex; gap: 16px; }
-.footer-social a { width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 1px solid var(--border); color: var(--text-muted); transition: all 0.2s; }
-.footer-social a:hover { border-color: var(--border-hover); color: var(--primary); }
-.footer-social svg { width: 16px; height: 16px; }
-
-.section-divider { height: 1px; background: var(--border); border: none; }
-
-/* Animations */
-.reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1); }
-.reveal.visible { opacity: 1; transform: translateY(0); }
-.reveal-delay-1 { transition-delay: 0.1s; }
-.reveal-delay-2 { transition-delay: 0.2s; }
-.reveal-delay-3 { transition-delay: 0.3s; }
-.reveal-delay-4 { transition-delay: 0.35s; }
-
-/* Responsive */
-@media (max-width: 1024px) {
-  .metrics-grid { grid-template-columns: repeat(2, 1fr); }
-  .tailor-content { grid-template-columns: 1fr; gap: 48px; }
-  .opp-grid { grid-template-columns: 1fr 1fr; }
-  .services-grid { grid-template-columns: 1fr 1fr; }
-  .service-card--featured { grid-template-columns: 1fr; }
-  .process-steps { grid-template-columns: repeat(2, 1fr); gap: 40px; }
-  .process-steps::before { display: none; }
-  .vision-pillars { grid-template-columns: 1fr 1fr 1fr; }
-  .footer-columns { gap: 48px; }
-}
-@media (max-width: 768px) {
-  .section { padding: 80px 0; }
-  .tailor { padding: 80px 0; }
-  .opportunities { padding: 80px 0; }
-  .vision { padding: 80px 0; }
-  .metrics-bar { padding: 60px 0; }
-  .nav-links { display: none; }
-  .nav-mobile-toggle { display: block; }
-  .lang-switch { display: none; }
-  .hero-actions { flex-direction: column; }
-  .hero-booking-card { padding: 28px 24px; }
-  .hero-booking-features { flex-direction: column; align-items: center; gap: 12px; }
-  .metrics-grid { grid-template-columns: 1fr 1fr; }
-  .trust-grid { grid-template-columns: 1fr 1fr; }
-  .opp-grid { grid-template-columns: 1fr; }
-  .services-grid { grid-template-columns: 1fr; }
-  .process-steps { grid-template-columns: 1fr; gap: 32px; }
-  .impact-grid { grid-template-columns: 1fr; }
-  .vision-pillars { grid-template-columns: 1fr; }
-  .footer-inner { flex-direction: column; gap: 40px; }
-  .footer-columns { gap: 40px; }
-  .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
-  .cta-actions { flex-direction: column; }
-}
-@media (max-width: 480px) {
-  .container { padding: 0 16px; }
-  .metrics-grid { grid-template-columns: 1fr; }
-  .trust-grid { grid-template-columns: 1fr; }
-  .footer-columns { flex-direction: column; gap: 32px; }
-}
-
-/* Booking Modal */
-.booking-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 10000;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding-top: 5vh;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-.booking-overlay.active {
-  opacity: 1;
-  visibility: visible;
-}
-.booking-overlay-bg {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(8px);
-}
-.booking-modal {
-  position: relative;
-  width: 90%;
-  max-width: 680px;
-  height: 85vh;
-  max-height: 750px;
-  background: var(--bg-surface);
-  border: 1px solid var(--border-hover);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  transform: scale(0.95) translateY(20px);
-  transition: transform 0.3s ease;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
-}
-.booking-overlay.active .booking-modal {
-  transform: scale(1) translateY(0);
-}
-.booking-modal-close {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  z-index: 10001;
-  width: 36px;
-  height: 36px;
-  background: rgba(17, 24, 39, 0.9);
-  border: 1px solid var(--border);
-  border-radius: 50%;
-  color: var(--text-secondary);
-  font-size: 18px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: color 0.2s, border-color 0.2s;
-}
-.booking-modal-close:hover {
-  color: var(--text-primary);
-  border-color: var(--border-hover);
-}
-
-/* Booking Steps */
-.booking-step {
-  position: absolute;
-  inset: 0;
-  transition: opacity 0.4s ease, transform 0.4s ease;
-}
-.booking-step.hidden {
-  opacity: 0;
-  pointer-events: none;
-  transform: translateX(40px);
-}
-.booking-step.active {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateX(0);
-}
-
-/* Step 1: Calendly */
-.booking-step-calendly .calendly-inline-widget {
-  width: 100%;
-  height: 100%;
-}
-/* Step 2: Questionnaire */
-.booking-step-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 48px 40px;
-  height: 100%;
-  overflow-y: auto;
-}
-.booking-form-inner {
-  width: 100%;
-  max-width: 420px;
-}
-.booking-form-header {
-  text-align: center;
-  margin-bottom: 36px;
-}
-.booking-form-icon {
-  width: 52px;
-  height: 52px;
-  margin: 0 auto 18px;
-  background: var(--glow-blue);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.booking-form-icon svg {
-  width: 24px;
-  height: 24px;
-  color: var(--primary);
-}
-.booking-form-header h3 {
-  font-size: 1.35rem;
-  color: var(--text-primary);
-  margin-bottom: 8px;
-}
-.booking-form-header p {
-  font-size: 14px;
-  color: var(--text-muted);
-  line-height: 1.6;
-}
-
-/* Form Fields */
-.booking-field {
-  margin-bottom: 20px;
-}
-.booking-field label {
-  display: block;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--text-secondary);
-  margin-bottom: 8px;
-  letter-spacing: 0.3px;
-}
-.booking-field input,
-.booking-field select {
-  width: 100%;
-  padding: 14px 16px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  color: var(--text-primary);
-  font-family: inherit;
-  font-size: 15px;
-  transition: border-color 0.2s, background 0.2s;
-  outline: none;
-  -webkit-appearance: none;
-  appearance: none;
-}
-.booking-field input::placeholder {
-  color: var(--text-muted);
-}
-.booking-field input:focus,
-.booking-field select:focus {
-  border-color: var(--primary);
-  background: rgba(59, 130, 246, 0.04);
-}
-.booking-field select {
-  cursor: pointer;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2394A3B8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 14px center;
-  padding-right: 40px;
-}
-.booking-field select option {
-  background: var(--bg-surface);
-  color: var(--text-primary);
-}
-
-/* Submit Button */
-.booking-submit {
-  width: 100%;
-  padding: 16px 32px;
-  margin-top: 8px;
-  background: var(--primary);
-  color: #fff;
-  border: none;
-  border-radius: var(--radius-full);
-  font-family: inherit;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3), 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-.booking-submit:hover {
-  background: var(--primary-deep);
-  box-shadow: 0 0 32px rgba(59, 130, 246, 0.45), 0 8px 24px rgba(0, 0, 0, 0.3);
-  transform: translateY(-1px);
-}
-
-/* Analysis Notice */
-.booking-notice {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  margin-top: 24px;
-  padding: 14px 16px;
-  background: rgba(59, 130, 246, 0.06);
-  border: 1px solid rgba(59, 130, 246, 0.12);
-  border-radius: var(--radius-md);
-}
-.booking-notice svg {
-  width: 18px;
-  height: 18px;
-  color: var(--primary);
-  flex-shrink: 0;
-  margin-top: 1px;
-}
-.booking-notice p {
-  font-size: 13px;
-  color: var(--text-secondary);
-  line-height: 1.5;
-}
-
-/* Step 3: Confirmation */
-.booking-step-confirm {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 48px 40px;
-  height: 100%;
-  text-align: center;
-}
-.booking-confirm-icon {
-  width: 64px;
-  height: 64px;
-  margin-bottom: 24px;
-  background: rgba(34, 197, 94, 0.1);
-  border: 1px solid rgba(34, 197, 94, 0.2);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.booking-confirm-icon svg {
-  width: 28px;
-  height: 28px;
-  color: #22C55E;
-}
-.booking-step-confirm h3 {
-  font-size: 1.4rem;
-  color: var(--text-primary);
-  margin-bottom: 12px;
-}
-.booking-step-confirm p {
-  font-size: 15px;
-  color: var(--text-secondary);
-  max-width: 380px;
-  line-height: 1.7;
-}
-.booking-confirm-close {
-  margin-top: 32px;
-  padding: 12px 28px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-full);
-  color: var(--text-primary);
-  font-family: inherit;
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-.booking-confirm-close:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: var(--border-hover);
-}
-
-/* Progress indicator */
-.booking-progress {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  z-index: 10002;
-  display: flex;
-}
-.booking-progress-bar {
-  height: 100%;
-  transition: width 0.4s ease;
-  background: linear-gradient(90deg, var(--primary), var(--accent-violet));
-  border-radius: 0 2px 2px 0;
-}
-
-@media (max-width: 768px) {
-  .booking-step-form { padding: 36px 24px; }
-  .booking-step-confirm { padding: 36px 24px; }
-}
-</style>
+<!-- Stylesheet -->
+<link rel="stylesheet" href="styles/main.css?v=2">
 </head>
 <body>
+
+<a href="#opportunities" class="skip-to-content">Skip to content</a>
 
 <!-- NAV -->
 <nav class="nav" id="nav">
   <div class="nav-inner">
-    <a href="#" class="nav-logo"><div class="zenia-mark"></div><span class="nav-logo-text">ZENIA</span></a>
+    <a href="#" class="nav-logo"><svg class="zenia-mark" viewBox="0 0 140 140" fill="none"><defs><linearGradient id="zg-b" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2563EB"/><stop offset="100%" stop-color="#3B82F6"/></linearGradient><linearGradient id="zg-v" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6366F1"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient></defs><rect width="140" height="140" rx="28" fill="#0F172A"/><path d="M 70 18 Q 18 18 18 38 L 18 57 Q 18 63 24 63 L 88 63 Z" fill="url(#zg-b)"/><path d="M 70 122 Q 122 122 122 102 L 122 83 Q 122 77 116 77 L 52 77 Z" fill="url(#zg-v)"/></svg><span class="nav-logo-text">ZENIA</span></a>
     <ul class="nav-links">
       <li><a href="#opportunities" data-i18n="nav.opportunities">AI Opportunities</a></li>
       <li><a href="#services" data-i18n="nav.services">Services</a></li>
@@ -774,91 +143,13 @@ a { color: inherit; text-decoration: none; }
     <h1 class="reveal reveal-delay-1" data-i18n-html="hero.title">AI Systems Built<br><span class="text-gradient">From Scratch for Your Business</span></h1>
     <p class="hero-subtitle reveal reveal-delay-2" data-i18n="hero.subtitle">We design, build, and deploy custom AI systems tailored to your specific operations, workflows, and business goals. Every solution is purpose-built for your company.</p>
     <div class="hero-actions reveal reveal-delay-3">
-      <a href="#tailor" class="btn btn-primary btn-arrow" data-i18n="hero.cta_primary">Our Approach</a>
+      <a href="#" onclick="openCalendly(event)" class="btn btn-primary btn-arrow" data-i18n="hero.cta_primary">Book a Free Strategy Call</a>
       <a href="#process" class="btn btn-secondary" data-i18n="hero.cta_secondary">See How It Works</a>
     </div>
-    <div class="hero-booking reveal reveal-delay-4">
-      <div class="hero-booking-card">
-        <div class="hero-booking-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/></svg>
-        </div>
-        <h3 data-i18n="hero.booking_title">Free 30-Minute Strategy Session</h3>
-        <p data-i18n="hero.booking_desc">Talk directly with our team. We'll analyze your operations and identify concrete AI opportunities with estimated ROI.</p>
-        <div class="hero-booking-features">
-          <span data-i18n="hero.booking_f1">Custom analysis of your workflows</span>
-          <span data-i18n="hero.booking_f2">No commitment required</span>
-          <span data-i18n="hero.booking_f3">Actionable recommendations</span>
-        </div>
-        <a href="#" onclick="openCalendly(event)" class="btn btn-primary btn-arrow" data-i18n="hero.booking_cta">Book Your 1:1 Session Now</a>
-      </div>
-    </div>
   </div>
 </section>
 
-<!-- SECTION 1: IMPACT METRICS BAR -->
-<section class="metrics-bar" id="metrics">
-  <div class="container">
-    <div class="metrics-bar-title reveal">
-      <h2 data-i18n-html="metrics.title">AI That Delivers <span class="text-gradient">Measurable Operational Impact</span></h2>
-      <p data-i18n="metrics.subtitle">Real outcomes our clients achieve after AI transformation</p>
-    </div>
-    <div class="metrics-grid">
-      <div class="metric-item reveal reveal-delay-1">
-        <div class="metric-value text-gradient">30-60%</div>
-        <h4 data-i18n="metrics.m1_title">Productivity Improvement</h4>
-        <p data-i18n="metrics.m1_desc">Teams accomplish more in less time with AI-augmented workflows</p>
-      </div>
-      <div class="metric-item reveal reveal-delay-2">
-        <div class="metric-value text-gradient">40%</div>
-        <h4 data-i18n="metrics.m2_title">Manual Work Eliminated</h4>
-        <p data-i18n="metrics.m2_desc">Repetitive processes automated across core operations</p>
-      </div>
-      <div class="metric-item reveal reveal-delay-3">
-        <div class="metric-value text-gradient">80%</div>
-        <h4 data-i18n="metrics.m3_title">Process Automation</h4>
-        <p data-i18n="metrics.m3_desc">Of repetitive knowledge work handled by AI agents</p>
-      </div>
-      <div class="metric-item reveal reveal-delay-4">
-        <div class="metric-value text-gradient">24/7</div>
-        <h4 data-i18n="metrics.m4_title">AI Copilots Deployed</h4>
-        <p data-i18n="metrics.m4_desc">Always-on systems running across business operations</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TRUST -->
-<section class="trust" id="trust">
-  <div class="container">
-    <p class="trust-label reveal" data-i18n="trust.label">Capabilities & Expertise</p>
-    <div class="trust-grid">
-      <div class="trust-item reveal reveal-delay-1">
-        <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg></div>
-        <h4 data-i18n="trust.item1_title">Enterprise AI</h4>
-        <p data-i18n="trust.item1_desc">End-to-end deployment</p>
-      </div>
-      <div class="trust-item reveal reveal-delay-2">
-        <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg></div>
-        <h4 data-i18n="trust.item2_title">Workflow Automation</h4>
-        <p data-i18n="trust.item2_desc">Intelligent process design</p>
-      </div>
-      <div class="trust-item reveal reveal-delay-3">
-        <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/></svg></div>
-        <h4 data-i18n="trust.item3_title">AI Agent Systems</h4>
-        <p data-i18n="trust.item3_desc">Autonomous operations</p>
-      </div>
-      <div class="trust-item reveal reveal-delay-4">
-        <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h.01"/><path d="M7 20v-4"/><path d="M12 20v-8"/><path d="M17 20V8"/><path d="M22 4v16"/></svg></div>
-        <h4 data-i18n="trust.item4_title">Measurable ROI</h4>
-        <p data-i18n="trust.item4_desc">Data-driven outcomes</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<hr class="section-divider">
-
-<!-- SECTION 2: AI OPPORTUNITIES -->
+<!-- AI OPPORTUNITIES -->
 <section class="opportunities" id="opportunities">
   <div class="container">
     <div class="text-center reveal">
@@ -912,7 +203,7 @@ a { color: inherit; text-decoration: none; }
 
 <hr class="section-divider">
 
-<!-- TAILOR-MADE (rewritten positive) -->
+<!-- TAILOR-MADE -->
 <section class="tailor" id="tailor">
   <div class="container">
     <div class="tailor-content">
@@ -1088,20 +379,58 @@ a { color: inherit; text-decoration: none; }
   </div>
 </section>
 
-<hr class="section-divider">
-
-<!-- SECTION 3: STRATEGIC VISION -->
-<section class="vision" id="vision">
+<!-- SOCIAL PROOF -->
+<section class="proof" id="proof">
   <div class="container">
-    <div class="vision-content reveal">
-      <span class="section-label" data-i18n="vision.label">Strategic Perspective</span>
-      <h2 data-i18n-html="vision.title">AI Is Becoming the <span class="text-gradient">New Operational Layer</span> of Modern Companies</h2>
-      <div class="vision-body">
-        <p data-i18n="vision.p1">The companies that will lead their industries over the next decade are the ones redesigning their operations around AI today. This isn't about adding a chatbot or automating a single task. It's about fundamentally rethinking how work gets done.</p>
-        <p data-i18n="vision.p2">Organizations that embed AI into their core operations gain compounding advantages: faster execution, sharper decisions, lower costs, and the ability to scale without proportionally scaling headcount. Early movers create structural advantages that become increasingly difficult for competitors to close.</p>
+    <div class="text-center reveal">
+      <span class="section-label" data-i18n="proof.label">Client Results</span>
+      <h2 class="section-title" data-i18n-html="proof.title">Built For Companies<br><span class="text-gradient">Like Yours</span></h2>
+    </div>
+    <div class="proof-grid">
+      <div class="proof-card reveal reveal-delay-1">
+        <div class="proof-card-industry" data-i18n="proof.c1_industry">Wellness</div>
+        <h3 data-i18n="proof.c1_title">AI-Powered Sponsor Acquisition System</h3>
+        <p data-i18n="proof.c1_desc">Built an intelligent system that identifies, qualifies, and initiates outreach to potential sponsors across a 72,000+ member wellness community. Replaced manual prospecting with AI agents that work around the clock.</p>
+        <div class="proof-stat">
+          <span class="proof-stat-value text-gradient">72K+</span>
+          <span class="proof-stat-label" data-i18n="proof.c1_stat">community members reached</span>
+        </div>
+      </div>
+      <div class="proof-card reveal reveal-delay-2">
+        <div class="proof-card-industry" data-i18n="proof.c2_industry">Luxury Marketplace</div>
+        <h3 data-i18n="proof.c2_title">SaaS Platform for Luxury Watch Dealers</h3>
+        <p data-i18n="proof.c2_desc">Built a SaaS marketplace that automates listing parsing, buyer-seller matching, and deal tracking for luxury watch dealers. Cut 1.5 hours of daily manual work per dealer.</p>
+        <div class="proof-stat">
+          <span class="proof-stat-value text-gradient">5x</span>
+          <span class="proof-stat-label" data-i18n="proof.c2_stat">faster deal matching</span>
+        </div>
+      </div>
+      <div class="proof-card reveal reveal-delay-3">
+        <div class="proof-card-industry" data-i18n="proof.c3_industry">Fitness & Wellness</div>
+        <h3 data-i18n="proof.c3_title">Operations Automation for a National Brand</h3>
+        <p data-i18n="proof.c3_desc">Designed AI automation across core operations for a leading regional fitness and wellness brand. Processes that consumed hours of manual work every day now run autonomously.</p>
+        <div class="proof-stat">
+          <span class="proof-stat-value text-gradient">80%</span>
+          <span class="proof-stat-label" data-i18n="proof.c3_stat">of manual workflows automated</span>
+        </div>
+      </div>
+      <div class="proof-card reveal reveal-delay-4">
+        <div class="proof-card-industry" data-i18n="proof.c4_industry">Wellness</div>
+        <h3 data-i18n="proof.c4_title">Digital Product Launch & Monetization Engine</h3>
+        <p data-i18n="proof.c4_desc">Designed and launched a digital running program with automated sales funnels, email sequences, and integrated payment. Turned an offline community into a scalable digital revenue stream.</p>
+        <div class="proof-stat">
+          <span class="proof-stat-value text-gradient">+40%</span>
+          <span class="proof-stat-label" data-i18n="proof.c4_stat">increase in product sales</span>
+        </div>
       </div>
     </div>
-    <div class="vision-pillars">
+  </div>
+</section>
+
+<!-- FINAL CTA (with vision pillars) -->
+<section class="cta-section" id="cta">
+  <div class="container">
+    <div class="vision-pillars" style="margin-bottom: 64px;">
       <div class="vision-pillar reveal reveal-delay-1">
         <div class="vision-pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
         <h4 data-i18n="vision.pill1_title">Operational Redesign</h4>
@@ -1118,15 +447,9 @@ a { color: inherit; text-decoration: none; }
         <p data-i18n="vision.pill3_desc">Grow revenue and capability without proportionally growing costs or complexity</p>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- FINAL CTA -->
-<section class="cta-section" id="cta">
-  <div class="container">
     <div class="cta-box reveal">
       <span class="section-label" data-i18n="cta.label">Ready to Transform?</span>
-      <h2 data-i18n-html="cta.title">Turn AI Into Your<br><span class="text-gradient">Competitive Advantage</span></h2>
+      <h2 data-i18n-html="cta.title">30 Minutes Could<br><span class="text-gradient">Change Your Next Quarter</span></h2>
       <p data-i18n="cta.desc">Book a strategy session with our team. We'll analyze your operations, identify the highest-impact AI opportunities, and show you exactly what's possible.</p>
       <div class="cta-actions">
         <a href="#" onclick="openCalendly(event)" class="btn btn-primary btn-arrow" data-i18n="cta.cta_primary">Book Your AI Strategy Session</a>
@@ -1156,7 +479,7 @@ a { color: inherit; text-decoration: none; }
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
           </div>
           <h3 id="formTitle">Help us prepare your session</h3>
-          <p id="formDesc">3 quick questions so we can make the most of your time</p>
+          <p id="formDesc">A few quick questions so we can make the most of your time</p>
         </div>
         <form id="bookingForm" onsubmit="submitBookingForm(event)">
           <div class="booking-field">
@@ -1184,6 +507,10 @@ a { color: inherit; text-decoration: none; }
               <option value="Not sure yet" id="optArea5">Not sure yet</option>
             </select>
           </div>
+          <div class="booking-field">
+            <label id="labelOnline">Your main online presence <span style="font-weight:400;color:var(--text-muted)">(website, Instagram, LinkedIn, etc.)</span></label>
+            <input type="url" id="companyUrl" placeholder="Enter your URL" inputmode="url">
+          </div>
           <button type="submit" class="booking-submit" id="formSubmitBtn">Confirm Booking</button>
           <div class="booking-notice">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
@@ -1210,7 +537,7 @@ a { color: inherit; text-decoration: none; }
   <div class="container">
     <div class="footer-inner">
       <div class="footer-brand">
-        <div class="footer-logo"><div class="zenia-mark zenia-mark--sm"></div><span>ZENIA</span></div>
+        <div class="footer-logo"><svg class="zenia-mark zenia-mark--sm" viewBox="0 0 140 140" fill="none"><defs><linearGradient id="zg2-b" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2563EB"/><stop offset="100%" stop-color="#3B82F6"/></linearGradient><linearGradient id="zg2-v" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6366F1"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient></defs><rect width="140" height="140" rx="28" fill="#0F172A"/><path d="M 70 18 Q 18 18 18 38 L 18 57 Q 18 63 24 63 L 88 63 Z" fill="url(#zg2-b)"/><path d="M 70 122 Q 122 122 122 102 L 122 83 Q 122 77 116 77 L 52 77 Z" fill="url(#zg2-v)"/></svg><span>ZENIA</span></div>
         <p class="footer-tagline" data-i18n="footer.tagline">Go Beyond</p>
         <p data-i18n="footer.brand_desc">We help organizations redesign operations using intelligent automation and AI systems that deliver measurable results.</p>
       </div>
@@ -1239,570 +566,21 @@ a { color: inherit; text-decoration: none; }
       <p>&copy; 2026 ZENIA. <span data-i18n="footer.rights">All rights reserved.</span></p>
       <p class="footer-founder" data-i18n-html="footer.founder">Founded by <span>Fabrizzio Zelada</span></p>
       <div class="footer-social">
-        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-        <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        <a href="https://www.linkedin.com/company/zeniapartners" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        <a href="https://www.instagram.com/zeniapartners" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
       </div>
     </div>
   </div>
 </footer>
 
-<script>
-const translations = {
-  en: {
-    "nav.opportunities": "AI Opportunities",
-    "nav.services": "Services",
-    "nav.process": "Process",
-    "nav.impact": "Impact",
-    "nav.cta": "Get Started",
-    "hero.badge": "AI Transformation Partner",
-    "hero.title": 'AI Systems Built<br><span class="text-gradient">From Scratch for Your Business</span>',
-    "hero.subtitle": "We design, build, and deploy custom AI systems tailored to your specific operations, workflows, and business goals. Every solution is purpose-built for your company.",
-    "hero.cta_primary": "Our Approach",
-    "hero.cta_secondary": "Explore Use Cases",
-    "hero.booking_title": "Free 30-Minute Strategy Session",
-    "hero.booking_desc": "Talk directly with our team. We'll analyze your operations and identify concrete AI opportunities with estimated ROI.",
-    "hero.booking_f1": "Custom analysis of your workflows",
-    "hero.booking_f2": "No commitment required",
-    "hero.booking_f3": "Actionable recommendations",
-    "hero.booking_cta": "Book Your 1:1 Session Now",
-    "metrics.title": 'AI That Delivers <span class="text-gradient">Measurable Operational Impact</span>',
-    "metrics.subtitle": "Real outcomes our clients achieve after AI transformation",
-    "metrics.m1_title": "Productivity Improvement",
-    "metrics.m1_desc": "Teams accomplish more in less time with AI-augmented workflows",
-    "metrics.m2_title": "Manual Work Eliminated",
-    "metrics.m2_desc": "Repetitive processes automated across core operations",
-    "metrics.m3_title": "Process Automation",
-    "metrics.m3_desc": "Of repetitive knowledge work handled by AI agents",
-    "metrics.m4_title": "AI Copilots Deployed",
-    "metrics.m4_desc": "Always-on systems running across business operations",
-    "trust.label": "Capabilities & Expertise",
-    "trust.item1_title": "Enterprise AI",
-    "trust.item1_desc": "End-to-end deployment",
-    "trust.item2_title": "Workflow Automation",
-    "trust.item2_desc": "Intelligent process design",
-    "trust.item3_title": "AI Agent Systems",
-    "trust.item3_desc": "Autonomous operations",
-    "trust.item4_title": "Measurable ROI",
-    "trust.item4_desc": "Data-driven outcomes",
-    "opp.label": "AI Opportunities",
-    "opp.title": 'Where AI Creates<br><span class="text-gradient">Immediate Business Value</span>',
-    "opp.desc": "These are the areas where companies see the fastest and most significant returns from AI transformation.",
-    "opp.c1_title": "Sales & Revenue Automation",
-    "opp.c1_desc": "AI-powered lead scoring, automated outreach, and predictive pipeline analytics that accelerate revenue growth without adding headcount.",
-    "opp.c2_title": "Customer Support AI",
-    "opp.c2_desc": "Intelligent agents that resolve inquiries instantly, escalate complex issues, and improve satisfaction scores while reducing support costs.",
-    "opp.c3_title": "Internal Knowledge Copilots",
-    "opp.c3_desc": "AI assistants embedded in your team's daily tools that surface relevant information, draft documents, and accelerate decision-making.",
-    "opp.c4_title": "Operations Automation",
-    "opp.c4_desc": "Automate reporting, approvals, scheduling, and cross-team coordination. Eliminate manual overhead across every department.",
-    "opp.c5_title": "AI Decision Support",
-    "opp.c5_desc": "Real-time analytics and predictive models that give leadership the data clarity to make faster, higher-confidence strategic decisions.",
-    "opp.c6_title": "Custom SaaS Platforms",
-    "opp.c6_desc": "Full-stack software products built from scratch with AI at the core. Designed for your specific market, users, and business model.",
-    "opp.cta": "See How We Implement",
-    "tailor.label": "Our Approach",
-    "tailor.title": 'Purpose-Built<br><span class="text-gradient">Around Your Operations</span>',
-    "tailor.desc": "We start by understanding how your company actually works. Your processes, your bottlenecks, your growth targets. Then we engineer AI systems designed specifically for your reality.",
-    "tailor.p1_title": "Designed for Your Specific Use Case",
-    "tailor.p1_desc": "Every system is architected from the ground up around your exact workflows, tools, and business objectives.",
-    "tailor.p2_title": "Deep Business Immersion",
-    "tailor.p2_desc": "We embed in your operations to understand exactly how your team works before writing a single line of code.",
-    "tailor.p3_title": "Scales as You Grow",
-    "tailor.p3_desc": "Your AI systems grow and adapt as your needs evolve. Built for scale from day one, refined continuously.",
-    "tailor.card1_label": "How We Work",
-    "tailor.card1_title": "Your Business. Your AI. Your Rules.",
-    "tailor.card1_desc": "We analyze your specific workflows, bottlenecks, and opportunities. Then we build AI systems engineered exclusively for your operation.",
-    "tailor.card2_label": "Custom SaaS Development",
-    "tailor.card2_title": "We Build Entire Products for You",
-    "tailor.card2_desc": "Need a full SaaS platform powered by AI? We design, develop, and deploy complete software products tailored to your market and business model.",
-    "tailor.card3_label": "The Result",
-    "tailor.card3_title": "Technology That Feels Like It Was Always There",
-    "tailor.card3_desc": "Our solutions integrate seamlessly with your existing tools and teams. No disruption, no steep learning curves. Just better operations from day one.",
-    "services.label": "What We Do",
-    "services.title": 'Operational Intelligence,<br><span class="text-gradient">Engineered With AI</span>',
-    "services.desc": "We architect, build, and deploy systems that fundamentally transform how your organization operates.",
-    "services.s1_title": "AI Strategy Consulting",
-    "services.s1_desc": "Comprehensive assessment of your operations to identify high-impact AI opportunities. We map your workflows, quantify potential gains, and design a transformation roadmap tailored to your business.",
-    "services.s2_title": "Workflow Automation",
-    "services.s2_desc": "Transform manual processes into intelligent automated workflows. We integrate AI into your existing tools and systems to eliminate bottlenecks and accelerate throughput.",
-    "services.s3_title": "AI Agent Deployment",
-    "services.s3_desc": "Design and deploy autonomous AI agents that handle complex tasks across your organization. From customer interactions to internal operations, our agents work 24/7 with precision.",
-    "services.s4_title": "Operational Transformation",
-    "services.s4_desc": "Full-scale redesign of how your company operates, powered by AI at every level. We restructure processes, retrain teams, and implement systems that compound productivity gains.",
-    "services.s5_badge": "Full Product Development",
-    "services.s5_title": "Custom SaaS Development",
-    "services.s5_desc": "We build complete SaaS platforms from the ground up, powered by AI and tailored to your specific market. From architecture to deployment, we deliver production-ready software products that give you a technological edge your competitors can't replicate.",
-    "process.label": "How It Works",
-    "process.title": 'From Assessment to<br><span class="text-gradient">Continuous Optimization</span>',
-    "process.desc": "A structured engagement model designed for speed, clarity, and lasting impact. Every step is measurable.",
-    "process.step1_title": "AI Opportunity Analysis",
-    "process.step1_desc": "We audit your operations, identify automation targets, and quantify potential ROI for each opportunity.",
-    "process.step2_title": "Workflow Redesign",
-    "process.step2_desc": "We architect new workflows that integrate AI natively, eliminating waste and maximizing throughput.",
-    "process.step3_title": "System Implementation",
-    "process.step3_desc": "Our team builds, tests, and deploys AI systems into your existing infrastructure with zero disruption.",
-    "process.step4_title": "Continuous Optimization",
-    "process.step4_desc": "We monitor performance, refine models, and expand automation scope as your organization evolves.",
-    "impact.label": "Measurable Impact",
-    "impact.title": 'Results That<br><span class="text-gradient">Speak For Themselves</span>',
-    "impact.desc": "Our clients don't hope AI works. They measure it. These are the outcomes companies achieve with ZENIA.",
-    "impact.i1_title": "Faster Decision Cycles",
-    "impact.i1_desc": "AI-powered analytics replace manual reporting, enabling real-time strategic decisions.",
-    "impact.i2_title": "Operational Cost Reduction",
-    "impact.i2_desc": "Automated workflows eliminate redundant tasks and reduce headcount dependency.",
-    "impact.i3_title": "Team Productivity",
-    "impact.i3_desc": "AI copilots amplify individual output, letting teams focus on high-value work.",
-    "impact.i4_title": "Process Automation Rate",
-    "impact.i4_desc": "Knowledge work that used to take hours, completed in minutes by AI agents.",
-    "impact.i5_title": "Always-On Operations",
-    "impact.i5_desc": "AI systems that never sleep, ensuring continuous service and instant response times.",
-    "impact.i6_title": "Time to First Value",
-    "impact.i6_desc": "From strategy to production deployment in under eight weeks. Speed is in our DNA.",
-    "vision.label": "Strategic Perspective",
-    "vision.title": 'AI Is Becoming the <span class="text-gradient">New Operational Layer</span> of Modern Companies',
-    "vision.p1": "The companies that will lead their industries over the next decade are the ones redesigning their operations around AI today. This isn't about adding a chatbot or automating a single task. It's about fundamentally rethinking how work gets done.",
-    "vision.p2": "Organizations that embed AI into their core operations gain compounding advantages: faster execution, sharper decisions, lower costs, and the ability to scale without proportionally scaling headcount. Early movers create structural advantages that become increasingly difficult for competitors to close.",
-    "vision.pill1_title": "Operational Redesign",
-    "vision.pill1_desc": "Restructure workflows around AI capabilities, not legacy processes",
-    "vision.pill2_title": "Compounding Advantage",
-    "vision.pill2_desc": "AI systems that learn and improve, creating exponential returns over time",
-    "vision.pill3_title": "Scalable Intelligence",
-    "vision.pill3_desc": "Grow revenue and capability without proportionally growing costs or complexity",
-    "cta.label": "Ready to Transform?",
-    "cta.title": 'Turn AI Into Your<br><span class="text-gradient">Competitive Advantage</span>',
-    "cta.desc": "Book a strategy session with our team. We'll analyze your operations, identify the highest-impact AI opportunities, and show you exactly what's possible.",
-    "cta.cta_primary": "Book Your AI Strategy Session",
-    "cta.cta_secondary": "View Transformation Process",
-    "footer.tagline": "Go Beyond",
-    "footer.brand_desc": "We help organizations redesign operations using intelligent automation and AI systems that deliver measurable results.",
-    "footer.col1_title": "Services",
-    "footer.col1_l1": "AI Strategy",
-    "footer.col1_l2": "Workflow Automation",
-    "footer.col1_l3": "Agent Deployment",
-    "footer.col1_l4": "Custom SaaS Development",
-    "footer.col2_title": "Company",
-    "footer.col2_l1": "Our Approach",
-    "footer.col2_l2": "Process",
-    "footer.col2_l3": "AI Opportunities",
-    "footer.col2_l4": "Contact",
-    "footer.rights": "All rights reserved.",
-    "footer.founder": 'Founded by <span>Fabrizzio Zelada</span>'
-  },
-  es: {
-    "nav.opportunities": "Oportunidades AI",
-    "nav.services": "Servicios",
-    "nav.process": "Proceso",
-    "nav.impact": "Impacto",
-    "nav.cta": "Empezar",
-    "hero.badge": "Partner de Transformación AI",
-    "hero.title": 'Sistemas AI Creados<br><span class="text-gradient">Desde Cero para tu Empresa</span>',
-    "hero.subtitle": "Diseñamos, desarrollamos e implementamos sistemas AI a medida de tus operaciones, flujos de trabajo y objetivos de negocio. Cada solución está hecha exclusivamente para tu empresa.",
-    "hero.cta_primary": "Nuestro Enfoque",
-    "hero.cta_secondary": "Ver Cómo Funciona",
-    "hero.booking_title": "Sesión Estratégica Gratuita de 30 Min",
-    "hero.booking_desc": "Habla directamente con nuestro equipo. Analizaremos tus operaciones e identificaremos oportunidades concretas de AI con ROI estimado.",
-    "hero.booking_f1": "Análisis personalizado de tus procesos",
-    "hero.booking_f2": "Sin compromiso",
-    "hero.booking_f3": "Recomendaciones accionables",
-    "hero.booking_cta": "Agenda tu Sesión 1:1 Ahora",
-    "metrics.title": 'AI que Entrega <span class="text-gradient">Impacto Operacional Medible</span>',
-    "metrics.subtitle": "Resultados reales que nuestros clientes logran tras la transformación con AI",
-    "metrics.m1_title": "Mejora de Productividad",
-    "metrics.m1_desc": "Equipos logran más en menos tiempo con procesos potenciados por AI",
-    "metrics.m2_title": "Trabajo Manual Eliminado",
-    "metrics.m2_desc": "Procesos repetitivos automatizados en operaciones clave",
-    "metrics.m3_title": "Automatización de Procesos",
-    "metrics.m3_desc": "Del trabajo repetitivo de conocimiento gestionado por agentes AI",
-    "metrics.m4_title": "Copilotos AI Activos",
-    "metrics.m4_desc": "Sistemas activos 24/7 en las operaciones del negocio",
-    "trust.label": "Capacidades y Experiencia",
-    "trust.item1_title": "AI Empresarial",
-    "trust.item1_desc": "Implementación integral",
-    "trust.item2_title": "Automatización de Procesos",
-    "trust.item2_desc": "Diseño inteligente de flujos",
-    "trust.item3_title": "Sistemas de Agentes AI",
-    "trust.item3_desc": "Operaciones autónomas",
-    "trust.item4_title": "ROI Medible",
-    "trust.item4_desc": "Resultados basados en datos",
-    "opp.label": "Oportunidades AI",
-    "opp.title": 'Dónde AI Genera<br><span class="text-gradient">Valor de Negocio Inmediato</span>',
-    "opp.desc": "Estas son las áreas donde las empresas obtienen los retornos más rápidos y significativos con la transformación AI.",
-    "opp.c1_title": "Automatización Comercial",
-    "opp.c1_desc": "Calificación de leads con AI, prospección automatizada y analítica predictiva de pipeline que aceleran ingresos sin aumentar equipo.",
-    "opp.c2_title": "Atención al Cliente con AI",
-    "opp.c2_desc": "Agentes inteligentes que resuelven consultas al instante, escalan temas complejos y mejoran la satisfacción reduciendo costos.",
-    "opp.c3_title": "Copilotos de Conocimiento Interno",
-    "opp.c3_desc": "Asistentes AI integrados en las herramientas diarias de tu equipo que encuentran información, redactan documentos y aceleran decisiones.",
-    "opp.c4_title": "Automatización de Operaciones",
-    "opp.c4_desc": "Automatiza reportes, aprobaciones, agendas y coordinación entre equipos. Elimina carga manual en todos los departamentos.",
-    "opp.c5_title": "Soporte a Decisiones con AI",
-    "opp.c5_desc": "Analítica en tiempo real y modelos predictivos que dan a la dirección la claridad para tomar decisiones estratégicas más rápidas.",
-    "opp.c6_title": "Plataformas SaaS a Medida",
-    "opp.c6_desc": "Productos SaaS completos creados desde cero con AI en el centro. Diseñados para tu mercado, usuarios y modelo de negocio.",
-    "opp.cta": "Ver Cómo lo Implementamos",
-    "tailor.label": "Nuestro Enfoque",
-    "tailor.title": 'Hecho a Medida<br><span class="text-gradient">Alrededor de tus Operaciones</span>',
-    "tailor.desc": "Empezamos por entender cómo funciona tu empresa realmente. Tus procesos, tus cuellos de botella, tus objetivos de crecimiento. Después diseñamos sistemas AI específicamente para tu realidad.",
-    "tailor.p1_title": "Diseñado para tu Caso de Uso Específico",
-    "tailor.p1_desc": "Cada sistema se construye desde cero alrededor de tus procesos exactos, herramientas y objetivos de negocio.",
-    "tailor.p2_title": "Inmersión Profunda en tu Negocio",
-    "tailor.p2_desc": "Nos integramos en tus operaciones para entender exactamente cómo trabaja tu equipo antes de escribir una línea de código.",
-    "tailor.p3_title": "Escala Contigo",
-    "tailor.p3_desc": "Tus sistemas AI crecen y se adaptan conforme evolucionan tus necesidades. Pensados para escalar desde el día uno.",
-    "tailor.card1_label": "Cómo Trabajamos",
-    "tailor.card1_title": "Tu Negocio. Tu AI. Tus Reglas.",
-    "tailor.card1_desc": "Analizamos tus procesos, cuellos de botella y oportunidades. Después creamos sistemas AI diseñados exclusivamente para tu operación.",
-    "tailor.card2_label": "Desarrollo SaaS a Medida",
-    "tailor.card2_title": "Creamos Productos Completos para Ti",
-    "tailor.card2_desc": "¿Necesitas una plataforma SaaS potenciada por AI? Diseñamos, desarrollamos y lanzamos productos de software completos a medida de tu mercado.",
-    "tailor.card3_label": "El Resultado",
-    "tailor.card3_title": "Tecnología que Se Siente Como si Siempre Hubiera Estado Ahí",
-    "tailor.card3_desc": "Nuestras soluciones se integran perfectamente con tus herramientas y equipos. Sin interrupciones, sin curvas de aprendizaje. Mejores operaciones desde el día uno.",
-    "services.label": "Qué Hacemos",
-    "services.title": 'Inteligencia Operacional,<br><span class="text-gradient">Diseñada con AI</span>',
-    "services.desc": "Diseñamos, desarrollamos e implementamos sistemas que transforman por completo cómo opera tu organización.",
-    "services.s1_title": "Consultoría Estratégica AI",
-    "services.s1_desc": "Evaluación integral de tus operaciones para identificar oportunidades de alto impacto. Analizamos procesos, cuantificamos ganancias y diseñamos una hoja de ruta a medida.",
-    "services.s2_title": "Automatización de Procesos",
-    "services.s2_desc": "Transformamos procesos manuales en flujos automatizados inteligentes. Integramos AI en tus herramientas existentes para eliminar cuellos de botella.",
-    "services.s3_title": "Despliegue de Agentes AI",
-    "services.s3_desc": "Diseñamos e implementamos agentes AI autónomos que gestionan tareas complejas. Desde atención al cliente hasta operaciones internas, 24/7 con precisión.",
-    "services.s4_title": "Transformación Operacional",
-    "services.s4_desc": "Rediseño integral de cómo opera tu empresa, potenciado por AI en cada nivel. Optimizamos procesos e implementamos sistemas que multiplican la productividad.",
-    "services.s5_badge": "Desarrollo de Producto Completo",
-    "services.s5_title": "Desarrollo SaaS a Medida",
-    "services.s5_desc": "Creamos plataformas SaaS completas desde cero, potenciadas por AI y diseñadas para tu mercado. Del diseño al lanzamiento, entregamos productos listos para producción.",
-    "process.label": "Cómo Funciona",
-    "process.title": 'Del Análisis a la<br><span class="text-gradient">Optimización Continua</span>',
-    "process.desc": "Un modelo de trabajo estructurado para velocidad, claridad e impacto duradero. Cada paso es medible.",
-    "process.step1_title": "Análisis de Oportunidades AI",
-    "process.step1_desc": "Evaluamos tus operaciones, identificamos objetivos de automatización y cuantificamos el ROI potencial.",
-    "process.step2_title": "Rediseño de Procesos",
-    "process.step2_desc": "Diseñamos nuevos flujos que integran AI de forma nativa, eliminando ineficiencias y maximizando rendimiento.",
-    "process.step3_title": "Implementación del Sistema",
-    "process.step3_desc": "Nuestro equipo desarrolla, prueba e implementa sistemas AI en tu infraestructura existente sin interrupciones.",
-    "process.step4_title": "Optimización Continua",
-    "process.step4_desc": "Monitoreamos rendimiento, refinamos modelos y expandimos la automatización conforme evoluciona tu organización.",
-    "impact.label": "Impacto Medible",
-    "impact.title": 'Resultados que<br><span class="text-gradient">Hablan por Sí Mismos</span>',
-    "impact.desc": "Nuestros clientes no esperan que AI funcione. Lo miden. Estos son los resultados que logran con ZENIA.",
-    "impact.i1_title": "Ciclos de Decisión más Rápidos",
-    "impact.i1_desc": "Analítica con AI reemplaza reportes manuales, habilitando decisiones en tiempo real.",
-    "impact.i2_title": "Reducción de Costos Operativos",
-    "impact.i2_desc": "Procesos automatizados eliminan tareas redundantes y reducen la dependencia de personal adicional.",
-    "impact.i3_title": "Productividad del Equipo",
-    "impact.i3_desc": "Copilotos AI potencian el rendimiento individual, enfocando equipos en trabajo de alto valor.",
-    "impact.i4_title": "Tasa de Automatización",
-    "impact.i4_desc": "Trabajo de conocimiento que tomaba horas, completado en minutos por agentes AI.",
-    "impact.i5_title": "Operaciones 24/7",
-    "impact.i5_desc": "Sistemas AI que nunca paran, asegurando servicio continuo y respuesta instantánea.",
-    "impact.i6_title": "Tiempo al Primer Resultado",
-    "impact.i6_desc": "De estrategia a producción en menos de ocho semanas. La velocidad está en nuestro ADN.",
-    "vision.label": "Perspectiva Estratégica",
-    "vision.title": 'AI Se Está Convirtiendo en la <span class="text-gradient">Nueva Capa Operacional</span> de las Empresas Modernas',
-    "vision.p1": "Las empresas que liderarán sus industrias en la próxima década son las que están rediseñando sus operaciones con AI hoy. No se trata de añadir un chatbot o automatizar una sola tarea. Se trata de repensar por completo cómo se hace el trabajo.",
-    "vision.p2": "Las organizaciones que integran AI en sus operaciones centrales obtienen ventajas compuestas: ejecución más rápida, decisiones más precisas, costos menores, y la capacidad de crecer sin aumentar proporcionalmente su equipo. Los que actúan primero crean ventajas estructurales cada vez más difíciles de alcanzar.",
-    "vision.pill1_title": "Rediseño Operacional",
-    "vision.pill1_desc": "Reestructurar procesos alrededor de las capacidades de AI, no de métodos antiguos",
-    "vision.pill2_title": "Ventaja Compuesta",
-    "vision.pill2_desc": "Sistemas AI que aprenden y mejoran, generando retornos exponenciales",
-    "vision.pill3_title": "Inteligencia Escalable",
-    "vision.pill3_desc": "Crecer ingresos y capacidad sin crecer proporcionalmente costos o complejidad",
-    "cta.label": "¿Listo para Transformar?",
-    "cta.title": 'Convierte AI en tu<br><span class="text-gradient">Ventaja Competitiva</span>',
-    "cta.desc": "Agenda una sesión estratégica con nuestro equipo. Analizaremos tus operaciones, identificaremos las oportunidades AI de mayor impacto y te mostraremos lo que es posible.",
-    "cta.cta_primary": "Agenda tu Sesión Estratégica AI",
-    "cta.cta_secondary": "Ver Proceso de Transformación",
-    "footer.tagline": "Ve Más Allá",
-    "footer.brand_desc": "Ayudamos a organizaciones a rediseñar operaciones con automatización inteligente y sistemas AI que entregan resultados medibles.",
-    "footer.col1_title": "Servicios",
-    "footer.col1_l1": "Estrategia AI",
-    "footer.col1_l2": "Automatización de Procesos",
-    "footer.col1_l3": "Despliegue de Agentes",
-    "footer.col1_l4": "Desarrollo SaaS a Medida",
-    "footer.col2_title": "Empresa",
-    "footer.col2_l1": "Nuestro Enfoque",
-    "footer.col2_l2": "Proceso",
-    "footer.col2_l3": "Oportunidades AI",
-    "footer.col2_l4": "Contacto",
-    "footer.rights": "Todos los derechos reservados.",
-    "footer.founder": 'Fundada por <span>Fabrizzio Zelada</span>'
-  }
-};
+<!-- Scripts: i18n + main run immediately for translations & nav -->
+<script src="js/i18n.js?v=2"></script>
+<script src="js/main.js?v=2"></script>
+<script defer src="js/booking.js"></script>
 
-let currentLang = 'en';
-function detectLanguage() {
-  const stored = localStorage.getItem('zenia-lang');
-  if (stored && translations[stored]) return stored;
-  const bl = (navigator.language || navigator.userLanguage || 'en').substring(0, 2).toLowerCase();
-  return bl === 'es' ? 'es' : 'en';
-}
-function applyTranslations(lang) {
-  currentLang = lang;
-  document.documentElement.lang = lang;
-  const d = translations[lang];
-  document.querySelectorAll('[data-i18n]').forEach(el => { const k = el.getAttribute('data-i18n'); if (d[k] !== undefined) el.innerHTML = d[k]; });
-  document.querySelectorAll('[data-i18n-html]').forEach(el => { const k = el.getAttribute('data-i18n-html'); if (d[k] !== undefined) el.innerHTML = d[k]; });
-  document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.toggle('active', btn.getAttribute('data-lang') === lang));
-  document.title = lang === 'es' ? 'ZENIA \u2014 Sistemas AI para Empresas de Nueva Generacion' : 'ZENIA \u2014 AI Systems for Next-Generation Companies';
-  localStorage.setItem('zenia-lang', lang);
-}
-function setLang(lang) { applyTranslations(lang); }
+<!-- Three.js: defer both to unblock first paint, defer preserves order -->
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script defer src="js/animation.js"></script>
 
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40), { passive: true });
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-  link.addEventListener('click', (e) => { const t = document.querySelector(link.getAttribute('href')); if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); } });
-});
-
-applyTranslations(detectLanguage());
-
-// GLSL Hills Background
-(function() {
-  const canvas = document.getElementById('glsl-canvas');
-  if (!canvas || typeof THREE === 'undefined') return;
-  const renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: false, alpha: true });
-  renderer.setClearColor(0x000000, 0);
-  const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 10000);
-  camera.position.set(0, 16, 125);
-  camera.lookAt(new THREE.Vector3(0, 28, 0));
-  const clock = new THREE.Clock();
-  const uniforms = { time: { type: 'f', value: 0 } };
-  const planeSize = 256;
-  const mesh = new THREE.Mesh(
-    new THREE.PlaneGeometry(planeSize, planeSize, planeSize, planeSize),
-    new THREE.RawShaderMaterial({
-      uniforms: uniforms,
-      vertexShader: `
-        #define GLSLIFY 1
-        attribute vec3 position;
-        uniform mat4 projectionMatrix;
-        uniform mat4 modelViewMatrix;
-        uniform float time;
-        varying vec3 vPosition;
-        mat4 rotateMatrixX(float radian){return mat4(1.0,0.0,0.0,0.0,0.0,cos(radian),-sin(radian),0.0,0.0,sin(radian),cos(radian),0.0,0.0,0.0,0.0,1.0);}
-        vec3 mod289(vec3 x){return x-floor(x*(1.0/289.0))*289.0;}
-        vec4 mod289(vec4 x){return x-floor(x*(1.0/289.0))*289.0;}
-        vec4 permute(vec4 x){return mod289(((x*34.0)+1.0)*x);}
-        vec4 taylorInvSqrt(vec4 r){return 1.79284291400159-0.85373472095314*r;}
-        vec3 fade(vec3 t){return t*t*t*(t*(t*6.0-15.0)+10.0);}
-        float cnoise(vec3 P){
-          vec3 Pi0=floor(P);vec3 Pi1=Pi0+vec3(1.0);Pi0=mod289(Pi0);Pi1=mod289(Pi1);
-          vec3 Pf0=fract(P);vec3 Pf1=Pf0-vec3(1.0);
-          vec4 ix=vec4(Pi0.x,Pi1.x,Pi0.x,Pi1.x);vec4 iy=vec4(Pi0.yy,Pi1.yy);
-          vec4 iz0=Pi0.zzzz;vec4 iz1=Pi1.zzzz;
-          vec4 ixy=permute(permute(ix)+iy);vec4 ixy0=permute(ixy+iz0);vec4 ixy1=permute(ixy+iz1);
-          vec4 gx0=ixy0*(1.0/7.0);vec4 gy0=fract(floor(gx0)*(1.0/7.0))-0.5;gx0=fract(gx0);
-          vec4 gz0=vec4(0.5)-abs(gx0)-abs(gy0);vec4 sz0=step(gz0,vec4(0.0));
-          gx0-=sz0*(step(0.0,gx0)-0.5);gy0-=sz0*(step(0.0,gy0)-0.5);
-          vec4 gx1=ixy1*(1.0/7.0);vec4 gy1=fract(floor(gx1)*(1.0/7.0))-0.5;gx1=fract(gx1);
-          vec4 gz1=vec4(0.5)-abs(gx1)-abs(gy1);vec4 sz1=step(gz1,vec4(0.0));
-          gx1-=sz1*(step(0.0,gx1)-0.5);gy1-=sz1*(step(0.0,gy1)-0.5);
-          vec3 g000=vec3(gx0.x,gy0.x,gz0.x);vec3 g100=vec3(gx0.y,gy0.y,gz0.y);
-          vec3 g010=vec3(gx0.z,gy0.z,gz0.z);vec3 g110=vec3(gx0.w,gy0.w,gz0.w);
-          vec3 g001=vec3(gx1.x,gy1.x,gz1.x);vec3 g101=vec3(gx1.y,gy1.y,gz1.y);
-          vec3 g011=vec3(gx1.z,gy1.z,gz1.z);vec3 g111=vec3(gx1.w,gy1.w,gz1.w);
-          vec4 norm0=taylorInvSqrt(vec4(dot(g000,g000),dot(g010,g010),dot(g100,g100),dot(g110,g110)));
-          g000*=norm0.x;g010*=norm0.y;g100*=norm0.z;g110*=norm0.w;
-          vec4 norm1=taylorInvSqrt(vec4(dot(g001,g001),dot(g011,g011),dot(g101,g101),dot(g111,g111)));
-          g001*=norm1.x;g011*=norm1.y;g101*=norm1.z;g111*=norm1.w;
-          float n000=dot(g000,Pf0);float n100=dot(g100,vec3(Pf1.x,Pf0.yz));
-          float n010=dot(g010,vec3(Pf0.x,Pf1.y,Pf0.z));float n110=dot(g110,vec3(Pf1.xy,Pf0.z));
-          float n001=dot(g001,vec3(Pf0.xy,Pf1.z));float n101=dot(g101,vec3(Pf1.x,Pf0.y,Pf1.z));
-          float n011=dot(g011,vec3(Pf0.x,Pf1.yz));float n111=dot(g111,Pf1);
-          vec3 fade_xyz=fade(Pf0);
-          vec4 n_z=mix(vec4(n000,n100,n010,n110),vec4(n001,n101,n011,n111),fade_xyz.z);
-          vec2 n_yz=mix(n_z.xy,n_z.zw,fade_xyz.y);
-          float n_xyz=mix(n_yz.x,n_yz.y,fade_xyz.x);
-          return 2.2*n_xyz;
-        }
-        void main(void){
-          vec3 updatePosition=(rotateMatrixX(radians(90.0))*vec4(position,1.0)).xyz;
-          float sin1=sin(radians(updatePosition.x/128.0*90.0));
-          vec3 noisePosition=updatePosition+vec3(0.0,0.0,time*-30.0);
-          float noise1=cnoise(noisePosition*0.08);
-          float noise2=cnoise(noisePosition*0.06);
-          float noise3=cnoise(noisePosition*0.4);
-          vec3 lastPosition=updatePosition+vec3(0.0,
-            noise1*sin1*8.0+noise2*sin1*8.0+noise3*(abs(sin1)*2.0+0.5)+pow(sin1,2.0)*40.0,0.0);
-          vPosition=lastPosition;
-          gl_Position=projectionMatrix*modelViewMatrix*vec4(lastPosition,1.0);
-        }
-      `,
-      fragmentShader: `
-        precision highp float;
-        #define GLSLIFY 1
-        varying vec3 vPosition;
-        void main(void){
-          float opacity=(96.0-length(vPosition))/256.0*0.5;
-          float dist=length(vPosition)*0.01;
-          vec3 blue=vec3(0.231,0.510,0.965);
-          vec3 violet=vec3(0.388,0.400,0.945);
-          vec3 color=mix(blue,violet,dist);
-          gl_FragColor=vec4(color,opacity);
-        }
-      `,
-      transparent: true
-    })
-  );
-  scene.add(mesh);
-  function onResize(){
-    const w=window.innerWidth, h=window.innerHeight;
-    canvas.width=w; canvas.height=h;
-    camera.aspect=w/h; camera.updateProjectionMatrix();
-    renderer.setSize(w,h);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
-  }
-  function animate(){
-    uniforms.time.value+=clock.getDelta()*0.5;
-    renderer.render(scene,camera);
-    requestAnimationFrame(animate);
-  }
-  window.addEventListener('resize',onResize);
-  onResize();
-  animate();
-})();
-</script>
-<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-<script>
-// Booking modal state
-let bookingStep = 1;
-
-function openCalendly(e) {
-  e.preventDefault();
-  bookingStep = 1;
-  showStep(1);
-  document.getElementById('bookingModal').classList.add('active');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeBooking() {
-  const modal = document.getElementById('bookingModal');
-  modal.classList.remove('active');
-  document.body.style.overflow = '';
-  // Reset form after close animation
-  setTimeout(function() {
-    document.getElementById('bookingForm').reset();
-    showStep(1);
-  }, 350);
-}
-
-function showStep(step) {
-  bookingStep = step;
-  var steps = [
-    document.getElementById('bookingStep1'),
-    document.getElementById('bookingStep2'),
-    document.getElementById('bookingStep3')
-  ];
-  steps.forEach(function(s, i) {
-    if (i + 1 === step) {
-      s.classList.remove('hidden');
-      s.classList.add('active');
-    } else {
-      s.classList.add('hidden');
-      s.classList.remove('active');
-    }
-  });
-  var progress = step === 1 ? 50 : step === 2 ? 80 : 100;
-  document.getElementById('bookingProgress').style.width = progress + '%';
-
-  // Apply translations to form if in Spanish
-  if (currentLang === 'es') translateForm();
-}
-
-function translateForm() {
-  var t = {
-    formTitle: 'Ayudanos a preparar tu sesion',
-    formDesc: '3 preguntas rapidas para aprovechar al maximo tu tiempo',
-    labelCompany: 'Nombre de la empresa',
-    labelSize: 'Tamaño de la empresa',
-    labelArea: '¿Que area te gustaria mejorar mas?',
-    optSizeDefault: 'Seleccionar...',
-    optSize1: '1-10 empleados',
-    optSize2: '10-50 empleados',
-    optSize3: '50-200 empleados',
-    optSize4: '200+ empleados',
-    optAreaDefault: 'Seleccionar...',
-    optArea1: 'Ventas',
-    optArea2: 'Atencion al Cliente',
-    optArea3: 'Operaciones',
-    optArea4: 'Productividad Interna',
-    optArea5: 'No estoy seguro',
-    formSubmitBtn: 'Confirmar Reserva',
-    noticeText: 'Prepararemos un breve analisis de oportunidades AI para tu empresa antes de la llamada.',
-    confirmTitle: '¡Todo listo!',
-    confirmDesc: 'Analizaremos tu empresa antes de la llamada y llegaremos preparados con oportunidades AI personalizadas para tu negocio.',
-    confirmCloseBtn: 'Cerrar'
-  };
-  Object.keys(t).forEach(function(id) {
-    var el = document.getElementById(id);
-    if (el) {
-      if (el.tagName === 'INPUT') el.placeholder = t[id];
-      else if (el.tagName === 'OPTION') el.textContent = t[id];
-      else el.textContent = t[id];
-    }
-  });
-}
-
-// Store Calendly scheduled time
-var zeniaCallScheduled = null;
-
-function submitBookingForm(e) {
-  e.preventDefault();
-  var data = {
-    company: document.getElementById('companyName').value,
-    size: document.getElementById('companySize').value,
-    area: document.getElementById('companyArea').value,
-    callScheduled: zeniaCallScheduled,
-    timestamp: new Date().toISOString()
-  };
-
-  // Store locally as backup
-  var bookings = JSON.parse(localStorage.getItem('zenia-bookings') || '[]');
-  bookings.push(data);
-  localStorage.setItem('zenia-bookings', JSON.stringify(bookings));
-
-  // Send to ZENIA Research Agent backend to auto-generate briefing
-  var WEBHOOK_URL = window.ZENIA_WEBHOOK_URL || 'https://zenia-backend-y6hp.onrender.com/webhook/booking';
-  fetch(WEBHOOK_URL, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(data)
-  }).then(function(r) {
-    console.log('Briefing generation triggered for:', data.company);
-  }).catch(function(err) {
-    console.warn('Webhook not reachable, data saved locally:', err.message);
-  });
-
-  showStep(3);
-}
-
-// Listen for Calendly events
-window.addEventListener('message', function(e) {
-  var data = e.data;
-  if (typeof data === 'string') {
-    try { data = JSON.parse(data); } catch(err) { return; }
-  }
-  if (!data || !data.event) return;
-  if (data.event === 'calendly.event_scheduled') {
-    // Capture scheduled event time from Calendly payload
-    if (data.payload && data.payload.event && data.payload.event.start_time) {
-      zeniaCallScheduled = data.payload.event.start_time;
-    }
-    showStep(2);
-  }
-});
-
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') closeBooking();
-});
-</script>
 </body>
 </html>

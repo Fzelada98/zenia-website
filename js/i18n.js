@@ -275,6 +275,9 @@ const translations = {
 let currentLang = 'en';
 
 function detectLanguage() {
+  var url = new URLSearchParams(window.location.search);
+  var param = url.get('lang');
+  if (param && translations[param]) return param;
   var stored = localStorage.getItem('zenia-lang');
   if (stored && translations[stored]) return stored;
   var bl = (navigator.language || navigator.userLanguage || 'en').substring(0, 2).toLowerCase();

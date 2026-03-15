@@ -46,4 +46,28 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://zeniapartners.com/blog/automatizacion-ia-pymes.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://zeniapartners.com/blog/ai-automation-small-business.html"/>
   </url>
+  <url>
+    <loc>https://zeniapartners.com/services/ai-agents.html</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zeniapartners.com/services/crm-omnichannel.html</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zeniapartners.com/services/custom-saas.html</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zeniapartners.com/services/ai-retail-ecommerce.html</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

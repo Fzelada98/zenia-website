@@ -133,7 +133,19 @@ const translations = {
     "footer.col2_l3": "AI Opportunities",
     "footer.col2_l4": "Contact",
     "footer.rights": "All rights reserved.",
-    "footer.founder": 'Founded by <span>Fabrizzio Zelada</span>'
+    "footer.founder": 'Founded by <span>Fabrizzio Zelada</span>',
+    "faq.label": "Frequently Asked Questions",
+    "faq.title": 'Questions We<br><span class="text-gradient">Get Asked Often</span>',
+    "faq.q1": "What types of companies does ZENIA work with?",
+    "faq.a1": "We work with growth-stage SMBs across fitness, wellness, retail, ecommerce, and professional services. Our sweet spot is companies with 5-200 employees looking to automate operations and scale without proportionally growing headcount.",
+    "faq.q2": "How long does it take to see results from AI automation?",
+    "faq.a2": "Most clients see measurable impact within 4-8 weeks. We start with a strategy session, design the system in 1-2 weeks, and deploy within 4-6 weeks. Continuous optimization begins immediately after launch.",
+    "faq.q3": "Do I need technical knowledge to work with ZENIA?",
+    "faq.a3": "Not at all. We handle everything from strategy to implementation. We immerse ourselves in your operations, understand your workflows, and build systems that your team can use without technical expertise.",
+    "faq.q4": "What is the cost of ZENIA's AI consulting services?",
+    "faq.a4": "Every engagement is custom-scoped based on your needs. We offer a free 30-minute strategy call to understand your situation, then provide a tailored proposal with clear pricing and expected ROI.",
+    "faq.q5": "What markets does ZENIA serve?",
+    "faq.a5": "We serve companies in Latin America, Spain, and the United States. Our team works remotely and can support clients globally with bilingual (English/Spanish) service."
   },
   es: {
     "nav.opportunities": "Oportunidades IA",
@@ -268,7 +280,19 @@ const translations = {
     "footer.col2_l3": "Oportunidades IA",
     "footer.col2_l4": "Contacto",
     "footer.rights": "Todos los derechos reservados.",
-    "footer.founder": 'Fundada por <span>Fabrizzio Zelada</span>'
+    "footer.founder": 'Fundada por <span>Fabrizzio Zelada</span>',
+    "faq.label": "Preguntas Frecuentes",
+    "faq.title": 'Preguntas que<br><span class="text-gradient">Nos Hacen Siempre</span>',
+    "faq.q1": "\u00bfCon qu\u00e9 tipo de empresas trabaja ZENIA?",
+    "faq.a1": "Trabajamos con PyMEs en crecimiento en fitness, wellness, retail, ecommerce y servicios profesionales. Nuestro punto fuerte son empresas de 5-200 empleados que buscan automatizar operaciones y escalar sin aumentar equipo proporcionalmente.",
+    "faq.q2": "\u00bfCu\u00e1nto tiempo toma ver resultados con automatizaci\u00f3n IA?",
+    "faq.a2": "La mayor\u00eda de clientes ven impacto medible en 4-8 semanas. Empezamos con una sesi\u00f3n estrat\u00e9gica, dise\u00f1amos el sistema en 1-2 semanas y lo desplegamos en 4-6 semanas. La optimizaci\u00f3n continua comienza inmediatamente.",
+    "faq.q3": "\u00bfNecesito conocimientos t\u00e9cnicos para trabajar con ZENIA?",
+    "faq.a3": "Para nada. Nos encargamos de todo, desde la estrategia hasta la implementaci\u00f3n. Nos sumergimos en tus operaciones, entendemos tus procesos y construimos sistemas que tu equipo puede usar sin experiencia t\u00e9cnica.",
+    "faq.q4": "\u00bfCu\u00e1nto cuestan los servicios de consultor\u00eda IA de ZENIA?",
+    "faq.a4": "Cada proyecto se dimensiona a medida seg\u00fan tus necesidades. Ofrecemos una llamada estrat\u00e9gica gratuita de 30 minutos para entender tu situaci\u00f3n, y despu\u00e9s enviamos una propuesta con precios claros y ROI esperado.",
+    "faq.q5": "\u00bfEn qu\u00e9 mercados opera ZENIA?",
+    "faq.a5": "Atendemos empresas en Latinoam\u00e9rica, Espa\u00f1a y Estados Unidos. Nuestro equipo trabaja remoto y puede dar servicio global con atenci\u00f3n biling\u00fce (ingl\u00e9s/espa\u00f1ol)."
   }
 };
 
@@ -290,6 +314,10 @@ function applyTranslations(lang) {
   document.querySelectorAll('[data-i18n]').forEach(function(el) { var k = el.getAttribute('data-i18n'); if (d[k] !== undefined) el.innerHTML = d[k]; });
   document.querySelectorAll('[data-i18n-html]').forEach(function(el) { var k = el.getAttribute('data-i18n-html'); if (d[k] !== undefined) el.innerHTML = d[k]; });
   document.title = lang === 'es' ? 'ZENIA \u2014 Sistemas de IA para Empresas de Nueva Generaci\u00f3n' : 'ZENIA \u2014 AI Systems for Next-Generation Companies';
+  var metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc) metaDesc.content = lang === 'es'
+    ? 'ZENIA dise\u00f1a e implementa sistemas de IA que transforman operaciones de negocio. Consultor\u00eda IA, automatizaci\u00f3n y agentes inteligentes para PyMEs en LATAM, Espa\u00f1a y USA.'
+    : 'ZENIA designs and deploys AI systems that transform business operations. AI consulting, automation, and intelligent agents for SMBs in LATAM, Spain, and the US.';
   localStorage.setItem('zenia-lang-v2', lang);
 }
 

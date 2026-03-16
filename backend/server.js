@@ -819,7 +819,24 @@ app.post('/chat/muscleshop', chatRateLimit, async (req, res) => {
       messages: sanitizedMessages,
     });
 
-    const text = response.content.filter(b => b.type === 'text').map(b => b.text).join('');
+    let text = response.content.filter(b => b.type === 'text').map(b => b.text).join('');
+
+    // Post-process: force-replace any non-Peruvian slang that Haiku might still generate
+    text = text.replace(/\bte late\b/gi, 'te animas')
+               .replace(/\bcual te late\b/gi, 'cual te animas')
+               .replace(/\ble late\b/gi, 'te animas')
+               .replace(/\bqué onda\b/gi, 'que tal')
+               .replace(/\bque onda\b/gi, 'que tal')
+               .replace(/\by vos\b/gi, 'y tu')
+               .replace(/\bvos\b/gi, 'tu')
+               .replace(/\bneta\b/gi, 'en serio')
+               .replace(/\bchido\b/gi, 'chevere')
+               .replace(/\bórale\b/gi, 'dale')
+               .replace(/\borale\b/gi, 'dale')
+               .replace(/\bpadre\b(?!\s)/gi, 'chevere')
+               .replace(/\bparce\b/gi, '')
+               .replace(/\bcachai\b/gi, '');
+
     const usage = recordCamiUsage(response.usage.input_tokens, response.usage.output_tokens);
 
     // Also record in general monthly usage

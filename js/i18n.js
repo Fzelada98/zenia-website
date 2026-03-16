@@ -8,12 +8,12 @@ const translations = {
     "nav.cta": "Get Started",
     "hero.badge": "AI Transformation Partner",
     "hero.title": 'Don\'t Just Add AI.<br><span class="text-gradient">Redesign Your Business Around It.</span>',
-    "hero.subtitle": "Most companies bolt AI onto broken processes and wonder why nothing changes. We go inside your operations, understand how your business actually works, and build proprietary AI that transforms it from within.",
+    "hero.subtitle": "Most companies bolt AI onto broken processes and wonder why nothing changes. We go inside your operations, understand how your business actually works, and build custom AI that transforms it from within.",
     "hero.cta_primary": "Book a Free Strategy Call",
     "hero.cta_secondary": "See How It Works",
     "hero.micro": "From first call to deployed AI in under 8 weeks",
     "hero.industries_label": "Built for",
-    "founder.quote": "Every company is adding AI tools. Almost none are becoming AI companies. We don't give you a chatbot — we redesign your business from within, with proprietary technology that becomes your competitive edge.",
+    "founder.quote": "Every company is adding AI tools. Almost none are becoming AI companies. We don't give you a chatbot — we redesign your business from within, with custom technology that becomes your competitive edge.",
     "founder.role": "Founder, ZENIA",
     "proof.label": "Client Results",
     "proof.title": 'Built For Companies<br><span class="text-gradient">Like Yours</span>',
@@ -51,7 +51,7 @@ const translations = {
     "opp.cta": "See How We Implement",
     "tailor.label": "Built From Within",
     "tailor.title": 'Your Company, <span class="text-gradient">Rebuilt With Intelligence</span>',
-    "tailor.desc": "We don't hand you a tool and leave. We immerse in your operations, understand your business at a level no generic AI product ever could, and build proprietary systems that become part of your company's DNA.",
+    "tailor.desc": "We don't hand you a tool and leave. We immerse in your operations, understand your business at a level no generic AI product ever could, and build custom systems that become part of your company's DNA.",
     "tailor.p1_title": "Process Engineering, Not Software",
     "tailor.p1_desc": "We redesign how work gets done — not just which tool does it. Every system is architected around your specific workflows and business logic.",
     "tailor.p2_title": "Domain Expertise Matters",
@@ -109,7 +109,7 @@ const translations = {
     "impact.i6_desc": "From strategy to production deployment in under eight weeks. Speed is in our DNA.",
     "vision.label": "A New Kind of Company",
     "vision.title": 'Productive Individuals Don\'t Make <span class="text-gradient">Productive Companies</span>',
-    "vision.p1": "Every company is adding AI tools. Almost none are becoming AI companies. The difference is whether you're using generic software or running on proprietary intelligence built for your specific business.",
+    "vision.p1": "Every company is adding AI tools. Almost none are becoming AI companies. The difference is whether you're using generic software or running on custom intelligence built for your specific business.",
     "vision.p2": "The companies that will dominate the next decade aren't the ones with the most AI subscriptions. They're the ones that rebuilt their operations with custom AI at the core — systems that coordinate, find signal in noise, drive revenue, and act without being prompted. That's what we build.",
     "vision.pill1_title": "Redesign, Not Retrofit",
     "vision.pill1_desc": "We build operations around AI from the ground up, not apply tools to old processes",
@@ -162,7 +162,7 @@ const translations = {
     "hero.cta_secondary": "Ver Cómo Funciona",
     "hero.micro": "De la primera llamada a IA desplegada en menos de 8 semanas",
     "hero.industries_label": "Hecho para",
-    "founder.quote": "Todas las empresas están agregando herramientas de IA. Casi ninguna se está convirtiendo en una empresa de IA. Nosotros no te damos un chatbot — rediseñamos tu negocio desde adentro, con tecnología propietaria que se convierte en tu ventaja competitiva.",
+    "founder.quote": "Todas las empresas están agregando herramientas de IA. Casi ninguna se está convirtiendo en una empresa de IA. Nosotros no te damos un chatbot — rediseñamos tu negocio desde adentro, con tecnología propia que se convierte en tu ventaja competitiva.",
     "founder.role": "Fundador, ZENIA",
     "proof.label": "Resultados Reales",
     "proof.title": 'Hecho Para Empresas<br><span class="text-gradient">Como la Tuya</span>',
@@ -258,7 +258,7 @@ const translations = {
     "impact.i6_desc": "De estrategia a producci\u00f3n en menos de ocho semanas. La velocidad est\u00e1 en nuestro ADN.",
     "vision.label": "Un Nuevo Tipo de Empresa",
     "vision.title": 'Individuos Productivos No Hacen <span class="text-gradient">Empresas Productivas</span>',
-    "vision.p1": "Todas las empresas están agregando herramientas de IA. Casi ninguna se está convirtiendo en una empresa de IA. La diferencia es si usas software genérico o si operas con inteligencia propietaria construida para tu negocio específico.",
+    "vision.p1": "Todas las empresas están agregando herramientas de IA. Casi ninguna se está convirtiendo en una empresa de IA. La diferencia es si usas software genérico o si operas con inteligencia propia construida para tu negocio específico.",
     "vision.p2": "Las empresas que dominarán la próxima década no son las que tienen más suscripciones de IA. Son las que reconstruyeron sus operaciones con IA a medida en el centro — sistemas que coordinan, encuentran señal en el ruido, generan ingresos, y actúan sin que nadie se lo pida. Eso es lo que construimos.",
     "vision.pill1_title": "Rediseño, No Parche",
     "vision.pill1_desc": "Construimos tus operaciones alrededor de IA desde cero. No parcheamos lo que ya existe.",
@@ -320,8 +320,8 @@ function applyTranslations(lang) {
   document.title = lang === 'es' ? 'ZENIA \u2014 Sistemas de IA para Empresas de Nueva Generaci\u00f3n' : 'ZENIA \u2014 AI Systems for Next-Generation Companies';
   var metaDesc = document.querySelector('meta[name="description"]');
   if (metaDesc) metaDesc.content = lang === 'es'
-    ? 'ZENIA rediseña empresas desde adentro con IA propietaria. No vendemos herramientas — transformamos operaciones. Consultoría IA y automatización para PyMEs en LATAM, España y USA.'
-    : 'ZENIA redesigns businesses from within using proprietary AI. We don\'t sell tools — we transform operations. AI consulting and automation for SMBs in LATAM, Spain, and the US.';
+    ? 'ZENIA rediseña empresas desde adentro con IA propia. No vendemos herramientas — transformamos operaciones. Consultoría IA y automatización para PyMEs en LATAM, España y USA.'
+    : 'ZENIA redesigns businesses from within using custom AI. We don\'t sell tools — we transform operations. AI consulting and automation for SMBs in LATAM, Spain, and the US.';
   localStorage.setItem('zenia-lang-v2', lang);
 }
 

@@ -822,10 +822,12 @@ app.post('/chat/muscleshop', chatRateLimit, async (req, res) => {
     let text = response.content.filter(b => b.type === 'text').map(b => b.text).join('');
 
     // Post-process: force-replace any non-Peruvian slang that Haiku might still generate
-    // Catch all variants of "te late" (te late, te late mas, cual te late, le late, etc.)
-    text = text.replace(/te late[s]?\b[^.?!]*/gi, (match) => match.replace(/te late[s]?\b/i, 'te animas'))
-               .replace(/le late[s]?\b[^.?!]*/gi, (match) => match.replace(/le late[s]?\b/i, 'te animas'))
-               .replace(/late[s]?\s*m[aá]s/gi, 'animas mas')
+    // Catch all variants of "te late" and replace naturally
+    text = text.replace(/[Cc]ual\s+(?:sabor\s+)?te\s+late[s]?\s*m[aá]s/gi, 'por cual sabor te animas')
+               .replace(/[Cc]ual\s+te\s+late[s]?/gi, 'por cual te animas')
+               .replace(/te late[s]?\s*m[aá]s/gi, 'te animas mas')
+               .replace(/te late[s]?\b/gi, 'te animas')
+               .replace(/le late[s]?\b/gi, 'te animas')
                .replace(/\blate\b/gi, 'animas')
                .replace(/\bqué onda\b/gi, 'que tal')
                .replace(/\bque onda\b/gi, 'que tal')

@@ -305,7 +305,7 @@ document.querySelectorAll('.objection').forEach(function(obj) {
 // ============================================================
 // GENERATE CALL SCRIPT (Claude API)
 // ============================================================
-async function generateCallScript(company, size, area) {
+async function generateCallScript(company, size, area, onlinePresence) {
   // === ALL 4 CALLS IN PARALLEL (split phases 1-3 / 4-6 for full detail) ===
   console.log(`  Generating all 4 parts in parallel...`);
 
@@ -314,7 +314,7 @@ async function generateCallScript(company, size, area) {
       model: 'claude-haiku-4-5-20251001',
       max_tokens: 8192,
       system: SYSTEM_PROMPT_PART1,
-      messages: [{ role: 'user', content: buildUserPromptPart1(company, size, area) }],
+      messages: [{ role: 'user', content: buildUserPromptPart1(company, size, area, onlinePresence) }],
     }),
     anthropic.messages.create({
       model: 'claude-haiku-4-5-20251001',
@@ -477,6 +477,7 @@ app.post('/webhook/booking', rateLimit, async (req, res) => {
   const company = sanitizeString(req.body.company);
   const size = req.body.size;
   const area = req.body.area;
+  const onlinePresence = sanitizeString(req.body.onlinePresence || '');
   const callScheduled = req.body.callScheduled || null;
   const id = crypto.randomUUID();
 
@@ -485,6 +486,7 @@ app.post('/webhook/booking', rateLimit, async (req, res) => {
     company,
     size,
     area,
+    onlinePresence,
     callScheduled,
     status: 'pending',
     createdAt: new Date().toISOString(),
@@ -504,7 +506,7 @@ app.post('/webhook/booking', rateLimit, async (req, res) => {
 
       console.log(`  Generating call script for ${company}...`);
       const startTime = Date.now();
-      const html = await generateCallScript(company, size, area);
+      const html = await generateCallScript(company, size, area, onlinePresence);
       const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
 
       if (!html || html.trim().length < 100) {
@@ -627,6 +629,399 @@ app.get('/briefings/:filename', requireAdminKey, (req, res) => {
   res.setHeader('Content-Type', 'text/html');
   res.sendFile(filepath);
 });
+
+// ============================================================
+// MUSCLESHOP CHAT DEMO (Cami Bot)
+// ============================================================
+const CAMI_DEMO_BUDGET = 2.00; // $2 cap for MuscleShop demo
+const CAMI_USAGE_FILE = path.join(USAGE_DIR, 'cami-demo.json');
+
+function getCamiUsage() {
+  if (!fs.existsSync(CAMI_USAGE_FILE)) return { totalCost: 0, messages: 0 };
+  try { return JSON.parse(fs.readFileSync(CAMI_USAGE_FILE, 'utf-8')); }
+  catch { return { totalCost: 0, messages: 0 }; }
+}
+
+function recordCamiUsage(inputTokens, outputTokens) {
+  const usage = getCamiUsage();
+  const cost = (inputTokens * COST_PER_INPUT_TOKEN) + (outputTokens * COST_PER_OUTPUT_TOKEN);
+  usage.totalCost = Math.round((usage.totalCost + cost) * 10000) / 10000;
+  usage.messages += 1;
+  usage.lastMessage = new Date().toISOString();
+  fs.writeFileSync(CAMI_USAGE_FILE, JSON.stringify(usage, null, 2), 'utf-8');
+  return { cost, totalCost: usage.totalCost };
+}
+
+const CAMI_SYSTEM_PROMPT = `Eres **Cami**, asesora de ventas de MuscleShop Peru por WhatsApp. Eres una chica peruana de 24 años que trabaja en la tienda, le encanta el fitness y conoce todos los productos porque los usa. NO eres una inteligencia artificial. Eres una persona real que trabaja en MuscleShop.
+
+## TU PERSONALIDAD
+- Eres amable pero directa. No das vueltas.
+- Hablas como una chica peruana joven: casual, con jerga natural pero sin exagerar.
+- Usas "hola!", "claro", "sii", "ya", "dale", "de una", "bacán", "chévere" de forma natural.
+- A veces escribes rápido y se te escapan typos menores (1 de cada 10 mensajes máx).
+- NO usas lenguaje corporativo. Nada de "estimado cliente", "con gusto le informo".
+- Usas emojis con moderación: 1-2 por mensaje máximo. Los comunes: 💪 🔥 ✅ 😊 👌
+- Respondes en mensajes CORTOS. Máximo 2-3 líneas por mensaje.
+- NO te disculpas excesivamente.
+
+## REGLAS CRÍTICAS
+- NUNCA dices que eres IA, bot, asistente virtual, o cualquier variante
+- NUNCA usas frases robóticas como "¿hay algo más en lo que pueda ayudarte?"
+- NUNCA respondes con listas largas con bullets formales
+- NUNCA usas "Estimado/a", "Con gusto", "Le informo que"
+- NUNCA das información médica detallada → "para eso mejor consulta con tu nutricionista"
+- Si no sabes algo: "déjame confirmar con el equipo y te aviso"
+- Si preguntan si eres bot/IA: "jaja no, soy Cami, trabajo acá en la tienda 😊"
+
+## CATÁLOGO DE PRODUCTOS
+
+### PROTEÍNAS
+- **ISO-XP** (Applied Nutrition) - 1 kg: S/. 249 | 1.8 kg: S/. 399 - Whey isolate, ultra-filtrada. Sabores: Chocolate, Vainilla, Fresa, Banana, Cookies & Cream. PRODUCTO ESTRELLA.
+- **Anabolic ISO Whey** (Kevin Levrone) - 2 kg: precio por confirmar.
+- **Critical Cookie** galleta proteica (Applied) - Pack x12: S/. 117
+- **Barra Indulgence** (Applied) - Pack: S/. 129
+
+### CREATINAS
+- **Creatina Monohidrato** (Applied) - 500 gr: S/. 140
+- **Pack x2 Creatinas** 500 gr: S/. 179 (antes S/. 280)
+- **Starter Pack Creatina** 500 gr: S/. 94
+- **Gold Creatine** (Kevin Levrone) - precio por confirmar
+
+### PRE-ENTRENOS
+- **ABE (All Black Everything)** (Applied) - 315 gr / 30 servicios: S/. 119. Sabores: Candy Ice Blast, Bubblegum, Cherry Cola, Fruit Burst
+- **Combo ABE + Creatina 300gr**: S/. 163 (antes S/. 249) ← SUPER OFERTA
+
+### AMINOÁCIDOS
+- **BCAA Amino Hydrate** (Applied) - 1.4 kg: S/. 249
+- **Arginina AAKG** 300 gr - 100 servicios: S/. 109
+
+### OTROS
+- **Cream of Rice** 1 kg (carbohidratos): S/. 119
+- **Blow Up!** bebida energética pack x24: S/. 99
+- **Body Fuel** bebida energética pack x12: S/. 89
+
+### BELLEZA (Beauty Glow)
+- **Colágeno Hidrolizado** 500 gr / 50 servicios: S/. 99. Sabores: Orange, Blackberry
+
+## COMBOS RECOMENDADOS
+1. **Para empezar:** ISO-XP 1kg + Creatina 500gr ≈ S/. 390
+2. **Combo ABE + Creatina:** S/. 163 (ahorro de S/. 86)
+
+## INFORMACIÓN DE ENVÍOS Y PAGOS
+- Envíos a todo el Perú
+- Lima: 1-2 días hábiles
+- Provincias: 3-5 días hábiles
+- Envío GRATIS en MercadoLibre
+- Pagos: Yape, Plin, transferencia, tarjeta (MercadoLibre), contra entrega (Lima)
+- Precios por WhatsApp suelen ser mejores que marketplace
+
+## SOBRE MUSCLESHOP
+- Distribuidor EXCLUSIVO en Perú de Applied Nutrition, Kevin Levrone y Beauty Glow
+- Productos 100% originales, importados directo
+- Horario: Lunes a Sábado 9am - 7pm
+- WhatsApp: +51 924 698 077
+
+## FLUJO DE VENTA
+1. Saluda natural → pregunta qué busca
+2. Asesora según objetivo (masa, definición, energía, belleza)
+3. Da precio directo + menciona combos/promos
+4. Cierra: "te animas? qué sabor prefieres?"
+5. Pago: ofrece métodos
+6. Confirma pedido + dirección + tiempo de entrega
+
+## MANEJO DE OBJECIONES
+- **"Está caro"** → menciona calidad original + combos con descuento
+- **"En otro lado está más barato"** → "somos distribuidores oficiales, te garantizamos original"
+- **"Necesito pensarlo"** → "claro, tómate tu tiempo! cualquier duda me escribes 😊" (no presiones)
+- **"No sé si funciona"** → cuenta tu experiencia personal + "es el suplemento más estudiado"`;
+
+// Chat rate limiter (more generous than booking: 30 msgs per 15 min)
+const chatRateLimitMap = new Map();
+const CHAT_RATE_LIMIT_MAX = 30;
+
+function chatRateLimit(req, res, next) {
+  const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+  const now = Date.now();
+  if (!chatRateLimitMap.has(ip)) chatRateLimitMap.set(ip, []);
+  const timestamps = chatRateLimitMap.get(ip).filter(t => now - t < RATE_LIMIT_WINDOW_MS);
+  timestamps.push(now);
+  chatRateLimitMap.set(ip, timestamps);
+  if (timestamps.length > CHAT_RATE_LIMIT_MAX) {
+    return res.status(429).json({ error: 'Demasiados mensajes. Espera un momento.' });
+  }
+  next();
+}
+
+// POST /chat/muscleshop - Send message to Cami
+app.post('/chat/muscleshop', chatRateLimit, async (req, res) => {
+  // Check demo budget
+  const camiUsage = getCamiUsage();
+  if (camiUsage.totalCost >= CAMI_DEMO_BUDGET) {
+    return res.status(403).json({
+      error: 'demo_limit',
+      message: 'El demo ha alcanzado su límite. Contacta a Fabrizzio para activar la versión completa.'
+    });
+  }
+
+  const { messages } = req.body;
+  if (!Array.isArray(messages) || messages.length === 0) {
+    return res.status(400).json({ error: 'Messages array required' });
+  }
+
+  // Validate messages format and limit
+  if (messages.length > 50) {
+    return res.status(400).json({ error: 'Too many messages in conversation' });
+  }
+
+  const sanitizedMessages = messages.map(m => ({
+    role: m.role === 'assistant' ? 'assistant' : 'user',
+    content: typeof m.content === 'string' ? m.content.slice(0, 500) : '',
+  })).filter(m => m.content.length > 0);
+
+  try {
+    const response = await anthropic.messages.create({
+      model: 'claude-haiku-4-5-20251001',
+      max_tokens: 300,
+      system: CAMI_SYSTEM_PROMPT,
+      messages: sanitizedMessages,
+    });
+
+    const text = response.content.filter(b => b.type === 'text').map(b => b.text).join('');
+    const usage = recordCamiUsage(response.usage.input_tokens, response.usage.output_tokens);
+
+    // Also record in general monthly usage
+    recordUsage(response.usage.input_tokens, response.usage.output_tokens);
+
+    console.log(`  [Cami] msg #${camiUsage.messages + 1} | $${usage.cost.toFixed(4)} | total: $${usage.totalCost.toFixed(4)} / $${CAMI_DEMO_BUDGET}`);
+
+    res.json({
+      reply: text,
+      usage: { cost: usage.totalCost, limit: CAMI_DEMO_BUDGET },
+    });
+  } catch (err) {
+    console.error(`  [Cami] Error: ${err.message}`);
+    res.status(500).json({ error: 'Error al procesar el mensaje' });
+  }
+});
+
+// GET /chat/muscleshop - Serve the chat UI
+app.get('/chat/muscleshop', (req, res) => {
+  res.setHeader('Content-Type', 'text/html');
+  res.setHeader('X-Frame-Options', 'SAMEORIGIN');
+  res.send(CAMI_CHAT_HTML);
+});
+
+// GET /chat/muscleshop/status - Check demo budget status
+app.get('/chat/muscleshop/status', (req, res) => {
+  const usage = getCamiUsage();
+  res.json({
+    messages: usage.messages,
+    cost: usage.totalCost,
+    limit: CAMI_DEMO_BUDGET,
+    remaining: Math.max(0, CAMI_DEMO_BUDGET - usage.totalCost),
+    active: usage.totalCost < CAMI_DEMO_BUDGET,
+  });
+});
+
+// ============================================================
+// CAMI CHAT FRONTEND (WhatsApp-style)
+// ============================================================
+const CAMI_CHAT_HTML = `<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Cami - MuscleShop Peru</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #e5ddd5; height: 100vh; display: flex; flex-direction: column; }
+
+  /* Header */
+  .header { background: #075e54; color: #fff; padding: 10px 16px; display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+  .header .avatar { width: 40px; height: 40px; border-radius: 50%; background: #25d366; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 700; }
+  .header .info h2 { font-size: 16px; font-weight: 600; }
+  .header .info p { font-size: 12px; color: #b0d9d1; }
+
+  /* Demo banner */
+  .demo-banner { background: #fef3cd; border-bottom: 1px solid #ffc107; padding: 8px 16px; font-size: 12px; color: #856404; text-align: center; flex-shrink: 0; }
+  .demo-banner a { color: #664d03; font-weight: 600; }
+
+  /* Chat area */
+  .chat { flex: 1; overflow-y: auto; padding: 12px 16px; display: flex; flex-direction: column; gap: 4px; background: url("data:image/svg+xml,%3Csvg width='300' height='300' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='p' width='60' height='60' patternUnits='userSpaceOnUse'%3E%3Cpath d='M30 5 L35 15 L30 12 L25 15Z' fill='%23d4cfc4' opacity='0.15'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='300' height='300' fill='%23e5ddd5'/%3E%3Crect width='300' height='300' fill='url(%23p)'/%3E%3C/svg%3E"); }
+
+  .message { max-width: 80%; padding: 6px 12px 6px 12px; border-radius: 8px; font-size: 14px; line-height: 1.4; position: relative; word-wrap: break-word; }
+  .message .time { font-size: 11px; color: #999; float: right; margin-left: 8px; margin-top: 4px; }
+  .msg-user { background: #dcf8c6; align-self: flex-end; border-top-right-radius: 0; }
+  .msg-bot { background: #fff; align-self: flex-start; border-top-left-radius: 0; }
+
+  /* Typing indicator */
+  .typing { background: #fff; align-self: flex-start; border-radius: 8px; border-top-left-radius: 0; padding: 10px 16px; display: none; }
+  .typing span { display: inline-block; width: 8px; height: 8px; background: #90959a; border-radius: 50%; margin: 0 1px; animation: bounce 1.4s infinite ease-in-out; }
+  .typing span:nth-child(1) { animation-delay: 0s; }
+  .typing span:nth-child(2) { animation-delay: 0.2s; }
+  .typing span:nth-child(3) { animation-delay: 0.4s; }
+  @keyframes bounce { 0%, 80%, 100% { transform: translateY(0); } 40% { transform: translateY(-6px); } }
+
+  /* Input */
+  .input-area { background: #f0f0f0; padding: 8px 12px; display: flex; gap: 8px; align-items: center; flex-shrink: 0; }
+  .input-area input { flex: 1; border: none; border-radius: 20px; padding: 10px 16px; font-size: 15px; background: #fff; outline: none; }
+  .input-area button { width: 44px; height: 44px; border: none; border-radius: 50%; background: #075e54; color: #fff; font-size: 20px; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+  .input-area button:disabled { background: #a0a0a0; cursor: not-allowed; }
+  .input-area button:hover:not(:disabled) { background: #064e46; }
+
+  /* Budget exhausted overlay */
+  .budget-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.6); z-index: 100; justify-content: center; align-items: center; }
+  .budget-overlay.show { display: flex; }
+  .budget-card { background: #fff; border-radius: 12px; padding: 32px; max-width: 400px; margin: 20px; text-align: center; }
+  .budget-card h3 { font-size: 20px; margin-bottom: 12px; color: #1a1a2e; }
+  .budget-card p { font-size: 14px; color: #666; margin-bottom: 16px; line-height: 1.5; }
+  .budget-card .cta { display: inline-block; background: #075e54; color: #fff; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; }
+
+  /* System message */
+  .system-msg { align-self: center; background: #ffeeba; color: #856404; font-size: 12px; padding: 4px 12px; border-radius: 6px; margin: 8px 0; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="avatar">C</div>
+  <div class="info">
+    <h2>Cami - MuscleShop</h2>
+    <p>en linea</p>
+  </div>
+</div>
+
+<div class="demo-banner">
+  &#x1F6A7; Demo beta para MuscleShop. Escribe como si fueras un cliente.
+</div>
+
+<div class="chat" id="chat">
+  <div class="system-msg">Esta es una version beta del agente de ventas IA de Zenia Partners para MuscleShop. Pruebala: pregunta por productos, precios, envios, lo que sea.</div>
+</div>
+
+<div class="typing" id="typing">
+  <span></span><span></span><span></span>
+</div>
+
+<div class="input-area">
+  <input type="text" id="input" placeholder="Escribe un mensaje..." autocomplete="off" />
+  <button id="send" onclick="sendMessage()">&#x27A4;</button>
+</div>
+
+<div class="budget-overlay" id="budgetOverlay">
+  <div class="budget-card">
+    <h3>Demo finalizado</h3>
+    <p>Cami ha atendido todas las consultas disponibles en esta version beta. Para activar el agente completo 24/7 en WhatsApp + Instagram DM + CRM, contacta a Fabrizzio.</p>
+    <a href="https://wa.me/34695000000" class="cta">Contactar a Fabrizzio</a>
+  </div>
+</div>
+
+<script>
+const chat = document.getElementById('chat');
+const input = document.getElementById('input');
+const typing = document.getElementById('typing');
+const sendBtn = document.getElementById('send');
+const overlay = document.getElementById('budgetOverlay');
+
+let conversationHistory = [];
+let sending = false;
+
+// Auto-greet after 1.5s
+setTimeout(() => {
+  addBotMessage('Hola! soy Cami de MuscleShop 💪 en que te puedo ayudar?');
+  conversationHistory.push({ role: 'assistant', content: 'Hola! soy Cami de MuscleShop 💪 en que te puedo ayudar?' });
+}, 1500);
+
+input.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' && !sending) sendMessage();
+});
+
+async function sendMessage() {
+  const text = input.value.trim();
+  if (!text || sending) return;
+
+  sending = true;
+  sendBtn.disabled = true;
+  input.value = '';
+
+  addUserMessage(text);
+  conversationHistory.push({ role: 'user', content: text });
+
+  // Show typing with random delay (2-5 seconds to simulate human)
+  typing.style.display = 'block';
+  chat.appendChild(typing);
+  chat.scrollTop = chat.scrollHeight;
+
+  const typingDelay = 2000 + Math.random() * 3000;
+
+  try {
+    const response = await fetch('/chat/muscleshop', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ messages: conversationHistory }),
+    });
+
+    const data = await response.json();
+
+    if (data.error === 'demo_limit') {
+      await wait(typingDelay);
+      typing.style.display = 'none';
+      overlay.classList.add('show');
+      return;
+    }
+
+    if (data.reply) {
+      // Wait for typing delay to complete
+      await wait(typingDelay);
+      typing.style.display = 'none';
+
+      addBotMessage(data.reply);
+      conversationHistory.push({ role: 'assistant', content: data.reply });
+    }
+  } catch (err) {
+    await wait(typingDelay);
+    typing.style.display = 'none';
+    addBotMessage('uy perdon, se me fue el internet. me escribes de nuevo? 😅');
+  }
+
+  sending = false;
+  sendBtn.disabled = false;
+  input.focus();
+}
+
+function addUserMessage(text) {
+  const div = document.createElement('div');
+  div.className = 'message msg-user';
+  div.innerHTML = escapeHtml(text) + '<span class="time">' + getTime() + '</span>';
+  chat.appendChild(div);
+  chat.scrollTop = chat.scrollHeight;
+}
+
+function addBotMessage(text) {
+  const div = document.createElement('div');
+  div.className = 'message msg-bot';
+  div.innerHTML = escapeHtml(text) + '<span class="time">' + getTime() + '</span>';
+  chat.appendChild(div);
+  chat.scrollTop = chat.scrollHeight;
+}
+
+function getTime() {
+  return new Date().toLocaleTimeString('es-PE', { hour: '2-digit', minute: '2-digit' });
+}
+
+function escapeHtml(str) {
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+function wait(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+</script>
+
+</body>
+</html>`;
 
 // ============================================================
 // Catch-all

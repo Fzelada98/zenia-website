@@ -1,9 +1,29 @@
 // ZENIA — Main initialization
 
-// Nav scroll effect
+// Nav scroll effect + active link highlight
 var nav = document.getElementById('nav');
+var navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
+var sections = [];
+navAnchors.forEach(function(a) {
+  var s = document.querySelector(a.getAttribute('href'));
+  if (s) sections.push({ el: s, link: a });
+});
+var mobileCta = document.getElementById('mobileCta');
+var heroSection = document.getElementById('hero');
 window.addEventListener('scroll', function() {
   nav.classList.toggle('scrolled', window.scrollY > 40);
+  var scrollPos = window.scrollY + 120;
+  var current = null;
+  sections.forEach(function(s) {
+    if (s.el.offsetTop <= scrollPos) current = s.link;
+  });
+  navAnchors.forEach(function(a) { a.classList.remove('active'); });
+  if (current) current.classList.add('active');
+  // Mobile sticky CTA: show after scrolling past hero
+  if (mobileCta && heroSection) {
+    var heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+    mobileCta.classList.toggle('visible', window.scrollY > heroBottom - 200);
+  }
 }, { passive: true });
 
 // Reveal on scroll (IntersectionObserver)

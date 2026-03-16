@@ -37,11 +37,16 @@ var observer = new IntersectionObserver(function(entries) {
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 document.querySelectorAll('.reveal').forEach(function(el) { observer.observe(el); });
 
-// Smooth scroll for anchor links
+// Smooth scroll for anchor links (offset for fixed nav)
+var navHeight = nav ? nav.offsetHeight : 72;
 document.querySelectorAll('a[href^="#"]').forEach(function(link) {
   link.addEventListener('click', function(e) {
     var t = document.querySelector(link.getAttribute('href'));
-    if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    if (t) {
+      e.preventDefault();
+      var top = t.getBoundingClientRect().top + window.scrollY - navHeight - 16;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    }
   });
 });
 

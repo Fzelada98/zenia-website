@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zenia — Master Outreach Plan</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --accent: #6366f1; --accent-light: #eef2ff; --accent-dark: #4338ca;
+    --green: #16a34a; --green-light: #dcfce7; --green-dark: #15803d;
+    --yellow: #ca8a04; --yellow-light: #fef9c3;
+    --orange: #ea580c; --orange-light: #fff7ed;
+    --red: #dc2626; --red-light: #fef2f2;
+    --border: #e5e7eb; --text: #111827; --text-muted: #6b7280;
+    --bg: #f9fafb; --white: #ffffff; --radius: 10px;
+  }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; font-size: 14px; }
+  .page { max-width: 1200px; margin: 0 auto; padding: 32px 24px 120px; }
+
+  /* HEADER */
+  .header { background: linear-gradient(135deg, #0f172a 0%, var(--accent-dark) 50%, var(--accent) 100%); color: white; border-radius: var(--radius); padding: 40px 44px; margin-bottom: 32px; position: relative; overflow: hidden; }
+  .header::after { content: ''; position: absolute; top: -50%; right: -20%; width: 400px; height: 400px; background: rgba(255,255,255,0.03); border-radius: 50%; }
+  .header h1 { font-size: 32px; font-weight: 800; margin-bottom: 8px; letter-spacing: -0.5px; }
+  .header .subtitle { opacity: 0.8; font-size: 15px; margin-bottom: 24px; }
+  .header-stats { display: flex; gap: 32px; flex-wrap: wrap; }
+  .header-stat { background: rgba(255,255,255,0.1); border-radius: 8px; padding: 12px 20px; }
+  .header-stat .val { font-size: 24px; font-weight: 700; display: block; }
+  .header-stat .lbl { font-size: 11px; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.5px; }
+
+  /* SECTIONS */
+  .section { margin-bottom: 36px; }
+  .section-title { font-size: 20px; font-weight: 700; margin-bottom: 4px; display: flex; align-items: center; gap: 10px; }
+  .section-title .badge { font-size: 11px; background: var(--accent); color: white; padding: 2px 10px; border-radius: 20px; font-weight: 600; }
+  .section-sub { font-size: 13px; color: var(--text-muted); margin-bottom: 20px; }
+
+  /* CARDS */
+  .card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px 28px; margin-bottom: 16px; }
+  .card.warm { border-left: 4px solid var(--orange); }
+  .card.hot { border-left: 4px solid var(--red); }
+  .card.cold { border-left: 4px solid var(--accent); }
+  .card.action { border-left: 4px solid var(--green); }
+  .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; flex-wrap: wrap; gap: 8px; }
+  .card-header h3 { font-size: 17px; font-weight: 700; }
+  .card-header .score { background: var(--accent-light); color: var(--accent-dark); font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 20px; }
+  .card-header .score.high { background: var(--green-light); color: var(--green-dark); }
+  .card-header .priority { font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .card-header .priority.urgent { background: var(--red-light); color: var(--red); }
+  .card-header .priority.high { background: var(--orange-light); color: var(--orange); }
+  .card-header .priority.medium { background: var(--yellow-light); color: var(--yellow); }
+  .card-meta { display: flex; gap: 24px; flex-wrap: wrap; font-size: 13px; color: var(--text-muted); margin-bottom: 12px; }
+  .card-meta a { color: var(--accent); text-decoration: none; }
+  .card-meta a:hover { text-decoration: underline; }
+
+  /* MESSAGES */
+  .msg-block { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-top: 12px; position: relative; }
+  .msg-block .msg-label { font-size: 11px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+  .msg-block .msg-text { font-size: 13px; line-height: 1.7; white-space: pre-wrap; }
+  .msg-block .copy-btn { position: absolute; top: 12px; right: 12px; background: var(--accent); color: white; border: none; border-radius: 6px; padding: 4px 12px; font-size: 11px; font-weight: 600; cursor: pointer; opacity: 0.8; transition: opacity 0.2s; }
+  .msg-block .copy-btn:hover { opacity: 1; }
+
+  /* TABLES */
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { background: var(--bg); text-align: left; padding: 10px 12px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); border-bottom: 2px solid var(--border); }
+  td { padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  tr:hover { background: var(--accent-light); }
+
+  /* TIMELINE */
+  .timeline { position: relative; padding-left: 28px; }
+  .timeline::before { content: ''; position: absolute; left: 8px; top: 0; bottom: 0; width: 2px; background: var(--border); }
+  .timeline-item { position: relative; margin-bottom: 20px; }
+  .timeline-item::before { content: ''; position: absolute; left: -24px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); border: 2px solid var(--white); }
+  .timeline-item.done::before { background: var(--green); }
+  .timeline-item .tl-date { font-size: 12px; font-weight: 700; color: var(--accent); text-transform: uppercase; }
+  .timeline-item .tl-content { font-size: 13px; margin-top: 4px; }
+
+  /* CHECKLIST */
+  .checklist { list-style: none; }
+  .checklist li { padding: 8px 0; border-bottom: 1px solid var(--border); display: flex; align-items: flex-start; gap: 10px; font-size: 13px; }
+  .checklist li::before { content: '[ ]'; font-family: monospace; font-weight: 700; color: var(--text-muted); flex-shrink: 0; margin-top: 1px; }
+  .checklist li.done::before { content: '[x]'; color: var(--green); }
+
+  /* TIPS */
+  .tip { background: var(--accent-light); border-radius: 8px; padding: 16px 20px; margin: 12px 0; font-size: 13px; }
+  .tip strong { color: var(--accent-dark); }
+
+  /* PRINT */
+  @media print {
+    body { background: white; font-size: 11px; }
+    .page { padding: 0; max-width: 100%; }
+    .header { break-inside: avoid; }
+    .card { break-inside: avoid; }
+    .copy-btn { display: none; }
+  }
+
+  /* NAV */
+  .nav { position: sticky; top: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); padding: 12px 24px; margin: -32px -24px 32px; z-index: 100; display: flex; gap: 16px; flex-wrap: wrap; font-size: 12px; }
+  .nav a { color: var(--accent); text-decoration: none; font-weight: 600; padding: 4px 12px; border-radius: 6px; transition: background 0.2s; }
+  .nav a:hover { background: var(--accent-light); }
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- NAV -->
+<div class="nav">
+  <a href="#warm">Pipeline Warm</a>
+  <a href="#espana-fitness">Espana Fitness</a>
+  <a href="#espana-running">Espana Running</a>
+  <a href="#peru">Peru</a>
+  <a href="#calendar">Calendario</a>
+  <a href="#linkedin">LinkedIn Setup</a>
+  <a href="#tips">Tips Conversion</a>
+</div>
+
+<!-- HEADER -->
+<div class="header">
+  <h1>Zenia Partners -- Master Outreach Plan</h1>
+  <p class="subtitle">Target: 5-10 clientes para junio 2026 | Generado: 16 marzo 2026</p>
+  <div class="header-stats">
+    <div class="header-stat"><span class="val">35+</span><span class="lbl">Total Prospects</span></div>
+    <div class="header-stat"><span class="val">3</span><span class="lbl">Warm Leads</span></div>
+    <div class="header-stat"><span class="val">20</span><span class="lbl">Cold Espana</span></div>
+    <div class="header-stat"><span class="val">15</span><span class="lbl">Cold Peru</span></div>
+    <div class="header-stat"><span class="val">0</span><span class="lbl">Enviados</span></div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SECTION A: WARM PIPELINE -->
+<!-- ============================================ -->
+<div class="section" id="warm">
+  <h2 class="section-title">A. Pipeline Warm <span class="badge">PRIORIDAD MAXIMA</span></h2>
+  <p class="section-sub">Leads que ya conocen Zenia. Accion inmediata hoy.</p>
+
+  <!-- GLOW -->
+  <div class="card hot">
+    <div class="card-header">
+      <h3>Glow Project</h3>
+      <span class="priority urgent">Esperando respuesta</span>
+    </div>
+    <div class="card-meta">
+      <span>Piero: piero@glowprojectperu.com</span>
+      <span>Samu: samu@glowprojectperu.com</span>
+      <span>Deal: S/9,000 setup + S/2,500/mes</span>
+    </div>
+    <p><strong>Estado:</strong> Follow-up enviado hoy 16/03 con sponsor deck adjunto. Urgencia de cierre esta semana + mencion de otro running club interesado.</p>
+    <p><strong>Siguiente accion:</strong> Si no responden para miercoles 18/03, WhatsApp directo a Piero. Tono: casual, "oye viste el deck? cualquier duda me dices".</p>
+    <div class="msg-block">
+      <div class="msg-label">WhatsApp a Piero (si no responde email mie 18)</div>
+      <div class="msg-text">Piero! Viste el deck que les mande? Cualquier duda o feedback me dices, estoy para ajustar lo que necesiten. Solo necesito que me confirmen esta semana para bloquear al equipo.</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+  </div>
+
+  <!-- MUSCLESHOP -->
+  <div class="card warm">
+    <div class="card-header">
+      <h3>MuscleShop Peru</h3>
+      <span class="priority urgent">Demo enviado - esperando respuesta</span>
+    </div>
+    <div class="card-meta">
+      <span>Contacto: Aaron Herrera</span>
+      <span>Deal: S/12,500 setup + S/2,500/mes</span>
+      <span>Propuesta enviada: 13/03 | Follow-up con demo: 16/03</span>
+    </div>
+    <p><strong>Estado:</strong> Follow-up enviado 16/03 con demo funcional del bot "Cami" (zeniapartners.com/demo/muscleshop). Email referencia pain points de la call: 4 personas manual, ventas perdidas en provincias, soluciones previas fallidas. Probabilidad: 70%.</p>
+    <p><strong>Siguiente accion:</strong> Si no responden para el 18/03, WhatsApp directo a Aaron.</p>
+    <div class="msg-block">
+      <div class="msg-label">WhatsApp follow-up si no responden (enviar 18/03)</div>
+      <div class="msg-text">Aaron, probaron a Cami? Escribanle como cliente y me cuentan que tal. El link: zeniapartners.com/demo/muscleshop</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+  </div>
+
+  <!-- THROWING SALT -->
+  <div class="card warm">
+    <div class="card-header">
+      <h3>Throwing Salt</h3>
+      <span class="priority medium">Ultimo intento</span>
+    </div>
+    <div class="card-meta">
+      <span>+5 dias sin respuesta</span>
+    </div>
+    <p><strong>Estado:</strong> Lead frio. +5 dias sin respuesta a ultimo mensaje.</p>
+    <p><strong>Siguiente accion:</strong> Un ultimo mensaje para cerrar el loop. Si no responden, archivar.</p>
+    <div class="msg-block">
+      <div class="msg-label">Ultimo follow-up Throwing Salt</div>
+      <div class="msg-text">Oye, no se si les llego mi mensaje anterior. Si no es el momento, cero problema, pero queria cerrar el tema. Si en algun momento les interesa retomarlo, me escriben y vemos.</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SECTION B: COLD - FITNESS ESPANA -->
+<!-- ============================================ -->
+<div class="section" id="espana-fitness">
+  <h2 class="section-title">B. Fitness Espana <span class="badge">10 PROSPECTS</span></h2>
+  <p class="section-sub">Generado 13/03. Todos con 3 mensajes listos. Enviar Msg1 esta semana.</p>
+
+  <!-- 226ERS -->
+  <div class="card cold">
+    <div class="card-header">
+      <h3>1. 226ERS</h3>
+      <span class="score high">18/20</span>
+    </div>
+    <div class="card-meta">
+      <span><a href="https://www.226ers.com" target="_blank">226ers.com</a></span>
+      <span>Decision Maker: <strong>Jesus Sanchez Bas</strong></span>
+      <span><a href="https://www.linkedin.com/in/jes%C3%BAs-s%C3%A1nchez-bas-45472b27/" target="_blank">LinkedIn</a></span>
+      <span>Nutricion deportiva | 91K followers | 9 paises</span>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 1 -- Connection Request</div>
+      <div class="msg-text">Jesus, llevan 15 anos siendo referente en nutricion de resistencia en Espana y el respaldo con el IRONMAN European Series es impresionante. Trabajo con marcas de deportes de rendimiento en automatizacion comercial y me encantaria conectar.</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 2 -- Value Drop (2-3 dias despues)</div>
+      <div class="msg-text">Oye Jesus, dato que veo mucho con marcas de nutricion deportiva que escalan: las que tienen WhatsApp Business con respuesta automatica para consultas de pedido y producto convierten entre 2x y 3x mas que las que solo gestionan por email o DM de Instagram.
+
+Con 91K seguidores y presencia en 9 paises, supongo que el volumen de consultas ya es importante. Lo estan gestionando con alguna herramienta o todavia es bastante manual el proceso?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 3 -- Soft CTA (3-5 dias despues, solo si respondio)</div>
+      <div class="msg-text">Me alegra que lo veas asi. Lo que hago con marcas en vuestra situacion es un diagnostico rapido del flujo actual de atencion y ventas vs. como quedaria con automatizacion (WhatsApp, CRM, chatbot de producto integrado). Me toma 15 minutos prepararlo y te lo mando sin compromiso.
+
+Si te parece interesante, hablamos 15 min. Si no, igual te queda el documento. Le damos?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+  </div>
+
+  <!-- MUNDO FITNESS -->
+  <div class="card cold">
+    <div class="card-header">
+      <h3>2. Mundo Fitness</h3>
+      <span class="score high">17/20</span>
+    </div>
+    <div class="card-meta">
+      <span><a href="https://www.mundofitness.es" target="_blank">mundofitness.es</a></span>
+      <span>Decision Maker: <strong>Steven Essink</strong></span>
+      <span><a href="https://www.linkedin.com/in/stevenessink/" target="_blank">LinkedIn</a></span>
+      <span>Equipamiento fitness | 49K followers</span>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 1 -- Connection Request</div>
+      <div class="msg-text">Steven, vi la entrevista donde contabas como arrancaste Mundo Fitness durante la crisis -- empezar un ecommerce en ese contexto y llevarlo a 49K seguidores tiene mucho merito. Trabajo con marcas de fitness en automatizacion comercial y me encantaria conectar.</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 2 -- Value Drop</div>
+      <div class="msg-text">Oye Steven, algo que veo mucho en ecommerce de equipamiento: el 60-70% de los leads que no convierten es porque no recibieron respuesta en las primeras 2 horas. En ticket alto como maquinaria, la ventana de decision es corta.
+
+Las marcas con las que trabajo que pusieron WhatsApp Business con respuesta automatica fuera de horario redujeron ese abandono bastante. Vosotros teneis algo para capturar consultas de noche o fin de semana o es todo manual?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 3 -- Soft CTA</div>
+      <div class="msg-text">Tiene sentido. Mira, lo que hago es un diagnostico rapido: reviso vuestro flujo de atencion actual (web, IG, WhatsApp si lo teneis) y te mando en 24h un documento con como quedaria con automatizacion y que impacto estimado tendria en la tasa de conversion.
+
+Es gratis, sin compromiso. Si luego te parece interesante hablamos 15 minutos. Te parece?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+  </div>
+
+  <!-- MANIAK FITNESS -->
+  <div class="card cold">
+    <div class="card-header">
+      <h3>3. Maniak Fitness</h3>
+      <span class="score high">16/20</span>
+    </div>
+    <div class="card-meta">
+      <span><a href="https://maniakfitness.com" target="_blank">maniakfitness.com</a></span>
+      <span>Decision Maker: <strong>Angel Izquierdo</strong></span>
+      <span><a href="https://es.linkedin.com/in/angel-izquierdo-6a3ba7228" target="_blank">LinkedIn</a></span>
+      <span>Equipamiento powerlifting/CrossFit | IPF endorsed | 8 empleados</span>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 1 -- Connection Request</div>
+      <div class="msg-text">Angel, el catalogo de Maniak para powerlifting esta muy bien curado -- el respaldo IPF no es algo que cualquier marca consiga. Trabajo con marcas de equipamiento deportivo en automatizacion de ventas y me gustaria conectar.</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 2 -- Value Drop</div>
+      <div class="msg-text">Oye Angel, algo que veo mucho en marcas de equipamiento con catalogos tecnicos como el vuestro: los clientes que compran barras olimpicas o racks hacen muchas preguntas antes de decidir (medidas, carga maxima, compatibilidades).
+
+Con 8 personas en el equipo, ese volumen de consultas tecnicas puede costar mucho tiempo. Lo estais gestionando de forma manual o teneis algo automatizado para los que llegan fuera de horario?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 3 -- Soft CTA</div>
+      <div class="msg-text">Tiene mucho sentido. Con equipamiento tecnico el problema es que si no respondes rapido, el cliente compra en otro sitio. Lo que propongo es simple: te armo un diagnostico de vuestro flujo actual y como quedaria con un asistente de WhatsApp que responda consultas tecnicas basicas 24/7 y pase los leads calificados al equipo.
+
+Te lo mando en 24h, sin costo. Si tiene sentido, hablamos 15 minutos. Le damos?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+  </div>
+
+  <!-- SCIENTIFFIC NUTRITION -->
+  <div class="card cold">
+    <div class="card-header">
+      <h3>4. Scientiffic Nutrition</h3>
+      <span class="score">15/20</span>
+    </div>
+    <div class="card-meta">
+      <span><a href="https://scientifficnutrition.com" target="_blank">scientifficnutrition.com</a></span>
+      <span>Decision Maker: <strong>Francisco Javier Aguilar Julia</strong></span>
+      <span><a href="https://www.linkedin.com/in/francisco-javier-aguilar-juli%C3%A1-16b582223/" target="_blank">LinkedIn</a></span>
+      <span>Suplementos | Fabricacion propia | 9 paises | Sevilla</span>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 1 -- Connection Request</div>
+      <div class="msg-text">Javier, lo que han construido con Scientiffic en fabricacion propia y presencia en 9 paises desde Sevilla es bastante solido -- no es facil controlar calidad a esa escala. Trabajo en automatizacion comercial para marcas de nutricion deportiva y me encantaria conectar.</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 2 -- Value Drop</div>
+      <div class="msg-text">Oye Javier, dato interesante: las marcas de suplementos con presencia en varios paises que unifican la atencion en WhatsApp Business (un solo numero, con bot de idioma y handoff al equipo humano) reducen el tiempo de primera respuesta de horas a minutos.
+
+Con 9 mercados activos y equipos de tamano mediano, ese cuello de botella suele ser el que mas frena la conversion. Tienen algo centralizado o cada mercado lo gestiona por su lado?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 3 -- Soft CTA</div>
+      <div class="msg-text">Exacto. Lo que hago es armar un diagnostico de vuestro flujo actual de atencion al cliente -- por canal, por mercado -- y te mando en 24h un documento con que automatizar primero y que impacto estimado tendria.
+
+Sin costo, sin compromiso. Si tiene sentido para vuestro momento actual, hablamos 15 minutos. Si no, igual te sirve el analisis. Te parece?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+  </div>
+
+  <!-- BORN LIVING YOGA -->
+  <div class="card cold">
+    <div class="card-header">
+      <h3>5. Born Living Yoga</h3>
+      <span class="score">15/20</span>
+    </div>
+    <div class="card-meta">
+      <span><a href="https://bornlivingyoga.com" target="_blank">bornlivingyoga.com</a></span>
+      <span>Decision Maker: <strong>Alvaro Roca Puig</strong></span>
+      <span><a href="https://es.linkedin.com/in/alvaro-roca-puig-1b6199125" target="_blank">LinkedIn</a></span>
+      <span>Athleisure/Yoga | 250 puntos venta | 10+ paises | Empresa familiar</span>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 1 -- Connection Request</div>
+      <div class="msg-text">Alvaro, la historia de Born Living Yoga -- tu madre disena, tu llevas la estrategia -- y llegar a 250 puntos de venta en Espana mas presencia internacional desde 2017 es un caso de empresa familiar bastante poco comun. Trabajo con marcas de moda deportiva en automatizacion y me gustaria conectar.</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 2 -- Value Drop</div>
+      <div class="msg-text">Oye Alvaro, algo que veo mucho en marcas de athleisure con canal fisico y online: las consultas de tallas, cambios y disponibilidad se duplican cuando estas en varios mercados. Con 250 puntos de venta y ecommerce en 10+ paises, imagino que el volumen es significativo.
+
+Las marcas que ponen un asistente de WhatsApp para esas consultas basicas reducen el tiempo del equipo de atencion al cliente entre un 40-60%. Lo estais gestionando con algun sistema o es bastante manual?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 3 -- Soft CTA</div>
+      <div class="msg-text">Entiendo. Lo que propongo es simple: te preparo un diagnostico de como quedaria vuestro flujo de atencion con automatizacion -- WhatsApp para consultas basicas, CRM para trazabilidad de clientes, y handoff al equipo humano para lo que necesita atencion personalizada.
+
+Te lo mando en 24h, sin costo. Si te parece que encaja con lo que necesitais ahora, hablamos 15 minutos. Si no, igual te sirve como referencia. Que te parece?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+  </div>
+
+  <!-- FITNESS TECH -->
+  <div class="card cold">
+    <div class="card-header">
+      <h3>6. Fitness Tech</h3>
+      <span class="score">14/20</span>
+    </div>
+    <div class="card-meta">
+      <span><a href="https://www.fitnesstech.es" target="_blank">fitnesstech.es</a></span>
+      <span>Decision Maker: <strong>Jose Gimenez Lizana</strong></span>
+      <span><a href="https://www.linkedin.com/in/josegimenezlizana/" target="_blank">LinkedIn</a></span>
+      <span>Home gym equipment | Shopify + Klaviyo</span>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 1 -- Connection Request</div>
+      <div class="msg-text">Jose, vi Fitness Tech -- el posicionamiento en maquinaria para home gym con garantia extendida es un diferencial claro en un mercado donde la mayoria vende precio. Trabajo con marcas de equipamiento en automatizacion de ventas y me gustaria conectar.</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 2 -- Value Drop</div>
+      <div class="msg-text">Oye Jose, algo que veo mucho en ecommerce de equipamiento fitness con Shopify: Klaviyo funciona genial para recuperar carritos por email, pero el 80% de las preguntas pre-compra ya llegan por WhatsApp o Instagram antes de que el cliente llegue al checkout.
+
+Las marcas que cubren ese gap con un bot de WhatsApp ven un aumento notable en conversion. Estais capturando consultas de ese tipo de forma organizada o se pierden muchas?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 3 -- Soft CTA</div>
+      <div class="msg-text">Entiendo. Mira, lo que hago es revisar el flujo completo -- desde que un cliente llega a Instagram o Google hasta que compra -- y te mando un doc con donde se estan cayendo los leads y como se veria con WhatsApp + CRM integrado a Shopify.
+
+Es gratis, me toma 15-20 min, y si tiene sentido hablamos una llamada rapida. Si no, igual te sirve. Te interesa?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+  </div>
+
+  <!-- CROWNX -->
+  <div class="card cold">
+    <div class="card-header">
+      <h3>7. CROWNX</h3>
+      <span class="score">14/20</span>
+    </div>
+    <div class="card-meta">
+      <span><a href="https://crownx.es" target="_blank">crownx.es</a></span>
+      <span>Decision Maker: <strong>Pablo Romero</strong></span>
+      <span><a href="https://es.linkedin.com/in/pablorofe" target="_blank">LinkedIn</a></span>
+      <span>Ropa CrossFit | Comunidad + eventos | Las Palmas</span>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 1 -- Connection Request</div>
+      <div class="msg-text">Pablo, armar una marca de ropa CrossFit desde Las Palmas con comunidad propia y eventos como el Fit Festival tiene mucho merito -- ese nivel de cohesion no se improvisa. Trabajo con marcas de fitness en automatizacion comercial y me gustaria conectar.</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 2 -- Value Drop</div>
+      <div class="msg-text">Oye Pablo, algo que veo mucho en marcas de ropa fitness con comunidad activa: los DMs de Instagram de consultas de talla, disponibilidad y pedidos acaban consumiendo horas del fundador cada semana.
+
+Las marcas que ponen un bot sencillo de WhatsApp para esas preguntas basicas recuperan entre 5 y 10 horas semanales y ademas convierten mejor porque la respuesta es inmediata. Vosotros como lo estais manejando?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 3 -- Soft CTA</div>
+      <div class="msg-text">Exacto, es el cuello de botella tipico cuando la marca crece pero el sistema de atencion no escala con ella. Lo que hago es un diagnostico rapido de vuestro flujo actual y te mando en 24h un doc con como quedaria automatizado -- WhatsApp para consultas basicas, CRM para tracking de clientes, todo integrado.
+
+Sin costo, 15 minutos de tu tiempo si te interesa hablarlo. Le damos?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+  </div>
+
+  <!-- FITNESSDIGITAL -->
+  <div class="card cold">
+    <div class="card-header">
+      <h3>8. Fitnessdigital</h3>
+      <span class="score">14/20</span>
+    </div>
+    <div class="card-meta">
+      <span><a href="https://www.fitnessdigital.com" target="_blank">fitnessdigital.com</a></span>
+      <span>Decision Maker: <strong>Jose Ignacio Rodriguez</strong></span>
+      <span><a href="https://www.linkedin.com/in/joseirodriguez/" target="_blank">LinkedIn</a></span>
+      <span>Ecommerce equipamiento | 28 paises | 35 empleados | Vitoria</span>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 1 -- Connection Request</div>
+      <div class="msg-text">Jose Ignacio, arrancar en 2007 -- antes de que el ecommerce deportivo fuera obvio -- y llegar a 28 paises con almacen en Vitoria tiene mucho de pionero. Trabajo con empresas de equipamiento en modernizacion de la atencion al cliente y me encantaria conectar.</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 2 -- Value Drop</div>
+      <div class="msg-text">Oye Jose Ignacio, algo que veo mucho en ecommerce de equipamiento con operacion internacional: el soporte post-venta (garantias, devoluciones, estado de envio) suele ser el area que mas escala mal cuando creces a 28 paises con un equipo de 35.
+
+Las empresas que automatizan esa capa -- WhatsApp Business + CRM integrado al ERP -- reducen el volumen de llamadas y emails de soporte entre un 40 y 60%. Lo teneis cubierto o sigue siendo manual la mayor parte?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 3 -- Soft CTA</div>
+      <div class="msg-text">Entiendo, es complicado cuando llevas anos con ciertos procesos. Lo que hago con empresas en vuestra situacion es un diagnostico de donde se genera mas carga en soporte y que se puede automatizar sin tocar lo que funciona bien.
+
+Te lo preparo en 24h, sin costo. Si luego tiene sentido para vuestro momento, hablamos 15 minutos. Te parece?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+  </div>
+
+  <!-- SINGULARWOD -->
+  <div class="card cold">
+    <div class="card-header">
+      <h3>9. SingularWOD</h3>
+      <span class="score">13/20</span>
+    </div>
+    <div class="card-meta">
+      <span><a href="https://singularwod.com" target="_blank">singularwod.com</a></span>
+      <span>Decision Maker: <strong>Tomas Junquera</strong></span>
+      <span><a href="https://www.linkedin.com/showcase/singularwod" target="_blank">LinkedIn</a></span>
+      <span>Equipamiento CrossFit B2B | 5 paises | Thomas Wellness Group</span>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 1 -- Connection Request</div>
+      <div class="msg-text">Tomas, de garaje a ser el proveedor de referencia de boxes CrossFit en Espana y ahora en 5 paises europeos bajo Thomas Wellness Group -- ese recorrido de 10 anos tiene mucho que analizar. Trabajo con empresas de equipamiento deportivo en automatizacion y me gustaria conectar.</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 2 -- Value Drop</div>
+      <div class="msg-text">Oye Tomas, algo que veo mucho en proveedores B2B de equipamiento deportivo: el ciclo de venta a un box CrossFit tiene muchos pasos (consulta inicial, presupuesto, revision, aprobacion, pedido, instalacion) y sin CRM eso se cae entre emails y Excel.
+
+Las empresas que automatizan ese pipeline -- WhatsApp para el primer contacto, CRM para el seguimiento -- cierran deals un 30-40% mas rapido. Vosotros como lo estais gestionando ahora mismo?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 3 -- Soft CTA</div>
+      <div class="msg-text">Tiene mucho sentido. Lo que hago con empresas en vuestra posicion es un diagnostico de como se ve el pipeline B2B actual y como quedaria con automatizacion -- desde el primer mensaje de un box interesado hasta el pedido cerrado.
+
+Te lo mando en 24h, sin costo. Si encaja con vuestro momento, hablamos 15 minutos. Le damos?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+  </div>
+
+  <!-- GYMCOMPANY -->
+  <div class="card cold">
+    <div class="card-header">
+      <h3>10. GymCompany</h3>
+      <span class="score">13/20</span>
+    </div>
+    <div class="card-meta">
+      <span><a href="https://www.gymcompany.es" target="_blank">gymcompany.es</a></span>
+      <span>Decision Maker: <strong>Verificar en LinkedIn</strong></span>
+      <span><a href="https://es.linkedin.com/company/gymcompany" target="_blank">LinkedIn (empresa)</a></span>
+      <span>Retail fitness | 12 paises | 50K comunidad | Barcelona</span>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 1 -- Connection Request (actualizar [Nombre])</div>
+      <div class="msg-text">[Nombre], GymCompany lleva mas de 10 anos siendo uno de los referentes europeos en fitness -- operar en 12 paises con comunidad de 50.000 personas desde Barcelona no es algo que se improvisa. Trabajo con marcas de equipamiento en automatizacion comercial y me gustaria conectar.</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 2 -- Value Drop</div>
+      <div class="msg-text">Oye [Nombre], algo que veo mucho en retailers de equipamiento con operacion multipaiz: el soporte en distintos idiomas es el que mas carga genera al equipo cuando escala. Con 12 mercados activos, imagino que eso es un reto constante.
+
+Las marcas que ponen WhatsApp Business con respuestas automaticas en los idiomas principales reducen ese volumen hasta un 50%. Lo teneis cubierto o sigue siendo manual la parte de atencion?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 3 -- Soft CTA</div>
+      <div class="msg-text">Tiene sentido. Lo que hago es un diagnostico rapido de como esta el flujo de atencion al cliente actual y como quedaria con automatizacion por mercado e idioma. Te lo preparo en 24h, sin costo, y si luego tiene sentido hablamos 15 minutos. Te parece?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SECTION C: COLD - RUNNING ESPANA -->
+<!-- ============================================ -->
+<div class="section" id="espana-running">
+  <h2 class="section-title">C. Running Espana <span class="badge">10 PROSPECTS</span></h2>
+  <p class="section-sub">Generado 13/03. Algunos solo tienen Instagram (no LinkedIn). Para esos, enviar por DM de IG.</p>
+
+  <!-- FIND YOUR EVEREST -->
+  <div class="card cold">
+    <div class="card-header">
+      <h3>1. Find Your Everest</h3>
+      <span class="score high">18/20</span>
+    </div>
+    <div class="card-meta">
+      <span><a href="https://findyoureverest.es" target="_blank">findyoureverest.es</a></span>
+      <span>Decision Maker: <strong>Javi Ordieres</strong> (Fundador)</span>
+      <span><a href="https://www.instagram.com/javi_ordieres/" target="_blank">Instagram</a></span>
+      <span>Tienda running/trail + comunidad + podcast | Oviedo | Shopify</span>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 1 -- Connection Request (LinkedIn o IG DM)</div>
+      <div class="msg-text">Javi, llevo un tiempo siguiendo Find Your Everest desde que vi el episodio del podcast sobre Kilian. Lo que habeis construido en Oviedo -- tienda + comunidad + contenido -- es dificil de encontrar. Trabajo con marcas deportivas en automatizacion de ventas y me encantaria conectar.</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 2 -- Value Drop</div>
+      <div class="msg-text">Javi, dato que me parece relevante para lo que haceis: las tiendas de running con Shopify que activan WhatsApp Business con respuesta automatica reducen el tiempo de respuesta de 4h a menos de 2 minutos, y recuperan entre un 15-20% de carritos abandonados via mensaje. Lo estoy viendo con marcas del sector que tienen vuestra estructura -- mucho volumen en redes, pocos en el equipo de atencion. En Find Your Everest gestionais la atencion postventa por email o ya teneis algo mas automatizado?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 3 -- Soft CTA</div>
+      <div class="msg-text">Me alegra que lo veas asi. Mira, puedo armarte un diagnostico rapido de como esta ahora vuestro flujo de atencion vs como quedaria con automatizacion -- te lo mando en un doc, me toma 15 minutos hacerlo. Si te parece util, hablamos 20 min. Si no, igual te sirve el analisis. Te cuadra?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+  </div>
+
+  <!-- THE GINGER CLUB -->
+  <div class="card cold">
+    <div class="card-header">
+      <h3>2. The Ginger Club</h3>
+      <span class="score high">18/20</span>
+    </div>
+    <div class="card-meta">
+      <span><a href="https://thegingerclub.es" target="_blank">thegingerclub.es</a></span>
+      <span>Decision Maker: <strong>Candela Perez</strong> (Fundadora)</span>
+      <span><a href="https://www.instagram.com/candelaperez/" target="_blank">Instagram</a></span>
+      <span>Running club mujeres | 5 ciudades | App propia | 1K usuarias</span>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 1 -- Connection Request</div>
+      <div class="msg-text">Candela, lo que has construido con The Ginger Club es uno de los mejores ejemplos de marca con comunidad real que veo en Espana. 5 ciudades, app propia, 1k usuarias. Trabajo con negocios de fitness y bienestar en automatizacion de ventas, y me encantaria conectar.</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 2 -- Value Drop</div>
+      <div class="msg-text">Candela, algo que estoy viendo mucho con clubs de fitness y running que tienen tu estructura -- fuerte en redes, comunidad activa, multiples sedes: el cuello de botella suele estar en la conversion de leads de Instagram a membresias. El DM manual no escala. Los clubs que conectan Instagram DM + WhatsApp con un flujo automatizado de bienvenida y onboarding convierten 2-3x mas nuevas membresias sin aumentar el equipo. Como estais gestionando ahora las consultas de nuevas chicas que llegan por Instagram?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 3 -- Soft CTA</div>
+      <div class="msg-text">Tiene todo el sentido. Mira, te puedo mandar un mini-analisis de como quedaria vuestro flujo de captacion de nuevas socias con automatizacion -- desde el primer DM en IG hasta que pagan la membresia. Sin compromisos, me toma 15 min armarlo y te sirve igual si decides no avanzar. Te lo mando?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+  </div>
+
+  <!-- 42K RUNNING -->
+  <div class="card cold">
+    <div class="card-header">
+      <h3>3. 42K Running</h3>
+      <span class="score high">17/20</span>
+    </div>
+    <div class="card-meta">
+      <span><a href="https://42krunning.com" target="_blank">42krunning.com</a></span>
+      <span>Decision Maker: <strong>Guillermo Penalver</strong> (CEO)</span>
+      <span><a href="https://es.linkedin.com/in/guillermo-pe%C3%B1alver-59bb2335" target="_blank">LinkedIn</a></span>
+      <span>Marca running + eventos | B2B+B2C | 5 paises</span>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 1 -- Connection Request</div>
+      <div class="msg-text">Guillermo, vi la historia de 42K -- de los recuerdos de carrera de baja calidad a vestir eventos en 5 paises. Buen arco. Trabajo con marcas deportivas en automatizacion de atencion al cliente y ventas, y me interesa mucho lo que estan construyendo. Conectamos?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 2 -- Value Drop</div>
+      <div class="msg-text">Guillermo, algo que veo mucho en marcas B2B+B2C como 42K -- que tienen tanto la tienda online como pedidos personalizados para clubes y eventos: los dos canales de venta acaban operando completamente separados, sin visibilidad de que cliente es quien. Un CRM + WhatsApp automatizado que unifique ambos flujos puede reducir el tiempo de gestion de pedidos personalizados hasta un 40%. Como esta ahora el proceso cuando un club quiere solicitar kits personalizados -- va todo por email/telefono o ya tienen algo mas agil?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 3 -- Soft CTA</div>
+      <div class="msg-text">Me lo imaginaba. Mira, puedo armarte un mapa rapido de como quedaria el flujo unificado para 42K -- tienda online + pedidos personalizados + atencion postventa -- con automatizacion. Te lo mando en un doc en menos de 24h. Si te parece util, hablamos 20 min. Si no, igual te queda el analisis. Te parece?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+  </div>
+
+  <!-- BE URBAN RUNNING -->
+  <div class="card cold">
+    <div class="card-header">
+      <h3>4. Be Urban Running</h3>
+      <span class="score high">16/20</span>
+    </div>
+    <div class="card-meta">
+      <span><a href="https://beurbanrunning.com" target="_blank">beurbanrunning.com</a></span>
+      <span>Decision Maker: <strong>Alberto Navarro Diaz</strong> (Mkt)</span>
+      <span><a href="https://www.linkedin.com/in/alberto-navarro-diaz-4865a34a/" target="_blank">LinkedIn</a></span>
+      <span>12 tiendas fisicas + ecommerce Shopify + Klaviyo</span>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 1 -- Connection Request</div>
+      <div class="msg-text">Alberto, 12 tiendas fisicas + ecommerce en Shopify es una operacion seria. Vi que Be Urban Running tiene WhatsApp activo para soporte -- es una senal de que ya entendeis que el cliente quiere ese canal. Trabajo en automatizacion omnicanal para retail deportivo y me encantaria conectar.</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 2 -- Value Drop</div>
+      <div class="msg-text">Alberto, dato relevante para lo que gestionais: las tiendas de running con multiples locales + ecommerce que conectan Shopify + WhatsApp + email marketing en un solo CRM reducen el tiempo de gestion de consultas en un 35% y aumentan la tasa de recompra. Veo que ya teneis Klaviyo -- el siguiente paso logico es conectarlo con WhatsApp automatizado para activar ese canal donde el cliente ya esta. El equipo de atencion gestiona WhatsApp manualmente o ya teneis algo automatizado ahi?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 3 -- Soft CTA</div>
+      <div class="msg-text">Tiene sentido que sea manual aun -- la mayoria empieza asi. Lo que puedo hacer es un diagnostico rapido de como automatizar ese flujo especificamente para Be Urban Running, con 12 tiendas y Shopify como base. Te lo mando, sin compromiso. Si lo vemos util, hablamos 20 min. Te parece bien?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+  </div>
+
+  <!-- RUNNEA -->
+  <div class="card cold">
+    <div class="card-header">
+      <h3>5. Runnea</h3>
+      <span class="score high">16/20</span>
+    </div>
+    <div class="card-meta">
+      <span><a href="https://runnea.com" target="_blank">runnea.com</a></span>
+      <span>Decision Maker: <strong>Jorge Garcia Betanzos</strong> (CEO)</span>
+      <span><a href="https://www.linkedin.com/in/jgbetanzos/" target="_blank">LinkedIn</a></span>
+      <span>Marketplace + Media + Runnea Academy | Comparador #1 Espana</span>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 1 -- Connection Request</div>
+      <div class="msg-text">Jorge, llevo tiempo usando Runnea para benchmarks de zapatillas -- es el mejor comparador del sector en Espana. Lo que habeis construido con el marketplace + Runnea Academy es una combinacion potente. Trabajo con plataformas digitales en automatizacion de conversion y me encantaria conectar.</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 2 -- Value Drop</div>
+      <div class="msg-text">Jorge, algo que me parece interesante para Runnea Academy en particular: las plataformas de suscripcion de fitness/running que activan WhatsApp como canal de onboarding para nuevos suscriptores ven tasas de activacion un 40% mas altas que las que solo usan email. El runner llega a la App, se suscribe, y nadie le da la bienvenida de forma personal en el canal que mas usa. Como esta el flujo de onboarding para nuevos miembros de Academy ahora mismo -- automatizado o mas manual?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 3 -- Soft CTA</div>
+      <div class="msg-text">Claro, tiene todo el sentido dado el volumen. Puedo prepararte un mini-analisis del flujo de onboarding de Runnea Academy vs lo que se podria montar con WhatsApp automatizado -- te lo mando en menos de 24h. Sin reunion previa, sin compromiso. Si lo encuentras util, hablamos 20 min. Te lo mando?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+  </div>
+
+  <!-- RUNNING ZARAGOZA -->
+  <div class="card cold">
+    <div class="card-header">
+      <h3>6. Running Zaragoza</h3>
+      <span class="score">15/20</span>
+    </div>
+    <div class="card-meta">
+      <span><a href="https://runningzgz.com" target="_blank">runningzgz.com</a></span>
+      <span>Decision Maker: <strong>David Constante</strong> (Director General)</span>
+      <span><a href="https://www.instagram.com/runningzgz/" target="_blank">Instagram</a></span>
+      <span>Tienda + escuela running + eventos (Maraton Zaragoza) | 4 empleados</span>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 1 -- Connection Request</div>
+      <div class="msg-text">David, organizar la Maraton de Zaragoza con un equipo de 4 personas es un nivel de eficiencia que no se ve mucho. Tienda + escuela de running + eventos -- es una operacion completa. Trabajo en automatizacion para negocios del running y me encantaria conectar.</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 2 -- Value Drop</div>
+      <div class="msg-text">David, algo que me parece muy relevante para la operacion de Running Zgz: los negocios que combinan tienda + escuela + eventos tienen multiples flujos de comunicacion con el cliente (compras, inscripciones a grupos, consultas de carrera) que acaban todos en el mismo WhatsApp o email, sin sistema. Automatizar esos flujos por separado, con un CRM simple, puede liberar 2-3 horas diarias del equipo. Como gestionais ahora las consultas de inscripcion a grupos de entrenamiento -- va por WhatsApp o teneis algo mas organizado?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 3 -- Soft CTA</div>
+      <div class="msg-text">Me lo imagino -- es el escenario mas habitual. Puedo hacerte un esquema de como quedarian separados y automatizados esos 3 flujos para Running Zgz. Te lo mando en un doc, sin compromiso. Si te parece util, hablamos 20 min. Te lo preparo?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+  </div>
+
+  <!-- BIKILA -->
+  <div class="card cold">
+    <div class="card-header">
+      <h3>7. Bikila Tiendas</h3>
+      <span class="score">15/20</span>
+    </div>
+    <div class="card-meta">
+      <span><a href="https://bikila.com" target="_blank">bikila.com</a></span>
+      <span>Decision Maker: <strong>Dan Rickfelder</strong> (Dir. Business Dev)</span>
+      <span><a href="https://es.linkedin.com/company/bikilatiendas" target="_blank">LinkedIn</a></span>
+      <span>Cadena running | 19 tiendas | Ex-Brooks (15 anos)</span>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 1 -- Connection Request</div>
+      <div class="msg-text">Dan, lei sobre tu incorporacion a Bikila -- 26 anos en la industria, 15 en Brooks. La combinacion de experiencia internacional con el proyecto de expansion de Bikila tiene buena pinta. Trabajo con cadenas de retail deportivo en automatizacion de atencion al cliente y me encantaria conectar.</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 2 -- Value Drop</div>
+      <div class="msg-text">Dan, algo relevante para Bikila con 19 tiendas: el reto de las cadenas de running a esta escala suele ser la desconexion entre el cliente que compra online y el que va a la tienda. Sin un CRM centralizado, pierdes el historial de compra, las preferencias de zapatillas y la posibilidad de activar campanas por WhatsApp segmentadas por tipo de corredor. Las cadenas que lo unifican ven un 25-30% mas de recompra en los primeros 6 meses. Tienen algo que conecte los dos canales ahora mismo o es aun independiente cada tienda?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 3 -- Soft CTA</div>
+      <div class="msg-text">Tiene sentido -- es el caso mas habitual en cadenas con ese modelo de crecimiento. Lo que puedo hacer es un analisis rapido de como se veria el CRM unificado para Bikila, con la estructura de 19 tiendas como base. Te lo mando en un doc. Si te parece relevante para los proyectos que estas pilotando, hablamos 20 min. Te lo preparo?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+  </div>
+
+  <!-- LA CASA DEL TRAIL -->
+  <div class="card cold">
+    <div class="card-header">
+      <h3>8. La Casa del Trail Running</h3>
+      <span class="score">14/20</span>
+    </div>
+    <div class="card-meta">
+      <span><a href="https://lacasadeltrailrunning.com" target="_blank">lacasadeltrailrunning.com</a></span>
+      <span>Decision Maker: <strong>Por confirmar via IG DM</strong></span>
+      <span><a href="https://www.instagram.com/lacasadeltrailrunning/" target="_blank">Instagram</a></span>
+      <span>Especialista trail 100% | Nicho exigente | Ticket 150-300EUR</span>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 1 -- IG DM</div>
+      <div class="msg-text">Hola, vi La Casa del Trail Running -- uno de los pocos especializados 100% en trail en Espana. Es un nicho exigente y con compradores muy informados. Trabajo con tiendas deportivas en automatizacion de atencion y ventas, y me parecio interesante conectar por lo que estais haciendo.</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 2 -- Value Drop</div>
+      <div class="msg-text">Hola, algo interesante para el segmento trail: el comprador de zapatillas de trail (ticket 150-300EUR) tiende a investigar mucho antes de comprar -- consulta tallas, diferencias entre modelos, compatibilidad con terreno. Las tiendas que tienen WhatsApp automatizado con un bot que responde esas consultas tecnicas convierten un 40% mas que las que solo tienen formulario de contacto. Como gestionais ahora las consultas tecnicas antes de compra -- email, WhatsApp manual o algo mas automatizado?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 3 -- Soft CTA</div>
+      <div class="msg-text">Lo que describes es super comun en tiendas especializadas. Puedo armar un esquema de como quedaria el flujo de consultas pre-compra automatizado para La Casa del Trail -- adaptado a vuestro catalogo y tipo de cliente. Te lo mando sin compromiso. Te parece?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+  </div>
+
+  <!-- SOLORUNNERS -->
+  <div class="card cold">
+    <div class="card-header">
+      <h3>9. Solorunners</h3>
+      <span class="score">13/20</span>
+    </div>
+    <div class="card-meta">
+      <span><a href="https://solorunners.com" target="_blank">solorunners.com</a></span>
+      <span>Decision Maker: <strong>Juan Carlos Granado</strong> (Co-fundador)</span>
+      <span><a href="https://www.instagram.com/solorunners/" target="_blank">Instagram</a></span>
+      <span>Tienda running + club | Valladolid | Desde 2009</span>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 1 -- Connection Request</div>
+      <div class="msg-text">Hola Juan Carlos, vi Solorunners -- llevan desde 2009 combinando tienda especializada con club deportivo en Valladolid. Es una apuesta diferente a las puras tiendas online. Trabajo con negocios de running en automatizacion de ventas y atencion, y me encantaria conectar.</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 2 -- Value Drop</div>
+      <div class="msg-text">Hola Juan Carlos, algo que veo mucho en negocios como Solorunners -- tienda + club -- es que el cliente del club y el de la tienda suelen ser la misma persona, pero sin un CRM no hay forma de saberlo ni de activar cross-selling. Los que conectan WhatsApp Business con su ecommerce ven que los clientes del club compran un 30% mas en tienda cuando reciben comunicaciones personalizadas. En Solorunners gestionais la comunicacion con los socios del club de forma separada a los clientes de tienda, o ya teneis algo unificado?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 3 -- Soft CTA</div>
+      <div class="msg-text">Tiene todo el sentido -- es lo mas habitual. Puedo armarte un esquema de como quedaria la unificacion club + tienda para Solorunners. Te lo mando sin compromiso. Si te parece util, hablamos 20 min. Te lo preparo?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+  </div>
+
+  <!-- RUNNING EMOTION -->
+  <div class="card cold">
+    <div class="card-header">
+      <h3>10. Running Emotion</h3>
+      <span class="score">12/20</span>
+    </div>
+    <div class="card-meta">
+      <span><a href="https://runningemotion.com" target="_blank">runningemotion.com</a></span>
+      <span>Decision Maker: <strong>Pablo Hernandez</strong> (Brand Manager)</span>
+      <span><a href="https://www.linkedin.com/in/pablo-hern%C3%A1ndez-d%C3%ADaz-315a77165/" target="_blank">LinkedIn</a></span>
+      <span>Marca dentro de Sports Emotion | Fase consolidacion</span>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 1 -- Connection Request</div>
+      <div class="msg-text">Pablo, vi el lanzamiento de Running Emotion como marca especializada dentro de Sports Emotion -- es una apuesta interesante en un mercado donde la especializacion gana. Trabajo con marcas de running en automatizacion de ventas y atencion, y me encantaria conectar para conocer como esta yendo el proyecto.</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 2 -- Value Drop</div>
+      <div class="msg-text">Pablo, algo que veo muy frecuente en marcas que estan en la fase de consolidacion como Running Emotion: el momento optimo para montar el CRM y los flujos de WhatsApp automatizados es ahora, antes de que la base de clientes sea grande y los procesos manuales esten calcificados. Las marcas que lo hacen en el primer ano de operacion tienen un coste de setup mucho menor y construyen un activo digital desde el inicio. Como esta ahora el flujo de atencion al cliente post-compra en runningemotion.com -- tienen algo automatizado o es todo manual?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 3 -- Soft CTA</div>
+      <div class="msg-text">Tiene mucho sentido en esta etapa. Puedo mandarte un analisis rapido de que automatizaria primero para Running Emotion dado donde estais ahora -- priorizando el mayor impacto con el menor esfuerzo. Sin reunion previa, te lo mando en un doc. Si te parece util, hablamos 20 min. Te cuadra?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SECTION D: COLD - PERU (placeholder) -->
+<!-- ============================================ -->
+<div class="section" id="peru">
+  <h2 class="section-title">D. Fitness / Wellness Peru <span class="badge">15 PROSPECTS</span></h2>
+  <p class="section-sub">Generado 16/03. Pain signal comun: casi ninguno tiene WhatsApp automatizado ni chat en vivo.</p>
+
+  <!-- LAB NUTRITION -->
+  <div class="card cold">
+    <div class="card-header">
+      <h3>1. Lab Nutrition Peru</h3>
+      <span class="score high">19/20</span>
+    </div>
+    <div class="card-meta">
+      <span><a href="https://www.labnutrition.com/" target="_blank">labnutrition.com</a></span>
+      <span>Decision Maker: <strong>Santiago Gamarra</strong> (CEO y Fundador)</span>
+      <span><a href="https://www.linkedin.com/in/santiago-gamarra-aaa7b994/" target="_blank">LinkedIn</a></span>
+      <span>Cadena #1 suplementos Peru | 20 anos | Expansion USA via Amazon</span>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 1 -- Connection Request</div>
+      <div class="msg-text">Santiago, 20 anios construyendo Lab Nutrition hasta ser la cadena mas grande de suplementos en Peru -- eso es otro nivel. Vi que estan expandiendo a USA via Amazon y eBay. Con esa escala, como manejan la atencion al cliente entre tantos canales?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 2 -- Value Drop</div>
+      <div class="msg-text">En el rubro de suplementos, el cliente pregunta mucho antes de comprar: dosis, compatibilidad, marcas. Las tiendas que ponen un chatbot con IA entrenado en su catalogo en WhatsApp + web ven +40% en conversion porque responden 24/7 con precision. Nosotros en Zenia Partners hacemos exactamente eso para retailers fitness. Les interesaria explorar algo asi para Lab Nutrition?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 3 -- Soft CTA</div>
+      <div class="msg-text">Santiago, te propongo algo concreto: un diagnostico de 15 min donde analizamos los canales de Lab Nutrition y te muestro las oportunidades de automatizacion con numeros reales. Gratis y sin compromiso. Esta semana te funciona?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+  </div>
+
+  <!-- WIN FITNESS WEAR -->
+  <div class="card cold">
+    <div class="card-header">
+      <h3>2. Win Fitness Wear</h3>
+      <span class="score high">18/20</span>
+    </div>
+    <div class="card-meta">
+      <span><a href="https://win.com.pe/" target="_blank">win.com.pe</a></span>
+      <span>Decision Maker: <strong>Fiorella Marcos Villegas</strong> (Jefa RRHH)</span>
+      <span><a href="https://www.linkedin.com/in/fiorella-marcos-villegas-6b832831/" target="_blank">LinkedIn</a></span>
+      <span>Ropa deportiva | 201K IG | 15 anos | Tiendas en USA | WhatsApp manual</span>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 1 -- Connection Request</div>
+      <div class="msg-text">Win lleva 15 anios en ropa deportiva y ya tienen tiendas en USA -- impresionante para una marca peruana. Vi que tienen WhatsApp en la web pero me pregunto si lo tienen automatizado o es manual. Como manejan la atencion al cliente con tanto crecimiento?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 2 -- Value Drop</div>
+      <div class="msg-text">Dato interesante: las marcas de moda deportiva que automatizan WhatsApp + Instagram DM con IA reducen tiempo de respuesta de 4 horas a 30 segundos y recuperan hasta 20% de carritos abandonados. Con 201K seguidores en IG, Win tiene un volumen donde eso se nota fuerte. En Zenia Partners nos especializamos exactamente en eso. Tienen alguna solucion de automatizacion actualmente?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 3 -- Soft CTA</div>
+      <div class="msg-text">Fiorella, me encantaria mostrarte como funciona en 15 minutos -- sin compromiso. Hacemos un diagnostico rapido de los canales de Win y te damos recomendaciones concretas, uses Zenia o no. Te parece agendar esta semana?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+  </div>
+
+  <!-- ALPHAFIT -->
+  <div class="card cold">
+    <div class="card-header">
+      <h3>3. Alphafit Peru</h3>
+      <span class="score high">17/20</span>
+    </div>
+    <div class="card-meta">
+      <span><a href="https://www.alphafit.pe/" target="_blank">alphafit.pe</a></span>
+      <span>Decision Maker: <strong>Fundador/CEO (por confirmar)</strong></span>
+      <span><a href="https://www.instagram.com/alphafit.pe/" target="_blank">Instagram (139K)</a></span>
+      <span>Ropa deportiva | Shopify | Miraflores | NO WhatsApp/chat - gap grande</span>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 1 -- Connection Request (IG DM o LinkedIn)</div>
+      <div class="msg-text">139K en Instagram y tienda Shopify en Miraflores -- Alphafit esta haciendo las cosas bien en ropa deportiva. Me llamo la atencion que manejan todo desde ecommerce hasta tienda fisica. Como manejan el volumen de consultas por DM e inbox? Saludos!</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 2 -- Value Drop</div>
+      <div class="msg-text">Vi que Alphafit no tiene WhatsApp ni chat en vivo en la web -- solo formulario con captcha. En el rubro deportivo, las marcas que activan WhatsApp Business con respuesta automatica ven +35% de conversion vs formulario. Nosotros en Zenia ayudamos a marcas de fitness a conectar ecommerce + WhatsApp + Instagram DM con IA. Te suena familiar ese cuello de botella?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 3 -- Soft CTA</div>
+      <div class="msg-text">Alphafit tiene todo para escalar: producto, marca, comunidad. Solo falta cerrar el loop de atencion al cliente con automatizacion. Te ofrezco un diagnostico gratis de 15 min donde te muestro exactamente que oportunidades tienen. Sin compromiso. Te parece?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+  </div>
+
+  <!-- PERU RUNNERS -->
+  <div class="card cold">
+    <div class="card-header">
+      <h3>4. Peru Runners</h3>
+      <span class="score high">16/20</span>
+    </div>
+    <div class="card-meta">
+      <span><a href="https://tienda.perurunners.com/" target="_blank">tienda.perurunners.com</a></span>
+      <span>Decision Maker: <strong>Juan Jose Pinero</strong> (CEO y Socio Fundador)</span>
+      <span><a href="https://www.linkedin.com/in/juan-jose-pinero-a31b89b/" target="_blank">LinkedIn</a></span>
+      <span>Running + ecommerce | Desde 1984 | Shopify | Garmin + Nike + nutricion</span>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 1 -- Connection Request</div>
+      <div class="msg-text">Juan Jose, Peru Runners lleva desde 1984 promoviendo el running y ahora con tienda online vendiendo Garmin + Nike + nutricion -- es un ecosistema completo. Como manejan las consultas de la tienda? Vi que tienen WhatsApp directo, pero con el volumen que mueven debe ser intenso.</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 2 -- Value Drop</div>
+      <div class="msg-text">Dato que puede interesarte: los ecommerce deportivos que automatizan WhatsApp con IA para consultas de producto (tallas, stock, compatibilidad de relojes) aumentan conversion 25-30% y liberan al equipo para lo que importa. En Zenia Partners ayudamos a tiendas como Peru Runners a integrar WhatsApp + IG + CRM con respuesta automatica inteligente. Tienen algo asi implementado?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 3 -- Soft CTA</div>
+      <div class="msg-text">Juan Jose, te ofrezco un diagnostico express de 15 min: revisamos como fluyen las consultas en Peru Runners y te doy 3 mejoras concretas. Sin costo y sin compromiso. Te copa?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+  </div>
+
+  <!-- TMX -->
+  <div class="card cold">
+    <div class="card-header">
+      <h3>5. TMX The Wellness Co.</h3>
+      <span class="score high">16/20</span>
+    </div>
+    <div class="card-meta">
+      <span><a href="https://tmx.com.pe/" target="_blank">tmx.com.pe</a></span>
+      <span>Decision Maker: <strong>Fundador/CEO (por confirmar)</strong></span>
+      <span><a href="https://pe.linkedin.com/company/tmxperu" target="_blank">LinkedIn empresa</a></span>
+      <span>Suplementos + wellness | Shopify | WhatsApp manual | Catalogo enorme</span>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 1 -- Connection Request</div>
+      <div class="msg-text">TMX me parece de los ecommerce de suplementos mejor armados en Peru -- tienen de todo: proteinas, vitaminas, snacks, accesorios. Y delivery en 24h a Lima. La pregunta es: con tanto catalogo, como manejan las consultas por WhatsApp? Vi que tienen el numero pero dudo que tengan automatizacion.</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 2 -- Value Drop</div>
+      <div class="msg-text">Las tiendas wellness con catalogo amplio como TMX son las que mas se benefician de un chatbot IA en WhatsApp: el cliente pregunta que vitamina le conviene, que proteina combinar, etc. y el bot responde al instante 24/7 con recomendaciones del catalogo real. En Zenia hacemos eso integrado con Shopify en 1 semana. Lo tienen resuelto o es manual?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 3 -- Soft CTA</div>
+      <div class="msg-text">Te ofrezco un diagnostico gratis de 15 min donde revisamos los canales de TMX y te muestro exactamente que ganarian con automatizacion. Sin compromiso. Te parece?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+  </div>
+
+  <!-- GIMNASIOS B2 -->
+  <div class="card cold">
+    <div class="card-header">
+      <h3>6. Gimnasios B2</h3>
+      <span class="score high">16/20</span>
+    </div>
+    <div class="card-meta">
+      <span><a href="https://b2.pe/" target="_blank">b2.pe</a></span>
+      <span>Decision Maker: <strong>Jose Tenorio</strong> (Co-Fundador)</span>
+      <span><a href="https://pe.linkedin.com/company/gimnasiosb2" target="_blank">LinkedIn empresa</a></span>
+      <span>Cadena gym premium | 9 sedes | Boutique + spa + barberia + cafe</span>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 1 -- Connection Request</div>
+      <div class="msg-text">Jose, B2 esta liderando el segmento premium de gimnasios en Peru -- 9 sedes y creciendo. Me llama la atencion que tienen boutique, spa, barberia, cafeteria... muchos puntos de contacto con el cliente. Como centralizan toda esa comunicacion?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 2 -- Value Drop</div>
+      <div class="msg-text">Los gimnasios con multiples servicios como B2 son los que mas sufren con la atencion fragmentada: un cliente pregunta por WhatsApp sobre clases, otro por IG sobre membresia, otro llama por spa. Los que centralizan todo en un CRM con IA responden 3x mas rapido y convierten mas leads. En Zenia Partners hacemos exactamente eso. Lo tienen resuelto?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 3 -- Soft CTA</div>
+      <div class="msg-text">Jose, te ofrezco 15 minutos para un diagnostico de los canales de B2. Te muestro como se veria todo centralizado con IA. Sin compromiso. Esta semana?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+  </div>
+
+  <!-- MARKETFIT -->
+  <div class="card cold">
+    <div class="card-header">
+      <h3>7. MarketFit Peru</h3>
+      <span class="score">15/20</span>
+    </div>
+    <div class="card-meta">
+      <span><a href="https://www.marketfit.pe/" target="_blank">marketfit.pe</a></span>
+      <span>Decision Maker: <strong>Fundador/CEO (por confirmar)</strong></span>
+      <span>Suplementos | 7 anos | Shopify | Same-day delivery | NO chat/WhatsApp</span>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 1 -- Connection Request</div>
+      <div class="msg-text">7 anios en suplementos y delivery el mismo dia a todo Peru -- MarketFit se ha ganado su lugar. Vi que la web corre en Shopify con buen setup pero no tienen chat en vivo ni WhatsApp visible. Como manejan las consultas de los clientes? Puro formulario?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 2 -- Value Drop</div>
+      <div class="msg-text">Las tiendas de suplementos online que activan WhatsApp Business con IA para consultas rapidas (que proteina me conviene?, tienen stock?, etc.) ven un salto de +30% en conversion porque el cliente no espera. En Zenia Partners implementamos eso en 1 semana, integrado con Shopify. Les interesaria ver como funciona?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 3 -- Soft CTA</div>
+      <div class="msg-text">Te propongo algo simple: 15 minutos donde te muestro como se veria MarketFit con WhatsApp automatizado + chatbot IA entrenado en tu catalogo. Gratis y sin compromiso. Dale?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+  </div>
+
+  <!-- FENRIR -->
+  <div class="card cold">
+    <div class="card-header">
+      <h3>8. Fenrir Peru</h3>
+      <span class="score">15/20</span>
+    </div>
+    <div class="card-meta">
+      <span><a href="https://fenrir.pe/" target="_blank">fenrir.pe</a></span>
+      <span>Decision Maker: <strong>Fundador/CEO (por confirmar)</strong></span>
+      <span><a href="https://www.instagram.com/fenrir.pe/" target="_blank">Instagram (34K)</a></span>
+      <span>Ropa deportiva premium | Tecnologia Seamless | Shopify | NO WhatsApp/chat</span>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 1 -- IG DM</div>
+      <div class="msg-text">Fenrir tiene 34K seguidores y un producto premium con tecnologia Seamless -- se nota que hay marca detras. Me llama la atencion que no tienen WhatsApp ni chat en la web. Con ese nivel de engagement en IG, como manejan los DMs de consulta?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 2 -- Value Drop</div>
+      <div class="msg-text">Las marcas de ropa deportiva con comunidad fuerte en IG que automatizan respuesta de DMs + agregan WhatsApp Business ven un salto en conversion brutal -- porque el cliente pregunta talla/stock/envio y quiere respuesta ya. En Zenia Partners hacemos esa integracion en 1 semana con IA. Les interesaria explorar eso?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 3 -- Soft CTA</div>
+      <div class="msg-text">Te propongo un diagnostico rapido de 15 min: revisamos como fluyen las consultas en Fenrir y te doy recomendaciones concretas. Sin costo. Te animas?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+  </div>
+
+  <!-- LAAL YOGA -->
+  <div class="card cold">
+    <div class="card-header">
+      <h3>9. laal Yoga</h3>
+      <span class="score">15/20</span>
+    </div>
+    <div class="card-meta">
+      <span><a href="https://laalyoga.com/" target="_blank">laalyoga.com</a></span>
+      <span>Decision Maker: <strong>Karla Luna</strong> (Fundadora)</span>
+      <span><a href="https://www.linkedin.com/pub/dir/Karla/Luna/pe-0-Peru" target="_blank">LinkedIn</a></span>
+      <span>Primera tienda yoga Lima | WooCommerce | Tienda fisica + online | NO chat</span>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 1 -- Connection Request</div>
+      <div class="msg-text">Karla, laal fue la primera tienda de yoga en Lima y eso tiene merito. Me encanta que combinan tienda fisica + online + la historia personal detras de la marca. Como manejan las consultas de clientes? Vi que la web es WooCommerce pero no tiene chat ni WhatsApp visible.</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 2 -- Value Drop</div>
+      <div class="msg-text">Las tiendas de nicho como laal con producto premium y comunidad fiel son las que mas se benefician de WhatsApp Business con IA: el cliente pregunta por el mat ideal para su practica, la talla de ropa, o cuando llega el envio -- y el bot responde al instante, personalizado. En Zenia hacemos eso en 1 semana. Lo tienen resuelto o es todo manual?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 3 -- Soft CTA</div>
+      <div class="msg-text">Karla, te propongo algo rapido: 15 min donde revisamos los canales de laal y te doy 3 ideas concretas para mejorar conversion y atencion. Sin costo. Te copa?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+  </div>
+
+  <!-- NUTRIFORMA -->
+  <div class="card cold">
+    <div class="card-header">
+      <h3>10. Nutriforma Peru</h3>
+      <span class="score">14/20</span>
+    </div>
+    <div class="card-meta">
+      <span><a href="https://nutriforma.pe/" target="_blank">nutriforma.pe</a></span>
+      <span>Decision Maker: <strong>Por confirmar</strong></span>
+      <span><a href="https://www.instagram.com/nutriforma.peru/" target="_blank">Instagram</a></span>
+      <span>Importador oficial Dragon Pharma, Ronnie Coleman | Showroom Miraflores</span>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 1 -- IG DM</div>
+      <div class="msg-text">Nutriforma tiene buen posicionamiento como importador oficial de marcas top (Dragon Pharma, Ronnie Coleman) y el showroom en Miraflores es un plus. Como manejan las consultas online? Vi que tienen web pero no WhatsApp ni chat visible.</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 2 -- Value Drop</div>
+      <div class="msg-text">Los distribuidores de suplementos que ponen chatbot IA en WhatsApp entrenado en su catalogo ven resultados rapidos: el cliente pregunta que pre-entreno combinar o si tienen stock de X marca, y el bot responde al instante. Con el volumen de marcas que maneja Nutriforma, eso es oro. En Zenia hacemos eso en 1 semana. Les interesa?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 3 -- Soft CTA</div>
+      <div class="msg-text">Te ofrezco 15 min de diagnostico gratis: revisamos los canales de Nutriforma y te muestro que ganarian con automatizacion. Sin compromiso. Va?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+  </div>
+
+  <!-- MITRE -->
+  <div class="card cold">
+    <div class="card-header">
+      <h3>11. Mitre Performance</h3>
+      <span class="score">14/20</span>
+    </div>
+    <div class="card-meta">
+      <span><a href="https://www.mitre.pe/" target="_blank">mitre.pe</a></span>
+      <span>Decision Maker: <strong>Por confirmar</strong></span>
+      <span><a href="https://pe.linkedin.com/company/mitre-performnace" target="_blank">LinkedIn empresa</a></span>
+      <span>Ropa deportiva peruana | Entrega 24h | Hombre + mujer</span>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 1 -- Connection Request</div>
+      <div class="msg-text">Mitre Performance es de las marcas peruanas de ropa deportiva que mas me gustan -- producto para hombre y mujer con entrega en 24h. Se nota que hay operacion seria detras. Como manejan la atencion al cliente con ese volumen?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 2 -- Value Drop</div>
+      <div class="msg-text">Las marcas de ropa deportiva con ecommerce propio que automatizan WhatsApp + Instagram DM ven mejoras de +30% en conversion. El cliente pregunta talla, disponibilidad, envio... y quiere respuesta ya. En Zenia Partners hacemos esa integracion con IA en 1 semana. Lo tienen automatizado o es manual?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 3 -- Soft CTA</div>
+      <div class="msg-text">Te propongo 15 min para un diagnostico rapido de los canales de Mitre: que funciona, que se puede mejorar, y como se veria con automatizacion. Sin costo. Te parece?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+  </div>
+
+  <!-- LIMA RUNNING CLUB -->
+  <div class="card cold">
+    <div class="card-header">
+      <h3>12. Lima Running Club</h3>
+      <span class="score">13/20</span>
+    </div>
+    <div class="card-meta">
+      <span><a href="https://www.limarunning.club/" target="_blank">limarunning.club</a></span>
+      <span>Decision Maker: <strong>Fundadora (por confirmar)</strong></span>
+      <span><a href="https://www.instagram.com/limarunningclub/" target="_blank">Instagram (25K)</a></span>
+      <span>Running club + merch shop | Girls running community</span>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 1 -- IG DM</div>
+      <div class="msg-text">Lima Running Club con 25K en IG y tienda de merch -- me encanta el concepto de comunidad + ecommerce. Como manejan las consultas de la tienda y las inscripciones a planes? Todo por DM manual?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 2 -- Value Drop</div>
+      <div class="msg-text">Los running clubs con tienda online que automatizan atencion por WhatsApp + IG convierten mucho mas porque el runner pregunta tallas, planes, proximos eventos y quiere respuesta instantanea. En Zenia Partners ayudamos a comunidades fitness a automatizar eso con IA. Les interesaria?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 3 -- Soft CTA</div>
+      <div class="msg-text">Te propongo un diagnostico express de 15 min donde revisamos como fluyen las consultas en Lima Running Club y te doy ideas concretas. Sin costo ni compromiso. Dale?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+  </div>
+
+  <!-- SUPLERO -->
+  <div class="card cold">
+    <div class="card-header">
+      <h3>13. Suplero Peru</h3>
+      <span class="score">13/20</span>
+    </div>
+    <div class="card-meta">
+      <span><a href="https://suplero.pe/" target="_blank">suplero.pe</a></span>
+      <span>Decision Maker: <strong>Por confirmar</strong></span>
+      <span>Suplementos | WooCommerce | Wholesale + retail | NO WhatsApp</span>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 1 -- Connection Request</div>
+      <div class="msg-text">Suplero tiene buen catalogo de suplementos americanos y venta al por mayor -- eso es un diferenciador fuerte. Vi que la web es WooCommerce pero no tiene WhatsApp ni chat. Como manejan las consultas de mayoristas y clientes finales?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 2 -- Value Drop</div>
+      <div class="msg-text">Los distribuidores de suplementos que atienden mayoreo + retail necesitan canales diferenciados. Un chatbot IA en WhatsApp que maneje consultas de stock, precios mayoristas y recomendaciones al consumidor final es game changer. En Zenia hacemos eso en 1 semana. Les interesaria ver como funciona?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 3 -- Soft CTA</div>
+      <div class="msg-text">Te ofrezco 15 min de diagnostico gratis: revisamos como fluyen las consultas en Suplero y te muestro oportunidades concretas. Sin compromiso. Va?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+  </div>
+
+  <!-- ALTAIR CROSSFIT -->
+  <div class="card cold">
+    <div class="card-header">
+      <h3>14. Altair CrossFit</h3>
+      <span class="score">12/20</span>
+    </div>
+    <div class="card-meta">
+      <span><a href="https://www.altaircrossfit.com/" target="_blank">altaircrossfit.com</a></span>
+      <span>Decision Maker: <strong>Por confirmar</strong></span>
+      <span><a href="https://www.instagram.com/altair_cf/" target="_blank">Instagram (8.4K)</a></span>
+      <span>CrossFit box | Surco | Community-driven</span>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 1 -- IG DM</div>
+      <div class="msg-text">Altair CrossFit con 8.4K seguidores y comunidad solida en Surco. Los boxes de CrossFit tienen algo que los gyms grandes no: comunidad real. Como manejan las inscripciones y consultas? Todo por DM e inbox?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 2 -- Value Drop</div>
+      <div class="msg-text">Los boxes de CrossFit que automatizan WhatsApp para inscripciones, horarios y pagos liberan mucho tiempo del coach para lo que importa: entrenar gente. Un chatbot que responda clase disponible?, precio?, como me inscribo? 24/7 cambia el juego. En Zenia hacemos eso. Les interesaria?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 3 -- Soft CTA</div>
+      <div class="msg-text">Te propongo 15 min para un diagnostico: revisamos como manejan consultas en Altair y te muestro como se veria automatizado. Gratis. Te animas?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+  </div>
+
+  <!-- DISTRIBUIDORA FITNESS -->
+  <div class="card cold">
+    <div class="card-header">
+      <h3>15. Distribuidora Fitness Peru</h3>
+      <span class="score">12/20</span>
+    </div>
+    <div class="card-meta">
+      <span><a href="https://distribuidorafitness.pe/" target="_blank">distribuidorafitness.pe</a></span>
+      <span>Decision Maker: <strong>Fundadores jovenes (por confirmar)</strong></span>
+      <span>Suplementos | Import/distribucion | Crecimiento rapido | Equipo joven</span>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 1 -- Connection Request</div>
+      <div class="msg-text">Distribuidora Fitness me llama la atencion: un equipo de jovenes que con 20 anios se lanzo a importar suplementos y en 3 anios ya estan entre los lideres. Eso es emprendimiento puro. Como manejan la atencion al cliente con ese crecimiento tan rapido?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 2 -- Value Drop</div>
+      <div class="msg-text">Las distribuidoras fitness que crecen rapido son las que primero sienten el cuello de botella en atencion al cliente: muchas consultas, poco equipo. Un chatbot IA en WhatsApp entrenado en el catalogo resuelve eso al instante. En Zenia Partners implementamos eso en 1 semana. Les interesaria ver como funciona?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+    <div class="msg-block">
+      <div class="msg-label">Mensaje 3 -- Soft CTA</div>
+      <div class="msg-text">Les propongo 15 min de diagnostico gratis: revisamos sus canales y les muestro que ganarian con automatizacion. Sin compromiso. Les copa?</div>
+      <button class="copy-btn" onclick="copyMsg(this)">Copiar</button>
+    </div>
+  </div>
+
+</div>
+
+<!-- ============================================ -->
+<!-- SECTION E: CALENDAR -->
+<!-- ============================================ -->
+<div class="section" id="calendar">
+  <h2 class="section-title">E. Calendario de Ejecucion <span class="badge">2 SEMANAS</span></h2>
+  <p class="section-sub">Plan dia a dia para maximizar conversion.</p>
+
+  <div class="card">
+    <h3 style="margin-bottom: 16px; color: var(--accent);">Semana 1: 16-21 Marzo</h3>
+    <div class="timeline">
+      <div class="timeline-item done">
+        <div class="tl-date">Lunes 16 (HOY)</div>
+        <div class="tl-content">
+          <strong>WARM:</strong> ✅ Follow-up MuscleShop enviado con demo bot Cami + ultimo intento Throwing Salt<br>
+          <strong>ENGAGEMENT:</strong> Visitar perfiles LinkedIn de los 10 prospects score 16+ (que vean la notificacion). Dar like a 2-3 posts de cada uno.<br>
+          <strong>LINKEDIN:</strong> Crear pagina de empresa Zenia Partners + actualizar perfil personal<br>
+          <strong>Verificar:</strong> Estado de Auna y AlienInvasionAI
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-date">Martes 17</div>
+        <div class="tl-content">
+          <strong>OUTREACH:</strong> Enviar Msg1 a los 10 prospects de score mas alto:<br>
+          226ERS (18), Find Your Everest (18), The Ginger Club (18), 42K Running (17), Mundo Fitness (17), Maniak (16), Be Urban Running (16), Runnea (16), Born Living Yoga (15), Bikila (15)<br>
+          <em>Horario: 9-11 AM hora Espana. Maximo 20 requests.</em>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-date">Miercoles 18</div>
+        <div class="tl-content">
+          <strong>OUTREACH:</strong> Enviar Msg1 a los 10 restantes (score 14-12)<br>
+          <strong>WARM:</strong> Si Glow no respondio email, WhatsApp a Piero<br>
+          <strong>PERU:</strong> Revisar resultados del agente Peru, preparar secuencias
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-date">Jueves 19</div>
+        <div class="tl-content">
+          <strong>OUTREACH:</strong> Enviar Msg1 batch Peru (15 prospects)<br>
+          <strong>ENGAGEMENT:</strong> Comentar posts relevantes de los prospects que aceptaron conexion<br>
+          <strong>CONTENT:</strong> Publicar post en LinkedIn sobre automatizacion para fitness/running
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-date">Viernes 20</div>
+        <div class="tl-content">
+          <strong>SEPE:</strong> Cita 13:30 - C. Martinez Villergas 52 (Localizador Y6E1B)<br>
+          <strong>OUTREACH:</strong> Msg2 a los que aceptaron conexion (2-3 dias despues del Msg1)<br>
+          <strong>REVIEW:</strong> Cuantas conexiones aceptadas, respuestas, pipeline status
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-bottom: 16px; color: var(--accent);">Semana 2: 23-28 Marzo</h3>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="tl-date">Lunes 23</div>
+        <div class="tl-content">
+          <strong>OUTREACH:</strong> Msg2 a los que quedan (que aceptaron pero no recibieron Msg2 aun)<br>
+          <strong>WARM:</strong> Follow-up Glow si no cerro. MuscleShop deberia estar cerrado para esta fecha.
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-date">Martes 24</div>
+        <div class="tl-content">
+          <strong>NIE:</strong> Recoger NIE actualizado<br>
+          <strong>OUTREACH:</strong> Msg3 a los que respondieron Msg2 (soft CTA, diagnostico gratis)
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-date">Miercoles 25</div>
+        <div class="tl-content">
+          <strong>CERTIFICADO:</strong> Cita certificado digital<br>
+          <strong>OUTREACH:</strong> Generar batch 4 (ecommerce/retail Espana, 10 prospects)<br>
+          <strong>CALLS:</strong> Agendar calls con los que aceptaron diagnostico
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-date">Jueves 26</div>
+        <div class="tl-content">
+          <strong>OUTREACH:</strong> Enviar Msg1 batch 4<br>
+          <strong>CONTENT:</strong> Segundo post LinkedIn (caso de estudio o insight)
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-date">Viernes 27</div>
+        <div class="tl-content">
+          <strong>REVIEW SEMANAL:</strong> Pipeline completo. Cuantos en cada etapa.<br>
+          <strong>CALLS:</strong> Hacer las calls agendadas<br>
+          <strong>PROPUESTAS:</strong> Enviar propuestas a los que tuvieron call
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SECTION F: LINKEDIN SETUP -->
+<!-- ============================================ -->
+<div class="section" id="linkedin">
+  <h2 class="section-title">F. LinkedIn Setup <span class="badge">HOY</span></h2>
+  <p class="section-sub">Tu perfil y la pagina de Zenia son la primera impresion. Hazlo antes de enviar outreach.</p>
+
+  <div class="card action">
+    <h3 style="margin-bottom: 12px;">Perfil Personal -- Fabrizzio Zelada</h3>
+    <ul class="checklist">
+      <li>Headline: "Co-Founder @ ZFC Partners | Founder @ Zenia Partners | Renewable Energy & AI Automation"</li>
+      <li>About: 3-4 lineas. Background en project finance + M&A renewables. Ahora construyendo Zenia (AI para SMBs). Tono: profesional pero cercano.</li>
+      <li>Experiencia: Co-Founder ZFC Partners (primary, desde 2024), Founder Zenia Partners (desde 2026), Opde (cerrado), Greening, Five-E, IGNIS</li>
+      <li>Featured: Enlace a zeniapartners.com + sponsor deck de Glow (como muestra de trabajo)</li>
+      <li>Foto: profesional, fondo limpio</li>
+      <li>Banner: algo con branding de ZFC o Zenia</li>
+    </ul>
+  </div>
+
+  <div class="card action">
+    <h3 style="margin-bottom: 12px;">Pagina de Empresa -- Zenia Partners</h3>
+    <ul class="checklist">
+      <li>Nombre: Zenia Partners</li>
+      <li>Tagline: "AI-powered business infrastructure for SMBs"</li>
+      <li>Descripcion: Automatizamos ventas y atencion al cliente con IA para pymes. WhatsApp, Instagram, CRM, todo integrado. Desplegado en 1 semana.</li>
+      <li>Logo: Portal Z (usar el SVG de zeniapartners.com)</li>
+      <li>Website: zeniapartners.com</li>
+      <li>Industria: Information Technology & Services</li>
+      <li>Tamano: 2-10 employees</li>
+      <li>Ubicacion: Madrid, Spain (HQ) + Lima, Peru</li>
+      <li>Primer post: algo tipo "Zenia Partners is live. We help SMBs automate sales and customer service with AI." + visual</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SECTION G: TIPS CONVERSION -->
+<!-- ============================================ -->
+<div class="section" id="tips">
+  <h2 class="section-title">G. Maximizar Conversion</h2>
+  <p class="section-sub">La diferencia entre 5% y 15% de cierre esta en estos detalles.</p>
+
+  <div class="tip">
+    <strong>Pre-outreach engagement (24-48h antes del Msg1):</strong> Visitar perfil, dar like a 2-3 posts, comentar algo inteligente en uno. Esto sube tasa de aceptacion de ~25% a ~40%.
+  </div>
+
+  <div class="tip">
+    <strong>Timing:</strong> Enviar Msg1 martes a jueves, 9-11 AM hora local del prospect. Nunca lunes (inbox lleno) ni viernes (modo weekend). Msg2 y Msg3 pueden ir cualquier dia.
+  </div>
+
+  <div class="tip">
+    <strong>Limite diario LinkedIn:</strong> 20-25 connection requests/dia. Mas que eso arriesgas restriccion de cuenta. Distribuir en 2-3 tandas durante el dia.
+  </div>
+
+  <div class="tip">
+    <strong>El diagnostico gratis es tu arma:</strong> Cuando alguien acepta el diagnostico, hazlo RAPIDO (24h). Calidad > cantidad. Un buen diagnostico cierra solo. Usa el call-prep agent para armarlo.
+  </div>
+
+  <div class="tip">
+    <strong>Social proof:</strong> En cuanto cierres MuscleShop o Glow, pide permiso para mencionarlos. "Estamos trabajando con un running club de 3,500+ corredores en Peru" vale mas que cualquier pitch.
+  </div>
+
+  <div class="tip">
+    <strong>Follow-up sin ser pesado:</strong> Si no responden Msg2 en 7 dias, enviar un ultimo bump: "Oye [nombre], se que estas liado. Solo queria saber si te resulto interesante lo que te comente. Si no es el momento, sin problema." Luego archivar.
+  </div>
+
+  <div class="tip">
+    <strong>LinkedIn content (1-2 posts/semana):</strong> Cada post es una oportunidad de que los prospects te vean activo y con autoridad. Temas: automatizacion para fitness/retail, datos sobre WhatsApp Business, casos de exito (anonimizados si no tienes permiso).
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div style="text-align: center; padding: 40px 0; color: var(--text-muted); font-size: 12px; border-top: 1px solid var(--border); margin-top: 40px;">
+  Zenia Partners | Master Outreach Plan | 16 Marzo 2026<br>
+  Target: 5-10 clientes para Junio 2026 | Total prospects: 38 (3 warm + 20 Espana + 15 Peru)
+</div>
+
+</div>
+
+<script>
+function copyMsg(btn) {
+  const text = btn.parentElement.querySelector('.msg-text').textContent.trim();
+  navigator.clipboard.writeText(text).then(() => {
+    btn.textContent = 'Copiado!';
+    btn.style.background = '#16a34a';
+    setTimeout(() => { btn.textContent = 'Copiar'; btn.style.background = ''; }, 2000);
+  });
+}
+</script>
+</body>
+</html>

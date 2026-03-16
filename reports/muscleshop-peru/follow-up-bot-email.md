@@ -31,9 +31,9 @@ Aparte de eso:
 
 Los agentes con IA como Cami resuelven el 93% de las consultas sin necesidad de intervención humana y generan un aumento promedio del 25% en conversión.
 
-Y repito: esto es solo una muestra de lo que el paquete completo puede hacer por MuscleShop. Pruébenla, jueguen con ella, intenten pillarla, y me cuentan qué les parece.
+Ojo: esta versión beta tiene un número limitado de interacciones para que la prueben. No es el producto final, es una muestra para que vean el nivel de lo que podemos armar. Necesito saber si les interesa para asignar los recursos de implementación completa, porque tenemos capacidad limitada este mes.
 
-Si les convence, coordinamos esta semana para arrancar la implementación completa en abril.
+Pruébenla, jueguen con ella, intenten pillarla, y me cuentan qué les parece. Si les convence, coordinamos esta semana para arrancar en abril.
 
 Abrazo,
 

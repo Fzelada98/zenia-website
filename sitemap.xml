@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Homepage -->
   <url>
     <loc>https://zeniapartners.com/</loc>
-    <lastmod>2026-03-16</lastmod>
+    <lastmod>2026-03-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://zeniapartners.com/"/>
@@ -12,21 +13,25 @@
   </url>
   <url>
     <loc>https://zeniapartners.com/?lang=es</loc>
-    <lastmod>2026-03-16</lastmod>
+    <lastmod>2026-03-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://zeniapartners.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://zeniapartners.com/?lang=es"/>
   </url>
+
+  <!-- Blog -->
   <url>
     <loc>https://zeniapartners.com/blog/</loc>
-    <lastmod>2026-03-16</lastmod>
+    <lastmod>2026-03-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Blog articles -->
   <url>
     <loc>https://zeniapartners.com/blog/ai-automation-small-business.html</loc>
-    <lastmod>2026-03-16</lastmod>
+    <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://zeniapartners.com/blog/ai-automation-small-business.html"/>
@@ -34,39 +39,41 @@
   </url>
   <url>
     <loc>https://zeniapartners.com/blog/ai-agents-business-operations.html</loc>
-    <lastmod>2026-03-16</lastmod>
+    <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://zeniapartners.com/blog/automatizacion-ia-pymes.html</loc>
-    <lastmod>2026-03-16</lastmod>
+    <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://zeniapartners.com/blog/automatizacion-ia-pymes.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://zeniapartners.com/blog/ai-automation-small-business.html"/>
   </url>
+
+  <!-- Service pages -->
   <url>
     <loc>https://zeniapartners.com/services/ai-agents.html</loc>
-    <lastmod>2026-03-16</lastmod>
+    <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://zeniapartners.com/services/crm-omnichannel.html</loc>
-    <lastmod>2026-03-16</lastmod>
+    <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://zeniapartners.com/services/custom-saas.html</loc>
-    <lastmod>2026-03-16</lastmod>
+    <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://zeniapartners.com/services/ai-retail-ecommerce.html</loc>
-    <lastmod>2026-03-16</lastmod>
+    <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

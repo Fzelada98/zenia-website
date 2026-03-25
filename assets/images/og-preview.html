@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1200px; height: 630px; overflow: hidden;
+    background: #0F172A; font-family: 'Inter', -apple-system, sans-serif;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    position: relative;
+  }
+  /* Background orbs */
+  .orb1 { position: absolute; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(37,99,235,0.10), transparent 70%); top: -200px; right: -100px; }
+  .orb2 { position: absolute; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(99,102,241,0.08), transparent 70%); bottom: -150px; left: -80px; }
+  .orb3 { position: absolute; width: 300px; height: 300px; border-radius: 50%; background: radial-gradient(circle, rgba(124,58,237,0.06), transparent 70%); top: 50%; left: 50%; transform: translate(-50%, -50%); }
+
+  .content {
+    display: flex; flex-direction: column; align-items: center; gap: 28px; z-index: 1;
+  }
+  .logo-wrap { margin-bottom: 8px; }
+  .title {
+    font-size: 96px; font-weight: 700; color: #F1F5F9;
+    letter-spacing: -4px; line-height: 1;
+  }
+  .subtitle {
+    font-size: 28px; font-weight: 500; color: #94A3B8;
+    letter-spacing: 1px;
+  }
+  .subtitle span {
+    color: #818CF8;
+  }
+  .url {
+    position: absolute; bottom: 28px;
+    font-size: 16px; color: #475569; font-weight: 500;
+    letter-spacing: 1px; z-index: 1;
+  }
+  .border-line {
+    position: absolute; bottom: 0; left: 0; right: 0; height: 4px;
+    background: linear-gradient(90deg, #2563EB, #3B82F6, #6366F1, #7C3AED);
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="orb1"></div>
+  <div class="orb2"></div>
+  <div class="orb3"></div>
+  <div class="content">
+    <div class="logo-wrap">
+      <svg width="120" height="120" viewBox="0 0 140 140" fill="none">
+        <defs>
+          <linearGradient id="og-b" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#2563EB"/>
+            <stop offset="100%" stop-color="#3B82F6"/>
+          </linearGradient>
+          <linearGradient id="og-v" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#6366F1"/>
+            <stop offset="100%" stop-color="#7C3AED"/>
+          </linearGradient>
+        </defs>
+        <rect width="140" height="140" rx="28" fill="#0F172A"/>
+        <path d="M 70 18 Q 18 18 18 38 L 18 57 Q 18 63 24 63 L 88 63 Z" fill="url(#og-b)"/>
+        <path d="M 70 122 Q 122 122 122 102 L 122 83 Q 122 77 116 77 L 52 77 Z" fill="url(#og-v)"/>
+      </svg>
+    </div>
+    <div class="title">ZENIA</div>
+    <div class="subtitle">CRM + <span>IA</span> + WhatsApp</div>
+  </div>
+  <div class="url">zeniapartners.com</div>
+  <div class="border-line"></div>
+</body>
+</html>

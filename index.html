@@ -9,6 +9,7 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', { analytics_storage: 'denied' });
   gtag('js', new Date());
   gtag('config', 'G-HP0VQSEL68');
 </script>
@@ -729,6 +730,37 @@
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script defer src="js/animation.js"></script>
 
+<!-- Cookie Consent Banner -->
+<div id="cookieBanner" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#111827;color:#f9fafb;padding:16px 24px;z-index:9999;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:13px;box-shadow:0 -2px 12px rgba(0,0,0,0.2);align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+  <p style="margin:0;flex:1;min-width:240px;line-height:1.5;">Usamos cookies para analítica (Google Analytics) y mejorar tu experiencia. No compartimos datos con terceros. <a href="/privacy" style="color:#818cf8;text-decoration:underline;">Política de privacidad</a></p>
+  <div style="display:flex;gap:8px;flex-shrink:0;">
+    <button onclick="acceptCookies()" style="background:#6366f1;color:white;border:none;padding:8px 20px;border-radius:6px;font-size:13px;font-weight:600;cursor:pointer;">Aceptar</button>
+    <button onclick="rejectCookies()" style="background:transparent;color:#9ca3af;border:1px solid #374151;padding:8px 16px;border-radius:6px;font-size:13px;cursor:pointer;">Rechazar</button>
+  </div>
+</div>
+<script>
+(function(){
+  var consent = localStorage.getItem('cookie_consent');
+  if (consent === null) {
+    document.getElementById('cookieBanner').style.display = 'flex';
+    // Disable GA4 until consent
+    window['ga-disable-G-HP0VQSEL68'] = true;
+  } else if (consent === 'rejected') {
+    window['ga-disable-G-HP0VQSEL68'] = true;
+  }
+})();
+function acceptCookies() {
+  localStorage.setItem('cookie_consent', 'accepted');
+  document.getElementById('cookieBanner').style.display = 'none';
+  window['ga-disable-G-HP0VQSEL68'] = false;
+  gtag('consent', 'update', { analytics_storage: 'granted' });
+}
+function rejectCookies() {
+  localStorage.setItem('cookie_consent', 'rejected');
+  document.getElementById('cookieBanner').style.display = 'none';
+  window['ga-disable-G-HP0VQSEL68'] = true;
+}
+</script>
 
 </body>
 </html>

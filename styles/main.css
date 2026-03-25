@@ -9,8 +9,8 @@
   --border: rgba(148, 163, 184, 0.08);
   --border-hover: rgba(59, 130, 246, 0.2);
   --text-primary: #F1F5F9;
-  --text-secondary: #B0C4DE;
-  --text-muted: #A8B8CC;
+  --text-secondary: #C0D0E0;
+  --text-muted: #B4C4D4;
   --glow-blue: rgba(59, 130, 246, 0.15);
   --glow-violet: rgba(99, 102, 241, 0.12);
   --radius-sm: 8px;
@@ -185,13 +185,13 @@ a { color: inherit; text-decoration: none; }
 .tailor-point { display: flex; gap: 16px; align-items: flex-start; }
 .tailor-point-icon { width: 40px; height: 40px; min-width: 40px; background: var(--glow-blue); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; }
 .tailor-point-icon svg { width: 20px; height: 20px; color: var(--primary); }
-.tailor-point h4 { font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; }
+.tailor-point h4, .tailor-point h3.h4-style { font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; }
 .tailor-point p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
 .tailor-visual { display: flex; flex-direction: column; gap: 16px; }
 .tailor-card { padding: 28px 32px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); backdrop-filter: blur(8px); transition: all 0.3s; }
 .tailor-card:hover { border-color: var(--border-hover); }
 .tailor-card-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: var(--primary); margin-bottom: 8px; }
-.tailor-card h4 { font-size: 17px; font-weight: 700; color: var(--text-primary); margin-bottom: 6px; }
+.tailor-card h4, .tailor-card h3.h4-style { font-size: 17px; font-weight: 700; color: var(--text-primary); margin-bottom: 6px; }
 .tailor-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
 .tailor-card--highlight { border-color: rgba(59, 130, 246, 0.2); background: linear-gradient(145deg, rgba(59, 130, 246, 0.06), rgba(99, 102, 241, 0.04)); }
 
@@ -253,7 +253,7 @@ a { color: inherit; text-decoration: none; }
 .impact-card { padding: 40px 32px; text-align: center; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); backdrop-filter: blur(8px); transition: all 0.3s; }
 .impact-card:hover { border-color: var(--border-hover); }
 .impact-number { font-size: clamp(2.5rem, 4vw, 3.5rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1; margin-bottom: 8px; }
-.impact-card h4 { font-size: 16px; font-weight: 600; color: var(--text-primary); margin-bottom: 8px; }
+.impact-card h4, .impact-card h3.h4-style { font-size: 16px; font-weight: 600; color: var(--text-primary); margin-bottom: 8px; }
 .impact-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
 
 /* Strategic Vision */
@@ -281,7 +281,7 @@ a { color: inherit; text-decoration: none; }
   border-radius: var(--radius-lg); text-align: center; transition: all 0.3s;
 }
 .vision-pillar:hover { border-color: var(--border-hover); }
-.vision-pillar h4 { font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 8px; }
+.vision-pillar h4, .vision-pillar h3.h4-style { font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 8px; }
 .vision-pillar p { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
 .vision-pillar-icon {
   width: 48px; height: 48px; margin: 0 auto 16px;

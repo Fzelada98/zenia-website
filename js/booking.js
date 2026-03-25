@@ -114,11 +114,7 @@ function submitBookingForm(e) {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(data)
-  }).then(function(r) {
-    console.log('Briefing generation triggered for:', data.company);
-  }).catch(function(err) {
-    console.warn('Webhook not reachable, data saved locally:', err.message);
-  });
+  }).then(function() {}).catch(function() {});
 
   showStep(3);
 }

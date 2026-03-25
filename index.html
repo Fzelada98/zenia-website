@@ -721,14 +721,24 @@
 <script src="js/main.js?v=4"></script>
 <script defer src="js/booking.js"></script>
 
-<!-- Three.js: defer both to unblock first paint, defer preserves order -->
 <!-- Mobile Sticky CTA -->
 <div class="mobile-sticky-cta" id="mobileCta">
   <a href="#" onclick="openCalendly(event)" class="btn btn-primary btn-arrow" data-i18n="hero.cta_primary">Book a Free Strategy Call</a>
 </div>
 
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script defer src="js/animation.js"></script>
+<!-- Three.js: only load on desktop (skip on mobile to fix PageSpeed score) -->
+<script>
+if (window.innerWidth > 768) {
+  var s1 = document.createElement('script');
+  s1.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
+  s1.onload = function() {
+    var s2 = document.createElement('script');
+    s2.src = 'js/animation.js';
+    document.body.appendChild(s2);
+  };
+  document.body.appendChild(s1);
+}
+</script>
 
 <!-- Cookie Consent Banner -->
 <div id="cookieBanner" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#111827;color:#f9fafb;padding:16px 24px;z-index:9999;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:13px;box-shadow:0 -2px 12px rgba(0,0,0,0.2);align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">

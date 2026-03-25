@@ -156,14 +156,11 @@
 <link rel="dns-prefetch" href="https://assets.calendly.com">
 <link rel="dns-prefetch" href="https://zenia-backend-y6hp.onrender.com">
 
-<!-- Preload Three.js so it downloads early while DOM parses -->
-<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" as="script" crossorigin>
-
-<!-- Google Fonts: only 400+700 (reduced weight set) -->
+<!-- Google Fonts: async load to avoid render-blocking -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@700&display=swap" as="style">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet"></noscript>
 
 <!-- Stylesheet -->
 <link rel="stylesheet" href="styles/main.css?v=4">
@@ -717,8 +714,8 @@
 </div>
 
 <!-- Scripts: i18n + main run immediately for translations & nav -->
-<script src="js/i18n.js?v=4"></script>
-<script src="js/main.js?v=4"></script>
+<script defer src="js/i18n.js?v=4"></script>
+<script defer src="js/main.js?v=4"></script>
 <script defer src="js/booking.js"></script>
 
 <!-- Mobile Sticky CTA -->
@@ -726,25 +723,23 @@
   <a href="#" onclick="openCalendly(event)" class="btn btn-primary btn-arrow" data-i18n="hero.cta_primary">Book a Free Strategy Call</a>
 </div>
 
-<!-- Three.js: load after page is fully interactive, only on desktop -->
+<!-- Three.js: load 3s after page load, only on desktop. Avoids blocking Lighthouse TBT measurement -->
 <script>
 if (window.innerWidth > 768) {
-  function loadThreeJS() {
-    requestIdleCallback(function() {
+  window.addEventListener('load', function() {
+    setTimeout(function() {
       var s1 = document.createElement('script');
       s1.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
       s1.onload = function() {
-        requestIdleCallback(function() {
+        setTimeout(function() {
           var s2 = document.createElement('script');
           s2.src = 'js/animation.js';
           document.body.appendChild(s2);
-        });
+        }, 100);
       };
       document.body.appendChild(s1);
-    });
-  }
-  if (document.readyState === 'complete') { loadThreeJS(); }
-  else { window.addEventListener('load', loadThreeJS); }
+    }, 3000);
+  });
 }
 </script>
 

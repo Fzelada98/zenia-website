@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Throwin' Salt - Ghost Listing Engine</title>
+<meta name="robots" content="noindex, nofollow">
+<script>
+(function(){
+  var exp = new Date('2026-04-03T23:59:59Z');
+  if(new Date() > exp){
+    document.documentElement.innerHTML = '<body style="background:#0a0a0a;color:#999;font-family:Inter,sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;text-align:center"><div><h1 style="color:#d4b88c;font-size:28px;margin-bottom:12px">Demo Expired</h1><p>This demo link has expired. Contact Fabrizzio at fabrizzio.zelada@zeniapartners.com for access.</p></div></body>';
+  }
+})();
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #0a0a0a;
+  --bg-card: #141414;
+  --bg-elevated: #1a1a1a;
+  --bg-hover: #1f1f1f;
+  --accent: #d4b88c;
+  --accent-dim: #b8996e;
+  --accent-subtle: rgba(212,184,140,0.1);
+  --accent-border: rgba(212,184,140,0.25);
+  --green: #6aad7e;
+  --green-bg: rgba(106,173,126,0.12);
+  --blue: #7a9ec8;
+  --blue-bg: rgba(122,158,200,0.12);
+  --red: #d06a6a;
+  --purple: #ab9ed4;
+  --purple-bg: rgba(171,158,212,0.12);
+  --text: #e8e8e8;
+  --text-secondary: #999;
+  --text-muted: #666;
+  --border: #252525;
+  --sidebar-w: 250px;
+}
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  position: fixed; top: 0; left: 0; bottom: 0;
+  width: var(--sidebar-w);
+  background: #0d0d0d;
+  border-right: 1px solid var(--border);
+  display: flex; flex-direction: column;
+  z-index: 100;
+}
+
+.sidebar-brand {
+  padding: 24px 20px;
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; gap: 14px;
+}
+.brand-logo {
+  width: 44px; height: 44px; border-radius: 10px;
+  object-fit: cover; flex-shrink: 0;
+}
+.sidebar-brand h1 {
+  font-size: 16px; font-weight: 700; color: var(--text);
+  letter-spacing: -0.3px; line-height: 1.2;
+}
+.sidebar-brand .subtitle {
+  font-size: 10px; color: var(--text-muted);
+  letter-spacing: 2.5px; text-transform: uppercase;
+  margin-top: 3px;
+}
+
+.sidebar-nav { flex: 1; padding: 16px 10px; display: flex; flex-direction: column; gap: 2px; }
+
+.nav-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 11px 14px; border-radius: 8px;
+  color: var(--text-secondary); cursor: pointer;
+  font-size: 13px; font-weight: 500;
+  transition: all 0.15s;
+  border: none; background: none; width: 100%; text-align: left;
+}
+.nav-item:hover { background: var(--bg-card); color: var(--text); }
+.nav-item.active { background: var(--accent-subtle); color: var(--accent); }
+.nav-item .nav-icon { width: 18px; height: 18px; flex-shrink: 0; }
+.nav-item .badge {
+  margin-left: auto; background: var(--accent-subtle);
+  color: var(--accent); font-size: 10px; font-weight: 700;
+  padding: 2px 7px; border-radius: 4px; letter-spacing: 0.3px;
+}
+
+.sidebar-footer {
+  padding: 16px 20px; border-top: 1px solid var(--border);
+  display: flex; flex-direction: column; gap: 12px;
+}
+.sidebar-footer .user-info {
+  display: flex; align-items: center; gap: 10px;
+}
+.sidebar-footer .avatar {
+  width: 30px; height: 30px; border-radius: 6px;
+  background: var(--bg-elevated);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 700; color: var(--accent);
+  border: 1px solid var(--border);
+}
+.sidebar-footer .user-name { font-size: 12px; font-weight: 600; }
+.sidebar-footer .user-role { font-size: 10px; color: var(--text-muted); }
+.sidebar-footer .powered-by {
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+  font-size: 9px; color: var(--text-muted);
+  letter-spacing: 1.5px; text-transform: uppercase;
+  padding-top: 8px; border-top: 1px solid var(--border);
+}
+.sidebar-footer .zenia-mark { width: 18px; height: 18px; border-radius: 4px; }
+.sidebar-footer .zenia-text { font-weight: 700; color: var(--text-secondary); font-size: 10px; letter-spacing: 1px; }
+
+/* ===== MAIN ===== */
+.main { margin-left: var(--sidebar-w); padding: 32px; min-height: 100vh; }
+
+.page { display: none; }
+.page.active { display: block; }
+
+.page-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 28px;
+}
+.page-header h2 {
+  font-size: 20px; font-weight: 700; display: flex; align-items: center; gap: 10px;
+  letter-spacing: -0.3px;
+}
+.page-header .header-icon { width: 20px; height: 20px; color: var(--accent); }
+.page-header .header-sub { color: var(--text-muted); font-size: 12px; letter-spacing: 0.3px; }
+
+/* ===== STATS ===== */
+.stats-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 12px; margin-bottom: 24px;
+}
+.stat-card {
+  background: var(--bg-card); border-radius: 10px;
+  padding: 20px; border: 1px solid var(--border);
+}
+.stat-card .stat-label { font-size: 11px; color: var(--text-muted); font-weight: 500; text-transform: uppercase; letter-spacing: 0.8px; }
+.stat-card .stat-value { font-size: 28px; font-weight: 800; letter-spacing: -1px; margin: 8px 0 4px; color: #f0f0f0; }
+.stat-card .stat-change {
+  font-size: 11px; font-weight: 500; color: var(--green);
+}
+
+/* ===== CHART ===== */
+.chart-section {
+  display: grid; grid-template-columns: 2fr 1fr; gap: 12px; margin-bottom: 24px;
+}
+.chart-card, .activity-card {
+  background: var(--bg-card); border-radius: 10px;
+  padding: 20px; border: 1px solid var(--border);
+}
+.card-title {
+  font-size: 13px; font-weight: 600; margin-bottom: 16px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.card-title .period { font-size: 11px; color: var(--text-muted); font-weight: 400; }
+
+/* Period Tabs */
+.period-tabs {
+  display: flex; gap: 2px; background: var(--bg); border-radius: 6px; padding: 2px;
+  border: 1px solid var(--border);
+}
+.period-tab {
+  padding: 5px 12px; border-radius: 4px; border: none; background: transparent;
+  color: var(--text-muted); font-size: 11px; font-weight: 600; font-family: inherit;
+  cursor: pointer; transition: all 0.15s; letter-spacing: 0.3px;
+}
+.period-tab:hover { color: var(--text-secondary); }
+.period-tab.active { background: var(--accent-subtle); color: var(--accent); }
+
+.chart-bars {
+  display: flex; align-items: flex-end; gap: 6px; height: 160px;
+}
+.chart-bar-group { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.chart-bar {
+  width: 100%; border-radius: 3px 3px 0 0;
+  background: linear-gradient(to top, #8B6914, #d4b88c, #e8d5b0);
+  opacity: 0.9;
+  box-shadow: 0 0 8px rgba(212,184,140,0.25);
+  min-height: 3px; transition: all 0.3s;
+  position: relative;
+}
+.chart-bar:hover { opacity: 1; box-shadow: 0 0 14px rgba(212,184,140,0.45); }
+.chart-bar .bar-tooltip {
+  display: none; position: absolute; top: -28px; left: 50%;
+  transform: translateX(-50%); background: var(--bg-elevated);
+  color: var(--text); font-size: 10px; font-weight: 600;
+  padding: 3px 8px; border-radius: 4px; white-space: nowrap;
+  border: 1px solid var(--border);
+}
+.chart-bar:hover .bar-tooltip { display: block; }
+.chart-label { font-size: 10px; color: var(--text-muted); }
+
+/* Activity */
+.activity-list { display: flex; flex-direction: column; gap: 0; max-height: 200px; overflow-y: auto; }
+.activity-item {
+  display: flex; align-items: flex-start; gap: 10px;
+  padding: 8px 0; border-bottom: 1px solid rgba(34,34,34,0.6);
+  font-size: 12px;
+}
+.activity-item:last-child { border-bottom: none; }
+.activity-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  margin-top: 5px; flex-shrink: 0;
+}
+.activity-dot.publish { background: var(--green); }
+.activity-dot.inquiry { background: var(--accent); }
+.activity-dot.sale { background: var(--blue); }
+.activity-text { flex: 1; line-height: 1.5; color: var(--text-secondary); }
+.activity-text .highlight { color: var(--text); font-weight: 600; }
+.activity-time { font-size: 10px; color: var(--text-muted); white-space: nowrap; margin-top: 2px; }
+
+/* Platforms */
+.platform-row {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 12px; margin-bottom: 24px;
+}
+.platform-card {
+  background: var(--bg-card); border-radius: 10px;
+  padding: 16px 20px; border: 1px solid var(--border);
+  display: flex; align-items: center; gap: 14px;
+}
+.platform-icon-wrap {
+  width: 40px; height: 40px; border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.platform-icon-wrap svg { width: 20px; height: 20px; }
+.platform-icon-wrap.ebay { background: var(--blue-bg); color: var(--blue); }
+.platform-icon-wrap.instagram { background: var(--purple-bg); color: var(--purple); }
+.platform-icon-wrap.whatsapp { background: rgba(90,154,110,0.1); color: var(--green); }
+.platform-name { font-size: 13px; font-weight: 600; }
+.platform-status { font-size: 11px; display: flex; align-items: center; gap: 5px; margin-top: 2px; }
+.status-dot { width: 6px; height: 6px; border-radius: 50%; }
+.status-dot.connected { background: var(--green); }
+.platform-stat { font-size: 18px; font-weight: 700; margin-left: auto; color: var(--text); }
+
+/* ===== CATALOG ===== */
+.catalog-controls {
+  display: flex; gap: 12px; margin-bottom: 20px;
+}
+.search-box { flex: 1; position: relative; }
+.search-box input {
+  width: 100%; padding: 10px 14px 10px 40px;
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 8px; color: var(--text); font-size: 13px;
+  font-family: inherit; outline: none; transition: border-color 0.2s;
+}
+.search-box input:focus { border-color: var(--accent-dim); }
+.search-box input::placeholder { color: var(--text-muted); }
+.search-box .search-icon {
+  position: absolute; left: 12px; top: 50%;
+  transform: translateY(-50%); color: var(--text-muted);
+  width: 16px; height: 16px;
+}
+
+.filter-select {
+  padding: 10px 36px 10px 14px; background: var(--bg-card);
+  border: 1px solid var(--border); border-radius: 8px;
+  color: var(--text); font-size: 13px; font-family: inherit;
+  cursor: pointer; outline: none; min-width: 160px;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='%23555' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 12px center;
+}
+.filter-select:focus { border-color: var(--accent-dim); }
+
+.catalog-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 12px;
+}
+.watch-card {
+  background: var(--bg-card); border-radius: 10px;
+  border: 1px solid var(--border); overflow: hidden;
+  transition: border-color 0.2s;
+  display: flex; flex-direction: column;
+}
+.watch-card:hover { border-color: var(--accent-border); }
+.watch-image {
+  height: 200px; display: flex; align-items: center;
+  justify-content: center; position: relative; overflow: hidden;
+  background: #111;
+}
+.watch-image img {
+  max-height: 180px; max-width: 85%; object-fit: contain;
+  mix-blend-mode: multiply;
+  filter: brightness(1.05);
+}
+.watch-image { background: #e8e8e8; }
+.modal-watch-preview { background: #e8e8e8 !important; }
+.queue-table .watch-thumb { background: #e8e8e8 !important; }
+.inquiry-watch .iw-thumb { background: #e8e8e8 !important; }
+.watch-body {
+  padding: 16px; display: flex; flex-direction: column; flex: 1;
+}
+.watch-brand {
+  font-size: 10px; text-transform: uppercase; letter-spacing: 2px;
+  color: var(--accent); font-weight: 600; margin-bottom: 4px;
+}
+.watch-model { font-size: 14px; font-weight: 600; margin-bottom: 2px; line-height: 1.3; }
+.watch-ref { font-size: 11px; color: var(--text-muted); margin-bottom: 12px; letter-spacing: 0.3px; }
+.watch-price { font-size: 18px; font-weight: 700; margin-bottom: 14px; margin-top: auto; }
+.watch-price .currency { font-size: 13px; font-weight: 500; color: var(--text-secondary); }
+.btn-generate {
+  width: 100%; padding: 9px; border: 1px solid var(--border); border-radius: 6px;
+  background: transparent;
+  color: var(--text-secondary); font-weight: 600; font-size: 12px;
+  cursor: pointer; font-family: inherit;
+  transition: all 0.2s; letter-spacing: 0.3px;
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+}
+.btn-generate:hover {
+  border-color: var(--accent-border); color: var(--accent);
+  background: var(--accent-subtle);
+}
+.btn-generate svg { width: 13px; height: 13px; }
+
+/* Placeholder for watches without photos */
+.watch-placeholder {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 6px; width: 100%; height: 100%;
+}
+.ph-brand {
+  font-size: 9px; text-transform: uppercase; letter-spacing: 3px;
+  color: rgba(255,255,255,0.15); font-weight: 600;
+}
+.ph-model {
+  font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.08);
+  text-align: center; line-height: 1.3;
+}
+
+/* ===== MODAL ===== */
+.modal-overlay {
+  display: none; position: fixed; inset: 0; z-index: 1000;
+  background: rgba(0,0,0,0.8); backdrop-filter: blur(8px);
+  align-items: center; justify-content: center; padding: 20px;
+}
+.modal-overlay.show { display: flex; }
+.modal {
+  background: var(--bg-card); border-radius: 14px;
+  border: 1px solid var(--border); width: 100%; max-width: 780px;
+  max-height: 90vh; overflow-y: auto;
+}
+.modal-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 24px; border-bottom: 1px solid var(--border);
+}
+.modal-header h3 { font-size: 16px; font-weight: 700; }
+.modal-close {
+  background: none; border: none; color: var(--text-muted);
+  cursor: pointer; padding: 4px;
+  width: 28px; height: 28px; display: flex; align-items: center; justify-content: center;
+  border-radius: 6px; transition: all 0.15s;
+}
+.modal-close:hover { color: var(--text); background: var(--bg-hover); }
+.modal-body { padding: 24px; }
+
+.modal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.modal-watch-preview {
+  border-radius: 10px; height: 220px;
+  display: flex; align-items: center; justify-content: center;
+  background: #111; overflow: hidden;
+}
+.modal-watch-preview img {
+  max-height: 200px; max-width: 90%; object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+.specs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.spec-item { padding: 6px 0; }
+.spec-label { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 2px; }
+.spec-value { font-size: 13px; font-weight: 600; }
+
+.ai-description {
+  margin-top: 20px; padding: 16px;
+  background: var(--bg); border-radius: 8px;
+  border: 1px solid var(--border);
+}
+.ai-description .ai-label {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 10px; color: var(--accent); font-weight: 600;
+  text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px;
+}
+.ai-description .ai-label svg { width: 14px; height: 14px; }
+.ai-description .ai-text {
+  font-size: 13px; line-height: 1.7; color: var(--text-secondary);
+  min-height: 60px;
+}
+.ai-description .ai-text .cursor {
+  display: inline-block; width: 2px; height: 14px;
+  background: var(--accent); animation: blink 0.8s infinite; vertical-align: middle;
+  margin-left: 2px;
+}
+@keyframes blink { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
+
+.modal-platforms { display: flex; gap: 10px; margin-top: 18px; }
+.platform-toggle {
+  display: flex; align-items: center; gap: 8px;
+  padding: 8px 14px; background: var(--bg);
+  border-radius: 6px; border: 1px solid var(--border);
+  cursor: pointer; transition: all 0.2s; font-size: 12px;
+  font-weight: 500; color: var(--text-secondary);
+}
+.platform-toggle.active { border-color: var(--green); color: var(--green); background: var(--green-bg); }
+.platform-toggle .check-mark { width: 14px; height: 14px; border-radius: 3px; border: 1.5px solid currentColor; display: flex; align-items: center; justify-content: center; }
+.platform-toggle.active .check-mark { background: var(--green); border-color: var(--green); }
+.platform-toggle.active .check-mark::after { content: ''; display: block; width: 4px; height: 6px; border: solid var(--bg); border-width: 0 1.5px 1.5px 0; transform: rotate(45deg) translate(-1px, -1px); }
+
+.pricing-section {
+  margin-top: 18px; padding: 14px 16px;
+  background: var(--bg); border-radius: 8px;
+  border: 1px solid var(--border);
+  display: flex; align-items: center; gap: 16px;
+}
+.pricing-section .price-label { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
+.pricing-section .price-range { font-size: 18px; font-weight: 700; color: var(--text); }
+.pricing-section .best-offer {
+  margin-left: auto; font-size: 11px; background: var(--green-bg);
+  color: var(--green); padding: 5px 10px; border-radius: 4px; font-weight: 600;
+}
+
+.btn-publish {
+  width: 100%; padding: 14px; border: none; border-radius: 8px;
+  background: var(--accent);
+  color: #0a0a0a; font-weight: 700; font-size: 14px;
+  cursor: pointer; font-family: inherit; margin-top: 20px;
+  letter-spacing: 0.3px; transition: all 0.2s;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+}
+.btn-publish:hover { background: var(--accent-dim); }
+.btn-publish:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.publish-success { display: none; text-align: center; padding: 40px 20px; }
+.publish-success.show { display: block; }
+.publish-success .checkmark-circle {
+  width: 64px; height: 64px; border-radius: 50%;
+  background: var(--green-bg); border: 2px solid var(--green);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 18px;
+  animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.publish-success .checkmark-circle svg { width: 28px; height: 28px; color: var(--green); }
+@keyframes popIn { 0% { transform: scale(0); } 100% { transform: scale(1); } }
+.publish-success h3 { font-size: 20px; font-weight: 700; margin-bottom: 8px; color: var(--green); }
+.publish-success p { color: var(--text-secondary); font-size: 13px; }
+
+/* ===== QUEUE ===== */
+.queue-table {
+  width: 100%; border-collapse: separate; border-spacing: 0;
+  background: var(--bg-card); border-radius: 10px;
+  border: 1px solid var(--border); overflow: hidden;
+}
+.queue-table th {
+  text-align: left; padding: 12px 16px;
+  font-size: 10px; text-transform: uppercase;
+  letter-spacing: 1px; color: var(--text-muted);
+  font-weight: 600; background: rgba(0,0,0,0.3);
+  border-bottom: 1px solid var(--border);
+}
+.queue-table td {
+  padding: 12px 16px; font-size: 13px;
+  border-bottom: 1px solid rgba(34,34,34,0.5);
+}
+.queue-table tr:last-child td { border-bottom: none; }
+.queue-table tr:hover td { background: rgba(196,168,124,0.02); }
+.queue-table .watch-cell { display: flex; align-items: center; gap: 10px; }
+.queue-table .watch-thumb {
+  width: 40px; height: 40px; border-radius: 6px;
+  background: #111;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden; flex-shrink: 0;
+}
+.queue-table .watch-thumb img { width: 36px; height: 36px; object-fit: contain; mix-blend-mode: multiply; }
+.queue-table .watch-name { font-weight: 600; font-size: 13px; }
+.queue-table .watch-brand-sm { font-size: 10px; color: var(--text-muted); }
+
+.status-badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 3px 10px; border-radius: 4px;
+  font-size: 11px; font-weight: 600;
+}
+.status-badge::before {
+  content: ''; width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0;
+}
+.status-badge.published { background: var(--green-bg); color: var(--green); }
+.status-badge.published::before { background: var(--green); }
+.status-badge.pending { background: var(--accent-subtle); color: var(--accent); }
+.status-badge.pending::before { background: var(--accent); }
+.status-badge.scheduled { background: var(--blue-bg); color: var(--blue); }
+.status-badge.scheduled::before { background: var(--blue); }
+
+.inquiry-link {
+  color: var(--accent); font-weight: 600; font-size: 12px;
+  text-decoration: none; cursor: pointer;
+}
+.inquiry-link:hover { text-decoration: underline; }
+
+/* ===== WHATSAPP HUB ===== */
+.whatsapp-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 12px;
+}
+.inquiry-card {
+  background: var(--bg-card); border-radius: 10px;
+  border: 1px solid var(--border); padding: 18px;
+  transition: border-color 0.2s;
+  display: flex; flex-direction: column;
+}
+.inquiry-card:hover { border-color: rgba(90,154,110,0.3); }
+.inquiry-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.inquiry-avatar {
+  width: 36px; height: 36px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 13px; color: var(--bg);
+}
+.inquiry-name { font-weight: 600; font-size: 14px; }
+.inquiry-time { font-size: 10px; color: var(--text-muted); }
+.inquiry-watch {
+  display: flex; align-items: center; gap: 8px;
+  padding: 10px; background: var(--bg); border-radius: 6px;
+  margin-bottom: 10px; font-size: 13px;
+}
+.inquiry-watch .iw-thumb {
+  width: 30px; height: 30px; border-radius: 4px;
+  background: #111;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden; flex-shrink: 0;
+}
+.inquiry-watch .iw-thumb img { width: 26px; height: 26px; object-fit: contain; mix-blend-mode: multiply; }
+.inquiry-watch .iw-name { font-weight: 600; flex: 1; }
+.inquiry-source {
+  font-size: 10px; padding: 2px 7px; border-radius: 3px;
+  font-weight: 600; letter-spacing: 0.3px;
+}
+.inquiry-source.ebay { background: var(--blue-bg); color: var(--blue); }
+.inquiry-source.ig { background: var(--purple-bg); color: var(--purple); }
+.inquiry-message {
+  font-size: 12px; color: var(--text-secondary); line-height: 1.5;
+  margin-bottom: 12px; font-style: italic;
+  flex: 1;
+}
+.btn-whatsapp {
+  width: 100%; padding: 9px; border: none; border-radius: 6px;
+  background: #25D366; color: white; font-weight: 700;
+  font-size: 12px; cursor: pointer; font-family: inherit;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  transition: all 0.15s;
+}
+.btn-whatsapp:hover { background: #1fb855; }
+.btn-whatsapp svg { width: 14px; height: 14px; }
+
+/* Loader */
+.loader {
+  display: inline-block; width: 18px; height: 18px;
+  border: 2px solid rgba(10,10,10,0.2);
+  border-top-color: var(--bg);
+  border-radius: 50%; animation: spin 0.7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #222; border-radius: 3px; }
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .chart-section { grid-template-columns: 1fr; }
+}
+@media (max-width: 800px) {
+  .sidebar { display: none; }
+  .main { margin-left: 0; }
+  .stats-grid { grid-template-columns: 1fr; }
+  .modal-grid { grid-template-columns: 1fr; }
+  .platform-row { grid-template-columns: 1fr; }
+}
+
+.fade-in { animation: fadeIn 0.3s ease; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+</style>
+</head>
+<body>
+
+<!-- SVG DEFS -->
+<svg style="display:none">
+  <defs>
+    <symbol id="i-dash" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
+    </symbol>
+    <symbol id="i-catalog" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="9"/><polyline points="12 6 12 12 16 14"/>
+    </symbol>
+    <symbol id="i-queue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/>
+    </symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+    </symbol>
+    <symbol id="i-settings" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+    </symbol>
+    <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+    </symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="20 6 9 17 4 12"/>
+    </symbol>
+    <symbol id="i-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+    </symbol>
+    <symbol id="i-sparkles" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8z"/>
+    </symbol>
+    <symbol id="i-arrow-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>
+    </symbol>
+    <symbol id="i-shop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+    </symbol>
+    <symbol id="i-camera" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/>
+    </symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/>
+    </symbol>
+    <symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>
+    </symbol>
+    <symbol id="i-check-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+    </symbol>
+    <symbol id="i-msg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+    </symbol>
+    <symbol id="i-dollar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="sidebar-brand">
+    <img class="brand-logo" src="data:image/png;base64,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" alt="Throwin' Salt Co." />
+    <div>
+      <h1>Throwin' Salt</h1>
+      <div class="subtitle">Ghost Listing Engine</div>
+    </div>
+  </div>
+  <nav class="sidebar-nav">
+    <button class="nav-item active" onclick="showPage('dashboard', this)">
+      <svg class="nav-icon"><use href="#i-dash"/></svg> Dashboard
+    </button>
+    <button class="nav-item" onclick="showPage('catalog', this)">
+      <svg class="nav-icon"><use href="#i-catalog"/></svg> Catalog Browser
+      <span class="badge">15K+</span>
+    </button>
+    <button class="nav-item" onclick="showPage('queue', this)">
+      <svg class="nav-icon"><use href="#i-queue"/></svg> Publishing Queue
+    </button>
+    <button class="nav-item" onclick="showPage('whatsapp', this)">
+      <svg class="nav-icon"><use href="#i-wa"/></svg> WhatsApp Hub
+      <span class="badge">8</span>
+    </button>
+    <div style="flex:1"></div>
+    <button class="nav-item" style="opacity:0.4;cursor:default;">
+      <svg class="nav-icon"><use href="#i-settings"/></svg> Settings
+    </button>
+  </nav>
+  <div class="sidebar-footer">
+    <div class="user-info">
+      <img src="data:image/png;base64,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" alt="TS" style="width:30px;height:30px;border-radius:6px;object-fit:cover;flex-shrink:0;" />
+      <div>
+        <div class="user-name">Throwin' Salt LLC</div>
+        <div class="user-role">Pro Plan</div>
+      </div>
+    </div>
+    <div class="powered-by">
+      Powered by
+      <svg class="zenia-mark" viewBox="0 0 140 140" fill="none">
+        <defs>
+          <linearGradient id="zg-b" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2563EB"/><stop offset="100%" stop-color="#3B82F6"/></linearGradient>
+          <linearGradient id="zg-v" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6366F1"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient>
+        </defs>
+        <rect width="140" height="140" rx="28" fill="#0F172A"/>
+        <path d="M 70 18 Q 18 18 18 38 L 18 57 Q 18 63 24 63 L 88 63 Z" fill="url(#zg-b)"/>
+        <path d="M 70 122 Q 122 122 122 102 L 122 83 Q 122 77 116 77 L 52 77 Z" fill="url(#zg-v)"/>
+      </svg>
+      <span class="zenia-text">ZENIA</span>
+    </div>
+  </div>
+</aside>
+
+<!-- MAIN -->
+<div class="main">
+
+  <!-- DASHBOARD -->
+  <div id="page-dashboard" class="page active fade-in">
+    <div class="page-header">
+      <h2><svg class="header-icon"><use href="#i-dash"/></svg> Dashboard</h2>
+      <span class="header-sub" id="headerDate"></span>
+    </div>
+
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
+      <span style="font-size:13px;font-weight:600;color:var(--text-secondary);">Overview</span>
+      <div class="period-tabs" id="statsTabs">
+        <button class="period-tab active" onclick="setPeriod('month',this)">Month</button>
+        <button class="period-tab" onclick="setPeriod('semester',this)">Semester</button>
+        <button class="period-tab" onclick="setPeriod('year',this)">Year</button>
+        <button class="period-tab" onclick="setPeriod('all',this)">All</button>
+      </div>
+    </div>
+
+    <div class="stats-grid" id="statsGrid"></div>
+
+    <div class="chart-section">
+      <div class="chart-card">
+        <div class="card-title">
+          Ghost Listings Published
+          <span class="period" id="chartPeriodLabel">Last 90 days</span>
+        </div>
+        <div class="chart-bars" id="chartBars"></div>
+      </div>
+      <div class="activity-card">
+        <div class="card-title">Recent Activity</div>
+        <div class="activity-list" id="activityFeed"></div>
+      </div>
+    </div>
+
+    <div class="platform-row">
+      <div class="platform-card">
+        <div class="platform-icon-wrap ebay">
+          <svg viewBox="0 0 300 120" style="width:36px;height:16px;">
+            <text x="0" y="95" font-family="Arial,sans-serif" font-weight="bold" font-size="110">
+              <tspan fill="#E53238">e</tspan><tspan fill="#0064D2">b</tspan><tspan fill="#F5AF02">a</tspan><tspan fill="#86B817">y</tspan>
+            </text>
+          </svg>
+        </div>
+        <div>
+          <div class="platform-name">eBay</div>
+          <div class="platform-status"><span class="status-dot connected"></span><span style="color:var(--green);font-size:11px;">Connected</span></div>
+        </div>
+        <div class="platform-stat">2,412</div>
+      </div>
+      <div class="platform-card">
+        <div class="platform-icon-wrap instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;">
+            <rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
+          </svg>
+        </div>
+        <div>
+          <div class="platform-name">Instagram</div>
+          <div class="platform-status"><span class="status-dot connected"></span><span style="color:var(--green);font-size:11px;">Connected</span></div>
+        </div>
+        <div class="platform-stat">435</div>
+      </div>
+      <div class="platform-card">
+        <div class="platform-icon-wrap whatsapp">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width:22px;height:22px;">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+        </div>
+        <div>
+          <div class="platform-name">WhatsApp Business</div>
+          <div class="platform-status"><span class="status-dot connected"></span><span style="color:var(--green);font-size:11px;">Connected</span></div>
+        </div>
+        <div class="platform-stat">34</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CATALOG -->
+  <div id="page-catalog" class="page">
+    <div class="page-header">
+      <h2><svg class="header-icon"><use href="#i-catalog"/></svg> Catalog Browser</h2>
+      <span class="header-sub">15,247 references from 200+ brands</span>
+    </div>
+    <div class="catalog-controls">
+      <div class="search-box">
+        <svg class="search-icon"><use href="#i-search"/></svg>
+        <input type="text" id="searchInput" placeholder="Search by model, reference, or brand..." oninput="filterCatalog()">
+      </div>
+      <select class="filter-select" id="brandFilter" onchange="filterCatalog()">
+        <option value="">All Brands</option>
+        <option>Rolex</option><option>Patek Philippe</option><option>Audemars Piguet</option>
+        <option>Vacheron Constantin</option><option>Omega</option><option>Cartier</option>
+        <option>Tudor</option><option>IWC</option><option>Breitling</option>
+        <option>Panerai</option><option>Hublot</option><option>Richard Mille</option>
+        <option>Jaeger-LeCoultre</option><option>Grand Seiko</option><option>Zenith</option>
+      </select>
+    </div>
+    <div class="catalog-grid" id="catalogGrid"></div>
+  </div>
+
+  <!-- QUEUE -->
+  <div id="page-queue" class="page">
+    <div class="page-header">
+      <h2><svg class="header-icon"><use href="#i-queue"/></svg> Publishing Queue</h2>
+      <span class="header-sub">Last 30 days</span>
+    </div>
+    <table class="queue-table">
+      <thead><tr><th>Watch</th><th>Platform</th><th>Status</th><th>Published</th><th>Price</th><th>Inquiries</th></tr></thead>
+      <tbody id="queueBody"></tbody>
+    </table>
+  </div>
+
+  <!-- WHATSAPP HUB -->
+  <div id="page-whatsapp" class="page">
+    <div class="page-header">
+      <h2><svg class="header-icon"><use href="#i-wa"/></svg> WhatsApp Hub</h2>
+      <span class="header-sub">8 active inquiries</span>
+    </div>
+    <div class="whatsapp-grid" id="whatsappGrid"></div>
+  </div>
+
+</div>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 id="modalTitle">Generate Ghost Listing</h3>
+      <button class="modal-close" onclick="closeModal()">
+        <svg style="width:16px;height:16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<script>
+// ===== WATCH DATA =====
+// Using curated images with transparent/dark backgrounds only
+const watches = [
+  { brand:"Rolex", model:"Submariner Date", ref:"126610LN", price:9100, movement:"Cal. 3235 Automatic", case_size:"41mm", material:"Oystersteel", water:"300m", img:"https://cdn.watchbase.com/watch/lg/rolex/submariner/126610ln-0001-78.jpg", desc:"The definitive dive watch. Rolex Submariner Date ref. 126610LN with updated 41mm Oystersteel case and Cerachrom bezel in black ceramic. COSC-certified Calibre 3235 with 70-hour power reserve. Oyster bracelet with Glidelock clasp. Unworn, full set with box, papers, and warranty card dated 2024. Best Offer welcome." },
+  { brand:"Rolex", model:"Cosmograph Daytona", ref:"116500LN", price:15400, movement:"Cal. 4130 Automatic", case_size:"40mm", material:"Oystersteel", water:"100m", img:"https://cdn.watchbase.com/watch/lg/rolex/daytona/116500ln-0001-51.png", desc:"The king of chronographs. Rolex Cosmograph Daytona ref. 116500LN with white dial and black Cerachrom bezel. Calibre 4130 with 72-hour power reserve. Oystersteel on Oyster bracelet. Brand new, complete set. The most coveted sports watch in the world." },
+  { brand:"Rolex", model:"GMT-Master II 'Batman'", ref:"126710BLNR", price:11100, movement:"Cal. 3285 Automatic", case_size:"40mm", material:"Oystersteel", water:"100m", img:"https://cdn.watchbase.com/watch/lg/rolex/gmt-master/126710blnr-0002-61.png", desc:"The iconic 'Batman' GMT-Master II. Blue and black Cerachrom bezel. Calibre 3285 with 70-hour power reserve and independent hour hand. Jubilee bracelet. Full set, unworn." },
+  { brand:"Patek Philippe", model:"Nautilus", ref:"5711/1A-010", price:35000, movement:"Cal. 26-330 S C", case_size:"40mm", material:"Stainless Steel", water:"120m", img:"patek-nautilus.png", desc:"The grail watch. Patek Philippe Nautilus ref. 5711/1A with iconic blue sunburst dial. Discontinued and more desirable than ever. Ultra-thin Calibre 26-330 S C automatic. Gerald Genta design. Complete with Extract from the Archives." },
+  { brand:"Patek Philippe", model:"Aquanaut", ref:"5167A-001", price:22000, movement:"Cal. 324 S C", case_size:"40mm", material:"Stainless Steel", water:"120m", img:"patek-aquanaut.jpg", desc:"Modern elegance meets sportiness. Patek Philippe Aquanaut ref. 5167A with embossed black dial and composite strap. Self-winding Calibre 324 S C with date. 40mm stainless steel case. Full set." },
+  { brand:"Audemars Piguet", model:"Royal Oak 'Jumbo'", ref:"15500ST.OO.1220ST.01", price:24000, movement:"Cal. 4302", case_size:"41mm", material:"Stainless Steel", water:"50m", img:"ap-royal-oak.png", desc:"Royal Oak ref. 15500ST with blue 'Grande Tapisserie' dial. 41mm case with iconic octagonal bezel. In-house Calibre 4302 with 70-hour power reserve. Full box and papers." },
+  { brand:"Audemars Piguet", model:"Royal Oak Offshore Chrono", ref:"26470ST.OO.A101CR.01", price:28000, movement:"Cal. 3126/3840", case_size:"42mm", material:"Stainless Steel", water:"100m", img:"ap-offshore.png", desc:"AP Royal Oak Offshore Chronograph ref. 26470ST with black dial. 42mm case with column-wheel chronograph. Self-winding Calibre 3126/3840. 50-hour power reserve. Complete set." },
+  { brand:"Vacheron Constantin", model:"Overseas", ref:"4500V/110A-B483", price:25000, movement:"Cal. 5100", case_size:"41mm", material:"Stainless Steel", water:"150m", img:"vc-overseas.jpg", desc:"Vacheron Constantin Overseas ref. 4500V with blue dial. 41mm steel case with Maltese cross bezel. Self-winding Calibre 5100. Comes with three interchangeable straps. Geneva Hallmark certified. Full set." },
+  { brand:"Omega", model:"Speedmaster Moonwatch", ref:"310.30.42.50.01.001", price:6900, movement:"Cal. 3861 Manual", case_size:"42mm", material:"Stainless Steel", water:"50m", img:"https://cdn.watchbase.com/watch/lg/omega/speedmaster/310-30-42-50-01-001-a2.jpg", desc:"First watch on the Moon. Omega Speedmaster Professional with Co-Axial Master Chronometer Calibre 3861. Hesalite crystal, black step dial. 42mm on bracelet. METAS-certified. Full set with Moonwatch box." },
+  { brand:"Omega", model:"Seamaster Diver 300M", ref:"210.30.42.20.01.001", price:5500, movement:"Cal. 8800 Automatic", case_size:"42mm", material:"Stainless Steel", water:"300m", img:"https://cdn.watchbase.com/watch/lg/omega/seamaster-diver-300m/210-30-42-20-01-001-c9.png", desc:"James Bond's watch of choice. Seamaster 300M with black ceramic dial and laser-engraved wave pattern. Co-Axial Master Chronometer Calibre 8800. 55-hour power reserve. Helium escape valve. Full kit." },
+  { brand:"Tudor", model:"Black Bay Fifty-Eight", ref:"79030N-0001", price:3800, movement:"Cal. MT5402 Auto", case_size:"39mm", material:"Stainless Steel", water:"200m", img:"https://cdn.watchbase.com/watch/lg/tudor/heritage/79030n-0001-53.png", desc:"Tudor's runaway hit. Black Bay Fifty-Eight ref. 79030N in 39mm with matte black dial and gold accents. COSC-certified Manufacture Calibre MT5402. 70-hour power reserve. Best value in luxury dive watches. Full set." },
+  { brand:"IWC", model:"Portugieser Chronograph", ref:"IW371605", price:8950, movement:"Cal. 69355 Auto", case_size:"41mm", material:"Stainless Steel", water:"30m", img:"https://cdn.watchbase.com/watch/lg/iwc/portugieser/iw3716-05-79.jpg", desc:"Timeless elegance from Schaffhausen. IWC Portugieser Chronograph with blue dial and silver subdials. In-house Calibre 69355. Column-wheel chronograph with 46-hour power reserve. Alligator strap. Full set." },
+  { brand:"Breitling", model:"Navitimer B01 Chronograph", ref:"AB0127211B1P1", price:9200, movement:"Cal. B01 Automatic", case_size:"43mm", material:"Stainless Steel", water:"30m", img:"https://cdn.watchbase.com/watch/lg/breitling/navitimer/ab012721-bg78-760p-6e.png", desc:"The pilot's chronograph legend. Breitling Navitimer B01 with black dial and slide rule bezel. In-house Calibre B01 with 70-hour power reserve. COSC certification. 43mm on leather. Full kit." },
+  { brand:"Panerai", model:"Luminor Marina", ref:"PAM01312", price:8100, movement:"Cal. P.9010 Auto", case_size:"44mm", material:"Stainless Steel", water:"300m", img:"https://cdn.watchbase.com/watch/lg/panerai/luminor-1950/pam01312-fe.png", desc:"Italian design, Swiss engineering. Luminor Marina ref. PAM01312 with blue dial, sandwich construction, and crown-protecting bridge. 44mm with 3-day power reserve. Full set with extra rubber strap." },
+  { brand:"Hublot", model:"Big Bang Steel Ceramic", ref:"301.SB.131.RX", price:13500, movement:"HUB4100 Automatic", case_size:"44mm", material:"Steel/Ceramic", water:"100m", img:"https://cdn.watchbase.com/watch/lg/hublot/big-bang/301-sb-131-rx-ea.png", desc:"The Art of Fusion. Hublot Big Bang ref. 301.SB with carbon fiber dial. 44mm steel case with black ceramic bezel. HUB4100 chronograph. Natural rubber and alligator strap. Complete box and papers." },
+  { brand:"Jaeger-LeCoultre", model:"Reverso Classic Large", ref:"Q3858520", price:7500, movement:"Cal. 822/2 Manual", case_size:"45.6x27.4mm", material:"Stainless Steel", water:"30m", img:"https://cdn.watchbase.com/watch/lg/jaeger-lecoultre/reverso/3858520-7f.png", desc:"Art Deco perfection. JLC Reverso Classic Large with silvered dial and blued hands. Iconic swiveling case. Hand-wound Calibre 822/2 with 45-hour power reserve. Casa Fagliano leather strap. Complete kit." },
+  { brand:"Zenith", model:"Chronomaster Sport", ref:"03.3100.3600", price:9600, movement:"El Primero 3600", case_size:"41mm", material:"Stainless Steel", water:"100m", img:"https://cdn.watchbase.com/watch/lg/zenith/el-primero/03-3100-3600-69-m3100-46.jpg", desc:"The world's first automatic chronograph, evolved. El Primero 3600 at 36,000 VpH for 1/10th second precision. 41mm steel with ceramic bezel. Tri-color subdials. 60-hour power reserve. Full set." }
+];
+
+const queueData = [
+  { watch:"Rolex Submariner 126610LN", brand:"Rolex", platform:"eBay", status:"published", date:"Mar 25, 2:14 PM", price:"$9,400", inquiries:3 },
+  { watch:"Patek Nautilus 5711/1A", brand:"Patek Philippe", platform:"eBay + IG", status:"published", date:"Mar 25, 1:58 PM", price:"$36,500", inquiries:7 },
+  { watch:"AP Royal Oak 15500ST", brand:"Audemars Piguet", platform:"eBay", status:"published", date:"Mar 25, 1:42 PM", price:"$25,200", inquiries:4 },
+  { watch:"Omega Speedmaster 310.30", brand:"Omega", platform:"Instagram", status:"published", date:"Mar 25, 1:30 PM", price:"$7,200", inquiries:2 },
+  { watch:"Rolex Daytona 116500LN", brand:"Rolex", platform:"eBay + IG", status:"published", date:"Mar 25, 12:55 PM", price:"$16,800", inquiries:11 },
+  { watch:"Tudor Black Bay 58", brand:"Tudor", platform:"eBay", status:"published", date:"Mar 25, 12:30 PM", price:"$3,950", inquiries:1 },
+  { watch:"JLC Reverso Q3858520", brand:"Jaeger-LeCoultre", platform:"eBay", status:"published", date:"Mar 25, 11:45 AM", price:"$7,900", inquiries:2 },
+  { watch:"Hublot Big Bang 301.SB", brand:"Hublot", platform:"eBay + IG", status:"published", date:"Mar 25, 11:20 AM", price:"$14,200", inquiries:1 },
+  { watch:"IWC Portugieser IW371605", brand:"IWC", platform:"eBay", status:"published", date:"Mar 25, 10:50 AM", price:"$9,400", inquiries:0 },
+  { watch:"Breitling Navitimer AB0127", brand:"Breitling", platform:"Instagram", status:"scheduled", date:"Mar 25, 4:00 PM", price:"$9,600", inquiries:0 },
+  { watch:"Zenith Chronomaster Sport", brand:"Zenith", platform:"eBay + IG", status:"published", date:"Mar 24, 6:30 PM", price:"$10,100", inquiries:3 },
+  { watch:"Hublot Big Bang 301.SB", brand:"Hublot", platform:"eBay", status:"published", date:"Mar 24, 5:15 PM", price:"$14,200", inquiries:1 },
+  { watch:"Vacheron Overseas 4500V", brand:"Vacheron Constantin", platform:"eBay + IG", status:"published", date:"Mar 24, 3:45 PM", price:"$26,500", inquiries:3 },
+  { watch:"Panerai Luminor PAM01312", brand:"Panerai", platform:"eBay", status:"pending", date:"Mar 25, 3:30 PM", price:"$8,500", inquiries:0 },
+  { watch:"Zenith Chronomaster Sport", brand:"Zenith", platform:"Instagram", status:"scheduled", date:"Mar 25, 5:00 PM", price:"$10,100", inquiries:0 },
+];
+
+const inquiries = [
+  { name:"Marcus R.", initials:"MR", color:"#d4b88c", watch:"Rolex Daytona 116500LN", watchIdx:1, source:"ebay", time:"12 min ago", msg:"Hi, is this still available? I can do a wire transfer today if the price is right. Located in Miami." },
+  { name:"James Liu", initials:"JL", color:"#7a9ec8", watch:"Patek Philippe Nautilus 5711/1A", watchIdx:3, source:"ebay", time:"28 min ago", msg:"Interested in the Nautilus. Can you send additional photos of the caseback and warranty card? Willing to pay asking price." },
+  { name:"David K.", initials:"DK", color:"#6aad7e", watch:"Hublot Big Bang 301.SB", watchIdx:14, source:"ig", time:"1 hr ago", msg:"Saw this on your IG. Is this the steel/ceramic version? What year?" },
+  { name:"Sarah Chen", initials:"SC", color:"#ab9ed4", watch:"JLC Reverso Q3858520", watchIdx:15, source:"ebay", time:"2 hrs ago", msg:"Looking for this as a gift. Can you ship internationally to Singapore? What's your best price?" },
+  { name:"Mike Torres", initials:"MT", color:"#d06a6a", watch:"AP Royal Oak 15500ST", watchIdx:5, source:"ebay", time:"2 hrs ago", msg:"I have a Submariner to trade + cash. Would you consider a partial trade deal?" },
+  { name:"Alex Petrov", initials:"AP", color:"#6a9aad", watch:"Rolex GMT-Master II 126710BLNR", watchIdx:2, source:"ig", time:"3 hrs ago", msg:"Beautiful Batman! Is this the jubilee bracelet version? Do you have the full set with stickers?" },
+  { name:"Tom Williams", initials:"TW", color:"#c4a87c", watch:"Omega Speedmaster 310.30", watchIdx:8, source:"ebay", time:"4 hrs ago", msg:"Great price on the Moonwatch. Is this the hesalite or sapphire version? Ready to buy." },
+  { name:"Rachel Adams", initials:"RA", color:"#ab8ec4", watch:"Vacheron Constantin Overseas 4500V", watchIdx:7, source:"ig", time:"5 hrs ago", msg:"Stunning piece! Does it come with all three straps? I'm very interested." },
+];
+
+// ===== HELPERS =====
+function getWatchImageHTML(w, size) {
+  const h = size === 'lg' ? 200 : size === 'sm' ? 28 : 170;
+  if (w.img) {
+    return `<img src="${w.img}" alt="${w.brand} ${w.model}" style="max-height:${h}px;max-width:85%;object-fit:contain;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" /><div class="watch-placeholder" style="display:none;"><div class="ph-brand">${w.brand}</div><div class="ph-model">${w.model}</div></div>`;
+  }
+  return `<div class="watch-placeholder"><div class="ph-brand">${w.brand}</div><div class="ph-model">${w.model}</div></div>`;
+}
+
+function getWatchThumbHTML(w) {
+  if (w && w.img) {
+    return `<img src="${w.img}" alt="${w.brand}" style="width:36px;height:36px;object-fit:contain;mix-blend-mode:multiply;" onerror="this.replaceWith(document.createTextNode('${w.brand.substring(0,2).toUpperCase()}'))" />`;
+  }
+  const label = w ? w.brand.substring(0,2).toUpperCase() : '??';
+  return `<span style="font-size:9px;font-weight:700;color:var(--text-muted);letter-spacing:0.5px;">${label}</span>`;
+}
+
+function findWatchByName(name) {
+  const n = name.toLowerCase();
+  return watches.find(w => n.includes(w.ref.toLowerCase()))
+    || watches.find(w => n.includes(w.ref.split('.')[0].toLowerCase()))
+    || watches.find(w => n.includes(w.model.split(' ')[0].toLowerCase()) && n.includes(w.brand.split(' ')[0].toLowerCase()))
+    || watches.find(w => n.includes(w.brand.toLowerCase()));
+}
+
+// ===== RENDER =====
+function showPage(page, btn) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  const el = document.getElementById('page-' + page);
+  el.classList.add('active');
+  el.classList.add('fade-in');
+  if (btn) btn.classList.add('active');
+}
+
+// ===== DASHBOARD DATA BY PERIOD =====
+const dashData = {
+  month: {
+    listings: '847', listingsChange: '+124 this month',
+    published: '67', publishedChange: '+14% vs yesterday',
+    inquiries: '34', inquiriesChange: '+8 new today',
+    sales: '$48.2K', salesChange: '+22% vs Feb',
+    chartLabel: 'March 2026',
+    labels: ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25'],
+    values: [18,22,25,28,24,31,35,32,29,38,41,36,40,45,48,44,52,55,50,58,62,68,71,64,67],
+  },
+  semester: {
+    listings: '4,215', listingsChange: '+3,368 vs H2 2025',
+    published: '4,215', publishedChange: 'H1 2026 total',
+    inquiries: '687', inquiriesChange: '+245 vs H2 2025',
+    sales: '$298.4K', salesChange: '+87% vs H2 2025',
+    chartLabel: 'H1 2026 (Jan - Jun)',
+    labels: ['Jan','Feb','Mar','Apr','May','Jun'],
+    values: [380,520,847,720,880,868],
+  },
+  year: {
+    listings: '6,340', listingsChange: '+4,972 vs 2025',
+    published: '6,340', publishedChange: '2026 total',
+    inquiries: '1,245', inquiriesChange: '+890 vs 2025',
+    sales: '$584.2K', salesChange: '+196% vs 2025',
+    chartLabel: '2026',
+    labels: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+    values: [380,520,847,720,880,868,920,985,1040,1100,1180,1240],
+  },
+  all: {
+    listings: '7,708', listingsChange: 'Since launch',
+    published: '7,708', publishedChange: 'Lifetime total',
+    inquiries: '1,600', inquiriesChange: 'Lifetime total',
+    sales: '$712.8K', salesChange: 'Lifetime revenue',
+    chartLabel: 'All Time',
+    labels: ['2025','2026'],
+    values: [1368,6340],
+  }
+};
+
+let currentPeriod = 'month';
+let publishedIndexes = new Set();
+
+function setPeriod(period, btn) {
+  currentPeriod = period;
+  document.querySelectorAll('#statsTabs .period-tab').forEach(t => t.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  renderStats();
+  renderChart();
+}
+
+function renderStats() {
+  const d = dashData[currentPeriod];
+  document.getElementById('statsGrid').innerHTML = `
+    <div class="stat-card">
+      <div class="stat-label">Total Listings Active</div>
+      <div class="stat-value" style="color:var(--accent);">${d.listings}</div>
+      <span class="stat-change">${d.listingsChange}</span>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Published</div>
+      <div class="stat-value">${d.published}</div>
+      <span class="stat-change">${d.publishedChange}</span>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">WhatsApp Inquiries</div>
+      <div class="stat-value">${d.inquiries}</div>
+      <span class="stat-change">${d.inquiriesChange}</span>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Sales Revenue</div>
+      <div class="stat-value" style="color:var(--green);">${d.sales}</div>
+      <span class="stat-change">${d.salesChange}</span>
+    </div>
+  `;
+}
+
+function renderChart() {
+  const d = dashData[currentPeriod];
+  document.getElementById('chartPeriodLabel').textContent = d.chartLabel;
+  const maxVal = Math.max(...d.values);
+  document.getElementById('chartBars').innerHTML = d.labels.map((label, i) => `
+    <div class="chart-bar-group">
+      <div class="chart-bar" style="height:${Math.max(4, (d.values[i]/maxVal)*140)}px">
+        <div class="bar-tooltip">${d.values[i].toLocaleString()} listings</div>
+      </div>
+      <div class="chart-label">${label}</div>
+    </div>
+  `).join('');
+}
+
+function renderDashboard() {
+  const now = new Date();
+  document.getElementById('headerDate').textContent = now.toLocaleDateString('en-US', { weekday:'long', year:'numeric', month:'long', day:'numeric' });
+
+  renderStats();
+  renderChart();
+
+  const activities = [
+    { type:'publish', text:'<span class="highlight">Rolex Submariner 126610LN</span> published to eBay', time:'2 min ago' },
+    { type:'inquiry', text:'New inquiry for <span class="highlight">Patek Nautilus 5711/1A</span>', time:'28 min ago' },
+    { type:'publish', text:'<span class="highlight">AP Royal Oak 15500ST</span> published to eBay + IG', time:'35 min ago' },
+    { type:'inquiry', text:'New inquiry for <span class="highlight">Rolex Daytona 116500LN</span>', time:'42 min ago' },
+    { type:'sale', text:'<span class="highlight">$16,800</span> sale closed via WhatsApp', time:'1 hr ago' },
+    { type:'publish', text:'<span class="highlight">15 listings</span> bulk-published to eBay', time:'2 hrs ago' },
+    { type:'inquiry', text:'3 new inquiries for <span class="highlight">Hublot Big Bang</span>', time:'3 hrs ago' },
+    { type:'sale', text:'<span class="highlight">$26,500</span> Vacheron Overseas sold', time:'4 hrs ago' },
+  ];
+  document.getElementById('activityFeed').innerHTML = activities.map(a => `
+    <div class="activity-item">
+      <div class="activity-dot ${a.type}"></div>
+      <div><div class="activity-text">${a.text}</div><div class="activity-time">${a.time}</div></div>
+    </div>
+  `).join('');
+}
+
+function renderCatalog() {
+  document.getElementById('catalogGrid').innerHTML = watches.map((w, i) => {
+    if (publishedIndexes.has(i)) return '';
+    return `<div class="watch-card" data-brand="${w.brand}" data-model="${w.model}" data-ref="${w.ref}">
+      <div class="watch-image">
+        ${getWatchImageHTML(w, 'md')}
+      </div>
+      <div class="watch-body">
+        <div class="watch-brand">${w.brand}</div>
+        <div class="watch-model">${w.model}</div>
+        <div class="watch-ref">Ref. ${w.ref}</div>
+        <div class="watch-price"><span class="currency">$</span>${w.price.toLocaleString()}</div>
+        <button class="btn-generate" onclick="openGenerator(${i})">
+          <svg style="width:13px;height:13px;"><use href="#i-zap"/></svg>
+          Generate Listing
+        </button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function filterCatalog() {
+  const search = document.getElementById('searchInput').value.toLowerCase();
+  const brand = document.getElementById('brandFilter').value;
+  document.querySelectorAll('.watch-card').forEach(card => {
+    const b = card.dataset.brand;
+    const m = card.dataset.model.toLowerCase();
+    const r = card.dataset.ref.toLowerCase();
+    card.style.display = (!search || b.toLowerCase().includes(search) || m.includes(search) || r.includes(search)) && (!brand || b === brand) ? '' : 'none';
+  });
+}
+
+function renderQueue() {
+  document.getElementById('queueBody').innerHTML = queueData.map(q => {
+    const w = findWatchByName(q.watch);
+    return `<tr>
+      <td><div class="watch-cell"><div class="watch-thumb">${getWatchThumbHTML(w)}</div><div><div class="watch-name">${q.watch}</div><div class="watch-brand-sm">${q.brand}</div></div></div></td>
+      <td style="color:var(--text-secondary);font-size:12px;">${q.platform}</td>
+      <td><span class="status-badge ${q.status}">${q.status === 'published' ? 'Published' : q.status === 'pending' ? 'Pending' : 'Scheduled'}</span></td>
+      <td style="color:var(--text-muted);font-size:12px;">${q.date}</td>
+      <td style="font-weight:600;">${q.price}</td>
+      <td>${q.inquiries > 0 ? '<a class="inquiry-link" onclick="showPage(\'whatsapp\', document.querySelectorAll(\'.nav-item\')[3])">' + q.inquiries + (q.inquiries>1?' inquiries':' inquiry') + '</a>' : '<span style="color:var(--text-muted);">-</span>'}</td>
+    </tr>`;
+  }).join('');
+}
+
+function renderWhatsApp() {
+  document.getElementById('whatsappGrid').innerHTML = inquiries.map(inq => {
+    const w = watches[inq.watchIdx] || null;
+    return `<div class="inquiry-card">
+      <div class="inquiry-header">
+        <div class="inquiry-avatar" style="background:${inq.color};">${inq.initials}</div>
+        <div style="flex:1;"><div class="inquiry-name">${inq.name}</div><div class="inquiry-time">${inq.time}</div></div>
+      </div>
+      <div class="inquiry-watch">
+        <div class="iw-thumb">${getWatchThumbHTML(w)}</div>
+        <span class="iw-name">${inq.watch}</span>
+        <span class="inquiry-source ${inq.source}">${inq.source === 'ebay' ? 'eBay' : 'Instagram'}</span>
+      </div>
+      <div class="inquiry-message">"${inq.msg}"</div>
+      <button class="btn-whatsapp" onclick="window.open('https://wa.me/1XXXXXXXXXX?text=${encodeURIComponent("Hi " + inq.name.split(" ")[0] + ", thanks for your interest in the " + inq.watch + "! ")}', '_blank')">
+        <svg><use href="#i-send"/></svg> Open in WhatsApp
+      </button>
+    </div>`;
+  }).join('');
+}
+
+// ===== MODAL =====
+function openGenerator(idx) {
+  const w = watches[idx];
+  const markup = w.price * 1.05;
+  const markupHigh = w.price * 1.15;
+  const body = document.getElementById('modalBody');
+  document.getElementById('modalTitle').textContent = 'Generate Ghost Listing';
+
+  body.innerHTML = `
+    <div id="generatorContent">
+      <div class="modal-grid">
+        <div>
+          <div class="modal-watch-preview">${getWatchImageHTML(w, 'lg')}</div>
+          <div style="margin-top:14px;">
+            <div style="font-size:10px;color:var(--accent);text-transform:uppercase;letter-spacing:2px;font-weight:600;">${w.brand}</div>
+            <div style="font-size:20px;font-weight:700;margin:4px 0;">${w.model}</div>
+            <div style="font-size:12px;color:var(--text-muted);">Ref. ${w.ref}</div>
+          </div>
+        </div>
+        <div>
+          <div style="font-size:11px;font-weight:600;margin-bottom:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;">Specifications</div>
+          <div class="specs-grid">
+            <div class="spec-item"><div class="spec-label">Movement</div><div class="spec-value">${w.movement}</div></div>
+            <div class="spec-item"><div class="spec-label">Case Size</div><div class="spec-value">${w.case_size}</div></div>
+            <div class="spec-item"><div class="spec-label">Material</div><div class="spec-value">${w.material}</div></div>
+            <div class="spec-item"><div class="spec-label">Water Res.</div><div class="spec-value">${w.water}</div></div>
+            <div class="spec-item"><div class="spec-label">Retail Price</div><div class="spec-value">$${w.price.toLocaleString()}</div></div>
+            <div class="spec-item"><div class="spec-label">Condition</div><div class="spec-value">Unworn / Full Set</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="ai-description">
+        <div class="ai-label"><svg style="width:14px;height:14px;"><use href="#i-sparkles"/></svg> AI-Generated Listing</div>
+        <div class="ai-text" id="aiText"><span class="cursor"></span></div>
+      </div>
+      <div class="modal-platforms">
+        <div class="platform-toggle active" onclick="this.classList.toggle('active')"><span class="check-mark"></span> eBay (Best Offer)</div>
+        <div class="platform-toggle active" onclick="this.classList.toggle('active')"><span class="check-mark"></span> Instagram (Auto-Post)</div>
+        <div class="platform-toggle active" onclick="this.classList.toggle('active')"><span class="check-mark"></span> WhatsApp Catalog</div>
+      </div>
+      <div style="margin-top:14px;display:flex;align-items:center;gap:12px;">
+        <div style="display:flex;align-items:center;gap:8px;">
+          <label style="font-size:11px;color:var(--text-muted);font-weight:600;letter-spacing:0.5px;text-transform:uppercase;">Timing</label>
+          <select id="publishTiming" onchange="toggleSchedule()" style="padding:7px 12px;background:var(--bg);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:12px;font-family:inherit;cursor:pointer;outline:none;">
+            <option value="now">Publish Now</option>
+            <option value="scheduled">Schedule</option>
+          </select>
+        </div>
+        <div id="scheduleFields" style="display:none;align-items:center;gap:8px;">
+          <input type="date" id="schedDate" style="padding:7px 10px;background:var(--bg);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:12px;font-family:inherit;outline:none;color-scheme:dark;" />
+          <input type="time" id="schedTime" value="14:00" style="padding:7px 10px;background:var(--bg);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:12px;font-family:inherit;outline:none;color-scheme:dark;" />
+        </div>
+      </div>
+      <div class="pricing-section">
+        <div><div class="price-label">Suggested Price Range</div><div class="price-range">$${Math.round(markup).toLocaleString()} - $${Math.round(markupHigh).toLocaleString()}</div></div>
+        <div class="best-offer">Best Offer Enabled</div>
+      </div>
+      <button class="btn-publish" id="btnPublish" onclick="publishListing(${idx})">
+        <svg style="width:16px;height:16px;"><use href="#i-send"/></svg> Publish Ghost Listing
+      </button>
+    </div>
+    <div class="publish-success" id="publishSuccess">
+      <div class="checkmark-circle"><svg><use href="#i-check"/></svg></div>
+      <h3>Ghost Listing Published</h3>
+      <p style="margin-bottom:6px;">${w.brand} ${w.model} (Ref. ${w.ref})</p>
+      <p>Published to eBay + Instagram. Buyer inquiries redirect to WhatsApp.</p>
+      <div style="margin-top:16px;display:flex;gap:10px;justify-content:center;">
+        <span class="status-badge published" style="font-size:12px;padding:6px 12px;">eBay: Live</span>
+        <span class="status-badge published" style="font-size:12px;padding:6px 12px;background:var(--purple-bg);color:var(--purple);">IG: Queued</span>
+        <span class="status-badge published" style="font-size:12px;padding:6px 12px;background:rgba(37,211,102,0.12);color:#25D366;">WA: Synced</span>
+      </div>
+      <button class="btn-publish" style="max-width:260px;margin:20px auto 0;" onclick="closeModal()">
+        <svg style="width:14px;height:14px;"><use href="#i-arrow-left"/></svg> Back to Dashboard
+      </button>
+    </div>
+  `;
+
+  document.getElementById('modalOverlay').classList.add('show');
+  typeText(w.desc, document.getElementById('aiText'));
+}
+
+function typeText(text, el) {
+  let i = 0;
+  el.innerHTML = '<span class="cursor"></span>';
+  const interval = setInterval(() => {
+    if (i < text.length) {
+      el.innerHTML = text.substring(0, i + 1) + '<span class="cursor"></span>';
+      i++;
+    } else {
+      el.innerHTML = text;
+      clearInterval(interval);
+    }
+  }, 12);
+}
+
+function toggleSchedule() {
+  const v = document.getElementById('publishTiming').value;
+  const fields = document.getElementById('scheduleFields');
+  fields.style.display = v === 'scheduled' ? 'flex' : 'none';
+  if (v === 'scheduled') {
+    const tomorrow = new Date(); tomorrow.setDate(tomorrow.getDate()+1);
+    document.getElementById('schedDate').value = tomorrow.toISOString().split('T')[0];
+  }
+  document.getElementById('btnPublish').innerHTML = v === 'scheduled'
+    ? '<svg style="width:16px;height:16px;"><use href="#i-send"/></svg> Schedule Ghost Listing'
+    : '<svg style="width:16px;height:16px;"><use href="#i-send"/></svg> Publish Ghost Listing';
+}
+
+function publishListing(idx) {
+  const btn = document.getElementById('btnPublish');
+  const isScheduled = document.getElementById('publishTiming').value === 'scheduled';
+  btn.disabled = true;
+  btn.innerHTML = isScheduled ? '<span class="loader"></span> Scheduling...' : '<span class="loader"></span> Publishing...';
+  setTimeout(() => {
+    document.getElementById('generatorContent').style.display = 'none';
+    const successEl = document.getElementById('publishSuccess');
+    if (isScheduled) {
+      const d = document.getElementById('schedDate').value;
+      const t = document.getElementById('schedTime').value;
+      successEl.querySelector('h3').textContent = 'Ghost Listing Scheduled';
+      successEl.querySelector('h3').style.color = 'var(--blue)';
+      successEl.querySelector('.checkmark-circle').style.borderColor = 'var(--blue)';
+      successEl.querySelector('.checkmark-circle').style.background = 'var(--blue-bg)';
+      successEl.querySelector('.checkmark-circle svg').style.color = 'var(--blue)';
+      const dateStr = new Date(d+'T'+t).toLocaleString('en-US',{month:'short',day:'numeric',hour:'numeric',minute:'2-digit'});
+      successEl.querySelectorAll('p')[1].textContent = 'Scheduled for '+dateStr+'. Buyer inquiries redirect to WhatsApp.';
+    }
+    successEl.classList.add('show');
+
+    // Remove from catalog
+    publishedIndexes.add(idx);
+    renderCatalog();
+
+    // Update dashboard stats dynamically
+    const w = watches[idx];
+    const d = dashData.month;
+    const prevListings = parseInt(d.listings.replace(/,/g,''));
+    const prevPublished = parseInt(d.published.replace(/,/g,''));
+    d.listings = (prevListings + 1).toLocaleString();
+    d.published = (prevPublished + 1).toLocaleString();
+    d.values[d.values.length-1] += 1;
+    // Also update other periods
+    ['semester','year','all'].forEach(p => {
+      const dd = dashData[p];
+      const pl = parseInt(dd.listings.replace(/,/g,''));
+      const pp = parseInt(dd.published.replace(/,/g,''));
+      dd.listings = (pl + 1).toLocaleString();
+      dd.published = (pp + 1).toLocaleString();
+      dd.values[dd.values.length-1] += 1;
+    });
+    // Add to queue
+    const status = isScheduled ? 'scheduled' : 'published';
+    const now = new Date();
+    const timeStr = now.toLocaleString('en-US',{month:'short',day:'numeric',hour:'numeric',minute:'2-digit'});
+    queueData.unshift({
+      watch: w.brand+' '+w.model+' '+w.ref, brand: w.brand,
+      platform: 'eBay + IG + WA', status: status,
+      date: isScheduled ? document.getElementById('schedDate').value+' '+document.getElementById('schedTime').value : timeStr,
+      price: '$'+Math.round(w.price*1.08).toLocaleString(), inquiries: 0
+    });
+    // Add activity
+    const actFeed = document.getElementById('activityFeed');
+    if (actFeed) {
+      const newAct = document.createElement('div');
+      newAct.className = 'activity-item';
+      newAct.innerHTML = '<div class="activity-dot publish"></div><div><div class="activity-text"><span class="highlight">'+w.brand+' '+w.model+'</span> '+(isScheduled?'scheduled':'published')+' to eBay + IG + WA</div><div class="activity-time">Just now</div></div>';
+      actFeed.insertBefore(newAct, actFeed.firstChild);
+    }
+    // Re-render stats and queue
+    renderStats();
+    renderChart();
+    renderQueue();
+  }, 2000);
+}
+
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('show');
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+// INIT
+renderDashboard();
+renderCatalog();
+renderQueue();
+renderWhatsApp();
+</script>
+</body>
+</html>

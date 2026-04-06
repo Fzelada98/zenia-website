@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <!-- Homepage -->
+  <!-- Homepage EN -->
   <url>
     <loc>https://zeniapartners.com/</loc>
-    <lastmod>2026-03-20</lastmod>
+    <lastmod>2026-04-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://zeniapartners.com/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://zeniapartners.com/es/crm-gimnasios.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zeniapartners.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zeniapartners.com/"/>
+  </url>
+  <!-- Homepage ES -->
+  <url>
+    <loc>https://zeniapartners.com/es/</loc>
+    <lastmod>2026-04-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zeniapartners.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zeniapartners.com/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://zeniapartners.com/"/>
   </url>
   <!-- Spanish vertical landing pages -->
@@ -53,15 +63,57 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://zeniapartners.com/services/crm-omnichannel.html"/>
   </url>
 
+  <!-- About -->
+  <url>
+    <loc>https://zeniapartners.com/about.html</loc>
+    <lastmod>2026-04-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Case Studies -->
+  <url>
+    <loc>https://zeniapartners.com/cases/ecommerce-usa.html</loc>
+    <lastmod>2026-04-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zeniapartners.com/cases/personal-brand-content.html</loc>
+    <lastmod>2026-04-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- Blog -->
   <url>
     <loc>https://zeniapartners.com/blog/</loc>
-    <lastmod>2026-03-20</lastmod>
+    <lastmod>2026-04-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Blog articles -->
+  <!-- Blog articles (April 2026) -->
+  <url>
+    <loc>https://zeniapartners.com/blog/automatizacion-whatsapp-negocios.html</loc>
+    <lastmod>2026-04-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zeniapartners.com/blog/crm-gimnasios-fitness.html</loc>
+    <lastmod>2026-04-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zeniapartners.com/blog/agente-ia-ventas-ecommerce.html</loc>
+    <lastmod>2026-04-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog articles (March 2026) -->
   <url>
     <loc>https://zeniapartners.com/blog/ai-automation-small-business.html</loc>
     <lastmod>2026-03-20</lastmod>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <!-- Star icon -->
+  <g fill="#ffffff" transform="translate(100, 14)">
+    <polygon points="0,-8 1.8,-2.5 8,-2.5 3.1,1 4.9,7 0,3.5 -4.9,7 -3.1,1 -8,-2.5 -1.8,-2.5"/>
+  </g>
+  <!-- ZENITH text -->
+  <text x="100" y="46" fill="#ffffff" font-family="'Times New Roman', 'Georgia', serif" font-size="22" font-weight="400" text-anchor="middle" letter-spacing="6">ZENITH</text>
+</svg>

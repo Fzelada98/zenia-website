@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <text x="100" y="28" fill="#ffffff" font-family="'Garamond', 'Times New Roman', serif" font-size="18" font-weight="300" text-anchor="middle" letter-spacing="3">PATEK</text>
+  <text x="100" y="48" fill="#ffffff" font-family="'Garamond', 'Times New Roman', serif" font-size="14" font-weight="300" text-anchor="middle" letter-spacing="4">PHILIPPE</text>
+  <line x1="60" y1="33" x2="140" y2="33" stroke="#ffffff" stroke-width="0.5" opacity="0.6"/>
+</svg>

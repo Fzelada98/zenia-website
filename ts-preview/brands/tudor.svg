@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <!-- Shield/Rose icon -->
+  <g fill="none" stroke="#ffffff" stroke-width="1.2" transform="translate(100, 14)">
+    <path d="M0,-10 L7,-4 L5,5 L0,9 L-5,5 L-7,-4 Z" fill="#ffffff" opacity="0.9"/>
+    <circle cx="0" cy="0" r="3" fill="none" stroke="#ffffff" stroke-width="0.8"/>
+    <line x1="0" y1="-3" x2="0" y2="3" stroke="#ffffff" stroke-width="0.6"/>
+    <line x1="-3" y1="0" x2="3" y2="0" stroke="#ffffff" stroke-width="0.6"/>
+  </g>
+  <!-- TUDOR text -->
+  <text x="100" y="46" fill="#ffffff" font-family="'Times New Roman', 'Georgia', serif" font-size="22" font-weight="bold" text-anchor="middle" letter-spacing="6">TUDOR</text>
+</svg>

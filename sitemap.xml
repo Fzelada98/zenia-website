@@ -93,7 +93,89 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Blog articles (April 2026) -->
+  <!-- Blog articles (April 13, 2026) -->
+  <url>
+    <loc>https://zeniapartners.com/blog/crm-restaurantes-guia-completa.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zeniapartners.com/blog/crm-restaurantes-guia-completa.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zeniapartners.com/blog/crm-restaurants-complete-guide.html"/>
+  </url>
+  <url>
+    <loc>https://zeniapartners.com/blog/crm-restaurants-complete-guide.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zeniapartners.com/blog/crm-restaurants-complete-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zeniapartners.com/blog/crm-restaurantes-guia-completa.html"/>
+  </url>
+  <url>
+    <loc>https://zeniapartners.com/blog/crm-belleza-salon-estetica.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zeniapartners.com/blog/crm-belleza-salon-estetica.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zeniapartners.com/blog/crm-beauty-salons-guide.html"/>
+  </url>
+  <url>
+    <loc>https://zeniapartners.com/blog/crm-beauty-salons-guide.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zeniapartners.com/blog/crm-beauty-salons-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zeniapartners.com/blog/crm-belleza-salon-estetica.html"/>
+  </url>
+  <url>
+    <loc>https://zeniapartners.com/blog/whatsapp-crm-pymes-guia.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zeniapartners.com/blog/whatsapp-crm-pymes-guia.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zeniapartners.com/blog/whatsapp-crm-small-business.html"/>
+  </url>
+  <url>
+    <loc>https://zeniapartners.com/blog/whatsapp-crm-small-business.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zeniapartners.com/blog/whatsapp-crm-small-business.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zeniapartners.com/blog/whatsapp-crm-pymes-guia.html"/>
+  </url>
+  <url>
+    <loc>https://zeniapartners.com/blog/automatizacion-retail-tiendas-ia.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zeniapartners.com/blog/automatizacion-retail-tiendas-ia.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zeniapartners.com/blog/ai-automation-retail-stores.html"/>
+  </url>
+  <url>
+    <loc>https://zeniapartners.com/blog/ai-automation-retail-stores.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zeniapartners.com/blog/ai-automation-retail-stores.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zeniapartners.com/blog/automatizacion-retail-tiendas-ia.html"/>
+  </url>
+  <url>
+    <loc>https://zeniapartners.com/blog/retencion-clientes-gimnasio-ia.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zeniapartners.com/blog/retencion-clientes-gimnasio-ia.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zeniapartners.com/blog/customer-retention-gym-ai.html"/>
+  </url>
+  <url>
+    <loc>https://zeniapartners.com/blog/customer-retention-gym-ai.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zeniapartners.com/blog/customer-retention-gym-ai.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zeniapartners.com/blog/retencion-clientes-gimnasio-ia.html"/>
+  </url>
+
+  <!-- Blog articles (April 6, 2026) -->
   <url>
     <loc>https://zeniapartners.com/blog/automatizacion-whatsapp-negocios.html</loc>
     <lastmod>2026-04-06</lastmod>
@@ -111,6 +193,34 @@
     <lastmod>2026-04-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <!-- Blog articles missing from sitemap - added April 13 -->
+  <url>
+    <loc>https://zeniapartners.com/blog/crm-gimnasio-guia.html</loc>
+    <lastmod>2026-04-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zeniapartners.com/blog/chatbot-whatsapp-restaurantes.html</loc>
+    <lastmod>2026-04-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zeniapartners.com/blog/automatizacion-ecommerce-ia.html</loc>
+    <lastmod>2026-04-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zeniapartners.com/blog/whatsapp-automation-business-guide.html</loc>
+    <lastmod>2026-04-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zeniapartners.com/blog/whatsapp-automation-business-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zeniapartners.com/blog/automatizacion-whatsapp-negocios.html"/>
   </url>
 
   <!-- Blog articles (March 2026) -->

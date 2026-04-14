@@ -713,7 +713,7 @@ def render_nav():
       <li><a href="/blog/">Blog</a></li>
     </ul>
     <div class="nav-right">
-      <div class="nav-cta"><a href="https://wa.me/34609514486" class="btn btn-primary">WhatsApp</a></div>
+      <div class="nav-cta"><a href="https://wa.me/34677612799" class="btn btn-primary">WhatsApp</a></div>
     </div>
     <button class="nav-mobile-toggle" id="navToggle" aria-label="Toggle menu">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
@@ -765,7 +765,7 @@ def render_footer():
 
 
 def render_wa_float():
-    return f'''<a href="https://wa.me/34609514486?text=Hola%2C%20me%20interesa%20saber%20mas%20sobre%20Zenia" class="wa-float" aria-label="WhatsApp" title="Escribenos por WhatsApp" style="position:fixed;bottom:24px;right:24px;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.3);z-index:9998;transition:transform 0.2s">
+    return f'''<a href="https://wa.me/34677612799?text=Hola%2C%20me%20interesa%20saber%20mas%20sobre%20Zenia" class="wa-float" aria-label="WhatsApp" title="Escribenos por WhatsApp" style="position:fixed;bottom:24px;right:24px;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.3);z-index:9998;transition:transform 0.2s">
   <svg viewBox="0 0 24 24" width="28" height="28"><path fill="#fff" d="{WA_SVG_PATH}"/></svg>
 </a>'''
 
@@ -829,7 +829,7 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a) {
 def generate_landing(v):
     """Generate a complete landing page HTML from vertical data."""
 
-    wa_link = f"https://wa.me/34609514486?text=Hola%2C%20me%20interesa%20el%20{v['slug'].replace('-','%20')}"
+    wa_link = f"https://wa.me/34677612799?text=Hola%2C%20me%20interesa%20el%20{v['slug'].replace('-','%20')}"
 
     # FAQ Schema JSON-LD
     faq_schema = ',\n    '.join([
@@ -1203,7 +1203,7 @@ function rejectCookies() {{
 def generate_city_page(city_data):
     """Generate a city-specific landing page."""
     c = city_data
-    wa_link = f"https://wa.me/34609514486?text=Hola%2C%20tengo%20un%20negocio%20en%20{c['city']}%20y%20me%20interesa%20Zenia"
+    wa_link = f"https://wa.me/34677612799?text=Hola%2C%20tengo%20un%20negocio%20en%20{c['city']}%20y%20me%20interesa%20Zenia"
 
     all_verticals = [v for v in VERTICALS if not v["slug"].startswith("crm-whatsapp") and not v["slug"].startswith("crm-pymes") and not v["slug"].startswith("crm-negocios")]
 

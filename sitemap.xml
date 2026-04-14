@@ -14,7 +14,7 @@
   <!-- Homepage ES -->
   <url>
     <loc>https://zeniapartners.com/es/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-04-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://zeniapartners.com/es/"/>
@@ -24,7 +24,7 @@
   <!-- Spanish vertical landing pages -->
   <url>
     <loc>https://zeniapartners.com/es/crm-gimnasios.html</loc>
-    <lastmod>2026-03-24</lastmod>
+    <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://zeniapartners.com/es/crm-gimnasios.html"/>
@@ -32,7 +32,7 @@
   </url>
   <url>
     <loc>https://zeniapartners.com/es/automatizacion-whatsapp-negocios.html</loc>
-    <lastmod>2026-03-24</lastmod>
+    <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://zeniapartners.com/es/automatizacion-whatsapp-negocios.html"/>
@@ -40,7 +40,7 @@
   </url>
   <url>
     <loc>https://zeniapartners.com/es/crm-restaurantes.html</loc>
-    <lastmod>2026-03-24</lastmod>
+    <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://zeniapartners.com/es/crm-restaurantes.html"/>
@@ -48,7 +48,7 @@
   </url>
   <url>
     <loc>https://zeniapartners.com/es/crm-ecommerce.html</loc>
-    <lastmod>2026-03-24</lastmod>
+    <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://zeniapartners.com/es/crm-ecommerce.html"/>
@@ -56,11 +56,126 @@
   </url>
   <url>
     <loc>https://zeniapartners.com/es/crm-salones-belleza.html</loc>
-    <lastmod>2026-03-24</lastmod>
+    <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://zeniapartners.com/es/crm-salones-belleza.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://zeniapartners.com/services/crm-omnichannel.html"/>
+  </url>
+  <!-- New Spanish landing pages (April 14, 2026) -->
+  <url>
+    <loc>https://zeniapartners.com/es/crm-clinicas.html</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zeniapartners.com/es/crm-hoteles.html</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zeniapartners.com/es/crm-inmobiliarias.html</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zeniapartners.com/es/crm-cafeterias.html</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zeniapartners.com/es/crm-retail.html</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zeniapartners.com/es/crm-wellness.html</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zeniapartners.com/es/crm-academias.html</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zeniapartners.com/es/crm-consultorias.html</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zeniapartners.com/es/crm-medicos.html</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zeniapartners.com/es/crm-abogados.html</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zeniapartners.com/es/crm-fotografos.html</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zeniapartners.com/es/crm-whatsapp.html</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zeniapartners.com/es/crm-pymes.html</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zeniapartners.com/es/crm-negocios-pequenos.html</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zeniapartners.com/es/crm-madrid.html</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zeniapartners.com/es/crm-barcelona.html</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zeniapartners.com/es/crm-valencia.html</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zeniapartners.com/es/crm-sevilla.html</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zeniapartners.com/es/crm-malaga.html</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 
   <!-- About -->

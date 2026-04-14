@@ -1,0 +1,104 @@
+<!-- ============================================================
+     pricing.html — Pricing section snippet
+     Requires: landing-es.css
+     ============================================================ -->
+<section class="pricing container">
+  <h2 class="section-title text-gradient" style="text-align:center">Planes y precios</h2>
+  <p class="section-desc" style="text-align:center;max-width:560px;margin-left:auto;margin-right:auto">Sin permanencia. Sin letras pequenas. Solo resultados.</p>
+
+  <div class="pricing-grid">
+
+    <!-- Starter -->
+    <div class="pricing-card">
+      <p class="pricing-name">Starter</p>
+      <p class="pricing-price">€297<span>/mes</span></p>
+      <ul class="pricing-features">
+        <li>1 canal de comunicacion (WhatsApp o email)</li>
+        <li>1 agente de IA personalizado</li>
+        <li>CRM basico de clientes</li>
+        <li>Automatizacion de respuestas frecuentes</li>
+        <li>Panel de metricas esencial</li>
+        <li>Soporte por email</li>
+      </ul>
+      <a href="https://calendly.com/zeladauriartef/30min" class="btn btn-primary" style="width:100%;text-align:center;display:block">Empezar</a>
+    </div>
+
+    <!-- Growth (featured) -->
+    <div class="pricing-card featured">
+      <p class="pricing-name">Growth</p>
+      <p class="pricing-price">€497<span>/mes</span></p>
+      <ul class="pricing-features">
+        <li>Multicanal: WhatsApp + email + Instagram</li>
+        <li>CRM completo con historial y segmentacion</li>
+        <li>3 agentes de IA configurados a medida</li>
+        <li>Automatizaciones de retenci&#243;n y upselling</li>
+        <li>Integraciones con tu sistema actual</li>
+        <li>Reportes semanales automaticos</li>
+        <li>Soporte prioritario por WhatsApp</li>
+      </ul>
+      <a href="https://calendly.com/zeladauriartef/30min" class="btn btn-primary" style="width:100%;text-align:center;display:block;background:var(--accent-violet)">Reservar demo</a>
+    </div>
+
+    <!-- Enterprise -->
+    <div class="pricing-card">
+      <p class="pricing-name">Enterprise</p>
+      <p class="pricing-price">€897<span>+/mes</span></p>
+      <ul class="pricing-features">
+        <li>Solucion completamente a medida</li>
+        <li>Agentes de IA ilimitados</li>
+        <li>Integraciones avanzadas (ERP, TPV, ecommerce)</li>
+        <li>Equipo dedicado de implementacion</li>
+        <li>SLA de respuesta en 2 horas</li>
+        <li>Formacion del equipo incluida</li>
+      </ul>
+      <a href="https://calendly.com/zeladauriartef/30min" class="btn btn-primary" style="width:100%;text-align:center;display:block">Hablemos</a>
+    </div>
+
+  </div><!-- /pricing-grid -->
+
+  <p class="pricing-setup">
+    <strong>Setup desde €997</strong> &mdash; incluye configuraci&#243;n completa + training de IA + onboarding &middot;
+    Validez: 7 d&#237;as &middot;
+    <em>Menos que un empleado a media jornada. Trabaja 24/7, nunca se va de vacaciones.</em>
+  </p>
+</section>
+
+<!-- FAQ de precios (opcional, recomendado) -->
+<section class="section container">
+  <h2 class="section-title" style="text-align:center">Preguntas frecuentes</h2>
+  <div class="faq">
+
+    <div class="faq-item">
+      <button class="faq-q">&#191;Hay contrato de permanencia?</button>
+      <div class="faq-a"><p>No. Todos los planes son mensuales. Puedes cancelar o cambiar de plan en cualquier momento con 15 d&#237;as de antelaci&#243;n. Sin penalizaciones.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">&#191;Qu&#233; incluye el setup?</button>
+      <div class="faq-a"><p>La primera semana completa: mapeo de tu negocio, configuraci&#243;n del CRM, training del agente de IA con tu catalogo y tono de comunicacion, e integracion con tus canales actuales. Es la Semana 1 del servicio pagado, no un diagn&#243;stico gratuito.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">&#191;Cuanto tarda en estar operativo?</button>
+      <div class="faq-a"><p>Entre 5 y 10 d&#237;as laborables desde la firma del contrato. En negocios sencillos, a veces menos.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">&#191;Funciona para mi sector?</button>
+      <div class="faq-a"><p>Trabajamos con restaurantes, gimnasios, clinicas, salones de belleza, academias, consultor&#237;as, retail y ecommerce. Si tienes clientes que merecen seguimiento, funciona.</p></div>
+    </div>
+
+  </div><!-- /faq -->
+</section>
+
+<script>
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var item = btn.closest('.faq-item');
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(function(el) { el.classList.remove('open'); });
+    if (!isOpen) item.classList.add('open');
+  });
+});
+</script>

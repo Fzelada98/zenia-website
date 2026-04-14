@@ -101,7 +101,8 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero" style="padding-top:120px">
+<section class="hero" id="hero" style="padding-top:120px">
+  <div class="hero-bg"><canvas id="glsl-canvas"></canvas><div class="hero-bg-top"></div></div>
   <div class="container">
     <div class="hero-badge">Salud</div>
     <h1>CRM para Consultas Medicas.<br><span class="text-gradient">Pacientes atendidos. Agenda optimizada.</span></h1>
@@ -199,6 +200,8 @@
       <div class="impact-card"><div class="impact-number text-gradient">80%</div><h3 class="h4-style">Consultas automatizadas</h3></div>
       <div class="impact-card"><div class="impact-number text-gradient">+30%</div><h3 class="h4-style">Retencion pacientes</h3></div>
       <div class="impact-card"><div class="impact-number text-gradient">24/7</div><h3 class="h4-style">Gestion citas</h3></div>
+      <div class="impact-card"><div class="impact-number text-gradient">5sem</div><h3 class="h4-style">Implementacion</h3></div>
+      <div class="impact-card"><div class="impact-number text-gradient">+25%</div><h3 class="h4-style">Satisfaccion pacientes</h3></div>
     </div>
   </div>
 </section>
@@ -478,5 +481,23 @@ function rejectCookies() {
 }
 </script>
 
+<script>
+if (window.innerWidth > 768) {
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      var s1 = document.createElement('script');
+      s1.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
+      s1.onload = function() {
+        setTimeout(function() {
+          var s2 = document.createElement('script');
+          s2.src = '/js/animation.js';
+          document.body.appendChild(s2);
+        }, 100);
+      };
+      document.body.appendChild(s1);
+    }, 1000);
+  });
+}
+</script>
 </body>
 </html>

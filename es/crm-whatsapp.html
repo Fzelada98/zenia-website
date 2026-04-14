@@ -103,7 +103,8 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero" style="padding-top:120px">
+<section class="hero" id="hero" style="padding-top:120px">
+  <div class="hero-bg"><canvas id="glsl-canvas"></canvas><div class="hero-bg-top"></div></div>
   <div class="container">
     <div class="hero-badge">WhatsApp</div>
     <h1>CRM para WhatsApp.<br><span class="text-gradient">Tu negocio en piloto automatico.</span></h1>
@@ -201,6 +202,7 @@
       <div class="impact-card"><div class="impact-number text-gradient">+45%</div><h3 class="h4-style">Conversion ventas</h3></div>
       <div class="impact-card"><div class="impact-number text-gradient">24/7</div><h3 class="h4-style">Atencion automatica</h3></div>
       <div class="impact-card"><div class="impact-number text-gradient">5sem</div><h3 class="h4-style">Implementacion</h3></div>
+      <div class="impact-card"><div class="impact-number text-gradient">+60%</div><h3 class="h4-style">Eficiencia equipo</h3></div>
     </div>
   </div>
 </section>
@@ -482,5 +484,23 @@ function rejectCookies() {
 }
 </script>
 
+<script>
+if (window.innerWidth > 768) {
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      var s1 = document.createElement('script');
+      s1.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
+      s1.onload = function() {
+        setTimeout(function() {
+          var s2 = document.createElement('script');
+          s2.src = '/js/animation.js';
+          document.body.appendChild(s2);
+        }, 100);
+      };
+      document.body.appendChild(s1);
+    }, 1000);
+  });
+}
+</script>
 </body>
 </html>

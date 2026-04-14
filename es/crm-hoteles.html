@@ -101,7 +101,8 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero" style="padding-top:120px">
+<section class="hero" id="hero" style="padding-top:120px">
+  <div class="hero-bg"><canvas id="glsl-canvas"></canvas><div class="hero-bg-top"></div></div>
   <div class="container">
     <div class="hero-badge">Hosteleria</div>
     <h1>CRM para Hoteles.<br><span class="text-gradient">Mas reservas directas. Menos comisiones.</span></h1>
@@ -199,6 +200,8 @@
       <div class="impact-card"><div class="impact-number text-gradient">-20%</div><h3 class="h4-style">Comisiones OTA</h3></div>
       <div class="impact-card"><div class="impact-number text-gradient">15min</div><h3 class="h4-style">Respuesta a consultas</h3></div>
       <div class="impact-card"><div class="impact-number text-gradient">+4.5</div><h3 class="h4-style">Rating medio</h3></div>
+      <div class="impact-card"><div class="impact-number text-gradient">5sem</div><h3 class="h4-style">Implementacion</h3></div>
+      <div class="impact-card"><div class="impact-number text-gradient">€0</div><h3 class="h4-style">Comision reserva directa</h3></div>
     </div>
   </div>
 </section>
@@ -478,5 +481,23 @@ function rejectCookies() {
 }
 </script>
 
+<script>
+if (window.innerWidth > 768) {
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      var s1 = document.createElement('script');
+      s1.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
+      s1.onload = function() {
+        setTimeout(function() {
+          var s2 = document.createElement('script');
+          s2.src = '/js/animation.js';
+          document.body.appendChild(s2);
+        }, 100);
+      };
+      document.body.appendChild(s1);
+    }, 1000);
+  });
+}
+</script>
 </body>
 </html>

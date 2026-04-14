@@ -61,7 +61,9 @@ VERTICALS = [
             ("-45%", "Reduccion de no-shows"),
             ("+30%", "Clientes recurrentes"),
             ("98%", "Apertura WhatsApp"),
-            ("24/7", "Reservas automaticas")
+            ("24/7", "Reservas automaticas"),
+            ("5sem", "Implementacion completa"),
+            ("+35%", "Conversion en fechas especiales")
         ],
         "faqs": [
             ("Puedo gestionar reservas por WhatsApp de forma automatica?",
@@ -133,7 +135,9 @@ VERTICALS = [
             ("-35%", "Reduccion de cancelaciones"),
             ("+40%", "Conversion de leads"),
             ("2min", "Tiempo respuesta leads"),
-            ("24/7", "Seguimiento automatico")
+            ("24/7", "Seguimiento automatico"),
+            ("5sem", "Implementacion completa"),
+            ("+25%", "Ticket promedio")
         ],
         "faqs": [
             ("Como detecta el sistema que un socio va a cancelar?",
@@ -205,7 +209,9 @@ VERTICALS = [
             ("-60%", "Cancelaciones"),
             ("+25%", "Retencion de clientas"),
             ("98%", "Apertura WhatsApp"),
-            ("24/7", "Gestion de citas")
+            ("24/7", "Gestion de citas"),
+            ("5sem", "Implementacion completa"),
+            ("+20%", "Ticket promedio")
         ],
         "faqs": [
             ("Puedo gestionar citas por WhatsApp automaticamente?",
@@ -259,7 +265,7 @@ VERTICALS = [
             {"icon": "clock", "h2_main": "Gestion de citas:", "h2_gradient": "sin cuellos de botella", "text": "El agente de IA recibe solicitudes de cita por WhatsApp, verifica disponibilidad del profesional, confirma, envia recordatorio 48h y 2h antes, y si el paciente cancela, rellena el hueco con otro paciente en lista de espera. Reduce no-shows un 50%."},
             {"icon": "chart", "h2_main": "Seguimiento de pacientes:", "h2_gradient": "atencion continua", "text": "Despues de un tratamiento, el sistema envia mensajes de seguimiento automaticos: como se siente el paciente, si necesita revision, recordatorio de proxima cita. Mejora la satisfaccion y la retencion sin esfuerzo manual."}
         ],
-        "results": [("-50%", "No-shows"), ("+35%", "Retencion pacientes"), ("80%", "Consultas auto-gestionadas"), ("24/7", "Gestion de citas")],
+        "results": [("-50%", "No-shows"), ("+35%", "Retencion pacientes"), ("80%", "Consultas auto-gestionadas"), ("24/7", "Gestion de citas"), ("5sem", "Implementacion"), ("+40%", "Satisfaccion pacientes")],
         "faqs": [
             ("Es seguro para datos de pacientes?", "Si. Cumplimos con RGPD y las mejores practicas de proteccion de datos sanitarios. Los datos se encriptan en transito y en reposo."),
             ("Se integra con mi software de gestion clinica?", "Trabajamos para integrar con los principales softwares del sector. La sincronizacion permite unificar historiales y agendas."),
@@ -291,7 +297,7 @@ VERTICALS = [
             {"icon": "clock", "h2_main": "Reservas directas:", "h2_gradient": "tu canal mas rentable", "text": "Cuando un cliente potencial te escribe por WhatsApp preguntando disponibilidad, tienes 15 minutos para responder. Despues, reserva en Booking. Tu agente de IA responde al instante con habitaciones disponibles, precios y fotos. Cierra la reserva directa sin comisiones."},
             {"icon": "chart", "h2_main": "Experiencia del huesped:", "h2_gradient": "de reserva a resena", "text": "Antes de llegar: informacion del destino, check-in digital. Durante la estancia: servicio de habitaciones por WhatsApp. Despues: solicitud de resena en Google/TripAdvisor. Todo automatico, todo personalizado."}
         ],
-        "results": [("+40%", "Reservas directas"), ("-20%", "Comisiones OTA"), ("15min", "Respuesta a consultas"), ("+4.5", "Rating medio")],
+        "results": [("+40%", "Reservas directas"), ("-20%", "Comisiones OTA"), ("15min", "Respuesta a consultas"), ("+4.5", "Rating medio"), ("5sem", "Implementacion"), ("€0", "Comision reserva directa")],
         "faqs": [
             ("Se integra con mi PMS?", "Trabajamos para integrar con los principales PMS del mercado (Opera, Cloudbeds, etc.). La sincronizacion permite gestionar disponibilidad en tiempo real."),
             ("Puedo gestionar reservas de grupo?", "Si. El agente recopila datos del grupo (fechas, numero de habitaciones, necesidades especiales) y los pasa a tu equipo para presupuesto personalizado."),
@@ -321,7 +327,7 @@ VERTICALS = [
             {"icon": "clock", "h2_main": "Cualificacion de leads:", "h2_gradient": "solo los que valen la pena", "text": "El agente de IA pregunta presupuesto, zona preferida, metros cuadrados y plazo de compra. Filtra leads serios de curiosos. Tus agentes humanos solo reciben leads cualificados con toda la informacion lista."},
             {"icon": "chart", "h2_main": "Visitas y seguimiento:", "h2_gradient": "cierra mas operaciones", "text": "Agenda visitas automaticamente, envia recordatorios, y despues de la visita pregunta al lead que le parecio. Si le gusto pero no se decide, el sistema hace seguimiento periodico hasta que cierre o descarte."}
         ],
-        "results": [("30seg", "Respuesta a leads"), ("+45%", "Leads cualificados"), ("-30%", "Visitas canceladas"), ("+20%", "Tasa de cierre")],
+        "results": [("30seg", "Respuesta a leads"), ("+45%", "Leads cualificados"), ("-30%", "Visitas canceladas"), ("+20%", "Tasa de cierre"), ("5sem", "Implementacion"), ("100%", "Leads registrados")],
         "faqs": [
             ("Se integra con Idealista, Fotocasa, etc.?", "Trabajamos para integrar con los principales portales inmobiliarios. Los leads entran automaticamente al CRM y reciben respuesta inmediata."),
             ("Puede enviar fichas de propiedades por WhatsApp?", "Si. El agente envia fotos, caracteristicas, precio y ubicacion de las propiedades que coinciden con las preferencias del lead."),
@@ -351,7 +357,7 @@ VERTICALS = [
             {"icon": "clock", "h2_main": "Fidelizacion digital:", "h2_gradient": "sin tarjetas de papel", "text": "Tu cliente escanea un QR, se registra por WhatsApp y empieza a acumular puntos automaticamente. Sin apps, sin tarjetas que se pierden. Cuando alcanza el premio, recibe un mensaje por WhatsApp. Simple, efectivo, automatico."},
             {"icon": "chart", "h2_main": "Conoce a tus clientes:", "h2_gradient": "datos que valen oro", "text": "Cuantos clientes habituales tienes? Cuantos vinieron este mes vs el anterior? Cual es tu ticket promedio? Sin un CRM, estas adivinando. Con el, tienes datos reales para tomar decisiones."}
         ],
-        "results": [("+30%", "Clientes recurrentes"), ("98%", "Apertura mensajes"), ("€0", "Coste por fidelizacion"), ("24/7", "Programa activo")],
+        "results": [("+30%", "Clientes recurrentes"), ("98%", "Apertura mensajes"), ("€0", "Coste por fidelizacion"), ("24/7", "Programa activo"), ("5sem", "Implementacion"), ("+15%", "Ticket promedio")],
         "faqs": [
             ("Como funciona el programa de puntos?", "El cliente escanea un QR en tu barra. Se registra por WhatsApp (una sola vez). Cada visita acumula puntos automaticamente. Cuando alcanza el premio, recibe un mensaje. Sin apps, sin tarjetas."),
             ("Cuanto cuesta?", "Desde €297/mes con setup de €997. Todo incluido."),
@@ -381,7 +387,7 @@ VERTICALS = [
             {"icon": "clock", "h2_main": "Comunicacion directa:", "h2_gradient": "WhatsApp como canal de ventas", "text": "Tu cliente favorito no abre emails. Pero si abre WhatsApp. Tasa de apertura del 98%. Envia nuevas llegadas, ofertas exclusivas, avisos de stock limitado. Directo al bolsillo de tu cliente."},
             {"icon": "chart", "h2_main": "Fidelizacion inteligente:", "h2_gradient": "el cliente que vuelve vale mas", "text": "Un cliente que compra 4 veces al ano vale 10 veces mas que uno que compra una vez. El CRM identifica a tus mejores clientes y los cuida automaticamente: descuentos VIP, acceso anticipado, eventos exclusivos."}
         ],
-        "results": [("+25%", "Ventas recurrentes"), ("98%", "Apertura WhatsApp"), ("+40%", "Retencion clientes"), ("24/7", "Atencion automatica")],
+        "results": [("+25%", "Ventas recurrentes"), ("98%", "Apertura WhatsApp"), ("+40%", "Retencion clientes"), ("24/7", "Atencion automatica"), ("5sem", "Implementacion"), ("+30%", "Recompra clientes")],
         "faqs": [
             ("Se integra con mi TPV?", "Trabajamos para integrar con los principales sistemas de punto de venta. La sincronizacion permite vincular compras con perfiles de cliente."),
             ("Puedo avisar cuando un producto vuelve a tener stock?", "Si. Cuando un cliente pregunta por un producto agotado, el sistema lo registra y le avisa automaticamente cuando vuelve a estar disponible."),
@@ -411,7 +417,7 @@ VERTICALS = [
             {"icon": "clock", "h2_main": "Gestion de citas:", "h2_gradient": "cero huecos vacios", "text": "El agente gestiona citas por WhatsApp, confirma 48h y 2h antes, y si alguien cancela, ofrece el hueco a clientes en lista de espera automaticamente."},
             {"icon": "chart", "h2_main": "Experiencia del cliente:", "h2_gradient": "de la cita a la fidelizacion", "text": "Despues del tratamiento, el sistema envia un mensaje de bienestar, recomienda el siguiente tratamiento segun su historial y ofrece paquetes personalizados. La experiencia premium no termina cuando el cliente se va."}
         ],
-        "results": [("-55%", "Cancelaciones"), ("+40%", "Retencion"), ("98%", "Apertura mensajes"), ("24/7", "Gestion citas")],
+        "results": [("-55%", "Cancelaciones"), ("+40%", "Retencion"), ("98%", "Apertura mensajes"), ("24/7", "Gestion citas"), ("5sem", "Implementacion"), ("+20%", "Ticket promedio")],
         "faqs": [
             ("Puedo gestionar diferentes terapeutas y tratamientos?", "Si. Cada terapeuta tiene su agenda. Cada tratamiento su duracion. El agente agenda sin solapamientos."),
             ("Funciona con bonos y paquetes?", "Si. El sistema gestiona bonos de sesiones, paquetes y renovaciones automaticas."),
@@ -441,7 +447,7 @@ VERTICALS = [
             {"icon": "clock", "h2_main": "Captacion de alumnos:", "h2_gradient": "responde antes que nadie", "text": "El agente responde consultas por WhatsApp con informacion de cursos, horarios, precios y disponibilidad. Agenda clases de prueba automaticamente. Tasa de conversion de consulta a matricula: +35%."},
             {"icon": "chart", "h2_main": "Retencion de alumnos:", "h2_gradient": "que no abandonen", "text": "El sistema detecta patrones de abandono (faltas consecutivas, bajo engagement) y activa mensajes de seguimiento antes de que el alumno cancele."}
         ],
-        "results": [("+35%", "Conversion consulta-matricula"), ("-30%", "Abandonos"), ("1min", "Respuesta a consultas"), ("24/7", "Atencion automatica")],
+        "results": [("+35%", "Conversion consulta-matricula"), ("-30%", "Abandonos"), ("1min", "Respuesta a consultas"), ("24/7", "Atencion automatica"), ("5sem", "Implementacion"), ("+15%", "Renovacion matriculas")],
         "faqs": [
             ("Funciona para diferentes tipos de formacion?", "Si. Idiomas, musica, artes marciales, informatica, oposiciones. Configuramos el sistema segun tu modelo."),
             ("Puedo gestionar multiples horarios y grupos?", "Si. El agente gestiona disponibilidad por curso, horario y nivel."),
@@ -471,7 +477,7 @@ VERTICALS = [
             {"icon": "clock", "h2_main": "Pipeline de ventas:", "h2_gradient": "de la propuesta al cierre", "text": "Cada oportunidad se visualiza en un pipeline: contacto inicial, propuesta enviada, negociacion, cierre. El agente hace follow-up automatico si una propuesta lleva 5 dias sin respuesta. Tasa de cierre mejora un 25%."},
             {"icon": "chart", "h2_main": "Gestion de clientes:", "h2_gradient": "todo en un solo lugar", "text": "Cada cliente tiene un perfil con historial completo: proyectos realizados, propuestas pendientes, facturacion, comunicaciones. Tu equipo sabe exactamente donde esta cada cuenta sin preguntar."}
         ],
-        "results": [("+25%", "Tasa de cierre"), ("-3h", "Tiempo en follow-ups"), ("100%", "Visibilidad pipeline"), ("24/7", "Seguimiento automatico")],
+        "results": [("+25%", "Tasa de cierre"), ("-3h", "Tiempo en follow-ups"), ("100%", "Visibilidad pipeline"), ("24/7", "Seguimiento automatico"), ("5sem", "Implementacion"), ("+30%", "Clientes recurrentes")],
         "faqs": [
             ("Se integra con mi herramienta de gestion de proyectos?", "Trabajamos para integrar con Asana, Monday, Notion y las principales herramientas de PM."),
             ("Puedo gestionar multiples consultores?", "Si. Cada consultor tiene su cartera de clientes y proyectos. Los reportes se consolidan para direccion."),
@@ -501,7 +507,7 @@ VERTICALS = [
             {"icon": "clock", "h2_main": "Gestion de citas:", "h2_gradient": "automatizada por WhatsApp", "text": "El paciente escribe por WhatsApp. El agente verifica disponibilidad, ofrece horarios, confirma la cita y envia recordatorios automaticos. Si el paciente cancela, el hueco se ofrece a otros pacientes en lista de espera."},
             {"icon": "chart", "h2_main": "Seguimiento de pacientes:", "h2_gradient": "atencion continua", "text": "Recordatorios de revisiones periodicas, seguimiento post-consulta, avisos de resultados disponibles. Todo automatico, todo por WhatsApp, todo cumpliendo RGPD."}
         ],
-        "results": [("-50%", "No-shows"), ("80%", "Consultas automatizadas"), ("+30%", "Retencion pacientes"), ("24/7", "Gestion citas")],
+        "results": [("-50%", "No-shows"), ("80%", "Consultas automatizadas"), ("+30%", "Retencion pacientes"), ("24/7", "Gestion citas"), ("5sem", "Implementacion"), ("+25%", "Satisfaccion pacientes")],
         "faqs": [
             ("Es seguro para datos de pacientes?", "Si. Cumplimos RGPD y mejores practicas de proteccion de datos sanitarios."),
             ("Se integra con mi software de gestion clinica?", "Trabajamos para integrar con los principales softwares del sector."),
@@ -531,7 +537,7 @@ VERTICALS = [
             {"icon": "clock", "h2_main": "Captacion de clientes:", "h2_gradient": "responde antes que nadie", "text": "El agente cualifica la consulta: tipo de caso, urgencia, presupuesto estimado. Filtra consultas serias de curiosos. Tu solo recibes leads cualificados listos para una primera reunion."},
             {"icon": "chart", "h2_main": "Gestion de casos:", "h2_gradient": "todo bajo control", "text": "Cada caso tiene un expediente digital con plazos, documentos, comunicaciones y facturacion. El cliente recibe updates automaticos sobre el estado de su caso sin que tengas que llamarle."}
         ],
-        "results": [("2min", "Respuesta a consultas"), ("+40%", "Conversion de leads"), ("100%", "Visibilidad de casos"), ("24/7", "Atencion automatica")],
+        "results": [("2min", "Respuesta a consultas"), ("+40%", "Conversion de leads"), ("100%", "Visibilidad de casos"), ("24/7", "Atencion automatica"), ("5sem", "Implementacion"), ("+30%", "Clientes referidos")],
         "faqs": [
             ("Es seguro para informacion legal confidencial?", "Si. Cumplimos RGPD y protocolos de confidencialidad legal. Encriptacion en transito y en reposo."),
             ("Se integra con software juridico?", "Trabajamos para integrar con los principales softwares de gestion de despachos."),
@@ -561,7 +567,7 @@ VERTICALS = [
             {"icon": "clock", "h2_main": "Presupuestos automaticos:", "h2_gradient": "cierra mas sesiones", "text": "El agente pregunta tipo de sesion (boda, comunion, retrato, producto), fecha y ubicacion. Envia un presupuesto personalizado al instante con tus tarifas. Si el cliente acepta, agenda automaticamente."},
             {"icon": "chart", "h2_main": "Gestion de sesiones:", "h2_gradient": "de la reserva a la entrega", "text": "Cada sesion tiene un timeline: reserva, confirmacion, sesion, edicion, entrega. El cliente recibe updates automaticos en cada fase. Nunca mas te preguntan 'cuando estaran mis fotos?'."}
         ],
-        "results": [("+50%", "Respuesta a consultas"), ("+30%", "Sesiones cerradas"), ("1min", "Tiempo de presupuesto"), ("24/7", "Atencion Instagram/WA")],
+        "results": [("+50%", "Respuesta a consultas"), ("+30%", "Sesiones cerradas"), ("1min", "Tiempo de presupuesto"), ("24/7", "Atencion Instagram/WA"), ("5sem", "Implementacion"), ("+40%", "Sesiones agendadas")],
         "faqs": [
             ("Puedo personalizar presupuestos por tipo de sesion?", "Si. Configuras tus tarifas base por tipo y el agente genera presupuestos automaticos personalizados."),
             ("Funciona con Instagram DMs?", "Si. El agente gestiona consultas de WhatsApp e Instagram desde un solo panel."),
@@ -592,7 +598,7 @@ VERTICALS = [
             {"icon": "clock", "h2_main": "Agente de IA:", "h2_gradient": "tu mejor vendedor 24/7", "text": "El agente de IA contesta consultas, envia catalogos, toma pedidos, agenda citas y hace seguimiento. Todo por WhatsApp. Todo automatico. Y cuando la conversacion necesita un humano, transfiere al instante."},
             {"icon": "chart", "h2_main": "Para todo tipo de negocio:", "h2_gradient": "restaurantes, tiendas, clinicas y mas", "text": "Sea cual sea tu negocio, si tus clientes te escriben por WhatsApp, necesitas un CRM que gestione esas conversaciones. Restaurantes, gimnasios, clinicas, inmobiliarias, tiendas, consultoras. El sistema se adapta a tu vertical."}
         ],
-        "results": [("98%", "Apertura mensajes"), ("+45%", "Conversion ventas"), ("24/7", "Atencion automatica"), ("5sem", "Implementacion")],
+        "results": [("98%", "Apertura mensajes"), ("+45%", "Conversion ventas"), ("24/7", "Atencion automatica"), ("5sem", "Implementacion"), ("+60%", "Eficiencia equipo")],
         "faqs": [
             ("Que diferencia hay entre WhatsApp Business y un CRM WhatsApp?", "WhatsApp Business es la app. Un CRM WhatsApp es un sistema detras de la app que gestiona contactos, automatiza respuestas, hace seguimiento y te da metricas. Es la diferencia entre tener un telefono y tener un equipo de ventas."),
             ("Necesito la API de WhatsApp?", "Nosotros gestionamos todo. No necesitas conocimientos tecnicos ni tratar con Meta directamente."),
@@ -624,7 +630,7 @@ VERTICALS = [
             {"icon": "clock", "h2_main": "IA para PYMEs:", "h2_gradient": "no es solo para grandes", "text": "Hace 2 años, un agente de IA costaba €50,000 de desarrollo. Hoy, con Zenia, tienes uno funcionando en 5 semanas por €297/mes. La tecnologia se ha democratizado. La pregunta ya no es si puedes permitirtelo, sino si puedes permitirte no tenerlo."},
             {"icon": "chart", "h2_main": "Done-for-you:", "h2_gradient": "nosotros hacemos todo", "text": "No te vendemos software para que lo configures tu. Nosotros analizamos tu negocio, configuramos el CRM, entrenamos el agente IA con tu catalogo y lo dejamos funcionando. Tu solo sigues atendiendo a tus clientes. En 5 semanas, tu negocio opera en piloto automatico."}
         ],
-        "results": [("+30%", "Ventas"), ("+27%", "Retencion"), ("5sem", "Implementacion"), ("€297", "Desde/mes")],
+        "results": [("+30%", "Ventas"), ("+27%", "Retencion"), ("5sem", "Implementacion"), ("€297", "Desde/mes"), ("0", "Conocimientos tecnicos"), ("+60%", "Eficiencia operativa")],
         "faqs": [
             ("Que es un CRM?", "Un sistema que centraliza toda la informacion de tus clientes: contactos, conversaciones, compras, preferencias. Te permite hacer seguimiento automatico y no perder ninguna oportunidad."),
             ("Necesito conocimientos tecnicos?", "No. Nosotros hacemos todo. Tu equipo solo necesita saber usar WhatsApp."),
@@ -656,7 +662,7 @@ VERTICALS = [
             {"icon": "clock", "h2_main": "Tu primer empleado digital:", "h2_gradient": "sin nomina", "text": "Un agente de IA cuesta menos que un empleado a media jornada. Pero trabaja 24/7, no pide vacaciones y no comete errores de seguimiento. Es tu primer empleado digital. Y el mas rentable."},
             {"icon": "chart", "h2_main": "Sin complicaciones:", "h2_gradient": "nosotros hacemos todo", "text": "No necesitas instalar nada. No necesitas saber de CRM ni de IA. Nos cuentas tu negocio, nosotros configuramos todo, y en 5 semanas tienes un sistema que trabaja por ti."}
         ],
-        "results": [("24/7", "Atencion automatica"), ("€297", "Desde/mes"), ("5sem", "Listo para usar"), ("0", "Conocimientos tecnicos")],
+        "results": [("24/7", "Atencion automatica"), ("€297", "Desde/mes"), ("5sem", "Listo para usar"), ("0", "Conocimientos tecnicos"), ("+50%", "Tiempo libre"), ("+30%", "Ventas recurrentes")],
         "faqs": [
             ("Que tipo de negocio puede usarlo?", "Cualquiera que reciba consultas o pedidos por WhatsApp: peluquerias, tiendas, restaurantes, talleres, clinicas, estudios, consultoras."),
             ("De verdad no necesito saber nada de tecnologia?", "De verdad. Nosotros hacemos todo. Tu solo nos cuentas como funciona tu negocio y nosotros lo automatizamos."),
@@ -958,7 +964,8 @@ def generate_landing(v):
 {render_nav()}
 
 <!-- HERO -->
-<section class="hero" style="padding-top:120px">
+<section class="hero" id="hero" style="padding-top:120px">
+  <div class="hero-bg"><canvas id="glsl-canvas"></canvas><div class="hero-bg-top"></div></div>
   <div class="container">
     <div class="hero-badge">{v["badge"]}</div>
     <h1>{v["h1_main"]}<br><span class="text-gradient">{v["h1_gradient"]}</span></h1>
@@ -1192,6 +1199,24 @@ function rejectCookies() {{
 }}
 </script>
 
+<script>
+if (window.innerWidth > 768) {{
+  window.addEventListener('load', function() {{
+    setTimeout(function() {{
+      var s1 = document.createElement('script');
+      s1.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
+      s1.onload = function() {{
+        setTimeout(function() {{
+          var s2 = document.createElement('script');
+          s2.src = '/js/animation.js';
+          document.body.appendChild(s2);
+        }}, 100);
+      }};
+      document.body.appendChild(s1);
+    }}, 1000);
+  }});
+}}
+</script>
 </body>
 </html>'''
 
@@ -1318,7 +1343,8 @@ def generate_city_page(city_data):
 {render_nav()}
 
 <!-- HERO -->
-<section class="hero" style="padding-top:120px">
+<section class="hero" id="hero" style="padding-top:120px">
+  <div class="hero-bg"><canvas id="glsl-canvas"></canvas><div class="hero-bg-top"></div></div>
   <div class="container">
     <div class="hero-badge">{c["city"]}</div>
     <h1>CRM con IA para Negocios en {c["city"]}.<br><span class="text-gradient">Automatiza. Vende mas. Fideliza.</span></h1>
@@ -1507,6 +1533,24 @@ function rejectCookies() {{
 }}
 </script>
 
+<script>
+if (window.innerWidth > 768) {{
+  window.addEventListener('load', function() {{
+    setTimeout(function() {{
+      var s1 = document.createElement('script');
+      s1.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
+      s1.onload = function() {{
+        setTimeout(function() {{
+          var s2 = document.createElement('script');
+          s2.src = '/js/animation.js';
+          document.body.appendChild(s2);
+        }}, 100);
+      }};
+      document.body.appendChild(s1);
+    }}, 1000);
+  }});
+}}
+</script>
 </body>
 </html>'''
 

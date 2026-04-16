@@ -208,6 +208,14 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Blog articles (April 16, 2026) -->
+  <url>
+    <loc>https://zeniapartners.com/blog/automatizar-reservas-restaurante-whatsapp.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- Blog articles (April 13, 2026) -->
   <url>
     <loc>https://zeniapartners.com/blog/crm-restaurantes-guia-completa.html</loc>

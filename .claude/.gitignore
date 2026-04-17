@@ -1,0 +1,8 @@
+# Only expose the SEO engine (needed by Routines). Keep other agents private.
+agents/*
+!agents/zenia-seo-engine.md
+
+# Never commit local session data or settings
+sessions/
+settings.local.json
+*.log

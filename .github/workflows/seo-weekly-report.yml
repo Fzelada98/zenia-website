@@ -2,9 +2,9 @@ name: SEO Weekly Report
 
 on:
   schedule:
-    # Every Sunday at 23:00 UTC (00:00 CET Monday)
-    - cron: '0 23 * * 0'
-  workflow_dispatch: # Allow manual trigger
+    # Lunes 14:00 UTC (09:00 Perú, 16:00 Madrid)
+    - cron: '0 14 * * 1'
+  workflow_dispatch:
 
 jobs:
   generate-report:
@@ -44,3 +44,12 @@ jobs:
             git commit -m "report: weekly SEO $(date +%Y-%m-%d)"
             git push
           fi
+
+      - name: Send weekly email (CEO dashboard)
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          TO_EMAIL: 'zeladauriartef@gmail.com'
+          FROM_EMAIL: 'Zenia Partners <onboarding@resend.dev>'
+          GSC_SITE_LABEL: 'Zenia Partners'
+          REPORT_TYPE: 'ceo'
+        run: node .github/scripts/send-weekly-email.js

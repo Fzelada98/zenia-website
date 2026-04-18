@@ -150,39 +150,56 @@ The `--auto` flag queues auto-merge. When GitHub checks pass, PR merges to main 
 
 IMPORTANT: This agent runs in a Linux sandbox (Claude Code Routines). DO NOT use Windows paths like `c:\Users\...`. Always use relative paths from the repo root.
 
-### Step 7: LinkedIn Post (English) — saved to social-queue.md
+### Step 7: LinkedIn Post (ENGLISH only) — saved to social-queue.md
 
-Generate a LinkedIn post in ENGLISH (Zenia LinkedIn always in English):
-- 3-5 lines, hook + value + link to the new blog
-- Follow style of previous posts (check existing social-queue.md entries)
+Generate ONE LinkedIn post in ENGLISH (Zenia LinkedIn is international).
+Instagram is NOT in scope. Skip it completely.
 
-Format of the entry in `blog/social-queue.md` (append at the TOP of the file):
+**Rules for the LinkedIn post:**
+- 3-5 lines MAX
+- Line 1: hook with a hard stat, number, or problem
+- Line 2-3: reframe / context
+- Line 4-5: what we did / solution
+- CTA: link to the new blog post
+- 4-5 hashtags max at the bottom
+- NO "chatbot" — use "AI agent" or "personalized AI agent"
+- NO em-dashes, no "Ojo:", no fluff ("in today's world")
+- NO hype words ("revolutionary", "game-changer")
+- NO forced engagement ("like if...", "comment below")
+- Max 1 emoji if it fits naturally, better zero
+- Professional tone, casual OK, dry humor only if there's natural setup
+
+**Format to append at the END of `blog/social-queue.md`:**
 
 ```
----
-date: 2026-04-18
-slug: retencion-socios-gimnasio-estrategias
-vertical: gimnasios
-url: https://zeniapartners.com/blog/retencion-socios-gimnasio-estrategias.html
-linkedin_en: |
-  3-5 lines hook in English, value, CTA.
-  https://zeniapartners.com/blog/retencion-socios-gimnasio-estrategias.html
-instagram_es: |
-  3-5 lines in Spanish, casual tone, emojis ok.
-  https://zeniapartners.com/blog/retencion-socios-gimnasio-estrategias.html
-status: pending
+## YYYY-MM-DD - Post title
+
+[LinkedIn post body in English, 3-5 lines]
+
+#hashtag1 #hashtag2 #hashtag3 #hashtag4
+
 ---
 ```
 
-DO NOT call Post for Me API from inside the agent. The GitHub Action (`.github/workflows/post-to-social.yml`) will read new entries from social-queue.md when the PR merges to main and publish via Post for Me automatically.
+Use exactly this markdown format. No YAML blocks, no extra fields.
 
-### Optimal posting times by vertical (GitHub Action handles scheduling):
-- gimnasios: 07:00 CET or 17:00 CET
+**Hashtag guide by vertical:**
+- gimnasios: #fitnessindustry #memberretention #AI #WhatsAppBusiness
+- restaurantes: #restauranttech #customerretention #AI #WhatsAppBusiness
+- belleza/estetica: #beautyindustry #CRM #AI #WhatsAppBusiness
+- retail/ecommerce: #retailtech #ecommerce #AI #automation
+- wellness/clinicas: #healthtech #patientretention #AI #automation
+- servicios profesionales: #B2B #SaaS #AI #automation
+
+**Scheduling:** The GitHub Action auto-detects vertical from the title/body and schedules at the optimal time:
+- gimnasios: 17:00 CET
 - restaurantes: 10:00 CET (next day)
 - belleza/estetica: 09:00 CET (next day)
-- retail/ecommerce: 08:00 CET or 12:00 CET
+- retail/ecommerce: 08:00 CET
 - wellness/clinicas: 09:00 CET (next day)
-- servicios profesionales (abogados, inmobiliarias): 09:00 CET Tuesday-Thursday
+- servicios profesionales (B2B): 09:00 CET Tuesday-Thursday
+
+DO NOT call Post for Me API from inside the agent. The GitHub Action reads social-queue.md when the PR merges and publishes via Post for Me automatically.
 
 ## Keyword Matrix
 

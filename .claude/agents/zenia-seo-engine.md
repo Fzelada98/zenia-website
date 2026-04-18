@@ -56,11 +56,21 @@ Use WebSearch to find:
 ### Step 3: Read Template
 Read blog/automatizar-reservas-restaurante-whatsapp.html and copy the EXACT HTML/CSS structure.
 
-### Step 4: Write Post
-- 2000-3000 words
-- Actionable: step-by-step, checklists, real numbers
+### Step 4: Write Post in CHUNKS (avoid API timeout)
+
+IMPORTANT: Do NOT write the entire HTML in one go. Split into chunks and save incrementally:
+
+**Chunk 1:** Write HEAD section + opening body + nav + header (first ~500 words of HTML). Save file with `Write` tool.
+**Chunk 2:** Append H2 sections 1-2 using `Edit` tool. ~600 words.
+**Chunk 3:** Append H2 sections 3-4 using `Edit` tool. ~600 words.
+**Chunk 4:** Append final H2 + CTA + related posts + footer closing. ~400 words.
+
+Target total: 1800-2200 words (not 3000). Quality over length.
+
+Required:
+- Actionable content: step-by-step, checklists, real numbers
 - H1 with primary keyword + text-gradient span
-- 5+ H2 sections minimum
+- 4-5 H2 sections minimum
 - Keyword in first 100 words
 - 5+ internal links (to other blog posts + /es/ landings + homepage)
 - CTA section at end (blog-cta class)

@@ -46,23 +46,25 @@ DO NOT use a simplified nav. The nav MUST have the Portal Z SVG logo.
 ### Step 1: Pick Topic
 Read blog/content-tracker.json. Pick the next "pending" topic. If the file does not exist, create it from the keyword matrix below. Mark topic as "in_progress".
 
-### Step 2: Research
-Use WebSearch to find:
-- What ranks 1-5 for the target keyword
-- Gaps in existing content
-- 2-3 recent stats or data points
-- Competitor angles to beat
+### Step 2: Research (TOKEN-EFFICIENT)
+Use WebSearch MAX 3 queries:
+- Query 1: target keyword → see top 3-5 results + snippets
+- Query 2: "{keyword} statistics 2026" → find 2 recent data points
+- Query 3: optional, only if gaps unclear after query 1+2
+
+DO NOT scrape full competitor pages. Snippets from search results are enough.
 
 ### Step 3: Read Template
 Read blog/automatizar-reservas-restaurante-whatsapp.html and copy the EXACT HTML/CSS structure.
 
-### Step 4: Write Post (TEMPLATE-COPY strategy to avoid API timeouts)
+### Step 4: Write Post (TEMPLATE-COPY strategy — TOKEN EFFICIENT)
 
-CRITICAL: Never generate the full HTML in a single Write tool call. The stream will time out. Use this exact workflow:
+CRITICAL: Never generate the full HTML in a single Write tool call. Use `cp` via Bash to avoid loading the template into context (saves ~15k tokens per run).
 
-**4.1 Copy template as base:**
-- Use `Read` to load `blog/automatizar-reservas-restaurante-whatsapp.html` (the approved template).
-- Use `Write` to save a COPY at `blog/{new-slug}.html` with the EXACT same content. Do not modify yet. This creates your working file fast, no generation needed.
+**4.1 Copy template as base (ZERO tokens for content):**
+- Use `Bash` tool with: `cp blog/automatizar-reservas-restaurante-whatsapp.html blog/{new-slug}.html`
+- This creates an exact copy WITHOUT the model having to read or regenerate the template content.
+- If you need to understand specific sections of the template to plan edits, use `Read` with `offset` + `limit` to read only the needed lines (not the whole file).
 
 **4.2 Edit meta tags (one Edit call):**
 - Use `Edit` tool to replace the `<title>`, meta description, canonical, OG tags, JSON-LD headline/description to match the new keyword.
@@ -106,28 +108,45 @@ Every post MUST have:
 - GA4 with Consent Mode: G-HP0VQSEL68
 - robots: index, follow, max-snippet:-1, max-image-preview:large
 
-### Step 6: Publish
-All paths below are RELATIVE to the repo root (the sandbox clones the repo to its working directory, so you are already inside it).
+### Step 6: Publish (PR FLOW — critical for email notifications + audit trail)
 
-1. Save to `blog/{slug}.html`
-2. Add post card to TOP of grid in `blog/index.html`
-3. Add URL to `sitemap.xml` with today's date and priority 0.8
-4. Update `blog/content-tracker.json` (status: "published", date: today)
-5. Append new entry to `blog/social-queue.md` with:
-   - Date (today ISO)
-   - Slug
-   - Vertical (from cluster: gimnasios, restaurantes, belleza, retail, ecommerce, wellness, etc.)
-   - LinkedIn copy in English (generated in Step 7)
-   - Status: "pending"
-6. Commit and push to the routine's working branch (the sandbox auto-creates `claude/...` branch):
-   git add blog/ sitemap.xml
-   git commit -m "blog: {slug}"
-   git push
-7. Create PR with auto-merge enabled:
-   gh pr create --title "blog: {slug}" --body "Automated SEO post by zenia-seo-engine. Auto-merging after checks." --base main
-   gh pr merge --auto --squash
+All paths are RELATIVE to repo root.
 
-The auto-merge flag tells GitHub to merge the PR automatically when checks pass. GitHub Actions will then publish to Post for Me.
+**6.1 Update supporting files:**
+1. `blog/index.html` → add post card at TOP of grid
+2. `sitemap.xml` → add URL entry with today's date, priority 0.8
+3. `blog/content-tracker.json` → mark post as "published" with date
+4. `blog/social-queue.md` → append entry with date, slug, vertical, url, linkedin_en, instagram_es, status: pending
+
+**6.2 Commit to working branch (DO NOT push to main directly):**
+```bash
+git add blog/ sitemap.xml
+git commit -m "blog: {slug}"
+git push origin HEAD
+```
+Note: `HEAD` pushes to the current sandbox branch (`claude/...`), NEVER to main.
+
+**6.3 Create PR with auto-merge:**
+```bash
+gh pr create \
+  --title "blog: {slug}" \
+  --body "Automated SEO post by zenia-seo-engine. Auto-merges after checks. GitHub Actions will handle indexing and social posting." \
+  --base main \
+  --head HEAD
+
+gh pr merge --auto --squash --delete-branch
+```
+
+The `--auto` flag queues auto-merge. When GitHub checks pass, PR merges to main automatically. This triggers:
+- Email to Fabrizzio (PR created + PR merged)
+- GitHub Pages deploy
+- GitHub Actions: IndexNow ping, GSC API request indexing, sitemap ping, internal linking, Post for Me social publishing
+
+**DO NOT** push to main directly. The PR flow is REQUIRED for:
+- Email notifications
+- Audit trail
+- Ability to revert with 1 click
+- Triggering the full GitHub Actions pipeline
 
 IMPORTANT: This agent runs in a Linux sandbox (Claude Code Routines). DO NOT use Windows paths like `c:\Users\...`. Always use relative paths from the repo root.
 

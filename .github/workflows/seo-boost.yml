@@ -1,0 +1,114 @@
+name: SEO Boost — Indexing + Internal Linking
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'blog/*.html'
+      - 'sitemap.xml'
+
+jobs:
+  index-and-link:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Identify new blog posts in this push
+        id: new-posts
+        run: |
+          # Get blog files added in this commit
+          NEW_FILES=$(git diff --name-only --diff-filter=A HEAD~1 HEAD | grep -E '^blog/[^/]+\.html$' | grep -v '^blog/index.html$' || echo "")
+          if [ -z "$NEW_FILES" ]; then
+            echo "No new blog posts in this push."
+            echo "has_new=false" >> $GITHUB_OUTPUT
+          else
+            echo "New posts:"
+            echo "$NEW_FILES"
+            echo "has_new=true" >> $GITHUB_OUTPUT
+            echo "files<<EOF" >> $GITHUB_OUTPUT
+            echo "$NEW_FILES" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Ping Google sitemap
+        if: steps.new-posts.outputs.has_new == 'true'
+        run: |
+          curl -sL "https://www.google.com/ping?sitemap=https://zeniapartners.com/sitemap.xml" || true
+          echo "Google sitemap pinged."
+
+      - name: Submit URLs to IndexNow (Bing + Yandex + Naver)
+        if: steps.new-posts.outputs.has_new == 'true'
+        env:
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+        run: |
+          if [ -z "$INDEXNOW_KEY" ]; then
+            echo "INDEXNOW_KEY not set. Skipping IndexNow."
+            exit 0
+          fi
+
+          # Build URL list
+          URLS='[]'
+          while IFS= read -r file; do
+            if [ -n "$file" ]; then
+              URL="https://zeniapartners.com/${file}"
+              URLS=$(echo "$URLS" | jq --arg u "$URL" '. + [$u]')
+            fi
+          done <<< "${{ steps.new-posts.outputs.files }}"
+
+          PAYLOAD=$(jq -n \
+            --arg host "zeniapartners.com" \
+            --arg key "$INDEXNOW_KEY" \
+            --arg keyloc "https://zeniapartners.com/${INDEXNOW_KEY}.txt" \
+            --argjson urls "$URLS" \
+            '{host: $host, key: $key, keyLocation: $keyloc, urlList: $urls}')
+
+          echo "Submitting to IndexNow:"
+          echo "$PAYLOAD" | jq .
+
+          # Submit to IndexNow (hub that distributes to Bing, Yandex, Naver, Seznam)
+          curl -sL -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d "$PAYLOAD" -w "\nHTTP: %{http_code}\n" || true
+
+      - name: Request indexing via GSC API
+        if: steps.new-posts.outputs.has_new == 'true'
+        env:
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+        run: |
+          if [ -z "$GSC_SERVICE_ACCOUNT_JSON" ]; then
+            echo "GSC_SERVICE_ACCOUNT_JSON not set. Skipping GSC API indexing request."
+            exit 0
+          fi
+
+          npm install googleapis --silent
+          node .github/scripts/gsc-request-indexing.js
+
+      - name: Update internal links (aggressive cross-linking)
+        if: steps.new-posts.outputs.has_new == 'true'
+        run: |
+          node .github/scripts/update-internal-links.js
+
+      - name: Commit internal link updates (if any)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [[ -n $(git status -s blog/) ]]; then
+            git add blog/
+            git commit -m "chore: auto-update internal links for new post"
+            git push
+          else
+            echo "No internal link updates needed."
+          fi

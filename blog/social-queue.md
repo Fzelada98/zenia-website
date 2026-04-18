@@ -17,3 +17,17 @@ Full guide (data, benchmarks, real cases): https://zeniapartners.com/blog/fideli
 #restauranttech #customerretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-04-18 - Retención socios gimnasio estrategias
+
+Annual gym retention just dropped to 66.4% (HFA 2025 Benchmarking Report). One in three members cancels every year, and 50% of those cancellations happen in the first 90 days.
+
+The fix isn't a new promo. It's an onboarding system, churn alerts by behavior, and 1-to-1 WhatsApp at scale with an AI agent that knows each member.
+
+We broke down 7 retention strategies with real numbers, a 30-day onboarding sequence, and a churn alert playbook that recovers 35-50% of at-risk members before they leave.
+
+Full playbook: https://zeniapartners.com/blog/retencion-socios-gimnasio-estrategias.html
+
+#fitnessindustry #memberretention #AI #WhatsAppBusiness
+
+---

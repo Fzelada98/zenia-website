@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-04-17",
+  "lastRun": "2026-04-18",
   "posts": [
     { "slug": "automatizar-reservas-restaurante-whatsapp", "keyword": "automatizar reservas restaurante whatsapp", "tier": 1, "cluster": "restaurantes", "status": "published", "date": "2026-04-16" },
     { "slug": "crm-restaurantes-guia-completa", "keyword": "crm para restaurantes", "tier": 1, "cluster": "restaurantes", "status": "published", "date": "2026-04-16" },
@@ -18,7 +18,7 @@
     { "slug": "automatizacion-retail-tiendas-ia", "keyword": "automatizacion retail tiendas ia", "tier": 2, "cluster": "retail", "status": "published", "date": "2026-04-16" },
     { "slug": "automatizacion-ia-pymes", "keyword": "automatizacion ia pymes", "tier": 1, "cluster": "general", "status": "published", "date": "2026-04-16" },
     { "slug": "fidelizacion-clientes-restaurante-2026", "keyword": "fidelizacion clientes restaurante 2026", "tier": 1, "cluster": "restaurantes", "status": "published", "date": "2026-04-17" },
-    { "slug": "retencion-socios-gimnasio-estrategias", "keyword": "retencion socios gimnasio estrategias", "tier": 1, "cluster": "gimnasios", "status": "pending", "date": null },
+    { "slug": "retencion-socios-gimnasio-estrategias", "keyword": "retencion socios gimnasio estrategias", "tier": 1, "cluster": "gimnasios", "status": "published", "date": "2026-04-18" },
     { "slug": "agenda-online-peluqueria-whatsapp", "keyword": "agenda online peluqueria whatsapp", "tier": 1, "cluster": "belleza", "status": "pending", "date": null },
     { "slug": "automatizar-cobros-gimnasio-whatsapp", "keyword": "automatizar cobros gimnasio whatsapp", "tier": 1, "cluster": "gimnasios", "status": "pending", "date": null },
     { "slug": "marketing-digital-restaurantes-pequenos", "keyword": "marketing digital restaurantes pequenos", "tier": 1, "cluster": "restaurantes", "status": "pending", "date": null },

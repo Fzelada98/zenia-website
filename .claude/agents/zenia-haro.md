@@ -109,68 +109,78 @@ Skip queries that don't match. Quality > quantity.
 - Match the outlet's tone (Forbes formal, TechCrunch casual-tech, Entrepreneur actionable)
 - If asking for a quote, make it quotable (standalone sentence journalists can pull)
 
-### Step 4: Save draft
+### Step 4: QUALITY GATE (VERY strict — we auto-send these)
 
-Save each drafted reply to `reports/haro-drafts/{date}/query-{N}-{slug}.md` with:
+Before sending, each draft MUST pass ALL these gates:
 
-```markdown
-# HARO Reply — {outlet}
+1. **Outlet DA >= 70** (Forbes, TechCrunch, Entrepreneur, Inc, Fast Company, Business Insider, WSJ, NYT, BBC, Wired, Mashable, The Verge, HBR, Bloomberg)
+2. **Topic match score >= 9/10** — Fabrizzio MUST be a GENUINE deep expert on this specific query
+3. **Reply has specific numbers + concrete examples** (not generic advice)
+4. **Word count 80-180**
+5. **NO em-dashes, NO "chatbot", NO hype words**
+6. **Signature block present**
+7. **Deadline > 4 hours away**
+8. **MAX 2 auto-sends per day** (strict rate limit to protect reputation)
+9. **First 2 weeks monitoring:** be EXTRA conservative. Only outlets DA 80+.
 
-**Query:** [original journalist query]
-**Source:** HARO / Connectively / Qwoted
-**Outlet:** TechCrunch
-**Deadline:** 2026-04-20 17:00 UTC
-**Estimated DA:** 92
-**Topic match score:** 8/10
+If a draft fails ANY gate, save to `reports/haro-drafts/{date}/REJECTED-query-N.md` with reason, do NOT send.
 
----
+### Step 5: AUTO-SEND via Resend API
 
-## Reply
+For drafts that pass all gates, send automatically via Resend API.
 
-[The draft reply text, 80-180 words]
+**Resend API call:**
+```
+POST https://api.resend.com/emails
+Headers:
+  Authorization: Bearer {RESEND_API_KEY}  (from env)
+  Content-Type: application/json
 
-— Fabrizzio Zelada, Founder of Zenia Partners (zeniapartners.com)
-
----
-
-## Send instructions
-1. Copy the reply text above
-2. Reply to journalist at: [email/platform URL]
-3. Subject line suggestion: "Expert source: [angle]"
-4. Attach credentials if needed
+Body:
+{
+  "from": "Fabrizzio Zelada <fabrizzio@zeniapartners.com>",
+  "to": ["{journalist_reply_email}"],
+  "reply_to": "zeladauriartef@gmail.com",
+  "subject": "Expert source: {angle}",
+  "text": "{reply body}\n\n— Fabrizzio Zelada\nFounder, Zenia Partners\nhttps://zeniapartners.com\nhttps://www.linkedin.com/in/fabrizzio-zelada/"
+}
 ```
 
-### Step 5: Summarize
+The `journalist_reply_email` comes from the HARO query (usually `query-XXXXX@helpareporter.com` which relays to the journalist).
 
-After processing all queries, create a summary at `reports/haro-drafts/{date}/_summary.md`:
+**If Resend fails or RESEND_API_KEY is missing:** save draft to `reports/haro-drafts/{date}/PENDING-query-N.md` and log error. Don't block other drafts.
+
+### Step 6: Log sent replies
+
+After each successful send, save to `reports/haro-sent/YYYY-MM/YYYY-MM-DD.md`:
 
 ```markdown
-# HARO Drafts — {date}
+## {HH:MM} — {outlet} (DA {X})
 
-Total queries reviewed: X
-Drafts ready to send: Y (matched + high DA)
-Skipped: Z (off-topic or low DA)
+**Query:** [short version, 100 chars]
+**Sent to:** query-XXXXX@helpareporter.com
+**Subject:** [subject line]
 
-## Ready to send (priority order):
-1. [outlet] — [topic] — DA X — deadline Y
-2. ...
+### Reply sent:
+[full reply text]
 
-## Sending tips:
-- Hit "send" on the top 3 highest-DA drafts first
-- Each takes 1 min to send, total 10-15 min/day
-- Expected response rate: 5-10% (1-2 of 20-30 drafts/month published)
+---
 ```
 
-### Step 6: Commit drafts
+This is our audit trail. One file per day.
+
+### Step 7: Commit and PR
 
 ```bash
-cd /workspace
-git add reports/haro-drafts/
-git commit -m "chore(haro): drafts for {date}"
-git push
+git add reports/haro-sent/ reports/haro-drafts/
+git commit -m "haro: sent X replies, Y drafts saved on {date}"
+git push origin HEAD
+
+gh pr create --title "haro: auto-send log {date}" --body "Auto-processed HARO queries. Sent: X replies. Rejected: Y. See reports/haro-sent/{date}.md"
+gh pr merge --auto --squash
 ```
 
-Fabrizzio gets a GitHub email, reviews drafts (5-10 min), sends them from his email client. No agent-initiated email sending for safety (avoid spam flags).
+Fabrizzio gets email of PR merged with audit trail. No manual action needed.
 
 ## Expected results
 - Month 1-2: 0-5 backlinks from drafts published

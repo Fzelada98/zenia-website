@@ -1,0 +1,46 @@
+name: SEO Weekly Report
+
+on:
+  schedule:
+    # Every Sunday at 23:00 UTC (00:00 CET Monday)
+    - cron: '0 23 * * 0'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  generate-report:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install googleapis --silent
+
+      - name: Generate weekly SEO report
+        env:
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+          GSC_SITE_URL: 'sc-domain:zeniapartners.com'
+          GSC_SITE_LABEL: 'Zenia Partners'
+          BLOG_DIR: 'blog'
+          BACKEND_URL: 'https://zenia-backend-y6hp.onrender.com'
+        run: node .github/scripts/seo-weekly-report.js
+
+      - name: Commit and push report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add reports/seo-weekly/
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "report: weekly SEO $(date +%Y-%m-%d)"
+            git push
+          fi

@@ -56,19 +56,36 @@ Use WebSearch to find:
 ### Step 3: Read Template
 Read blog/automatizar-reservas-restaurante-whatsapp.html and copy the EXACT HTML/CSS structure.
 
-### Step 4: Write Post in CHUNKS (avoid API timeout)
+### Step 4: Write Post (TEMPLATE-COPY strategy to avoid API timeouts)
 
-IMPORTANT: Do NOT write the entire HTML in one go. Split into chunks and save incrementally:
+CRITICAL: Never generate the full HTML in a single Write tool call. The stream will time out. Use this exact workflow:
 
-**Chunk 1:** Write HEAD section + opening body + nav + header (first ~500 words of HTML). Save file with `Write` tool.
-**Chunk 2:** Append H2 sections 1-2 using `Edit` tool. ~600 words.
-**Chunk 3:** Append H2 sections 3-4 using `Edit` tool. ~600 words.
-**Chunk 4:** Append final H2 + CTA + related posts + footer closing. ~400 words.
+**4.1 Copy template as base:**
+- Use `Read` to load `blog/automatizar-reservas-restaurante-whatsapp.html` (the approved template).
+- Use `Write` to save a COPY at `blog/{new-slug}.html` with the EXACT same content. Do not modify yet. This creates your working file fast, no generation needed.
 
-Target total: 1800-2200 words (not 3000). Quality over length.
+**4.2 Edit meta tags (one Edit call):**
+- Use `Edit` tool to replace the `<title>`, meta description, canonical, OG tags, JSON-LD headline/description to match the new keyword.
 
-Required:
-- Actionable content: step-by-step, checklists, real numbers
+**4.3 Edit header (one Edit call):**
+- Use `Edit` tool to replace the H1 + lead paragraph with new content (keyword in H1, keyword in first 100 words).
+
+**4.4 Edit body sections one by one (4-5 separate Edit calls):**
+- Each `Edit` replaces ONE H2 section (title + paragraphs + any lists) with new content.
+- Each section ~300-400 words max.
+- Keep the HTML structure intact (class names, spans, etc).
+
+**4.5 Edit CTA + related posts (one Edit call):**
+- Replace the CTA text and the 3 related post links.
+
+**4.6 Edit footer date + meta if needed (one Edit call):**
+- Update the date in blog-meta and any article schema datePublished.
+
+Target total: 1500-2000 words (quality over length).
+
+This strategy splits generation across 8-10 small Edit calls instead of one giant Write. No single call produces more than ~500 words of output. Timeouts avoided.
+
+Required per post:
 - H1 with primary keyword + text-gradient span
 - 4-5 H2 sections minimum
 - Keyword in first 100 words

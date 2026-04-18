@@ -113,18 +113,57 @@ All paths below are RELATIVE to the repo root (the sandbox clones the repo to it
 2. Add post card to TOP of grid in `blog/index.html`
 3. Add URL to `sitemap.xml` with today's date and priority 0.8
 4. Update `blog/content-tracker.json` (status: "published", date: today)
-5. Deploy from repo root (NOT from a Windows path):
+5. Append new entry to `blog/social-queue.md` with:
+   - Date (today ISO)
+   - Slug
+   - Vertical (from cluster: gimnasios, restaurantes, belleza, retail, ecommerce, wellness, etc.)
+   - LinkedIn copy in English (generated in Step 7)
+   - Status: "pending"
+6. Commit and push to the routine's working branch (the sandbox auto-creates `claude/...` branch):
    git add blog/ sitemap.xml
    git commit -m "blog: {slug}"
-   git push origin main
+   git push
+7. Create PR with auto-merge enabled:
+   gh pr create --title "blog: {slug}" --body "Automated SEO post by zenia-seo-engine. Auto-merging after checks." --base main
+   gh pr merge --auto --squash
+
+The auto-merge flag tells GitHub to merge the PR automatically when checks pass. GitHub Actions will then publish to Post for Me.
 
 IMPORTANT: This agent runs in a Linux sandbox (Claude Code Routines). DO NOT use Windows paths like `c:\Users\...`. Always use relative paths from the repo root.
 
-### Step 7: LinkedIn Post (English)
+### Step 7: LinkedIn Post (English) — saved to social-queue.md
+
 Generate a LinkedIn post in ENGLISH (Zenia LinkedIn always in English):
-- 3-5 lines, hook + value + link
-- Save to blog/social-queue.md (append, do not overwrite)
-- If Post for Me API is available, publish directly
+- 3-5 lines, hook + value + link to the new blog
+- Follow style of previous posts (check existing social-queue.md entries)
+
+Format of the entry in `blog/social-queue.md` (append at the TOP of the file):
+
+```
+---
+date: 2026-04-18
+slug: retencion-socios-gimnasio-estrategias
+vertical: gimnasios
+url: https://zeniapartners.com/blog/retencion-socios-gimnasio-estrategias.html
+linkedin_en: |
+  3-5 lines hook in English, value, CTA.
+  https://zeniapartners.com/blog/retencion-socios-gimnasio-estrategias.html
+instagram_es: |
+  3-5 lines in Spanish, casual tone, emojis ok.
+  https://zeniapartners.com/blog/retencion-socios-gimnasio-estrategias.html
+status: pending
+---
+```
+
+DO NOT call Post for Me API from inside the agent. The GitHub Action (`.github/workflows/post-to-social.yml`) will read new entries from social-queue.md when the PR merges to main and publish via Post for Me automatically.
+
+### Optimal posting times by vertical (GitHub Action handles scheduling):
+- gimnasios: 07:00 CET or 17:00 CET
+- restaurantes: 10:00 CET (next day)
+- belleza/estetica: 09:00 CET (next day)
+- retail/ecommerce: 08:00 CET or 12:00 CET
+- wellness/clinicas: 09:00 CET (next day)
+- servicios profesionales (abogados, inmobiliarias): 09:00 CET Tuesday-Thursday
 
 ## Keyword Matrix
 

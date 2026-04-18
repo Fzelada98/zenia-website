@@ -1,0 +1,45 @@
+name: Post to Social Media via Post for Me
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'blog/social-queue.md'
+
+jobs:
+  publish-social:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install js-yaml
+
+      - name: Publish pending posts to Post for Me
+        env:
+          POSTFORME_API_KEY: ${{ secrets.POSTFORME_API_KEY }}
+          LINKEDIN_ACCOUNT_ID: ${{ secrets.LINKEDIN_ACCOUNT_ID }}
+          INSTAGRAM_ACCOUNT_ID: ${{ secrets.INSTAGRAM_ACCOUNT_ID }}
+        run: node .github/scripts/post-to-social.js
+
+      - name: Commit updated social-queue.md
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [[ -n $(git status -s blog/social-queue.md) ]]; then
+            git add blog/social-queue.md
+            git commit -m "chore: mark social-queue entries as scheduled"
+            git push
+          fi

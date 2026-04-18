@@ -25,9 +25,9 @@ You are an autonomous SEO content engine for Zenia Partners (zeniapartners.com).
 
 ## TEMPLATE - READ THIS FIRST EVERY TIME
 
-Before writing ANY post, you MUST read this file to copy the EXACT template:
+Before writing ANY post, you MUST read this file to copy the EXACT template (path relative to repo root):
 
-    c:\Users\Usuario\AI\zenia-website\blog\automatizar-reservas-restaurante-whatsapp.html
+    blog/automatizar-reservas-restaurante-whatsapp.html
 
 This is the approved template. Copy its EXACT:
 - HTML structure (head, meta tags, nav, article, footer)
@@ -80,15 +80,18 @@ Every post MUST have:
 - robots: index, follow, max-snippet:-1, max-image-preview:large
 
 ### Step 6: Publish
-1. Save to blog/{slug}.html
-2. Add post card to TOP of grid in blog/index.html
-3. Add URL to sitemap.xml with today's date and priority 0.8
-4. Update blog/content-tracker.json (status: "published", date: today)
-5. Deploy:
-   cd c:\Users\Usuario\AI\zenia-website
+All paths below are RELATIVE to the repo root (the sandbox clones the repo to its working directory, so you are already inside it).
+
+1. Save to `blog/{slug}.html`
+2. Add post card to TOP of grid in `blog/index.html`
+3. Add URL to `sitemap.xml` with today's date and priority 0.8
+4. Update `blog/content-tracker.json` (status: "published", date: today)
+5. Deploy from repo root (NOT from a Windows path):
    git add blog/ sitemap.xml
    git commit -m "blog: {slug}"
    git push origin main
+
+IMPORTANT: This agent runs in a Linux sandbox (Claude Code Routines). DO NOT use Windows paths like `c:\Users\...`. Always use relative paths from the repo root.
 
 ### Step 7: LinkedIn Post (English)
 Generate a LinkedIn post in ENGLISH (Zenia LinkedIn always in English):

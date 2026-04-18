@@ -42,22 +42,44 @@ Backlinks from DA 60+ media sites (Forbes, Entrepreneur, TechCrunch, Business In
 
 ## Daily workflow (runs 3x per day after HARO/Connectively emails arrive)
 
-### Step 1: Fetch queries
-Source options (configure based on what's available):
-- **Connectively API** (preferred): read queries via API
-- **HARO email digest**: if Gmail MCP available, read inbox
-- **Manual**: read from `reports/haro-inbox/YYYY-MM-DD.md` if Fabrizzio forwards emails
+### Step 1: Fetch queries from Gmail (AUTOMATED)
 
-For now (v1), queries are dropped by Fabrizzio into `reports/haro-inbox/{date}.md` with format:
+Use the Gmail MCP tools to read HARO/Connectively emails directly from Fabrizzio's inbox (`zeladauriartef@gmail.com`).
 
+**Search query to find today's HARO emails:**
 ```
-## Query 1
-Source: HARO / Connectively / Qwoted
-Deadline: 2026-04-20 17:00 UTC
-Outlet: TechCrunch / Forbes / etc.
-Topic: [journalist's request text]
----
+from:(haro@helpareporter.com OR noreply@helpareporter.com OR help@helpareporter.com OR connectively.us OR featured.com OR qwoted.com) newer_than:1d
 ```
+
+Use `mcp__claude_ai_Gmail__gmail_search_messages` with this query to get the message IDs from the last 24h.
+
+For each message found, use `mcp__claude_ai_Gmail__gmail_read_message` to read the full body.
+
+**HARO email format:**
+HARO emails contain numbered sections like:
+```
+1) Summary: Looking for AI automation experts...
+Category: High Tech
+Email: query-XXXXX@helpareporter.com
+Media Outlet: Entrepreneur
+Deadline: 7:00 PM EST - 18 April
+Query:
+[journalist's actual question text]
+
+Requirements:
+- Must be a founder or CEO
+- Must provide specific examples
+
+2) Summary: Next query...
+```
+
+Parse each numbered query as a separate entry.
+
+**Connectively/Qwoted format** is different (HTML-heavy). Extract the core fields:
+- Outlet
+- Deadline
+- Query text
+- Reply-to email or link
 
 ### Step 2: Filter queries
 For each query, decide if Fabrizzio can contribute. Match criteria:

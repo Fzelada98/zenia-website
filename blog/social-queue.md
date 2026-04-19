@@ -6,6 +6,8 @@ Append new LinkedIn drafts at the BOTTOM. Do not overwrite.
 
 ## 2026-04-17 - Fidelización clientes restaurante 2026
 
+<!-- SCHEDULED:sp_M2qpbs4CYUVbrpyVrQO8 at 2026-04-20T08:00:00.000Z -->
+
 77.4% of restaurant guests never come back. The 22.6% who do return are worth 26x more in lifetime value.
 
 Yet 78.8% annual guest churn costs each location ~$375K/year in lost revenue. That's not a marketing problem. It's a retention system problem.
@@ -20,6 +22,8 @@ Full guide (data, benchmarks, real cases): https://zeniapartners.com/blog/fideli
 
 ## 2026-04-18 - Retención socios gimnasio estrategias
 
+<!-- SCHEDULED:sp_XvpolfFzwVm1opYwGoy at 2026-04-19T15:00:00.000Z -->
+
 Annual gym retention just dropped to 66.4% (HFA 2025 Benchmarking Report). One in three members cancels every year, and 50% of those cancellations happen in the first 90 days.
 
 The fix isn't a new promo. It's an onboarding system, churn alerts by behavior, and 1-to-1 WhatsApp at scale with an AI agent that knows each member.
@@ -33,6 +37,8 @@ Full playbook: https://zeniapartners.com/blog/retencion-socios-gimnasio-estrateg
 ---
 
 ## 2026-04-19 - Agenda online peluquería WhatsApp
+
+<!-- SCHEDULED:sp_YvFjYP05XmQeaC8qQE6l at 2026-04-20T07:00:00.000Z -->
 
 Hair salons lose about 50% of inbound bookings when they take more than 15 minutes to reply on WhatsApp. Add a 15-25% no-show rate and 62% average chair occupancy, and that is roughly 4.000 to 10.000 euros per month walking next door.
 

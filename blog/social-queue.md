@@ -31,3 +31,15 @@ Full playbook: https://zeniapartners.com/blog/retencion-socios-gimnasio-estrateg
 #fitnessindustry #memberretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-04-19 - Agenda online peluquería WhatsApp
+
+Hair salons lose about 50% of inbound bookings when they take more than 15 minutes to reply on WhatsApp. Add a 15-25% no-show rate and 62% average chair occupancy, and that is roughly 4.000 to 10.000 euros per month walking next door.
+
+An online booking agenda wired to WhatsApp with a personalized AI agent closes the loop: 8-second replies 24/7, deposits inside the chat, automatic reminders at 48h / 24h / 2h, and a dynamic waitlist that fills last-minute gaps.
+
+Full guide (real metrics, ROI math, 4-week rollout): https://zeniapartners.com/blog/agenda-online-peluqueria-whatsapp.html
+
+#beautyindustry #CRM #AI #WhatsAppBusiness
+
+---

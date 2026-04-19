@@ -291,20 +291,79 @@ function renderEmail(r, type) {
   </tr></table>
   <div style="color:#94a3b8;font-size:12px;line-height:1.7;">
     Generado automáticamente cada lunes<br>
-    <a href="https://zeniapartners.com" style="color:#60a5fa;text-decoration:none;">zeniapartners.com</a>
+    <a href="https://zeniapartners.com" style="color:#60a5fa;text-decoration:none;">zeniapartners.com</a><br><br>
+    <span style="color:#64748b;font-size:11px;">Este correo es parte de tu servicio con Zenia Partners.</span><br>
+    <a href="https://zeniapartners.com/unsubscribe?email=${encodeURIComponent(TO_EMAIL)}" style="color:#64748b;text-decoration:underline;font-size:11px;">Dejar de recibir estos informes</a>
   </div>
 </td></tr>
 
 </table></td></tr></table></body></html>`;
 }
 
-async function sendEmail(html, subject) {
+function renderPlainText(r, type) {
+  const isCEO = type === 'ceo';
+  const greeting = isCEO ? 'Hola Fabrizzio' : 'Hola Anthony';
+  const siteLabel = SITE_LABEL;
+  const buckets = bucketQueries(r.topQueries);
+
+  let txt = `${greeting},\n\n`;
+  txt += `${isCEO ? 'Dashboard CEO' : 'Tu informe semanal'} de ${siteLabel} — semana ${r.weekRange}\n`;
+  txt += '='.repeat(60) + '\n\n';
+
+  txt += 'KPIs PRINCIPALES\n';
+  txt += `- Impresiones: ${fmt(r.current.impressions)} (${r.changes.impressions})\n`;
+  txt += `- Clicks: ${fmt(r.current.clicks)} (${r.changes.clicks})\n`;
+  txt += `- CTR: ${r.current.ctr.toFixed(2)}% (${r.changes.ctr})\n`;
+  txt += `- Posicion media: ${r.current.position.toFixed(1)} (${r.changes.position})\n\n`;
+
+  txt += 'POSICIONAMIENTO\n';
+  txt += `- Top 10: ${buckets.top10.length} queries\n`;
+  txt += `- Posiciones 11-30: ${buckets.mid.length} queries\n`;
+  txt += `- Posiciones 31+: ${buckets.low.length} queries\n\n`;
+
+  if (buckets.top10.length) {
+    txt += 'QUERIES EN TOP 10:\n';
+    buckets.top10.forEach(q => {
+      txt += `- ${q.query} (${q.impressions} impr, pos ${q.position.toFixed(1)})\n`;
+    });
+    txt += '\n';
+  }
+
+  if (buckets.mid.length) {
+    txt += 'QUERIES POSICIONES 11-30:\n';
+    buckets.mid.forEach(q => {
+      txt += `- ${q.query} (${q.impressions} impr, pos ${q.position.toFixed(1)})\n`;
+    });
+    txt += '\n';
+  }
+
+  txt += `CONTENIDO PUBLICADO: ${r.newPostsCount} posts nuevos esta semana\n`;
+  txt += `INDEXACION: ${r.sitemapIndexed} / ${r.sitemapSubmitted} paginas en Google\n\n`;
+
+  txt += 'Este informe se genera automaticamente cada lunes.\n';
+  txt += 'Informe completo en HTML con graficos en la version visual de este correo.\n\n';
+  txt += 'Zenia Partners\n';
+  txt += 'https://zeniapartners.com\n';
+  txt += `Para dejar de recibir estos informes, responde STOP a este correo.\n`;
+
+  return txt;
+}
+
+async function sendEmail(html, text, subject) {
   return new Promise((resolve, reject) => {
     const payload = {
       from: FROM_EMAIL,
       to: [TO_EMAIL],
+      reply_to: 'reports@zeniapartners.com',
       subject,
-      html
+      html,
+      text,
+      headers: {
+        'List-Unsubscribe': '<mailto:reports@zeniapartners.com?subject=unsubscribe>, <https://zeniapartners.com/unsubscribe>',
+        'List-Unsubscribe-Post': 'List-Unsubscribe=One-Click',
+        'Precedence': 'bulk',
+        'X-Entity-Ref-ID': `zenia-weekly-${Date.now()}`
+      }
     };
     if (BCC_EMAIL) payload.bcc = [BCC_EMAIL];
 
@@ -348,12 +407,13 @@ async function main() {
   console.log('Parsing report:', reportPath);
   const r = parseReport(reportPath);
   const html = renderEmail(r, REPORT_TYPE);
+  const text = renderPlainText(r, REPORT_TYPE);
 
   const subject = REPORT_TYPE === 'ceo'
-    ? `Dashboard CEO ${SITE_LABEL} — Semana ${r.weekRange}`
-    : `Tu informe semanal — ${SITE_LABEL} (${r.weekRange})`;
+    ? `Informe semanal ${SITE_LABEL} — ${r.weekRange}`
+    : `Informe semanal ${SITE_LABEL} — ${r.weekRange}`;
 
-  await sendEmail(html, subject);
+  await sendEmail(html, text, subject);
 }
 
 main().catch(err => {

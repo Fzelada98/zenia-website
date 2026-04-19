@@ -161,7 +161,7 @@ async function main() {
 
     try {
       const result = await postApi({
-        account_ids: [LINKEDIN_ID],
+        social_accounts: [LINKEDIN_ID],
         caption: entry.body,
         scheduled_at: scheduledAt
       });

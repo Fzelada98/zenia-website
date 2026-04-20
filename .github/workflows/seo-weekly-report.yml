@@ -49,7 +49,7 @@ jobs:
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           TO_EMAIL: 'fabrizzio.zelada@zeniapartners.com'
-          FROM_EMAIL: 'Zenia Partners <onboarding@resend.dev>'
+          FROM_EMAIL: 'Zenia Partners <reports@zeniapartners.com>'
           GSC_SITE_LABEL: 'Zenia Partners'
           REPORT_TYPE: 'ceo'
         run: node .github/scripts/send-weekly-email.js

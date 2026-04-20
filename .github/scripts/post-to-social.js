@@ -60,6 +60,9 @@ const OPTIMAL_TIMES = {
   b2b: { hour: 7, minute: 0 }             // 09:00 CET
 };
 
+// Track days already taken across this batch (max 1 post per day)
+const occupiedDays = new Set();
+
 function getScheduledAt(vertical) {
   const cfg = OPTIMAL_TIMES[vertical] || OPTIMAL_TIMES.b2b;
   const now = new Date();
@@ -67,11 +70,27 @@ function getScheduledAt(vertical) {
     now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(),
     cfg.hour, cfg.minute, 0
   ));
+
   // If target time today already passed (with 10 min buffer), push to tomorrow
   if (scheduled.getTime() - now.getTime() < 10 * 60 * 1000) {
     scheduled.setUTCDate(scheduled.getUTCDate() + 1);
   }
-  return scheduled.toISOString();
+
+  // Enforce max 1 post per day: if day already taken, push to next day(s) until free
+  while (true) {
+    const dayKey = scheduled.toISOString().split('T')[0];
+    // Skip weekends (Sat=6, Sun=0) for B2B content
+    const dayOfWeek = scheduled.getUTCDay();
+    if (dayOfWeek === 0 || dayOfWeek === 6) {
+      scheduled.setUTCDate(scheduled.getUTCDate() + 1);
+      continue;
+    }
+    if (!occupiedDays.has(dayKey)) {
+      occupiedDays.add(dayKey);
+      return scheduled.toISOString();
+    }
+    scheduled.setUTCDate(scheduled.getUTCDate() + 1);
+  }
 }
 
 function postApi(payload) {

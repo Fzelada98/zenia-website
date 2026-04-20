@@ -1,0 +1,77 @@
+name: Zenia SEO Health — Daily Audit
+
+on:
+  schedule:
+    # 06:43 UTC daily = 08:43 Madrid CET (winter) / 08:43 Madrid CEST (summer)
+    # Runs BEFORE the Anthropic Routine at 11:03 Madrid.
+    - cron: '43 6 * * *'
+  workflow_dispatch:
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run SEO health check
+        id: health
+        continue-on-error: true
+        run: node .github/scripts/seo-health-check.js > health-report.json 2> health-stderr.log
+
+      - name: Upload report artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: seo-health-${{ github.run_id }}
+          path: health-report.json
+          retention-days: 30
+
+      - name: Open GitHub issue on FAIL
+        if: steps.health.outputs.verdict == 'FAIL'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TITLE="[SEO Health] FAIL — $(date -u +%Y-%m-%d) — ${{ steps.health.outputs.critical_count }} critical issues"
+          BODY=$(cat <<'EOF'
+          Automated SEO health check detected critical issues on zeniapartners.com.
+
+          ## Report summary
+
+          - Verdict: **FAIL**
+          - Critical issues: ${{ steps.health.outputs.critical_count }}
+          - Warnings: ${{ steps.health.outputs.warning_count }}
+
+          Full JSON report attached as workflow artifact `seo-health-${{ github.run_id }}`.
+
+          ## Next steps
+
+          1. Download the report artifact from the workflow run
+          2. Inspect `criticalIssues[]`:
+             - `canonical-missing` — page lacks `<link rel="canonical">` (add to the HTML head or template)
+             - `http` — page returned non-200 (check GitHub Pages / Cloudflare deploy)
+             - `sitemap` — `sitemap.xml` broken
+          3. Fix in code, push, verify with workflow_dispatch re-run
+
+          EOF
+          )
+          echo "$BODY" | gh issue create --title "$TITLE" --body-file - --label "seo,automated" --assignee "Fzelada98"
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "## SEO Health — $(date -u +%Y-%m-%dT%H:%M:%SZ)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- Verdict: **${{ steps.health.outputs.verdict || 'ERROR' }}**" >> $GITHUB_STEP_SUMMARY
+          echo "- Critical issues: ${{ steps.health.outputs.critical_count || '?' }}" >> $GITHUB_STEP_SUMMARY
+          echo "- Warnings: ${{ steps.health.outputs.warning_count || '?' }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Artifact: \`seo-health-${{ github.run_id }}\`" >> $GITHUB_STEP_SUMMARY

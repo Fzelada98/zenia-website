@@ -1,12 +1,16 @@
-name: SEO Boost — Indexing + Internal Linking
+name: Zenia SEO Boost — Indexing + Internal Linking
 
 on:
   push:
     branches:
       - main
     paths:
-      - 'blog/*.html'
+      - 'blog/**'
+      - 'es/**'
+      - 'index.html'
+      - 'about.html'
       - 'sitemap.xml'
+  workflow_dispatch:
 
 jobs:
   index-and-link:
@@ -26,31 +30,11 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Identify new blog posts in this push
-        id: new-posts
-        run: |
-          # Get blog files added in this commit
-          NEW_FILES=$(git diff --name-only --diff-filter=A HEAD~1 HEAD | grep -E '^blog/[^/]+\.html$' | grep -v '^blog/index.html$' || echo "")
-          if [ -z "$NEW_FILES" ]; then
-            echo "No new blog posts in this push."
-            echo "has_new=false" >> $GITHUB_OUTPUT
-          else
-            echo "New posts:"
-            echo "$NEW_FILES"
-            echo "has_new=true" >> $GITHUB_OUTPUT
-            echo "files<<EOF" >> $GITHUB_OUTPUT
-            echo "$NEW_FILES" >> $GITHUB_OUTPUT
-            echo "EOF" >> $GITHUB_OUTPUT
-          fi
-
-      - name: Ping Google sitemap
-        if: steps.new-posts.outputs.has_new == 'true'
-        run: |
-          curl -sL "https://www.google.com/ping?sitemap=https://zeniapartners.com/sitemap.xml" || true
-          echo "Google sitemap pinged."
+      - name: Build prioritized URL list from sitemap
+        id: urls
+        run: node .github/scripts/build-url-list.js
 
       - name: Submit URLs to IndexNow (Bing + Yandex + Naver)
-        if: steps.new-posts.outputs.has_new == 'true'
         env:
           INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
         run: |
@@ -59,15 +43,7 @@ jobs:
             exit 0
           fi
 
-          # Build URL list
-          URLS='[]'
-          while IFS= read -r file; do
-            if [ -n "$file" ]; then
-              URL="https://zeniapartners.com/${file}"
-              URLS=$(echo "$URLS" | jq --arg u "$URL" '. + [$u]')
-            fi
-          done <<< "${{ steps.new-posts.outputs.files }}"
-
+          URLS=$(cat urls.json)
           PAYLOAD=$(jq -n \
             --arg host "zeniapartners.com" \
             --arg key "$INDEXNOW_KEY" \
@@ -75,16 +51,12 @@ jobs:
             --argjson urls "$URLS" \
             '{host: $host, key: $key, keyLocation: $keyloc, urlList: $urls}')
 
-          echo "Submitting to IndexNow:"
-          echo "$PAYLOAD" | jq .
-
-          # Submit to IndexNow (hub that distributes to Bing, Yandex, Naver, Seznam)
+          echo "Submitting ${{ steps.urls.outputs.count }} URLs to IndexNow..."
           curl -sL -X POST "https://api.indexnow.org/indexnow" \
             -H "Content-Type: application/json; charset=utf-8" \
             -d "$PAYLOAD" -w "\nHTTP: %{http_code}\n" || true
 
       - name: Request indexing via GSC API
-        if: steps.new-posts.outputs.has_new == 'true'
         env:
           GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
         run: |
@@ -96,12 +68,22 @@ jobs:
           npm install googleapis --silent
           node .github/scripts/gsc-request-indexing.js
 
+      - name: Identify new blog posts (for internal linking)
+        id: new-posts
+        run: |
+          NEW_FILES=$(git diff --name-only --diff-filter=A HEAD~1 HEAD | grep -E '^blog/[^/]+\.html$' | grep -v '^blog/index.html$' || echo "")
+          if [ -z "$NEW_FILES" ]; then
+            echo "has_new=false" >> $GITHUB_OUTPUT
+          else
+            echo "has_new=true" >> $GITHUB_OUTPUT
+          fi
+
       - name: Update internal links (aggressive cross-linking)
         if: steps.new-posts.outputs.has_new == 'true'
-        run: |
-          node .github/scripts/update-internal-links.js
+        run: node .github/scripts/update-internal-links.js
 
       - name: Commit internal link updates (if any)
+        if: steps.new-posts.outputs.has_new == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"

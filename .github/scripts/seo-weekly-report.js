@@ -169,7 +169,7 @@ async function main() {
   const topQueries = await querySearchAnalytics(webmasters, SITE_URL, startCurrent, endCurrent, ['query'], 25);
   const topPages = await querySearchAnalytics(webmasters, SITE_URL, startCurrent, endCurrent, ['page'], 15);
 
-  // Performance by country (para visibilidad de mercados)
+  // Performance by country (para visibilidad de mercados) — usado cuando NO hay locale mode
   const countryRows = await querySearchAnalytics(webmasters, SITE_URL, startCurrent, endCurrent, ['country'], 20);
   const countryPrevRows = await querySearchAnalytics(webmasters, SITE_URL, startPrevious, endPrevious, ['country'], 20);
   const countryPrevMap = new Map(countryPrevRows.map(r => [r.keys[0], r]));
@@ -190,6 +190,72 @@ async function main() {
     })
     .sort((a, b) => b.impressions - a.impressions)
     .slice(0, 12);
+
+  // Performance by locale/subdomain (para sitios con path-based localization)
+  // LOCALES_LIST format: "pe:PER,es:ESP,no:NOR,..."  (locale prefix : expected country code)
+  const LOCALE_MODE = process.env.REPORT_LOCALE_MODE === '1';
+  const LOCALES_LIST = process.env.LOCALES_LIST || '';
+  let localeStats = [];
+  if (LOCALE_MODE && LOCALES_LIST) {
+    const localePairs = LOCALES_LIST.split(',').map(s => {
+      const [loc, country] = s.split(':');
+      return { locale: loc.trim(), expectedCountry: country.trim() };
+    });
+
+    // Query page+country for current and previous weeks
+    const pageCountryCurrent = await querySearchAnalytics(webmasters, SITE_URL, startCurrent, endCurrent, ['page', 'country'], 25000);
+    const pageCountryPrev = await querySearchAnalytics(webmasters, SITE_URL, startPrevious, endPrevious, ['page', 'country'], 25000);
+
+    function localeFromUrl(url) {
+      const path = url.replace(/^https?:\/\/[^/]+/, '');
+      const m = path.match(/^\/([a-z]{2})(?:\/|$)/);
+      if (m && localePairs.some(p => p.locale === m[1])) return m[1];
+      return 'en'; // default (no prefix)
+    }
+
+    function aggregateByLocale(rows) {
+      const agg = {};
+      for (const r of rows) {
+        const url = r.keys[0];
+        const country = (r.keys[1] || '').toUpperCase();
+        const locale = localeFromUrl(url);
+        if (!agg[locale]) agg[locale] = { impressions: 0, clicks: 0, positionSum: 0, impByCountry: {} };
+        const imp = r.impressions || 0;
+        const clk = r.clicks || 0;
+        const pos = r.position || 0;
+        agg[locale].impressions += imp;
+        agg[locale].clicks += clk;
+        agg[locale].positionSum += pos * imp;
+        agg[locale].impByCountry[country] = (agg[locale].impByCountry[country] || 0) + imp;
+      }
+      return agg;
+    }
+
+    const curAgg = aggregateByLocale(pageCountryCurrent);
+    const prevAgg = aggregateByLocale(pageCountryPrev);
+
+    // Include EN (default, no prefix) as its own row too — expectedCountry = USA
+    const allPairs = [{ locale: 'en', expectedCountry: 'USA' }, ...localePairs];
+
+    localeStats = allPairs.map(({ locale, expectedCountry }) => {
+      const cur = curAgg[locale] || { impressions: 0, clicks: 0, positionSum: 0, impByCountry: {} };
+      const prev = prevAgg[locale] || { impressions: 0, clicks: 0 };
+      const matchedImp = cur.impByCountry[expectedCountry] || 0;
+      const matchRate = cur.impressions > 0 ? (matchedImp / cur.impressions) * 100 : 0;
+      return {
+        locale,
+        expectedCountry,
+        impressions: cur.impressions,
+        clicks: cur.clicks,
+        ctr: cur.impressions > 0 ? (cur.clicks / cur.impressions) * 100 : 0,
+        position: cur.impressions > 0 ? cur.positionSum / cur.impressions : 0,
+        matchRate,
+        matchedImp,
+        deltaImpressions: cur.impressions - prev.impressions,
+        isNew: prev.impressions === 0 && cur.impressions > 0,
+      };
+    }).filter(l => l.impressions > 0).sort((a, b) => b.impressions - a.impressions);
+  }
 
   // Queries en top 10 (posiciones relevantes)
   const topRanked = topQueries.filter(q => q.position <= 10).length;
@@ -323,11 +389,17 @@ ${topQueries.map((r, i) => `| ${i + 1} | ${r.keys[0]} | ${fmtInt(r.impressions)}
 
 ---
 
-## 7. Performance por país (top mercados con tracción)
+${LOCALE_MODE ? `## 7. Performance por subdominio/locale (match audiencia ↔ país esperado)
+
+${localeStats.length > 0 ? `| Locale | Country esperado | Impressions | Clicks | CTR | Avg Position | Match rate | ΔImpressions |
+|---|---|---|---|---|---|---|---|
+${localeStats.map(l => `| ${l.locale.toUpperCase()} | ${l.expectedCountry} | ${fmtInt(l.impressions)} | ${fmtInt(l.clicks)} | ${l.ctr.toFixed(2)}% | ${l.position.toFixed(1)} | ${l.matchRate.toFixed(0)}% | ${l.isNew ? 'NEW' : (l.deltaImpressions > 0 ? '+' : '') + fmtInt(l.deltaImpressions)} |`).join('\n')}
+
+**Leyenda:** Match rate = % de impresiones de URLs del locale que vienen del país esperado. Alto = la estrategia de localización está rankeando para la audiencia correcta. Bajo = están rankeando en mercados no esperados (oportunidad o fuga).` : '_Sin datos por locale esta semana._'}` : `## 7. Performance por país (top mercados con tracción)
 
 ${countryStats.length > 0 ? `| Country | Impressions | Clicks | CTR | Avg Position | ΔImpressions |
 |---|---|---|---|---|---|
-${countryStats.map(c => `| ${c.country} | ${fmtInt(c.impressions)} | ${fmtInt(c.clicks)} | ${c.ctr.toFixed(2)}% | ${c.position.toFixed(1)} | ${c.isNew ? 'NEW' : (c.deltaImpressions > 0 ? '+' : '') + fmtInt(c.deltaImpressions)} |`).join('\n')}` : '_Datos por país no disponibles esta semana._'}
+${countryStats.map(c => `| ${c.country} | ${fmtInt(c.impressions)} | ${fmtInt(c.clicks)} | ${c.ctr.toFixed(2)}% | ${c.position.toFixed(1)} | ${c.isNew ? 'NEW' : (c.deltaImpressions > 0 ? '+' : '') + fmtInt(c.deltaImpressions)} |`).join('\n')}` : '_Datos por país no disponibles esta semana._'}`}
 
 ---
 

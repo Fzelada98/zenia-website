@@ -133,7 +133,7 @@ function parseReport(mdPath) {
     }
   }
 
-  // Country performance (section 7)
+  // Country performance (section 7) — audience by country
   r.countryStats = [];
   const countrySection = md.match(/## 7\. Performance por país[^\n]*\n\n([\s\S]+?)\n\n---/);
   if (countrySection) {
@@ -148,6 +148,30 @@ function parseReport(mdPath) {
           clicks: parseInt(m[3].replace(/,/g, '')),
           ctr: parseFloat(m[4]),
           position: parseFloat(m[5]),
+          delta: deltaRaw,
+          isNew: deltaRaw === 'NEW',
+        };
+      });
+    }
+  }
+
+  // Locale performance (section 7) — subdomain/path-based localization match
+  r.localeStats = [];
+  const localeSection = md.match(/## 7\. Performance por subdominio\/locale[^\n]*\n\n([\s\S]+?)\n\n\*\*Leyenda/);
+  if (localeSection) {
+    const rows = localeSection[1].match(/\| ([A-Z]{2,5}) \| ([A-Z]{3}) \| ([\d,]+) \| ([\d,]+) \| ([\d.]+)% \| ([\d.]+) \| (\d+)% \| ([^|]+) \|/g);
+    if (rows) {
+      r.localeStats = rows.map(row => {
+        const m = row.match(/\| ([A-Z]{2,5}) \| ([A-Z]{3}) \| ([\d,]+) \| ([\d,]+) \| ([\d.]+)% \| ([\d.]+) \| (\d+)% \| ([^|]+) \|/);
+        const deltaRaw = m[8].trim();
+        return {
+          locale: m[1].toLowerCase(),
+          expectedCountry: m[2],
+          impressions: parseInt(m[3].replace(/,/g, '')),
+          clicks: parseInt(m[4].replace(/,/g, '')),
+          ctr: parseFloat(m[5]),
+          position: parseFloat(m[6]),
+          matchRate: parseInt(m[7]),
           delta: deltaRaw,
           isNew: deltaRaw === 'NEW',
         };
@@ -214,6 +238,8 @@ function renderEmail(r, type) {
 
   const buckets = bucketQueries(r.topQueries);
   const countryStats = r.countryStats || [];
+  const localeStats = r.localeStats || [];
+  const useLocaleMode = localeStats.length > 0;
 
   // KPI cards uniform data
   const kpis = isCEO
@@ -280,6 +306,57 @@ function renderEmail(r, type) {
     countryRows.push(`<tr>${slice.map(c => c ? countryCard(c) : '<td class="card" width="33.33%" style="padding:6px;"></td>').join('')}</tr>`);
   }
 
+  const localeCard = (l) => {
+    const flag = renderCountryFlag(l.expectedCountry);
+    const cname = renderCountryName(l.expectedCountry);
+    const matchColor = l.matchRate >= 70 ? '#059669' : l.matchRate >= 40 ? '#d97706' : '#dc2626';
+    const matchBg = l.matchRate >= 70 ? '#d1fae5' : l.matchRate >= 40 ? '#fef3c7' : '#fee2e2';
+    const matchLabel = l.matchRate >= 70 ? 'Rankea bien' : l.matchRate >= 40 ? 'Mixto' : 'Fuera de target';
+    const deltaColor = l.isNew ? '#7c3aed' : (l.delta.startsWith('+') ? '#059669' : (l.delta.startsWith('-') ? '#dc2626' : '#64748b'));
+    return `
+    <td class="card" width="33.33%" valign="top" style="padding:6px;">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#ffffff;border:1px solid #e5e9f2;border-radius:12px;"><tr><td style="padding:14px 16px;">
+        <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+          <td style="font-size:13px;font-weight:700;color:#0F172A;">${flag} /${l.locale}/</td>
+          <td align="right" style="font-size:10px;color:#64748b;font-weight:600;letter-spacing:0.5px;">${cname}</td>
+        </tr></table>
+        <div style="margin-top:10px;padding:8px 10px;background:${matchBg};border-radius:6px;">
+          <div style="font-size:10px;color:${matchColor};font-weight:700;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:2px;">Match rate</div>
+          <div style="font-size:20px;font-weight:800;color:${matchColor};line-height:1;">${l.matchRate}%</div>
+          <div style="font-size:10px;color:${matchColor};font-weight:600;margin-top:2px;">${matchLabel}</div>
+        </div>
+        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:10px;">
+          <tr>
+            <td style="font-size:11px;color:#64748b;padding-bottom:2px;">Impresiones</td>
+            <td align="right" style="font-size:12px;font-weight:700;color:#0F172A;padding-bottom:2px;">${fmt(l.impressions)}</td>
+          </tr>
+          <tr>
+            <td style="font-size:11px;color:#64748b;padding-bottom:2px;">Clicks</td>
+            <td align="right" style="font-size:12px;font-weight:700;color:#0F172A;padding-bottom:2px;">${fmt(l.clicks)}</td>
+          </tr>
+          <tr>
+            <td style="font-size:11px;color:#64748b;padding-bottom:2px;">CTR</td>
+            <td align="right" style="font-size:12px;font-weight:700;color:#0F172A;padding-bottom:2px;">${l.ctr.toFixed(2)}%</td>
+          </tr>
+          <tr>
+            <td style="font-size:11px;color:#64748b;">Posición</td>
+            <td align="right" style="font-size:12px;font-weight:700;color:#0F172A;">${l.position.toFixed(1)}</td>
+          </tr>
+        </table>
+        <div style="margin-top:8px;padding-top:6px;border-top:1px solid #f1f5f9;font-size:10px;font-weight:600;color:${deltaColor};">
+          ${l.isNew ? 'NUEVO locale' : (l.delta + ' impr vs semana anterior')}
+        </div>
+      </td></tr></table>
+    </td>`;
+  };
+
+  const localeRows = [];
+  for (let i = 0; i < localeStats.length; i += 3) {
+    const slice = localeStats.slice(i, i + 3);
+    while (slice.length < 3) slice.push(null);
+    localeRows.push(`<tr>${slice.map(l => l ? localeCard(l) : '<td class="card" width="33.33%" style="padding:6px;"></td>').join('')}</tr>`);
+  }
+
   return `<!DOCTYPE html>
 <html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><meta name="supported-color-schemes" content="light"><title>${title}</title>
 <style>
@@ -337,13 +414,19 @@ function renderEmail(r, type) {
   </table>
 </td></tr>
 
-${countryStats.length > 0 ? `<tr><td class="pad-md" style="padding:8px 40px 20px 40px;">
+${useLocaleMode ? `<tr><td class="pad-md" style="padding:8px 40px 20px 40px;">
+  <div class="section-title" style="font-size:16px;font-weight:700;color:#0F172A;margin-bottom:6px;border-left:4px solid #2563EB;padding-left:10px;">Performance por subdominio / locale</div>
+  <div class="section-sub" style="font-size:13px;color:#64748b;margin-bottom:14px;margin-left:14px;font-style:italic;">Match rate = % de impresiones de cada locale que vienen del país esperado. Alto = tu SEO rankea en la audiencia correcta.</div>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:-6px;width:calc(100% + 12px);">
+    ${localeRows.join('')}
+  </table>
+</td></tr>` : (countryStats.length > 0 ? `<tr><td class="pad-md" style="padding:8px 40px 20px 40px;">
   <div class="section-title" style="font-size:16px;font-weight:700;color:#0F172A;margin-bottom:6px;border-left:4px solid #2563EB;padding-left:10px;">${isCEO ? 'Performance por mercado' : 'En qué países te ven más'}</div>
   <div class="section-sub" style="font-size:13px;color:#64748b;margin-bottom:14px;margin-left:14px;font-style:italic;">${isCEO ? `${countryStats.length} países con tracción esta semana.` : 'Los países donde más gente encontró tu web en Google.'}</div>
   <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:-6px;width:calc(100% + 12px);">
     ${countryRows.join('')}
   </table>
-</td></tr>` : ''}
+</td></tr>` : '')}
 
 <tr><td class="pad-md" style="padding:8px 40px 20px 40px;">
   <div class="section-title" style="font-size:16px;font-weight:700;color:#0F172A;margin-bottom:6px;border-left:4px solid #2563EB;padding-left:10px;">${isCEO ? 'Distribución de posicionamiento' : 'Dónde aparecemos en Google'} · ${r.topQueries.length} ${isCEO ? 'queries' : 'búsquedas'}</div>
@@ -387,7 +470,14 @@ ${countryStats.length > 0 ? `<tr><td class="pad-md" style="padding:8px 40px 20px
       ${buckets.top10.length ? `<strong style="color:#451a03;">1. Reforzar queries en top 10:</strong> ${buckets.top10.slice(0, 2).map(q => `"${q.query}" (pos ${q.position.toFixed(1)})`).join(', ')}. Internal linking + refresh.<br><br>` : ''}
       ${buckets.mid.length ? `<strong style="color:#451a03;">2. Empujar las que están cerca del top 10:</strong> ${buckets.mid.length} queries entre posición 11-30 con potencial de multiplicar clicks x3-5 si entran al top.<br><br>` : ''}
       ${r.sitemapSubmitted > r.sitemapIndexed ? `<strong style="color:#451a03;">3. Acelerar indexación:</strong> ${r.sitemapSubmitted - r.sitemapIndexed} URLs pendientes de procesar por Google.<br><br>` : ''}
-      ${countryStats.length > 0 ? `<strong style="color:#451a03;">4. Foco en mercados top:</strong> ${countryStats.slice(0, 3).map(c => renderCountryName(c.country)).join(', ')} concentran la mayoría de tráfico. Considerar contenido específico por país.<br><br>` : ''}
+      ${useLocaleMode && localeStats.length > 0 ? (() => {
+        const winners = localeStats.filter(l => l.matchRate >= 70 && l.impressions >= 10);
+        const losers = localeStats.filter(l => l.matchRate < 40 && l.impressions >= 10);
+        const bits = [];
+        if (winners.length) bits.push(`<strong style="color:#451a03;">4. Locales que funcionan (match alto):</strong> ${winners.slice(0, 3).map(l => `/${l.locale}/ (${l.matchRate}% ${l.expectedCountry})`).join(', ')}. Doblar inversión en contenido para estos mercados.`);
+        if (losers.length) bits.push(`<strong style="color:#451a03;">${winners.length ? '5' : '4'}. Locales con match bajo:</strong> ${losers.slice(0, 3).map(l => `/${l.locale}/ (${l.matchRate}% ${l.expectedCountry})`).join(', ')}. Rankean pero NO para la audiencia esperada — revisar hreflang o contenido local.`);
+        return bits.length ? bits.join('<br><br>') + '<br><br>' : '';
+      })() : (countryStats.length > 0 ? `<strong style="color:#451a03;">4. Foco en mercados top:</strong> ${countryStats.slice(0, 3).map(c => renderCountryName(c.country)).join(', ')} concentran la mayoría de tráfico. Considerar contenido específico por país.<br><br>` : '')}
       <strong style="color:#451a03;">5. Contenido:</strong> ${r.newPostsCount} posts publicados esta semana. Rutina diaria activa.
     </div>
   </td></tr></table>

@@ -168,16 +168,28 @@ git commit -m "blog: {es-slug} + {en-slug} (bilingual)"
 git push origin HEAD
 ```
 
-**6.3 Create PR with auto-merge:**
+**6.3 Create PR with auto-merge (capture PR URL to avoid race condition):**
 ```bash
-gh pr create \
+# Create PR and capture its URL
+PR_URL=$(gh pr create \
   --title "blog: {es-slug} + EN" \
   --body "Automated bilingual SEO post by zenia-seo-engine. ES + EN versions with cross-hreflang. Auto-merges after Vercel check." \
   --base main \
-  --head HEAD
+  --head HEAD)
 
-gh pr merge --auto --squash --delete-branch
+echo "PR created: $PR_URL"
+
+# Buffer so GitHub registers the PR before enabling auto-merge
+sleep 3
+
+# Enable auto-merge on the specific PR (explicit, not ambiguous)
+gh pr merge "$PR_URL" --auto --squash --delete-branch
+
+# Verify auto-merge queued
+gh pr view "$PR_URL" --json autoMergeRequest | grep -q "enabledAt" && echo "Auto-merge enabled OK" || echo "WARNING: auto-merge NOT enabled"
 ```
+
+**If auto-merge fails:** the PR stays open. Fabrizzio gets Vercel email and can merge manually via GitHub UI.
 
 The `--auto` flag queues auto-merge. When GitHub checks pass, PR merges to main automatically. This triggers:
 - Email to Fabrizzio (PR created + PR merged)

@@ -63,6 +63,11 @@ const OPTIMAL_TIMES = {
 // Track days already taken across this batch (max 1 post per day)
 const occupiedDays = new Set();
 
+function isWeekend(date) {
+  const d = date.getUTCDay();
+  return d === 0 || d === 6;
+}
+
 function getScheduledAt(vertical) {
   const cfg = OPTIMAL_TIMES[vertical] || OPTIMAL_TIMES.b2b;
   const now = new Date();
@@ -71,18 +76,22 @@ function getScheduledAt(vertical) {
     cfg.hour, cfg.minute, 0
   ));
 
-  // If target time today already passed (with 10 min buffer), push to tomorrow
-  if (scheduled.getTime() - now.getTime() < 10 * 60 * 1000) {
+  // If optimal time today already passed AND today is a weekday:
+  // publish today at now+2h instead of moving to tomorrow.
+  // This ensures same-day publication when blog was just created.
+  if (scheduled.getTime() - now.getTime() < 10 * 60 * 1000 && !isWeekend(now)) {
+    scheduled = new Date(now.getTime() + 2 * 60 * 60 * 1000);
+  } else if (scheduled.getTime() - now.getTime() < 10 * 60 * 1000) {
+    // Weekend + time passed: move to next weekday at optimal time
     scheduled.setUTCDate(scheduled.getUTCDate() + 1);
   }
 
-  // Enforce max 1 post per day: if day already taken, push to next day(s) until free
+  // Enforce max 1 post per day + skip weekends
   while (true) {
     const dayKey = scheduled.toISOString().split('T')[0];
-    // Skip weekends (Sat=6, Sun=0) for B2B content
-    const dayOfWeek = scheduled.getUTCDay();
-    if (dayOfWeek === 0 || dayOfWeek === 6) {
+    if (isWeekend(scheduled)) {
       scheduled.setUTCDate(scheduled.getUTCDate() + 1);
+      scheduled.setUTCHours(cfg.hour, cfg.minute, 0, 0);
       continue;
     }
     if (!occupiedDays.has(dayKey)) {
@@ -90,6 +99,7 @@ function getScheduledAt(vertical) {
       return scheduled.toISOString();
     }
     scheduled.setUTCDate(scheduled.getUTCDate() + 1);
+    scheduled.setUTCHours(cfg.hour, cfg.minute, 0, 0);
   }
 }
 

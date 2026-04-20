@@ -48,7 +48,7 @@ jobs:
       - name: Send weekly email (CEO dashboard)
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-          TO_EMAIL: 'zeladauriartef@gmail.com'
+          TO_EMAIL: 'fabrizzio.zelada@zeniapartners.com'
           FROM_EMAIL: 'Zenia Partners <onboarding@resend.dev>'
           GSC_SITE_LABEL: 'Zenia Partners'
           REPORT_TYPE: 'ceo'

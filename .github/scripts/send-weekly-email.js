@@ -159,11 +159,11 @@ function parseReport(mdPath) {
   r.localeStats = [];
   const localeSection = md.match(/## 7\. Performance por subdominio\/locale[^\n]*\n\n([\s\S]+?)\n\n\*\*Leyenda/);
   if (localeSection) {
-    const rows = localeSection[1].match(/\| ([A-Z]{2,5}) \| ([A-Z]{3}) \| ([\d,]+) \| ([\d,]+) \| ([\d.]+)% \| ([\d.]+) \| (\d+)% \| ([^|]+) \|/g);
+    const rows = localeSection[1].match(/\| ([A-Z]{2,5}) \| ([A-Z]{3}) \| ([\d,]+) \| ([\d,]+) \| ([\d.]+)% \| ([\d.]+) \| ([\d,]+) \| (\d+)% \| ([^|]+) \|/g);
     if (rows) {
       r.localeStats = rows.map(row => {
-        const m = row.match(/\| ([A-Z]{2,5}) \| ([A-Z]{3}) \| ([\d,]+) \| ([\d,]+) \| ([\d.]+)% \| ([\d.]+) \| (\d+)% \| ([^|]+) \|/);
-        const deltaRaw = m[8].trim();
+        const m = row.match(/\| ([A-Z]{2,5}) \| ([A-Z]{3}) \| ([\d,]+) \| ([\d,]+) \| ([\d.]+)% \| ([\d.]+) \| ([\d,]+) \| (\d+)% \| ([^|]+) \|/);
+        const deltaRaw = m[9].trim();
         return {
           locale: m[1].toLowerCase(),
           expectedCountry: m[2],
@@ -171,7 +171,8 @@ function parseReport(mdPath) {
           clicks: parseInt(m[4].replace(/,/g, '')),
           ctr: parseFloat(m[5]),
           position: parseFloat(m[6]),
-          matchRate: parseInt(m[7]),
+          matchedImp: parseInt(m[7].replace(/,/g, '')),
+          matchRate: parseInt(m[8]),
           delta: deltaRaw,
           isNew: deltaRaw === 'NEW',
         };
@@ -309,10 +310,12 @@ function renderEmail(r, type) {
   const localeCard = (l) => {
     const flag = renderCountryFlag(l.expectedCountry);
     const cname = renderCountryName(l.expectedCountry);
-    const matchColor = l.matchRate >= 70 ? '#059669' : l.matchRate >= 40 ? '#d97706' : '#dc2626';
-    const matchBg = l.matchRate >= 70 ? '#d1fae5' : l.matchRate >= 40 ? '#fef3c7' : '#fee2e2';
-    const matchLabel = l.matchRate >= 70 ? 'Rankea bien' : l.matchRate >= 40 ? 'Mixto' : 'Fuera de target';
+    const lowSample = l.impressions < 10;
+    const matchColor = lowSample ? '#64748b' : (l.matchRate >= 70 ? '#059669' : l.matchRate >= 40 ? '#d97706' : '#dc2626');
+    const matchBg = lowSample ? '#f1f5f9' : (l.matchRate >= 70 ? '#d1fae5' : l.matchRate >= 40 ? '#fef3c7' : '#fee2e2');
+    const matchLabel = lowSample ? 'Muestra baja' : (l.matchRate >= 70 ? 'Rankea bien' : l.matchRate >= 40 ? 'Mixto' : 'Fuera de target');
     const deltaColor = l.isNew ? '#7c3aed' : (l.delta.startsWith('+') ? '#059669' : (l.delta.startsWith('-') ? '#dc2626' : '#64748b'));
+    const matchedImp = l.matchedImp != null ? l.matchedImp : Math.round((l.matchRate / 100) * l.impressions);
     return `
     <td class="card" width="33.33%" valign="top" style="padding:6px;">
       <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#ffffff;border:1px solid #e5e9f2;border-radius:12px;"><tr><td style="padding:14px 16px;">
@@ -324,6 +327,7 @@ function renderEmail(r, type) {
           <div style="font-size:10px;color:${matchColor};font-weight:700;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:2px;">Match rate</div>
           <div style="font-size:20px;font-weight:800;color:${matchColor};line-height:1;">${l.matchRate}%</div>
           <div style="font-size:10px;color:${matchColor};font-weight:600;margin-top:2px;">${matchLabel}</div>
+          <div style="font-size:10px;color:${matchColor};margin-top:4px;opacity:0.85;">${fmt(matchedImp)} de ${fmt(l.impressions)} impr desde ${l.expectedCountry}</div>
         </div>
         <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:10px;">
           <tr>
@@ -416,7 +420,13 @@ function renderEmail(r, type) {
 
 ${useLocaleMode ? `<tr><td class="pad-md" style="padding:8px 40px 20px 40px;">
   <div class="section-title" style="font-size:16px;font-weight:700;color:#0F172A;margin-bottom:6px;border-left:4px solid #2563EB;padding-left:10px;">Performance por subdominio / locale</div>
-  <div class="section-sub" style="font-size:13px;color:#64748b;margin-bottom:14px;margin-left:14px;font-style:italic;">Match rate = % de impresiones de cada locale que vienen del país esperado. Alto = tu SEO rankea en la audiencia correcta.</div>
+  <div class="section-sub" style="font-size:13px;color:#64748b;margin-bottom:10px;margin-left:14px;">Cada card = un subdominio localizado (/pe/, /es/, ...). Mide si ese SEO está rankeando para la audiencia correcta.</div>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:14px;background:#f8faff;border:1px solid #e0e7ff;border-radius:8px;"><tr><td style="padding:12px 16px;">
+    <div style="font-size:12px;color:#334155;line-height:1.6;">
+      <strong style="color:#0F172A;">Fórmula match rate:</strong> (impresiones del locale desde el país esperado) ÷ (impresiones totales del locale) × 100.<br>
+      <span style="color:#059669;font-weight:700;">≥70% verde</span> · <span style="color:#d97706;font-weight:700;">40–69% ámbar</span> · <span style="color:#dc2626;font-weight:700;">&lt;40% rojo</span> · <span style="color:#64748b;font-weight:700;">&lt;10 impresiones = muestra baja</span> (no concluyente).
+    </div>
+  </td></tr></table>
   <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:-6px;width:calc(100% + 12px);">
     ${localeRows.join('')}
   </table>

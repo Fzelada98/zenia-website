@@ -391,9 +391,9 @@ ${topQueries.map((r, i) => `| ${i + 1} | ${r.keys[0]} | ${fmtInt(r.impressions)}
 
 ${LOCALE_MODE ? `## 7. Performance por subdominio/locale (match audiencia ↔ país esperado)
 
-${localeStats.length > 0 ? `| Locale | Country esperado | Impressions | Clicks | CTR | Avg Position | Match rate | ΔImpressions |
-|---|---|---|---|---|---|---|---|
-${localeStats.map(l => `| ${l.locale.toUpperCase()} | ${l.expectedCountry} | ${fmtInt(l.impressions)} | ${fmtInt(l.clicks)} | ${l.ctr.toFixed(2)}% | ${l.position.toFixed(1)} | ${l.matchRate.toFixed(0)}% | ${l.isNew ? 'NEW' : (l.deltaImpressions > 0 ? '+' : '') + fmtInt(l.deltaImpressions)} |`).join('\n')}
+${localeStats.length > 0 ? `| Locale | Country esperado | Impressions | Clicks | CTR | Avg Position | Matched | Match rate | ΔImpressions |
+|---|---|---|---|---|---|---|---|---|
+${localeStats.map(l => `| ${l.locale.toUpperCase()} | ${l.expectedCountry} | ${fmtInt(l.impressions)} | ${fmtInt(l.clicks)} | ${l.ctr.toFixed(2)}% | ${l.position.toFixed(1)} | ${fmtInt(l.matchedImp)} | ${l.matchRate.toFixed(0)}% | ${l.isNew ? 'NEW' : (l.deltaImpressions > 0 ? '+' : '') + fmtInt(l.deltaImpressions)} |`).join('\n')}
 
 **Leyenda:** Match rate = % de impresiones de URLs del locale que vienen del país esperado. Alto = la estrategia de localización está rankeando para la audiencia correcta. Bajo = están rankeando en mercados no esperados (oportunidad o fuga).` : '_Sin datos por locale esta semana._'}` : `## 7. Performance por país (top mercados con tracción)
 

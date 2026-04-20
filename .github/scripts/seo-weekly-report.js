@@ -73,13 +73,18 @@ function emoji(change, inverted = false) {
   return '=';
 }
 
-function httpGet(url) {
+function httpGet(url, timeoutMs = 90000) {
   return new Promise((resolve, reject) => {
-    https.get(url, (res) => {
+    const req = https.get(url, { timeout: timeoutMs }, (res) => {
       let data = '';
       res.on('data', (chunk) => data += chunk);
       res.on('end', () => resolve({ status: res.statusCode, body: data }));
-    }).on('error', reject);
+    });
+    req.on('error', reject);
+    req.on('timeout', () => {
+      req.destroy();
+      reject(new Error(`httpGet timeout after ${timeoutMs}ms: ${url}`));
+    });
   });
 }
 

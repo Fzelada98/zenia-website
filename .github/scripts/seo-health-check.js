@@ -36,7 +36,7 @@ const PRIORITY_URLS = [
   '/es/crm-whatsapp.html',
   '/es/crm-barcelona.html',
   '/es/crm-madrid.html',
-  '/es/crm-lima.html',
+  '/es/crm-valencia.html',
 ];
 
 const HREFLANG_MIN_FOR_BILINGUAL = 2; // at least en + es (x-default optional bonus)

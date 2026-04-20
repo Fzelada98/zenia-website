@@ -169,6 +169,28 @@ async function main() {
   const topQueries = await querySearchAnalytics(webmasters, SITE_URL, startCurrent, endCurrent, ['query'], 25);
   const topPages = await querySearchAnalytics(webmasters, SITE_URL, startCurrent, endCurrent, ['page'], 15);
 
+  // Performance by country (para visibilidad de mercados)
+  const countryRows = await querySearchAnalytics(webmasters, SITE_URL, startCurrent, endCurrent, ['country'], 20);
+  const countryPrevRows = await querySearchAnalytics(webmasters, SITE_URL, startPrevious, endPrevious, ['country'], 20);
+  const countryPrevMap = new Map(countryPrevRows.map(r => [r.keys[0], r]));
+  const countryStats = countryRows
+    .filter(r => r.impressions >= 3)
+    .map(r => {
+      const prev = countryPrevMap.get(r.keys[0]);
+      return {
+        country: r.keys[0].toUpperCase(),
+        clicks: r.clicks || 0,
+        impressions: r.impressions || 0,
+        ctr: r.ctr ? r.ctr * 100 : 0,
+        position: r.position || 0,
+        deltaImpressions: prev ? r.impressions - prev.impressions : r.impressions,
+        deltaClicks: prev ? r.clicks - prev.clicks : r.clicks,
+        isNew: !prev,
+      };
+    })
+    .sort((a, b) => b.impressions - a.impressions)
+    .slice(0, 12);
+
   // Queries en top 10 (posiciones relevantes)
   const topRanked = topQueries.filter(q => q.position <= 10).length;
   const midRanked = topQueries.filter(q => q.position > 10 && q.position <= 30).length;
@@ -301,7 +323,15 @@ ${topQueries.map((r, i) => `| ${i + 1} | ${r.keys[0]} | ${fmtInt(r.impressions)}
 
 ---
 
-## 7. Top 15 páginas esta semana
+## 7. Performance por país (top mercados con tracción)
+
+${countryStats.length > 0 ? `| Country | Impressions | Clicks | CTR | Avg Position | ΔImpressions |
+|---|---|---|---|---|---|
+${countryStats.map(c => `| ${c.country} | ${fmtInt(c.impressions)} | ${fmtInt(c.clicks)} | ${c.ctr.toFixed(2)}% | ${c.position.toFixed(1)} | ${c.isNew ? 'NEW' : (c.deltaImpressions > 0 ? '+' : '') + fmtInt(c.deltaImpressions)} |`).join('\n')}` : '_Datos por país no disponibles esta semana._'}
+
+---
+
+## 8. Top 15 páginas esta semana
 
 | # | Page | Impressions | Clicks | CTR | Position |
 |---|---|---|---|---|---|
@@ -312,7 +342,7 @@ ${topPages.map((r, i) => {
 
 ---
 
-## 8. Tendencia diaria
+## 9. Tendencia diaria
 
 | Date | Impressions | Clicks | CTR | Position |
 |---|---|---|---|---|
@@ -320,7 +350,7 @@ ${dailyRows.map(r => `| ${r.keys[0]} | ${fmtInt(r.impressions)} | ${fmtInt(r.cli
 
 ---
 
-## 9. Acciones recomendadas
+## 10. Acciones recomendadas
 
 ${gainers.length > 0 ? `- **Doblar en ganadores:** las queries que subieron (${gainers.slice(0, 3).map(g => `"${g.query}"`).join(', ')}) merecen contenido de refuerzo o internal linking adicional.` : ''}
 ${losers.length > 0 ? `- **Recuperar perdedores:** las queries que bajaron (${losers.slice(0, 3).map(l => `"${l.query}"`).join(', ')}) pueden necesitar refresh de contenido, mejor title/description, o backlinks.` : ''}

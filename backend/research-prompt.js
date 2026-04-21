@@ -197,8 +197,9 @@ Tight. One phrase per step. The consultant glances and responds.`;
 // ============================================================
 // USER PROMPTS
 // ============================================================
-function buildUserPromptPart1(companyName, companySize, areaOfInterest) {
-  return `Empresa: ${companyName} | Tamaño: ${companySize} | Área: ${areaOfInterest}
+function buildUserPromptPart1(companyName, companySize, areaOfInterest, onlinePresence) {
+  const onlineLine = onlinePresence ? `\nPresencia online: ${onlinePresence} — usa esta URL como fuente principal de información sobre la empresa.` : '';
+  return `Empresa: ${companyName} | Tamaño: ${companySize} | Área: ${areaOfInterest}${onlineLine}
 
 Cheat sheet de research. Sé específico. Solo tags HTML, cero markdown. Todo en el idioma de la empresa.`;
 }

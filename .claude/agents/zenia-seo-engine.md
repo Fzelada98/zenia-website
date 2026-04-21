@@ -150,24 +150,31 @@ The `--auto` flag queues auto-merge. When GitHub checks pass, PR merges to main 
 
 IMPORTANT: This agent runs in a Linux sandbox (Claude Code Routines). DO NOT use Windows paths like `c:\Users\...`. Always use relative paths from the repo root.
 
-### Step 7: LinkedIn Post (ENGLISH only) — saved to social-queue.md
+### Step 7: LinkedIn Post (ENGLISH only, standalone — saved to social-queue.md)
 
-Generate ONE LinkedIn post in ENGLISH (Zenia LinkedIn is international).
+Generate ONE LinkedIn post in ENGLISH. Zenia LinkedIn is international, and the blog is Spanish-only (coverage of LATAM/ES SEO). To avoid language dissonance, the LinkedIn post is STANDALONE — no link to the Spanish blog.
+
 Instagram is NOT in scope. Skip it completely.
 
 **Rules for the LinkedIn post:**
-- 3-5 lines MAX
+- 5-8 lines total (slightly longer than before, since no link takes up real estate)
 - Line 1: hook with a hard stat, number, or problem
-- Line 2-3: reframe / context
-- Line 4-5: what we did / solution
-- CTA: link to the new blog post
+- Lines 2-3: reframe / context
+- Lines 4-6: what we did / solution, with 1-2 concrete numbers or takeaways
+- Final line: soft engagement CTA. Examples (vary day to day):
+  - "DM me if you want the full framework for your industry."
+  - "Reply if you're running a [vertical] with this problem, happy to send detail."
+  - "Curious which metric moved most? It's in the comments."
+- NO external URL. NO "read more on our blog".
 - 4-5 hashtags max at the bottom
 - NO "chatbot" — use "AI agent" or "personalized AI agent"
 - NO em-dashes, no "Ojo:", no fluff ("in today's world")
 - NO hype words ("revolutionary", "game-changer")
-- NO forced engagement ("like if...", "comment below")
+- NO forced engagement ("like if...", "double tap", "comment below")
 - Max 1 emoji if it fits naturally, better zero
 - Professional tone, casual OK, dry humor only if there's natural setup
+
+**Why standalone (no link):** LinkedIn algorithm demotes posts with external URLs. Posts without links get 2-3x more organic reach. Since the blog is Spanish and the LinkedIn audience is English, linking creates confusion AND hurts reach. Better to deliver the value inside the post itself and invite DMs for more detail.
 
 **Format to append at the END of `blog/social-queue.md`:**
 

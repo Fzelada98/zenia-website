@@ -49,3 +49,17 @@ Full guide (real metrics, ROI math, 4-week rollout): https://zeniapartners.com/b
 #beautyindustry #CRM #AI #WhatsAppBusiness
 
 ---
+
+## 2026-04-21 - Automatizar cobros gimnasio WhatsApp
+
+Between 30% and 40% of "cancellations" at a gym are not real cancellations. They are failed payments nobody recovered in time: expired cards, bounced SEPA debits, insufficient funds.
+
+An AI agent on WhatsApp Business API catches the failure within minutes, sends a clean payment link, and recovers 78-85% of those charges before the member quietly churns.
+
+For a 400-member gym that turns into roughly 1.500 to 1.800 euros per month back on the books.
+
+Full breakdown with ROI math: https://zeniapartners.com/blog/automatizar-cobros-gimnasio-whatsapp.html
+
+#fitnessindustry #memberretention #AI #WhatsAppBusiness
+
+---

@@ -52,6 +52,8 @@ Full guide (real metrics, ROI math, 4-week rollout): https://zeniapartners.com/b
 
 ## 2026-04-21 - Automatizar cobros gimnasio WhatsApp
 
+<!-- SCHEDULED:sp_U1OjRnvgW82IQDCSY1ze at 2026-04-21T15:00:00.000Z -->
+
 Between 30% and 40% of "cancellations" at a gym are not real cancellations. They are failed payments nobody recovered in time: expired cards, bounced SEPA debits, insufficient funds.
 
 An AI agent on WhatsApp Business API catches the failure within minutes, sends a clean payment link, and recovers 78-85% of those charges before the member quietly churns.

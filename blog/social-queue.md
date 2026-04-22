@@ -65,3 +65,17 @@ Full breakdown with ROI math: https://zeniapartners.com/blog/automatizar-cobros-
 #fitnessindustry #memberretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-04-22 - Marketing digital restaurantes pequenos
+
+74% of diners decide where to eat after checking social media, Google Maps, or reviews before stepping in. Most small restaurants still spend marketing money on the wrong half.
+
+The three channels that actually move reservations for a 40 to 80 seat venue: local SEO on Google Business Profile, a WhatsApp AI agent answering in under 10 seconds, and a post visit review flow.
+
+We've seen small restaurants go from 3 reviews a month to 40 in 90 days, and cut no shows from 14% to 5% just by wiring these three together. Total monthly spend: under 1.200 euros.
+
+Reply if you run a small restaurant and want the 90 day plan mapped to your situation.
+
+#restauranttech #localSEO #AI #WhatsAppBusiness
+
+---

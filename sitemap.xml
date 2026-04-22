@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Blog: Marketing digital restaurantes pequenos (ES) -->
+  <url>
+    <loc>https://zeniapartners.com/blog/marketing-digital-restaurantes-pequenos.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- Blog: Automatizar cobros gimnasio WhatsApp (ES) -->
   <url>
     <loc>https://zeniapartners.com/blog/automatizar-cobros-gimnasio-whatsapp.html</loc>

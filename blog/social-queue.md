@@ -68,6 +68,8 @@ Full breakdown with ROI math: https://zeniapartners.com/blog/automatizar-cobros-
 
 ## 2026-04-22 - Marketing digital restaurantes pequenos
 
+<!-- SCHEDULED:sp_lUFE5Kp247hbHUVU48YFh at 2026-04-22T16:31:19.994Z -->
+
 74% of diners decide where to eat after checking social media, Google Maps, or reviews before stepping in. Most small restaurants still spend marketing money on the wrong half.
 
 The three channels that actually move reservations for a 40 to 80 seat venue: local SEO on Google Business Profile, a WhatsApp AI agent answering in under 10 seconds, and a post visit review flow.

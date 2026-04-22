@@ -90,7 +90,17 @@ jobs:
           if [[ -n $(git status -s blog/) ]]; then
             git add blog/
             git commit -m "chore: auto-update internal links for new post"
-            git push
+            # Retry push with rebase en caso de race condition
+            for i in 1 2 3; do
+              if git push; then
+                echo "Push ok en intento $i"
+                break
+              else
+                echo "Push rechazado, intento $i: pull --rebase"
+                git pull --rebase origin main || true
+                sleep 2
+              fi
+            done
           else
             echo "No internal link updates needed."
           fi

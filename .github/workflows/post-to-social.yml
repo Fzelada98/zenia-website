@@ -42,5 +42,14 @@ jobs:
           if [[ -n $(git status -s blog/social-queue.md) ]]; then
             git add blog/social-queue.md
             git commit -m "chore: mark social-queue entries as scheduled"
-            git push
+            for i in 1 2 3; do
+              if git push; then
+                echo "Push ok en intento $i"
+                break
+              else
+                echo "Push rechazado intento $i, rebasando"
+                git pull --rebase origin main || true
+                sleep 2
+              fi
+            done
           fi

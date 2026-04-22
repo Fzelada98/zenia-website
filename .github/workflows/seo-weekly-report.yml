@@ -42,7 +42,16 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "report: weekly SEO $(date +%Y-%m-%d)"
-            git push
+            for i in 1 2 3; do
+              if git push; then
+                echo "Push ok en intento $i"
+                break
+              else
+                echo "Push rechazado intento $i, rebasando"
+                git pull --rebase origin main || true
+                sleep 2
+              fi
+            done
           fi
 
       - name: Send weekly email (CEO dashboard)

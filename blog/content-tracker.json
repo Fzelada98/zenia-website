@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-04-22",
+  "lastRun": "2026-04-23",
   "posts": [
     { "slug": "automatizar-reservas-restaurante-whatsapp", "keyword": "automatizar reservas restaurante whatsapp", "tier": 1, "cluster": "restaurantes", "status": "published", "date": "2026-04-16" },
     { "slug": "crm-restaurantes-guia-completa", "keyword": "crm para restaurantes", "tier": 1, "cluster": "restaurantes", "status": "published", "date": "2026-04-16" },
@@ -22,7 +22,7 @@
     { "slug": "agenda-online-peluqueria-whatsapp", "keyword": "agenda online peluqueria whatsapp", "tier": 1, "cluster": "belleza", "status": "published", "date": "2026-04-19" },
     { "slug": "automatizar-cobros-gimnasio-whatsapp", "keyword": "automatizar cobros gimnasio whatsapp", "tier": 1, "cluster": "gimnasios", "status": "published", "date": "2026-04-21" },
     { "slug": "marketing-digital-restaurantes-pequenos", "keyword": "marketing digital restaurantes pequenos", "tier": 1, "cluster": "restaurantes", "status": "published", "date": "2026-04-22" },
-    { "slug": "fidelizacion-clientas-estetica", "keyword": "fidelizacion clientas estetica", "tier": 1, "cluster": "belleza", "status": "pending", "date": null },
+    { "slug": "fidelizacion-clientas-estetica", "keyword": "fidelizacion clientas estetica", "tier": 1, "cluster": "belleza", "status": "published", "date": "2026-04-23" },
     { "slug": "gestion-mesas-restaurante-inteligente", "keyword": "gestion mesas restaurante inteligente", "tier": 1, "cluster": "restaurantes", "status": "pending", "date": null },
     { "slug": "captacion-leads-gimnasio-instagram-whatsapp", "keyword": "captacion leads gimnasio instagram whatsapp", "tier": 1, "cluster": "gimnasios", "status": "pending", "date": null },
     { "slug": "software-gestion-gimnasio-2026", "keyword": "software gestion gimnasio 2026", "tier": 1, "cluster": "gimnasios", "status": "pending", "date": null },

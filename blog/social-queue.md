@@ -81,3 +81,19 @@ Reply if you run a small restaurant and want the 90 day plan mapped to your situ
 #restauranttech #localSEO #AI #WhatsAppBusiness
 
 ---
+
+## 2026-04-23 - Fidelizacion clientas estetica
+
+Acquiring a new beauty salon client costs 5 to 7 times more than retaining one. And yet most salons invest their marketing budget in Instagram ads for first-time visitors while their loyal clients get the same treatment as strangers.
+
+Loyal clients spend 67% more than first-time visitors. Salons with a well-designed loyalty program see retention climb 30%, and raising average visit frequency by just one more appointment per year can boost revenue up to 30%.
+
+What actually works is not a punch card. It is a CRM with a 360 client profile, WhatsApp-first automation (next visit reminders based on treatment protocol, birthdays, 60-day reactivation), a points program with low-cost high-perceived-value rewards, and a referral channel where 30-40% of new clients arrive already warm.
+
+For a 400-client salon that math translates into 40,000+ euros per year in extra revenue with zero new floor space and the same team.
+
+DM me if you want the full retention framework mapped to a beauty or aesthetic center.
+
+#beautyindustry #customerretention #AI #WhatsAppBusiness
+
+---

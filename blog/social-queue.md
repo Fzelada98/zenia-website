@@ -84,6 +84,8 @@ Reply if you run a small restaurant and want the 90 day plan mapped to your situ
 
 ## 2026-04-23 - Fidelizacion clientas estetica
 
+<!-- SCHEDULED:sp_33pPCigivNXf2WR2ixz4Y at 2026-04-23T11:16:59.866Z -->
+
 Acquiring a new beauty salon client costs 5 to 7 times more than retaining one. And yet most salons invest their marketing budget in Instagram ads for first-time visitors while their loyal clients get the same treatment as strangers.
 
 Loyal clients spend 67% more than first-time visitors. Salons with a well-designed loyalty program see retention climb 30%, and raising average visit frequency by just one more appointment per year can boost revenue up to 30%.

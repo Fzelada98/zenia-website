@@ -1,0 +1,32 @@
+# Local agents and node_modules
+agents/
+node_modules/
+
+# Local env / secrets
+.env
+.env.local
+*.key
+secrets.json
+
+# Backend logs and runtime artifacts
+backend/briefings/
+backend/.env
+backend/node_modules/
+
+# Build artifacts
+dist/
+build/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Local audit / dev scripts (not for prod)
+_audit_*.py
+_fix_*.py
+_*.tmp

@@ -99,3 +99,19 @@ DM me if you want the full retention framework mapped to a beauty or aesthetic c
 #beautyindustry #customerretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-04-24 - Gestion mesas restaurante inteligente
+
+A restaurant running at 62% occupancy with 1.8 turns per service is leaving roughly 18,000 euros per month on the table. Same kitchen, same team, same dining room. Different math.
+
+The bottleneck is never the food. It is the notebook that decides which table gets assigned to whom, and when.
+
+Intelligent table management with an AI agent connected to the floor plan, the POS and WhatsApp pushes rotation to 2.4, occupancy to 82% and cuts no-shows from 14% to 3%. Waitlist conversion jumps from 11% to 48% because a cancellation at 20:45 gets offered to the right guest within 3 minutes.
+
+None of that is theoretical. TheFork already reports Spain's no-show rate at 3.3% in 2025 for restaurants that actively manage reservations, down from 3.6% the year before.
+
+Reply if you run a restaurant still managing tables in a notebook. Happy to walk through the numbers on your specific floor plan.
+
+#restauranttech #customerretention #AI #WhatsAppBusiness
+
+---

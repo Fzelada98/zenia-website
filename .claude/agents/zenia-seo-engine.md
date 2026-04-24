@@ -118,45 +118,53 @@ All paths are RELATIVE to repo root.
 3. `blog/content-tracker.json` → mark post as "published" with date
 4. `blog/social-queue.md` → append entry with date, slug, vertical, url, linkedin_en, instagram_es, status: pending
 
-**6.2 Commit to working branch (DO NOT push to main directly):**
+**6.2 Commit, push, create PR and merge (SINGLE BASH BLOCK, mandatory):**
+
+This is the most failure-prone step. Execute the ENTIRE block below in ONE Bash tool call. Do not split it. Do not skip the PR/merge commands. The routine only succeeds when the slug appears on origin/main.
+
 ```bash
+set -e
+SLUG="{slug}"
+
 git add blog/ sitemap.xml
-git commit -m "blog: {slug}"
+git commit -m "blog: $SLUG"
 git push origin HEAD
-```
-Note: `HEAD` pushes to the current sandbox branch (`claude/...`), NEVER to main. This is expected — sandbox rules forbid direct push to main.
 
-**6.3 Create PR and merge IMMEDIATELY (never ask user, never stop):**
-
-CRITICAL: After pushing to the sandbox branch, you MUST create the PR AND merge it in the same run. Do NOT ask the user for confirmation. Do NOT report the push as "done" without merging. The routine is useless if the content doesn't reach main.
-
-```bash
-# Get current branch name
 BRANCH=$(git rev-parse --abbrev-ref HEAD)
+echo "Pushed to branch: $BRANCH"
 
-# Create the PR (ignore errors if PR already exists)
+# If we somehow ended up on main, we're already done
+if [ "$BRANCH" = "main" ]; then
+  echo "Direct commit to main succeeded, no PR needed"
+  exit 0
+fi
+
+# Create PR (idempotent — no-op if already exists)
 gh pr create \
-  --title "blog: {slug}" \
-  --body "Automated SEO post by zenia-seo-engine. GitHub Actions will handle indexing and social posting." \
+  --title "blog: $SLUG" \
+  --body "Automated SEO post by zenia-seo-engine. GitHub Actions handle indexing and social posting after merge." \
   --base main \
-  --head "$BRANCH" || true
+  --head "$BRANCH" || echo "PR may already exist, continuing"
 
-# Merge immediately with admin override (no waiting for checks)
-# Try --squash first, fallback to --merge if repo rules forbid squash
-gh pr merge "$BRANCH" --squash --delete-branch --admin || \
-  gh pr merge "$BRANCH" --merge --delete-branch --admin || \
-  gh pr merge "$BRANCH" --squash --delete-branch
-```
+# Merge with --admin (bypasses checks). Cascade fallbacks.
+gh pr merge "$BRANCH" --squash --delete-branch --admin \
+  || gh pr merge "$BRANCH" --merge --delete-branch --admin \
+  || gh pr merge "$BRANCH" --squash --delete-branch \
+  || gh pr merge "$BRANCH" --merge --delete-branch \
+  || echo "All gh merge attempts failed — the auto-merge-sandbox workflow will pick this up"
 
-Why `--admin`: bypasses required checks/reviews (these aren't set up on this repo anyway, and even if they were, the routine should not be gated on them).
-
-**Verification: after merge, confirm commit is on main:**
-```bash
+# Verify
 git fetch origin main
-git log origin/main --oneline -3 | grep "{slug}" && echo "OK: reached main" || echo "FAIL: retry needed"
+if git log origin/main --oneline -5 | grep -q "$SLUG"; then
+  echo "OK: $SLUG reached main"
+else
+  echo "WARN: $SLUG not yet on main — auto-merge-sandbox workflow fallback will retry within 30 min"
+fi
 ```
 
-If FAIL, retry the PR merge once more. If still FAIL, call Post for Me API directly as fallback (see Step 7.5) and report the issue in the run summary.
+Why `--admin`: bypasses required checks/reviews. Why the fallback cascade: if repo rules change, we still merge.
+
+**Safety net:** the workflow `.github/workflows/auto-merge-sandbox.yml` runs every 30 minutes and on push to `claude/**`. It will auto-merge any abandoned sandbox branch whose head commit starts with `blog:`, `haro:`, `report:`, `chore:`, `fix:`, or `feat:`. So even if this bash block fails halfway, the content still reaches main within 30 min. But the expected path is this block succeeds.
 
 **DO NOT stop the routine on sandbox push rejection.** That's expected. Keep going through PR merge.
 

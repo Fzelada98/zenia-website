@@ -102,6 +102,8 @@ DM me if you want the full retention framework mapped to a beauty or aesthetic c
 
 ## 2026-04-24 - Gestion mesas restaurante inteligente
 
+<!-- SCHEDULED:sp_ly9kuCTV4ElNMAThl8p at 2026-04-24T13:29:15.605Z -->
+
 A restaurant running at 62% occupancy with 1.8 turns per service is leaving roughly 18,000 euros per month on the table. Same kitchen, same team, same dining room. Different math.
 
 The bottleneck is never the food. It is the notebook that decides which table gets assigned to whom, and when.

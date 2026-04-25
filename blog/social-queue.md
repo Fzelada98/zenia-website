@@ -117,3 +117,19 @@ Reply if you run a restaurant still managing tables in a notebook. Happy to walk
 #restauranttech #customerretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-04-25 - Captacion leads gimnasio instagram whatsapp
+
+Cost per fitness lead in Meta Ads dropped from 7.80 to 4.20 euros between 2023 and 2026. Reels generate 73% more leads than static posts for fitness brands. And most gyms still reply to those DMs the next morning.
+
+Instagram captures attention. WhatsApp closes. The gap between them is where 35-40% of qualified leads die: the lead taps a Click-to-WhatsApp ad at 9pm Sunday and the receptionist sees the message Monday at 11am.
+
+Plugging an AI agent into that gap is the unlock. Replies in 8 seconds, qualifies the lead in three questions, books the trial class with a real day and time, and runs the 30-day follow-up sequence on the leads that said "let me think". Realistic numbers for a mid-size gym in Spain after 90 days: leads from 50 to 160 per month, conversion to member from 22% to 50%, CAC from 52 to 20 euros.
+
+The gyms scaling without hiring more salespeople are not better at content. They responded faster.
+
+DM me if you want the full funnel breakdown for your gym.
+
+#fitnessindustry #memberretention #AI #WhatsAppBusiness
+
+---

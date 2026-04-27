@@ -72,7 +72,7 @@ def keyword_to_anchor(keyword):
 
 # ---------- LANDING ENHANCEMENT ----------
 
-LANDING_BLOG_BLOCK_MARKER = "<!-- ZENIA_INTERNAL_LINKS_BLOGS -->"
+LANDING_BLOG_BLOCK_MARKER = 'data-zenia-internal-links="blogs"'
 
 
 def enhance_landing(path: Path, by_cluster):
@@ -118,7 +118,7 @@ def enhance_landing(path: Path, by_cluster):
     )
 
     new_section = f"""
-<section class="section" style="padding: 40px 24px; {LANDING_BLOG_BLOCK_MARKER}">
+<section class="section" style="padding: 40px 24px;" {LANDING_BLOG_BLOCK_MARKER}>
   <div class="container">
     <h3 style="color: #F1F5F9; margin-bottom: 20px;">Recursos relacionados</h3>
     <div class="related-links">
@@ -141,7 +141,7 @@ def enhance_landing(path: Path, by_cluster):
 
 # ---------- BLOG ENHANCEMENT ----------
 
-BLOG_LANDING_BLOCK_MARKER = "<!-- ZENIA_INTERNAL_LINKS_LANDINGS -->"
+BLOG_LANDING_BLOCK_MARKER = 'data-zenia-internal-links="landings"'
 
 
 def enhance_blog(path: Path, by_cluster, posts_meta):
@@ -181,7 +181,7 @@ def enhance_blog(path: Path, by_cluster, posts_meta):
     )
 
     new_section = f"""
-<div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 24px; margin: 40px 0; {BLOG_LANDING_BLOCK_MARKER}">
+<div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 24px; margin: 40px 0;" {BLOG_LANDING_BLOCK_MARKER}>
   <h3 style="color: #F1F5F9; margin-bottom: 12px; font-size: 1.05rem;">¿En qué ciudad operas?</h3>
   <p style="color: #94A3B8; margin-bottom: 16px; font-size: 0.95rem;">Personalizamos la implementación según tu mercado local. Ve la guía específica para tu ciudad:</p>
   <div>

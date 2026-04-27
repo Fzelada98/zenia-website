@@ -428,16 +428,17 @@ TEMPLATE = """<!DOCTYPE html>
   </div>
 </nav>
 
-<section class="hero" style="padding: 120px 24px 80px;">
-  <div class="container">
+<section class="hero" id="hero" data-hero-fixed="true">
+  <div class="hero-bg"><canvas id="glsl-canvas"></canvas><div class="hero-bg-top"></div></div>
+  <div class="container" style="position: relative; z-index: 2; text-align: center;">
     <span class="city-badge">📍 {city_display}, {country}</span>
     <h1 class="section-title" style="font-size: clamp(2rem, 5vw, 3.5rem);">
       <span class="text-gradient">{vertical_h1}</span> en {city_display}
     </h1>
-    <p class="hero-lead" style="font-size: 1.15rem; color: #94A3B8; max-width: 720px; line-height: 1.7; margin: 20px 0 32px;">
+    <p class="hero-lead" style="font-size: 1.15rem; color: #94A3B8; max-width: 720px; line-height: 1.7; margin: 20px auto 32px;">
       {hero_intro} ZENIA despliega ese sistema en 5 semanas.
     </p>
-    <div class="hero-ctas" style="display: flex; gap: 12px; flex-wrap: wrap;">
+    <div class="hero-ctas" style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;">
       <a href="https://wa.me/34677612799" class="btn btn-primary">Habla con nosotros por WhatsApp</a>
       <a href="/es/#precios" class="btn btn-secondary">Ver precios</a>
     </div>
@@ -494,6 +495,26 @@ TEMPLATE = """<!DOCTYPE html>
     </div>
   </div>
 </section>
+
+<!-- Three.js animated hero background (desktop only, loads 3s after pageload) -->
+<script>
+if (window.innerWidth > 768) {{
+  window.addEventListener('load', function() {{
+    setTimeout(function() {{
+      var s1 = document.createElement('script');
+      s1.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
+      s1.onload = function() {{
+        setTimeout(function() {{
+          var s2 = document.createElement('script');
+          s2.src = '/js/animation.js';
+          document.body.appendChild(s2);
+        }}, 100);
+      }};
+      document.body.appendChild(s1);
+    }}, 3000);
+  }});
+}}
+</script>
 
 <footer class="footer">
   <div class="container">

@@ -83,16 +83,17 @@
   </div>
 </nav>
 
-<section class="hero" style="padding: 120px 24px 80px;">
-  <div class="container">
+<section class="hero" id="hero" data-hero-fixed="true">
+  <div class="hero-bg"><canvas id="glsl-canvas"></canvas><div class="hero-bg-top"></div></div>
+  <div class="container" style="position: relative; z-index: 2; text-align: center;">
     <span class="city-badge">📍 Las Palmas, España</span>
     <h1 class="section-title" style="font-size: clamp(2rem, 5vw, 3.5rem);">
       <span class="text-gradient">CRM para restaurantes</span> en Las Palmas
     </h1>
-    <p class="hero-lead" style="font-size: 1.15rem; color: #94A3B8; max-width: 720px; line-height: 1.7; margin: 20px 0 32px;">
+    <p class="hero-lead" style="font-size: 1.15rem; color: #94A3B8; max-width: 720px; line-height: 1.7; margin: 20px auto 32px;">
       Los restaurantes en Las Palmas operan en un mercado con 50.000 PYMEs: comercio, turismo Canarias. Los que responden primero por WhatsApp y automatizan seguimiento captan más clientes y retienen mejor. ZENIA despliega ese sistema en 5 semanas.
     </p>
-    <div class="hero-ctas" style="display: flex; gap: 12px; flex-wrap: wrap;">
+    <div class="hero-ctas" style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;">
       <a href="https://wa.me/34677612799" class="btn btn-primary">Habla con nosotros por WhatsApp</a>
       <a href="/es/#precios" class="btn btn-secondary">Ver precios</a>
     </div>
@@ -179,7 +180,7 @@
 </section>
 
 
-<section class="section" style="padding: 40px 24px; <!-- ZENIA_INTERNAL_LINKS_BLOGS -->">
+<section class="section" style="padding: 40px 24px;" data-zenia-internal-links="blogs">
   <div class="container">
     <h3 style="color: #F1F5F9; margin-bottom: 20px;">Recursos relacionados</h3>
     <div class="related-links">
@@ -230,5 +231,26 @@
     </div>
   </div>
 </footer>
+
+<!-- Three.js animated hero background (desktop only, loads 3s after pageload) -->
+<script>
+if (window.innerWidth > 768) {
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      var s1 = document.createElement('script');
+      s1.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
+      s1.onload = function() {
+        setTimeout(function() {
+          var s2 = document.createElement('script');
+          s2.src = '/js/animation.js';
+          document.body.appendChild(s2);
+        }, 100);
+      };
+      document.body.appendChild(s1);
+    }, 3000);
+  });
+}
+</script>
+
 </body>
 </html>

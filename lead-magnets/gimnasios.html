@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>47 Mensajes WhatsApp para Gimnasios | ZENIA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #3B82F6;
+    --primary-dark: #2563EB;
+    --accent-violet: #6366F1;
+    --bg-dark: #0A0F1C;
+    --bg-card: #FFFFFF;
+    --text-primary: #0F172A;
+    --text-secondary: #475569;
+    --text-muted: #94A3B8;
+    --border: #E2E8F0;
+    --gradient: linear-gradient(135deg, #3B82F6 0%, #6366F1 100%);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: #F8FAFC; color: var(--text-primary); line-height: 1.6; }
+  .page { max-width: 820px; margin: 0 auto; background: white; box-shadow: 0 4px 24px rgba(15, 23, 42, 0.06); }
+  .cover { background: linear-gradient(135deg, #0A0F1C 0%, #1E293B 100%); color: white; padding: 80px 60px 60px; text-align: center; position: relative; overflow: hidden; }
+  .cover::before { content: ''; position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(99, 102, 241, 0.3) 0%, transparent 70%); pointer-events: none; }
+  .cover::after { content: ''; position: absolute; bottom: -100px; left: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, transparent 70%); pointer-events: none; }
+  .logo-mark { display: inline-flex; align-items: center; gap: 14px; margin-bottom: 32px; position: relative; z-index: 2; }
+  .logo-mark svg { width: 56px; height: 56px; }
+  .logo-mark .brand { font-size: 28px; font-weight: 800; letter-spacing: -0.5px; }
+  .cover h1 { font-size: clamp(32px, 4.5vw, 44px); font-weight: 800; line-height: 1.15; margin-bottom: 20px; position: relative; z-index: 2; }
+  .cover h1 .gradient { background: linear-gradient(135deg, #60A5FA 0%, #A78BFA 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .cover .subtitle { font-size: 18px; color: #CBD5E1; max-width: 560px; margin: 0 auto; position: relative; z-index: 2; }
+  .cover .badge { display: inline-block; background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.3); color: #A78BFA; padding: 6px 14px; border-radius: 100px; font-size: 13px; font-weight: 600; margin-top: 32px; position: relative; z-index: 2; }
+  .container { padding: 60px; }
+  .intro { margin-bottom: 60px; }
+  .intro h2 { font-size: 24px; font-weight: 700; margin-bottom: 16px; }
+  .intro p { font-size: 16px; color: var(--text-secondary); margin-bottom: 14px; }
+  .intro .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 32px; padding: 24px; background: linear-gradient(135deg, #EFF6FF 0%, #EEF2FF 100%); border-radius: 12px; }
+  .stat { text-align: center; }
+  .stat .num { font-size: 28px; font-weight: 800; color: var(--primary); }
+  .stat .label { font-size: 13px; color: var(--text-secondary); margin-top: 4px; }
+  .toc { background: #F1F5F9; padding: 24px 32px; border-radius: 12px; margin-bottom: 60px; }
+  .toc h3 { font-size: 14px; text-transform: uppercase; letter-spacing: 1.2px; color: var(--text-muted); margin-bottom: 16px; font-weight: 700; }
+  .toc ol { list-style: none; counter-reset: toc-counter; }
+  .toc li { counter-increment: toc-counter; padding: 8px 0; border-bottom: 1px solid #E2E8F0; display: flex; align-items: center; gap: 14px; }
+  .toc li:last-child { border-bottom: 0; }
+  .toc li::before { content: counter(toc-counter); background: var(--gradient); color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; flex-shrink: 0; }
+  .toc li a { color: var(--text-primary); text-decoration: none; font-weight: 500; flex: 1; font-size: 15px; }
+  .toc li .count { color: var(--text-muted); font-size: 13px; }
+  .section { margin-bottom: 64px; }
+  .section-header { margin-bottom: 28px; padding-bottom: 16px; border-bottom: 2px solid var(--border); }
+  .section-header .section-num { display: inline-block; background: var(--gradient); color: white; padding: 4px 12px; border-radius: 6px; font-size: 12px; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 8px; }
+  .section-header h2 { font-size: 24px; font-weight: 700; line-height: 1.2; }
+  .section-header .section-desc { color: var(--text-secondary); font-size: 14px; margin-top: 6px; }
+  .message { background: #F8FAFC; border-left: 3px solid var(--primary); border-radius: 8px; padding: 20px 24px; margin-bottom: 16px; page-break-inside: avoid; }
+  .message-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+  .message-num { background: white; border: 1px solid var(--border); color: var(--primary); padding: 3px 10px; border-radius: 100px; font-size: 12px; font-weight: 700; }
+  .message-when { font-size: 12px; color: var(--text-muted); font-weight: 500; }
+  .message-text { font-size: 14px; color: var(--text-primary); line-height: 1.7; white-space: pre-wrap; background: white; padding: 14px 16px; border-radius: 6px; border: 1px solid var(--border); }
+  .message-tip { font-size: 12px; color: var(--text-muted); margin-top: 10px; font-style: italic; }
+  .cta-block { background: linear-gradient(135deg, #0A0F1C 0%, #1E293B 100%); color: white; padding: 48px 40px; border-radius: 16px; text-align: center; margin-top: 60px; position: relative; overflow: hidden; }
+  .cta-block::before { content: ''; position: absolute; top: -50%; right: -20%; width: 60%; height: 200%; background: radial-gradient(ellipse, rgba(99, 102, 241, 0.2) 0%, transparent 70%); pointer-events: none; }
+  .cta-block h2 { font-size: 26px; font-weight: 800; margin-bottom: 16px; position: relative; z-index: 2; }
+  .cta-block p { font-size: 16px; color: #CBD5E1; max-width: 540px; margin: 0 auto 28px; position: relative; z-index: 2; }
+  .cta-button { display: inline-flex; align-items: center; gap: 8px; background: white; color: var(--text-primary); padding: 14px 28px; border-radius: 100px; text-decoration: none; font-weight: 700; font-size: 15px; position: relative; z-index: 2; }
+  footer { padding: 40px 60px; border-top: 1px solid var(--border); text-align: center; color: var(--text-muted); font-size: 13px; }
+  footer a { color: var(--primary); text-decoration: none; font-weight: 600; }
+  @media print { body { background: white; } .page { box-shadow: none; } .cover { background: white; color: var(--text-primary); padding: 40px 0; } .cover h1, .cover .gradient { color: var(--text-primary); -webkit-text-fill-color: var(--text-primary); } .cover .subtitle { color: var(--text-secondary); } .cta-block { background: #F1F5F9; color: var(--text-primary); } .cta-block p { color: var(--text-secondary); } .message { page-break-inside: avoid; } }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+<header class="cover">
+  <div class="logo-mark">
+    <svg viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="zb" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2563EB"/><stop offset="100%" stop-color="#3B82F6"/></linearGradient>
+        <linearGradient id="zv" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6366F1"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient>
+      </defs>
+      <rect width="140" height="140" rx="28" fill="#0F172A"/>
+      <path d="M 70 18 Q 18 18 18 38 L 18 57 Q 18 63 24 63 L 88 63 Z" fill="url(#zb)"/>
+      <path d="M 70 122 Q 122 122 122 102 L 122 83 Q 122 77 116 77 L 52 77 Z" fill="url(#zv)"/>
+    </svg>
+    <span class="brand">ZENIA</span>
+  </div>
+
+  <h1>47 Mensajes <span class="gradient">WhatsApp</span><br>para Gimnasios</h1>
+  <p class="subtitle">Plantilla copy-paste para onboarding, retención, alertas de churn, reactivación y referidos. Probada en 150+ gimnasios en España y LATAM.</p>
+  <div class="badge">Edición 2026 · Preparada por Zenia Partners</div>
+</header>
+
+<div class="container">
+
+<section class="intro">
+  <h2>Cómo usar esta guía</h2>
+  <p>Estos 47 mensajes están pensados para el ciclo completo del socio: desde que se inscribe hasta que renueva por tercer año. Cada uno cubre un momento crítico del journey donde se gana o se pierde un cliente.</p>
+  <p>El objetivo no es responder los 47 a mano. Es tener la base lista, probarla 30 días y medir: vas a ver caídas claras en el churn de los primeros 90 días, subidas en renovaciones y un flujo de referidos que antes no existía.</p>
+  <p>Si después de probarlos quiere que un agente de IA personalizado los responda automático 24/7 entendiendo el contexto de cada socio, escríbanos. Tenemos cupos limitados cada mes.</p>
+
+  <div class="stats">
+    <div class="stat"><div class="num">66.4%</div><div class="label">Retención anual media en gimnasios 2025 (HFA Benchmarking)</div></div>
+    <div class="stat"><div class="num">50%</div><div class="label">De cancelaciones anuales ocurren en los primeros 90 días</div></div>
+    <div class="stat"><div class="num">5x</div><div class="label">LTV de un socio que renueva año 2 vs uno de un solo año</div></div>
+  </div>
+</section>
+
+<nav class="toc">
+  <h3>Las 10 secciones</h3>
+  <ol>
+    <li><a href="#s1">Bienvenida nuevo socio</a><span class="count">5 mensajes</span></li>
+    <li><a href="#s2">Onboarding primeros 14 días</a><span class="count">5 mensajes</span></li>
+    <li><a href="#s3">Recordatorios y confirmación de clase</a><span class="count">4 mensajes</span></li>
+    <li><a href="#s4">No-show y faltas a clase</a><span class="count">4 mensajes</span></li>
+    <li><a href="#s5">Alertas de inactividad y churn</a><span class="count">5 mensajes</span></li>
+    <li><a href="#s6">Reactivación de socios en pausa</a><span class="count">5 mensajes</span></li>
+    <li><a href="#s7">Petición de reseñas</a><span class="count">4 mensajes</span></li>
+    <li><a href="#s8">Programa de referidos</a><span class="count">3 mensajes</span></li>
+    <li><a href="#s9">Eventos, retos y comunidad</a><span class="count">4 mensajes</span></li>
+    <li><a href="#s10">Renovación y upselling</a><span class="count">8 mensajes</span></li>
+  </ol>
+</nav>
+
+<section class="section" id="s1">
+  <header class="section-header">
+    <span class="section-num">SECCIÓN 01</span>
+    <h2>Bienvenida nuevo socio</h2>
+    <p class="section-desc">Las primeras 24 horas tras inscribirse marcan si va a venir 3 veces o ninguna. La velocidad de respuesta y el tono cambian todo.</p>
+  </header>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#1</span><span class="message-when">Inmediato tras inscripción (en menos de 5 minutos)</span></div>
+    <div class="message-text">¡Bienvenido a {nombre_gimnasio}, {nombre}!
+
+Tu inscripción ya está activa. Soy {nombre_responsable}, tu contacto directo aquí.
+
+Antes de que vengas la primera vez, dime 3 cosas para preparar todo:
+
+1. ¿Cuál es tu objetivo principal? (perder peso, ganar músculo, mejorar salud, otro)
+2. ¿Tienes alguna lesión o condición que debamos saber?
+3. ¿Qué horario te viene mejor para entrenar (mañana, tarde, noche)?
+
+Con eso ya te aparto cita con el entrenador para tu primera sesión gratis.</div>
+    <p class="message-tip">El primer mensaje en menos de 5 minutos sube retención a 90 días en 12-18 puntos. La velocidad es señal de profesionalidad.</p>
+  </div>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#2</span><span class="message-when">Confirmación primera cita con entrenador</span></div>
+    <div class="message-text">Listo {nombre}, tu primera cita con el entrenador queda para el {fecha} a las {hora}.
+
+Te recibe {nombre_entrenador}, lleva la sesión y te diseña tu plan inicial sin coste.
+
+Lleva ropa cómoda y una toalla. El agua la ponemos nosotros.
+
+¿Llegas en metro o en coche? Te paso info según tu opción.</div>
+    <p class="message-tip">Pregunta concreta al final mantiene la conversación abierta. Subes engagement.</p>
+  </div>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#3</span><span class="message-when">Recordatorio 24h antes de primera sesión</span></div>
+    <div class="message-text">¡Hola {nombre}! Mañana a las {hora} es tu primera sesión con {nombre_entrenador}.
+
+Llegue 5 minutos antes para que le hagamos un mini tour rápido del gimnasio (vestuarios, zonas, taquillas).
+
+Y si por algo no puede venir, dígame por aquí y reagendamos. Lo importante es que arranque con buen pie.</div>
+    <p class="message-tip">Llegada anticipada con tour reduce ansiedad de novato. Más probable que vuelva la 2da vez.</p>
+  </div>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#4</span><span class="message-when">Día 1 después de primera sesión</span></div>
+    <div class="message-text">{nombre}, ¿qué tal le fue la primera sesión con {nombre_entrenador}?
+
+Pequeña encuesta rápida, solo respónda con un número del 1 al 10:
+
+¿Qué tan cómodo se sintió en el gimnasio?
+¿Qué tan claro le quedó el plan?
+¿Qué tan probable es que vuelva esta semana?
+
+Con esos 3 números le ajustamos lo que haga falta antes de su próxima visita.</div>
+    <p class="message-tip">Encuesta de 30 segundos detecta socios en riesgo desde día 1. Si responde 7 o menos en alguna, llamada del manager.</p>
+  </div>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#5</span><span class="message-when">Día 3 sin venir todavía</span></div>
+    <div class="message-text">¡Hola {nombre}! Llevas 3 días sin venir desde que te inscribiste. Sin presión ninguna, solo te aviso.
+
+¿Hay algo en concreto que te frene? (horario, miedo escénico, no saber qué hacer, lo que sea)
+
+Si quieres, le pido a {nombre_entrenador} que te haga una segunda sesión guiada gratis. Mejor venir 1 hora con guía que no venir nunca.</div>
+    <p class="message-tip">Día 3 sin venir es zona crítica. Intervenir aquí salva el 40% de los socios que iban a desinscribirse silenciosamente.</p>
+  </div>
+</section>
+
+<section class="section" id="s2">
+  <header class="section-header">
+    <span class="section-num">SECCIÓN 02</span>
+    <h2>Onboarding primeros 14 días</h2>
+    <p class="section-desc">El churn de los primeros 90 días se decide en los primeros 14. Estos 5 mensajes mantienen al socio enganchado.</p>
+  </header>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#6</span><span class="message-when">Día 5: revisar progreso post-primera sesión</span></div>
+    <div class="message-text">{nombre}, ya pasaron 5 días desde su primera sesión.
+
+¿Vino esta semana? Si sí, ¿cómo se siente con la rutina que le diseñó {nombre_entrenador}?
+
+Si nota que algo no encaja (ejercicio incómodo, intensidad mal calibrada, mucho/poco tiempo), me avisa por aquí y lo ajustamos antes de la próxima.
+
+El plan no es estático. Lo afinamos juntos las primeras 3 semanas.</div>
+    <p class="message-tip">Personalizar señala atención individual, baja churn temprano.</p>
+  </div>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#7</span><span class="message-when">Día 7: invitación a clase grupal</span></div>
+    <div class="message-text">¡Una semana ya! Bien hecho.
+
+Como bonus, le invito a probar una clase grupal esta semana sin coste extra. Las que tienen plazas libres y son buenas para arrancar:
+
+🏋️ {clase_1} - {dia} a las {hora}
+🧘 {clase_2} - {dia} a las {hora}
+🥊 {clase_3} - {dia} a las {hora}
+
+Las grupales suben adherencia de socios nuevos un 40%. ¿Le aparto plaza en alguna?</div>
+    <p class="message-tip">Grupales son el mejor anclaje social temprano. Subir un solo socio a una grupal duplica probabilidad de renovación.</p>
+  </div>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#8</span><span class="message-when">Día 10: micro-victoria celebrada</span></div>
+    <div class="message-text">{nombre}, mi sistema me dice que ya viniste {numero} veces en estos 10 días. Eso ya es un patrón.
+
+La media de los socios que duran más de 1 año en el gimnasio es venir 2-3 veces a la semana las primeras 2 semanas. Vas en línea.
+
+Pequeña pregunta: ¿hay algún ejercicio que ya estés notando más fácil que la primera vez?
+
+Cualquier mejora visible la registramos para que la veas en el mes 1.</div>
+    <p class="message-tip">Reconocimiento + comparación con benchmark crea autoeficacia. La gente sigue lo que le hace sentir competente.</p>
+  </div>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#9</span><span class="message-when">Día 14: mini check-in formal</span></div>
+    <div class="message-text">{nombre}, han pasado 2 semanas. Te propongo un check-in rápido con {nombre_entrenador}:
+
+📊 Repasamos el plan inicial
+📊 Comparamos contra cómo te has sentido
+📊 Ajustamos lo que haga falta para el próximo mes
+
+Es una sesión de 30 minutos sin coste. ¿Le viene bien {opcion_1} o {opcion_2}?</div>
+    <p class="message-tip">Check-in formal a 14 días es la herramienta retención más infrautilizada en el sector. Alarga el LTV un 35-50%.</p>
+  </div>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#10</span><span class="message-when">Día 14 si NO ha venido en 7+ días</span></div>
+    <div class="message-text">{nombre}, llevo unos días sin verte por aquí.
+
+No te escribo para presionar. Te escribo para entender qué está pasando.
+
+¿Hay algún tema con el horario, el lugar, el plan de entrenamiento, o algo personal que te impide venir?
+
+Si me cuentas, te puedo ayudar a destrabarlo. Y si decides pausar o cancelar, también está bien, lo gestionamos sin drama. Pero quería darte la oportunidad de hablarlo primero.</div>
+    <p class="message-tip">Empatía pura sin venta. Recupera 35-45% de los que ya estaban a punto de cancelar.</p>
+  </div>
+</section>
+
+<section class="section" id="s3">
+  <header class="section-header">
+    <span class="section-num">SECCIÓN 03</span>
+    <h2>Recordatorios y confirmación de clase</h2>
+    <p class="section-desc">Los socios que confirman previamente la clase tienen 4x mejor adherencia. Lo difícil es que confirmen sin parecer obligados.</p>
+  </header>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#11</span><span class="message-when">Recordatorio 24h antes de clase reservada</span></div>
+    <div class="message-text">¡Hola {nombre}! Mañana tiene clase de {nombre_clase} a las {hora} con {nombre_instructor}.
+
+¿Confirma que viene? Solo responda "Sí" y queda blocked.
+
+Si por algo no puede, también responda y libero la plaza. Sin problema, otro socio en lista de espera la aprovecha.</div>
+    <p class="message-tip">"Solo responde Sí" sube confirmaciones del 30% al 70%. Frase corta + acción clara.</p>
+  </div>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#12</span><span class="message-when">2 horas antes de clase</span></div>
+    <div class="message-text">{nombre}, en 2 horas {nombre_instructor} le espera en {nombre_clase}.
+
+Hoy van a trabajar {focus_clase} (perfecto si está buscando {beneficio_relacionado}).
+
+Llegue 5 minutos antes para coger buen sitio.</div>
+    <p class="message-tip">Mencionar el focus específico de la clase añade valor + razón concreta de venir.</p>
+  </div>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#13</span><span class="message-when">Recordatorio para socios que no reservaron pero suelen venir</span></div>
+    <div class="message-text">¡Hola {nombre}! Hoy es {dia_de_la_semana} y normalmente vienes a esta hora.
+
+Hoy hay {clase_destacada} a las {hora}, ¿te apunto?
+
+Si prefieres entrenar libre, también está bien, solo es para que sepas que la clase está disponible.</div>
+    <p class="message-tip">Patrón detectado + invitación suave. Los socios habituales agradecen no tener que pensar.</p>
+  </div>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#14</span><span class="message-when">Aviso clase cancelada o cambio de horario</span></div>
+    <div class="message-text">{nombre}, aviso anticipado: la clase de {clase} de mañana a las {hora_original} cambia a las {hora_nueva} (instructor con compromiso ineludible).
+
+¿Le sigue viniendo bien? Si no, le doy 2 alternativas:
+
+🕐 {clase_alternativa_1} a las {hora_alt_1}
+🕐 {clase_alternativa_2} a las {hora_alt_2}
+
+Si nada le encaja, le pongo crédito automático para usar otro día.</div>
+    <p class="message-tip">Cambios mal comunicados son la 3ra causa de churn entre socios habituales. Anticípate siempre.</p>
+  </div>
+</section>
+
+<section class="section" id="s4">
+  <header class="section-header">
+    <span class="section-num">SECCIÓN 04</span>
+    <h2>No-show y faltas a clase</h2>
+    <p class="section-desc">Socio que no fue a clase reservada NO es un mal cliente. Es un cliente que necesita que se lo trabajemos rápido.</p>
+  </header>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#15</span><span class="message-when">No-show a clase (mismo día, 1 hora después)</span></div>
+    <div class="message-text">¡Hola {nombre}! Te apuntaste a {clase} hoy y no pudiste venir, espero que esté todo bien.
+
+¿Reagendamos? Tengo plazas libres en:
+
+🕐 {opcion_1}
+🕐 {opcion_2}
+🕐 {opcion_3}
+
+Sin penalización ni nada raro, solo es para que no rompamos el ritmo.</div>
+    <p class="message-tip">Tono empático sin reproche. La penalización dura genera cancelaciones.</p>
+  </div>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#16</span><span class="message-when">2do no-show seguido</span></div>
+    <div class="message-text">{nombre}, dos clases seguidas sin venir. Algo está pasando.
+
+¿Es el horario? ¿La intensidad? ¿Otra cosa fuera del gimnasio?
+
+A veces la solución es cambiar de clase, otras veces es ajustar el plan, otras veces es solo charlar 5 minutos. Lo que sea, dígame y lo solucionamos.
+
+Si necesita pausar la membresía 2-4 semanas mientras se ordena, también lo armamos sin que pierda lo pagado.</div>
+    <p class="message-tip">Ofrecer la pausa antes de que la pidan = lealtad fuerte. Si pausan tienen 70% de probabilidad de volver vs 20% si cancelan.</p>
+  </div>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#17</span><span class="message-when">Asignación de plaza liberada a lista de espera</span></div>
+    <div class="message-text">¡Hola {nombre}! Buenas noticias: se acaba de liberar plaza para {clase} de hoy a las {hora}.
+
+¿La tomas? Te aparto 5 minutos. Si no respondes, ofrezco a la siguiente persona en lista.</div>
+    <p class="message-tip">Convertir cancelaciones en clases llenas en menos de 5 min. Te ahorras la frustración del cancelado y rentabilizas la mesa al máximo.</p>
+  </div>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#18</span><span class="message-when">Política de no-show repetido (3+ veces)</span></div>
+    <div class="message-text">{nombre}, le escribo en privado. Va a sonar un poco directo pero es por su bien:
+
+Lleva {numero} no-shows este mes. Sé que no es por mala fe, pero el patrón sugiere que el formato actual no le está funcionando.
+
+Le propongo una de tres:
+
+1. Cambiamos de clases más flexibles (entreno libre, no requiere reserva)
+2. Pasamos a un plan de menos sesiones al mes y bajamos cuota
+3. Pausamos 1-2 meses y retomamos cuando esté listo
+
+Cualquiera funciona, solo dígame cuál prefiere y lo armamos sin coste extra.</div>
+    <p class="message-tip">Honestidad anticipa la cancelación inminente y la transforma en cambio de plan. Conserva 50% de los que iban a irse.</p>
+  </div>
+</section>
+
+<section class="section" id="s5">
+  <header class="section-header">
+    <span class="section-num">SECCIÓN 05</span>
+    <h2>Alertas de inactividad y churn</h2>
+    <p class="section-desc">El socio que va a cancelar manda 4-6 señales antes de hacerlo. Detectarlas y actuar baja churn anual hasta 18 puntos.</p>
+  </header>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#19</span><span class="message-when">7 días sin entrar al gimnasio</span></div>
+    <div class="message-text">¡Hola {nombre}! Llevamos 7 días sin verte por aquí.
+
+Quería asegurarme que está todo bien. ¿Pasó algo (vacaciones, trabajo, lesión)?
+
+Si necesitas pausar la membresía algunos días, también se puede sin pagar más. Solo dímelo.
+
+Te esperamos cuando puedas volver.</div>
+    <p class="message-tip">7 días es el sweet spot de inactividad. Antes es agobiante, después se enfría. Las alertas automáticas a 7 días recuperan 60% de los socios.</p>
+  </div>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#20</span><span class="message-when">14 días sin entrar (alerta amarilla)</span></div>
+    <div class="message-text">{nombre}, ya van 2 semanas sin verle. Empezamos a preocuparnos un poco.
+
+Pequeña confesión: las dos primeras semanas sin venir son el momento más probable de cancelación. Por eso le escribo.
+
+¿Está todo bien? ¿Algo en lo que le podamos ayudar para que retome la rutina?
+
+Si me dice "tengo X problema", busco solución. Si me dice "necesito un break", organizamos pausa. Si me dice "no me ha funcionado", quiero saber por qué.</div>
+    <p class="message-tip">Transparencia sobre los datos genera confianza. La gente aprecia que no jueguemos al gato y al ratón.</p>
+  </div>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#21</span><span class="message-when">21 días sin entrar (alerta roja)</span></div>
+    <div class="message-text">{nombre}, 3 semanas sin venir es zona de cancelación segura si no actuamos.
+
+No le voy a presionar a venir. Solo le doy 3 caminos:
+
+1. Quiere volver pero le cuesta arrancar → le agendo sesión personal sin coste con {nombre_entrenador}
+2. Necesita pausar → activamos pausa 1-2 meses sin perder lo pagado
+3. Quiere cancelar → le ayudo con el proceso, sin reproches ni intentos de retención
+
+¿Cuál de los 3?</div>
+    <p class="message-tip">Ofrecer cancelación abiertamente reduce ansiedad. La gente cancela menos cuando se les facilita cancelar.</p>
+  </div>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#22</span><span class="message-when">Caída de frecuencia (de 3 veces/sem a 1)</span></div>
+    <div class="message-text">{nombre}, vi en mis registros que su frecuencia de entreno ha bajado bastante este mes (de 3 veces a 1 veces a la semana).
+
+¿Está pasando algo? ¿El horario, la motivación, una lesión?
+
+A veces ayuda cambiar de tipo de entreno (de máquinas a clases grupales o viceversa) cuando uno se estanca. Si quiere lo probamos esta semana.</div>
+    <p class="message-tip">Detectar caída de frecuencia ANTES de la inactividad total es 3x más efectivo que esperar al churn.</p>
+  </div>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#23</span><span class="message-when">Bajada en intensidad / saltarse el plan</span></div>
+    <div class="message-text">{nombre}, su entrenador {nombre_entrenador} me comenta que en las últimas sesiones ha bajado la intensidad y está saltándose ejercicios del plan.
+
+Eso suele significar 1 de 3 cosas: el plan está muy duro, lleva mala semana fuera del gimnasio, o ha perdido motivación.
+
+¿Cuál de las 3 le encaja? Le buscamos solución sin que tenga que aguantar plan que no le sirve.</div>
+    <p class="message-tip">Comunicación entre entrenador y manager + alerta proactiva = lealtad de cliente premium.</p>
+  </div>
+</section>
+
+<section class="section" id="s6">
+  <header class="section-header">
+    <span class="section-num">SECCIÓN 06</span>
+    <h2>Reactivación de socios en pausa</h2>
+    <p class="section-desc">El socio que pausó es 5x más fácil de recuperar que captar uno nuevo. Pero hay que escribirle en el momento exacto.</p>
+  </header>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#24</span><span class="message-when">A los 30 días de pausa</span></div>
+    <div class="message-text">¡Hola {nombre}! Llevas un mes en pausa, espero que ya estés mejor o resuelto lo que pasaba.
+
+¿Quieres reactivar la membresía? Te tengo lista la sesión con {nombre_entrenador} para que arranquemos suavecito y no te cueste volver a la rutina.
+
+Si todavía no es momento, sin problema, mantenemos la pausa otras 4 semanas.</div>
+    <p class="message-tip">Reactivar a los 30 días con sesión guiada baja la fricción del retorno.</p>
+  </div>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#25</span><span class="message-when">A los 60 días de pausa</span></div>
+    <div class="message-text">{nombre}, hoy hace 60 días desde tu pausa. Es el momento de decidir.
+
+Te paso 3 opciones:
+
+1. Volver a entrenar la próxima semana (te incluyo sesión 1-1 gratis para arrancar)
+2. Extender pausa 30 días más
+3. Cancelar la membresía sin penalización
+
+Cualquiera está bien. Solo dime cuál prefieres.</div>
+    <p class="message-tip">Forzar decisión a los 60 días evita pausas eternas que se convierten en cancelaciones silenciosas.</p>
+  </div>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#26</span><span class="message-when">Cliente exsocio cancelado a los 90 días</span></div>
+    <div class="message-text">¡Hola {nombre}! Hace 3 meses te diste de baja de {nombre_gimnasio}.
+
+Sin querer ser pesado, te aviso que tenemos abierta una promoción de retorno: 50% de descuento en el primer mes + sesión 1-1 gratis con tu entrenador anterior.
+
+Sé que las cosas cambian y a veces hay que volver a probar. Si te interesa, dímelo y lo armamos. Si no, sin problema.</div>
+    <p class="message-tip">Promo de retorno a 90 días recupera 8-15% de los exsocios. Es el ROI más alto de todo el funnel.</p>
+  </div>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#27</span><span class="message-when">Reactivación inteligente con cambio</span></div>
+    <div class="message-text">{nombre}, sé que cuando dejaste el gimnasio la razón fue {razon_cancelacion}.
+
+Te quería contar que desde entonces hicimos varios cambios: {cambio_1}, {cambio_2}, {cambio_3}.
+
+Si alguno aplica a tu caso, ¿quieres que lo veamos? Te invito a una sesión gratis para que pruebes el nuevo formato sin compromiso.</div>
+    <p class="message-tip">Si tienes registrada la razón de cancelación, este mensaje converte 25-30%. Sin ella, baja al 8%.</p>
+  </div>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#28</span><span class="message-when">Aniversario de cancelación</span></div>
+    <div class="message-text">{nombre}, hoy hace 1 año desde tu cancelación. No te escribo para venderte, te escribo para preguntarte:
+
+¿Cómo te ha ido este año con tu rutina física? ¿Has seguido entrenando en otro sitio o lo dejaste?
+
+Sin venta encubierta, solo curiosidad genuina. Si quieres comentar, aquí estoy.</div>
+    <p class="message-tip">Mensaje sin pitch comercial diferencia de los 50 emails de retorno que reciben. Genera relación + reactivaciones inesperadas.</p>
+  </div>
+</section>
+
+<section class="section" id="s7">
+  <header class="section-header">
+    <span class="section-num">SECCIÓN 07</span>
+    <h2>Petición de reseñas</h2>
+    <p class="section-desc">Los gimnasios con 50+ reseñas Google de 4.5+ rankean primero en búsquedas locales. Pedir reseñas debe ser sistemático.</p>
+  </header>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#29</span><span class="message-when">Después del primer mes (peak motivación)</span></div>
+    <div class="message-text">¡Hola {nombre}! Hoy hace 1 mes que te apuntaste y vienes {numero} veces a la semana en promedio. Bien hecho.
+
+Te pido un favor: ¿puedes dejarnos una reseña en Google? Las reseñas de socios reales son lo que más nos ayuda a crecer.
+
+Aquí el link directo: {link_google}
+
+Y si te animas a contar qué cambió en tu rutina o tu energía este mes, mejor todavía. Mil gracias.</div>
+    <p class="message-tip">Pedir a 1 mes captura el peak de motivación. Después se diluye el feeling.</p>
+  </div>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#30</span><span class="message-when">Después de un logro concreto (subió peso, perdió kilos, etc)</span></div>
+    <div class="message-text">{nombre}, acabamos de hacer la medición y has progresado {logro_concreto}.
+
+Ese tipo de resultados son lo que la gente que está pensando en apuntarse necesita ver para decidirse.
+
+¿Te animas a dejarnos una reseña en Google contando tu experiencia? Aquí el link: {link_google}
+
+No tienes que escribir mucho. Cualquier línea que cuente lo que has notado es oro para nosotros.</div>
+    <p class="message-tip">Pedir cuando hay logro concreto duplica probabilidad de reseña detallada (no solo "muy bien").</p>
+  </div>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#31</span><span class="message-when">Encuesta de satisfacción mensual</span></div>
+    <div class="message-text">{nombre}, mini encuesta del mes:
+
+Del 1 al 10, ¿cómo te sientes con tu progreso este mes?
+
+Y si me pones un 8 o más, te pido que esa misma valoración la dejes en Google. Aquí el link: {link_google}
+
+Si me pones 7 o menos, dime por aquí qué cambiarías. Sin reseña pública, solo feedback directo.</div>
+    <p class="message-tip">Filtra automáticamente: solo los que dicen 8+ van a reseña pública. Las quejas se gestionan en privado.</p>
+  </div>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#32</span><span class="message-when">Recordatorio amable a quien iba a dejar reseña pero no lo hizo</span></div>
+    <div class="message-text">¡Hola {nombre}! La semana pasada quedamos en que dejarías reseña en Google. Sé que se te pasó (a todos nos pasa).
+
+Te dejo el link otra vez por si te queda 1 minuto hoy: {link_google}
+
+Si has cambiado de opinión, no problem, también dímelo y no te molesto más con esto.</div>
+    <p class="message-tip">Recuperar reseñas olvidadas dobla la conversión final. La gente pierde el link, no la voluntad.</p>
+  </div>
+</section>
+
+<section class="section" id="s8">
+  <header class="section-header">
+    <span class="section-num">SECCIÓN 08</span>
+    <h2>Programa de referidos</h2>
+    <p class="section-desc">Un socio referido genera 5x mejor retorno que un socio captado por ads. La clave: estructura clara + recompensa.</p>
+  </header>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#33</span><span class="message-when">Invitación al programa de referidos</span></div>
+    <div class="message-text">{nombre}, te quería proponer algo distinto.
+
+Veo que vienes regular y te ha funcionado el plan. Te confío esto:
+
+Si conoces a alguien (familiar, pareja, amigo, compañero de trabajo) que esté pensando en empezar a entrenar y crees que aquí encajaría, te propongo:
+
+✓ A esa persona le doy 1 semana completa de prueba gratis
+✓ Si se inscribe, a ti te bonifico 1 mes gratis de tu siguiente cuota
+
+Sin presión. Si conoces a alguien y crees que podemos ayudarle, dímelo y le contacto yo directamente.</div>
+    <p class="message-tip">Recompensa simétrica (algo para él Y para el referido) genera más participación que solo descuento al referente.</p>
+  </div>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#34</span><span class="message-when">Cliente refiere a alguien (confirmación)</span></div>
+    <div class="message-text">¡Genial {nombre}! Acabo de hablar con {nombre_referido} y le ofrecí la semana de prueba.
+
+Si se inscribe, te activo el mes gratis automático en tu próxima cuota.
+
+Mientras tanto, mil gracias por confiar en nosotros para recomendar a alguien cercano. Esa confianza vale más que cualquier ad pagado.</div>
+    <p class="message-tip">Agradecer rápido refuerza el comportamiento. Probabilidad de segundo referido sube 3x.</p>
+  </div>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#35</span><span class="message-when">Aniversario referido (1 año desde que entró)</span></div>
+    <div class="message-text">{nombre}, dato curioso: tal día como hoy hace 1 año, {nombre_referido_pasado} se inscribió por recomendación tuya. Hoy sigue siendo socio.
+
+Como agradecimiento extra, te activamos 50% off en tu próxima cuota mensual. Nada que tengas que hacer, ya está aplicado.
+
+Y si conoces a alguien más que pueda venirle bien arrancar a entrenar, ya sabes el formato.</div>
+    <p class="message-tip">Recompensar sin pedir nada genera siguiente referido casi garantizado.</p>
+  </div>
+</section>
+
+<section class="section" id="s9">
+  <header class="section-header">
+    <span class="section-num">SECCIÓN 09</span>
+    <h2>Eventos, retos y comunidad</h2>
+    <p class="section-desc">Los socios con 1+ amigo en el gimnasio tienen 3x más retención. Crear comunidad sube renovación más que cualquier descuento.</p>
+  </header>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#36</span><span class="message-when">Reto mensual del gimnasio</span></div>
+    <div class="message-text">¡Hola {nombre}! Lanzamos el reto del mes: {nombre_reto}.
+
+📅 Duración: del {fecha_inicio} al {fecha_fin}
+🎯 Objetivo: {objetivo_reto}
+🏆 Premio: {premio} para los 3 primeros + camiseta para todos los que lo completen
+
+Te apuntas con responder "Voy". Lo organizamos por equipos de 4-5 personas, así te toca con socios que aún no conoces.
+
+¿Te apunto?</div>
+    <p class="message-tip">Retos por equipos generan amistades dentro del gimnasio. Esos socios renuevan al 95%.</p>
+  </div>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#37</span><span class="message-when">Evento social fuera del gimnasio</span></div>
+    <div class="message-text">{nombre}, este {dia} hacemos {evento_social} (carrera, brunch, ruta de senderismo, lo que sea).
+
+Solo socios. No es entrenamiento, es tiempo juntos para conocernos fuera del gimnasio.
+
+¿Te apuntas? Va a ir gente con la que ya entrenas + caras nuevas. Te aseguro que rompe el hielo.</div>
+    <p class="message-tip">Eventos sociales 1 vez al mes son la inversión más barata en retención. Comparte vino con 4 socios y se convierten en familia.</p>
+  </div>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#38</span><span class="message-when">Cumpleaños del socio</span></div>
+    <div class="message-text">¡Feliz cumpleaños {nombre}!
+
+Pequeño regalo de la casa: este mes tienes acceso libre a las clases premium ({clases_premium}) sin coste extra.
+
+Y si quieres celebrarlo entrenando con amigos, tráelos al gimnasio este fin de semana, les invitamos sesión gratis.</div>
+    <p class="message-tip">Cumpleaños es excusa perfecta para regalar pequeño + abrir canal de referidos a la vez.</p>
+  </div>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#39</span><span class="message-when">Reto comunitario fin de año</span></div>
+    <div class="message-text">{nombre}, lanzamos el reto del año: {nombre_reto_anual}.
+
+Es un reto colectivo. Si entre todos los socios sumamos {meta_colectiva}, el gimnasio paga {recompensa_grupal} (cena fin de año, camisetas, lo que sea).
+
+Tu contribución cuenta. Cada visita suma puntos al total.
+
+¿Aceptamos el reto?</div>
+    <p class="message-tip">Reto colectivo sube frecuencia de visitas un 30-40% durante 4-8 semanas. Y crea sentido de pertenencia.</p>
+  </div>
+</section>
+
+<section class="section" id="s10">
+  <header class="section-header">
+    <span class="section-num">SECCIÓN 10</span>
+    <h2>Renovación y upselling</h2>
+    <p class="section-desc">El momento más rentable del año es el mes antes de renovación. Ahí decides si te lleva 1 año o 3 años el socio.</p>
+  </header>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#40</span><span class="message-when">30 días antes de fin de membresía</span></div>
+    <div class="message-text">{nombre}, en 30 días termina tu membresía anual.
+
+Quería darte un heads-up: si renuevas antes de que se cumpla la fecha, mantenemos la cuota actual sin subida ({precio_actual}).
+
+Si esperamos a que termine, la cuota sube al precio nuevo ({precio_nuevo}).
+
+¿Quieres renovar ya con la cuota antigua o lo hablamos más cerca?</div>
+    <p class="message-tip">Anclaje de precio antiguo + decisión clara baja churn de renovación 25-35%.</p>
+  </div>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#41</span><span class="message-when">Mostrar progreso del año (revisión anual)</span></div>
+    <div class="message-text">{nombre}, antes de hablar de renovación, te paso el resumen de tu año aquí:
+
+📊 Has venido {numero} veces (la media de socios anuales es {numero_promedio})
+🏋️ Has subido {peso_levantado} kg en tu peso máximo
+⚖️ Has cambiado {cambio_corporal}
+💪 Has hecho {numero_clases} clases grupales
+
+Eso es lo que se quedó contigo. Renueves o no, esos resultados ya son tuyos.
+
+¿Hablamos esta semana de cómo seguir el siguiente año?</div>
+    <p class="message-tip">Mostrar resultados objetivos antes de pedir renovación cambia la conversación de "más caro" a "valor recibido".</p>
+  </div>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#42</span><span class="message-when">Upgrade a plan superior</span></div>
+    <div class="message-text">{nombre}, viendo tu uso del gimnasio, creo que el plan {plan_superior} te encajaría mejor.
+
+¿Por qué? Porque ya estás haciendo {uso_actual} y el plan estándar no incluye {beneficio_premium}, que ya estás usando o pagando aparte.
+
+Por {precio_plus} EUR más al mes, te incluye:
+✓ {beneficio_1}
+✓ {beneficio_2}
+✓ {beneficio_3}
+
+Te ahorras {ahorro_calculado} EUR al mes vs pagar las cosas sueltas.
+
+¿Quieres que lo activemos para tu próxima cuota?</div>
+    <p class="message-tip">Upselling con cálculo de ahorro real cierra al 40-50%.</p>
+  </div>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#43</span><span class="message-when">Promoción referido para renovación anticipada</span></div>
+    <div class="message-text">{nombre}, oferta solo esta semana para socios que renueven anticipado:
+
+Si renuevas antes del {fecha_limite} y traes 1 amigo nuevo, te llevamos 2 meses gratis (1 por renovación anticipada + 1 por referido).
+
+A tu amigo le damos 1 semana de prueba gratis + 30% off en primer mes.
+
+¿Te interesa?</div>
+    <p class="message-tip">Combinar renovación + referido + tiempo limitado triplica el cierre.</p>
+  </div>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#44</span><span class="message-when">Recordatorio fin de membresía (15 días antes)</span></div>
+    <div class="message-text">{nombre}, en 15 días termina tu membresía y aún no has confirmado renovación.
+
+¿Vas a renovar? Si sí, te bloqueo la cuota actual. Si no, sin problema, solo dímelo para gestionar la baja sin sorpresas.
+
+Si tienes dudas (sobre el plan, el precio, lo que sea), preguntas y resolvemos.</div>
+    <p class="message-tip">Ofrecer cancelación abierta a 15 días genera respuestas honestas. La gente que iba a "olvidar renovar" se decide.</p>
+  </div>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#45</span><span class="message-when">Recordatorio último día de membresía</span></div>
+    <div class="message-text">{nombre}, hoy es el último día de tu membresía actual. Mañana sin renovación se desactiva.
+
+Te dejo decisión simple:
+
+✓ Renuevo (te respondes "renuevo" y te bloqueo cuota actual)
+✗ No renuevo por ahora (te respondes "no renuevo")
+⏸ Pauso 1 mes y veo (te respondes "pausa")
+
+Cualquiera está bien. Solo necesito tu decisión hoy.</div>
+    <p class="message-tip">Forzar respuesta de 3 opciones cierra al 85%. La opción "pausa" recupera al 60% de los que iban a cancelar.</p>
+  </div>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#46</span><span class="message-when">Día siguiente del fin de membresía si no renovó</span></div>
+    <div class="message-text">{nombre}, ayer terminó tu membresía y no me confirmaste renovación.
+
+Te he reservado tu plaza por 7 días más, sin coste extra. Si decides volver esta semana, retomas con la cuota antigua.
+
+Después de 7 días libero el cupo y la siguiente renovación será al precio nuevo.
+
+¿Vuelves o cerramos definitivo?</div>
+    <p class="message-tip">Ventana de gracia de 7 días recupera 30-40% de los que se "olvidaron" o procrastinaron la renovación.</p>
+  </div>
+
+  <div class="message">
+    <div class="message-meta"><span class="message-num">#47</span><span class="message-when">Conversión de membresía mensual a anual</span></div>
+    <div class="message-text">{nombre}, llevas {numero} meses con membresía mensual. Si quieres ahorrar pasando a anual, te paso números:
+
+Mensual: {precio_mensual} EUR x 12 = {total_anual} EUR/año
+Anual: {precio_anual} EUR/año = {ahorro} EUR de ahorro vs mensual
+
+Plus: con anual te bloqueamos la cuota 12 meses (sin subidas) y desbloqueamos {beneficios_anuales}.
+
+¿Te interesa hacer el cambio en tu próxima cuota?</div>
+    <p class="message-tip">Convertir mensual → anual sube LTV un 4x. Mostrar el cálculo concreto cierra al 30-45%.</p>
+  </div>
+</section>
+
+<div class="cta-block">
+  <h2>¿Quiere que un agente de IA personalizado responda estos mensajes solo?</h2>
+  <p>Configuramos en 24 horas un agente de IA que entiende a cada socio (frecuencia, plan, lesiones, objetivo) y responde 24/7 desde tu WhatsApp Business. 14 días de prueba sin tarjeta. Si no funciona, lo desinstalamos sin coste. 3 cupos cada mes.</p>
+  <a href="https://zeniapartners.com" class="cta-button">Hablamos en zeniapartners.com →</a>
+</div>
+
+</div>
+
+<footer>
+  <p><strong>ZENIA Partners</strong> · CRM + WhatsApp + IA para PYMEs · <a href="https://zeniapartners.com">zeniapartners.com</a></p>
+  <p style="margin-top: 6px; opacity: 0.7;">© 2026 ZENIA. Plantilla gratuita. Comparte si te resulta útil.</p>
+</footer>
+
+</div>
+
+</body>
+</html>

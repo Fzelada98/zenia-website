@@ -1,31 +1,733 @@
 {
   "lastRun": "2026-04-27",
   "posts": [
-    { "slug": "automatizar-reservas-restaurante-whatsapp", "keyword": "automatizar reservas restaurante whatsapp", "tier": 1, "cluster": "restaurantes", "status": "published", "date": "2026-04-16" },
-    { "slug": "crm-restaurantes-guia-completa", "keyword": "crm para restaurantes", "tier": 1, "cluster": "restaurantes", "status": "published", "date": "2026-04-16" },
-    { "slug": "crm-restaurants-complete-guide", "keyword": "crm for restaurants", "tier": 1, "cluster": "restaurantes", "status": "published", "date": "2026-04-16" },
-    { "slug": "crm-gimnasios-fitness", "keyword": "crm gimnasios fitness", "tier": 1, "cluster": "gimnasios", "status": "published", "date": "2026-04-16" },
-    { "slug": "crm-gimnasio-guia", "keyword": "crm gimnasio guia", "tier": 1, "cluster": "gimnasios", "status": "published", "date": "2026-04-16" },
-    { "slug": "retencion-clientes-gimnasio-ia", "keyword": "retencion clientes gimnasio ia", "tier": 1, "cluster": "gimnasios", "status": "published", "date": "2026-04-16" },
-    { "slug": "customer-retention-gym-ai", "keyword": "customer retention gym ai", "tier": 1, "cluster": "gimnasios", "status": "published", "date": "2026-04-16" },
-    { "slug": "crm-belleza-salon-estetica", "keyword": "crm belleza salon estetica", "tier": 1, "cluster": "belleza", "status": "published", "date": "2026-04-16" },
-    { "slug": "crm-beauty-salons-guide", "keyword": "crm beauty salons", "tier": 1, "cluster": "belleza", "status": "published", "date": "2026-04-16" },
-    { "slug": "chatbot-whatsapp-restaurantes", "keyword": "agente ia whatsapp restaurantes", "tier": 1, "cluster": "restaurantes", "status": "published", "date": "2026-04-16" },
-    { "slug": "automatizacion-whatsapp-negocios", "keyword": "automatizacion whatsapp negocios", "tier": 1, "cluster": "general", "status": "published", "date": "2026-04-16" },
-    { "slug": "whatsapp-automation-business-guide", "keyword": "whatsapp automation business", "tier": 1, "cluster": "general", "status": "published", "date": "2026-04-16" },
-    { "slug": "whatsapp-crm-pymes-guia", "keyword": "whatsapp crm pymes", "tier": 1, "cluster": "general", "status": "published", "date": "2026-04-16" },
-    { "slug": "whatsapp-crm-small-business", "keyword": "whatsapp crm small business", "tier": 1, "cluster": "general", "status": "published", "date": "2026-04-16" },
-    { "slug": "automatizacion-retail-tiendas-ia", "keyword": "automatizacion retail tiendas ia", "tier": 2, "cluster": "retail", "status": "published", "date": "2026-04-16" },
-    { "slug": "automatizacion-ia-pymes", "keyword": "automatizacion ia pymes", "tier": 1, "cluster": "general", "status": "published", "date": "2026-04-16" },
-    { "slug": "fidelizacion-clientes-restaurante-2026", "keyword": "fidelizacion clientes restaurante 2026", "tier": 1, "cluster": "restaurantes", "status": "published", "date": "2026-04-17" },
-    { "slug": "retencion-socios-gimnasio-estrategias", "keyword": "retencion socios gimnasio estrategias", "tier": 1, "cluster": "gimnasios", "status": "published", "date": "2026-04-18" },
-    { "slug": "agenda-online-peluqueria-whatsapp", "keyword": "agenda online peluqueria whatsapp", "tier": 1, "cluster": "belleza", "status": "published", "date": "2026-04-19" },
-    { "slug": "automatizar-cobros-gimnasio-whatsapp", "keyword": "automatizar cobros gimnasio whatsapp", "tier": 1, "cluster": "gimnasios", "status": "published", "date": "2026-04-21" },
-    { "slug": "marketing-digital-restaurantes-pequenos", "keyword": "marketing digital restaurantes pequenos", "tier": 1, "cluster": "restaurantes", "status": "published", "date": "2026-04-22" },
-    { "slug": "fidelizacion-clientas-estetica", "keyword": "fidelizacion clientas estetica", "tier": 1, "cluster": "belleza", "status": "published", "date": "2026-04-23" },
-    { "slug": "gestion-mesas-restaurante-inteligente", "keyword": "gestion mesas restaurante inteligente", "tier": 1, "cluster": "restaurantes", "status": "published", "date": "2026-04-24" },
-    { "slug": "captacion-leads-gimnasio-instagram-whatsapp", "keyword": "captacion leads gimnasio instagram whatsapp", "tier": 1, "cluster": "gimnasios", "status": "published", "date": "2026-04-25" },
-    { "slug": "software-gestion-gimnasio-2026", "keyword": "software gestion gimnasio 2026", "tier": 1, "cluster": "gimnasios", "status": "published", "date": "2026-04-26" },
-    { "slug": "gestion-citas-centro-estetica-automatica", "keyword": "gestion citas centro estetica automatica", "tier": 1, "cluster": "belleza", "status": "published", "date": "2026-04-27" }
+    {
+      "slug": "automatizar-reservas-restaurante-whatsapp",
+      "keyword": "automatizar reservas restaurante whatsapp",
+      "tier": 1,
+      "cluster": "restaurantes",
+      "status": "published",
+      "date": "2026-04-16"
+    },
+    {
+      "slug": "crm-restaurantes-guia-completa",
+      "keyword": "crm para restaurantes",
+      "tier": 1,
+      "cluster": "restaurantes",
+      "status": "published",
+      "date": "2026-04-16"
+    },
+    {
+      "slug": "crm-restaurants-complete-guide",
+      "keyword": "crm for restaurants",
+      "tier": 1,
+      "cluster": "restaurantes",
+      "status": "published",
+      "date": "2026-04-16"
+    },
+    {
+      "slug": "crm-gimnasios-fitness",
+      "keyword": "crm gimnasios fitness",
+      "tier": 1,
+      "cluster": "gimnasios",
+      "status": "published",
+      "date": "2026-04-16"
+    },
+    {
+      "slug": "crm-gimnasio-guia",
+      "keyword": "crm gimnasio guia",
+      "tier": 1,
+      "cluster": "gimnasios",
+      "status": "published",
+      "date": "2026-04-16"
+    },
+    {
+      "slug": "retencion-clientes-gimnasio-ia",
+      "keyword": "retencion clientes gimnasio ia",
+      "tier": 1,
+      "cluster": "gimnasios",
+      "status": "published",
+      "date": "2026-04-16"
+    },
+    {
+      "slug": "customer-retention-gym-ai",
+      "keyword": "customer retention gym ai",
+      "tier": 1,
+      "cluster": "gimnasios",
+      "status": "published",
+      "date": "2026-04-16"
+    },
+    {
+      "slug": "crm-belleza-salon-estetica",
+      "keyword": "crm belleza salon estetica",
+      "tier": 1,
+      "cluster": "belleza",
+      "status": "published",
+      "date": "2026-04-16"
+    },
+    {
+      "slug": "crm-beauty-salons-guide",
+      "keyword": "crm beauty salons",
+      "tier": 1,
+      "cluster": "belleza",
+      "status": "published",
+      "date": "2026-04-16"
+    },
+    {
+      "slug": "chatbot-whatsapp-restaurantes",
+      "keyword": "agente ia whatsapp restaurantes",
+      "tier": 1,
+      "cluster": "restaurantes",
+      "status": "published",
+      "date": "2026-04-16"
+    },
+    {
+      "slug": "automatizacion-whatsapp-negocios",
+      "keyword": "automatizacion whatsapp negocios",
+      "tier": 1,
+      "cluster": "general",
+      "status": "published",
+      "date": "2026-04-16"
+    },
+    {
+      "slug": "whatsapp-automation-business-guide",
+      "keyword": "whatsapp automation business",
+      "tier": 1,
+      "cluster": "general",
+      "status": "published",
+      "date": "2026-04-16"
+    },
+    {
+      "slug": "whatsapp-crm-pymes-guia",
+      "keyword": "whatsapp crm pymes",
+      "tier": 1,
+      "cluster": "general",
+      "status": "published",
+      "date": "2026-04-16"
+    },
+    {
+      "slug": "whatsapp-crm-small-business",
+      "keyword": "whatsapp crm small business",
+      "tier": 1,
+      "cluster": "general",
+      "status": "published",
+      "date": "2026-04-16"
+    },
+    {
+      "slug": "automatizacion-retail-tiendas-ia",
+      "keyword": "automatizacion retail tiendas ia",
+      "tier": 2,
+      "cluster": "retail",
+      "status": "published",
+      "date": "2026-04-16"
+    },
+    {
+      "slug": "automatizacion-ia-pymes",
+      "keyword": "automatizacion ia pymes",
+      "tier": 1,
+      "cluster": "general",
+      "status": "published",
+      "date": "2026-04-16"
+    },
+    {
+      "slug": "fidelizacion-clientes-restaurante-2026",
+      "keyword": "fidelizacion clientes restaurante 2026",
+      "tier": 1,
+      "cluster": "restaurantes",
+      "status": "published",
+      "date": "2026-04-17"
+    },
+    {
+      "slug": "retencion-socios-gimnasio-estrategias",
+      "keyword": "retencion socios gimnasio estrategias",
+      "tier": 1,
+      "cluster": "gimnasios",
+      "status": "published",
+      "date": "2026-04-18"
+    },
+    {
+      "slug": "agenda-online-peluqueria-whatsapp",
+      "keyword": "agenda online peluqueria whatsapp",
+      "tier": 1,
+      "cluster": "belleza",
+      "status": "published",
+      "date": "2026-04-19"
+    },
+    {
+      "slug": "automatizar-cobros-gimnasio-whatsapp",
+      "keyword": "automatizar cobros gimnasio whatsapp",
+      "tier": 1,
+      "cluster": "gimnasios",
+      "status": "published",
+      "date": "2026-04-21"
+    },
+    {
+      "slug": "marketing-digital-restaurantes-pequenos",
+      "keyword": "marketing digital restaurantes pequenos",
+      "tier": 1,
+      "cluster": "restaurantes",
+      "status": "published",
+      "date": "2026-04-22"
+    },
+    {
+      "slug": "fidelizacion-clientas-estetica",
+      "keyword": "fidelizacion clientas estetica",
+      "tier": 1,
+      "cluster": "belleza",
+      "status": "published",
+      "date": "2026-04-23"
+    },
+    {
+      "slug": "gestion-mesas-restaurante-inteligente",
+      "keyword": "gestion mesas restaurante inteligente",
+      "tier": 1,
+      "cluster": "restaurantes",
+      "status": "published",
+      "date": "2026-04-24"
+    },
+    {
+      "slug": "captacion-leads-gimnasio-instagram-whatsapp",
+      "keyword": "captacion leads gimnasio instagram whatsapp",
+      "tier": 1,
+      "cluster": "gimnasios",
+      "status": "published",
+      "date": "2026-04-25"
+    },
+    {
+      "slug": "software-gestion-gimnasio-2026",
+      "keyword": "software gestion gimnasio 2026",
+      "tier": 1,
+      "cluster": "gimnasios",
+      "status": "published",
+      "date": "2026-04-26"
+    },
+    {
+      "slug": "gestion-citas-centro-estetica-automatica",
+      "keyword": "gestion citas centro estetica automatica",
+      "tier": 1,
+      "cluster": "belleza",
+      "status": "published",
+      "date": "2026-04-27"
+    },
+    {
+      "slug": "crm-peluqueria-software-gestion",
+      "keyword": "crm peluqueria software gestion",
+      "tier": 1,
+      "cluster": "belleza",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "gestion-citas-spa-whatsapp-automatico",
+      "keyword": "gestion citas spa whatsapp automatico",
+      "tier": 1,
+      "cluster": "belleza",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "marketing-salon-de-unas-redes-sociales",
+      "keyword": "marketing salon de unas redes sociales",
+      "tier": 1,
+      "cluster": "belleza",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "programa-fidelizacion-centro-estetica-puntos",
+      "keyword": "programa fidelizacion centro estetica puntos",
+      "tier": 1,
+      "cluster": "belleza",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "upselling-tratamientos-peluqueria",
+      "keyword": "upselling tratamientos peluqueria",
+      "tier": 1,
+      "cluster": "belleza",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "alertas-churn-gimnasio-detectar-a-tiempo",
+      "keyword": "alertas churn gimnasio detectar a tiempo",
+      "tier": 1,
+      "cluster": "gimnasios",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "plantilla-bienvenida-nuevo-socio-gimnasio",
+      "keyword": "plantilla bienvenida nuevo socio gimnasio",
+      "tier": 1,
+      "cluster": "gimnasios",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "aumentar-reservas-restaurante-30-dias",
+      "keyword": "aumentar reservas restaurante 30 dias",
+      "tier": 1,
+      "cluster": "restaurantes",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "calcular-roi-crm-restaurante",
+      "keyword": "calcular roi crm restaurante",
+      "tier": 1,
+      "cluster": "restaurantes",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "reducir-no-shows-restaurante-whatsapp",
+      "keyword": "reducir no-shows restaurante whatsapp",
+      "tier": 1,
+      "cluster": "restaurantes",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "whatsapp-business-para-restaurantes-guia",
+      "keyword": "whatsapp business para restaurantes guia",
+      "tier": 1,
+      "cluster": "restaurantes",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "crm-para-abogados-gestion-clientes",
+      "keyword": "crm para abogados gestion clientes",
+      "tier": 2,
+      "cluster": "abogados",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "automatizacion-academia-formacion",
+      "keyword": "automatizacion academia formacion",
+      "tier": 2,
+      "cluster": "academias",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "crm-clinica-dental",
+      "keyword": "crm clinica dental",
+      "tier": 2,
+      "cluster": "clinicas",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "gestion-pacientes-ia",
+      "keyword": "gestion pacientes ia",
+      "tier": 2,
+      "cluster": "clinicas",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "recordatorios-citas-medicas-whatsapp",
+      "keyword": "recordatorios citas medicas whatsapp",
+      "tier": 2,
+      "cluster": "clinicas",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "atencion-al-cliente-ecommerce-ia",
+      "keyword": "atencion al cliente ecommerce ia",
+      "tier": 2,
+      "cluster": "ecommerce",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "automatizar-postventa-online",
+      "keyword": "automatizar postventa online",
+      "tier": 2,
+      "cluster": "ecommerce",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "recuperar-carritos-abandonados-whatsapp",
+      "keyword": "recuperar carritos abandonados whatsapp",
+      "tier": 2,
+      "cluster": "ecommerce",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "upselling-automatico-ecommerce-ia",
+      "keyword": "upselling automatico ecommerce ia",
+      "tier": 2,
+      "cluster": "ecommerce",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "crm-inmobiliarias-leads",
+      "keyword": "crm inmobiliarias leads",
+      "tier": 2,
+      "cluster": "inmobiliarias",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "crm-para-tiendas-retail",
+      "keyword": "crm para tiendas retail",
+      "tier": 2,
+      "cluster": "retail",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "crm-centro-wellness-spa",
+      "keyword": "crm centro wellness spa",
+      "tier": 2,
+      "cluster": "wellness",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "agente-ia-personalizado-vs-chatbot-generico",
+      "keyword": "agente ia personalizado vs chatbot generico",
+      "tier": 3,
+      "cluster": "general",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "automatizar-negocio-pequeno-sin-programar",
+      "keyword": "automatizar negocio pequeno sin programar",
+      "tier": 3,
+      "cluster": "general",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "como-elegir-crm-para-pyme",
+      "keyword": "como elegir crm para pyme",
+      "tier": 3,
+      "cluster": "general",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "como-responder-whatsapp-rapido-siendo-autonomo",
+      "keyword": "como responder whatsapp rapido siendo autonomo",
+      "tier": 3,
+      "cluster": "general",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "crm-vs-hoja-de-calculo-cuando-migrar",
+      "keyword": "crm vs hoja de calculo cuando migrar",
+      "tier": 3,
+      "cluster": "general",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "cuanto-cuesta-un-crm-para-pymes",
+      "keyword": "cuanto cuesta un crm para pymes",
+      "tier": 3,
+      "cluster": "general",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "herramientas-automatizacion-pymes-2026",
+      "keyword": "herramientas automatizacion pymes 2026",
+      "tier": 3,
+      "cluster": "general",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "integracion-whatsapp-business-api-espana",
+      "keyword": "integracion whatsapp business api espana",
+      "tier": 3,
+      "cluster": "general",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "perder-clientes-por-no-contestar-whatsapp",
+      "keyword": "perder clientes por no contestar whatsapp",
+      "tier": 3,
+      "cluster": "general",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "whatsapp-business-vs-crm-profesional-diferencias",
+      "keyword": "whatsapp business vs crm profesional diferencias",
+      "tier": 3,
+      "cluster": "general",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "como-digitalizar-restaurante-familiar",
+      "keyword": "como digitalizar restaurante familiar",
+      "tier": 3,
+      "cluster": "restaurantes",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "por-que-mis-clientes-no-vuelven-restaurante",
+      "keyword": "por que mis clientes no vuelven restaurante",
+      "tier": 3,
+      "cluster": "restaurantes",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "mejor-crm-para-belleza-en-barcelona",
+      "keyword": "mejor crm para belleza en barcelona",
+      "tier": 4,
+      "cluster": "belleza",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "mejor-crm-para-belleza-en-bilbao",
+      "keyword": "mejor crm para belleza en bilbao",
+      "tier": 4,
+      "cluster": "belleza",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "mejor-crm-para-belleza-en-bogota",
+      "keyword": "mejor crm para belleza en bogota",
+      "tier": 4,
+      "cluster": "belleza",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "mejor-crm-para-belleza-en-cdmx",
+      "keyword": "mejor crm para belleza en cdmx",
+      "tier": 4,
+      "cluster": "belleza",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "mejor-crm-para-belleza-en-lima",
+      "keyword": "mejor crm para belleza en lima",
+      "tier": 4,
+      "cluster": "belleza",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "mejor-crm-para-belleza-en-madrid",
+      "keyword": "mejor crm para belleza en madrid",
+      "tier": 4,
+      "cluster": "belleza",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "mejor-crm-para-belleza-en-malaga",
+      "keyword": "mejor crm para belleza en malaga",
+      "tier": 4,
+      "cluster": "belleza",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "mejor-crm-para-belleza-en-santiago",
+      "keyword": "mejor crm para belleza en santiago",
+      "tier": 4,
+      "cluster": "belleza",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "mejor-crm-para-belleza-en-sevilla",
+      "keyword": "mejor crm para belleza en sevilla",
+      "tier": 4,
+      "cluster": "belleza",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "mejor-crm-para-belleza-en-valencia",
+      "keyword": "mejor crm para belleza en valencia",
+      "tier": 4,
+      "cluster": "belleza",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "mejor-crm-para-gimnasios-en-barcelona",
+      "keyword": "mejor crm para gimnasios en barcelona",
+      "tier": 4,
+      "cluster": "gimnasios",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "mejor-crm-para-gimnasios-en-bilbao",
+      "keyword": "mejor crm para gimnasios en bilbao",
+      "tier": 4,
+      "cluster": "gimnasios",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "mejor-crm-para-gimnasios-en-bogota",
+      "keyword": "mejor crm para gimnasios en bogota",
+      "tier": 4,
+      "cluster": "gimnasios",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "mejor-crm-para-gimnasios-en-cdmx",
+      "keyword": "mejor crm para gimnasios en cdmx",
+      "tier": 4,
+      "cluster": "gimnasios",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "mejor-crm-para-gimnasios-en-lima",
+      "keyword": "mejor crm para gimnasios en lima",
+      "tier": 4,
+      "cluster": "gimnasios",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "mejor-crm-para-gimnasios-en-madrid",
+      "keyword": "mejor crm para gimnasios en madrid",
+      "tier": 4,
+      "cluster": "gimnasios",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "mejor-crm-para-gimnasios-en-malaga",
+      "keyword": "mejor crm para gimnasios en malaga",
+      "tier": 4,
+      "cluster": "gimnasios",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "mejor-crm-para-gimnasios-en-santiago",
+      "keyword": "mejor crm para gimnasios en santiago",
+      "tier": 4,
+      "cluster": "gimnasios",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "mejor-crm-para-gimnasios-en-sevilla",
+      "keyword": "mejor crm para gimnasios en sevilla",
+      "tier": 4,
+      "cluster": "gimnasios",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "mejor-crm-para-gimnasios-en-valencia",
+      "keyword": "mejor crm para gimnasios en valencia",
+      "tier": 4,
+      "cluster": "gimnasios",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "mejor-crm-para-restaurantes-en-barcelona",
+      "keyword": "mejor crm para restaurantes en barcelona",
+      "tier": 4,
+      "cluster": "restaurantes",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "mejor-crm-para-restaurantes-en-bilbao",
+      "keyword": "mejor crm para restaurantes en bilbao",
+      "tier": 4,
+      "cluster": "restaurantes",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "mejor-crm-para-restaurantes-en-bogota",
+      "keyword": "mejor crm para restaurantes en bogota",
+      "tier": 4,
+      "cluster": "restaurantes",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "mejor-crm-para-restaurantes-en-cdmx",
+      "keyword": "mejor crm para restaurantes en cdmx",
+      "tier": 4,
+      "cluster": "restaurantes",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "mejor-crm-para-restaurantes-en-lima",
+      "keyword": "mejor crm para restaurantes en lima",
+      "tier": 4,
+      "cluster": "restaurantes",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "mejor-crm-para-restaurantes-en-madrid",
+      "keyword": "mejor crm para restaurantes en madrid",
+      "tier": 4,
+      "cluster": "restaurantes",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "mejor-crm-para-restaurantes-en-malaga",
+      "keyword": "mejor crm para restaurantes en malaga",
+      "tier": 4,
+      "cluster": "restaurantes",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "mejor-crm-para-restaurantes-en-santiago",
+      "keyword": "mejor crm para restaurantes en santiago",
+      "tier": 4,
+      "cluster": "restaurantes",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "mejor-crm-para-restaurantes-en-sevilla",
+      "keyword": "mejor crm para restaurantes en sevilla",
+      "tier": 4,
+      "cluster": "restaurantes",
+      "status": "pending",
+      "date": null
+    },
+    {
+      "slug": "mejor-crm-para-restaurantes-en-valencia",
+      "keyword": "mejor crm para restaurantes en valencia",
+      "tier": 4,
+      "cluster": "restaurantes",
+      "status": "pending",
+      "date": null
+    }
   ]
 }

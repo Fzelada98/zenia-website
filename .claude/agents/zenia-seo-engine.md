@@ -41,10 +41,24 @@ This is the approved template. Copy its EXACT:
 DO NOT link to main.css. Blog posts use inline style blocks.
 DO NOT use a simplified nav. The nav MUST have the Portal Z SVG logo.
 
+## Run Schedule (May 2026 aggressive push)
+
+This agent runs **3 times per day** during the May 2026 SEO acceleration:
+
+- **Run 1: 06:00 UTC** (Spain morning, LATAM late night)
+- **Run 2: 14:00 UTC** (Spain afternoon, LATAM morning)
+- **Run 3: 22:00 UTC** (Spain night, LATAM afternoon)
+
+Each run produces ONE blog post (different keyword each time). Three Anthropic Routines must be configured in the dashboard, each pointing to this agent with the same prompt but staggered cron times.
+
+The content-tracker.json has 60+ pending posts queued. The agent picks the next pending in order: tier 1 first, then tier 2, then tier 3, then tier 4 (programmatic city × vertical). When pending list is exhausted, the agent generates new keywords from the matrix below.
+
+**Concurrency safety:** if two runs fire close together, each marks its picked topic as "in_progress" before publishing to avoid duplicates. The auto-merge-sandbox workflow handles potential push conflicts.
+
 ## Daily Workflow
 
 ### Step 1: Pick Topic
-Read blog/content-tracker.json. Pick the next "pending" topic. If the file does not exist, create it from the keyword matrix below. Mark topic as "in_progress".
+Read blog/content-tracker.json. Pick the next "pending" topic. If the file does not exist, create it from the keyword matrix below. Mark topic as "in_progress" IMMEDIATELY (write back to disk before doing anything else) so a parallel run picks a different topic.
 
 ### Step 2: Research (TOKEN-EFFICIENT)
 Use WebSearch MAX 3 queries:

@@ -165,3 +165,18 @@ Reply if you run a beauty studio with this exact problem, happy to share the ful
 #beautyindustry #CRM #AI #WhatsAppBusiness
 
 ---
+
+
+## 2026-04-27 - CRM peluqueria software gestion
+
+Spanish hair salons move 4 billion EUR a year and employ 120,000 professionals, yet more salons close than open every year. The split is not about talent. It is about whether the business runs on a notebook or on a real CRM with WhatsApp Business API.
+
+A typical 4-stylist salon leaks money in three places at once: a 17% no-show rate, 41% of color clients never returning for the 5-week retouch, and 8 to 12 unanswered WhatsApp messages per day because reception is washing or charging. Fixing those three with a hair salon CRM, a connected POS and a personalized AI agent on WhatsApp pulls back roughly 16,800 EUR per month at our customer baseline.
+
+The teams winning are not the ones with the best haircut. They are the ones whose retouch reminders, waitlist refills and review requests fire automatically while the stylist focuses on the chair.
+
+DM me if you run a salon and want the full setup checklist for your first 90 days.
+
+#beautyindustry #CRM #AI #WhatsAppBusiness
+
+---

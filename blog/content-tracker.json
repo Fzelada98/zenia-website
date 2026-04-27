@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-04-27",
+  "lastRun": "2026-04-27T22:00:00Z",
   "posts": [
     {
       "slug": "automatizar-reservas-restaurante-whatsapp",
@@ -214,8 +214,8 @@
       "keyword": "crm peluqueria software gestion",
       "tier": 1,
       "cluster": "belleza",
-      "status": "pending",
-      "date": null
+      "status": "published",
+      "date": "2026-04-27"
     },
     {
       "slug": "gestion-citas-spa-whatsapp-automatico",

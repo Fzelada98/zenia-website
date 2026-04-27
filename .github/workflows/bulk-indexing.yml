@@ -1,0 +1,48 @@
+name: Bulk Indexing — Force GSC + IndexNow
+
+# Submits ALL URLs in sitemap.xml to Google Indexing API and IndexNow.
+# Runs:
+#   - Manual trigger (workflow_dispatch) — use this NOW for the initial blast
+#   - Weekly Sundays 18:00 UTC, to keep older URLs in the indexing queue
+#
+# Note: Google Indexing API officially only guarantees JobPosting and
+# BroadcastEvent. For other content types (blog posts, landings) it often
+# accepts the request but may not act on it. We submit anyway since it is
+# free and sometimes triggers a recrawl. IndexNow handles Bing/Yandex/Naver
+# reliably, and is the more dependable component of this workflow.
+
+on:
+  schedule:
+    - cron: '0 18 * * 0'   # Sunday 18:00 UTC
+  workflow_dispatch:
+    inputs:
+      inspect_sample:
+        description: 'Number of URLs to inspect for indexed status'
+        default: '20'
+        required: false
+
+permissions:
+  contents: read
+
+jobs:
+  bulk-index:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install googleapis --silent
+
+      - name: Run bulk indexer
+        env:
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+          GSC_SITE_URL: 'sc-domain:zeniapartners.com'
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+          INSPECT_SAMPLE: ${{ inputs.inspect_sample || '20' }}
+        run: node .github/scripts/bulk-indexing.js

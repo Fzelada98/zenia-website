@@ -120,6 +120,8 @@ Reply if you run a restaurant still managing tables in a notebook. Happy to walk
 
 ## 2026-04-25 - Captacion leads gimnasio instagram whatsapp
 
+<!-- SCHEDULED:sp_kFVYwlCDAB8DAws8CSTo at 2026-04-28T00:16:07.271Z -->
+
 Cost per fitness lead in Meta Ads dropped from 7.80 to 4.20 euros between 2023 and 2026. Reels generate 73% more leads than static posts for fitness brands. And most gyms still reply to those DMs the next morning.
 
 Instagram captures attention. WhatsApp closes. The gap between them is where 35-40% of qualified leads die: the lead taps a Click-to-WhatsApp ad at 9pm Sunday and the receptionist sees the message Monday at 11am.
@@ -137,6 +139,8 @@ DM me if you want the full funnel breakdown for your gym.
 
 ## 2026-04-26 - Software gestion gimnasio 2026
 
+<!-- SCHEDULED:sp_NRT4TKYPqM2K0KzodCfo at 2026-04-29T15:00:00.000Z -->
+
 The global gym management software market jumped from 2.03B USD in 2025 to 2.23B in 2026, growing 10.24% CAGR through 2032. Yet 41% of gyms still run members, payments and communication on tools that do not talk to each other.
 
 Standard gym software runs 89-249 EUR/month and gives you a calendar with recurring payments. A personalized CRM with an AI agent on WhatsApp runs 297-497 EUR/month and delivers 4x to 8x ROI in six months. The difference shows up in churn (6.8% to 4.1%), recovered failed payments (+22%) and lead-to-member conversion (+31%).
@@ -151,6 +155,8 @@ Full breakdown (Spanish): https://zeniapartners.com/blog/software-gestion-gimnas
 
 
 ## 2026-04-27 - Gestion citas centro estetica automatica
+
+<!-- SCHEDULED:sp_PC25spQIunU9H3ldmF2G at 2026-04-30T07:00:00.000Z -->
 
 Beauty centers and medspas lose 5% to 16% of their booked agenda every month to no-shows and last-minute cancellations. For a 3-room studio at 55 EUR per session, that is 1,800 to 4,000 EUR walking out the door before anyone touches the lights.
 
@@ -168,6 +174,8 @@ Reply if you run a beauty studio with this exact problem, happy to share the ful
 
 
 ## 2026-04-27 - CRM peluqueria software gestion
+
+<!-- SCHEDULED:sp_uZi2NadZULs8UgaNfGdV at 2026-05-01T07:00:00.000Z -->
 
 Spanish hair salons move 4 billion EUR a year and employ 120,000 professionals, yet more salons close than open every year. The split is not about talent. It is about whether the business runs on a notebook or on a real CRM with WhatsApp Business API.
 

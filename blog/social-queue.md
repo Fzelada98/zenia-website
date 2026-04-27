@@ -148,3 +148,20 @@ Full breakdown (Spanish): https://zeniapartners.com/blog/software-gestion-gimnas
 #fitnessindustry #memberretention #AI #WhatsAppBusiness
 
 ---
+
+
+## 2026-04-27 - Gestion citas centro estetica automatica
+
+Beauty centers and medspas lose 5% to 16% of their booked agenda every month to no-shows and last-minute cancellations. For a 3-room studio at 55 EUR per session, that is 1,800 to 4,000 EUR walking out the door before anyone touches the lights.
+
+The fix nobody is implementing fast enough: an AI agent on the studio's existing WhatsApp number, plugged into the calendar. Replies in 8 seconds at 11pm on a Sunday, books the right room with the right specialist, sends the reminder that drops no-shows by 65%, and refills cancelled slots from the waitlist in under 30 minutes.
+
+Real numbers after 90 days in studios that switched: occupancy from 61% to 79%, missed bookings under 3%, two hours per day given back to the owner. Net benefit around 9,200 EUR/month against a 297-497 EUR/month system.
+
+The studios growing without hiring a second receptionist are not better at marketing. They just respond faster, every hour of every day.
+
+Reply if you run a beauty studio with this exact problem, happy to share the full playbook.
+
+#beautyindustry #CRM #AI #WhatsAppBusiness
+
+---

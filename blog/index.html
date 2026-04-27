@@ -52,7 +52,14 @@
   .blog-index-header { text-align: center; margin-bottom: 60px; }
   .blog-index-header h1 { font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 12px; }
   .blog-index-header p { color: var(--text-secondary); font-size: 1.1rem; }
+  .lang-toggle { display: flex; justify-content: center; align-items: center; gap: 8px; margin-bottom: 32px; flex-wrap: wrap; }
+  .lang-toggle .label { color: var(--text-muted); font-size: 0.85rem; margin-right: 8px; }
+  .lang-toggle button { background: transparent; color: var(--text-secondary); border: 1px solid var(--border); padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 0.9rem; font-weight: 500; transition: all 0.2s; font-family: inherit; }
+  .lang-toggle button:hover { color: var(--text-primary); border-color: var(--border-hover); }
+  .lang-toggle button.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+  .lang-toggle .count { color: var(--text-muted); font-size: 0.8rem; margin-left: 4px; opacity: 0.7; }
   .blog-list { display: grid; gap: 24px; }
+  .blog-card[hidden] { display: none !important; }
   .blog-card { padding: 32px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; transition: all 0.3s; text-decoration: none; display: block; }
   .blog-card:hover { border-color: var(--border-hover); transform: translateY(-2px); }
   .blog-card-meta { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 8px; }
@@ -76,8 +83,15 @@
 <div class="container">
   <header class="blog-index-header">
     <h1><span class="text-gradient">ZENIA</span> Blog</h1>
-    <p>Practical insights on AI automation and business transformation.</p>
+    <p data-i18n-tag="intro">Practical insights on AI automation and business transformation.</p>
   </header>
+
+  <div class="lang-toggle" role="tablist" aria-label="Filter by language">
+    <span class="label" data-i18n-tag="show">Show:</span>
+    <button type="button" data-filter="all" role="tab">All<span class="count" data-count="all"></span></button>
+    <button type="button" data-filter="es" role="tab">Espa&ntilde;ol<span class="count" data-count="es"></span></button>
+    <button type="button" data-filter="en" role="tab">English<span class="count" data-count="en"></span></button>
+  </div>
 
   <div class="blog-list">
     <a href="/blog/gestion-citas-centro-estetica-automatica.html" class="blog-card">
@@ -241,9 +255,101 @@
 
 <footer class="blog-footer">
   <div class="container">
-    <p>&copy; 2026 ZENIA. All rights reserved. | <a href="/">Back to Home</a></p>
+    <p data-i18n-tag="footer">&copy; 2026 ZENIA. All rights reserved. | <a href="/">Back to Home</a></p>
   </div>
 </footer>
+
+<script>
+(function () {
+  // Tag each card with data-lang based on its existing language badge.
+  var cards = document.querySelectorAll('.blog-card');
+  cards.forEach(function (card) {
+    var badge = card.querySelector('.blog-card-lang');
+    var lang = badge ? badge.textContent.trim().toLowerCase() : 'es';
+    card.setAttribute('data-lang', lang);
+  });
+
+  // Counts per language
+  var counts = { all: 0, es: 0, en: 0 };
+  cards.forEach(function (c) {
+    counts.all++;
+    var l = c.getAttribute('data-lang');
+    if (counts[l] !== undefined) counts[l]++;
+  });
+  document.querySelectorAll('[data-count]').forEach(function (el) {
+    var key = el.getAttribute('data-count');
+    el.textContent = ' (' + (counts[key] || 0) + ')';
+  });
+
+  // i18n strings for the small bits of UI text
+  var i18n = {
+    es: {
+      intro: 'Ideas prácticas sobre automatización con IA y transformación de negocios.',
+      show: 'Mostrar:',
+      footer: '© 2026 ZENIA. Todos los derechos reservados. | <a href="/es/">Volver al inicio</a>'
+    },
+    en: {
+      intro: 'Practical insights on AI automation and business transformation.',
+      show: 'Show:',
+      footer: '© 2026 ZENIA. All rights reserved. | <a href="/">Back to Home</a>'
+    }
+  };
+
+  function applyI18n(lang) {
+    var dict = i18n[lang === 'es' ? 'es' : 'en'];
+    document.documentElement.setAttribute('lang', lang === 'es' ? 'es' : 'en');
+    document.querySelectorAll('[data-i18n-tag]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n-tag');
+      if (dict[key]) {
+        if (key === 'footer') el.innerHTML = dict[key];
+        else el.textContent = dict[key];
+      }
+    });
+  }
+
+  function applyFilter(filter) {
+    cards.forEach(function (card) {
+      var lang = card.getAttribute('data-lang');
+      var show = filter === 'all' || lang === filter;
+      if (show) card.removeAttribute('hidden');
+      else card.setAttribute('hidden', '');
+    });
+    document.querySelectorAll('.lang-toggle button').forEach(function (btn) {
+      btn.classList.toggle('active', btn.getAttribute('data-filter') === filter);
+      btn.setAttribute('aria-selected', btn.getAttribute('data-filter') === filter ? 'true' : 'false');
+    });
+    // i18n adapts only when filter is a single language; for "all" pick browser default
+    var i18nLang = filter === 'all' ? detectBrowserLang() : filter;
+    applyI18n(i18nLang);
+    try { localStorage.setItem('zenia_blog_lang', filter); } catch (e) {}
+  }
+
+  function detectBrowserLang() {
+    var nav = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+    return nav.indexOf('es') === 0 ? 'es' : 'en';
+  }
+
+  function initialFilter() {
+    // Priority: ?lang=xx > localStorage > browser language
+    var urlLang = new URLSearchParams(location.search).get('lang');
+    if (urlLang === 'es' || urlLang === 'en' || urlLang === 'all') return urlLang;
+    try {
+      var stored = localStorage.getItem('zenia_blog_lang');
+      if (stored === 'es' || stored === 'en' || stored === 'all') return stored;
+    } catch (e) {}
+    return detectBrowserLang();
+  }
+
+  // Wire up clicks
+  document.querySelectorAll('.lang-toggle button').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      applyFilter(btn.getAttribute('data-filter'));
+    });
+  });
+
+  applyFilter(initialFilter());
+})();
+</script>
 
 </body>
 </html>

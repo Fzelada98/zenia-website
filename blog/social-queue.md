@@ -188,3 +188,20 @@ DM me if you run a salon and want the full setup checklist for your first 90 day
 #beautyindustry #CRM #AI #WhatsAppBusiness
 
 ---
+
+
+## 2026-04-28 - Gestion citas spa whatsapp automatico
+
+WhatsApp reminders cut spa no-shows by 52%, with a 98% open rate and a 3.2x faster confirmation than email (SchedulingKit, Workee 2025-2026). The average spa still leaves the channel on a single receptionist who also runs reception, billing and tea service.
+
+The math at a 5-cabin spa is brutal: 3 to 4 lost bookings a day from slow replies, an 18 to 22% no-show rate, and 38% of new appointment requests arriving after closing hours, when nobody answers. That is roughly 18,000 EUR a month walking out the door before the team even opens the doors next morning.
+
+What we deploy is not a generic FAQ bot. It is a personalized AI agent on WhatsApp Business API, wired into the salon agenda and the CRM, that books, reschedules, runs the waitlist, sends 24h plus 3h reminders, and upsells one product per booking. Operative in 5 weeks, with a measurable ROI by month two.
+
+The spas pulling ahead in 2026 are not the ones with better marketing. They are the ones answering in 8 seconds while their competitor reads the message after the lunch shift.
+
+DM me if you run a spa or wellness center and want the full implementation checklist for your first 60 days.
+
+#beautyindustry #CRM #AI #WhatsAppBusiness
+
+---

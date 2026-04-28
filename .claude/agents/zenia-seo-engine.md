@@ -184,28 +184,101 @@ Why `--admin`: bypasses required checks/reviews. Why the fallback cascade: if re
 
 IMPORTANT: This agent runs in a Linux sandbox (Claude Code Routines). DO NOT use Windows paths like `c:\Users\...`. Always use relative paths from the repo root.
 
-### Step 7: LinkedIn Post (ENGLISH only, MAX 1/DAY — anti-spam guard)
+### Step 7: LinkedIn Post (ENGLISH only, BEST-OF-DAY selection)
 
-**CRITICAL DAILY LIMIT:** Even though the agent runs 3 times per day, ONLY THE FIRST run of each UTC day generates a LinkedIn post. Runs 2 and 3 of the day SKIP this step entirely.
+**STRATEGY:** Agent runs 3x/day for SEO indexing volume but LinkedIn audience needs ONE high-quality post per day. The post that gets to LinkedIn must be the **strongest of the 3 daily posts** in engagement potential, not just whichever ran first.
 
-**How to enforce the daily limit (deterministic check):**
+**HOW IT WORKS:**
 
-Before drafting any LinkedIn post, run this Bash command:
+The 06:00 and 14:00 UTC runs save their LinkedIn DRAFT to a temp file. The 22:00 UTC run is the "decision run": it scores all 3 drafts and promotes the winner to the live `social-queue.md`.
+
+**Determine which run you are (by current UTC hour):**
 
 ```bash
+HOUR=$(date -u +%H)
 TODAY_UTC=$(date -u +%Y-%m-%d)
-ALREADY_POSTED=$(grep -c "^## $TODAY_UTC" blog/social-queue.md || echo 0)
-echo "Posts already in queue for $TODAY_UTC: $ALREADY_POSTED"
+DRAFT_FILE="blog/.linkedin-drafts-$TODAY_UTC.md"
+echo "Run hour UTC: $HOUR"
 ```
 
-- If `ALREADY_POSTED >= 1` → **SKIP Step 7 entirely**. Do NOT append anything to social-queue.md. Continue to commit/merge but with NO LinkedIn entry. Log "Skipped LinkedIn: already posted today ($TODAY_UTC)" in your run summary.
-- If `ALREADY_POSTED == 0` → proceed to draft and append the LinkedIn post normally.
+---
 
-**Why:** the post-to-social workflow reads social-queue.md and schedules every entry to LinkedIn via Post for Me. If we let all 3 daily runs append, we end up scheduling 3 LinkedIn posts per blog day. Over 30 days that is 90 posts to LinkedIn — actual spam. The blog content engine runs 3x/day for SEO indexing volume, but LinkedIn audience needs ONE high-quality post per day, not three.
+**RUNS 1 AND 2 (HOUR is 06 or 14): draft only, do not promote**
 
-**Order of operations:** do this check AFTER finishing the blog write + commit + merge. If you skip Step 7, still mark the blog as "published" in content-tracker.json and complete the run normally.
+1. Draft your LinkedIn post for THIS blog following the rules below.
+2. Compute the engagement score (heuristic, see scoring rules below).
+3. Append to `$DRAFT_FILE` in this format:
+
+```markdown
+## DRAFT score=N — {slug}
+{linkedin post body}
+
+#hashtag1 #hashtag2 #hashtag3 #hashtag4
 
 ---
+```
+
+4. Commit the draft file along with the blog: `git add blog/.linkedin-drafts-$TODAY_UTC.md`. The post-to-social workflow ignores files matching `.linkedin-drafts-*.md` (only reads `social-queue.md`), so nothing gets scheduled to LinkedIn yet.
+
+5. Skip the rest of Step 7. Continue to Step 8 (commit/push).
+
+---
+
+**RUN 3 (HOUR is 22): score all 3 and promote winner**
+
+1. Draft your own LinkedIn post for THIS blog (run 3's blog) and compute its score.
+2. Read `$DRAFT_FILE` and parse the 2 prior drafts with their scores.
+3. Pick the highest score among the 3 candidates (your run 3 + 2 from file). Tiebreak by tier (lower tier number wins) then by alphabetic slug.
+4. Append the WINNER to `blog/social-queue.md` in the standard format:
+
+```markdown
+## YYYY-MM-DD - {winner-slug-display}
+
+{winner LinkedIn body}
+
+#hashtag1 #hashtag2 #hashtag3 #hashtag4
+
+---
+```
+
+5. Delete the draft file: `rm blog/.linkedin-drafts-$TODAY_UTC.md`.
+6. Commit both changes (deletion + queue addition) along with the blog.
+7. The push to main triggers post-to-social.yml, which schedules the winner via Post for Me.
+
+---
+
+**SCORING HEURISTIC (compute mentally before appending):**
+
+```
+score = 0
++ tier == 1: +5 ; tier == 2: +3 ; tier == 3: +2 ; tier == 4: +1
++ opening line has a SPECIFIC NUMBER (%, count, hours, days): +3
++ post mentions a EUR or USD figure: +2
++ vertical in {gimnasios, restaurantes, belleza, ecommerce}: +2
+  vertical in {academias, abogados, retail, wellness, clinicas}: +1
++ post cites an EXTERNAL DATA SOURCE (HFA, TheFork, IDC, McKinsey, named report): +2
++ post has a CONTRARIAN angle or unusual framing: +2
++ post is OPERATOR perspective (not generic advice): +1
+- post starts with "In today's world" or fluff opener: -3
+- post has any em-dash: -2
+- post has the word "chatbot": -3
+```
+
+Max possible ~17. Anything below 6 is a weak post — if all 3 candidates score below 6, still promote the highest, but flag in run summary.
+
+---
+
+**EDGE CASES:**
+
+- If `$DRAFT_FILE` does not exist when run 3 starts (run 1 or 2 missed), still promote your run 3 post directly to `social-queue.md`.
+- If only 1 prior draft exists in `$DRAFT_FILE`, score 2 candidates total (your run + the 1 draft) and promote winner.
+- If `social-queue.md` already has an entry for today (e.g., a manual edit), do NOT overwrite. Skip Step 7 entirely on run 3 and log conflict.
+
+---
+
+Generate ONE LinkedIn post in ENGLISH. Zenia LinkedIn is international, and the blog is Spanish-only (coverage of LATAM/ES SEO). To avoid language dissonance, the LinkedIn post is STANDALONE — no link to the Spanish blog.
+
+Instagram is NOT in scope. Skip it completely.
 
 Generate ONE LinkedIn post in ENGLISH. Zenia LinkedIn is international, and the blog is Spanish-only (coverage of LATAM/ES SEO). To avoid language dissonance, the LinkedIn post is STANDALONE — no link to the Spanish blog.
 

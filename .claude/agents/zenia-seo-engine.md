@@ -184,7 +184,28 @@ Why `--admin`: bypasses required checks/reviews. Why the fallback cascade: if re
 
 IMPORTANT: This agent runs in a Linux sandbox (Claude Code Routines). DO NOT use Windows paths like `c:\Users\...`. Always use relative paths from the repo root.
 
-### Step 7: LinkedIn Post (ENGLISH only, standalone — saved to social-queue.md)
+### Step 7: LinkedIn Post (ENGLISH only, MAX 1/DAY — anti-spam guard)
+
+**CRITICAL DAILY LIMIT:** Even though the agent runs 3 times per day, ONLY THE FIRST run of each UTC day generates a LinkedIn post. Runs 2 and 3 of the day SKIP this step entirely.
+
+**How to enforce the daily limit (deterministic check):**
+
+Before drafting any LinkedIn post, run this Bash command:
+
+```bash
+TODAY_UTC=$(date -u +%Y-%m-%d)
+ALREADY_POSTED=$(grep -c "^## $TODAY_UTC" blog/social-queue.md || echo 0)
+echo "Posts already in queue for $TODAY_UTC: $ALREADY_POSTED"
+```
+
+- If `ALREADY_POSTED >= 1` → **SKIP Step 7 entirely**. Do NOT append anything to social-queue.md. Continue to commit/merge but with NO LinkedIn entry. Log "Skipped LinkedIn: already posted today ($TODAY_UTC)" in your run summary.
+- If `ALREADY_POSTED == 0` → proceed to draft and append the LinkedIn post normally.
+
+**Why:** the post-to-social workflow reads social-queue.md and schedules every entry to LinkedIn via Post for Me. If we let all 3 daily runs append, we end up scheduling 3 LinkedIn posts per blog day. Over 30 days that is 90 posts to LinkedIn — actual spam. The blog content engine runs 3x/day for SEO indexing volume, but LinkedIn audience needs ONE high-quality post per day, not three.
+
+**Order of operations:** do this check AFTER finishing the blog write + commit + merge. If you skip Step 7, still mark the blog as "published" in content-tracker.json and complete the run normally.
+
+---
 
 Generate ONE LinkedIn post in ENGLISH. Zenia LinkedIn is international, and the blog is Spanish-only (coverage of LATAM/ES SEO). To avoid language dissonance, the LinkedIn post is STANDALONE — no link to the Spanish blog.
 

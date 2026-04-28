@@ -39,7 +39,9 @@ Te paso una plantilla con 47 mensajes pre-armados de WhatsApp para restaurantes 
 Sin captura de email, sin compromiso:
 https://zeniapartners.com/lead-magnets/restaurantes.html
 
-Si después de probarla quieres que un agente de IA personalizado los responda automático 24/7 conectado a tu WhatsApp Business, escríbeme y lo vemos.
+Si después de probarla quieres un agente de IA personalizado conectado a tu WhatsApp Business para responder reservas y mensajes 24/7, escríbeme.
+
+También construimos CRMs y SaaS a medida si tu operativa tiene necesidades específicas (gestión multi-local, integración con tu sistema de reservas tipo Cover Manager o TheFork, automatización de listas de espera, dashboards de ocupación y reseñas, etc).
 
 Un saludo,
 Fabrizzio Zelada
@@ -109,6 +111,8 @@ https://zeniapartners.com/lead-magnets/gimnasios.html
 
 Si después de probarla quieres un agente de IA personalizado conectado a tu WhatsApp Business 24/7, escríbeme.
 
+También construimos CRMs y SaaS a medida si tu operativa tiene necesidades específicas (gestión de socios, integración con software de control de acceso, módulos de retención avanzados, dashboards de churn por cohorte, etc).
+
 Un saludo,
 Fabrizzio Zelada
 Founder · Zenia Partners
@@ -163,6 +167,8 @@ Sin captura de email, sin compromiso:
 https://zeniapartners.com/lead-magnets/estetica.html
 
 Si después de probarla quieres un agente de IA personalizado conectado a tu WhatsApp Business, escríbeme.
+
+También construimos CRMs y SaaS a medida si tu centro tiene necesidades específicas (gestión multi-cabina, fichas de cliente personalizadas, módulos de fidelización por puntos, integración con tu software de citas actual, etc).
 
 Un saludo,
 Fabrizzio Zelada
@@ -231,6 +237,8 @@ Sin captura de email, sin compromiso:
 https://zeniapartners.com/lead-magnets/ecommerce.html
 
 Si después de probarla quieres que un agente de IA personalizado conectado a tu Shopify, WooCommerce o Tiendanube los responda automático 24/7, escríbeme.
+
+También construimos CRMs y SaaS a medida si tu tienda tiene necesidades específicas (segmentación automática de clientes por valor y recencia, flows de recuperación de carritos personalizados, programa VIP y fidelización, dashboards de carritos abandonados y recuperación por canal, etc).
 
 Un saludo,
 Fabrizzio Zelada

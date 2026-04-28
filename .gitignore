@@ -34,3 +34,4 @@ _*.tmp
 # Outreach pipeline logs (local only, contain prospect data)
 scripts/merge.log
 scripts/validate.log
+scripts/personalize.log

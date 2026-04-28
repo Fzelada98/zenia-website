@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-04-28T22:00:00Z",
+  "lastRun": "2026-04-28T23:30:00Z",
   "posts": [
     {
       "slug": "automatizar-reservas-restaurante-whatsapp",
@@ -238,8 +238,8 @@
       "keyword": "programa fidelizacion centro estetica puntos",
       "tier": 1,
       "cluster": "belleza",
-      "status": "pending",
-      "date": null
+      "status": "published",
+      "date": "2026-04-28"
     },
     {
       "slug": "upselling-tratamientos-peluqueria",

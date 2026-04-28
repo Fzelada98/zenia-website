@@ -222,3 +222,19 @@ DM me if you run a nail or beauty salon and want the full 30-day implementation 
 #beautyindustry #CRM #AI #WhatsAppBusiness
 
 ---
+
+## 2026-04-28 - Programa fidelizacion centro estetica puntos
+
+65% of new clients in beauty salons never come back for a second visit (Meevo 2025 Industry Report). Most owners treat this as a marketing problem and pour money into Instagram ads. It is not. It is a retention problem disguised as an acquisition problem.
+
+We built a points-based loyalty program for a mid-sized aesthetics center in Spain. 1 EUR equals 1 point, three clear redemption tiers, points for referrals and rebooking, automatic WhatsApp notifications after every visit. No app, no plastic card, just a personalized AI agent inside their CRM.
+
+Results after 6 months. Visits per client per year: from 4.9 to 7.3. Average ticket: +17%. Rebooking at the counter: from 43% to 78%. Monthly referrals: from 4 to 19. Net annual lift: 75,000 EUR on a 600-client base.
+
+The math is simple. A client in a well-designed loyalty program spends 12-18% more per year and visits twice as often. The technology to run it costs less than one slot in the agenda.
+
+Reply if you run a beauty or aesthetics center and I will share the full points framework that works in 2026.
+
+#beautyindustry #CRM #AI #WhatsAppBusiness
+
+---

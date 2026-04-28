@@ -192,6 +192,8 @@ DM me if you run a salon and want the full setup checklist for your first 90 day
 
 ## 2026-04-28 - Gestion citas spa whatsapp automatico
 
+<!-- SCHEDULED:sp_LHxYTnin2jKbB38wKdc8 at 2026-04-29T00:18:36.955Z -->
+
 WhatsApp reminders cut spa no-shows by 52%, with a 98% open rate and a 3.2x faster confirmation than email (SchedulingKit, Workee 2025-2026). The average spa still leaves the channel on a single receptionist who also runs reception, billing and tea service.
 
 The math at a 5-cabin spa is brutal: 3 to 4 lost bookings a day from slow replies, an 18 to 22% no-show rate, and 38% of new appointment requests arriving after closing hours, when nobody answers. That is roughly 18,000 EUR a month walking out the door before the team even opens the doors next morning.
@@ -209,6 +211,8 @@ DM me if you run a spa or wellness center and want the full implementation check
 
 ## 2026-04-28 - Marketing salon de unas redes sociales
 
+<!-- SCHEDULED:sp_wBSbmpZ70EESbMVTw7iq at 2026-04-30T07:00:00.000Z -->
+
 70% of nail salon bookings in 2026 are decided on Instagram and TikTok before the client ever calls (Solareelle Journal, OpenPR). Most salon owners still treat social as decoration: pretty pictures, vanity metrics, and a phone that nobody answers on Sundays.
 
 We rebuilt the funnel for a 2-tech nail studio in Spain. Same team, same chairs, no paid ads. Three changes: an 85-minute weekly editorial calendar covering Reels, TikTok and Google Business, a fixed link-in-bio that opens WhatsApp directly, and a personalized AI agent answering every message in 8 seconds with real availability.
@@ -224,6 +228,8 @@ DM me if you run a nail or beauty salon and want the full 30-day implementation 
 ---
 
 ## 2026-04-28 - Programa fidelizacion centro estetica puntos
+
+<!-- SCHEDULED:sp_5psJkHlkTEBeJ4CuftVB at 2026-05-01T07:00:00.000Z -->
 
 65% of new clients in beauty salons never come back for a second visit (Meevo 2025 Industry Report). Most owners treat this as a marketing problem and pour money into Instagram ads. It is not. It is a retention problem disguised as an acquisition problem.
 

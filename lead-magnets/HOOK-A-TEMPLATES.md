@@ -49,7 +49,7 @@ zeniapartners.com
 
 **Follow-up Email 2 (4 días si no abrió/respondió):**
 
-**Subject:** Re: Plantilla gratis para tu restaurante en {city}
+**Subject:** Re: {Plantilla|Recurso|Material} gratis para tu restaurante en {city}
 
 ```
 Hola{first_name_with_space},
@@ -58,7 +58,10 @@ Reboto por si se te pasó.
 
 La plantilla sigue aquí: https://zeniapartners.com/lead-magnets/restaurantes.html
 
-Si los no-shows o WhatsApp no son tu prioridad ahora mismo, dímelo y lo dejo en mi lista de "más adelante" sin insistir.
+Si quieres ver cómo aplicaría a {company_name} con un agente de IA personalizado conectado a tu WhatsApp, agendamos 30 min sin compromiso:
+https://calendly.com/zeladauriartef/30min
+
+Si los no-shows o WhatsApp no son tu prioridad ahora, dímelo y lo dejo en "más adelante" sin insistir.
 
 Un saludo,
 Fabrizzio
@@ -75,7 +78,7 @@ Tres opciones para cerrar esto sin más mensajes:
 
 1. La plantilla te interesó pero no es momento → respondes "junio" y te escribo entonces
 2. No te interesa Zenia → respondes "stop" y no insisto
-3. Sigues interesado → respondes "info" y te mando caso real de un restaurante igual al tuyo
+3. Sigues interesado → agenda 30 min aquí: https://calendly.com/zeladauriartef/30min
 
 Cualquiera vale. Sin presión.
 
@@ -157,8 +160,7 @@ Captar una clienta nueva en estética cuesta 5-7 veces más que retener una. Y e
 Te paso una plantilla con 47 mensajes pre-armados de WhatsApp para centros de estética que cubre confirmación de cita, recordatorios pre-cita, upselling de tratamientos complementarios, programa de fidelización por puntos, reactivación de clientas inactivas y petición de reseñas.
 
 Sin captura de email, sin compromiso:
-https://zeniapartners.com/lead-magnets/restaurantes.html
-(la versión específica de estética sale esta semana, mientras tanto la de restaurantes te sirve, mucha técnica reusable)
+https://zeniapartners.com/lead-magnets/estetica.html
 
 Si después de probarla quieres un agente de IA personalizado conectado a tu WhatsApp Business, escríbeme.
 
@@ -166,6 +168,44 @@ Un saludo,
 Fabrizzio Zelada
 Founder · Zenia Partners
 zeniapartners.com
+```
+
+**Follow-up Email 2 (4 días):**
+
+**Subject:** Re: {Plantilla|Recurso|Material} gratis para tu centro de estética en {city}
+
+```
+Hola{first_name_with_space},
+
+Reboto por si se te pasó.
+
+La plantilla sigue aquí: https://zeniapartners.com/lead-magnets/estetica.html
+
+Si quieres ver cómo aplicaría a {company_name} con un agente de IA personalizado para fidelización y reactivación de clientas, agendamos 30 min sin compromiso:
+https://calendly.com/zeladauriartef/30min
+
+Si la fidelización no es prioridad ahora, dímelo y lo dejo en "más adelante" sin insistir.
+
+Un saludo,
+Fabrizzio
+```
+
+**Follow-up Email 3 (7 días):**
+
+**Subject:** Última pregunta sobre {company_name}
+
+```
+{first_name},
+
+Tres opciones para cerrar esto sin más mensajes:
+
+1. La plantilla te interesó pero no es momento → respondes "junio" y te escribo entonces
+2. No te interesa Zenia → respondes "stop" y no insisto
+3. Sigues interesado → agenda 30 min aquí: https://calendly.com/zeladauriartef/30min
+
+Cualquiera vale. Sin presión.
+
+Fabrizzio
 ```
 
 ---
@@ -196,6 +236,44 @@ Un saludo,
 Fabrizzio Zelada
 Founder · Zenia Partners
 zeniapartners.com
+```
+
+**Follow-up Email 2 (4 días):**
+
+**Subject:** Re: {Plantilla|Recurso|Material} para recuperar carritos {company_name}
+
+```
+Hola{first_name_with_space},
+
+Reboto por si se te pasó.
+
+La plantilla sigue aquí: https://zeniapartners.com/lead-magnets/ecommerce.html
+
+Si quieres ver cómo aplicaría a {company_name} con un agente de IA personalizado conectado a tu tienda online (Shopify, WooCommerce, Tiendanube) y a tu WhatsApp, agendamos 30 min sin compromiso:
+https://calendly.com/zeladauriartef/30min
+
+Si recuperación de carritos no es prioridad ahora, dímelo y lo dejo en "más adelante" sin insistir.
+
+Un saludo,
+Fabrizzio
+```
+
+**Follow-up Email 3 (7 días):**
+
+**Subject:** Última pregunta sobre {company_name}
+
+```
+{first_name},
+
+Tres opciones para cerrar esto sin más mensajes:
+
+1. La plantilla te interesó pero no es momento → respondes "junio" y te escribo entonces
+2. No te interesa Zenia → respondes "stop" y no insisto
+3. Sigues interesado → agenda 30 min aquí: https://calendly.com/zeladauriartef/30min
+
+Cualquiera vale. Sin presión.
+
+Fabrizzio
 ```
 
 ---

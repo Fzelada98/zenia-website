@@ -29,9 +29,13 @@ const USAGE_DIR = path.join(DATA_DIR, 'usage');
 });
 
 // ============================================================
-// BUDGET TRACKER ($5/month default)
+// BUDGET TRACKER ($15/month default — May 2026 blast)
 // ============================================================
-const MONTHLY_BUDGET = parseFloat(process.env.MONTHLY_BUDGET_USD || '5');
+const MONTHLY_BUDGET = parseFloat(process.env.MONTHLY_BUDGET_USD || '15');
+
+// Quality filter: minimum onlinePresence chars to trigger Haiku script generation.
+// Below threshold -> booking saved + plain email, no script. Reduces noise for tire-kickers.
+const QUALITY_MIN_PRESENCE_CHARS = parseInt(process.env.QUALITY_MIN_PRESENCE_CHARS || '30', 10);
 
 // Haiku pricing: $0.25/1M input, $1.25/1M output
 const COST_PER_INPUT_TOKEN = 0.25 / 1_000_000;
@@ -496,6 +500,17 @@ app.post('/webhook/booking', rateLimit, async (req, res) => {
   const bookingFile = path.join(BOOKINGS_DIR, `${id}.json`);
   fs.writeFileSync(bookingFile, JSON.stringify(booking, null, 2), 'utf-8');
   console.log(`\nNEW BOOKING [${id}] ${company} (${size}, ${area})`);
+
+  // QUALITY FILTER: skip Haiku if onlinePresence is too short (tire-kicker signal)
+  const passesQuality = onlinePresence.trim().length >= QUALITY_MIN_PRESENCE_CHARS;
+  if (!passesQuality) {
+    console.log(`  LOW QUALITY (${onlinePresence.length} chars < ${QUALITY_MIN_PRESENCE_CHARS}) - script skipped`);
+    booking.status = 'low_quality_skipped';
+    booking.updatedAt = new Date().toISOString();
+    fs.writeFileSync(bookingFile, JSON.stringify(booking, null, 2), 'utf-8');
+    res.json({ status: 'received', id, note: 'Saved without script (low quality signal)' });
+    return;
+  }
 
   // Process synchronously (keeps Render connection alive until done)
   if (!isBudgetExceeded()) {

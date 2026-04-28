@@ -30,3 +30,7 @@ Thumbs.db
 _audit_*.py
 _fix_*.py
 _*.tmp
+
+# Outreach pipeline logs (local only, contain prospect data)
+scripts/merge.log
+scripts/validate.log

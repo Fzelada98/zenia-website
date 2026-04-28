@@ -27,6 +27,13 @@ from pathlib import Path
 
 import requests
 
+# Force stdout to UTF-8 with errors='replace' so emojis/special chars don't crash on Windows cp1252
+if hasattr(sys.stdout, "reconfigure"):
+    try:
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
+
 INPUT = Path(r"C:\Users\Usuario\Downloads\zenia-prospects-enriched.csv")
 OUTPUT = Path(r"C:\Users\Usuario\Downloads\zenia-prospects-FINAL.csv")
 
@@ -135,7 +142,10 @@ def personalize_one(idx, row, total):
         snippet=snippet[:1200] if snippet else "(sin info de web)",
     )
     opener = call_claude(prompt)
-    print(f"[{idx + 1}/{total}] {company[:35]:35} | {opener[:70]}", flush=True)
+    # ASCII-safe print: replace any non-encodable chars
+    safe_company = company[:35].encode("ascii", "replace").decode("ascii")
+    safe_opener = opener[:70].encode("ascii", "replace").decode("ascii")
+    print(f"[{idx + 1}/{total}] {safe_company:35} | {safe_opener}", flush=True)
     return idx, opener
 
 

@@ -205,3 +205,20 @@ DM me if you run a spa or wellness center and want the full implementation check
 #beautyindustry #CRM #AI #WhatsAppBusiness
 
 ---
+
+
+## 2026-04-28 - Marketing salon de unas redes sociales
+
+70% of nail salon bookings in 2026 are decided on Instagram and TikTok before the client ever calls (Solareelle Journal, OpenPR). Most salon owners still treat social as decoration: pretty pictures, vanity metrics, and a phone that nobody answers on Sundays.
+
+We rebuilt the funnel for a 2-tech nail studio in Spain. Same team, same chairs, no paid ads. Three changes: an 85-minute weekly editorial calendar covering Reels, TikTok and Google Business, a fixed link-in-bio that opens WhatsApp directly, and a personalized AI agent answering every message in 8 seconds with real availability.
+
+Results after 30 days. Average WhatsApp response time: from 4 to 9 hours down to 8 seconds. Message-to-booking conversion: from 35% to 62%. Bookings outside business hours, which used to be zero, now make up 34% of the agenda. Monthly revenue: +5,000 EUR with the same plant and the same physical space.
+
+The salons winning in 2026 are not the ones with better marketing. They are the ones whose content, Google profile and WhatsApp are wired together as one system.
+
+DM me if you run a nail or beauty salon and want the full 30-day implementation plan.
+
+#beautyindustry #CRM #AI #WhatsAppBusiness
+
+---

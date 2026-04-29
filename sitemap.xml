@@ -29,6 +29,13 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  <!-- Blog: Upselling tratamientos peluqueria (ES) -->
+  <url>
+    <loc>https://zeniapartners.com/blog/upselling-tratamientos-peluqueria.html</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- Blog: Programa fidelizacion centro estetica puntos (ES) -->
   <url>
     <loc>https://zeniapartners.com/blog/programa-fidelizacion-centro-estetica-puntos.html</loc>

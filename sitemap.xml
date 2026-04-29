@@ -8,6 +8,27 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  <!-- PILLAR: CRM para Estética España 2026 (priority 1.0) -->
+  <url>
+    <loc>https://zeniapartners.com/blog/crm-para-estetica-espana-2026.html</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <!-- PILLAR: CRM para Restaurantes España 2026 (priority 1.0) -->
+  <url>
+    <loc>https://zeniapartners.com/blog/crm-para-restaurantes-espana-2026.html</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <!-- PILLAR: CRM para Ecommerce España 2026 (priority 1.0) -->
+  <url>
+    <loc>https://zeniapartners.com/blog/crm-para-ecommerce-espana-2026.html</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
   <!-- Blog: Programa fidelizacion centro estetica puntos (ES) -->
   <url>
     <loc>https://zeniapartners.com/blog/programa-fidelizacion-centro-estetica-puntos.html</loc>

@@ -35,3 +35,5 @@ _*.tmp
 scripts/merge.log
 scripts/validate.log
 scripts/personalize.log
+scripts/seo/__pycache__/
+scripts/seo/cache/

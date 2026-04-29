@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-04-28T23:30:00Z",
+  "lastRun": "2026-04-29T00:00:00Z",
   "posts": [
     {
       "slug": "automatizar-reservas-restaurante-whatsapp",
@@ -246,8 +246,8 @@
       "keyword": "upselling tratamientos peluqueria",
       "tier": 1,
       "cluster": "belleza",
-      "status": "pending",
-      "date": null
+      "status": "published",
+      "date": "2026-04-29"
     },
     {
       "slug": "alertas-churn-gimnasio-detectar-a-tiempo",

@@ -246,6 +246,8 @@ Reply if you run a beauty or aesthetics center and I will share the full points 
 ---
 ## 2026-04-29 - Upselling tratamientos peluqueria
 
+<!-- SCHEDULED:sp_s3VXhBpDhcKG2JmWRfs7 at 2026-04-29T07:00:00.000Z -->
+
 The average ticket in independent hair salons in Spain has stayed flat between 28 and 42 EUR for three years. Owners blame the economy. The data points elsewhere: cross-sell of treatments and professional product is stuck at 4-6% of revenue when industry benchmarks suggest 15-20%.
 
 We rebuilt the upselling flow for a 3-stylist salon. No new equipment, no price hike. Four AI-driven moments along the client journey: 24-hour confirmation, intake diagnostic, mid-service WhatsApp video, and 48-hour post-visit follow-up. The personalized AI agent reads each client's history, sensitivity to price and prior treatments before recommending anything.

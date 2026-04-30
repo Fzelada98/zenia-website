@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-04-30T00:00:00Z",
+  "lastRun": "2026-04-30T12:00:00Z",
   "posts": [
     {
       "slug": "automatizar-reservas-restaurante-whatsapp",
@@ -262,8 +262,8 @@
       "keyword": "plantilla bienvenida nuevo socio gimnasio",
       "tier": 1,
       "cluster": "gimnasios",
-      "status": "pending",
-      "date": null
+      "status": "published",
+      "date": "2026-04-30"
     },
     {
       "slug": "aumentar-reservas-restaurante-30-dias",

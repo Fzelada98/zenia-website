@@ -274,3 +274,18 @@ The win is intervening on Tuesday morning, before the cancellation email lands o
 #fitnessindustry #memberretention #AI #WhatsAppBusiness
 
 ---
+## 2026-04-30 - Plantilla de bienvenida nuevo socio gimnasio
+
+The first 30 days decide whether a new gym member stays or quits.
+
+Paul Bedford studied ~1,000 members: structured onboarding hit 87% retention at 6 months. Standard one-hour orientation: 60%. A 27-point gap from sequencing the first month right.
+
+We built a 7-message WhatsApp welcome sequence that any gym can run via a personalized AI agent: day 0 welcome, day 0 operative, day 1 booking nudge, day 3-5 goals, day 7 check-in, day 14 community, day 30 progress review. Each message signed by a real human, triggered by behavior not calendar.
+
+For a 1,200-member gym with 80 monthly sign-ups, even capturing half of the Bedford uplift means ~71,000 EUR a year in retained revenue, against a system cost under 6,000 EUR.
+
+Reply if you run a gym and want the full template with the message-by-message copy. Happy to send it over.
+
+#fitnessindustry #memberretention #AI #WhatsAppBusiness
+
+---

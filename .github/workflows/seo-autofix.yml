@@ -30,10 +30,8 @@ jobs:
       - name: Install minimal deps
         run: pip install requests
 
-      - name: Run autofix (apply + notify)
-        env:
-          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-        run: python scripts/seo_autofix.py --apply --notify
+      - name: Run autofix (silent, no email)
+        run: python scripts/seo_autofix.py --apply
 
       - name: Commit and push if changes
         run: |

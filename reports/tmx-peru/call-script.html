@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Call Script — TMX Peru | 20 Mar 2026</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #f9f9f8;
+    --card: #ffffff;
+    --border: #e2e2de;
+    --text: #1a1a1a;
+    --muted: #6b6b6b;
+    --accent: #7C3AED;
+    --accent-light: #f3eeff;
+    --accent2: #1677ff;
+    --accent2-light: #e8f4ff;
+    --green: #389e0d;
+    --green-light: #f0fff0;
+    --purple: #531dab;
+    --purple-light: #f3eeff;
+    --gold: #d48806;
+    --gold-light: #fffbe6;
+    --shadow: 0 2px 8px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 24px 16px;
+  }
+
+  .page { max-width: 900px; margin: 0 auto; }
+
+  /* HEADER */
+  .header {
+    background: var(--text);
+    color: white;
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .header h1 { font-size: 20px; font-weight: 700; letter-spacing: -0.3px; }
+  .header .meta { font-size: 12px; opacity: 0.65; margin-top: 4px; }
+  .header .badge {
+    background: var(--accent);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    align-self: flex-start;
+  }
+
+  /* ANCHOR */
+  .anchor-box {
+    background: var(--accent);
+    color: white;
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .anchor-label { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; opacity: 0.8; margin-bottom: 8px; }
+  .anchor-phrase { font-size: 22px; font-weight: 800; line-height: 1.3; letter-spacing: -0.5px; }
+  .anchor-note { font-size: 12px; opacity: 0.8; margin-top: 8px; }
+
+  /* GRID 2-COL */
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
+  @media (max-width: 640px) { .grid2 { grid-template-columns: 1fr; } }
+
+  /* CARDS */
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    box-shadow: var(--shadow);
+  }
+  .card h2 {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--muted);
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+
+  /* LISTS */
+  ul.facts { list-style: none; }
+  ul.facts li {
+    padding: 6px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+    display: flex;
+    gap: 8px;
+  }
+  ul.facts li:last-child { border-bottom: none; }
+  ul.facts li .icon { flex-shrink: 0; }
+
+  /* PAIN & INSIGHT ITEMS */
+  .item {
+    padding: 10px 12px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    font-size: 13px;
+  }
+  .item:last-child { margin-bottom: 0; }
+  .item-title { font-weight: 600; margin-bottom: 3px; }
+  .item-body { color: var(--muted); font-size: 12px; }
+  .item.red { background: var(--accent-light); border-left: 3px solid var(--accent); }
+  .item.blue { background: var(--accent2-light); border-left: 3px solid var(--accent2); }
+  .item.purple { background: var(--purple-light); border-left: 3px solid var(--purple); }
+  .item.green { background: var(--green-light); border-left: 3px solid var(--green); }
+  .item.gold { background: var(--gold-light); border-left: 3px solid var(--gold); }
+
+  /* OPPORTUNITIES */
+  .opp {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+    margin-bottom: 10px;
+  }
+  .opp-header { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .opp-num {
+    background: var(--accent);
+    color: white;
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 700; flex-shrink: 0;
+  }
+  .opp-title { font-weight: 700; font-size: 14px; }
+  .opp-before-after {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 8px;
+  }
+  .before, .after {
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+  }
+  .before { background: #fff1f0; border: 1px solid #ffa39e; }
+  .after { background: #f6ffed; border: 1px solid #b7eb8f; }
+  .before-label, .after-label { font-weight: 700; font-size: 10px; text-transform: uppercase; margin-bottom: 4px; }
+  .before-label { color: #d4380d; }
+  .after-label { color: var(--green); }
+
+  /* SCRIPT PHASES */
+  .phases { margin-bottom: 20px; }
+  details {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  details[open] { border-color: var(--accent2); }
+  summary {
+    padding: 14px 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+    font-size: 14px;
+    list-style: none;
+    user-select: none;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: '\25B8'; margin-left: auto; color: var(--muted); transition: transform 0.2s; }
+  details[open] summary::after { transform: rotate(90deg); }
+  .phase-badge {
+    background: var(--accent);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .phase-time { color: var(--muted); font-size: 12px; font-weight: 400; }
+  .phase-body { padding: 0 18px 18px; border-top: 1px solid var(--border); }
+
+  /* SCRIPT ELEMENTS */
+  .tone-tag {
+    display: inline-block;
+    background: var(--purple-light);
+    color: var(--purple);
+    border: 1px solid #b37feb;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 12px 0 8px;
+  }
+  .read-tag {
+    display: inline-block;
+    background: var(--gold-light);
+    color: var(--gold);
+    border: 1px solid #ffd666;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 10px 0 6px;
+  }
+  .anchor-tag {
+    display: inline-block;
+    background: var(--accent-light);
+    color: var(--accent);
+    border: 1px solid #b37feb;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 10px 0 6px;
+  }
+  .say {
+    background: #f0f5ff;
+    border-left: 3px solid var(--accent2);
+    border-radius: 0 6px 6px 0;
+    padding: 10px 14px;
+    margin: 8px 0;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  .say strong { color: var(--accent2); }
+  .say .key-phrase {
+    font-weight: 700;
+    color: var(--text);
+    background: #dbeafe;
+    padding: 1px 4px;
+    border-radius: 3px;
+  }
+  .tactic {
+    background: #fafafa;
+    border: 1px dashed var(--border);
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin: 8px 0;
+    font-size: 12px;
+    color: var(--muted);
+    font-style: italic;
+  }
+  .branch {
+    background: var(--green-light);
+    border: 1px solid #95de64;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin: 6px 0;
+    font-size: 12px;
+  }
+  .branch strong { color: var(--green); }
+  .branch .say-branch {
+    background: white;
+    border-left: 2px solid var(--green);
+    padding: 6px 10px;
+    margin-top: 6px;
+    font-size: 12px;
+    border-radius: 0 4px 4px 0;
+  }
+  .phase-section { margin-top: 14px; }
+  .phase-section h3 { font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--muted); margin-bottom: 8px; font-weight: 600; }
+
+  /* OBJECTIONS */
+  .objection {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  .obj-header {
+    background: #fff1f0;
+    border-bottom: 1px solid #ffa39e;
+    padding: 10px 16px;
+    font-weight: 700;
+    font-size: 13px;
+    color: #d4380d;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .obj-body { padding: 12px 16px; }
+  .loop-step {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    align-items: flex-start;
+  }
+  .loop-num {
+    background: var(--text);
+    color: white;
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 10px; font-weight: 700; flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .loop-content { flex: 1; }
+  .loop-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--muted); margin-bottom: 4px; font-weight: 600; }
+  .loop-say {
+    background: #f0f5ff;
+    border-left: 2px solid var(--accent2);
+    padding: 7px 10px;
+    font-size: 12px;
+    border-radius: 0 4px 4px 0;
+    margin-top: 4px;
+  }
+
+  /* SOURCES */
+  .sources { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 18px; margin-top: 20px; }
+  .sources h2 { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 10px; font-weight: 600; }
+  .sources a { color: var(--accent2); font-size: 12px; text-decoration: none; display: block; margin-bottom: 4px; }
+  .sources a:hover { text-decoration: underline; }
+
+  /* SECTION HEADERS */
+  .section-title {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--muted);
+    font-weight: 600;
+    margin: 24px 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+  hr.divider { border: none; border-top: 1px solid var(--border); margin: 8px 0; }
+
+  @media print {
+    body { background: white; padding: 12px; }
+    details { break-inside: avoid; }
+    details[open] { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div>
+      <div class="h1" style="font-size:20px;font-weight:700;color:white;">TMX: The Wellness Co. — Call Script</div>
+      <div class="meta">Andre Gabuteau / Sebastian Fajri &middot; 20 Mar 2026 &middot; Pendiente confirmar hora</div>
+      <div class="meta" style="margin-top:4px;">TMX Peru S.R.L. (RUC 20606046619) &middot; San Isidro, Lima</div>
+    </div>
+    <div class="badge">HIGH VALUE</div>
+  </div>
+
+  <!-- ANCHOR PHRASE -->
+  <div class="anchor-box">
+    <div class="anchor-label">Anchor Phrase — repetir 3x en la call</div>
+    <div class="anchor-phrase">"Tienen 70+ SKUs, 6 marketplaces, tienda en Jockey Plaza y estan buscando un Shopify Specialist y un Social Media Lead. Eso te dice que la operacion ya crecio mas que el equipo."</div>
+    <div class="anchor-note">Usar en Fase 2 (reflejo del dolor) &middot; Fase 4 (intro solucion) &middot; Fase 6 (cierre final)</div>
+  </div>
+
+  <!-- QUICK FACTS + PAIN HYPOTHESES -->
+  <div class="grid2">
+
+    <!-- QUICK FACTS -->
+    <div class="card">
+      <h2>Quick Facts</h2>
+      <ul class="facts">
+        <li><span class="icon">&#127970;</span><span><strong>Empresa:</strong> TMX Peru S.R.L. (RUC 20606046619). Antes "The Muscle Expert", ahora "TMX: The Wellness Co." Certificado Buen Contribuyente SUNAT. Fundador: Andre Gabuteau (ex-MuscleShop Peru).</span></li>
+        <li><span class="icon">&#128101;</span><span><strong>Team:</strong> ~14 personas segun LinkedIn. Buscando activamente Shopify Specialist + Social Media Content Lead = gaps claros en digital.</span></li>
+        <li><span class="icon">&#128241;</span><span><strong>Social:</strong> Instagram @tmx.peru, TikTok ~28K-134K (variable), Facebook activo, YouTube activo. Presencia fuerte pero sin integracion ni automatizacion.</span></li>
+        <li><span class="icon">&#128722;</span><span><strong>Canales venta:</strong> Shopify (tmx.com.pe), MercadoLibre (tienda oficial, +220 seguidores, abierta jun 2025), Falabella/Linio, Ripley (24 productos), Oechsle (12 productos), Rappi (4 ubicaciones Lima). Total: 6+ marketplaces.</span></li>
+        <li><span class="icon">&#127978;</span><span><strong>Tienda fisica:</strong> Jockey Plaza, 2do piso al lado de SmartFit. Unica tienda fisica confirmada.</span></li>
+        <li><span class="icon">&#127942;</span><span><strong>Marcas:</strong> MyProtein (estrella), DY Nutrition, PEScience, Optimum Nutrition, Cellucor/C4, Dragon Pharma, Sascha Fitness, NOW Foods, Solgar + marca propia TMX Wellness + Gudslip/Gudsport (tiras nasales).</span></li>
+        <li><span class="icon">&#128161;</span><span><strong>Rebranding:</strong> De gym bro puro (The Muscle Expert) a wellness holistic (The Wellness Co). Requiere comunicacion digital coherente que aun no tienen.</span></li>
+        <li><span class="icon">&#127891;</span><span><strong>Alianzas:</strong> Convenio con UPC (15% dcto con codigo UPC15). Delivery 24h Lima. Envio gratis desde S/ 200.</span></li>
+      </ul>
+    </div>
+
+    <!-- PAIN HYPOTHESES -->
+    <div class="card">
+      <h2>Pain Hypotheses — probar en Fase 2</h2>
+      <div class="item red">
+        <div class="item-title">1. Fragmentacion extrema de canales (6+ plataformas)</div>
+        <div class="item-body">Shopify + MercadoLibre + Falabella + Ripley + Oechsle + Rappi + tienda fisica. Cada uno con su inventario, pricing, mensajeria. 14 personas no alcanzan para gestionar esto con calidad. Inconsistencias garantizadas.</div>
+      </div>
+      <div class="item red">
+        <div class="item-title">2. Necesitan talento digital que no encuentran</div>
+        <div class="item-body">Estan buscando Shopify Specialist y Social Media Content Lead AHORA. Eso significa que no tienen a nadie cubriendo eso hoy. La IA puede llenar ese gap mas rapido, mas barato y mas escalable que una contratacion.</div>
+      </div>
+      <div class="item red">
+        <div class="item-title">3. Rebranding a medias = marca confusa</div>
+        <div class="item-body">Pasaron de "The Muscle Expert" a "TMX: The Wellness Co" pero el contenido, la comunicacion y la experiencia de compra probablemente no son coherentes aun. Un agente IA con la voz correcta unifica todo.</div>
+      </div>
+      <div class="item gold">
+        <div class="item-title">4. MercadoLibre recien abierto — sin traccion</div>
+        <div class="item-body">Solo 220 seguidores en ML desde junio 2025. Eso es bajo para 9 meses. La integracion AI + marketplace puede acelerar esto dramaticamente con respuestas automaticas a preguntas de compradores.</div>
+      </div>
+      <div class="item gold">
+        <div class="item-title">5. WhatsApp como canal de atencion — sin automatizar</div>
+        <div class="item-body">Numero activo (+51 936 621 963) pero todo manual. Con 70+ SKUs y delivery en 24h, las consultas de stock, envio, ingredientes son infinitas y repetitivas. Chatbot = liberacion inmediata del equipo.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INSIGHT BOMBS -->
+  <div class="section-title">Insight Bombs — desplegar en Fase 3</div>
+  <div class="grid2">
+    <div class="item blue" style="margin-bottom:0;">
+      <div class="item-title">IB1 — El rebranding no es solo un logo, es la experiencia completa</div>
+      <div class="item-body">Pasaste de "Muscle Expert" a "Wellness Co" pero si el WhatsApp responde igual que antes, si el bot de ML no tiene la nueva voz, si el contenido social no refleja wellness... tu cliente no percibe el cambio. La marca se construye en cada interaccion, no en el nombre. Un agente IA entrenado con tu nueva identidad la refuerza en cada contacto.</div>
+    </div>
+    <div class="item blue" style="margin-bottom:0;">
+      <div class="item-title">IB2 — 6 marketplaces sin centralizacion = 6 negocios separados</div>
+      <div class="item-body">Cada marketplace tiene su propio sistema de mensajeria, sus propias reglas de atencion, sus propias metricas. Hoy tu equipo probablemente salta de Shopify Admin a Seller Center de Falabella a ML a Rappi... eso no es omnicanal, es multicanal con dolor de cabeza. La diferencia entre las dos es un sistema que las unifica.</div>
+    </div>
+    <div class="item purple" style="margin-bottom:0;">
+      <div class="item-title">IB3 — Gomitas y wellness son recompra PURA</div>
+      <div class="item-body">TMX Wellness tiene gomitas de melatonina, ashwagandha, colageno, multivitaminicos. Esos son ciclos de 30-45 dias. Si no hay un sistema que toque al cliente en el dia 28 con un "se te acaba, renovamos?", esa recompra se la lleva iHerb o Amazon. Cada cliente de gomitas que no retornas es LTV regalado a tu competencia.</div>
+    </div>
+    <div class="item purple" style="margin-bottom:0;">
+      <div class="item-title">IB4 — Contratar un Shopify Specialist + Social Media Lead cuesta S/ 8,000-12,000/mes</div>
+      <div class="item-body">Y si los encuentras. Y si se quedan. Y si son buenos. Un sistema de IA que optimiza tu Shopify, genera contenido asistido y responde en todos los canales cuesta una fraccion de eso y no renuncia en 3 meses. No reemplaza personas, pero si hace que las contrataciones que SI hagas rindan 3x mas.</div>
+    </div>
+  </div>
+
+  <!-- AI OPPORTUNITIES -->
+  <div class="section-title">AI Opportunities — presentar en Fase 4 (elegir 2-3)</div>
+
+  <div class="opp">
+    <div class="opp-header">
+      <div class="opp-num">1</div>
+      <div class="opp-title">AI Omnichannel Agent — WhatsApp + IG + Marketplaces</div>
+      <span style="margin-left:auto;font-size:11px;color:var(--muted);">PRIORIDAD #1</span>
+    </div>
+    <div style="font-size:12px;color:var(--muted);margin-bottom:8px;">Un agente que conoce los 70+ SKUs, sabe de envios (24h Lima, tarifas provincias), ingredientes, comparativas entre marcas, disponibilidad. Responde en WhatsApp, IG DMs, y puede integrarse con los chats de marketplace. Atiende 24/7 sin fatiga.</div>
+    <div class="opp-before-after">
+      <div class="before">
+        <div class="before-label">Hoy</div>
+        Equipo saltando entre 6 plataformas. Respuestas lentas en horas pico. Preguntas repetitivas de stock, envio, ingredientes consumiendo 60%+ del tiempo del equipo.
+      </div>
+      <div class="after">
+        <div class="after-label">Con Zenia</div>
+        AI responde en &lt;30 segundos 24/7. Conoce todo el catalogo. Info de envio 100% consistente. Tu equipo solo interviene en ventas B2B o casos complejos.
+      </div>
+    </div>
+  </div>
+
+  <div class="opp">
+    <div class="opp-header">
+      <div class="opp-num">2</div>
+      <div class="opp-title">Customer Lifecycle Automation — Recompra Inteligente</div>
+      <span style="margin-left:auto;font-size:11px;color:var(--muted);">EL MAS RENTABLE</span>
+    </div>
+    <div style="font-size:12px;color:var(--muted);margin-bottom:8px;">Sistema que trackea ciclos de consumo por producto (proteina 30-45 dias, gomitas 30 dias, creatina 30 dias) y toca al cliente en el momento exacto de recompra via WhatsApp o email.</div>
+    <div class="opp-before-after">
+      <div class="before">
+        <div class="before-label">Hoy</div>
+        Cero seguimiento post-compra. Clientes de gomitas y suplementos que deberian recomprar cada mes no reciben ningun recordatorio. Recompra depende de que el cliente se acuerde solo.
+      </div>
+      <div class="after">
+        <div class="after-label">Con Zenia</div>
+        "Andre, tu colageno TMX se acaba esta semana. Repongo el mismo o pruebas la ashwagandha?" Dia 28 automatico. Conversion 40-60%. LTV del cliente x2-3.
+      </div>
+    </div>
+  </div>
+
+  <div class="opp">
+    <div class="opp-header">
+      <div class="opp-num">3</div>
+      <div class="opp-title">Marca Propia TMX Wellness — AI Brand Assistant</div>
+      <span style="margin-left:auto;font-size:11px;color:var(--muted);">DIFERENCIADOR CLAVE</span>
+    </div>
+    <div style="font-size:12px;color:var(--muted);margin-bottom:8px;">TMX tiene marca propia (gomitas, tiras nasales Gudslip/Gudsport). Un agente especializado en marca propia que educa, recomienda y vende estos productos aumenta margenes directos vs reventa de marcas terceras.</div>
+    <div class="opp-before-after">
+      <div class="before">
+        <div class="before-label">Hoy</div>
+        TMX Wellness y Gudslip/Gudsport compiten por atencion con MyProtein y ON en el mismo catalogo. Sin diferenciacion activa ni push de marca propia.
+      </div>
+      <div class="after">
+        <div class="after-label">Con Zenia</div>
+        AI recomienda marca propia estrategicamente: "Si te gusto la melatonina de Nature's Truth, la gomita TMX tiene lo mismo + ashwagandha por menos." Margenes +15-25% vs reventa.
+      </div>
+    </div>
+  </div>
+
+  <div class="opp">
+    <div class="opp-header">
+      <div class="opp-num">4</div>
+      <div class="opp-title">Social Commerce + Content Automation</div>
+    </div>
+    <div style="font-size:12px;color:var(--muted);margin-bottom:8px;">Respuesta automatica a comentarios y DMs en TikTok e Instagram. Cuando alguien comenta "precio?" o "donde compro?" en un video, el agente responde al instante con link directo.</div>
+    <div class="opp-before-after">
+      <div class="before">
+        <div class="before-label">Hoy</div>
+        TikTok genera awareness (28K+ seguidores) pero los comentarios y DMs no se monetizan. Cada video es contenido que no convierte.
+      </div>
+      <div class="after">
+        <div class="after-label">Con Zenia</div>
+        Cada comentario es un lead automatico. "Me interesa!" = respuesta en 10 segundos con link de compra. TikTok deja de ser branding y se vuelve canal de venta.
+      </div>
+    </div>
+  </div>
+
+  <!-- THE SCRIPT -->
+  <div class="section-title">El Script — 30 Minutos de Cierre</div>
+  <div class="phases">
+
+    <!-- PHASE 1 -->
+    <details open>
+      <summary>
+        <span class="phase-badge">FASE 1</span>
+        Frame Setting &amp; Rapport
+        <span class="phase-time">0:00 – 3:00</span>
+      </summary>
+      <div class="phase-body">
+        <div class="tone-tag">TONE: Calm Authority — voz baja, ritmo medido, calido pero seguro. Par intelectual, no vendedor.</div>
+        <p class="tactic" style="background:#f3eeff;padding:8px 12px;border-radius:6px;border-left:4px solid #7C3AED;margin:8px 0;">[MOSTRAR SLIDE 1 — Cover (TMX Peru x ZENIA). Tenerla en pantalla mientras saludas.]</p>
+
+        <div class="phase-section">
+          <h3>Apertura</h3>
+          <div class="say">
+            "Andre, que tal. Fabrizzio de Zenia, gracias por el tiempo.
+            <br><br>
+            Antes de la llamada estuve viendo lo que estan construyendo en TMX — <span class="key-phrase">el salto de 'The Muscle Expert' a 'The Wellness Co' me parece una jugada inteligente. Pasar de suplementos gym a wellness holistic es donde esta yendo el mercado.</span> Y el hecho de que ya tengan marca propia con TMX Wellness y Gudslip me dice que no piensan como distribuidor, piensan como marca.
+            <br><br>
+            Lo que me interesa hoy es entender donde sienten que la operacion se esta quedando corta versus donde quieren estar. No para venderte nada en esta llamada — sino para ver si lo que hacemos tiene sentido para donde van. &iquest;Te parece?"
+          </div>
+          <div class="tactic">[Tracy: competencia + calidez en 60 segundos. Klaff: tu defines el frame — "strategic assessment", no "sales call". Mencion del rebranding muestra que hiciste tarea. Jobs: identifica la vision que YA tienen y amplificala.]</div>
+        </div>
+
+        <div class="phase-section">
+          <h3>Seed de tension (primer toque del anchor)</h3>
+          <div class="say">
+            "Una cosa que noto desde afuera: <span class="key-phrase">tienen presencia en 6 marketplaces, tienda en Jockey Plaza, marca propia, convenio con UPC... y estan publicando ofertas de trabajo para Shopify Specialist y Social Media Lead.</span>
+            <br><br>
+            Eso me dice que la ambicion va mas rapido que la infraestructura. &iquest;Estoy leyendo bien?"
+          </div>
+          <div class="tactic">[Clave: mencionas los job postings. Eso es informacion publica que demuestra que investigaste y que identificas el gap. La pregunta "estoy leyendo bien?" invita a confirmar o corregir — ambos son apertura.]</div>
+
+          <div class="branch">
+            <strong>Si dice:</strong> "Si, exactamente" &rarr; excelente, ya abrio la puerta. Ir a Fase 2 inmediatamente.<br>
+            <strong>Si dice:</strong> "No, la manejamos bien" &rarr; responde: <div class="say-branch">"Me alegra. Entonces la pregunta interesante es: si manana les llega un convenio como el de UPC pero con San Marcos o con una cadena de gyms, &iquest;el equipo actual lo absorbe sin problemas?"</div>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <!-- PHASE 2 -->
+    <details>
+      <summary>
+        <span class="phase-badge">FASE 2</span>
+        Pain Discovery
+        <span class="phase-time">3:00 – 10:00</span>
+      </summary>
+      <div class="phase-body">
+        <div class="tone-tag">TONE: Genuine Curiosity — pitch ligeramente mas alto, preguntas abiertas, inflexion hacia arriba. Que se sienta escuchado, no interrogado.</div>
+        <div class="read-tag">READ: Busca el momento en que pase de respuestas de superficie a frustracion real. Ahi esta el dolor verdadero. Anclarlo.</div>
+
+        <div class="phase-section">
+          <h3>Preguntas Calibradas (Voss)</h3>
+          <div class="say">
+            "Andre, cuentame — <span class="key-phrase">&iquest;cual es el mayor cuello de botella operativo que tienen hoy? Lo que mas te consume tiempo o genera fricciones en el equipo.</span>"
+          </div>
+          <div class="tactic">[Pregunta abierta. No des opciones todavia — deja que el identifique su propio dolor. Escucha 70%. Toma nota mental de las palabras EXACTAS que use.]</div>
+
+          <div class="say" style="margin-top:12px;">
+            <em>[Despues de su respuesta:]</em><br><br>
+            "&iquest;Y como se siente eso cuando es temporada alta? Tipo ahora que entra abril con los que se preparan para invierno, o en enero con las resoluciones de ano nuevo."
+          </div>
+
+          <div class="say" style="margin-top:12px;">
+            "Con 6 plataformas distintas — Shopify, ML, Falabella, Ripley, Oechsle, Rappi — <span class="key-phrase">&iquest;como manejan la consistencia? &iquest;Cada plataforma tiene a alguien dedicado o todos hacen de todo?</span>"
+          </div>
+          <div class="tactic">[Esta pregunta expone el caos operativo sin acusar. Si "todos hacen de todo" = caos. Si tienen dedicados = costo alto. Ambas respuestas abren la puerta.]</div>
+
+          <div class="say" style="margin-top:12px;">
+            "Y el WhatsApp — <span class="key-phrase">&iquest;cuantas consultas dirias que reciben ahi? &iquest;Y que pasa con las que llegan despues de las 7 PM o en fin de semana?</span>"
+          </div>
+
+          <div class="say" style="margin-top:12px;">
+            "El cambio de marca de Muscle Expert a Wellness Co — <span class="key-phrase">&iquest;los clientes lo captaron? &iquest;O siguen pensando en ustedes como 'la tienda de suplementos de gym'?</span>"
+          </div>
+          <div class="tactic">[Esta pregunta es una bomba. Si los clientes no captaron el rebranding = problema de comunicacion que un agente IA con la nueva voz resuelve en cada interaccion. Si si lo captaron = puedes felicitarlos y pivot a "entonces el siguiente paso es que esa identidad viva en cada touchpoint digital".]</div>
+        </div>
+
+        <div class="phase-section">
+          <h3>Labeling (Voss) — crear el momento "eso es exactamente"</h3>
+          <div class="say">
+            "Parece que la situacion es esta: construyeron algo que ya tiene escala real — Jockey Plaza, 6 marketplaces, marca propia, convenios con universidades. Pero la maquinaria digital que conecta todo eso... <span class="key-phrase">todavia la estan armando con alambre y buena voluntad.</span>"
+          </div>
+          <div class="tactic">[Metafora visual que no humilla. "Alambre y buena voluntad" es algo que todo emprendedor reconoce. El Ferrari son ellos (buen producto, crecimiento real). El alambre es el sistema operativo.]</div>
+        </div>
+
+        <p class="tactic" style="background:#f3eeff;padding:8px 12px;border-radius:6px;border-left:4px solid #7C3AED;margin:8px 0;">[MOSTRAR SLIDE 2 — El Problema Real. Dejar que lo vean mientras anclas el dolor.]</p>
+        <div class="anchor-tag">ANCHOR — Reflejar despues de que describa el dolor</div>
+        <div class="say">
+          "Entonces basicamente: <span class="key-phrase">tienen 70 productos, 6 marketplaces, tienda fisica, marca propia, y estan buscando un Shopify Specialist porque no dan abasto. La operacion crecio mas rapido que la infraestructura.</span>"
+        </div>
+        <div class="tactic">[Pausa. Dejalo confirmar. Esta es la frase que va a recordar de la llamada.]</div>
+      </div>
+    </details>
+
+    <!-- PHASE 3 -->
+    <details>
+      <summary>
+        <span class="phase-badge">FASE 3</span>
+        Insight Bomb
+        <span class="phase-time">10:00 – 15:00</span>
+      </summary>
+      <div class="phase-body">
+        <div class="tone-tag">TONE: Conspiratorial Whisper — volumen mas bajo, ritmo lento, como si compartieras un secreto. Que se incline hacia adelante.</div>
+        <div class="read-tag">READ: Si pausa despues del insight, bien, esta procesando. Dale 3 segundos. Si pushea back inmediatamente, no ganaste suficiente confianza en Fase 2 — vuelve con un label antes de continuar.</div>
+
+        <p class="tactic" style="background:#f3eeff;padding:8px 12px;border-radius:6px;border-left:4px solid #7C3AED;margin:8px 0;">[MOSTRAR SLIDE 3 — Por que las soluciones tipicas no funcionan. Cambiar cuando digas "contratar 2-3 personas mas".]</p>
+        <div class="phase-section">
+          <h3>Validar &rarr; Reencuadrar &rarr; Revelar &rarr; Bridge</h3>
+          <div class="say">
+            "Mira Andre, lo que me describiste tiene todo el sentido del mundo. Y es el patron mas comun que veo en marcas de suplementos que estan creciendo rapido: primero creces en canales, despues te das cuenta de que los canales no se hablan entre si.
+            <br><br>
+            <span class="key-phrase">Pero te voy a decir algo que la mayoria de marcas en tu posicion no ve hasta que ya es tarde:</span>
+            <br><br>
+            El problema no es que necesitas un Shopify Specialist o un Social Media Lead. Eso es el sintoma. El problema real es que no tienes una capa de inteligencia que conecte tu tienda web, tus marketplaces, tu WhatsApp, tus redes y tu base de clientes en un solo cerebro que aprende.
+            <br><br>
+            Puedes contratar 2-3 personas mas y resolver el problema de hoy. <span class="key-phrase">O puedes construir el sistema que hace que esas 14 personas operen como 40. Eso es lo que hace Zenia.</span>"
+          </div>
+          <div class="tactic">[Jobs: no vendes el producto, vendes el contraste entre donde estan y donde pueden estar. Klaff: introduce novedad — el cerebro ignora lo familiar y se engancha con lo nuevo.]</div>
+          <p class="tactic" style="background:#f3eeff;padding:8px 12px;border-radius:6px;border-left:4px solid #7C3AED;margin:8px 0;">[MOSTRAR SLIDE 4 — TMX con IA: 14 personas operando como 35. Dejar en pantalla mientras hablas de marca propia y recompra.]</p>
+        </div>
+
+        <div class="phase-section">
+          <h3>El dato de marca propia</h3>
+          <div class="say">
+            "Y hay algo especifico de TMX que me parece que es una mina de oro sin explotar: <span class="key-phrase">la marca propia.</span>
+            <br><br>
+            TMX Wellness, Gudslip, Gudsport — eso es donde estan tus mejores margenes. Cada vez que vendes una gomita TMX en lugar de una de Nature's Truth, tu margen puede ser 15-25% mayor. Pero para que el cliente elija tu marca propia sobre la internacional, necesitas educacion y confianza en cada punto de contacto.
+            <br><br>
+            Un agente de IA entrenado con tu marca hace eso automaticamente: cuando alguien pregunta por melatonina, le muestra primero la de TMX con la justificacion correcta. Eso no lo hace un humano consistentemente con 6 canales y 70 productos."
+          </div>
+          <div class="tactic">[Toca directamente el interes economico. Marca propia = margen = lo que quiere cualquier distribuidor que evoluciona a marca.]</div>
+        </div>
+
+        <div class="phase-section">
+          <h3>La recompra automatica</h3>
+          <div class="say">
+            "Y el otro angulo que me parece que todavia no han activado: <span class="key-phrase">la recompra.</span>
+            <br><br>
+            Gomitas, colageno, proteina, creatina — todo se acaba en 30-45 dias. Cada cliente que compro hace un mes NECESITA recomprar. Si nadie lo toca en ese momento exacto... recompra en iHerb, en Amazon, o simplemente se olvida.
+            <br><br>
+            Eso es plata que ya era tuya y la estas dejando ir."
+          </div>
+          <div class="tactic">[Loss frame — el dinero ya era suyo y lo estan perdiendo. Mucho mas potente que el gain frame. Deja que eso aterrice.]</div>
+        </div>
+      </div>
+    </details>
+
+    <!-- PHASE 4 -->
+    <details>
+      <summary>
+        <span class="phase-badge">FASE 4</span>
+        Solution Vision
+        <span class="phase-time">15:00 – 23:00</span>
+      </summary>
+      <div class="phase-body">
+        <div class="tone-tag">TONE: Controlled Excitement — ritmo mas rapido, ligeramente mas fuerte, energia de "one more thing" de Jobs. Pintas un futuro en el que quieren vivir.</div>
+        <div class="read-tag">READ: Cuando pregunten "como funcionaria eso?" o "cuanto tiempo toma?" estan comprando. Cambia a certainty y da respuestas claras.</div>
+
+        <div class="anchor-tag">ANCHOR — Usar aqui antes de presentar soluciones</div>
+        <div class="say">
+          "<span class="key-phrase">Dijimos que la operacion crecio mas que la infraestructura. 70 productos, 6 marketplaces, marca propia, y el equipo no da abasto. Aqui es donde cambiamos eso.</span>"
+        </div>
+        <p class="tactic" style="background:#f3eeff;padding:8px 12px;border-radius:6px;border-left:4px solid #7C3AED;margin:8px 0;">[MOSTRAR SLIDE 5 — Ecosistema ZENIA Parte 1. Ir pasando a Slide 6 (Parte 2) cuando llegues al Sistema 2.]</p>
+
+        <div class="phase-section">
+          <h3>Sistema 1 — AI Omnichannel Agent</h3>
+          <div class="say">
+            "Lo primero que construiriamos es un <span class="key-phrase">agente de IA que vive en todos tus canales — WhatsApp, Instagram, y potencialmente las mensajerias de marketplace.</span>
+            <br><br>
+            Este agente sabe todo de tu catalogo. Los 70+ SKUs. Sabe que la proteina de MyProtein viene en 5 sabores. Sabe que el envio es gratis desde S/ 200 en Lima y 24 horas. Sabe los ingredientes de cada gomita TMX Wellness. Y cuando el cliente esta listo para comprar, lo manda directo a tu Shopify o al marketplace que prefiera.
+            <br><br>
+            Las preguntas repetitivas — stock, envio, ingredientes, precios — desaparecen del dia a dia de tu equipo. Tu gente se enfoca en lo que realmente necesita un humano: ventas B2B, convenios, relaciones con marcas."
+          </div>
+        </div>
+
+        <p class="tactic" style="background:#f3eeff;padding:8px 12px;border-radius:6px;border-left:4px solid #7C3AED;margin:8px 0;">[MOSTRAR SLIDE 6 — Ecosistema ZENIA Parte 2. Cambiar aqui.]</p>
+        <div class="phase-section">
+          <h3>Sistema 2 — Recompra Inteligente + Lifecycle</h3>
+          <div class="say">
+            "El segundo sistema es el que tiene el ROI mas directo: <span class="key-phrase">automatizacion de recompra basada en ciclos de consumo.</span>
+            <br><br>
+            Cada cliente que compra entra en un flujo inteligente. Dia 28 despues de comprar gomitas de melatonina TMX: le llega un WhatsApp: 'Hola Maria, tus gomitas de melatonina se deben estar acabando. &iquest;Te repongo el mismo frasco o quieres probar las de ashwagandha?' Con boton de compra directo.
+            <br><br>
+            No es spam — es el momento exacto en que lo necesita. Esto convierte en 40-60% en marcas similares. Tu base de clientes se convierte en ingresos recurrentes predecibles."
+          </div>
+        </div>
+
+        <div class="phase-section">
+          <h3>Sistema 3 — AI Brand Assistant para Marca Propia</h3>
+          <div class="say">
+            "Y el tercero — que es especifico de TMX y ningun competidor tuyo lo tiene: <span class="key-phrase">un agente que prioriza estrategicamente tu marca propia.</span>
+            <br><br>
+            Cuando alguien pregunta por vitaminas, el agente muestra TMX Wellness primero con las razones correctas. Cuando alguien busca algo para dormir, recomienda Gudslip + gomitas de melatonina TMX como combo. No de forma agresiva — de forma inteligente, con la informacion correcta.
+            <br><br>
+            Resultado: mas ventas de marca propia, mejores margenes, y un cliente que asocia TMX con la recomendacion experta. Eso construye marca."
+          </div>
+        </div>
+
+        <div class="phase-section">
+          <h3>Temperature Check — micro-compromiso</h3>
+          <div class="say">
+            "<span class="key-phrase">De estos tres sistemas, &iquest;cual sientes que le daria mas impacto a TMX en este momento?</span>"
+          </div>
+          <div class="tactic">[No es solo una pregunta — es un micro-compromiso. Cuando elige uno, psicologicamente ya empezo a comprar. Escucha cual elige y profundiza en ese primero.]</div>
+        </div>
+      </div>
+    </details>
+
+    <!-- PHASE 5 -->
+    <details>
+      <summary>
+        <span class="phase-badge">FASE 5</span>
+        Impact &amp; Urgency
+        <span class="phase-time">23:00 – 27:00</span>
+      </summary>
+      <div class="phase-body">
+        <div class="tone-tag">TONE: Calm Authority — de vuelta a ritmo medido, voz baja. Los numeros hablan solos. Entregalos como hechos, no como pitch.</div>
+        <div class="read-tag">READ: Si asienten o dicen "tiene sentido" estan listos. Mueve a Fase 6 rapido. Si se quedan callados o escepticos: "Parece que esos numeros te sorprenden. Dejame explicarte por que son conservadores..."</div>
+
+        <p class="tactic" style="background:#f3eeff;padding:8px 12px;border-radius:6px;border-left:4px solid #7C3AED;margin:8px 0;">[MOSTRAR SLIDE 7 — Impacto Estimado. Los numeros en pantalla mientras hablas.]</p>
+        <div class="phase-section">
+          <h3>Cuantificar el costo de no hacer nada</h3>
+          <div class="say">
+            "Andre, dejame darte numeros concretos.
+            <br><br>
+            <span class="key-phrase">Con 70+ SKUs en 6 marketplaces, tienda fisica y WhatsApp activo, conservadoramente estan recibiendo entre 80 y 200 consultas por dia sumando todos los canales.</span> Si la tasa de conversion de esas consultas es del 12-15% — que es conservador para ecommerce de suplementos — y el ticket promedio esta en S/ 120-180... estamos hablando de S/ 1,500 a S/ 5,000 diarios en oportunidad.
+            <br><br>
+            Si por falta de respuesta rapida, o inconsistencias entre canales, o mensajes a deshora, pierden el 25-35% de esas conversiones... <span class="key-phrase">eso es S/ 12,000 a S/ 50,000 por mes que se quedan en la mesa.</span>
+            <br><br>
+            Y eso sin contar la recompra automatica — que es dinero que ya ganaron y estan dejando ir."
+          </div>
+          <div class="tactic">[Tracy: loss frame es 2.5x mas poderoso que gain frame. No digo 'ganarias X' — digo 'estas perdiendo X que ya es tuyo'. Ajusta los numeros si el te da cifras mas concretas en Fase 2.]</div>
+        </div>
+
+        <p class="tactic" style="background:#f3eeff;padding:8px 12px;border-radius:6px;border-left:4px solid #7C3AED;margin:8px 0;">[MOSTRAR SLIDE 8 — Por que ZENIA. Dejar en pantalla para la transicion a cierre.]</p>
+        <div class="phase-section">
+          <h3>Urgencia real — competencia + timing</h3>
+          <div class="say">
+            "Y hay un factor de timing importante: <span class="key-phrase">el mercado de suplementos en Peru se esta profesionalizando rapido.</span> Lab Nutrition, Nutriforma, iHerb — todos estan invirtiendo en digital. La marca que primero tenga IA integrada en su operacion no solo va a atender mejor — va a capturar a los clientes que los demas pierden.
+            <br><br>
+            Nosotros trabajamos con un maximo de 3 implementaciones simultaneas para garantizar calidad. Si esto tiene sentido para TMX, tendria sentido movernos rapido y agendar el kickoff."
+          </div>
+          <div class="tactic">[Urgencia genuina: competencia real + capacidad limitada de Zenia. La escasez no es manipulacion si es real.]</div>
+        </div>
+      </div>
+    </details>
+
+    <!-- PHASE 6 -->
+    <details>
+      <summary>
+        <span class="phase-badge">FASE 6</span>
+        Natural Close
+        <span class="phase-time">27:00 – 30:00</span>
+      </summary>
+      <div class="phase-body">
+        <div class="tone-tag">TONE: Matter-of-Fact Certainty — tono uniforme, sin titubeos, declaraciones directas. No es una pregunta. Es el siguiente paso obvio.</div>
+
+        <p class="tactic" style="background:#f3eeff;padding:8px 12px;border-radius:6px;border-left:4px solid #7C3AED;margin:8px 0;">[MOSTRAR SLIDE 9 — Ruta de Implementacion. Visualmente muestra el roadmap mientras haces el callback.]</p>
+        <div class="anchor-tag">ANCHOR FINAL — Callback al inicio</div>
+        <div class="say">
+          "<span class="key-phrase">Empezamos hablando de que la operacion crecio mas que la infraestructura. 6 marketplaces, marca propia, y el equipo buscando refuerzos. Lo que te propongo es exactamente como resolvemos eso sin triplicar headcount.</span>"
+        </div>
+        <p class="tactic" style="background:#f3eeff;padding:8px 12px;border-radius:6px;border-left:4px solid #7C3AED;margin:8px 0;">[MOSTRAR SLIDE 10 — Inversion Estrategica. Cambiar cuando digas "arrancamos con el diagnostico".]</p>
+
+        <div class="phase-section">
+          <h3>El cierre</h3>
+          <div class="say">
+            "Lo que propongo como siguiente paso: <span class="key-phrase">arrancamos con el diagnostico en la primera semana</span>. Miramos tus canales actuales, el Shopify, los volumenes de consultas, tu catalogo completo, y te entregamos un roadmap concreto — que sistemas implementamos primero, que impacto esperar, y en que timeline.
+            <br><br>
+            Lo primero que hacemos es ese diagnostico completo para que el roadmap sea exacto para tu operacion. Es la fase donde mas valor entregamos porque define todo lo que viene despues.
+            <br><br>
+            <span class="key-phrase">&iquest;Tiene sentido que agendemos el kickoff ahora mismo?</span>"
+          </div>
+          <div class="tactic">[Klaff: el diagnostico es parte del servicio, no un regalo. El frame es: esto es tan valioso que es la primera fase del proyecto. "Ahora mismo" crea accion inmediata.]</div>
+        </div>
+
+        <div class="phase-section">
+          <h3>Si dicen Si</h3>
+          <div class="branch">
+            <strong>Respuesta:</strong>
+            <div class="say-branch">"Perfecto. &iquest;La semana que viene tienes disponibilidad martes o miercoles? Yo te mando el invite antes de que cerremos. Y voy a necesitar acceso a las metricas basicas de tus canales — no nada sensible, solo volumenes — para que el diagnostico sea util de verdad."</div>
+          </div>
+        </div>
+
+        <div class="phase-section">
+          <h3>Si dudan — Tecnica "Parece que" (Voss)</h3>
+          <div class="branch">
+            <strong>Si hay hesitacion:</strong>
+            <div class="say-branch">"Parece que hay algo que todavia no cierra del todo. &iquest;Que tendria que ser cierto para que esto tuviera sentido para TMX?"</div>
+          </div>
+          <div class="tactic">[Luego aplica el Belfort Loop — ver Objection Playbook]</div>
+        </div>
+
+        <div class="phase-section">
+          <h3>Si dicen "necesito hablar con el equipo"</h3>
+          <div class="branch">
+            <strong>Respuesta:</strong>
+            <div class="say-branch">"Totalmente. &iquest;Que si hacemos esto? Agenda un call corto — 20 minutos — donde yo les presento directamente a tu equipo lo que hablamos hoy. Asi no tienes que ser el intermediario y ellos pueden hacer sus preguntas en vivo. &iquest;Cuando pueden juntarse?"</div>
+          </div>
+        </div>
+
+        <p class="tactic" style="background:#f3eeff;padding:8px 12px;border-radius:6px;border-left:4px solid #7C3AED;margin:8px 0;">[MOSTRAR SLIDE 11 — CTA Final. Dejar como ultima imagen de la call.]</p>
+        <div class="phase-section">
+          <h3>Si dicen "mandame algo por escrito"</h3>
+          <div class="branch">
+            <strong>Respuesta:</strong>
+            <div class="say-branch">"Con gusto te preparo un resumen. Pero te soy honesto — un documento nunca captura lo que capta una conversacion. Lo que propongo: te mando un one-pager esta noche y manana hacemos 15 minutos para revisarlo juntos. Si no encaja, no hay follow-up, te lo prometo. &iquest;A que hora te va bien manana?"</div>
+          </div>
+        </div>
+      </div>
+    </details>
+
+  </div>
+
+  <!-- OBJECTION PLAYBOOK -->
+  <div class="section-title">Objection Playbook</div>
+
+  <!-- OBJECTION 1 — PRECIO -->
+  <div class="objection">
+    <div class="obj-header">&#128184; "Cuanto cuesta esto? No tenemos presupuesto grande ahora."</div>
+    <div class="obj-body">
+      <div class="loop-step">
+        <div class="loop-num">1</div>
+        <div class="loop-content">
+          <div class="loop-label">Deflect con empatia (Voss)</div>
+          <div class="loop-say">"Totalmente valido — el presupuesto es real y lo respeto. Y es exactamente por eso que no te estoy pidiendo que decidas nada de eso hoy."</div>
+        </div>
+      </div>
+      <div class="loop-step">
+        <div class="loop-num">2</div>
+        <div class="loop-content">
+          <div class="loop-label">Reencuadrar — costo de inaccion vs costo de solucion</div>
+          <div class="loop-say">"Lo que si te pido que consideres: estan buscando un Shopify Specialist (S/ 3,000-5,000/mes) y un Social Media Lead (S/ 4,000-6,000/mes). Eso son S/ 7,000-11,000 mensuales en salarios. Un sistema de IA que cubre ambas funciones y mas cuesta una fraccion de eso — y no renuncia, no se enferma, no necesita capacitacion de 3 meses."</div>
+        </div>
+      </div>
+      <div class="loop-step">
+        <div class="loop-num">3</div>
+        <div class="loop-content">
+          <div class="loop-label">Re-close — barrera minima</div>
+          <div class="loop-say">"El diagnostico es la primera fase del proyecto — es donde mas valor entregamos porque define todo lo que viene despues. Lo armamos en la primera semana y con eso tienes claridad total. &iquest;Lo agendamos?"</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OBJECTION 2 — YA TENEMOS SHOPIFY -->
+  <div class="objection">
+    <div class="obj-header">&#128187; "Ya tenemos Shopify y las apps basicas, no necesitamos mas tecnologia"</div>
+    <div class="obj-body">
+      <div class="loop-step">
+        <div class="loop-num">1</div>
+        <div class="loop-content">
+          <div class="loop-label">Deflect con empatia</div>
+          <div class="loop-say">"Y Shopify es una gran base — no necesitan cambiarse de plataforma ni nada por el estilo."</div>
+        </div>
+      </div>
+      <div class="loop-step">
+        <div class="loop-num">2</div>
+        <div class="loop-content">
+          <div class="loop-label">Reencuadrar — Shopify es el almacen, no el vendedor</div>
+          <div class="loop-say">"Lo que Shopify no hace es responder el WhatsApp a las 11 PM, ni recomendar marca propia TMX en Instagram DMs, ni tocar al cliente el dia 28 para la recompra. Shopify es tu motor de tienda — lo que falta es la capa de inteligencia que vende, atiende y retiene. Nosotros nos integramos CON Shopify, no lo reemplazamos."</div>
+        </div>
+      </div>
+      <div class="loop-step">
+        <div class="loop-num">3</div>
+        <div class="loop-content">
+          <div class="loop-label">Re-close</div>
+          <div class="loop-say">"El diagnostico mapea exactamente como se integra con tu Shopify actual sin romper nada. &iquest;Lo agendamos?"</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OBJECTION 3 — TAMANO -->
+  <div class="objection">
+    <div class="obj-header">&#128101; "Somos 14 personas, no se si somos lo suficientemente grandes para IA"</div>
+    <div class="obj-body">
+      <div class="loop-step">
+        <div class="loop-num">1</div>
+        <div class="loop-content">
+          <div class="loop-label">Deflect con empatia</div>
+          <div class="loop-say">"Es una pregunta justa — y la respuesta corta es: las empresas de 14 personas son exactamente las que mas impacto ven."</div>
+        </div>
+      </div>
+      <div class="loop-step">
+        <div class="loop-num">2</div>
+        <div class="loop-content">
+          <div class="loop-label">Reencuadrar — tamano es la razon, no el obstaculo</div>
+          <div class="loop-say">"Con IA, esas 14 personas operan como si fueran 35. No necesitas contratar — necesitas multiplicar el output de lo que ya tienen. TMX ya tiene la escala de producto y canales de una empresa de 30+ personas. Lo unico que falta es que la infraestructura alcance esa escala."</div>
+        </div>
+      </div>
+      <div class="loop-step">
+        <div class="loop-num">3</div>
+        <div class="loop-content">
+          <div class="loop-label">Re-close</div>
+          <div class="loop-say">"El diagnostico te dice exactamente donde la IA tiene mas impacto con tu equipo actual. &iquest;Lo agendamos?"</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OBJECTION 4 — TIMING -->
+  <div class="objection">
+    <div class="obj-header">&#9200; "Estamos en medio del rebranding, no es buen momento"</div>
+    <div class="obj-body">
+      <div class="loop-step">
+        <div class="loop-num">1</div>
+        <div class="loop-content">
+          <div class="loop-label">Deflect con empatia</div>
+          <div class="loop-say">"Lo entiendo — un rebranding consume atencion y recursos, y lo ultimo que quieres es meter otra variable."</div>
+        </div>
+      </div>
+      <div class="loop-step">
+        <div class="loop-num">2</div>
+        <div class="loop-content">
+          <div class="loop-label">Reencuadrar — el rebranding es exactamente el momento</div>
+          <div class="loop-say">"Pero te digo algo: el MEJOR momento para implementar un agente de IA es durante el rebranding, no despues. Porque el agente se entrena con tu nueva voz, tu nueva identidad, tu nuevo posicionamiento desde el dia 1. Si esperas a que termine el rebranding para implementar IA, vas a tener que re-entrenar a los humanos Y al sistema. Hacerlo ahora mata dos pajaros de un tiro."</div>
+        </div>
+      </div>
+      <div class="loop-step">
+        <div class="loop-num">3</div>
+        <div class="loop-content">
+          <div class="loop-label">Re-close</div>
+          <div class="loop-say">"El diagnostico puede alinearse con tu timeline de rebranding. &iquest;Lo hacemos?"</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OBJECTION 5 — COMPLEJIDAD -->
+  <div class="objection">
+    <div class="obj-header">&#129327; "Suena complicado de implementar con tantos canales"</div>
+    <div class="obj-body">
+      <div class="loop-step">
+        <div class="loop-num">1</div>
+        <div class="loop-content">
+          <div class="loop-label">Deflect con empatia</div>
+          <div class="loop-say">"Es exactamente lo que nos dicen todos al principio — y tienen razon en pensarlo. Nadie quiere implementar algo que rompa lo que ya funciona."</div>
+        </div>
+      </div>
+      <div class="loop-step">
+        <div class="loop-num">2</div>
+        <div class="loop-content">
+          <div class="loop-label">Reencuadrar — metodologia por fases</div>
+          <div class="loop-say">"Trabajamos por fases. Empezamos con un solo canal — WhatsApp, por ejemplo — y lo ponemos a funcionar sin tocar nada de los demas. Cuando ves que funciona, escalamos a Instagram, luego marketplaces. Lo vas validando en cada paso. Si algo no funciona, lo ajustamos antes de avanzar."</div>
+        </div>
+      </div>
+      <div class="loop-step">
+        <div class="loop-num">3</div>
+        <div class="loop-content">
+          <div class="loop-label">Re-close</div>
+          <div class="loop-say">"El diagnostico define exactamente esa secuencia — que va primero, como lo probamos sin riesgo, cuanto toma. &iquest;Lo hacemos?"</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ: POTENCIALES PREGUNTAS EN CALL -->
+  <div style="background: var(--card); border: 2px solid var(--accent); border-radius: var(--radius); padding: 20px 24px; margin-bottom: 20px; box-shadow: var(--shadow);">
+    <h2 style="font-size: 18px; font-weight: 800; margin-bottom: 4px; color: var(--accent);">&#128218; Banco de Preguntas — Respuestas Listas</h2>
+    <p style="font-size: 12px; color: var(--muted); margin-bottom: 16px;">Todas las preguntas que Andre podria hacer, con respuesta calibrada. No memorizar — tener el concepto claro.</p>
+
+    <!-- CATEGORIA 1: TECNICAS / SHOPIFY -->
+    <div style="margin-bottom: 20px;">
+      <h3 style="font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: var(--accent2); margin-bottom: 12px; border-bottom: 2px solid var(--accent2-light); padding-bottom: 6px;">&#128736; Tecnicas / Shopify</h3>
+
+      <details style="border-color: var(--accent2-light);">
+        <summary style="font-size: 13px;">&iquest;Como se conecta con nuestro Shopify?</summary>
+        <div class="phase-body">
+          <div class="say">"Nos conectamos via GraphQL Admin API de Shopify — es el estandar actual. El agente accede al catalogo completo: los 70+ SKUs con variantes, precios, stock en tiempo real. Tambien usamos webhooks para que el sistema reaccione al instante cuando entra un pedido, cambia el stock, o un cliente hace algo. No tocamos tu Shopify — nos conectamos encima."</div>
+          <div class="tactic">[Dato tecnico: desde abril 2025, Shopify exige GraphQL para apps nuevas. REST API es legacy. Mencionarlo solo si profundiza.]</div>
+        </div>
+      </details>
+
+      <details style="border-color: var(--accent2-light);">
+        <summary style="font-size: 13px;">&iquest;Se rompe algo en nuestra tienda? &iquest;Hay riesgo?</summary>
+        <div class="phase-body">
+          <div class="say">"Cero riesgo. El agente opera como una capa encima de tu Shopify. Lee datos (catalogo, pedidos, stock) pero no modifica nada de tu configuracion. Es como poner un asistente que mira tu vitrina y atiende al cliente — no mueve los productos de lugar."</div>
+        </div>
+      </details>
+
+      <details style="border-color: var(--accent2-light);">
+        <summary style="font-size: 13px;">&iquest;Funciona con nuestras apps de Shopify actuales? (Klaviyo, etc.)</summary>
+        <div class="phase-body">
+          <div class="say">"Si, es complementario. Si usan Klaviyo para email, el agente de IA puede alimentar data a Klaviyo — por ejemplo, cuando detecta que un cliente pregunto por un producto pero no compro, puede taggearlo para un flow de remarketing automatico. No reemplaza tus apps, las potencia."</div>
+        </div>
+      </details>
+
+      <details style="border-color: var(--accent2-light);">
+        <summary style="font-size: 13px;">&iquest;El agente puede procesar pagos o solo responde preguntas?</summary>
+        <div class="phase-body">
+          <div class="say">"Ambas cosas. Puede responder sobre productos, ingredientes, disponibilidad, envios — y cuando el cliente esta listo para comprar, lo redirige directo al checkout de tu Shopify o al marketplace que prefiera. El cierre de venta sigue siendo en tu plataforma, pero el agente lleva al cliente hasta ahi."</div>
+          <div class="tactic">[No prometer procesamiento de pago directo en WhatsApp — eso requiere WhatsApp Pay que no esta en Peru. El agente genera el link de checkout.]</div>
+        </div>
+      </details>
+
+      <details style="border-color: var(--accent2-light);">
+        <summary style="font-size: 13px;">&iquest;Como maneja los 6 marketplaces diferentes?</summary>
+        <div class="phase-body">
+          <div class="say">"El agente tiene un catalogo unificado. Cuando un cliente pregunta por un producto, sabe en que marketplaces esta disponible y a que precio. Si alguien escribe por WhatsApp preguntando por creatina, el agente puede decirle: 'Tenemos la Creatine Monohydrate de Applied Nutrition a S/ X en nuestra tienda, o lo puedes pedir por MercadoLibre con envio gratis.' Un solo cerebro, multiples puntos de venta."</div>
+        </div>
+      </details>
+
+      <details style="border-color: var(--accent2-light);">
+        <summary style="font-size: 13px;">&iquest;Que pasa con la tienda fisica de Jockey Plaza?</summary>
+        <div class="phase-body">
+          <div class="say">"El agente sabe que tienen tienda fisica. Puede decirle al cliente: 'Ese producto lo puedes recoger hoy en nuestra tienda de Jockey Plaza' o informar horarios, ubicacion, disponibilidad. Conecta la experiencia online con la fisica. Si alguien pregunta por WhatsApp y esta cerca, el agente lo manda a la tienda. Si esta lejos, al ecommerce."</div>
+          <div class="tactic">[Validar con Andre si tienen stock separado (tienda vs online) o unificado. Esto afecta como configuramos respuestas de disponibilidad.]</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- CATEGORIA 2: RESULTADOS / ROI -->
+    <div style="margin-bottom: 20px;">
+      <h3 style="font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: var(--green); margin-bottom: 12px; border-bottom: 2px solid var(--green-light); padding-bottom: 6px;">&#128200; Resultados / ROI</h3>
+
+      <details style="border-color: var(--green-light);">
+        <summary style="font-size: 13px;">&iquest;Que resultados han tenido con otros clientes?</summary>
+        <div class="phase-body">
+          <div class="say">"Los benchmarks de la industria en implementaciones similares son: 50-74% de consultas resueltas sin intervencion humana, tiempo de respuesta de 6 horas a menos de 3 minutos, y reduccion de costos de soporte de 20-30% en los primeros 18 meses. Hay casos maduros que llegan a 66% de reduccion."</div>
+          <div class="tactic">[No inventar casos propios. Hablar de benchmarks de industria. Si insiste en "tus clientes", decir: "Somos selectivos con quien trabajamos — estamos en fase de crecimiento con clientes en el mismo vertical que TMX. Los numeros que te comparto son de implementaciones validadas en ecommerce con Shopify."]</div>
+        </div>
+      </details>
+
+      <details style="border-color: var(--green-light);">
+        <summary style="font-size: 13px;">&iquest;En cuanto tiempo veo resultados?</summary>
+        <div class="phase-body">
+          <div class="say">"Quick wins desde la primera semana de operacion: el agente ya esta respondiendo en WhatsApp con tu catalogo completo. Para resultados medibles de impacto en ventas y retencion, tipicamente 30-60 dias. Ahi es donde empezamos a ver conversion real, tickets resueltos, y recompra activada."</div>
+        </div>
+      </details>
+
+      <details style="border-color: var(--green-light);">
+        <summary style="font-size: 13px;">&iquest;Cuanto cuesta mantener esto vs contratar gente?</summary>
+        <div class="phase-body">
+          <div class="say">"Estan buscando un Shopify Specialist y un Social Media Lead. Eso son S/ 8,000-12,000 mensuales en salarios cuando sumas beneficios sociales. Mas 3 meses de onboarding donde esa persona aun no rinde al 100%. Un sistema de IA cubre ambas funciones desde el dia 1, cuesta una fraccion de eso — y no renuncia, no se enferma, no necesita vacaciones."</div>
+          <div class="tactic">[Rango real validado: Shopify Specialist mid S/ 4,000-7,000 + Social Media Manager mid S/ 2,500-4,000 + EsSalud/CTS/gratificaciones = S/ 8,000-12,000. Fuentes: Glassdoor, CompuTrabajo, Coderhouse Peru 2025-2026.]</div>
+        </div>
+      </details>
+
+      <details style="border-color: var(--green-light);">
+        <summary style="font-size: 13px;">&iquest;Cual es el ROI esperado?</summary>
+        <div class="phase-body">
+          <div class="say">"Miralo asi: el costo por interaccion con IA es ~$0.50 vs $6.00 con un agente humano — 12 veces menos. Si hoy reciben 100 consultas diarias por WhatsApp e Instagram, en un mes eso son 3,000 interacciones. A $6 cada una son $18,000. Con IA, $1,500. El ahorro se paga solo desde el primer mes."</div>
+          <div class="tactic">[Ajustar los numeros cuando Andre te de volumenes reales en Fase 2. Preguntarle: "Cuantas consultas reciben al dia aproximadamente entre todos los canales?"]</div>
+        </div>
+      </details>
+
+      <details style="border-color: var(--green-light);">
+        <summary style="font-size: 13px;">&iquest;Y si la IA responde mal? &iquest;Pierde clientes?</summary>
+        <div class="phase-body">
+          <div class="say">"El agente tiene escalamiento automatico. Si detecta que no puede resolver algo con confianza — un reclamo complejo, una devolucion con situacion especial, un cliente molesto — lo escala inmediatamente a tu equipo con todo el contexto de la conversacion. El cliente nunca siente que lo dejaron colgado. Y cada caso que escala, el sistema aprende para la proxima vez."</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- CATEGORIA 3: PRECIO / INVERSION -->
+    <div style="margin-bottom: 20px;">
+      <h3 style="font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: var(--gold); margin-bottom: 12px; border-bottom: 2px solid var(--gold-light); padding-bottom: 6px;">&#128176; Precio / Inversion</h3>
+
+      <details style="border-color: var(--gold-light);">
+        <summary style="font-size: 13px;">&iquest;Por que es tan caro el setup?</summary>
+        <div class="phase-body">
+          <div class="say">"El setup no es un pago por licencia — es la implementacion real. En esas primeras semanas estamos: auditando todos tus canales, configurando el agente con tu catalogo de 70+ SKUs, calibrando la voz de marca THE WELLNESS Co., integrando con Shopify y los marketplaces, y entrenando el sistema con tus flujos reales. Es trabajo a medida, no un template. Por eso el resultado funciona desde el dia 1."</div>
+        </div>
+      </details>
+
+      <details style="border-color: var(--gold-light);">
+        <summary style="font-size: 13px;">&iquest;Se puede pagar el setup en cuotas?</summary>
+        <div class="phase-body">
+          <div class="say">"El setup es 100% a la firma. Es lo que nos permite dedicar el equipo completo desde el dia 1 sin retrasos. La primera semana ya estas recibiendo el diagnostico y roadmap — valor inmediato. El retainer mensual recien arranca desde el mes 2."</div>
+          <div class="tactic">[No ceder en esto. Si insiste mucho: "Entiendo. Pero la estructura esta disenada para que el equipo se dedique exclusivamente a tu implementacion desde el inicio. Si fraccionamos el pago, fraccionamos la dedicacion."]</div>
+        </div>
+      </details>
+
+      <details style="border-color: var(--gold-light);">
+        <summary style="font-size: 13px;">&iquest;Puedo empezar con el Foundation y luego subir?</summary>
+        <div class="phase-body">
+          <div class="say">"Claro, el Foundation es una base solida — agente omnichannel en WhatsApp e Instagram, catalogo completo, recompra basica, integracion Shopify. Si luego quieres escalar a social commerce, push de marca propia y TikTok, hacemos un upgrade sin perder nada de lo implementado."</div>
+          <div class="tactic">[Esto esta bien. Mejor cerrar Foundation que no cerrar nada. Pero siempre presentar Full primero como recomendado — el Foundation es el plan B.]</div>
+        </div>
+      </details>
+
+      <details style="border-color: var(--gold-light);">
+        <summary style="font-size: 13px;">&iquest;Que pasa si cancelo? &iquest;Pierdo todo?</summary>
+        <div class="phase-body">
+          <div class="say">"Si decides no continuar despues de los primeros meses, te llevas todo el trabajo realizado: el diagnostico, el roadmap, las configuraciones. Lo que se pausa es el servicio activo — el agente, la optimizacion continua, el soporte. Pero no hay penalidad ni compromiso de permanencia minima mas alla del mes en curso."</div>
+          <div class="tactic">[No prometer permanencia minima a menos que este en contrato. El valor del servicio debe hacer que quieran quedarse, no una clausula.]</div>
+        </div>
+      </details>
+
+      <details style="border-color: var(--gold-light);">
+        <summary style="font-size: 13px;">&iquest;Hay costos ocultos? &iquest;APIs, tokens, etc.?</summary>
+        <div class="phase-body">
+          <div class="say">"No. El retainer mensual cubre todo: la infraestructura de IA, los tokens de procesamiento, el soporte, y las optimizaciones. No vas a recibir facturas sorpresa por uso de API o por volumen de mensajes. Precio fijo, predecible."</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- CATEGORIA 4: OPERACION / EQUIPO -->
+    <div style="margin-bottom: 20px;">
+      <h3 style="font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: var(--purple); margin-bottom: 12px; border-bottom: 2px solid var(--purple-light); padding-bottom: 6px;">&#128101; Operacion / Equipo</h3>
+
+      <details style="border-color: var(--purple-light);">
+        <summary style="font-size: 13px;">&iquest;Cuanto tiempo nos toma a nosotros? &iquest;Necesitamos dedicar gente?</summary>
+        <div class="phase-body">
+          <div class="say">"Minimo de tu lado. En la primera semana necesitamos acceso a las metricas de tus canales y unas 2-3 horas de tu equipo para entender los flujos actuales. Despues de eso, nosotros hacemos el trabajo pesado. Tu equipo revisa y aprueba, no ejecuta."</div>
+        </div>
+      </details>
+
+      <details style="border-color: var(--purple-light);">
+        <summary style="font-size: 13px;">&iquest;Reemplaza a nuestro equipo actual?</summary>
+        <div class="phase-body">
+          <div class="say">"No reemplaza — libera. Tu equipo deja de responder 'cuanto cuesta la creatina' 50 veces al dia y se enfoca en lo que realmente mueve la aguja: negociaciones con marcas, estrategia de producto, expansion. La IA se encarga de lo repetitivo. Tu gente se encarga de lo estrategico."</div>
+        </div>
+      </details>
+
+      <details style="border-color: var(--purple-light);">
+        <summary style="font-size: 13px;">&iquest;Quien de su equipo trabaja en esto?</summary>
+        <div class="phase-body">
+          <div class="say">"Yo lidero la estrategia y la implementacion directamente. Trabajamos con un equipo lean — especialistas en IA conversacional, integraciones ecommerce, y automatizacion. Por eso limitamos a 3 clientes simultaneos: para garantizar dedicacion exclusiva, no para crear escasez artificial."</div>
+          <div class="tactic">[No dar nombres ficticios ni inflar equipo. "Lean" es honesto y suena premium. Si pregunta cuantos son: "Somos un equipo de especialistas que trabaja con tecnologia de punta — menos personas, mas impacto."]</div>
+        </div>
+      </details>
+
+      <details style="border-color: var(--purple-light);">
+        <summary style="font-size: 13px;">&iquest;Que necesitan de nosotros para empezar?</summary>
+        <div class="phase-body">
+          <div class="say">"Tres cosas: acceso viewer a tu Shopify para leer catalogo y metricas, acceso a las cuentas de WhatsApp Business e Instagram para conectar el agente, y una sesion de 2 horas con tu equipo para mapear los flujos actuales. Con eso arrancamos."</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- CATEGORIA 5: MARCA / REBRANDING -->
+    <div style="margin-bottom: 20px;">
+      <h3 style="font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: #d4380d; margin-bottom: 12px; border-bottom: 2px solid #fff1f0; padding-bottom: 6px;">&#127912; Marca / Rebranding</h3>
+
+      <details style="border-color: #fff1f0;">
+        <summary style="font-size: 13px;">&iquest;Como manejan el tema del rebranding a THE WELLNESS Co.?</summary>
+        <div class="phase-body">
+          <div class="say">"El agente se calibra con la nueva identidad desde el dia 1. Cada interaccion — sea en WhatsApp, Instagram o TikTok — usa la voz de 'THE WELLNESS Co.' de forma consistente. Es como tener un embajador de marca que nunca se olvida del tono, nunca usa el branding viejo, y siempre comunica los valores nuevos. Tu rebranding se refuerza en cada touchpoint digital automaticamente."</div>
+        </div>
+      </details>
+
+      <details style="border-color: #fff1f0;">
+        <summary style="font-size: 13px;">&iquest;Y si cambiamos algo de la marca durante el proceso?</summary>
+        <div class="phase-body">
+          <div class="say">"Lo actualizamos en el sistema. El agente no es estatico — se recalibra. Si manana cambian un tagline, ajustan el tono, o lanzan una linea nueva, lo reflejamos. Eso es parte de la optimizacion continua del retainer."</div>
+        </div>
+      </details>
+
+      <details style="border-color: #fff1f0;">
+        <summary style="font-size: 13px;">&iquest;El agente puede diferenciar entre marcas que distribuyen vs marca propia TMX Wellness?</summary>
+        <div class="phase-body">
+          <div class="say">"Si. De hecho, esa es una de las oportunidades mas grandes. Cuando alguien pregunta por proteina, el agente puede recomendar las opciones de MyProtein o Applied Nutrition Y posicionar la linea TMX Wellness como alternativa. Push de marca propia organico en cada conversacion. Sin ser agresivo — informativo."</div>
+          <div class="tactic">[Esto es clave para Andre. La marca propia tiene mejor margen. Si el agente la pushea de forma natural, el ticket promedio y el margen suben.]</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- CATEGORIA 6: COMPETENCIA / MERCADO -->
+    <div style="margin-bottom: 20px;">
+      <h3 style="font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: #08979c; margin-bottom: 12px; border-bottom: 2px solid #e6fffb; padding-bottom: 6px;">&#127919; Competencia / Mercado</h3>
+
+      <details style="border-color: #e6fffb;">
+        <summary style="font-size: 13px;">&iquest;Trabajan con otras marcas de suplementos?</summary>
+        <div class="phase-body">
+          <div class="say">"Tenemos experiencia en el vertical de fitness y wellness, si. Pero firmamos NDA con cada cliente antes de compartir propuestas detalladas. Lo que puedo decirte es que entendemos el mercado de suplementos en Peru — los canales, los margenes, los ciclos de consumo, la competencia."</div>
+          <div class="tactic">[NUNCA mencionar MuscleShop ni ningun otro cliente por nombre. Si insiste: "Por NDA no puedo compartir nombres, pero si puedo decirte que el vertical lo conocemos bien." Si pregunta directamente por MuscleShop: "No puedo confirmar ni negar — eso es exactamente lo que el NDA protege. Y el mismo NDA protegeria a TMX."]</div>
+        </div>
+      </details>
+
+      <details style="border-color: #e6fffb;">
+        <summary style="font-size: 13px;">&iquest;Que pasa si nuestra competencia tambien contrata algo similar?</summary>
+        <div class="phase-body">
+          <div class="say">"La ventaja es de quien se mueve primero. La marca que primero tenga IA integrada en su operacion no solo atiende mejor — captura a los clientes que los demas pierden. Lab Nutrition, Nutriforma, iHerb Peru — todos van a llegar a esto eventualmente. La pregunta es quien lo tiene primero."</div>
+        </div>
+      </details>
+
+      <details style="border-color: #e6fffb;">
+        <summary style="font-size: 13px;">&iquest;Y si contratamos a alguien interno que haga esto?</summary>
+        <div class="phase-body">
+          <div class="say">"Es una opcion. Necesitarias un ingeniero de IA, un especialista en integraciones ecommerce, y alguien de automatizacion. En Peru eso son S/ 25,000-40,000 al mes en salarios. Mas el tiempo de construir la infraestructura desde cero — que son 6-12 meses. Con nosotros, en 3-4 semanas estas operando."</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- CATEGORIA 7: SEGURIDAD / DATOS -->
+    <div style="margin-bottom: 20px;">
+      <h3 style="font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: #595959; margin-bottom: 12px; border-bottom: 2px solid #f0f0f0; padding-bottom: 6px;">&#128274; Seguridad / Datos</h3>
+
+      <details style="border-color: #f0f0f0;">
+        <summary style="font-size: 13px;">&iquest;Que pasa con los datos de nuestros clientes?</summary>
+        <div class="phase-body">
+          <div class="say">"Los datos de tus clientes son tuyos. Nosotros procesamos las conversaciones para generar respuestas, pero no almacenamos data personal mas alla de lo necesario para la operacion. Firmamos NDA y podemos incluir clausulas de proteccion de datos en el contrato. Cumplimos con las mejores practicas de privacidad."</div>
+        </div>
+      </details>
+
+      <details style="border-color: #f0f0f0;">
+        <summary style="font-size: 13px;">&iquest;Donde se procesan los datos? &iquest;Servidores en Peru?</summary>
+        <div class="phase-body">
+          <div class="say">"Usamos infraestructura cloud de primer nivel — los mismos proveedores que usa Shopify. Los servidores estan en la nube con encriptacion de extremo a extremo. No almacenamos datos sensibles de pago — eso sigue siendo 100% en Shopify."</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- CATEGORIA 8: TIMELINE / PROCESO -->
+    <div>
+      <h3 style="font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: var(--accent2); margin-bottom: 12px; border-bottom: 2px solid var(--accent2-light); padding-bottom: 6px;">&#128197; Timeline / Proceso</h3>
+
+      <details style="border-color: var(--accent2-light);">
+        <summary style="font-size: 13px;">&iquest;Cual es el timeline completo?</summary>
+        <div class="phase-body">
+          <div class="say">"Semana 1: diagnostico completo + roadmap. Semanas 2-3: implementacion del agente en WhatsApp con catalogo, integracion Shopify, calibracion de voz de marca. Semana 4: optimizacion con data real. Mes 2: expansion a Instagram + recompra automatica. Mes 3+: social commerce, TikTok, y scaling."</div>
+        </div>
+      </details>
+
+      <details style="border-color: var(--accent2-light);">
+        <summary style="font-size: 13px;">&iquest;Podemos empezar despues del rebranding?</summary>
+        <div class="phase-body">
+          <div class="say">"Podemos, pero te diria que empezar durante el rebranding es mejor. El diagnostico se alinea con tu timeline de rebranding y el agente lanza con la identidad nueva desde el dia 1. Si esperas, pierdes 2-3 meses donde tu equipo sigue respondiendo en manual con la voz vieja."</div>
+        </div>
+      </details>
+
+      <details style="border-color: var(--accent2-light);">
+        <summary style="font-size: 13px;">&iquest;Hay periodo de prueba?</summary>
+        <div class="phase-body">
+          <div class="say">"No hay trial gratuito, pero el primer mes funciona como validacion. Al final del mes 1 tienes el diagnostico, el agente operando, y metricas reales de impacto. Si los numeros no dan, eres libre de no continuar el retainer. Pero en nuestra experiencia, cuando ven los datos del primer mes, la conversacion es 'como escalamos' no 'si continuamos'."</div>
+          <div class="tactic">[El diagnostico NO es gratis — es Semana 1 del setup pagado. No ofrecer trials. Si insiste mucho: "El setup es la inversion para validar. Si no funciona, no continuas. Pero no podemos dedicar el equipo sin compromiso de ambas partes."]</div>
+        </div>
+      </details>
+
+      <details style="border-color: var(--accent2-light);">
+        <summary style="font-size: 13px;">&iquest;Y si necesitamos pausar por algun motivo?</summary>
+        <div class="phase-body">
+          <div class="say">"Se puede pausar el retainer. El agente se desactiva, la configuracion se preserva. Cuando quieras reactivar, lo levantamos sin empezar de cero. Lo unico que pierde continuidad es la optimizacion — el sistema aprende con uso, asi que pausas largas significan volver a calibrar un poco."</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- SOURCES -->
+  <div class="sources">
+    <h2>Sources</h2>
+    <a href="https://tmx.com.pe/" target="_blank">TMX Peru — Sitio web oficial (Shopify)</a>
+    <a href="https://www.instagram.com/tmx.peru/" target="_blank">Instagram @tmx.peru</a>
+    <a href="https://www.tiktok.com/@tmx.peru" target="_blank">TikTok @tmx.peru — ~28K+ seguidores</a>
+    <a href="https://pe.linkedin.com/company/tmxperu" target="_blank">LinkedIn — TMX The Wellness Co.</a>
+    <a href="https://www.mercadolibre.com.pe/tienda/tmx" target="_blank">MercadoLibre — Tienda Oficial TMX (+220 seguidores)</a>
+    <a href="https://simple.ripley.com.pe/tienda/tmx-6048787" target="_blank">Ripley — TMX (24 productos)</a>
+    <a href="https://www.oechsle.pe/deportes/nutricion-deportiva/tmx" target="_blank">Oechsle — TMX (12 productos)</a>
+    <a href="https://www.rappi.com.pe/lima/tiendas/marca-tmx" target="_blank">Rappi — TMX (4 ubicaciones Lima)</a>
+    <a href="https://pe.linkedin.com/in/andr%C3%A9-gabuteau-33b40569" target="_blank">Andre Gabuteau — Fundador TMX (ex-MuscleShop Peru)</a>
+    <a href="https://blogs.upc.edu.pe/vida-universitaria/2025/11/06/tmx/" target="_blank">UPC Blog — Convenio TMX (15% dcto, codigo UPC15)</a>
+    <a href="https://www.facebook.com/jockeyplaza/posts/-tmxperu-lleg%C3%B3-al-jockey-encuentra-las-mejores-marcas-de-suplementaci%C3%B3n-deportiv/7001333293214970/" target="_blank">Jockey Plaza — TMX apertura de tienda</a>
+  </div>
+
+  <div style="text-align:center;margin-top:24px;color:var(--muted);font-size:11px;">
+    Generado por Zenia &middot; 20 Mar 2026 &middot; Confidencial — uso interno
+  </div>
+
+</div>
+</body>
+</html>

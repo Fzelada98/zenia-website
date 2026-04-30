@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZENIA x TMX Peru - Presentacion Estrategica</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', -apple-system, sans-serif; color: #18181b; background: #fff; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  .slide {
+    width: 100%;
+    max-width: 960px;
+    min-height: 540px;
+    margin: 0 auto 24px;
+    padding: 48px 56px;
+    position: relative;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    page-break-after: always;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .slide:last-child { page-break-after: avoid; }
+
+  /* SLIDE STYLES */
+  .slide-cover {
+    background: linear-gradient(145deg, #0f172a 0%, #1a1f3a 40%, #0f172a 100%);
+    color: #fff;
+    min-height: 560px;
+  }
+  .slide-dark {
+    background: #0f172a;
+    color: #fff;
+  }
+  .slide-accent {
+    background: linear-gradient(135deg, #eff6ff, #dbeafe);
+  }
+  .slide-energy {
+    background: linear-gradient(145deg, #1a0f2e 0%, #0f1a2e 50%, #0a1020 100%);
+    color: #fff;
+  }
+
+  /* ZENIA Portal Z Logo SVG */
+  .zenia-logo-svg { width: 36px; height: 36px; flex-shrink: 0; }
+
+  .logo-row { display: flex; align-items: center; gap: 12px; margin-bottom: 48px; }
+  .logo-text { font-size: 18px; font-weight: 700; }
+  .logo-sub { font-size: 10px; color: #94a3b8; letter-spacing: 2px; text-transform: uppercase; font-weight: 400; }
+
+  /* Client badge in header */
+  .client-badge {
+    margin-left: auto;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 8px;
+    padding: 6px 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .client-badge .cb-name { font-size: 12px; font-weight: 700; color: #e2e8f0; letter-spacing: 0.5px; }
+  .client-badge .tmx-logo { height: 16px; width: auto; }
+  .client-badge .tmx-logo path { fill: #e2e8f0; }
+
+  /* Light slides client badge */
+  .client-badge-light {
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 5px 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .client-badge-light .cb-name { font-size: 11px; font-weight: 700; color: #475569; }
+  .client-badge-light .tmx-logo { height: 14px; width: auto; }
+
+  /* Pricing cards */
+  .pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 20px; }
+  .price-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 16px; padding: 28px; position: relative; }
+  .price-card.recommended { border: 2px solid #7C3AED; background: #faf5ff; }
+  .price-card h3 { font-size: 18px; font-weight: 800; color: #0f172a; margin-bottom: 4px; }
+  .price-card .price-setup { font-size: 11px; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 12px; }
+  .price-card .price-num { font-size: 28px; font-weight: 900; color: #0f172a; }
+  .price-card .price-retainer { font-size: 11px; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 8px; }
+  .price-card .price-monthly { font-size: 28px; font-weight: 900; color: #0f172a; }
+  .price-card .price-monthly span { font-size: 13px; font-weight: 500; color: #64748b; }
+  .rec-badge { position: absolute; top: -10px; right: 16px; background: linear-gradient(135deg, #3b82f6, #7C3AED); color: #fff; font-size: 10px; font-weight: 700; padding: 3px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 1px; }
+
+  .slide-cover h1 { font-size: 44px; font-weight: 900; line-height: 1.1; letter-spacing: -2px; margin-bottom: 16px; }
+  .slide-cover h1 span { background: linear-gradient(90deg, #60a5fa, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .slide-cover .subtitle { font-size: 16px; color: #94a3b8; max-width: 520px; line-height: 1.6; margin-bottom: 48px; }
+  .cover-meta { display: flex; gap: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; }
+  .cover-meta .item label { display: block; font-size: 9px; color: #64748b; text-transform: uppercase; letter-spacing: 1.5px; }
+  .cover-meta .item span { font-size: 13px; font-weight: 500; }
+
+  /* TMX accent color — teal/wellness */
+  :root {
+    --tmx-primary: #0d9488;
+    --tmx-dark: #0f766e;
+    --tmx-light: #f0fdfa;
+    --tmx-border: #99f6e4;
+    --zenia-blue: #3b82f6;
+    --zenia-violet: #7C3AED;
+  }
+
+  h2 { font-size: 32px; font-weight: 800; letter-spacing: -1px; margin-bottom: 24px; line-height: 1.2; }
+  h2 span { background: linear-gradient(90deg, #3b82f6, #7C3AED); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+  p { font-size: 14px; line-height: 1.6; color: #475569; margin-bottom: 12px; }
+
+  .slide-num { position: absolute; bottom: 24px; right: 32px; font-size: 11px; color: #a1a1aa; font-weight: 500; }
+  .slide-logo-sm {
+    position: absolute; bottom: 24px; left: 32px;
+    display: flex; align-items: center; gap: 5px;
+    font-size: 11px; font-weight: 700; color: #a1a1aa;
+  }
+  .slide-logo-sm svg { width: 14px; height: 14px; }
+  .slide-dark .slide-num, .slide-dark .slide-logo-sm { color: #475569; }
+  .slide-energy .slide-num { color: #475569; }
+  .slide-energy .slide-logo-sm { color: #475569; }
+  .slide-energy h2 { color: #fff; }
+  .slide-energy h2 span { background: linear-gradient(90deg, #0d9488, #60a5fa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .slide-energy p { color: #94a3b8; }
+
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+  .grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 14px; }
+
+  .card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; }
+  .card-dark { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 20px; }
+  .card h4 { font-size: 14px; font-weight: 700; margin-bottom: 6px; color: #0f172a; }
+  .card p { font-size: 12px; color: #64748b; margin-bottom: 0; }
+  .card-dark h4 { color: #fff; }
+  .card-dark p { color: #94a3b8; }
+
+  .stat-big { text-align: center; }
+  .stat-big .num { font-size: 36px; font-weight: 900; background: linear-gradient(90deg, #3b82f6, #7C3AED); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; letter-spacing: -1px; }
+  .stat-big .lbl { font-size: 11px; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; }
+  .card-dark .stat-big .num { background: linear-gradient(90deg, #60a5fa, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .card-dark .stat-big .lbl { color: #94a3b8; }
+
+  .stat-teal .num { background: linear-gradient(90deg, #0d9488, #0ea5e9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+  .highlight { background: #eff6ff; border-left: 4px solid #3b82f6; padding: 16px 20px; border-radius: 0 10px 10px 0; margin: 16px 0; }
+  .highlight p { font-size: 14px; color: #1e40af; font-weight: 500; margin: 0; }
+  .highlight-teal { background: #f0fdfa; border-left: 4px solid #0d9488; padding: 16px 20px; border-radius: 0 10px 10px 0; margin: 16px 0; }
+  .highlight-teal p { font-size: 14px; color: #0f766e; font-weight: 500; margin: 0; }
+
+  .pain-item { display: flex; gap: 12px; margin-bottom: 16px; }
+  .pain-num { width: 32px; height: 32px; background: #fef2f2; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 800; color: #dc2626; flex-shrink: 0; }
+  .pain-text h4 { font-size: 14px; font-weight: 700; color: #0f172a; margin-bottom: 2px; }
+  .pain-text p { font-size: 12px; color: #64748b; margin: 0; }
+
+  .sol-item { display: flex; gap: 12px; margin-bottom: 14px; align-items: flex-start; }
+  .sol-icon { width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 17px; flex-shrink: 0; }
+  .sol-text h4 { font-size: 13px; font-weight: 700; color: #0f172a; margin-bottom: 2px; }
+  .sol-text p { font-size: 11px; color: #64748b; margin: 0; }
+
+  .before-after { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0; }
+  .ba-col { border-radius: 10px; padding: 16px; }
+  .ba-before { background: #fef2f2; border: 1px solid #fecaca; }
+  .ba-after { background: #f0fdf4; border: 1px solid #bbf7d0; }
+  .ba-col .ba-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+  .ba-before .ba-label { color: #dc2626; }
+  .ba-after .ba-label { color: #16a34a; }
+  .ba-col ul { padding-left: 16px; margin: 0; }
+  .ba-col li { font-size: 12px; margin-bottom: 4px; }
+  .ba-before li { color: #991b1b; }
+  .ba-after li { color: #166534; }
+
+  .timeline { display: flex; gap: 0; margin: 24px 0; }
+  .timeline-item { flex: 1; text-align: center; position: relative; padding: 0 8px; }
+  .timeline-item::before { content: ''; display: block; width: 100%; height: 4px; background: #dbeafe; margin-bottom: 12px; border-radius: 2px; }
+  .timeline-item.active::before { background: linear-gradient(90deg, #3b82f6, #7C3AED); }
+  .timeline-item h4 { font-size: 11px; font-weight: 700; color: #0f172a; margin-bottom: 2px; }
+  .timeline-item p { font-size: 10px; color: #64748b; margin: 0; }
+
+  .cta-box { background: linear-gradient(135deg, #0f172a, #1e1a4f); border-radius: 16px; padding: 32px; color: #fff; text-align: center; margin-top: 24px; }
+  .cta-box h3 { font-size: 24px; font-weight: 800; margin-bottom: 8px; }
+  .cta-box p { color: #94a3b8; font-size: 14px; margin: 0; }
+
+  ul.check { list-style: none; padding: 0; }
+  ul.check li { padding: 4px 0 4px 24px; position: relative; font-size: 13px; }
+  ul.check li::before { content: "\2713"; position: absolute; left: 0; color: #3b82f6; font-weight: 700; }
+
+  /* Comparison table */
+  .comp-table { width: 100%; border-collapse: collapse; font-size: 12px; margin-top: 16px; }
+  .comp-table th { padding: 10px 14px; text-align: left; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+  .comp-table th:first-child { color: #64748b; }
+  .comp-table th.col-trad { background: #f1f5f9; color: #475569; border-radius: 8px 8px 0 0; }
+  .comp-table th.col-hire { background: #fef3c7; color: #92400e; border-radius: 8px 8px 0 0; }
+  .comp-table th.col-zenia { background: linear-gradient(135deg, #1e3a8a, #4c1d95); color: #fff; border-radius: 8px 8px 0 0; }
+  .comp-table td { padding: 9px 14px; border-bottom: 1px solid #f1f5f9; color: #475569; vertical-align: middle; }
+  .comp-table td:first-child { font-weight: 600; color: #0f172a; }
+  .comp-table tr:last-child td { border-bottom: none; }
+  .comp-table td.col-trad { background: #f8fafc; }
+  .comp-table td.col-hire { background: #fffbeb; }
+  .comp-table td.col-zenia { background: #eff6ff; font-weight: 600; color: #1e40af; }
+  .check-y { color: #16a34a; font-weight: 700; }
+  .check-n { color: #dc2626; }
+  .check-p { color: #d97706; }
+
+  /* Module pills */
+  .module-pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.2);
+    border-radius: 20px; padding: 4px 12px;
+    font-size: 11px; font-weight: 600; color: #2563eb;
+    margin: 3px 2px;
+  }
+
+  /* Feature blocks */
+  .feat-block { margin-bottom: 20px; }
+  .feat-block h3 { font-size: 16px; font-weight: 800; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+  .feat-tag { font-size: 9px; background: linear-gradient(135deg, #3b82f6, #7C3AED); color: #fff; padding: 2px 8px; border-radius: 4px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+
+  /* Presentation Mode */
+  body.pres-mode { overflow: hidden; display: flex; align-items: center; justify-content: center; min-height: 100vh; background: #0a0a14; }
+  body.pres-mode .slide { display: none; }
+  body.pres-mode .slide.active {
+    display: flex;
+    transform-origin: center center;
+    background: #fff;
+    box-shadow: 0 0 80px rgba(0,0,0,0.5);
+  }
+  body.pres-mode .slide-cover.active,
+  body.pres-mode .slide-dark.active { background: linear-gradient(145deg, #0f172a 0%, #1a1f3a 40%, #0f172a 100%); }
+  body.pres-mode .slide-energy.active { background: linear-gradient(145deg, #1a0f2e 0%, #0f1a2e 50%, #0a1020 100%); }
+  body.pres-mode .slide-accent.active { background: linear-gradient(135deg, #eff6ff, #dbeafe); }
+  .pres-bar {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(0,0,0,0.75); backdrop-filter: blur(10px);
+    display: none; align-items: center; justify-content: center;
+    gap: 16px; padding: 10px 24px;
+  }
+  body.pres-mode .pres-bar { display: flex; }
+  .pres-bar button {
+    background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+    color: #fff; padding: 6px 16px; border-radius: 6px; cursor: pointer;
+    font-family: inherit; font-size: 13px; font-weight: 500;
+  }
+  .pres-bar button:hover { background: rgba(255,255,255,0.2); }
+  .pres-bar .pres-count { color: #94a3b8; font-size: 13px; min-width: 60px; text-align: center; }
+  .pres-bar .pres-exit { background: rgba(239,68,68,0.2); border-color: rgba(239,68,68,0.3); }
+
+  .pres-start {
+    position: fixed; bottom: 24px; right: 24px; z-index: 50;
+    background: linear-gradient(135deg, #3b82f6, #7C3AED);
+    color: #fff; border: none; padding: 12px 24px;
+    border-radius: 10px; font-family: inherit; font-size: 14px; font-weight: 600;
+    cursor: pointer; box-shadow: 0 4px 16px rgba(59,130,246,0.4);
+    transition: transform 0.2s;
+  }
+  .pres-start:hover { transform: scale(1.05); }
+  body.pres-mode .pres-start { display: none; }
+  @media print { .pres-start, .pres-bar { display: none !important; } body { background: white; } .slide { box-shadow: none; border: none; } }
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1: COVER -->
+<div class="slide slide-cover">
+  <div class="logo-row">
+    <!-- Zenia Portal Z Logo -->
+    <svg class="zenia-logo-svg" viewBox="0 0 140 140" fill="none"><defs><linearGradient id="zg-b" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2563EB"/><stop offset="100%" stop-color="#3B82F6"/></linearGradient><linearGradient id="zg-v" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6366F1"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient></defs><rect width="140" height="140" rx="28" fill="#0F172A"/><path d="M 70 18 Q 18 18 18 38 L 18 57 Q 18 63 24 63 L 88 63 Z" fill="url(#zg-b)"/><path d="M 70 122 Q 122 122 122 102 L 122 83 Q 122 77 116 77 L 52 77 Z" fill="url(#zg-v)"/></svg>
+    <div>
+      <div class="logo-text" style="color:#fff;">ZENIA</div>
+      <div class="logo-sub">Go Beyond</div>
+    </div>
+    <div class="client-badge">
+      <!-- TMX full logo: TMX + THE WELLNESS Co. -->
+      <svg class="tmx-logo" viewBox="0 0 141 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="#e2e8f0" d="M0 0V1.773H11.275V23.838H13.383V1.786H24.825L24.855 0H0Z"/><path fill="#e2e8f0" d="M49.153 23.84H46.973L44.855 3.16L37.681 17.205H35.821L28.647 3.16L26.527 23.84H24.35L26.768.015L26.771 0H29.499L29.507.015L36.75 14.762L43.998.015L44.003 0H46.734V.015H46.737L49.153 23.84Z"/><path fill="#e2e8f0" d="M65.76 13.122L75.215 23.84H72.673L64.536 14.501L60.96 12.836L53.237 23.84H50.528L59.344 11.622L50.446.096L50.372 0H53.187L53.256.096L61.504 11.137L64.056 12.189L72.786.049L72.818 0H75.242L65.76 13.122Z"/><path fill="#e2e8f0" d="M85.025.766V6.445H84.112V.766H81.481V0H87.663V.766H85.023H85.025Z"/><path fill="#e2e8f0" d="M95.135 6.448V3.399H90.195V6.448H89.264V0H90.188V2.63H95.128V0H96.059V6.448H95.135Z"/><path fill="#e2e8f0" d="M98.332 6.448V0H104.277V.795H99.246V2.714H104.149V3.48H99.246V5.655H104.516V6.45H98.335L98.332 6.448Z"/><path fill="#e2e8f0" d="M89.318 15.104H88.304L86.405 9.827L84.496 15.104H83.454L81.354 8.657H82.331L84.011 14.09L86.001 8.657H86.814L88.796 14.063L90.476 8.657H91.444L89.316 15.104H89.318Z"/><path fill="#e2e8f0" d="M92.242 15.104V8.657H98.187V9.452H93.155V11.371H98.059V12.137H93.155V14.311H98.426V15.107H92.244L92.242 15.104Z"/><path fill="#e2e8f0" d="M99.472 15.104V8.657H100.386V14.319H104.669V15.104H99.472Z"/><path fill="#e2e8f0" d="M105.373 15.104V8.657H106.287V14.319H110.569V15.104H105.373Z"/><path fill="#e2e8f0" d="M117.17 15.104L112.119 9.772L112.136 15.104H111.259V8.657H112.2L117.214 13.981L117.187 8.657H118.064V15.104H117.17Z"/><path fill="#e2e8f0" d="M119.645 15.104V8.657H125.59V9.452H120.559V11.371H125.462V12.137H120.559V14.311H125.829V15.107H119.648L119.645 15.104Z"/><path fill="#e2e8f0" d="M132.742 14.238C132.166 15.04 131.08 15.168 130.843 15.196C130.698 15.213 130.324 15.26 129.912 15.26C129.73 15.26 128.935 15.242 128.25 15.068C128.105 15.031 127.876 14.976 127.556 14.838C127.218 14.693 126.989 14.528 126.881 14.447C126.533 14.181 126.378 13.944 126.277 13.799L127.127 13.452C127.174 13.506 127.208 13.553 127.265 13.607C127.403 13.745 127.703 13.981 128.152 14.164C128.89 14.464 129.767 14.474 129.979 14.474C130.144 14.474 131.112 14.501 131.732 14.036C132.117 13.743 132.171 13.341 132.171 13.169C132.171 12.794 131.961 12.521 131.624 12.373C131.149 12.164 130.036 12.1 129.523 12.053C128.289 11.952 127.689 11.888 127.213 11.45C126.775 11.048 126.758 10.59 126.758 10.371C126.758 9.467 127.378 9.056 127.652 8.91C128.036 8.701 128.738 8.489 129.779 8.489C131.058 8.489 131.826 8.8 132.292 9.1C132.4 9.174 132.493 9.238 132.585 9.319C132.794 9.492 132.949 9.721 133.006 9.785L132.166 10.122C132.119 10.075 131.957 9.913 131.774 9.785C131.417 9.538 130.806 9.245 129.792 9.245C129.134 9.245 128.622 9.364 128.386 9.455C127.829 9.664 127.674 10.048 127.674 10.322C127.674 10.46 127.711 10.605 127.782 10.723C128.011 11.088 128.467 11.125 128.841 11.171C129.553 11.262 130.265 11.299 130.979 11.381C131.974 11.499 132.432 11.755 132.742 12.139C133.062 12.551 133.08 12.962 133.08 13.154C133.08 13.701 132.878 14.058 132.752 14.233L132.742 14.238Z"/><path fill="#e2e8f0" d="M140.158 14.238C139.582 15.04 138.496 15.168 138.259 15.196C138.114 15.213 137.74 15.26 137.328 15.26C137.146 15.26 136.35 15.242 135.666 15.068C135.521 15.031 135.291 14.976 134.971 14.838C134.634 14.693 134.405 14.528 134.297 14.447C133.949 14.181 133.794 13.944 133.693 13.799L134.543 13.452C134.59 13.506 134.624 13.553 134.681 13.607C134.819 13.745 135.119 13.981 135.567 14.164C136.306 14.464 137.183 14.474 137.395 14.474C137.56 14.474 138.528 14.501 139.148 14.036C139.532 13.743 139.587 13.341 139.587 13.169C139.587 12.794 139.377 12.521 139.04 12.373C138.565 12.164 137.451 12.1 136.939 12.053C135.705 11.952 135.104 11.888 134.629 11.45C134.191 11.048 134.173 10.59 134.173 10.371C134.173 9.467 134.794 9.056 135.067 8.91C135.452 8.701 136.153 8.489 137.195 8.489C138.473 8.489 139.242 8.8 139.707 9.1C139.816 9.174 139.909 9.238 140 9.319C140.21 9.492 140.365 9.721 140.421 9.785L139.582 10.122C139.535 10.075 139.372 9.913 139.19 9.785C138.833 9.538 138.222 9.245 137.208 9.245C136.55 9.245 136.038 9.364 135.801 9.455C135.245 9.664 135.09 10.048 135.09 10.322C135.09 10.46 135.126 10.605 135.198 10.723C135.427 11.088 135.883 11.125 136.257 11.171C136.969 11.262 137.68 11.299 138.395 11.381C139.39 11.499 139.848 11.755 140.158 12.139C140.478 12.551 140.495 12.962 140.495 13.154C140.495 13.701 140.293 14.058 140.168 14.233L140.158 14.238Z"/><path fill="#e2e8f0" d="M88.998 22.766C87.948 24 86.084 24 85.71 24C84.432 24 83.683 23.643 83.225 23.352C83.06 23.244 82.932 23.143 82.786 23.015C82.695 22.924 82.493 22.722 82.311 22.431C82.082 22.084 81.799 21.527 81.799 20.569C81.799 20.259 81.816 19.409 82.365 18.651C82.456 18.513 82.575 18.368 82.831 18.139C83.06 17.947 83.323 17.764 83.579 17.636C84.409 17.215 85.441 17.198 85.69 17.198C85.991 17.198 87.187 17.225 88.118 17.791C88.246 17.873 88.51 18.048 88.786 18.331C89.079 18.641 89.234 18.924 89.315 19.07L88.338 19.279C88.283 19.178 88.229 19.087 88.165 18.996C88.02 18.794 87.801 18.594 87.589 18.466C87.288 18.274 86.638 18.001 85.727 18.001C85.471 18.001 84.476 18.011 83.727 18.54C83.653 18.587 83.518 18.695 83.363 18.868C83.116 19.134 82.769 19.643 82.769 20.557C82.769 20.823 82.796 21.552 83.281 22.183C83.858 22.931 84.806 23.104 85.079 23.15C85.39 23.197 85.72 23.197 85.818 23.197C86.111 23.197 87.362 23.207 88.128 22.367C88.283 22.202 88.375 22.067 88.485 21.875L89.453 22.077C89.244 22.451 89.126 22.616 88.998 22.771V22.766Z"/><path fill="#e2e8f0" d="M96.332 22.776C96.012 23.296 95.209 23.973 93.749 23.973C93.584 23.973 93.054 23.963 92.552 23.818C92.15 23.7 90.825 23.187 90.825 21.7C90.825 21.471 90.852 20.978 91.173 20.466C91.904 19.316 93.382 19.269 93.721 19.269C93.931 19.269 94.699 19.286 95.357 19.597C95.458 19.643 95.613 19.715 95.812 19.88C95.94 19.981 96.086 20.126 96.187 20.244C96.359 20.454 96.642 20.912 96.642 21.624C96.642 21.806 96.625 22.298 96.332 22.774V22.776ZM95.564 20.831C95.044 19.971 93.884 19.981 93.682 19.981C93.162 19.991 92.64 20.119 92.239 20.466C91.892 20.759 91.7 21.178 91.7 21.643C91.7 21.798 91.717 22.146 91.966 22.483C92.222 22.83 92.778 23.249 93.793 23.249C94.231 23.249 94.66 23.148 95.044 22.902C95.263 22.764 95.775 22.372 95.775 21.604C95.775 21.476 95.758 21.148 95.566 20.828L95.564 20.831Z"/><path fill="#e2e8f0" d="M98.386 23.835V22.84H99.391V23.835H98.386Z"/></svg>
+    </div>
+  </div>
+
+  <h1>TMX Peru<br><span>&times; ZENIA</span></h1>
+  <p class="subtitle">De 6 marketplaces en manual a un ecosistema de IA que vende, atiende y fideliza en cada canal, 24/7. La infraestructura que tu marca necesita para el siguiente nivel.</p>
+
+  <div class="cover-meta">
+    <div class="item"><label>Preparado para</label><span>Andre Gabuteau &middot; TMX Peru S.R.L.</span></div>
+    <div class="item"><label>Fecha</label><span>27 marzo 2026</span></div>
+    <div class="item"><label>Clasificacion</label><span>Confidencial</span></div>
+  </div>
+  <div class="slide-num">01</div>
+</div>
+
+<!-- SLIDE 2: EL PROBLEMA REAL -->
+<div class="slide">
+  <div class="client-badge-light"><svg class="tmx-logo" viewBox="0 0 141 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="#010101" d="M0 0V1.773H11.275V23.838H13.383V1.786H24.825L24.855 0H0Z"/><path fill="#010101" d="M49.153 23.84H46.973L44.855 3.16L37.681 17.205H35.821L28.647 3.16L26.527 23.84H24.35L26.768.015L26.771 0H29.499L29.507.015L36.75 14.762L43.998.015L44.003 0H46.734V.015H46.737L49.153 23.84Z"/><path fill="#010101" d="M65.76 13.122L75.215 23.84H72.673L64.536 14.501L60.96 12.836L53.237 23.84H50.528L59.344 11.622L50.446.096L50.372 0H53.187L53.256.096L61.504 11.137L64.056 12.189L72.786.049L72.818 0H75.242L65.76 13.122Z"/><path fill="#010101" d="M85.025.766V6.445H84.112V.766H81.481V0H87.663V.766H85.023Z"/><path fill="#010101" d="M95.135 6.448V3.399H90.195V6.448H89.264V0H90.188V2.63H95.128V0H96.059V6.448H95.135Z"/><path fill="#010101" d="M98.332 6.448V0H104.277V.795H99.246V2.714H104.149V3.48H99.246V5.655H104.516V6.45H98.335Z"/><path fill="#010101" d="M89.318 15.104H88.304L86.405 9.827L84.496 15.104H83.454L81.354 8.657H82.331L84.011 14.09L86.001 8.657H86.814L88.796 14.063L90.476 8.657H91.444L89.316 15.104Z"/><path fill="#010101" d="M92.242 15.104V8.657H98.187V9.452H93.155V11.371H98.059V12.137H93.155V14.311H98.426V15.107H92.244Z"/><path fill="#010101" d="M99.472 15.104V8.657H100.386V14.319H104.669V15.104H99.472Z"/><path fill="#010101" d="M105.373 15.104V8.657H106.287V14.319H110.569V15.104H105.373Z"/><path fill="#010101" d="M117.17 15.104L112.119 9.772L112.136 15.104H111.259V8.657H112.2L117.214 13.981L117.187 8.657H118.064V15.104H117.17Z"/><path fill="#010101" d="M119.645 15.104V8.657H125.59V9.452H120.559V11.371H125.462V12.137H120.559V14.311H125.829V15.107H119.648Z"/><path fill="#010101" d="M132.742 14.238C132.166 15.04 131.08 15.168 130.843 15.196C130.698 15.213 130.324 15.26 129.912 15.26C129.73 15.26 128.935 15.242 128.25 15.068C128.105 15.031 127.876 14.976 127.556 14.838C127.218 14.693 126.989 14.528 126.881 14.447C126.533 14.181 126.378 13.944 126.277 13.799L127.127 13.452C127.174 13.506 127.208 13.553 127.265 13.607C127.403 13.745 127.703 13.981 128.152 14.164C128.89 14.464 129.767 14.474 129.979 14.474C130.144 14.474 131.112 14.501 131.732 14.036C132.117 13.743 132.171 13.341 132.171 13.169C132.171 12.794 131.961 12.521 131.624 12.373C131.149 12.164 130.036 12.1 129.523 12.053C128.289 11.952 127.689 11.888 127.213 11.45C126.775 11.048 126.758 10.59 126.758 10.371C126.758 9.467 127.378 9.056 127.652 8.91C128.036 8.701 128.738 8.489 129.779 8.489C131.058 8.489 131.826 8.8 132.292 9.1C132.4 9.174 132.493 9.238 132.585 9.319C132.794 9.492 132.949 9.721 133.006 9.785L132.166 10.122C132.119 10.075 131.957 9.913 131.774 9.785C131.417 9.538 130.806 9.245 129.792 9.245C129.134 9.245 128.622 9.364 128.386 9.455C127.829 9.664 127.674 10.048 127.674 10.322C127.674 10.46 127.711 10.605 127.782 10.723C128.011 11.088 128.467 11.125 128.841 11.171C129.553 11.262 130.265 11.299 130.979 11.381C131.974 11.499 132.432 11.755 132.742 12.139C133.062 12.551 133.08 12.962 133.08 13.154C133.08 13.701 132.878 14.058 132.752 14.233Z"/><path fill="#010101" d="M140.158 14.238C139.582 15.04 138.496 15.168 138.259 15.196C138.114 15.213 137.74 15.26 137.328 15.26C137.146 15.26 136.35 15.242 135.666 15.068C135.521 15.031 135.291 14.976 134.971 14.838C134.634 14.693 134.405 14.528 134.297 14.447C133.949 14.181 133.794 13.944 133.693 13.799L134.543 13.452C134.59 13.506 134.624 13.553 134.681 13.607C134.819 13.745 135.119 13.981 135.567 14.164C136.306 14.464 137.183 14.474 137.395 14.474C137.56 14.474 138.528 14.501 139.148 14.036C139.532 13.743 139.587 13.341 139.587 13.169C139.587 12.794 139.377 12.521 139.04 12.373C138.565 12.164 137.451 12.1 136.939 12.053C135.705 11.952 135.104 11.888 134.629 11.45C134.191 11.048 134.173 10.59 134.173 10.371C134.173 9.467 134.794 9.056 135.067 8.91C135.452 8.701 136.153 8.489 137.195 8.489C138.473 8.489 139.242 8.8 139.707 9.1C139.816 9.174 139.909 9.238 140 9.319C140.21 9.492 140.365 9.721 140.421 9.785L139.582 10.122C139.535 10.075 139.372 9.913 139.19 9.785C138.833 9.538 138.222 9.245 137.208 9.245C136.55 9.245 136.038 9.364 135.801 9.455C135.245 9.664 135.09 10.048 135.09 10.322C135.09 10.46 135.126 10.605 135.198 10.723C135.427 11.088 135.883 11.125 136.257 11.171C136.969 11.262 137.68 11.299 138.395 11.381C139.39 11.499 139.848 11.755 140.158 12.139C140.478 12.551 140.495 12.962 140.495 13.154C140.495 13.701 140.293 14.058 140.168 14.233Z"/><path fill="#010101" d="M88.998 22.766C87.948 24 86.084 24 85.71 24C84.432 24 83.683 23.643 83.225 23.352C83.06 23.244 82.932 23.143 82.786 23.015C82.695 22.924 82.493 22.722 82.311 22.431C82.082 22.084 81.799 21.527 81.799 20.569C81.799 20.259 81.816 19.409 82.365 18.651C82.456 18.513 82.575 18.368 82.831 18.139C83.06 17.947 83.323 17.764 83.579 17.636C84.409 17.215 85.441 17.198 85.69 17.198C85.991 17.198 87.187 17.225 88.118 17.791C88.246 17.873 88.51 18.048 88.786 18.331C89.079 18.641 89.234 18.924 89.315 19.07L88.338 19.279C88.283 19.178 88.229 19.087 88.165 18.996C88.02 18.794 87.801 18.594 87.589 18.466C87.288 18.274 86.638 18.001 85.727 18.001C85.471 18.001 84.476 18.011 83.727 18.54C83.653 18.587 83.518 18.695 83.363 18.868C83.116 19.134 82.769 19.643 82.769 20.557C82.769 20.823 82.796 21.552 83.281 22.183C83.858 22.931 84.806 23.104 85.079 23.15C85.39 23.197 85.72 23.197 85.818 23.197C86.111 23.197 87.362 23.207 88.128 22.367C88.283 22.202 88.375 22.067 88.485 21.875L89.453 22.077C89.244 22.451 89.126 22.616 88.998 22.771Z"/><path fill="#010101" d="M96.332 22.776C96.012 23.296 95.209 23.973 93.749 23.973C93.584 23.973 93.054 23.963 92.552 23.818C92.15 23.7 90.825 23.187 90.825 21.7C90.825 21.471 90.852 20.978 91.173 20.466C91.904 19.316 93.382 19.269 93.721 19.269C93.931 19.269 94.699 19.286 95.357 19.597C95.458 19.643 95.613 19.715 95.812 19.88C95.94 19.981 96.086 20.126 96.187 20.244C96.359 20.454 96.642 20.912 96.642 21.624C96.642 21.806 96.625 22.298 96.332 22.774ZM95.564 20.831C95.044 19.971 93.884 19.981 93.682 19.981C93.162 19.991 92.64 20.119 92.239 20.466C91.892 20.759 91.7 21.178 91.7 21.643C91.7 21.798 91.717 22.146 91.966 22.483C92.222 22.83 92.778 23.249 93.793 23.249C94.231 23.249 94.66 23.148 95.044 22.902C95.263 22.764 95.775 22.372 95.775 21.604C95.775 21.476 95.758 21.148 95.566 20.828Z"/><path fill="#010101" d="M98.386 23.835V22.84H99.391V23.835H98.386Z"/></svg></div>
+
+  <h2>Lo que confirmamos <span>en nuestra conversación</span></h2>
+  <p style="margin-bottom: 20px;">Con 70+ SKUs, presencia en 6 marketplaces, tienda en Jockey Plaza y alianza con la universidad PC, la operación creció. Pero la infraestructura no alcanzó.</p>
+
+  <div class="pain-item">
+    <div class="pain-num">1</div>
+    <div class="pain-text">
+      <h4>800-1,200 consultas diarias sin sistema unificado</h4>
+      <p>El equipo lo confirmó: las consultas llegan por 6 marketplaces, WhatsApp, Instagram y tienda física sin historial cruzado. El equipo responde donde puede, cuando puede. El cuello de botella no es el producto, es la atención.</p>
+    </div>
+  </div>
+  <div class="pain-item">
+    <div class="pain-num">2</div>
+    <div class="pain-text">
+      <h4>25-35% de conversiones perdidas por inconsistencia</h4>
+      <p>Respuestas tardías, información desactualizada entre canales, consultas que se caen. Estimamos S/ 1,500 a S/ 5,000 diarios que se quedan sobre la mesa. En la conversación lo identificaron como el principal dolor operativo.</p>
+    </div>
+  </div>
+  <div class="pain-item">
+    <div class="pain-num">3</div>
+    <div class="pain-text">
+      <h4>Recompra desatendida en ciclos de 30-45 días</h4>
+      <p>El equipo mostró interés directo en automatizar la recompra. Proteínas, creatina, gomitas: el suplemento se acaba, el cliente no recibe recordatorio, busca alternativas o simplemente se olvida. Ingreso recurrente que se evapora.</p>
+    </div>
+  </div>
+  <div class="pain-item">
+    <div class="pain-num">4</div>
+    <div class="pain-text">
+      <h4>Infraestructura creciendo más rápido que las ventas</h4>
+      <p>14 empleados y escalando. La inversión en equipo e infraestructura está ahí, pero sin automatización la rentabilidad se diluye. Como mencionaron en la conversación: el momento de optimizar es ahora.</p>
+    </div>
+  </div>
+
+  <div class="slide-logo-sm">
+    <svg viewBox="0 0 140 140" fill="none" style="width:14px;height:14px;"><rect width="140" height="140" rx="28" fill="#0F172A"/><path d="M 70 18 Q 18 18 18 38 L 18 57 Q 18 63 24 63 L 88 63 Z" fill="#3B82F6"/><path d="M 70 122 Q 122 122 122 102 L 122 83 Q 122 77 116 77 L 52 77 Z" fill="#6366F1"/></svg>
+    ZENIA
+  </div>
+  <div class="slide-num">02</div>
+</div>
+
+<!-- SLIDE 3: POR QUE LAS SOLUCIONES TIPICAS NO FUNCIONAN -->
+<div class="slide slide-accent">
+  <div class="client-badge-light"><svg class="tmx-logo" viewBox="0 0 141 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="#010101" d="M0 0V1.773H11.275V23.838H13.383V1.786H24.825L24.855 0H0Z"/><path fill="#010101" d="M49.153 23.84H46.973L44.855 3.16L37.681 17.205H35.821L28.647 3.16L26.527 23.84H24.35L26.768.015L26.771 0H29.499L29.507.015L36.75 14.762L43.998.015L44.003 0H46.734V.015H46.737L49.153 23.84Z"/><path fill="#010101" d="M65.76 13.122L75.215 23.84H72.673L64.536 14.501L60.96 12.836L53.237 23.84H50.528L59.344 11.622L50.446.096L50.372 0H53.187L53.256.096L61.504 11.137L64.056 12.189L72.786.049L72.818 0H75.242L65.76 13.122Z"/><path fill="#010101" d="M85.025.766V6.445H84.112V.766H81.481V0H87.663V.766H85.023Z"/><path fill="#010101" d="M95.135 6.448V3.399H90.195V6.448H89.264V0H90.188V2.63H95.128V0H96.059V6.448H95.135Z"/><path fill="#010101" d="M98.332 6.448V0H104.277V.795H99.246V2.714H104.149V3.48H99.246V5.655H104.516V6.45H98.335Z"/><path fill="#010101" d="M89.318 15.104H88.304L86.405 9.827L84.496 15.104H83.454L81.354 8.657H82.331L84.011 14.09L86.001 8.657H86.814L88.796 14.063L90.476 8.657H91.444L89.316 15.104Z"/><path fill="#010101" d="M92.242 15.104V8.657H98.187V9.452H93.155V11.371H98.059V12.137H93.155V14.311H98.426V15.107H92.244Z"/><path fill="#010101" d="M99.472 15.104V8.657H100.386V14.319H104.669V15.104H99.472Z"/><path fill="#010101" d="M105.373 15.104V8.657H106.287V14.319H110.569V15.104H105.373Z"/><path fill="#010101" d="M117.17 15.104L112.119 9.772L112.136 15.104H111.259V8.657H112.2L117.214 13.981L117.187 8.657H118.064V15.104H117.17Z"/><path fill="#010101" d="M119.645 15.104V8.657H125.59V9.452H120.559V11.371H125.462V12.137H120.559V14.311H125.829V15.107H119.648Z"/><path fill="#010101" d="M132.742 14.238C132.166 15.04 131.08 15.168 130.843 15.196C130.698 15.213 130.324 15.26 129.912 15.26C129.73 15.26 128.935 15.242 128.25 15.068C128.105 15.031 127.876 14.976 127.556 14.838C127.218 14.693 126.989 14.528 126.881 14.447C126.533 14.181 126.378 13.944 126.277 13.799L127.127 13.452C127.174 13.506 127.208 13.553 127.265 13.607C127.403 13.745 127.703 13.981 128.152 14.164C128.89 14.464 129.767 14.474 129.979 14.474C130.144 14.474 131.112 14.501 131.732 14.036C132.117 13.743 132.171 13.341 132.171 13.169C132.171 12.794 131.961 12.521 131.624 12.373C131.149 12.164 130.036 12.1 129.523 12.053C128.289 11.952 127.689 11.888 127.213 11.45C126.775 11.048 126.758 10.59 126.758 10.371C126.758 9.467 127.378 9.056 127.652 8.91C128.036 8.701 128.738 8.489 129.779 8.489C131.058 8.489 131.826 8.8 132.292 9.1C132.4 9.174 132.493 9.238 132.585 9.319C132.794 9.492 132.949 9.721 133.006 9.785L132.166 10.122C132.119 10.075 131.957 9.913 131.774 9.785C131.417 9.538 130.806 9.245 129.792 9.245C129.134 9.245 128.622 9.364 128.386 9.455C127.829 9.664 127.674 10.048 127.674 10.322C127.674 10.46 127.711 10.605 127.782 10.723C128.011 11.088 128.467 11.125 128.841 11.171C129.553 11.262 130.265 11.299 130.979 11.381C131.974 11.499 132.432 11.755 132.742 12.139C133.062 12.551 133.08 12.962 133.08 13.154C133.08 13.701 132.878 14.058 132.752 14.233Z"/><path fill="#010101" d="M140.158 14.238C139.582 15.04 138.496 15.168 138.259 15.196C138.114 15.213 137.74 15.26 137.328 15.26C137.146 15.26 136.35 15.242 135.666 15.068C135.521 15.031 135.291 14.976 134.971 14.838C134.634 14.693 134.405 14.528 134.297 14.447C133.949 14.181 133.794 13.944 133.693 13.799L134.543 13.452C134.59 13.506 134.624 13.553 134.681 13.607C134.819 13.745 135.119 13.981 135.567 14.164C136.306 14.464 137.183 14.474 137.395 14.474C137.56 14.474 138.528 14.501 139.148 14.036C139.532 13.743 139.587 13.341 139.587 13.169C139.587 12.794 139.377 12.521 139.04 12.373C138.565 12.164 137.451 12.1 136.939 12.053C135.705 11.952 135.104 11.888 134.629 11.45C134.191 11.048 134.173 10.59 134.173 10.371C134.173 9.467 134.794 9.056 135.067 8.91C135.452 8.701 136.153 8.489 137.195 8.489C138.473 8.489 139.242 8.8 139.707 9.1C139.816 9.174 139.909 9.238 140 9.319C140.21 9.492 140.365 9.721 140.421 9.785L139.582 10.122C139.535 10.075 139.372 9.913 139.19 9.785C138.833 9.538 138.222 9.245 137.208 9.245C136.55 9.245 136.038 9.364 135.801 9.455C135.245 9.664 135.09 10.048 135.09 10.322C135.09 10.46 135.126 10.605 135.198 10.723C135.427 11.088 135.883 11.125 136.257 11.171C136.969 11.262 137.68 11.299 138.395 11.381C139.39 11.499 139.848 11.755 140.158 12.139C140.478 12.551 140.495 12.962 140.495 13.154C140.495 13.701 140.293 14.058 140.168 14.233Z"/><path fill="#010101" d="M88.998 22.766C87.948 24 86.084 24 85.71 24C84.432 24 83.683 23.643 83.225 23.352C83.06 23.244 82.932 23.143 82.786 23.015C82.695 22.924 82.493 22.722 82.311 22.431C82.082 22.084 81.799 21.527 81.799 20.569C81.799 20.259 81.816 19.409 82.365 18.651C82.456 18.513 82.575 18.368 82.831 18.139C83.06 17.947 83.323 17.764 83.579 17.636C84.409 17.215 85.441 17.198 85.69 17.198C85.991 17.198 87.187 17.225 88.118 17.791C88.246 17.873 88.51 18.048 88.786 18.331C89.079 18.641 89.234 18.924 89.315 19.07L88.338 19.279C88.283 19.178 88.229 19.087 88.165 18.996C88.02 18.794 87.801 18.594 87.589 18.466C87.288 18.274 86.638 18.001 85.727 18.001C85.471 18.001 84.476 18.011 83.727 18.54C83.653 18.587 83.518 18.695 83.363 18.868C83.116 19.134 82.769 19.643 82.769 20.557C82.769 20.823 82.796 21.552 83.281 22.183C83.858 22.931 84.806 23.104 85.079 23.15C85.39 23.197 85.72 23.197 85.818 23.197C86.111 23.197 87.362 23.207 88.128 22.367C88.283 22.202 88.375 22.067 88.485 21.875L89.453 22.077C89.244 22.451 89.126 22.616 88.998 22.771Z"/><path fill="#010101" d="M96.332 22.776C96.012 23.296 95.209 23.973 93.749 23.973C93.584 23.973 93.054 23.963 92.552 23.818C92.15 23.7 90.825 23.187 90.825 21.7C90.825 21.471 90.852 20.978 91.173 20.466C91.904 19.316 93.382 19.269 93.721 19.269C93.931 19.269 94.699 19.286 95.357 19.597C95.458 19.643 95.613 19.715 95.812 19.88C95.94 19.981 96.086 20.126 96.187 20.244C96.359 20.454 96.642 20.912 96.642 21.624C96.642 21.806 96.625 22.298 96.332 22.774ZM95.564 20.831C95.044 19.971 93.884 19.981 93.682 19.981C93.162 19.991 92.64 20.119 92.239 20.466C91.892 20.759 91.7 21.178 91.7 21.643C91.7 21.798 91.717 22.146 91.966 22.483C92.222 22.83 92.778 23.249 93.793 23.249C94.231 23.249 94.66 23.148 95.044 22.902C95.263 22.764 95.775 22.372 95.775 21.604C95.775 21.476 95.758 21.148 95.566 20.828Z"/><path fill="#010101" d="M98.386 23.835V22.84H99.391V23.835H98.386Z"/></svg></div>
+
+  <h2>Por que las soluciones tipicas <span>no funcionan</span></h2>
+  <p style="margin-bottom: 20px; color: #475569;">Antes de buscar la solucion correcta, vale la pena entender por que las opciones obvias se quedan cortas.</p>
+
+  <div class="pain-item">
+    <div class="pain-num">1</div>
+    <div class="pain-text">
+      <h4>Contratar un Shopify Specialist + Social Media Lead</h4>
+      <p>S/ 7,000-11,000/mes en salarios. 3 meses de onboarding. Rotacion alta en perfiles digitales junior. Y sigues sin automatizacion, sin IA, sin atencion 24/7. Resuelve el dolor de hoy, no el de manana.</p>
+    </div>
+  </div>
+  <div class="pain-item">
+    <div class="pain-num">2</div>
+    <div class="pain-text">
+      <h4>Chatbots genericos sin contexto de producto</h4>
+      <p>Un chatbot que no sabe la diferencia entre Impact Whey y Isolate de MyProtein genera mas frustracion que solucion. TMX tiene 70+ SKUs de 20+ marcas. El bot necesita conocer cada uno.</p>
+    </div>
+  </div>
+  <div class="pain-item">
+    <div class="pain-num">3</div>
+    <div class="pain-text">
+      <h4>Apps de Shopify sueltas</h4>
+      <p>Una app de email, otra de chat, otra de reviews, otra de upsell. Fragmentacion x2. Cada app tiene su costo, su setup, sus limitaciones. No se hablan entre si. El equipo termina gestionando herramientas en vez de vender.</p>
+    </div>
+  </div>
+
+  <div class="highlight">
+    <p>TMX no necesita mas herramientas sueltas. Necesita un sistema integrado que conecte atencion, venta, retencion y marca en un solo cerebro.</p>
+  </div>
+
+  <div class="slide-logo-sm">
+    <svg viewBox="0 0 140 140" fill="none" style="width:14px;height:14px;"><rect width="140" height="140" rx="28" fill="#0F172A"/><path d="M 70 18 Q 18 18 18 38 L 18 57 Q 18 63 24 63 L 88 63 Z" fill="#3B82F6"/><path d="M 70 122 Q 122 122 122 102 L 122 83 Q 122 77 116 77 L 52 77 Z" fill="#6366F1"/></svg>
+    ZENIA
+  </div>
+  <div class="slide-num">03</div>
+</div>
+
+<!-- SLIDE 4: BEFORE/AFTER VISION -->
+<div class="slide slide-energy">
+  <div class="client-badge"><svg class="tmx-logo" viewBox="0 0 141 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="#e2e8f0" d="M0 0V1.773H11.275V23.838H13.383V1.786H24.825L24.855 0H0Z"/><path fill="#e2e8f0" d="M49.153 23.84H46.973L44.855 3.16L37.681 17.205H35.821L28.647 3.16L26.527 23.84H24.35L26.768.015L26.771 0H29.499L29.507.015L36.75 14.762L43.998.015L44.003 0H46.734V.015H46.737L49.153 23.84Z"/><path fill="#e2e8f0" d="M65.76 13.122L75.215 23.84H72.673L64.536 14.501L60.96 12.836L53.237 23.84H50.528L59.344 11.622L50.446.096L50.372 0H53.187L53.256.096L61.504 11.137L64.056 12.189L72.786.049L72.818 0H75.242L65.76 13.122Z"/><path fill="#e2e8f0" d="M85.025.766V6.445H84.112V.766H81.481V0H87.663V.766H85.023Z"/><path fill="#e2e8f0" d="M95.135 6.448V3.399H90.195V6.448H89.264V0H90.188V2.63H95.128V0H96.059V6.448H95.135Z"/><path fill="#e2e8f0" d="M98.332 6.448V0H104.277V.795H99.246V2.714H104.149V3.48H99.246V5.655H104.516V6.45H98.335Z"/><path fill="#e2e8f0" d="M89.318 15.104H88.304L86.405 9.827L84.496 15.104H83.454L81.354 8.657H82.331L84.011 14.09L86.001 8.657H86.814L88.796 14.063L90.476 8.657H91.444L89.316 15.104Z"/><path fill="#e2e8f0" d="M92.242 15.104V8.657H98.187V9.452H93.155V11.371H98.059V12.137H93.155V14.311H98.426V15.107H92.244Z"/><path fill="#e2e8f0" d="M99.472 15.104V8.657H100.386V14.319H104.669V15.104H99.472Z"/><path fill="#e2e8f0" d="M105.373 15.104V8.657H106.287V14.319H110.569V15.104H105.373Z"/><path fill="#e2e8f0" d="M117.17 15.104L112.119 9.772L112.136 15.104H111.259V8.657H112.2L117.214 13.981L117.187 8.657H118.064V15.104H117.17Z"/><path fill="#e2e8f0" d="M119.645 15.104V8.657H125.59V9.452H120.559V11.371H125.462V12.137H120.559V14.311H125.829V15.107H119.648Z"/><path fill="#e2e8f0" d="M132.742 14.238C132.166 15.04 131.08 15.168 130.843 15.196C130.698 15.213 130.324 15.26 129.912 15.26C129.73 15.26 128.935 15.242 128.25 15.068L127.127 13.452C127.174 13.506 127.265 13.607C127.403 13.745 127.703 13.981 128.152 14.164C128.89 14.464 129.767 14.474 129.979 14.474C131.112 14.501 131.732 14.036 132.117 13.743C132.171 13.341 132.171 13.169 131.961 12.521L131.624 12.373C131.149 12.164 130.036 12.1 129.523 12.053C128.289 11.952 127.689 11.888 127.213 11.45C126.775 11.048 126.758 10.59 126.758 10.371C126.758 9.467 127.378 9.056 127.652 8.91C128.036 8.701 128.738 8.489 129.779 8.489C131.058 8.489 131.826 8.8 132.292 9.1C132.585 9.319 132.949 9.721 133.006 9.785L132.166 10.122C131.957 9.913 131.774 9.785 131.417 9.538C130.806 9.245 129.792 9.245 129.134 9.245C128.622 9.364 128.386 9.455 127.829 9.664C127.674 10.048 127.674 10.322 127.711 10.605L127.782 10.723C128.011 11.088 128.467 11.125 128.841 11.171C129.553 11.262 130.265 11.299 130.979 11.381C131.974 11.499 132.432 11.755 132.742 12.139C133.062 12.551 133.08 12.962 133.08 13.154C133.08 13.701 132.878 14.058 132.752 14.233Z"/><path fill="#e2e8f0" d="M88.998 22.766C87.948 24 86.084 24 85.71 24C84.432 24 83.683 23.643 83.225 23.352C82.786 23.015 82.493 22.722 82.311 22.431C82.082 22.084 81.799 21.527 81.799 20.569C81.816 19.409 82.365 18.651 82.575 18.368L82.831 18.139C83.06 17.947 83.323 17.764 83.579 17.636C84.409 17.215 85.441 17.198 85.69 17.198C87.187 17.225 88.118 17.791 88.51 18.048L88.786 18.331C89.079 18.641 89.234 18.924 89.315 19.07L88.338 19.279C88.165 18.996 87.801 18.594 87.589 18.466C87.288 18.274 86.638 18.001 85.727 18.001C84.476 18.011 83.727 18.54 83.518 18.695L83.363 18.868C83.116 19.134 82.769 19.643 82.769 20.557C82.796 21.552 83.281 22.183 83.858 22.931C84.806 23.104 85.079 23.15 85.39 23.197C85.72 23.197 85.818 23.197 86.111 23.197C87.362 23.207 88.128 22.367 88.375 22.067L88.485 21.875L89.453 22.077C89.244 22.451 89.126 22.616 88.998 22.771Z"/><path fill="#e2e8f0" d="M96.332 22.776C96.012 23.296 95.209 23.973 93.749 23.973C93.054 23.963 92.552 23.818 92.15 23.7C90.825 23.187 90.825 21.7 90.852 20.978L91.173 20.466C91.904 19.316 93.382 19.269 93.721 19.269C94.699 19.286 95.357 19.597 95.613 19.715L95.812 19.88C96.086 20.126 96.187 20.244 96.359 20.454C96.642 20.912 96.642 21.624 96.625 22.298L96.332 22.774ZM95.564 20.831C95.044 19.971 93.884 19.981 93.682 19.981C92.64 20.119 92.239 20.466 91.892 20.759C91.7 21.178 91.7 21.643 91.717 22.146L91.966 22.483C92.222 22.83 92.778 23.249 93.793 23.249C94.66 23.148 95.044 22.902 95.263 22.764C95.775 22.372 95.775 21.604 95.758 21.148L95.566 20.828Z"/><path fill="#e2e8f0" d="M98.386 23.835V22.84H99.391V23.835H98.386Z"/></svg></div>
+
+  <h2 style="max-width: 700px;">TMX con IA:<br><span>14 personas operando como 35</span></h2>
+  <p style="color: #94a3b8; max-width: 680px; margin-bottom: 24px;">La vision no es reemplazar al equipo. Es multiplicar su capacidad. Mientras duermen, ZENIA esta respondiendo, vendiendo y fidelizando.</p>
+
+  <div class="before-after">
+    <div class="ba-col ba-before">
+      <div class="ba-label">Hoy — Sin ZENIA</div>
+      <ul>
+        <li>Consultas por WhatsApp respondidas a mano</li>
+        <li>6 marketplaces gestionados individualmente</li>
+        <li>Ventas perdidas fuera del horario laboral</li>
+        <li>Rebranding inconsistente entre canales</li>
+        <li>Cero seguimiento post-compra automatizado</li>
+        <li>Marca propia TMX sin push diferenciado</li>
+        <li>MercadoLibre con baja traccion (220 seguidores)</li>
+      </ul>
+    </div>
+    <div class="ba-col ba-after">
+      <div class="ba-label">Con ZENIA — IA Activa 24/7</div>
+      <ul>
+        <li>Agente IA responde al instante en todos los canales</li>
+        <li>Un cerebro central conecta todos los marketplaces</li>
+        <li>Ventas 24/7 sin dependencia de horario</li>
+        <li>Voz de marca "Wellness Co" en cada interaccion</li>
+        <li>Recompra automatica dia 28 para consumibles</li>
+        <li>IA prioriza marca propia estrategicamente</li>
+        <li>Respuestas automaticas aceleran traccion en ML</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="slide-logo-sm">
+    <svg viewBox="0 0 140 140" fill="none" style="width:14px;height:14px;"><rect width="140" height="140" rx="28" fill="#475569"/><path d="M 70 18 Q 18 18 18 38 L 18 57 Q 18 63 24 63 L 88 63 Z" fill="#0f172a"/><path d="M 70 122 Q 122 122 122 102 L 122 83 Q 122 77 116 77 L 52 77 Z" fill="#0f172a"/></svg>
+    ZENIA
+  </div>
+  <div class="slide-num">04</div>
+</div>
+
+<!-- SLIDE 5: ECOSISTEMA ZENIA — PARTE 1 -->
+<div class="slide">
+  <div class="client-badge-light"><svg class="tmx-logo" viewBox="0 0 141 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="#010101" d="M0 0V1.773H11.275V23.838H13.383V1.786H24.825L24.855 0H0Z"/><path fill="#010101" d="M49.153 23.84H46.973L44.855 3.16L37.681 17.205H35.821L28.647 3.16L26.527 23.84H24.35L26.768.015L26.771 0H29.499L29.507.015L36.75 14.762L43.998.015L44.003 0H46.734V.015H46.737L49.153 23.84Z"/><path fill="#010101" d="M65.76 13.122L75.215 23.84H72.673L64.536 14.501L60.96 12.836L53.237 23.84H50.528L59.344 11.622L50.446.096L50.372 0H53.187L53.256.096L61.504 11.137L64.056 12.189L72.786.049L72.818 0H75.242L65.76 13.122Z"/><path fill="#010101" d="M85.025.766V6.445H84.112V.766H81.481V0H87.663V.766H85.023Z"/><path fill="#010101" d="M95.135 6.448V3.399H90.195V6.448H89.264V0H90.188V2.63H95.128V0H96.059V6.448H95.135Z"/><path fill="#010101" d="M98.332 6.448V0H104.277V.795H99.246V2.714H104.149V3.48H99.246V5.655H104.516V6.45H98.335Z"/><path fill="#010101" d="M89.318 15.104H88.304L86.405 9.827L84.496 15.104H83.454L81.354 8.657H82.331L84.011 14.09L86.001 8.657H86.814L88.796 14.063L90.476 8.657H91.444L89.316 15.104Z"/><path fill="#010101" d="M92.242 15.104V8.657H98.187V9.452H93.155V11.371H98.059V12.137H93.155V14.311H98.426V15.107H92.244Z"/><path fill="#010101" d="M99.472 15.104V8.657H100.386V14.319H104.669V15.104H99.472Z"/><path fill="#010101" d="M105.373 15.104V8.657H106.287V14.319H110.569V15.104H105.373Z"/><path fill="#010101" d="M117.17 15.104L112.119 9.772L112.136 15.104H111.259V8.657H112.2L117.214 13.981L117.187 8.657H118.064V15.104H117.17Z"/><path fill="#010101" d="M119.645 15.104V8.657H125.59V9.452H120.559V11.371H125.462V12.137H120.559V14.311H125.829V15.107H119.648Z"/><path fill="#010101" d="M132.742 14.238C132.166 15.04 131.08 15.168 130.843 15.196C130.698 15.213 130.324 15.26 129.912 15.26C129.73 15.26 128.935 15.242 128.25 15.068C128.105 15.031 127.876 14.976 127.556 14.838C127.218 14.693 126.989 14.528 126.881 14.447C126.533 14.181 126.378 13.944 126.277 13.799L127.127 13.452C127.174 13.506 127.208 13.553 127.265 13.607C127.403 13.745 127.703 13.981 128.152 14.164C128.89 14.464 129.767 14.474 129.979 14.474C130.144 14.474 131.112 14.501 131.732 14.036C132.117 13.743 132.171 13.341 132.171 13.169C132.171 12.794 131.961 12.521 131.624 12.373C131.149 12.164 130.036 12.1 129.523 12.053C128.289 11.952 127.689 11.888 127.213 11.45C126.775 11.048 126.758 10.59 126.758 10.371C126.758 9.467 127.378 9.056 127.652 8.91C128.036 8.701 128.738 8.489 129.779 8.489C131.058 8.489 131.826 8.8 132.292 9.1C132.4 9.174 132.493 9.238 132.585 9.319C132.794 9.492 132.949 9.721 133.006 9.785L132.166 10.122C132.119 10.075 131.957 9.913 131.774 9.785C131.417 9.538 130.806 9.245 129.792 9.245C129.134 9.245 128.622 9.364 128.386 9.455C127.829 9.664 127.674 10.048 127.674 10.322C127.674 10.46 127.711 10.605 127.782 10.723C128.011 11.088 128.467 11.125 128.841 11.171C129.553 11.262 130.265 11.299 130.979 11.381C131.974 11.499 132.432 11.755 132.742 12.139C133.062 12.551 133.08 12.962 133.08 13.154C133.08 13.701 132.878 14.058 132.752 14.233Z"/><path fill="#010101" d="M140.158 14.238C139.582 15.04 138.496 15.168 138.259 15.196C138.114 15.213 137.74 15.26 137.328 15.26C137.146 15.26 136.35 15.242 135.666 15.068C135.521 15.031 135.291 14.976 134.971 14.838C134.634 14.693 134.405 14.528 134.297 14.447C133.949 14.181 133.794 13.944 133.693 13.799L134.543 13.452C134.59 13.506 134.624 13.553 134.681 13.607C134.819 13.745 135.119 13.981 135.567 14.164C136.306 14.464 137.183 14.474 137.395 14.474C137.56 14.474 138.528 14.501 139.148 14.036C139.532 13.743 139.587 13.341 139.587 13.169C139.587 12.794 139.377 12.521 139.04 12.373C138.565 12.164 137.451 12.1 136.939 12.053C135.705 11.952 135.104 11.888 134.629 11.45C134.191 11.048 134.173 10.59 134.173 10.371C134.173 9.467 134.794 9.056 135.067 8.91C135.452 8.701 136.153 8.489 137.195 8.489C138.473 8.489 139.242 8.8 139.707 9.1C139.816 9.174 139.909 9.238 140 9.319C140.21 9.492 140.365 9.721 140.421 9.785L139.582 10.122C139.535 10.075 139.372 9.913 139.19 9.785C138.833 9.538 138.222 9.245 137.208 9.245C136.55 9.245 136.038 9.364 135.801 9.455C135.245 9.664 135.09 10.048 135.09 10.322C135.09 10.46 135.126 10.605 135.198 10.723C135.427 11.088 135.883 11.125 136.257 11.171C136.969 11.262 137.68 11.299 138.395 11.381C139.39 11.499 139.848 11.755 140.158 12.139C140.478 12.551 140.495 12.962 140.495 13.154C140.495 13.701 140.293 14.058 140.168 14.233Z"/><path fill="#010101" d="M88.998 22.766C87.948 24 86.084 24 85.71 24C84.432 24 83.683 23.643 83.225 23.352C83.06 23.244 82.932 23.143 82.786 23.015C82.695 22.924 82.493 22.722 82.311 22.431C82.082 22.084 81.799 21.527 81.799 20.569C81.799 20.259 81.816 19.409 82.365 18.651C82.456 18.513 82.575 18.368 82.831 18.139C83.06 17.947 83.323 17.764 83.579 17.636C84.409 17.215 85.441 17.198 85.69 17.198C85.991 17.198 87.187 17.225 88.118 17.791C88.246 17.873 88.51 18.048 88.786 18.331C89.079 18.641 89.234 18.924 89.315 19.07L88.338 19.279C88.283 19.178 88.229 19.087 88.165 18.996C88.02 18.794 87.801 18.594 87.589 18.466C87.288 18.274 86.638 18.001 85.727 18.001C85.471 18.001 84.476 18.011 83.727 18.54C83.653 18.587 83.518 18.695 83.363 18.868C83.116 19.134 82.769 19.643 82.769 20.557C82.769 20.823 82.796 21.552 83.281 22.183C83.858 22.931 84.806 23.104 85.079 23.15C85.39 23.197 85.72 23.197 85.818 23.197C86.111 23.197 87.362 23.207 88.128 22.367C88.283 22.202 88.375 22.067 88.485 21.875L89.453 22.077C89.244 22.451 89.126 22.616 88.998 22.771Z"/><path fill="#010101" d="M96.332 22.776C96.012 23.296 95.209 23.973 93.749 23.973C93.584 23.973 93.054 23.963 92.552 23.818C92.15 23.7 90.825 23.187 90.825 21.7C90.825 21.471 90.852 20.978 91.173 20.466C91.904 19.316 93.382 19.269 93.721 19.269C93.931 19.269 94.699 19.286 95.357 19.597C95.458 19.643 95.613 19.715 95.812 19.88C95.94 19.981 96.086 20.126 96.187 20.244C96.359 20.454 96.642 20.912 96.642 21.624C96.642 21.806 96.625 22.298 96.332 22.774ZM95.564 20.831C95.044 19.971 93.884 19.981 93.682 19.981C93.162 19.991 92.64 20.119 92.239 20.466C91.892 20.759 91.7 21.178 91.7 21.643C91.7 21.798 91.717 22.146 91.966 22.483C92.222 22.83 92.778 23.249 93.793 23.249C94.231 23.249 94.66 23.148 95.044 22.902C95.263 22.764 95.775 22.372 95.775 21.604C95.775 21.476 95.758 21.148 95.566 20.828Z"/><path fill="#010101" d="M98.386 23.835V22.84H99.391V23.835H98.386Z"/></svg></div>
+
+  <h2>El Ecosistema <span>ZENIA — Parte 1</span></h2>
+  <p style="margin-bottom: 20px;">No es un bot basico. Es un agente de IA entrenado con el catalogo completo, las reglas de negocio y la voz de TMX: The Wellness Co.</p>
+
+  <div class="feat-block">
+    <h3><span style="font-size:20px;">&#129302;</span> AI Omnichannel Agent <span class="feat-tag">Core</span></h3>
+    <div class="grid-2">
+      <div class="sol-item">
+        <div class="sol-icon" style="background:#eff6ff;">&#128172;</div>
+        <div class="sol-text">
+          <h4>WhatsApp + IG + TikTok DMs</h4>
+          <p>Responde consultas de producto, stock, envio, ingredientes y precios en &lt;30 segundos. 24/7. Con la voz de TMX Wellness.</p>
+        </div>
+      </div>
+      <div class="sol-item">
+        <div class="sol-icon" style="background:#f0fdfa;">&#128218;</div>
+        <div class="sol-text">
+          <h4>Catalogo completo integrado</h4>
+          <p>Conoce los 70+ SKUs de 20+ marcas. Sabe comparar MyProtein vs ON, recomendar por objetivo (masa, definicion, wellness) y hacer upsell inteligente.</p>
+        </div>
+      </div>
+      <div class="sol-item">
+        <div class="sol-icon" style="background:#fef3c7;">&#128666;</div>
+        <div class="sol-text">
+          <h4>Logistica automatizada</h4>
+          <p>Envio gratis desde S/ 200, delivery 24h Lima, tarifas provincias. Toda la info consistente en cada canal, sin que el equipo repita lo mismo 50 veces al dia.</p>
+        </div>
+      </div>
+      <div class="sol-item">
+        <div class="sol-icon" style="background:#f3e8ff;">&#127919;</div>
+        <div class="sol-text">
+          <h4>Escalamiento inteligente</h4>
+          <p>Consultas complejas, ventas B2B, convenios (como UPC) se derivan automaticamente a un humano con todo el contexto pre-cargado.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="feat-block">
+    <h3><span style="font-size:20px;">&#128176;</span> Marca Propia AI Assistant <span class="feat-tag">Diferenciador</span></h3>
+    <div class="grid-2">
+      <div class="sol-item">
+        <div class="sol-icon" style="background:#f0fdfa;">&#11088;</div>
+        <div class="sol-text">
+          <h4>Push estrategico TMX Wellness</h4>
+          <p>Cuando alguien pregunta por vitaminas o melatonina, el agente recomienda TMX primero con justificacion creible. Margenes +15-25%.</p>
+        </div>
+      </div>
+      <div class="sol-item">
+        <div class="sol-icon" style="background:#eff6ff;">&#128260;</div>
+        <div class="sol-text">
+          <h4>Cross-sell Gudslip + TMX Wellness</h4>
+          <p>"Si te gustan las gomitas de melatonina, prueba Gudslip para dormir mejor." Combos inteligentes que aumentan ticket promedio.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide-logo-sm">
+    <svg viewBox="0 0 140 140" fill="none" style="width:14px;height:14px;"><rect width="140" height="140" rx="28" fill="#0F172A"/><path d="M 70 18 Q 18 18 18 38 L 18 57 Q 18 63 24 63 L 88 63 Z" fill="#3B82F6"/><path d="M 70 122 Q 122 122 122 102 L 122 83 Q 122 77 116 77 L 52 77 Z" fill="#6366F1"/></svg>
+    ZENIA
+  </div>
+  <div class="slide-num">05</div>
+</div>
+
+<!-- SLIDE 6: ECOSISTEMA ZENIA — PARTE 2 -->
+<div class="slide">
+  <div class="client-badge-light"><svg class="tmx-logo" viewBox="0 0 141 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="#010101" d="M0 0V1.773H11.275V23.838H13.383V1.786H24.825L24.855 0H0Z"/><path fill="#010101" d="M49.153 23.84H46.973L44.855 3.16L37.681 17.205H35.821L28.647 3.16L26.527 23.84H24.35L26.768.015L26.771 0H29.499L29.507.015L36.75 14.762L43.998.015L44.003 0H46.734V.015H46.737L49.153 23.84Z"/><path fill="#010101" d="M65.76 13.122L75.215 23.84H72.673L64.536 14.501L60.96 12.836L53.237 23.84H50.528L59.344 11.622L50.446.096L50.372 0H53.187L53.256.096L61.504 11.137L64.056 12.189L72.786.049L72.818 0H75.242L65.76 13.122Z"/><path fill="#010101" d="M85.025.766V6.445H84.112V.766H81.481V0H87.663V.766H85.023Z"/><path fill="#010101" d="M95.135 6.448V3.399H90.195V6.448H89.264V0H90.188V2.63H95.128V0H96.059V6.448H95.135Z"/><path fill="#010101" d="M98.332 6.448V0H104.277V.795H99.246V2.714H104.149V3.48H99.246V5.655H104.516V6.45H98.335Z"/><path fill="#010101" d="M89.318 15.104H88.304L86.405 9.827L84.496 15.104H83.454L81.354 8.657H82.331L84.011 14.09L86.001 8.657H86.814L88.796 14.063L90.476 8.657H91.444L89.316 15.104Z"/><path fill="#010101" d="M92.242 15.104V8.657H98.187V9.452H93.155V11.371H98.059V12.137H93.155V14.311H98.426V15.107H92.244Z"/><path fill="#010101" d="M99.472 15.104V8.657H100.386V14.319H104.669V15.104H99.472Z"/><path fill="#010101" d="M105.373 15.104V8.657H106.287V14.319H110.569V15.104H105.373Z"/><path fill="#010101" d="M117.17 15.104L112.119 9.772L112.136 15.104H111.259V8.657H112.2L117.214 13.981L117.187 8.657H118.064V15.104H117.17Z"/><path fill="#010101" d="M119.645 15.104V8.657H125.59V9.452H120.559V11.371H125.462V12.137H120.559V14.311H125.829V15.107H119.648Z"/><path fill="#010101" d="M132.742 14.238C132.166 15.04 131.08 15.168 130.843 15.196C130.698 15.213 130.324 15.26 129.912 15.26C129.73 15.26 128.935 15.242 128.25 15.068C128.105 15.031 127.876 14.976 127.556 14.838C127.218 14.693 126.989 14.528 126.881 14.447C126.533 14.181 126.378 13.944 126.277 13.799L127.127 13.452C127.174 13.506 127.208 13.553 127.265 13.607C127.403 13.745 127.703 13.981 128.152 14.164C128.89 14.464 129.767 14.474 129.979 14.474C130.144 14.474 131.112 14.501 131.732 14.036C132.117 13.743 132.171 13.341 132.171 13.169C132.171 12.794 131.961 12.521 131.624 12.373C131.149 12.164 130.036 12.1 129.523 12.053C128.289 11.952 127.689 11.888 127.213 11.45C126.775 11.048 126.758 10.59 126.758 10.371C126.758 9.467 127.378 9.056 127.652 8.91C128.036 8.701 128.738 8.489 129.779 8.489C131.058 8.489 131.826 8.8 132.292 9.1C132.4 9.174 132.493 9.238 132.585 9.319C132.794 9.492 132.949 9.721 133.006 9.785L132.166 10.122C132.119 10.075 131.957 9.913 131.774 9.785C131.417 9.538 130.806 9.245 129.792 9.245C129.134 9.245 128.622 9.364 128.386 9.455C127.829 9.664 127.674 10.048 127.674 10.322C127.674 10.46 127.711 10.605 127.782 10.723C128.011 11.088 128.467 11.125 128.841 11.171C129.553 11.262 130.265 11.299 130.979 11.381C131.974 11.499 132.432 11.755 132.742 12.139C133.062 12.551 133.08 12.962 133.08 13.154C133.08 13.701 132.878 14.058 132.752 14.233Z"/><path fill="#010101" d="M140.158 14.238C139.582 15.04 138.496 15.168 138.259 15.196C138.114 15.213 137.74 15.26 137.328 15.26C137.146 15.26 136.35 15.242 135.666 15.068C135.521 15.031 135.291 14.976 134.971 14.838C134.634 14.693 134.405 14.528 134.297 14.447C133.949 14.181 133.794 13.944 133.693 13.799L134.543 13.452C134.59 13.506 134.624 13.553 134.681 13.607C134.819 13.745 135.119 13.981 135.567 14.164C136.306 14.464 137.183 14.474 137.395 14.474C137.56 14.474 138.528 14.501 139.148 14.036C139.532 13.743 139.587 13.341 139.587 13.169C139.587 12.794 139.377 12.521 139.04 12.373C138.565 12.164 137.451 12.1 136.939 12.053C135.705 11.952 135.104 11.888 134.629 11.45C134.191 11.048 134.173 10.59 134.173 10.371C134.173 9.467 134.794 9.056 135.067 8.91C135.452 8.701 136.153 8.489 137.195 8.489C138.473 8.489 139.242 8.8 139.707 9.1C139.816 9.174 139.909 9.238 140 9.319C140.21 9.492 140.365 9.721 140.421 9.785L139.582 10.122C139.535 10.075 139.372 9.913 139.19 9.785C138.833 9.538 138.222 9.245 137.208 9.245C136.55 9.245 136.038 9.364 135.801 9.455C135.245 9.664 135.09 10.048 135.09 10.322C135.09 10.46 135.126 10.605 135.198 10.723C135.427 11.088 135.883 11.125 136.257 11.171C136.969 11.262 137.68 11.299 138.395 11.381C139.39 11.499 139.848 11.755 140.158 12.139C140.478 12.551 140.495 12.962 140.495 13.154C140.495 13.701 140.293 14.058 140.168 14.233Z"/><path fill="#010101" d="M88.998 22.766C87.948 24 86.084 24 85.71 24C84.432 24 83.683 23.643 83.225 23.352C83.06 23.244 82.932 23.143 82.786 23.015C82.695 22.924 82.493 22.722 82.311 22.431C82.082 22.084 81.799 21.527 81.799 20.569C81.799 20.259 81.816 19.409 82.365 18.651C82.456 18.513 82.575 18.368 82.831 18.139C83.06 17.947 83.323 17.764 83.579 17.636C84.409 17.215 85.441 17.198 85.69 17.198C85.991 17.198 87.187 17.225 88.118 17.791C88.246 17.873 88.51 18.048 88.786 18.331C89.079 18.641 89.234 18.924 89.315 19.07L88.338 19.279C88.283 19.178 88.229 19.087 88.165 18.996C88.02 18.794 87.801 18.594 87.589 18.466C87.288 18.274 86.638 18.001 85.727 18.001C85.471 18.001 84.476 18.011 83.727 18.54C83.653 18.587 83.518 18.695 83.363 18.868C83.116 19.134 82.769 19.643 82.769 20.557C82.769 20.823 82.796 21.552 83.281 22.183C83.858 22.931 84.806 23.104 85.079 23.15C85.39 23.197 85.72 23.197 85.818 23.197C86.111 23.197 87.362 23.207 88.128 22.367C88.283 22.202 88.375 22.067 88.485 21.875L89.453 22.077C89.244 22.451 89.126 22.616 88.998 22.771Z"/><path fill="#010101" d="M96.332 22.776C96.012 23.296 95.209 23.973 93.749 23.973C93.584 23.973 93.054 23.963 92.552 23.818C92.15 23.7 90.825 23.187 90.825 21.7C90.825 21.471 90.852 20.978 91.173 20.466C91.904 19.316 93.382 19.269 93.721 19.269C93.931 19.269 94.699 19.286 95.357 19.597C95.458 19.643 95.613 19.715 95.812 19.88C95.94 19.981 96.086 20.126 96.187 20.244C96.359 20.454 96.642 20.912 96.642 21.624C96.642 21.806 96.625 22.298 96.332 22.774ZM95.564 20.831C95.044 19.971 93.884 19.981 93.682 19.981C93.162 19.991 92.64 20.119 92.239 20.466C91.892 20.759 91.7 21.178 91.7 21.643C91.7 21.798 91.717 22.146 91.966 22.483C92.222 22.83 92.778 23.249 93.793 23.249C94.231 23.249 94.66 23.148 95.044 22.902C95.263 22.764 95.775 22.372 95.775 21.604C95.775 21.476 95.758 21.148 95.566 20.828Z"/><path fill="#010101" d="M98.386 23.835V22.84H99.391V23.835H98.386Z"/></svg></div>
+
+  <h2>El Ecosistema <span>ZENIA — Parte 2</span></h2>
+  <p style="margin-bottom: 20px;">Los modulos que llevan a TMX de tienda de suplementos a marca de wellness con operacion de alto rendimiento.</p>
+
+  <div class="feat-block">
+    <h3><span style="font-size:20px;">&#128260;</span> Lifecycle &amp; Recompra Inteligente <span class="feat-tag">ROI Directo</span></h3>
+    <div class="grid-2">
+      <div class="sol-item">
+        <div class="sol-icon" style="background:#f0fdf4;">&#128340;</div>
+        <div class="sol-text">
+          <h4>Ciclos de consumo automaticos</h4>
+          <p>Proteina: dia 30. Gomitas: dia 28. Creatina: dia 30. El sistema toca al cliente en el momento exacto de recompra via WhatsApp o email.</p>
+        </div>
+      </div>
+      <div class="sol-item">
+        <div class="sol-icon" style="background:#eff6ff;">&#128140;</div>
+        <div class="sol-text">
+          <h4>Reactivacion de inactivos</h4>
+          <p>Clientes que compraron hace 60+ dias sin recompra reciben ofertas personalizadas basadas en su historial. Recuperacion de LTV perdido.</p>
+        </div>
+      </div>
+      <div class="sol-item">
+        <div class="sol-icon" style="background:#fef3c7;">&#127873;</div>
+        <div class="sol-text">
+          <h4>Upsell por historial</h4>
+          <p>"Compraste whey MyProtein, prueba agregar creatina PEScience al mismo pedido con 10% dcto." Ticket promedio +20-35%.</p>
+        </div>
+      </div>
+      <div class="sol-item">
+        <div class="sol-icon" style="background:#f3e8ff;">&#128202;</div>
+        <div class="sol-text">
+          <h4>Analytics de retencion</h4>
+          <p>Tasa de recompra por producto, por marca, por canal. Sabes exactamente que funciona y que necesita atencion.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="feat-block">
+    <h3><span style="font-size:20px;">&#128640;</span> Social Commerce Automation <span class="feat-tag">Crecimiento</span></h3>
+    <div class="grid-2">
+      <div class="sol-item">
+        <div class="sol-icon" style="background:#eff6ff;">&#127909;</div>
+        <div class="sol-text">
+          <h4>TikTok &amp; IG Comment Response</h4>
+          <p>Cuando alguien comenta "precio?" o "donde compro?" en un video, el agente responde al instante con link directo a Shopify.</p>
+        </div>
+      </div>
+      <div class="sol-item">
+        <div class="sol-icon" style="background:#f0fdfa;">&#128241;</div>
+        <div class="sol-text">
+          <h4>DM-to-Sale Pipeline</h4>
+          <p>Cada DM es una oportunidad de venta. El agente califica, recomienda y cierra sin intervencion humana para compras simples.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide-logo-sm">
+    <svg viewBox="0 0 140 140" fill="none" style="width:14px;height:14px;"><rect width="140" height="140" rx="28" fill="#0F172A"/><path d="M 70 18 Q 18 18 18 38 L 18 57 Q 18 63 24 63 L 88 63 Z" fill="#3B82F6"/><path d="M 70 122 Q 122 122 122 102 L 122 83 Q 122 77 116 77 L 52 77 Z" fill="#6366F1"/></svg>
+    ZENIA
+  </div>
+  <div class="slide-num">06</div>
+</div>
+
+<!-- SLIDE 7: IMPACTO ESTIMADO -->
+<div class="slide slide-dark">
+  <div class="client-badge"><svg class="tmx-logo" viewBox="0 0 141 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="#e2e8f0" d="M0 0V1.773H11.275V23.838H13.383V1.786H24.825L24.855 0H0Z"/><path fill="#e2e8f0" d="M49.153 23.84H46.973L44.855 3.16L37.681 17.205H35.821L28.647 3.16L26.527 23.84H24.35L26.768.015L26.771 0H29.499L29.507.015L36.75 14.762L43.998.015L44.003 0H46.734V.015H46.737L49.153 23.84Z"/><path fill="#e2e8f0" d="M65.76 13.122L75.215 23.84H72.673L64.536 14.501L60.96 12.836L53.237 23.84H50.528L59.344 11.622L50.446.096L50.372 0H53.187L53.256.096L61.504 11.137L64.056 12.189L72.786.049L72.818 0H75.242L65.76 13.122Z"/><path fill="#e2e8f0" d="M85.025.766V6.445H84.112V.766H81.481V0H87.663V.766H85.023Z"/><path fill="#e2e8f0" d="M95.135 6.448V3.399H90.195V6.448H89.264V0H90.188V2.63H95.128V0H96.059V6.448H95.135Z"/><path fill="#e2e8f0" d="M98.332 6.448V0H104.277V.795H99.246V2.714H104.149V3.48H99.246V5.655H104.516V6.45H98.335Z"/><path fill="#e2e8f0" d="M89.318 15.104H88.304L86.405 9.827L84.496 15.104H83.454L81.354 8.657H82.331L84.011 14.09L86.001 8.657H86.814L88.796 14.063L90.476 8.657H91.444L89.316 15.104Z"/><path fill="#e2e8f0" d="M92.242 15.104V8.657H98.187V9.452H93.155V11.371H98.059V12.137H93.155V14.311H98.426V15.107H92.244Z"/><path fill="#e2e8f0" d="M99.472 15.104V8.657H100.386V14.319H104.669V15.104H99.472Z"/><path fill="#e2e8f0" d="M105.373 15.104V8.657H106.287V14.319H110.569V15.104H105.373Z"/><path fill="#e2e8f0" d="M117.17 15.104L112.119 9.772L112.136 15.104H111.259V8.657H112.2L117.214 13.981L117.187 8.657H118.064V15.104H117.17Z"/><path fill="#e2e8f0" d="M119.645 15.104V8.657H125.59V9.452H120.559V11.371H125.462V12.137H120.559V14.311H125.829V15.107H119.648Z"/><path fill="#e2e8f0" d="M132.742 14.238C132.166 15.04 131.08 15.168 130.843 15.196C130.698 15.213 130.324 15.26 129.912 15.26C129.73 15.26 128.935 15.242 128.25 15.068L127.127 13.452C127.174 13.506 127.265 13.607C127.403 13.745 127.703 13.981 128.152 14.164C128.89 14.464 129.767 14.474 129.979 14.474C131.112 14.501 131.732 14.036 132.117 13.743C132.171 13.341 132.171 13.169 131.961 12.521L131.624 12.373C131.149 12.164 130.036 12.1 129.523 12.053C128.289 11.952 127.689 11.888 127.213 11.45C126.775 11.048 126.758 10.59 126.758 10.371C126.758 9.467 127.378 9.056 127.652 8.91C128.036 8.701 128.738 8.489 129.779 8.489C131.058 8.489 131.826 8.8 132.292 9.1C132.585 9.319 132.949 9.721 133.006 9.785L132.166 10.122C131.957 9.913 131.774 9.785 131.417 9.538C130.806 9.245 129.792 9.245 129.134 9.245C128.622 9.364 128.386 9.455 127.829 9.664C127.674 10.048 127.674 10.322 127.711 10.605L127.782 10.723C128.011 11.088 128.467 11.125 128.841 11.171C129.553 11.262 130.265 11.299 130.979 11.381C131.974 11.499 132.432 11.755 132.742 12.139C133.062 12.551 133.08 12.962 133.08 13.154C133.08 13.701 132.878 14.058 132.752 14.233Z"/><path fill="#e2e8f0" d="M88.998 22.766C87.948 24 86.084 24 85.71 24C84.432 24 83.683 23.643 83.225 23.352C82.786 23.015 82.493 22.722 82.311 22.431C82.082 22.084 81.799 21.527 81.799 20.569C81.816 19.409 82.365 18.651 82.575 18.368L82.831 18.139C83.06 17.947 83.323 17.764 83.579 17.636C84.409 17.215 85.441 17.198 85.69 17.198C87.187 17.225 88.118 17.791 88.51 18.048L88.786 18.331C89.079 18.641 89.234 18.924 89.315 19.07L88.338 19.279C88.165 18.996 87.801 18.594 87.589 18.466C87.288 18.274 86.638 18.001 85.727 18.001C84.476 18.011 83.727 18.54 83.518 18.695L83.363 18.868C83.116 19.134 82.769 19.643 82.769 20.557C82.796 21.552 83.281 22.183 83.858 22.931C84.806 23.104 85.079 23.15 85.39 23.197C85.72 23.197 85.818 23.197 86.111 23.197C87.362 23.207 88.128 22.367 88.375 22.067L88.485 21.875L89.453 22.077C89.244 22.451 89.126 22.616 88.998 22.771Z"/><path fill="#e2e8f0" d="M96.332 22.776C96.012 23.296 95.209 23.973 93.749 23.973C93.054 23.963 92.552 23.818 92.15 23.7C90.825 23.187 90.825 21.7 90.852 20.978L91.173 20.466C91.904 19.316 93.382 19.269 93.721 19.269C94.699 19.286 95.357 19.597 95.613 19.715L95.812 19.88C96.086 20.126 96.187 20.244 96.359 20.454C96.642 20.912 96.642 21.624 96.625 22.298L96.332 22.774ZM95.564 20.831C95.044 19.971 93.884 19.981 93.682 19.981C92.64 20.119 92.239 20.466 91.892 20.759C91.7 21.178 91.7 21.643 91.717 22.146L91.966 22.483C92.222 22.83 92.778 23.249 93.793 23.249C94.66 23.148 95.044 22.902 95.263 22.764C95.775 22.372 95.775 21.604 95.758 21.148L95.566 20.828Z"/><path fill="#e2e8f0" d="M98.386 23.835V22.84H99.391V23.835H98.386Z"/></svg></div>
+
+  <h2 style="color:#fff;">Impacto <span>Estimado</span></h2>
+  <p style="color:#94a3b8; margin-bottom: 24px;">Proyecciones conservadoras basadas en lo que identificamos juntos en nuestra conversación y benchmarks de e-commerce de suplementos con automatización IA.</p>
+
+  <div class="grid-4">
+    <div class="card-dark">
+      <div class="stat-big">
+        <div class="num">+35%</div>
+        <div class="lbl">Tasa de Respuesta</div>
+      </div>
+      <p style="margin-top:8px; text-align:center;">De responder en horas a responder en &lt;30 seg. Mas consultas atendidas = mas conversiones.</p>
+    </div>
+    <div class="card-dark">
+      <div class="stat-big">
+        <div class="num">+40%</div>
+        <div class="lbl">Recompra</div>
+      </div>
+      <p style="margin-top:8px; text-align:center;">Ciclo automatico de recompra para consumibles. Cada cliente se convierte en ingreso recurrente.</p>
+    </div>
+    <div class="card-dark">
+      <div class="stat-big">
+        <div class="num">+25%</div>
+        <div class="lbl">Ticket Promedio</div>
+      </div>
+      <p style="margin-top:8px; text-align:center;">Cross-sell inteligente y push de marca propia TMX Wellness aumenta el valor por transaccion.</p>
+    </div>
+    <div class="card-dark">
+      <div class="stat-big">
+        <div class="num">-60%</div>
+        <div class="lbl">Carga Manual</div>
+      </div>
+      <p style="margin-top:8px; text-align:center;">Consultas repetitivas eliminadas. Tu equipo se enfoca en ventas B2B, convenios y estrategia.</p>
+    </div>
+  </div>
+
+  <div class="highlight-teal" style="margin-top:24px; background: rgba(13,148,136,0.1); border-color: #0d9488;">
+    <p style="color: #5eead4;">Basado en las 800-1,200 consultas diarias y los S/ 1,500-5,000 que se quedan sobre la mesa cada día, el impacto mensual estimado es de S/ 15,000 a S/ 50,000 en conversiones recuperadas + recompra automatizada. El sistema se paga solo desde el primer mes.</p>
+  </div>
+
+  <div class="slide-logo-sm">
+    <svg viewBox="0 0 140 140" fill="none" style="width:14px;height:14px;"><rect width="140" height="140" rx="28" fill="#475569"/><path d="M 70 18 Q 18 18 18 38 L 18 57 Q 18 63 24 63 L 88 63 Z" fill="#0f172a"/><path d="M 70 122 Q 122 122 122 102 L 122 83 Q 122 77 116 77 L 52 77 Z" fill="#0f172a"/></svg>
+    ZENIA
+  </div>
+  <div class="slide-num">07</div>
+</div>
+
+<!-- SLIDE 8: POR QUE ZENIA -->
+<div class="slide">
+  <div class="client-badge-light"><svg class="tmx-logo" viewBox="0 0 141 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="#010101" d="M0 0V1.773H11.275V23.838H13.383V1.786H24.825L24.855 0H0Z"/><path fill="#010101" d="M49.153 23.84H46.973L44.855 3.16L37.681 17.205H35.821L28.647 3.16L26.527 23.84H24.35L26.768.015L26.771 0H29.499L29.507.015L36.75 14.762L43.998.015L44.003 0H46.734V.015H46.737L49.153 23.84Z"/><path fill="#010101" d="M65.76 13.122L75.215 23.84H72.673L64.536 14.501L60.96 12.836L53.237 23.84H50.528L59.344 11.622L50.446.096L50.372 0H53.187L53.256.096L61.504 11.137L64.056 12.189L72.786.049L72.818 0H75.242L65.76 13.122Z"/><path fill="#010101" d="M85.025.766V6.445H84.112V.766H81.481V0H87.663V.766H85.023Z"/><path fill="#010101" d="M95.135 6.448V3.399H90.195V6.448H89.264V0H90.188V2.63H95.128V0H96.059V6.448H95.135Z"/><path fill="#010101" d="M98.332 6.448V0H104.277V.795H99.246V2.714H104.149V3.48H99.246V5.655H104.516V6.45H98.335Z"/><path fill="#010101" d="M89.318 15.104H88.304L86.405 9.827L84.496 15.104H83.454L81.354 8.657H82.331L84.011 14.09L86.001 8.657H86.814L88.796 14.063L90.476 8.657H91.444L89.316 15.104Z"/><path fill="#010101" d="M92.242 15.104V8.657H98.187V9.452H93.155V11.371H98.059V12.137H93.155V14.311H98.426V15.107H92.244Z"/><path fill="#010101" d="M99.472 15.104V8.657H100.386V14.319H104.669V15.104H99.472Z"/><path fill="#010101" d="M105.373 15.104V8.657H106.287V14.319H110.569V15.104H105.373Z"/><path fill="#010101" d="M117.17 15.104L112.119 9.772L112.136 15.104H111.259V8.657H112.2L117.214 13.981L117.187 8.657H118.064V15.104H117.17Z"/><path fill="#010101" d="M119.645 15.104V8.657H125.59V9.452H120.559V11.371H125.462V12.137H120.559V14.311H125.829V15.107H119.648Z"/><path fill="#010101" d="M132.742 14.238C132.166 15.04 131.08 15.168 130.843 15.196C130.698 15.213 130.324 15.26 129.912 15.26C129.73 15.26 128.935 15.242 128.25 15.068C128.105 15.031 127.876 14.976 127.556 14.838C127.218 14.693 126.989 14.528 126.881 14.447C126.533 14.181 126.378 13.944 126.277 13.799L127.127 13.452C127.174 13.506 127.208 13.553 127.265 13.607C127.403 13.745 127.703 13.981 128.152 14.164C128.89 14.464 129.767 14.474 129.979 14.474C130.144 14.474 131.112 14.501 131.732 14.036C132.117 13.743 132.171 13.341 132.171 13.169C132.171 12.794 131.961 12.521 131.624 12.373C131.149 12.164 130.036 12.1 129.523 12.053C128.289 11.952 127.689 11.888 127.213 11.45C126.775 11.048 126.758 10.59 126.758 10.371C126.758 9.467 127.378 9.056 127.652 8.91C128.036 8.701 128.738 8.489 129.779 8.489C131.058 8.489 131.826 8.8 132.292 9.1C132.4 9.174 132.493 9.238 132.585 9.319C132.794 9.492 132.949 9.721 133.006 9.785L132.166 10.122C132.119 10.075 131.957 9.913 131.774 9.785C131.417 9.538 130.806 9.245 129.792 9.245C129.134 9.245 128.622 9.364 128.386 9.455C127.829 9.664 127.674 10.048 127.674 10.322C127.674 10.46 127.711 10.605 127.782 10.723C128.011 11.088 128.467 11.125 128.841 11.171C129.553 11.262 130.265 11.299 130.979 11.381C131.974 11.499 132.432 11.755 132.742 12.139C133.062 12.551 133.08 12.962 133.08 13.154C133.08 13.701 132.878 14.058 132.752 14.233Z"/><path fill="#010101" d="M140.158 14.238C139.582 15.04 138.496 15.168 138.259 15.196C138.114 15.213 137.74 15.26 137.328 15.26C137.146 15.26 136.35 15.242 135.666 15.068C135.521 15.031 135.291 14.976 134.971 14.838C134.634 14.693 134.405 14.528 134.297 14.447C133.949 14.181 133.794 13.944 133.693 13.799L134.543 13.452C134.59 13.506 134.624 13.553 134.681 13.607C134.819 13.745 135.119 13.981 135.567 14.164C136.306 14.464 137.183 14.474 137.395 14.474C137.56 14.474 138.528 14.501 139.148 14.036C139.532 13.743 139.587 13.341 139.587 13.169C139.587 12.794 139.377 12.521 139.04 12.373C138.565 12.164 137.451 12.1 136.939 12.053C135.705 11.952 135.104 11.888 134.629 11.45C134.191 11.048 134.173 10.59 134.173 10.371C134.173 9.467 134.794 9.056 135.067 8.91C135.452 8.701 136.153 8.489 137.195 8.489C138.473 8.489 139.242 8.8 139.707 9.1C139.816 9.174 139.909 9.238 140 9.319C140.21 9.492 140.365 9.721 140.421 9.785L139.582 10.122C139.535 10.075 139.372 9.913 139.19 9.785C138.833 9.538 138.222 9.245 137.208 9.245C136.55 9.245 136.038 9.364 135.801 9.455C135.245 9.664 135.09 10.048 135.09 10.322C135.09 10.46 135.126 10.605 135.198 10.723C135.427 11.088 135.883 11.125 136.257 11.171C136.969 11.262 137.68 11.299 138.395 11.381C139.39 11.499 139.848 11.755 140.158 12.139C140.478 12.551 140.495 12.962 140.495 13.154C140.495 13.701 140.293 14.058 140.168 14.233Z"/><path fill="#010101" d="M88.998 22.766C87.948 24 86.084 24 85.71 24C84.432 24 83.683 23.643 83.225 23.352C83.06 23.244 82.932 23.143 82.786 23.015C82.695 22.924 82.493 22.722 82.311 22.431C82.082 22.084 81.799 21.527 81.799 20.569C81.799 20.259 81.816 19.409 82.365 18.651C82.456 18.513 82.575 18.368 82.831 18.139C83.06 17.947 83.323 17.764 83.579 17.636C84.409 17.215 85.441 17.198 85.69 17.198C85.991 17.198 87.187 17.225 88.118 17.791C88.246 17.873 88.51 18.048 88.786 18.331C89.079 18.641 89.234 18.924 89.315 19.07L88.338 19.279C88.283 19.178 88.229 19.087 88.165 18.996C88.02 18.794 87.801 18.594 87.589 18.466C87.288 18.274 86.638 18.001 85.727 18.001C85.471 18.001 84.476 18.011 83.727 18.54C83.653 18.587 83.518 18.695 83.363 18.868C83.116 19.134 82.769 19.643 82.769 20.557C82.769 20.823 82.796 21.552 83.281 22.183C83.858 22.931 84.806 23.104 85.079 23.15C85.39 23.197 85.72 23.197 85.818 23.197C86.111 23.197 87.362 23.207 88.128 22.367C88.283 22.202 88.375 22.067 88.485 21.875L89.453 22.077C89.244 22.451 89.126 22.616 88.998 22.771Z"/><path fill="#010101" d="M96.332 22.776C96.012 23.296 95.209 23.973 93.749 23.973C93.584 23.973 93.054 23.963 92.552 23.818C92.15 23.7 90.825 23.187 90.825 21.7C90.825 21.471 90.852 20.978 91.173 20.466C91.904 19.316 93.382 19.269 93.721 19.269C93.931 19.269 94.699 19.286 95.357 19.597C95.458 19.643 95.613 19.715 95.812 19.88C95.94 19.981 96.086 20.126 96.187 20.244C96.359 20.454 96.642 20.912 96.642 21.624C96.642 21.806 96.625 22.298 96.332 22.774ZM95.564 20.831C95.044 19.971 93.884 19.981 93.682 19.981C93.162 19.991 92.64 20.119 92.239 20.466C91.892 20.759 91.7 21.178 91.7 21.643C91.7 21.798 91.717 22.146 91.966 22.483C92.222 22.83 92.778 23.249 93.793 23.249C94.231 23.249 94.66 23.148 95.044 22.902C95.263 22.764 95.775 22.372 95.775 21.604C95.775 21.476 95.758 21.148 95.566 20.828Z"/><path fill="#010101" d="M98.386 23.835V22.84H99.391V23.835H98.386Z"/></svg></div>
+
+  <h2>Por que <span>ZENIA</span></h2>
+
+  <table class="comp-table">
+    <thead>
+      <tr>
+        <th>Capacidad</th>
+        <th class="col-trad">Contratar 2 personas</th>
+        <th class="col-hire">Apps de Shopify</th>
+        <th class="col-zenia">ZENIA</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Atencion 24/7 omnicanal</td>
+        <td class="col-trad"><span class="check-n">No (horario laboral)</span></td>
+        <td class="col-hire"><span class="check-p">Parcial (bots basicos)</span></td>
+        <td class="col-zenia"><span class="check-y">Si, IA en todos los canales</span></td>
+      </tr>
+      <tr>
+        <td>Conoce 70+ SKUs y 20+ marcas</td>
+        <td class="col-trad"><span class="check-p">Requiere capacitacion</span></td>
+        <td class="col-hire"><span class="check-n">No tiene contexto</span></td>
+        <td class="col-zenia"><span class="check-y">Entrenado con catalogo completo</span></td>
+      </tr>
+      <tr>
+        <td>Push de marca propia TMX</td>
+        <td class="col-trad"><span class="check-p">Depende de quien atiende</span></td>
+        <td class="col-hire"><span class="check-n">No</span></td>
+        <td class="col-zenia"><span class="check-y">Estrategia de marca automatizada</span></td>
+      </tr>
+      <tr>
+        <td>Recompra automatica</td>
+        <td class="col-trad"><span class="check-n">Manual</span></td>
+        <td class="col-hire"><span class="check-p">Email basico sin contexto</span></td>
+        <td class="col-zenia"><span class="check-y">Ciclo por producto, personalizado</span></td>
+      </tr>
+      <tr>
+        <td>Social commerce (TikTok/IG)</td>
+        <td class="col-trad"><span class="check-p">Limitado a horario</span></td>
+        <td class="col-hire"><span class="check-n">No integrado</span></td>
+        <td class="col-zenia"><span class="check-y">Respuesta automatica a comments/DMs</span></td>
+      </tr>
+      <tr>
+        <td>Voz de marca consistente</td>
+        <td class="col-trad"><span class="check-p">Variable por persona</span></td>
+        <td class="col-hire"><span class="check-n">Generica</span></td>
+        <td class="col-zenia"><span class="check-y">TMX Wellness en cada interaccion</span></td>
+      </tr>
+      <tr>
+        <td>Costo mensual estimado</td>
+        <td class="col-trad">S/ 7,000-11,000</td>
+        <td class="col-hire">S/ 800-2,000 (5+ apps)</td>
+        <td class="col-zenia">Fraccion del costo de 2 salarios</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="slide-logo-sm">
+    <svg viewBox="0 0 140 140" fill="none" style="width:14px;height:14px;"><rect width="140" height="140" rx="28" fill="#0F172A"/><path d="M 70 18 Q 18 18 18 38 L 18 57 Q 18 63 24 63 L 88 63 Z" fill="#3B82F6"/><path d="M 70 122 Q 122 122 122 102 L 122 83 Q 122 77 116 77 L 52 77 Z" fill="#6366F1"/></svg>
+    ZENIA
+  </div>
+  <div class="slide-num">08</div>
+</div>
+
+<!-- SLIDE 9: ROADMAP -->
+<div class="slide">
+  <div class="client-badge-light"><svg class="tmx-logo" viewBox="0 0 141 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="#010101" d="M0 0V1.773H11.275V23.838H13.383V1.786H24.825L24.855 0H0Z"/><path fill="#010101" d="M49.153 23.84H46.973L44.855 3.16L37.681 17.205H35.821L28.647 3.16L26.527 23.84H24.35L26.768.015L26.771 0H29.499L29.507.015L36.75 14.762L43.998.015L44.003 0H46.734V.015H46.737L49.153 23.84Z"/><path fill="#010101" d="M65.76 13.122L75.215 23.84H72.673L64.536 14.501L60.96 12.836L53.237 23.84H50.528L59.344 11.622L50.446.096L50.372 0H53.187L53.256.096L61.504 11.137L64.056 12.189L72.786.049L72.818 0H75.242L65.76 13.122Z"/><path fill="#010101" d="M85.025.766V6.445H84.112V.766H81.481V0H87.663V.766H85.023Z"/><path fill="#010101" d="M95.135 6.448V3.399H90.195V6.448H89.264V0H90.188V2.63H95.128V0H96.059V6.448H95.135Z"/><path fill="#010101" d="M98.332 6.448V0H104.277V.795H99.246V2.714H104.149V3.48H99.246V5.655H104.516V6.45H98.335Z"/><path fill="#010101" d="M89.318 15.104H88.304L86.405 9.827L84.496 15.104H83.454L81.354 8.657H82.331L84.011 14.09L86.001 8.657H86.814L88.796 14.063L90.476 8.657H91.444L89.316 15.104Z"/><path fill="#010101" d="M92.242 15.104V8.657H98.187V9.452H93.155V11.371H98.059V12.137H93.155V14.311H98.426V15.107H92.244Z"/><path fill="#010101" d="M99.472 15.104V8.657H100.386V14.319H104.669V15.104H99.472Z"/><path fill="#010101" d="M105.373 15.104V8.657H106.287V14.319H110.569V15.104H105.373Z"/><path fill="#010101" d="M117.17 15.104L112.119 9.772L112.136 15.104H111.259V8.657H112.2L117.214 13.981L117.187 8.657H118.064V15.104H117.17Z"/><path fill="#010101" d="M119.645 15.104V8.657H125.59V9.452H120.559V11.371H125.462V12.137H120.559V14.311H125.829V15.107H119.648Z"/><path fill="#010101" d="M132.742 14.238C132.166 15.04 131.08 15.168 130.843 15.196C130.698 15.213 130.324 15.26 129.912 15.26C129.73 15.26 128.935 15.242 128.25 15.068C128.105 15.031 127.876 14.976 127.556 14.838C127.218 14.693 126.989 14.528 126.881 14.447C126.533 14.181 126.378 13.944 126.277 13.799L127.127 13.452C127.174 13.506 127.208 13.553 127.265 13.607C127.403 13.745 127.703 13.981 128.152 14.164C128.89 14.464 129.767 14.474 129.979 14.474C130.144 14.474 131.112 14.501 131.732 14.036C132.117 13.743 132.171 13.341 132.171 13.169C132.171 12.794 131.961 12.521 131.624 12.373C131.149 12.164 130.036 12.1 129.523 12.053C128.289 11.952 127.689 11.888 127.213 11.45C126.775 11.048 126.758 10.59 126.758 10.371C126.758 9.467 127.378 9.056 127.652 8.91C128.036 8.701 128.738 8.489 129.779 8.489C131.058 8.489 131.826 8.8 132.292 9.1C132.4 9.174 132.493 9.238 132.585 9.319C132.794 9.492 132.949 9.721 133.006 9.785L132.166 10.122C132.119 10.075 131.957 9.913 131.774 9.785C131.417 9.538 130.806 9.245 129.792 9.245C129.134 9.245 128.622 9.364 128.386 9.455C127.829 9.664 127.674 10.048 127.674 10.322C127.674 10.46 127.711 10.605 127.782 10.723C128.011 11.088 128.467 11.125 128.841 11.171C129.553 11.262 130.265 11.299 130.979 11.381C131.974 11.499 132.432 11.755 132.742 12.139C133.062 12.551 133.08 12.962 133.08 13.154C133.08 13.701 132.878 14.058 132.752 14.233Z"/><path fill="#010101" d="M140.158 14.238C139.582 15.04 138.496 15.168 138.259 15.196C138.114 15.213 137.74 15.26 137.328 15.26C137.146 15.26 136.35 15.242 135.666 15.068C135.521 15.031 135.291 14.976 134.971 14.838C134.634 14.693 134.405 14.528 134.297 14.447C133.949 14.181 133.794 13.944 133.693 13.799L134.543 13.452C134.59 13.506 134.624 13.553 134.681 13.607C134.819 13.745 135.119 13.981 135.567 14.164C136.306 14.464 137.183 14.474 137.395 14.474C137.56 14.474 138.528 14.501 139.148 14.036C139.532 13.743 139.587 13.341 139.587 13.169C139.587 12.794 139.377 12.521 139.04 12.373C138.565 12.164 137.451 12.1 136.939 12.053C135.705 11.952 135.104 11.888 134.629 11.45C134.191 11.048 134.173 10.59 134.173 10.371C134.173 9.467 134.794 9.056 135.067 8.91C135.452 8.701 136.153 8.489 137.195 8.489C138.473 8.489 139.242 8.8 139.707 9.1C139.816 9.174 139.909 9.238 140 9.319C140.21 9.492 140.365 9.721 140.421 9.785L139.582 10.122C139.535 10.075 139.372 9.913 139.19 9.785C138.833 9.538 138.222 9.245 137.208 9.245C136.55 9.245 136.038 9.364 135.801 9.455C135.245 9.664 135.09 10.048 135.09 10.322C135.09 10.46 135.126 10.605 135.198 10.723C135.427 11.088 135.883 11.125 136.257 11.171C136.969 11.262 137.68 11.299 138.395 11.381C139.39 11.499 139.848 11.755 140.158 12.139C140.478 12.551 140.495 12.962 140.495 13.154C140.495 13.701 140.293 14.058 140.168 14.233Z"/><path fill="#010101" d="M88.998 22.766C87.948 24 86.084 24 85.71 24C84.432 24 83.683 23.643 83.225 23.352C83.06 23.244 82.932 23.143 82.786 23.015C82.695 22.924 82.493 22.722 82.311 22.431C82.082 22.084 81.799 21.527 81.799 20.569C81.799 20.259 81.816 19.409 82.365 18.651C82.456 18.513 82.575 18.368 82.831 18.139C83.06 17.947 83.323 17.764 83.579 17.636C84.409 17.215 85.441 17.198 85.69 17.198C85.991 17.198 87.187 17.225 88.118 17.791C88.246 17.873 88.51 18.048 88.786 18.331C89.079 18.641 89.234 18.924 89.315 19.07L88.338 19.279C88.283 19.178 88.229 19.087 88.165 18.996C88.02 18.794 87.801 18.594 87.589 18.466C87.288 18.274 86.638 18.001 85.727 18.001C85.471 18.001 84.476 18.011 83.727 18.54C83.653 18.587 83.518 18.695 83.363 18.868C83.116 19.134 82.769 19.643 82.769 20.557C82.769 20.823 82.796 21.552 83.281 22.183C83.858 22.931 84.806 23.104 85.079 23.15C85.39 23.197 85.72 23.197 85.818 23.197C86.111 23.197 87.362 23.207 88.128 22.367C88.283 22.202 88.375 22.067 88.485 21.875L89.453 22.077C89.244 22.451 89.126 22.616 88.998 22.771Z"/><path fill="#010101" d="M96.332 22.776C96.012 23.296 95.209 23.973 93.749 23.973C93.584 23.973 93.054 23.963 92.552 23.818C92.15 23.7 90.825 23.187 90.825 21.7C90.825 21.471 90.852 20.978 91.173 20.466C91.904 19.316 93.382 19.269 93.721 19.269C93.931 19.269 94.699 19.286 95.357 19.597C95.458 19.643 95.613 19.715 95.812 19.88C95.94 19.981 96.086 20.126 96.187 20.244C96.359 20.454 96.642 20.912 96.642 21.624C96.642 21.806 96.625 22.298 96.332 22.774ZM95.564 20.831C95.044 19.971 93.884 19.981 93.682 19.981C93.162 19.991 92.64 20.119 92.239 20.466C91.892 20.759 91.7 21.178 91.7 21.643C91.7 21.798 91.717 22.146 91.966 22.483C92.222 22.83 92.778 23.249 93.793 23.249C94.231 23.249 94.66 23.148 95.044 22.902C95.263 22.764 95.775 22.372 95.775 21.604C95.775 21.476 95.758 21.148 95.566 20.828Z"/><path fill="#010101" d="M98.386 23.835V22.84H99.391V23.835H98.386Z"/></svg></div>
+
+  <h2>Ruta de <span>Implementacion</span></h2>
+  <p style="margin-bottom: 8px;">Metodologia por fases. Sin disrupciones. Validacion en cada paso.</p>
+
+  <div class="timeline">
+    <div class="timeline-item active">
+      <h4>Semana 1</h4>
+      <p>Diagnostico<br>5-7 dias</p>
+    </div>
+    <div class="timeline-item active">
+      <h4>Semanas 2-3</h4>
+      <p>AI Omnichannel<br>WhatsApp + IG</p>
+    </div>
+    <div class="timeline-item">
+      <h4>Semanas 4-5</h4>
+      <p>Marca Propia<br>Push TMX Wellness</p>
+    </div>
+    <div class="timeline-item">
+      <h4>Semanas 6-8</h4>
+      <p>Lifecycle<br>Recompra automatica</p>
+    </div>
+    <div class="timeline-item">
+      <h4>Mes 3+</h4>
+      <p>Social Commerce<br>TikTok + Expansion</p>
+    </div>
+  </div>
+
+  <div class="grid-2" style="margin-top: 24px;">
+    <div class="card">
+      <h4>Fase 1: Diagnostico & Roadmap</h4>
+      <ul class="check">
+        <li>Auditoria de todos los canales actuales</li>
+        <li>Mapeo de volumen de consultas por canal</li>
+        <li>Analisis del catalogo y oportunidades de marca propia</li>
+        <li>Roadmap personalizado con KPIs esperados</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>Fase 2: Quick Win (primeras 2 semanas)</h4>
+      <ul class="check">
+        <li>Agente IA en WhatsApp con catalogo completo</li>
+        <li>Respuestas automaticas de stock, envio, ingredientes</li>
+        <li>Voz de marca "Wellness Co" calibrada</li>
+        <li>Metricas de impacto desde dia 1</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="slide-logo-sm">
+    <svg viewBox="0 0 140 140" fill="none" style="width:14px;height:14px;"><rect width="140" height="140" rx="28" fill="#0F172A"/><path d="M 70 18 Q 18 18 18 38 L 18 57 Q 18 63 24 63 L 88 63 Z" fill="#3B82F6"/><path d="M 70 122 Q 122 122 122 102 L 122 83 Q 122 77 116 77 L 52 77 Z" fill="#6366F1"/></svg>
+    ZENIA
+  </div>
+  <div class="slide-num">09</div>
+</div>
+
+<!-- SLIDE 10: INVERSION -->
+<div class="slide">
+  <div class="client-badge-light"><svg class="tmx-logo" viewBox="0 0 141 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="#010101" d="M0 0V1.773H11.275V23.838H13.383V1.786H24.825L24.855 0H0Z"/><path fill="#010101" d="M49.153 23.84H46.973L44.855 3.16L37.681 17.205H35.821L28.647 3.16L26.527 23.84H24.35L26.768.015L26.771 0H29.499L29.507.015L36.75 14.762L43.998.015L44.003 0H46.734V.015H46.737L49.153 23.84Z"/><path fill="#010101" d="M65.76 13.122L75.215 23.84H72.673L64.536 14.501L60.96 12.836L53.237 23.84H50.528L59.344 11.622L50.446.096L50.372 0H53.187L53.256.096L61.504 11.137L64.056 12.189L72.786.049L72.818 0H75.242L65.76 13.122Z"/><path fill="#010101" d="M85.025.766V6.445H84.112V.766H81.481V0H87.663V.766H85.023Z"/><path fill="#010101" d="M95.135 6.448V3.399H90.195V6.448H89.264V0H90.188V2.63H95.128V0H96.059V6.448H95.135Z"/><path fill="#010101" d="M98.332 6.448V0H104.277V.795H99.246V2.714H104.149V3.48H99.246V5.655H104.516V6.45H98.335Z"/><path fill="#010101" d="M89.318 15.104H88.304L86.405 9.827L84.496 15.104H83.454L81.354 8.657H82.331L84.011 14.09L86.001 8.657H86.814L88.796 14.063L90.476 8.657H91.444L89.316 15.104Z"/><path fill="#010101" d="M92.242 15.104V8.657H98.187V9.452H93.155V11.371H98.059V12.137H93.155V14.311H98.426V15.107H92.244Z"/><path fill="#010101" d="M99.472 15.104V8.657H100.386V14.319H104.669V15.104H99.472Z"/><path fill="#010101" d="M105.373 15.104V8.657H106.287V14.319H110.569V15.104H105.373Z"/><path fill="#010101" d="M117.17 15.104L112.119 9.772L112.136 15.104H111.259V8.657H112.2L117.214 13.981L117.187 8.657H118.064V15.104H117.17Z"/><path fill="#010101" d="M119.645 15.104V8.657H125.59V9.452H120.559V11.371H125.462V12.137H120.559V14.311H125.829V15.107H119.648Z"/><path fill="#010101" d="M132.742 14.238C132.166 15.04 131.08 15.168 130.843 15.196C130.698 15.213 130.324 15.26 129.912 15.26C129.73 15.26 128.935 15.242 128.25 15.068C128.105 15.031 127.876 14.976 127.556 14.838C127.218 14.693 126.989 14.528 126.881 14.447C126.533 14.181 126.378 13.944 126.277 13.799L127.127 13.452C127.174 13.506 127.208 13.553 127.265 13.607C127.403 13.745 127.703 13.981 128.152 14.164C128.89 14.464 129.767 14.474 129.979 14.474C130.144 14.474 131.112 14.501 131.732 14.036C132.117 13.743 132.171 13.341 132.171 13.169C132.171 12.794 131.961 12.521 131.624 12.373C131.149 12.164 130.036 12.1 129.523 12.053C128.289 11.952 127.689 11.888 127.213 11.45C126.775 11.048 126.758 10.59 126.758 10.371C126.758 9.467 127.378 9.056 127.652 8.91C128.036 8.701 128.738 8.489 129.779 8.489C131.058 8.489 131.826 8.8 132.292 9.1C132.4 9.174 132.493 9.238 132.585 9.319C132.794 9.492 132.949 9.721 133.006 9.785L132.166 10.122C132.119 10.075 131.957 9.913 131.774 9.785C131.417 9.538 130.806 9.245 129.792 9.245C129.134 9.245 128.622 9.364 128.386 9.455C127.829 9.664 127.674 10.048 127.674 10.322C127.674 10.46 127.711 10.605 127.782 10.723C128.011 11.088 128.467 11.125 128.841 11.171C129.553 11.262 130.265 11.299 130.979 11.381C131.974 11.499 132.432 11.755 132.742 12.139C133.062 12.551 133.08 12.962 133.08 13.154C133.08 13.701 132.878 14.058 132.752 14.233Z"/><path fill="#010101" d="M140.158 14.238C139.582 15.04 138.496 15.168 138.259 15.196C138.114 15.213 137.74 15.26 137.328 15.26C137.146 15.26 136.35 15.242 135.666 15.068C135.521 15.031 135.291 14.976 134.971 14.838C134.634 14.693 134.405 14.528 134.297 14.447C133.949 14.181 133.794 13.944 133.693 13.799L134.543 13.452C134.59 13.506 134.624 13.553 134.681 13.607C134.819 13.745 135.119 13.981 135.567 14.164C136.306 14.464 137.183 14.474 137.395 14.474C137.56 14.474 138.528 14.501 139.148 14.036C139.532 13.743 139.587 13.341 139.587 13.169C139.587 12.794 139.377 12.521 139.04 12.373C138.565 12.164 137.451 12.1 136.939 12.053C135.705 11.952 135.104 11.888 134.629 11.45C134.191 11.048 134.173 10.59 134.173 10.371C134.173 9.467 134.794 9.056 135.067 8.91C135.452 8.701 136.153 8.489 137.195 8.489C138.473 8.489 139.242 8.8 139.707 9.1C139.816 9.174 139.909 9.238 140 9.319C140.21 9.492 140.365 9.721 140.421 9.785L139.582 10.122C139.535 10.075 139.372 9.913 139.19 9.785C138.833 9.538 138.222 9.245 137.208 9.245C136.55 9.245 136.038 9.364 135.801 9.455C135.245 9.664 135.09 10.048 135.09 10.322C135.09 10.46 135.126 10.605 135.198 10.723C135.427 11.088 135.883 11.125 136.257 11.171C136.969 11.262 137.68 11.299 138.395 11.381C139.39 11.499 139.848 11.755 140.158 12.139C140.478 12.551 140.495 12.962 140.495 13.154C140.495 13.701 140.293 14.058 140.168 14.233Z"/><path fill="#010101" d="M88.998 22.766C87.948 24 86.084 24 85.71 24C84.432 24 83.683 23.643 83.225 23.352C83.06 23.244 82.932 23.143 82.786 23.015C82.695 22.924 82.493 22.722 82.311 22.431C82.082 22.084 81.799 21.527 81.799 20.569C81.799 20.259 81.816 19.409 82.365 18.651C82.456 18.513 82.575 18.368 82.831 18.139C83.06 17.947 83.323 17.764 83.579 17.636C84.409 17.215 85.441 17.198 85.69 17.198C85.991 17.198 87.187 17.225 88.118 17.791C88.246 17.873 88.51 18.048 88.786 18.331C89.079 18.641 89.234 18.924 89.315 19.07L88.338 19.279C88.283 19.178 88.229 19.087 88.165 18.996C88.02 18.794 87.801 18.594 87.589 18.466C87.288 18.274 86.638 18.001 85.727 18.001C85.471 18.001 84.476 18.011 83.727 18.54C83.653 18.587 83.518 18.695 83.363 18.868C83.116 19.134 82.769 19.643 82.769 20.557C82.769 20.823 82.796 21.552 83.281 22.183C83.858 22.931 84.806 23.104 85.079 23.15C85.39 23.197 85.72 23.197 85.818 23.197C86.111 23.197 87.362 23.207 88.128 22.367C88.283 22.202 88.375 22.067 88.485 21.875L89.453 22.077C89.244 22.451 89.126 22.616 88.998 22.771Z"/><path fill="#010101" d="M96.332 22.776C96.012 23.296 95.209 23.973 93.749 23.973C93.584 23.973 93.054 23.963 92.552 23.818C92.15 23.7 90.825 23.187 90.825 21.7C90.825 21.471 90.852 20.978 91.173 20.466C91.904 19.316 93.382 19.269 93.721 19.269C93.931 19.269 94.699 19.286 95.357 19.597C95.458 19.643 95.613 19.715 95.812 19.88C95.94 19.981 96.086 20.126 96.187 20.244C96.359 20.454 96.642 20.912 96.642 21.624C96.642 21.806 96.625 22.298 96.332 22.774ZM95.564 20.831C95.044 19.971 93.884 19.981 93.682 19.981C93.162 19.991 92.64 20.119 92.239 20.466C91.892 20.759 91.7 21.178 91.7 21.643C91.7 21.798 91.717 22.146 91.966 22.483C92.222 22.83 92.778 23.249 93.793 23.249C94.231 23.249 94.66 23.148 95.044 22.902C95.263 22.764 95.775 22.372 95.775 21.604C95.775 21.476 95.758 21.148 95.566 20.828Z"/><path fill="#010101" d="M98.386 23.835V22.84H99.391V23.835H98.386Z"/></svg></div>
+
+  <h2>Inversion <span>Estrategica</span></h2>
+  <p style="margin-bottom: 8px;">Dos opciones. Ambas se pagan solas con las conversiones recuperadas.</p>
+
+  <div class="pricing-grid">
+    <!-- FULL PACKAGE -->
+    <div class="price-card recommended">
+      <div class="rec-badge">Recomendado</div>
+      <h3>Full Package</h3>
+      <p style="font-size:12px; color:#64748b; margin-bottom:0;">Ecosistema completo: omnichannel + marca propia + lifecycle + social commerce</p>
+      <div class="price-setup">Setup</div>
+      <div class="price-num">S/15,000</div>
+      <div class="price-retainer">Retainer mensual</div>
+      <div class="price-monthly">S/3,500<span>/mes</span></div>
+      <ul class="check" style="font-size: 12px; margin-top: 16px;">
+        <li>Agente IA multicanal (WhatsApp, IG, TikTok)</li>
+        <li>Push estrategico marca propia TMX Wellness</li>
+        <li>Recompra automatica con ciclos de consumo</li>
+        <li>Social commerce (comment/DM response)</li>
+        <li>Analytics y dashboard de rendimiento</li>
+        <li>Integracion Shopify + marketplaces</li>
+        <li>Voz de marca "Wellness Co" calibrada</li>
+        <li>Optimizacion continua mensual</li>
+      </ul>
+    </div>
+
+    <!-- FOUNDATION PACKAGE -->
+    <div class="price-card">
+      <h3 style="margin-top: 6px;">Foundation Package</h3>
+      <p style="font-size:12px; color:#64748b; margin-bottom:0;">Base solida: agente omnichannel + lifecycle basico</p>
+      <div class="price-setup">Setup</div>
+      <div class="price-num">S/8,500</div>
+      <div class="price-retainer">Retainer mensual</div>
+      <div class="price-monthly">S/2,500<span>/mes</span></div>
+      <ul class="check" style="font-size: 12px; margin-top: 16px;">
+        <li>Agente IA multicanal (WhatsApp + IG)</li>
+        <li>Catalogo completo integrado (70+ SKUs)</li>
+        <li>Recompra automatica basica</li>
+        <li>Integracion Shopify</li>
+        <li>Voz de marca calibrada</li>
+        <li>Soporte y mantenimiento mensual</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="highlight" style="margin-top: 16px;">
+    <p>Setup 100% a la firma. La Semana 1 arranca con el diagnostico completo para que el roadmap sea exacto desde dia 1. Retainer mensual desde el Mes 2.</p>
+  </div>
+
+
+  <div class="slide-logo-sm">
+    <svg viewBox="0 0 140 140" fill="none" style="width:14px;height:14px;"><rect width="140" height="140" rx="28" fill="#0F172A"/><path d="M 70 18 Q 18 18 18 38 L 18 57 Q 18 63 24 63 L 88 63 Z" fill="#3B82F6"/><path d="M 70 122 Q 122 122 122 102 L 122 83 Q 122 77 116 77 L 52 77 Z" fill="#6366F1"/></svg>
+    ZENIA
+  </div>
+  <div class="slide-num">10</div>
+</div>
+
+<!-- SLIDE 11: CTA -->
+<div class="slide slide-cover" style="text-align:center; justify-content:center;">
+  <div style="max-width: 640px; margin: 0 auto;">
+    <!-- TMX + ZENIA logos -->
+    <div style="display: flex; align-items: center; justify-content: center; gap: 24px; margin-bottom: 32px;">
+      <svg viewBox="0 0 141 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="height: 28px; width: auto;"><path fill="#94a3b8" d="M0 0V1.773H11.275V23.838H13.383V1.786H24.825L24.855 0H0Z"/><path fill="#94a3b8" d="M65.76 13.122L75.215 23.84H72.673L64.536 14.501L60.96 12.836L53.237 23.84H50.528L59.344 11.622L50.446.096L50.372 0H53.187L53.256.096L61.504 11.137L64.056 12.189L72.786.049L72.818 0H75.242L65.76 13.122Z"/><path fill="#94a3b8" d="M49.153 23.84H46.973L44.855 3.16L37.681 17.205H35.821L28.647 3.16L26.527 23.84H24.35L26.768.015L26.771 0H29.499L29.507.015L36.75 14.762L43.998.015L44.003 0H46.734V.015H46.737L49.153 23.84Z"/></svg>
+      <span style="color: #475569; font-size: 24px; font-weight: 300;">&times;</span>
+      <svg viewBox="0 0 140 140" fill="none" style="height: 32px; width: 32px;"><defs><linearGradient id="zg-cta-b" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2563EB"/><stop offset="100%" stop-color="#3B82F6"/></linearGradient><linearGradient id="zg-cta-v" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6366F1"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient></defs><rect width="140" height="140" rx="28" fill="#0F172A"/><path d="M 70 18 Q 18 18 18 38 L 18 57 Q 18 63 24 63 L 88 63 Z" fill="url(#zg-cta-b)"/><path d="M 70 122 Q 122 122 122 102 L 122 83 Q 122 77 116 77 L 52 77 Z" fill="url(#zg-cta-v)"/></svg>
+    </div>
+    <h2 style="font-size: 38px; font-weight: 900; color: #fff; margin-bottom: 16px;">
+      La operacion ya crecio.<br><span>Ahora toca que la infraestructura alcance.</span>
+    </h2>
+    <p style="color: #94a3b8; font-size: 16px; margin-bottom: 40px;">
+      TMX tiene el producto, los canales y la ambicion. Lo que falta es el sistema inteligente que conecte todo. Ese sistema es ZENIA.
+    </p>
+
+    <div class="cta-box" style="background: linear-gradient(135deg, rgba(59,130,246,0.15), rgba(124,58,237,0.15)); border: 1px solid rgba(124,58,237,0.3);">
+      <h3 style="font-size: 22px;">Segunda reunión: cerrar y arrancar</h3>
+      <p style="margin-top: 8px;">Nuestro equipo técnico presentará la solución completa, resolverá dudas de implementación y entregaremos la propuesta formal. Objetivo: cerrar y arrancar la misma semana.</p>
+    </div>
+
+    <div style="margin-top: 32px; display: flex; gap: 32px; justify-content: center;">
+      <div>
+        <div style="font-size: 10px; color: #64748b; text-transform: uppercase; letter-spacing: 1px;">Contacto</div>
+        <div style="font-size: 14px; font-weight: 500; color: #e2e8f0; margin-top: 4px;">Fabrizzio Zelada</div>
+      </div>
+      <div>
+        <div style="font-size: 10px; color: #64748b; text-transform: uppercase; letter-spacing: 1px;">Email</div>
+        <div style="font-size: 14px; font-weight: 500; color: #e2e8f0; margin-top: 4px;">fabrizzio@zeniapartners.com</div>
+      </div>
+      <div>
+        <div style="font-size: 10px; color: #64748b; text-transform: uppercase; letter-spacing: 1px;">Web</div>
+        <div style="font-size: 14px; font-weight: 500; color: #e2e8f0; margin-top: 4px;">zeniapartners.com</div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-num" style="color:#475569;">11</div>
+</div>
+
+<!-- Presentation controls -->
+<button class="pres-start" onclick="startPres()">Modo Presentacion (F5)</button>
+<div class="pres-bar">
+  <button onclick="goSlide(-1)">&#9664; Anterior</button>
+  <span class="pres-count" id="pres-count">1 / 11</span>
+  <button onclick="goSlide(1)">Siguiente &#9654;</button>
+  <button class="pres-exit" onclick="exitPres()">ESC Salir</button>
+</div>
+
+<script>
+const slides = document.querySelectorAll('.slide');
+let cur = 0;
+let presMode = false;
+
+function scaleSlide() {
+  if (!presMode) return;
+  const active = slides[cur];
+  if (!active) return;
+  active.style.transform = 'scale(1)';
+  const sw = active.offsetWidth;
+  const sh = active.offsetHeight;
+  const vw = window.innerWidth;
+  const vh = window.innerHeight - 50;
+  const scale = Math.min(vw / sw, vh / sh, 1.8);
+  active.style.transform = 'scale(' + scale + ')';
+}
+
+function showSlide(n) {
+  cur = Math.max(0, Math.min(n, slides.length - 1));
+  slides.forEach((s, i) => { s.classList.toggle('active', i === cur); s.style.transform = ''; });
+  document.getElementById('pres-count').textContent = (cur + 1) + ' / ' + slides.length;
+  requestAnimationFrame(scaleSlide);
+}
+
+function goSlide(dir) { showSlide(cur + dir); }
+
+function startPres() {
+  presMode = true;
+  document.body.classList.add('pres-mode');
+  showSlide(0);
+  if (document.documentElement.requestFullscreen) document.documentElement.requestFullscreen();
+}
+
+function exitPres() {
+  presMode = false;
+  document.body.classList.remove('pres-mode');
+  slides.forEach(s => { s.classList.remove('active'); s.style.transform = ''; });
+  if (document.fullscreenElement) document.exitFullscreen();
+}
+
+window.addEventListener('resize', scaleSlide);
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'F5') { e.preventDefault(); startPres(); }
+  if (!presMode) return;
+  if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') { e.preventDefault(); goSlide(1); }
+  if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); goSlide(-1); }
+  if (e.key === 'Escape') { exitPres(); }
+  if (e.key === 'Home') { showSlide(0); }
+  if (e.key === 'End') { showSlide(slides.length - 1); }
+});
+
+document.addEventListener('fullscreenchange', function() {
+  if (!document.fullscreenElement && presMode) exitPres();
+});
+</script>
+</body>
+</html>

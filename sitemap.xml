@@ -29,6 +29,13 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  <!-- Blog: Alertas churn gimnasio detectar a tiempo (ES) -->
+  <url>
+    <loc>https://zeniapartners.com/blog/alertas-churn-gimnasio-detectar-a-tiempo.html</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- Blog: Upselling tratamientos peluqueria (ES) -->
   <url>
     <loc>https://zeniapartners.com/blog/upselling-tratamientos-peluqueria.html</loc>

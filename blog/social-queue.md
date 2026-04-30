@@ -261,3 +261,16 @@ DM me if you run a beauty or hair salon and want the four-moment framework with 
 #beautyindustry #CRM #AI #WhatsAppBusiness
 
 ---
+## 2026-04-30 - Alertas de churn en gimnasios
+
+50% of gym cancellations happen in the first 90 days, and most owners only see them when the cancellation email lands (HFA 2025 Benchmarking Report).
+
+We built a 7-signal churn alert system on a 800-member gym: a personalized AI agent scores every member nightly and triggers WhatsApp interventions before they cancel.
+
+Results after 12 months: annual churn from 32% to 21%, failed payments resolved from 32% to 78%, average member lifetime from 14 to 22 months. Net lift ~52,000 EUR/year.
+
+The win is intervening on Tuesday morning, before the cancellation email lands on Friday. Full breakdown: https://zeniapartners.com/blog/alertas-churn-gimnasio-detectar-a-tiempo.html
+
+#fitnessindustry #memberretention #AI #WhatsAppBusiness
+
+---

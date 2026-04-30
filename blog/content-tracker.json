@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-04-29T00:00:00Z",
+  "lastRun": "2026-04-30T00:00:00Z",
   "posts": [
     {
       "slug": "automatizar-reservas-restaurante-whatsapp",
@@ -254,8 +254,8 @@
       "keyword": "alertas churn gimnasio detectar a tiempo",
       "tier": 1,
       "cluster": "gimnasios",
-      "status": "pending",
-      "date": null
+      "status": "published",
+      "date": "2026-04-30"
     },
     {
       "slug": "plantilla-bienvenida-nuevo-socio-gimnasio",

@@ -1,12 +1,12 @@
 name: SEO Autofix Weekly
 
 # Auto-corrige issues SEO sin coste API (no usa Anthropic).
-# Corre cada lunes 06:00 UTC para llegar antes del crawl Ahrefs típico.
-# También trigger manual via workflow_dispatch.
+# Corre cada lunes 06:00 UTC para llegar antes del crawl Ahrefs.
+# Tambien trigger manual via workflow_dispatch.
 
 on:
   schedule:
-    - cron: '0 6 * * 1'   # Lunes 06:00 UTC
+    - cron: '0 6 * * 1'
   workflow_dispatch:
 
 permissions:
@@ -43,13 +43,7 @@ jobs:
             echo "No changes to commit"
           else
             git add -A
-            git commit -m "seo(autofix): weekly auto-fix run $(date -u +%Y-%m-%d)
-
-- Broken internal links resueltos via redirect o remove
-- Meta descriptions >155c truncadas a 150c word-boundary
-- Reports CSV en reports/seo/autofix/
-
-Co-Authored-By: Zenia SEO Autofix <reports@zeniapartners.com>"
+            git commit -m "seo(autofix): weekly run $(date -u +%Y-%m-%d) broken links + metas"
             git push origin main
           fi
 

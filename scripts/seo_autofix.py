@@ -5,9 +5,12 @@ Funciones:
 1. Broken internal links: crawl repo + check si target file existe en disco
 2. Meta descriptions >155 chars: las trunca a 150 + ...
 3. Titles >60 chars: los flagea (no auto-fix, requiere humano)
-4. Submit URLs a IndexNow API (free)
+4. Email summary via Resend si --notify
 
-Run from repo root: py scripts/seo_autofix.py
+Modes:
+  py scripts/seo_autofix.py             # dry run, preview only
+  py scripts/seo_autofix.py --apply     # write fixes
+  py scripts/seo_autofix.py --apply --notify  # write + email summary
 """
 import csv
 import os
@@ -195,9 +198,90 @@ def truncate_long_metas(long_list, max_chars=150, dry_run=True):
     return fixed
 
 
+def send_summary_email(stats):
+    """Send autofix summary via Resend if --notify and RESEND_API_KEY in env."""
+    api_key = os.environ.get("RESEND_API_KEY", "")
+    if not api_key:
+        print("RESEND_API_KEY not set, skipping email")
+        return False
+    try:
+        import requests
+    except ImportError:
+        print("requests not installed, skipping email")
+        return False
+
+    from datetime import datetime
+    today = datetime.now().strftime("%Y-%m-%d")
+    summary_html = f"""
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"></head>
+<body style="font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif; max-width:680px; margin:0 auto; padding:32px; color:#0F172A;">
+  <h1 style="font-size:22px; color:#3B82F6;">Zenia SEO Autofix · {today}</h1>
+  <p style="color:#475569; line-height:1.6;">
+    Resumen del run semanal de autofix sobre zeniapartners.com.
+  </p>
+  <table style="width:100%; border-collapse:collapse; margin:24px 0; font-size:14px;">
+    <tr style="background:#F8FAFC;">
+      <td style="padding:12px 16px; border-bottom:1px solid #E2E8F0;">Broken links arreglados</td>
+      <td style="padding:12px 16px; border-bottom:1px solid #E2E8F0; text-align:right; font-weight:700; color:#16A34A;">{stats['broken_redirected'] + stats['broken_removed']}</td>
+    </tr>
+    <tr>
+      <td style="padding:12px 16px; border-bottom:1px solid #E2E8F0; padding-left:32px; color:#64748B;">↳ Redirigidos a path correcto</td>
+      <td style="padding:12px 16px; border-bottom:1px solid #E2E8F0; text-align:right; color:#64748B;">{stats['broken_redirected']}</td>
+    </tr>
+    <tr>
+      <td style="padding:12px 16px; border-bottom:1px solid #E2E8F0; padding-left:32px; color:#64748B;">↳ Removidos (sin alternativa)</td>
+      <td style="padding:12px 16px; border-bottom:1px solid #E2E8F0; text-align:right; color:#64748B;">{stats['broken_removed']}</td>
+    </tr>
+    <tr>
+      <td style="padding:12px 16px; border-bottom:1px solid #E2E8F0;">Meta descriptions truncadas (>155c)</td>
+      <td style="padding:12px 16px; border-bottom:1px solid #E2E8F0; text-align:right; font-weight:700; color:#16A34A;">{stats['metas_truncated']}</td>
+    </tr>
+    <tr>
+      <td style="padding:12px 16px; border-bottom:1px solid #E2E8F0;">Titles >60c (manual review)</td>
+      <td style="padding:12px 16px; border-bottom:1px solid #E2E8F0; text-align:right; font-weight:700; color:#F59E0B;">{stats['titles_long']}</td>
+    </tr>
+    <tr>
+      <td style="padding:12px 16px;">Files HTML escaneados</td>
+      <td style="padding:12px 16px; text-align:right; color:#64748B;">{stats['files_scanned']}</td>
+    </tr>
+  </table>
+  <p style="color:#475569; line-height:1.6; font-size:13px;">
+    Reports CSV detallados en <code>reports/seo/autofix/{today}-*.csv</code> en el repo.
+  </p>
+  <p style="color:#94A3B8; font-size:12px; margin-top:32px; padding-top:16px; border-top:1px solid #E2E8F0;">
+    Zenia SEO Autofix · automated weekly via GitHub Actions · sin coste API
+  </p>
+</body></html>"""
+
+    payload = {
+        "from": "Zenia SEO Bot <reports@zeniapartners.com>",
+        "to": ["fabrizzio.zelada@zeniapartners.com"],
+        "subject": f"Zenia SEO Autofix · {today} · {stats['broken_redirected'] + stats['broken_removed']} broken + {stats['metas_truncated']} metas",
+        "html": summary_html,
+    }
+    try:
+        r = requests.post(
+            "https://api.resend.com/emails",
+            headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
+            json=payload,
+            timeout=15,
+        )
+        if r.status_code == 200:
+            print(f"\nEmail summary sent OK")
+            return True
+        else:
+            print(f"\nEmail send failed: {r.status_code} {r.text[:200]}")
+            return False
+    except Exception as e:
+        print(f"\nEmail send error: {e}")
+        return False
+
+
 def main():
     apply = "--apply" in sys.argv
-    print(f"Mode: {'APPLY (writes changes)' if apply else 'DRY RUN (preview only)'}\n")
+    notify = "--notify" in sys.argv
+    print(f"Mode: {'APPLY (writes changes)' if apply else 'DRY RUN (preview only)'}{' + NOTIFY' if notify else ''}\n")
 
     files = get_all_html_files()
     print(f"Scanning {len(files)} HTML files...\n")
@@ -291,6 +375,20 @@ def main():
     if not apply:
         print("To apply fixes: py scripts/seo_autofix.py --apply")
 
+    # Email notification
+    if apply and notify:
+        stats = {
+            "broken_redirected": result.get("redirected", 0) if broken else 0,
+            "broken_removed": result.get("removed", 0) if broken else 0,
+            "metas_truncated": len(long_metas),
+            "titles_long": len(long_titles),
+            "files_scanned": len(files),
+        }
+        send_summary_email(stats)
+
+    # Exit code: 0 if no fixes needed (dry or apply), 0 if fixes applied successfully, 1 on critical issues
+    return 0
+
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main() or 0)

@@ -1,0 +1,63 @@
+name: SEO Autofix Weekly
+
+# Auto-corrige issues SEO sin coste API (no usa Anthropic).
+# Corre cada lunes 06:00 UTC para llegar antes del crawl Ahrefs típico.
+# También trigger manual via workflow_dispatch.
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'   # Lunes 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  autofix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install minimal deps
+        run: pip install requests
+
+      - name: Run autofix (apply + notify)
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+        run: python scripts/seo_autofix.py --apply --notify
+
+      - name: Commit and push if changes
+        run: |
+          git config user.name "Zenia SEO Autofix"
+          git config user.email "reports@zeniapartners.com"
+          if git diff --quiet && git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git add -A
+            git commit -m "seo(autofix): weekly auto-fix run $(date -u +%Y-%m-%d)
+
+- Broken internal links resueltos via redirect o remove
+- Meta descriptions >155c truncadas a 150c word-boundary
+- Reports CSV en reports/seo/autofix/
+
+Co-Authored-By: Zenia SEO Autofix <reports@zeniapartners.com>"
+            git push origin main
+          fi
+
+      - name: Upload reports as artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: seo-autofix-reports-${{ github.run_id }}
+          path: reports/seo/autofix/*.csv
+          retention-days: 30
+          if-no-files-found: ignore

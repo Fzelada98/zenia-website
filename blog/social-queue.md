@@ -263,6 +263,8 @@ DM me if you run a beauty or hair salon and want the four-moment framework with 
 ---
 ## 2026-04-30 - Alertas de churn en gimnasios
 
+<!-- SCHEDULED:sp_AdwJpoKXkvK6T24pHe8R at 2026-05-01T15:00:00.000Z -->
+
 50% of gym cancellations happen in the first 90 days, and most owners only see them when the cancellation email lands (HFA 2025 Benchmarking Report).
 
 We built a 7-signal churn alert system on a 800-member gym: a personalized AI agent scores every member nightly and triggers WhatsApp interventions before they cancel.
@@ -275,6 +277,8 @@ The win is intervening on Tuesday morning, before the cancellation email lands o
 
 ---
 ## 2026-04-30 - Plantilla de bienvenida nuevo socio gimnasio
+
+<!-- SCHEDULED:sp_qSromRt7QeKLrrUTprEFF at 2026-05-04T15:00:00.000Z -->
 
 The first 30 days decide whether a new gym member stays or quits.
 
@@ -290,6 +294,8 @@ Reply if you run a gym and want the full template with the message-by-message co
 
 ---
 ## 2026-05-01 - Aumentar reservas restaurante 30 dias
+
+<!-- SCHEDULED:sp_ru2HaablXqSZZneJgcH4B at 2026-05-05T08:00:00.000Z -->
 
 Spanish restaurants closed 2025 with a 3.3% no-show rate (TheFork), but the hidden gap is bigger: most venues sit at 60-65% occupancy and respond to WhatsApp 23 to 47 minutes after the message arrives.
 

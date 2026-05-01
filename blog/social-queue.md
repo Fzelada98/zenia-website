@@ -306,3 +306,18 @@ Full plan with metrics and templates: https://zeniapartners.com/blog/aumentar-re
 #restauranttech #customerretention #AI #WhatsAppBusiness
 
 ---
+## 2026-05-01 - Calcular ROI CRM restaurante
+
+The restaurant CRM market hits 894M USD in 2026 and 74.2% of dining venues already use one, but most operators cannot tell you the ROI of their own system.
+
+The fix is mechanical, not magical. There are five levers: retention (+15%), average ticket (+6%), no-shows (down from 13% to 5%), staff productivity (2 hours back per day), and after-hours bookings (+34% capture rate).
+
+We ran the math on a real 80-cover Madrid restaurant: 629 EUR/month in CRM cost generates 25,220 EUR/month in attributable revenue. That is a 3,910% monthly ROI and full payback between day 60 and day 120.
+
+The catch is that most ROI calculations skip three of the five levers and compare to an atypical month. The number ends up unprovable.
+
+DM me if you run a restaurant and want the full calculation template for your numbers.
+
+#restauranttech #customerretention #AI #WhatsAppBusiness
+
+---

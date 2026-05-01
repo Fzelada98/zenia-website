@@ -29,6 +29,13 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  <!-- Blog: Calcular ROI CRM restaurante (ES) -->
+  <url>
+    <loc>https://zeniapartners.com/blog/calcular-roi-crm-restaurante.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- Blog: Aumentar reservas restaurante 30 dias (ES) -->
   <url>
     <loc>https://zeniapartners.com/blog/aumentar-reservas-restaurante-30-dias.html</loc>

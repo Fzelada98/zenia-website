@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-05-01T12:00:00Z",
+  "lastRun": "2026-05-01T14:00:00Z",
   "posts": [
     {
       "slug": "automatizar-reservas-restaurante-whatsapp",
@@ -278,8 +278,8 @@
       "keyword": "calcular roi crm restaurante",
       "tier": 1,
       "cluster": "restaurantes",
-      "status": "pending",
-      "date": null
+      "status": "published",
+      "date": "2026-05-01"
     },
     {
       "slug": "reducir-no-shows-restaurante-whatsapp",

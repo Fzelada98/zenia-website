@@ -270,7 +270,7 @@
       "keyword": "aumentar reservas restaurante 30 dias",
       "tier": 1,
       "cluster": "restaurantes",
-      "status": "pending",
+      "status": "in_progress",
       "date": null
     },
     {

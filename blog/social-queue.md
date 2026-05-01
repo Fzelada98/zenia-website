@@ -289,3 +289,14 @@ Reply if you run a gym and want the full template with the message-by-message co
 #fitnessindustry #memberretention #AI #WhatsAppBusiness
 
 ---
+## 2026-05-01 - Aumentar reservas restaurante 30 dias
+
+Spanish restaurants closed 2025 with a 3.3% no-show rate (TheFork), but the hidden gap is bigger: most venues sit at 60-65% occupancy and respond to WhatsApp 23 to 47 minutes after the message arrives.
+
+A 50-cover restaurant going from 60% to 75% occupancy adds ~15,750 EUR in 30 days. We mapped out a week-by-week plan: diagnostic and Google profile in week 1, personalized AI agent and reminders in week 2, Instagram CTAs and reactivation in week 3, upselling in week 4. Realistic outcome: +18 to +28% revenue in a single month.
+
+Full plan with metrics and templates: https://zeniapartners.com/blog/aumentar-reservas-restaurante-30-dias.html
+
+#restauranttech #customerretention #AI #WhatsAppBusiness
+
+---

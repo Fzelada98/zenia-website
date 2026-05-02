@@ -345,3 +345,18 @@ Full guide with euro costs, the 6 flows to automate first, and a 5-week implemen
 #restauranttech #customerretention #AI #WhatsAppBusiness
 
 ---
+## 2026-05-02 - CRM for law firms client management 2026
+
+The digital maturity score for Spanish law firms is 5.1 out of 10, and 65% of practices have no digital plan. But the 67% who adopted client management software in the last two years grew billings by more than 15%.
+
+Most firms confuse legal case software (Kleos, Aranzadi) with a real CRM. They are not the same. Case software tracks the matter once it is open. A CRM tracks the relationship that creates the matter in the first place.
+
+A 5-lawyer firm switching from manual follow-up to a personalized AI agent plus CRM typically jumps from 17% to 30% lead-to-client conversion, recovers 7 hours per lawyer per week, and adds 23K EUR in monthly billings against a 297-497 EUR platform cost.
+
+The stat that really moves things: 41% of legal consultations arrive outside office hours, and replies under 5 minutes convert 9x better than next-day replies.
+
+DM me if you run a small or mid-sized firm and want the embudo audit framework.
+
+#B2B #SaaS #AI #automation
+
+---

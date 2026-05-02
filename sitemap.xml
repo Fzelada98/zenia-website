@@ -29,6 +29,13 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  <!-- Blog: CRM para Abogados Gestión de Clientes (ES) -->
+  <url>
+    <loc>https://zeniapartners.com/blog/crm-para-abogados-gestion-clientes.html</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- Blog: WhatsApp Business para Restaurantes Guía (ES) -->
   <url>
     <loc>https://zeniapartners.com/blog/whatsapp-business-para-restaurantes-guia.html</loc>

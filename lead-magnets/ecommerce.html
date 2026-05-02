@@ -189,6 +189,15 @@
 .lead-form.submitted .form-success { display: block; }
 .lead-form.submitted input, .lead-form.submitted select, .lead-form.submitted button { display: none; }
 @media (max-width: 600px) { .lead-capture { padding: 36px 24px; } .lead-capture-text h2 { font-size: 22px; } }
+@media print {
+  .lead-capture { display: none !important; }
+  .cta-block { page-break-inside: avoid; }
+  body { background: white !important; }
+  .page { box-shadow: none !important; }
+  a { color: #0F172A !important; text-decoration: none !important; }
+  .message { page-break-inside: avoid; }
+  .toc { page-break-after: always; }
+}
 </style>
 
 <script>

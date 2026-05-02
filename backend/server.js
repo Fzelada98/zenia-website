@@ -886,16 +886,17 @@ app.post('/api/lead-capture', rateLimit, async (req, res) => {
         await resend.emails.send({
           from: 'ZENIA <reports@zeniapartners.com>',
           to: lead.email,
-          subject: `${cleanNombre || 'Hola'}, aquí tu guía: 47 Mensajes WhatsApp para Ecommerce`,
+          subject: `${cleanNombre || 'Hola'}, aquí tu PDF: 47 Mensajes WhatsApp para Ecommerce`,
           html: `
             <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto; padding: 40px 20px;">
               <h1 style="color: #0F172A; font-size: 24px;">${cleanNombre ? `Hola ${cleanNombre}` : 'Hola'},</h1>
-              <p style="color: #475569; font-size: 16px; line-height: 1.6;">Gracias por descargar la guía. Aquí tienes el acceso directo:</p>
-              <p style="margin: 24px 0;"><a href="https://zeniapartners.com/lead-magnets/${cleanVertical}.html" style="background: linear-gradient(135deg, #3B82F6, #6366F1); color: white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 600;">Ver la guía completa →</a></p>
+              <p style="color: #475569; font-size: 16px; line-height: 1.6;">Gracias por descargar la guía. Aquí tienes los 47 mensajes en PDF descargable, listos para imprimir o guardar:</p>
+              <p style="margin: 24px 0;"><a href="https://zeniapartners.com/lead-magnets/${cleanVertical}.pdf" style="background: linear-gradient(135deg, #3B82F6, #6366F1); color: white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 600;">Descargar PDF →</a></p>
+              <p style="color: #475569; font-size: 15px; line-height: 1.6;">El PDF contiene los 47 mensajes copy-paste organizados por sección (carritos, post-venta, upselling, fidelización, reactivación). Listo para usar en tu equipo o WhatsApp Business.</p>
               <p style="color: #475569; font-size: 15px; line-height: 1.6;">Cada mes te llegan 10-15 plantillas nuevas con casos reales. Si en algún momento quieres que un agente de IA personalizado responda estos mensajes 24/7 conectado a tu Shopify/Woo/Tiendanube, respóndenos a este email y te explicamos cómo lo configuramos en 24 horas.</p>
               <p style="color: #475569; font-size: 15px;">— El equipo Zenia</p>
               <hr style="border: 0; border-top: 1px solid #E2E8F0; margin: 32px 0;">
-              <p style="color: #94A3B8; font-size: 12px;">ZENIA Partners · CRM + WhatsApp + IA · zeniapartners.com</p>
+              <p style="color: #94A3B8; font-size: 12px;">ZENIA Partners · CRM + WhatsApp + IA · <a href="https://zeniapartners.com" style="color: #94A3B8;">zeniapartners.com</a></p>
             </div>
           `
         });

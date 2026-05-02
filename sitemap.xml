@@ -29,6 +29,13 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  <!-- Blog: Reducir no-shows restaurante WhatsApp (ES) -->
+  <url>
+    <loc>https://zeniapartners.com/blog/reducir-no-shows-restaurante-whatsapp.html</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- Blog: Calcular ROI CRM restaurante (ES) -->
   <url>
     <loc>https://zeniapartners.com/blog/calcular-roi-crm-restaurante.html</loc>

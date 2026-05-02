@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-05-01T14:00:00Z",
+  "lastRun": "2026-05-02T14:00:00Z",
   "posts": [
     {
       "slug": "automatizar-reservas-restaurante-whatsapp",
@@ -286,8 +286,8 @@
       "keyword": "reducir no-shows restaurante whatsapp",
       "tier": 1,
       "cluster": "restaurantes",
-      "status": "pending",
-      "date": null
+      "status": "published",
+      "date": "2026-05-02"
     },
     {
       "slug": "whatsapp-business-para-restaurantes-guia",

@@ -321,3 +321,16 @@ DM me if you run a restaurant and want the full calculation template for your nu
 #restauranttech #customerretention #AI #WhatsAppBusiness
 
 ---
+## 2026-05-02 - Reducing restaurant no-shows with WhatsApp
+
+A single SMS reminder cuts restaurant no-shows by 30 to 50 percent. Adding a 24-hour WhatsApp confirmation with a one-tap button drops the rate below 5 percent. The global industry still loses ~16B USD/year to empty reserved tables.
+
+The operators who actually hit 4 percent do three boring things: they measure no-show rate by service and weekday every Monday, they make cancellation easier (not harder), and they message in four windows instead of one.
+
+The counterintuitive part: easier cancellation = fewer no-shows. A late cancellation gets refilled by the waitlist. A silent no-show is a dead seat at 9pm.
+
+Reply if you run a restaurant and want the four-message confirmation flow.
+
+#restauranttech #customerretention #AI #WhatsAppBusiness
+
+---

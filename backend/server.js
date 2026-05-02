@@ -829,6 +829,131 @@ function chatRateLimit(req, res, next) {
   next();
 }
 
+// ============================================================
+// LEAD CAPTURE — Lead magnets (ecommerce, gimnasios, etc.)
+// ============================================================
+const LEADS_DIR = path.join(DATA_DIR, 'leads');
+if (!fs.existsSync(LEADS_DIR)) fs.mkdirSync(LEADS_DIR, { recursive: true });
+
+const ALLOWED_VERTICALS = ['ecommerce', 'gimnasios', 'restaurantes', 'estetica', 'general'];
+
+function sanitizeStr(s, max = 200) {
+  if (!s || typeof s !== 'string') return '';
+  return s.trim().slice(0, max).replace(/[<>]/g, '');
+}
+
+function isValidEmail(email) {
+  return typeof email === 'string' && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) && email.length <= 200;
+}
+
+// POST /api/lead-capture - capture leads from lead magnets
+app.post('/api/lead-capture', rateLimit, async (req, res) => {
+  try {
+    const { nombre, email, source, vertical, tienda } = req.body || {};
+
+    if (!isValidEmail(email)) {
+      return res.status(400).json({ error: 'Email inválido' });
+    }
+
+    const cleanNombre = sanitizeStr(nombre || '', 100);
+    const cleanSource = sanitizeStr(source || 'unknown', 100);
+    const cleanVertical = ALLOWED_VERTICALS.includes(vertical) ? vertical : 'general';
+    const cleanTienda = sanitizeStr(tienda || '', 50);
+
+    const id = crypto.randomUUID();
+    const lead = {
+      id,
+      nombre: cleanNombre,
+      email: email.trim().toLowerCase(),
+      source: cleanSource,
+      vertical: cleanVertical,
+      tienda: cleanTienda,
+      ip: req.headers['x-forwarded-for'] || req.socket.remoteAddress,
+      userAgent: req.headers['user-agent'] || '',
+      createdAt: new Date().toISOString()
+    };
+
+    // Save to disk
+    const filename = `${lead.createdAt.slice(0, 10)}-${cleanVertical}-${id.slice(0, 8)}.json`;
+    fs.writeFileSync(path.join(LEADS_DIR, filename), JSON.stringify(lead, null, 2));
+
+    // Send confirmation email to lead + notification to Fabrizzio (Resend)
+    if (process.env.RESEND_API_KEY) {
+      const resend = new Resend(process.env.RESEND_API_KEY);
+
+      // Email to lead with PDF / next steps
+      try {
+        await resend.emails.send({
+          from: 'ZENIA <reports@zeniapartners.com>',
+          to: lead.email,
+          subject: `${cleanNombre || 'Hola'}, aquí tu guía: 47 Mensajes WhatsApp para Ecommerce`,
+          html: `
+            <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto; padding: 40px 20px;">
+              <h1 style="color: #0F172A; font-size: 24px;">${cleanNombre ? `Hola ${cleanNombre}` : 'Hola'},</h1>
+              <p style="color: #475569; font-size: 16px; line-height: 1.6;">Gracias por descargar la guía. Aquí tienes el acceso directo:</p>
+              <p style="margin: 24px 0;"><a href="https://zeniapartners.com/lead-magnets/${cleanVertical}.html" style="background: linear-gradient(135deg, #3B82F6, #6366F1); color: white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 600;">Ver la guía completa →</a></p>
+              <p style="color: #475569; font-size: 15px; line-height: 1.6;">Cada mes te llegan 10-15 plantillas nuevas con casos reales. Si en algún momento quieres que un agente de IA personalizado responda estos mensajes 24/7 conectado a tu Shopify/Woo/Tiendanube, respóndenos a este email y te explicamos cómo lo configuramos en 24 horas.</p>
+              <p style="color: #475569; font-size: 15px;">— El equipo Zenia</p>
+              <hr style="border: 0; border-top: 1px solid #E2E8F0; margin: 32px 0;">
+              <p style="color: #94A3B8; font-size: 12px;">ZENIA Partners · CRM + WhatsApp + IA · zeniapartners.com</p>
+            </div>
+          `
+        });
+      } catch (e) {
+        console.error('Resend lead email failed:', e.message);
+      }
+
+      // Notification to Fabrizzio
+      try {
+        await resend.emails.send({
+          from: 'ZENIA Notifications <reports@zeniapartners.com>',
+          to: 'fabrizzio.zelada@zeniapartners.com',
+          subject: `🎯 Nuevo lead: ${cleanNombre || lead.email} (${cleanVertical})`,
+          html: `
+            <div style="font-family: Inter, sans-serif; max-width: 600px;">
+              <h2>Nuevo lead capturado</h2>
+              <p><strong>Nombre:</strong> ${cleanNombre || '—'}</p>
+              <p><strong>Email:</strong> ${lead.email}</p>
+              <p><strong>Vertical:</strong> ${cleanVertical}</p>
+              <p><strong>Plataforma:</strong> ${cleanTienda || '—'}</p>
+              <p><strong>Source:</strong> ${cleanSource}</p>
+              <p><strong>IP:</strong> ${lead.ip}</p>
+              <p><strong>Hora:</strong> ${lead.createdAt}</p>
+            </div>
+          `
+        });
+      } catch (e) {
+        console.error('Resend notification failed:', e.message);
+      }
+    }
+
+    console.log(`[LEAD] ${cleanVertical} → ${lead.email} (${cleanSource})`);
+    res.json({ ok: true, id });
+  } catch (err) {
+    console.error('Lead capture error:', err);
+    res.status(500).json({ error: 'Internal error' });
+  }
+});
+
+// GET /api/leads/stats - quick stats endpoint (auth via simple token)
+app.get('/api/leads/stats', (req, res) => {
+  if (req.headers['x-admin-token'] !== process.env.ADMIN_TOKEN) {
+    return res.status(401).json({ error: 'Unauthorized' });
+  }
+  try {
+    const files = fs.readdirSync(LEADS_DIR).filter(f => f.endsWith('.json'));
+    const stats = { total: files.length, byVertical: {}, recent: [] };
+    files.forEach(f => {
+      const lead = JSON.parse(fs.readFileSync(path.join(LEADS_DIR, f), 'utf-8'));
+      stats.byVertical[lead.vertical] = (stats.byVertical[lead.vertical] || 0) + 1;
+    });
+    stats.recent = files.sort().slice(-10).map(f => JSON.parse(fs.readFileSync(path.join(LEADS_DIR, f), 'utf-8')));
+    res.json(stats);
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+});
+
 // POST /chat/muscleshop - Send message to Cami
 app.post('/chat/muscleshop', chatRateLimit, async (req, res) => {
   // Check demo budget

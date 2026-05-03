@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-05-02T23:30:00Z",
+  "lastRun": "2026-05-03T12:00:00Z",
   "posts": [
     {
       "slug": "automatizar-reservas-restaurante-whatsapp",
@@ -310,8 +310,8 @@
       "keyword": "automatizacion academia formacion",
       "tier": 2,
       "cluster": "academias",
-      "status": "pending",
-      "date": null
+      "status": "published",
+      "date": "2026-05-03"
     },
     {
       "slug": "crm-clinica-dental",

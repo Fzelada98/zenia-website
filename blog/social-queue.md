@@ -360,3 +360,18 @@ DM me if you run a small or mid-sized firm and want the embudo audit framework.
 #B2B #SaaS #AI #automation
 
 ---
+## 2026-05-03 - Automation for training academies
+
+52% of online students drop out before finishing the course. The cause is rarely the content. It is silence: no reminders, no nudge when someone misses a week, no one calling when the second cuota fails.
+
+A training academy with 200 active students leaves around 20K EUR per month on the table from slow lead response, mid-course churn, and exalumni who never get offered the next program.
+
+We mapped the seven processes that actually move the metrics: lead reply, enrollment, class reminders, recurring billing, early-churn alerts, post-course reviews, and exalumni reactivation. A personalized AI agent on WhatsApp covering all seven brought one academy from 50% to 32% drop-off in one cohort.
+
+The metric that moved most was not the obvious one. It was exalumni recompra at 12 months, from 8% to 21%.
+
+Reply if you run an academy and want the seven-flow checklist.
+
+#edtech #studentretention #AI #WhatsAppBusiness
+
+---

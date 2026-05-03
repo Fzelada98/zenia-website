@@ -308,6 +308,8 @@ Full plan with metrics and templates: https://zeniapartners.com/blog/aumentar-re
 ---
 ## 2026-05-01 - Calcular ROI CRM restaurante
 
+<!-- SCHEDULED:sp_HJBFOFvWksmXYMlPeGcI6 at 2026-05-04T08:00:00.000Z -->
+
 The restaurant CRM market hits 894M USD in 2026 and 74.2% of dining venues already use one, but most operators cannot tell you the ROI of their own system.
 
 The fix is mechanical, not magical. There are five levers: retention (+15%), average ticket (+6%), no-shows (down from 13% to 5%), staff productivity (2 hours back per day), and after-hours bookings (+34% capture rate).
@@ -323,6 +325,8 @@ DM me if you run a restaurant and want the full calculation template for your nu
 ---
 ## 2026-05-02 - Reducing restaurant no-shows with WhatsApp
 
+<!-- SCHEDULED:sp_8wB4DNRjsD2e7XcL2nAJo at 2026-05-05T07:00:00.000Z -->
+
 A single SMS reminder cuts restaurant no-shows by 30 to 50 percent. Adding a 24-hour WhatsApp confirmation with a one-tap button drops the rate below 5 percent. The global industry still loses ~16B USD/year to empty reserved tables.
 
 The operators who actually hit 4 percent do three boring things: they measure no-show rate by service and weekday every Monday, they make cancellation easier (not harder), and they message in four windows instead of one.
@@ -336,6 +340,8 @@ Reply if you run a restaurant and want the four-message confirmation flow.
 ---
 ## 2026-05-02 - WhatsApp Business for restaurants 2026 guide
 
+<!-- SCHEDULED:sp_G9Vuq1qIlPH9ZpYkqeBG at 2026-05-06T08:00:00.000Z -->
+
 57% of diners now book through social and messaging apps, and WhatsApp leads with a 98% open rate vs 20% for email. Most restaurants still run it from a personal phone with no API and no automation.
 
 60-cover restaurants moving to WhatsApp Business API plus a personalized AI agent see no-shows drop from 14% to 5%, direct delivery sales rise 15-25%, and 34% of new bookings arrive outside staffed hours. ROI lands between 20x and 40x platform cost in month one.
@@ -346,6 +352,8 @@ Full guide with euro costs, the 6 flows to automate first, and a 5-week implemen
 
 ---
 ## 2026-05-02 - CRM for law firms client management 2026
+
+<!-- SCHEDULED:sp_oddqdq2j3lpF71rP7Jq9W at 2026-05-07T07:00:00.000Z -->
 
 The digital maturity score for Spanish law firms is 5.1 out of 10, and 65% of practices have no digital plan. But the 67% who adopted client management software in the last two years grew billings by more than 15%.
 
@@ -362,6 +370,8 @@ DM me if you run a small or mid-sized firm and want the embudo audit framework.
 ---
 ## 2026-05-03 - Automation for training academies
 
+<!-- SCHEDULED:sp_YvrCB1hON6sRymU4Pdzi at 2026-05-08T06:00:00.000Z -->
+
 52% of online students drop out before finishing the course. The cause is rarely the content. It is silence: no reminders, no nudge when someone misses a week, no one calling when the second cuota fails.
 
 A training academy with 200 active students leaves around 20K EUR per month on the table from slow lead response, mid-course churn, and exalumni who never get offered the next program.
@@ -376,6 +386,8 @@ Reply if you run an academy and want the seven-flow checklist.
 
 ---
 ## 2026-05-03 - CRM for dental clinics
+
+<!-- SCHEDULED:sp_rbDfzs61pj4ZcpND5pPJU at 2026-05-11T07:00:00.000Z -->
 
 The average dentist retains 41% of patients after the first visit. Top performers retain 99%. The gap is not clinical skill, it's relationship management between appointments.
 

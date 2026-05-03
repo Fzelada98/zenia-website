@@ -29,6 +29,13 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  <!-- Blog: Gestión de Pacientes con IA (ES) -->
+  <url>
+    <loc>https://zeniapartners.com/blog/gestion-pacientes-ia.html</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- Blog: CRM para Clínica Dental (ES) -->
   <url>
     <loc>https://zeniapartners.com/blog/crm-clinica-dental.html</loc>

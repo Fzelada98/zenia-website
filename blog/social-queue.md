@@ -402,3 +402,14 @@ DM me if you run a dental practice and want the eight-flow framework.
 #healthtech #patientretention #AI #automation
 
 ---
+## 2026-05-03 - AI patient management for clinics
+
+Outpatient no-show rates sit at 23-33% and each missed appointment costs the average clinic ~200 USD. Wolters Kluwer's 2026 survey shows physician AI usage jumped from 38% to 66% in a year, yet only 19% of practices use any intelligent assistant for patient communication.
+
+A 5-provider clinic running a personalized AI agent on WhatsApp typically drops no-shows from 24% to 10% and reactivates 14-22% of dormant patients per quarter. ROI lands at 30-70x.
+
+Full guide with metrics, RGPD setup and 5-week rollout: https://zeniapartners.com/blog/gestion-pacientes-ia.html
+
+#healthtech #patientretention #AI #automation
+
+---

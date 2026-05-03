@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-05-03T12:00:00Z",
+  "lastRun": "2026-05-03T14:00:00Z",
   "posts": [
     {
       "slug": "automatizar-reservas-restaurante-whatsapp",
@@ -318,8 +318,8 @@
       "keyword": "crm clinica dental",
       "tier": 2,
       "cluster": "clinicas",
-      "status": "pending",
-      "date": null
+      "status": "published",
+      "date": "2026-05-03"
     },
     {
       "slug": "gestion-pacientes-ia",

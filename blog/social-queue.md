@@ -375,3 +375,18 @@ Reply if you run an academy and want the seven-flow checklist.
 #edtech #studentretention #AI #WhatsAppBusiness
 
 ---
+## 2026-05-03 - CRM for dental clinics
+
+The average dentist retains 41% of patients after the first visit. Top performers retain 99%. The gap is not clinical skill, it's relationship management between appointments.
+
+JADA data plus benchmarks from Dental Intel and Clerri put the new-patient return rate at 5-20% without a recall system, vs 90%+ with a membership-style program. Membership patients also generate 1,276 USD per year vs 469 USD without one.
+
+A 2-chair clinic with 1,500 active patients running a CRM plus a personalized AI agent in WhatsApp on top of its existing software (Gesden, Dentalink, Klinikare) typically: drops no-shows from 19% to 7%, lifts treatment-plan acceptance from 34% to 52%, and reactivates 14-18% of dormant patients per quarter. ROI lands around 16x against a 297-497 EUR monthly platform cost.
+
+The metric that surprised the operators most: 28% of appointment requests arrive outside clinic hours and were silently being lost to whoever replied first the next morning.
+
+DM me if you run a dental practice and want the eight-flow framework.
+
+#healthtech #patientretention #AI #automation
+
+---

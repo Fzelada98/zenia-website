@@ -1,20 +1,31 @@
 # SmartLead Templates — AI Bookkeeping for Transfer-Heavy SMBs
 
 **Pivot date:** 2026-05-04
+**Last revision:** 2026-05-04 v2 (founding members + risk reversal + walk-through)
 **Vertical:** Automated bookkeeping + accounts payable for SMBs receiving Zelle / wire transfers
-**Case study live:** https://zeniapartners.com/cases/whatsapp-bookkeeping-importer.html
+
+**Asset stack para link en cada email:**
+- Case study: https://zeniapartners.com/cases/whatsapp-bookkeeping-importer.html
+- Walk-through video Loom 90 seg: [PEGAR LINK LOOM AQUI cuando este grabado]
+- Lead magnet (Cashflow template gratis): https://zeniapartners.com/lead-magnets/cashflow-importer.html
+
+**Closing techniques activas:**
+1. **Founding members offer:** "Las primeras 5 importadoras que cierren en mayo son founding members: precio fijo de por vida + logo en case study"
+2. **Risk reversal:** "Money-back guarantee 30 dias post-launch si menos del 95% de capturas no se procesan correctamente"
+3. **Limited capacity:** "Tomamos solo 3 implementaciones simultaneas este mes"
+4. **Demo en vivo con captura del prospecto:** "Mandame 3 capturas reales antes de la call, las procesamos juntos"
 
 ---
 
-## TEMPLATE A — Importadora directa (Yenifer-style)
+## TEMPLATE A v2 — Importadora directa (Yenifer-style) + closing hooks
 
 **Subject options:**
 - Quick question about [Company]
 - Reconciling Zelle screenshots manually?
-- For [Industry] importers receiving wire transfers
-- 6 hours per week back
+- 6 hours per week back for [Company]
+- Founding member spot for [Company]?
 
-**Body:**
+**Cold email (con founding members + risk reversal + lead magnet):**
 
 ```
 Hi [First Name],
@@ -23,11 +34,17 @@ Saw you run [Company] importing [product/category] from [LATAM origin] into [US 
 
 Most owners I talk to in cross-border import spend 6+ hours per week reconciling Zelle screenshots, supplier invoices and Excel. Books always one week behind reality.
 
-We just shipped a case study where a cross-border importer replaced all of that with a WhatsApp-native AI bookkeeper. Captures go in, books update live, three cash buckets calculated automatically: bank, capital in transit (trucks/inventory), and receivables. No more late-night Excel reconciliation.
+We just published a case study where a cross-border importer replaced all of that with a WhatsApp-native AI bookkeeper. Captures go in, books update live, three cash buckets calculated automatically: bank, capital in transit (trucks/inventory), and receivables. No more late-night Excel.
 
 Case here: https://zeniapartners.com/cases/whatsapp-bookkeeping-importer.html
 
-30 min call to see if it fits how [Company] operates?
+Two things that might matter to you:
+
+1. We are running a Founding Members cohort this May. The first 5 importers who close get fixed pricing for life + their logo on the public case study. Two spots already reserved.
+
+2. We back the implementation with a 30-day money-back guarantee. If less than 95% of your captures process correctly post-launch, full setup refund.
+
+30 min call to see if it fits [Company]?
 
 Best,
 Fabrizzio
@@ -35,42 +52,49 @@ Zenia Partners
 zeniapartners.com
 ```
 
-**Follow-up #1 (3 days later):**
+**Follow-up #1 (day 3, walk-through video link):**
 
 ```
 Hi [First Name],
 
-Following up. The piece that hits hardest with importers is the cash traceability across three buckets — most owners I talk to can't tell at any given moment what's sitting in the bank vs locked in trucks vs owed by clients.
+Following up. I shot a 90-second walk-through showing how it actually works. Real Sheet, real flow.
 
-If reconciling that takes you more than an hour a week, worth a 30 min call.
+Watch here: [LOOM_LINK]
 
-Calendly: https://calendly.com/zeladauriartef/30min
+The piece that hits hardest with importers is the cash traceability across three buckets. Most owners I talk to can't tell at any given moment what's sitting in the bank vs locked in trucks vs owed by clients.
+
+If you want to map this against [Company]'s real operation, the Founding Members offer is still open this month.
+
+Calendly (30 min): https://calendly.com/zeladauriartef/30min
 
 Fabrizzio
 ```
 
-**Follow-up #2 (7 days later):**
+**Follow-up #2 (day 7, lead magnet + low-friction CTA):**
 
 ```
 Hi [First Name],
 
-Last note from me. If WhatsApp screenshots and Excel are still the spine of your bookkeeping, you're leaving hours and visibility on the table.
+Last note from me. Even if you don't want a call right now, I built a free Cashflow Template you can use today. Same structure we use with our paying clients (3 cash buckets, 16 categories, automatic dashboard) but as a plain Excel file. No email required.
 
-We're running pilots with import businesses now. If you want to see what the dashboard looks like for an importer your size, reply with "demo" and I'll send a 90-second video.
+Download: https://zeniapartners.com/lead-magnets/cashflow-importer.html
+
+If at some point WhatsApp + AI starts to make sense for you, the case study and Calendly are still there. Founding Members spots close end of May.
 
 Fabrizzio
 ```
 
 ---
 
-## TEMPLATE B — Restaurante multi-proveedor / Catering / Bodega
+## TEMPLATE B v2 — Restaurante multi-proveedor / Catering / Bodega
 
 **Subject options:**
 - Paying 5+ suppliers per week?
 - For restaurants with daily supplier payments
 - Manual accounts payable killing margins?
+- Founding member: restaurant edition
 
-**Body:**
+**Cold email:**
 
 ```
 Hi [First Name],
@@ -79,15 +103,35 @@ Quick note. Restaurants and food businesses like [Company] typically pay 5-10 su
 
 We just published a case study where an SMB receiving daily transfers replaced their entire manual bookkeeping with a WhatsApp-native AI assistant. Captures go in, books update in real time, accounts payable + receivables tracked automatically.
 
-Case here: https://zeniapartners.com/cases/whatsapp-bookkeeping-importer.html
+Case: https://zeniapartners.com/cases/whatsapp-bookkeeping-importer.html
+Walk-through video (90s): [LOOM_LINK]
 
-Restaurants have the same operational pattern: high transaction volume, multiple categories (suppliers, payroll, taxes, deliveries), and the owner spending nights catching up on Excel.
+Two reasons to act this month:
+
+1. Founding Members cohort — first 5 closes in May get lifetime fixed pricing + logo in case study
+2. 30-day money-back guarantee on the setup. Risk on us, not you.
+
+Restaurants follow the same operational pattern as the case study: high transaction volume, multi-category (suppliers, payroll, taxes, deliveries), owner doing Excel at night.
 
 30 min call?
 
 Best,
 Fabrizzio
 Zenia Partners
+```
+
+**Follow-up #1 (day 3):**
+
+```
+Hi [First Name],
+
+Quick follow-up. If you want to see if this fits before booking time, the Cashflow Template we built is free and downloadable: https://zeniapartners.com/lead-magnets/cashflow-importer.html
+
+Three buckets of cash + 16 categories + dashboard. No email required.
+
+If you want a custom walk-through with your own captures, Calendly: https://calendly.com/zeladauriartef/30min
+
+Fabrizzio
 ```
 
 ---

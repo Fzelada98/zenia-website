@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 800px;
+    height: 240px;
+    font-family: "Georgia", "Garamond", serif;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 40px;
+  }
+  .logo-wrap {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+  .icon {
+    width: 110px;
+    height: 110px;
+    background: linear-gradient(135deg, #1f4d2e 0%, #2d6e42 100%);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 20px rgba(31, 77, 46, 0.25);
+    position: relative;
+  }
+  .icon svg { width: 70px; height: 70px; }
+  .text { line-height: 1.05; }
+  .brand {
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: #1f4d2e;
+    font-family: "Playfair Display", "Georgia", serif;
+  }
+  .tagline {
+    font-size: 14px;
+    color: #8b6914;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-top: 8px;
+    font-family: "Inter", "Helvetica", sans-serif;
+  }
+  .accent {
+    color: #c9a961;
+  }
+</style>
+</head>
+<body>
+  <div class="logo-wrap">
+    <div class="icon">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <!-- olive branch leaves -->
+        <ellipse cx="35" cy="40" rx="18" ry="9" fill="#c9a961" transform="rotate(-30 35 40)"/>
+        <ellipse cx="55" cy="32" rx="16" ry="8" fill="#e8d49a" transform="rotate(20 55 32)"/>
+        <ellipse cx="45" cy="58" rx="20" ry="10" fill="#c9a961" transform="rotate(-50 45 58)"/>
+        <ellipse cx="65" cy="55" rx="16" ry="8" fill="#e8d49a" transform="rotate(40 65 55)"/>
+        <!-- stem -->
+        <path d="M 20 75 Q 50 50 80 30" stroke="#c9a961" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <!-- olives -->
+        <circle cx="40" cy="65" r="5" fill="#1f4d2e" stroke="#0f2e1c" stroke-width="1.5"/>
+        <circle cx="60" cy="48" r="5" fill="#1f4d2e" stroke="#0f2e1c" stroke-width="1.5"/>
+        <circle cx="72" cy="38" r="4" fill="#1f4d2e" stroke="#0f2e1c" stroke-width="1.5"/>
+      </svg>
+    </div>
+    <div class="text">
+      <div class="brand">OLIVAR <span class="accent">del</span> SUR</div>
+      <div class="tagline">Importadora · Aceite de oliva extra virgen</div>
+    </div>
+  </div>
+</body>
+</html>

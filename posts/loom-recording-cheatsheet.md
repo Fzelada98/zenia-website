@@ -1,129 +1,149 @@
 # Loom Recording Cheatsheet — Walk-through 90 seg
 
-**Objetivo:** grabar un walk-through de 90 segundos mostrando el flujo de Gaia (captura Zelle → fila en Sheet → dashboard 3 buckets actualizado). Tú solo grabás y ponés tu cara. Yo te dejé todo lo demás listo.
+**Marca demo:** OLIVAR DEL SUR (importadora ficticia de aceite de oliva)
+**Cliente del demo:** Carmen Alvarez (ficticia)
+
+> Marca y nombres son inventados a proposito para no confundir con clientes reales (Yenifer / Golden Oil). El video es publico, no debe haber datos reales.
 
 ---
 
 ## 1. Setup previo (5 min, una sola vez)
 
-### a) Abrir el Sheet demo en Google Sheets
+### a) Subir el Sheet demo a Drive
 
-1. Bajá el archivo: `c:\Users\Usuario\AI\zenia-website\posts\demo-sheet-for-loom.xlsx`
-2. Abrí Google Drive en el navegador.
-3. Click derecho en cualquier carpeta → "Subir archivos" → seleccioná `demo-sheet-for-loom.xlsx`.
-4. Cuando termine de subir, click derecho en el archivo subido → "Abrir con" → "Hojas de cálculo de Google".
-5. Drive te lo convierte automáticamente a un Sheet nativo. Renombralo a algo como **"GOLDEN OIL DEMO · Repositorio Zelle"** (esto se ve en la grabación).
-6. Dejalo abierto en una pestaña.
+1. Tenes el archivo en: `c:\Users\Usuario\AI\zenia-website\posts\demo-sheet-for-loom.xlsx`
+2. Abri Google Drive en el navegador.
+3. Click derecho en cualquier carpeta → "Subir archivos" → seleccionalo.
+4. Cuando termine, click derecho → "Abrir con" → "Hojas de calculo de Google".
+5. Drive lo convierte a Sheet nativo. Renombralo en Drive a **"OLIVAR DEL SUR · Repositorio Zelle"** (eso aparece en la grabacion arriba).
+6. Dejalo abierto en una pestaña, **arranca en la pestaña "Portada"**.
 
-### b) Abrir la captura Zelle
+### b) Abrir las 4 capturas Zelle/Wire
 
-- Tenés el PNG en: `c:\Users\Usuario\AI\zenia-website\posts\zelle-fake-maria-gonzalez.png`
-- Abrila con el visor de imágenes de Windows. Vas a "compartirla" durante la grabación simulando que es lo que te llega por WhatsApp.
+Estan listas en `c:\Users\Usuario\AI\zenia-website\posts\`:
+- `zelle-fake-01-maria.png` — Maria Gonzalez $500 (la "magic" del demo)
+- `zelle-fake-02-carlos.png` — Carlos Perez $700
+- `zelle-fake-03-lucia.png` — Lucia Ramirez $650
+- `wire-fake-04-andes.png` — Wire saliente $2,800 a Logistica Andes
 
-### c) WhatsApp Web abierto en el chat de Gaia (opcional pero suma realismo)
+Abrilas todas en el visor de imagenes de Windows en orden. Vas a ir alternando entre ellas durante el video.
 
-- Abrí web.whatsapp.com.
-- Andá al chat con Gaia (o abrí cualquier chat tuyo, no se nota la diferencia en la grabación, pero usá uno donde NO haya conversación reciente sensible).
-- Dejalo abierto en otra pestaña.
+### c) WhatsApp Web abierto (opcional)
+
+- web.whatsapp.com → cualquier chat (no se ve el contenido, solo el header).
+- Sirve para mostrar 1 segundo "asi llega la captura".
 
 ### d) Loom
 
-- Si no lo tenés: bajá la extensión Chrome de Loom (loom.com/download).
-- Login con tu cuenta.
-- Click en el ícono Loom → modo **"Screen + Cam"** → tu cara aparece como burbuja en la esquina inferior derecha.
-- Resolución: HD (1080p).
+- Extension Chrome de Loom (loom.com/download).
+- Modo **"Screen + Cam"** → tu cara aparece como burbuja en la esquina inferior derecha.
+- Resolucion HD (1080p).
 
 ---
 
 ## 2. Antes de darle REC
 
-- Cerrá Slack, Telegram, mail. Que no aparezcan notis durante la grabación.
-- Tené 2 pestañas en Chrome:
-  - **Pestaña 1:** Google Sheets (el demo)
-  - **Pestaña 2:** WhatsApp Web (opcional)
-- Tené el PNG de Zelle abierto en ventana aparte (para mostrarlo durante la grabación).
-- Hacé un test de 5 segundos primero, mirá que el audio salga bien y que tu cara se vea.
+- Cerrá Slack, Telegram, mail, notificaciones del sistema.
+- Tene 3 ventanas abiertas:
+  - **Pestaña Chrome 1:** Google Sheets (OLIVAR DEL SUR · Repositorio Zelle), pestaña "Portada"
+  - **Pestaña Chrome 2:** WhatsApp Web (opcional)
+  - **Visor de imagenes** con las 4 capturas
+- Test 5 segundos primero: audio + tu cara visible en la burbuja.
 
 ---
 
 ## 3. Script con marcas de tiempo (ESPAÑOL)
 
-> **TIP:** No leas el script. Memorizá los 5 puntos clave abajo y hablá natural.
+> **TIP:** No leas. Memoriza los 5 puntos clave abajo y habla natural.
 
-### [0:00 – 0:10] Hook (cámara, sin compartir nada todavía o con el Sheet detrás)
+### [0:00 – 0:10] Hook (camara solo, sin compartir)
 
-> "Hola, soy Fabrizzio de Zenia. Si tu negocio recibe pagos por Zelle o transferencia y aún cuadrás los libros a mano, este video es para vos. Te muestro en 90 segundos cómo trabaja una de nuestras clientas hoy."
+> "Hola, soy Fabrizzio de Zenia. Si tu negocio recibe pagos por Zelle o transferencia y aun cuadras los libros a mano, este video es para vos. Te muestro en 90 segundos como trabaja una de nuestras clientas."
 
-### [0:10 – 0:35] Demo problema → captura
+### [0:10 – 0:25] Demo: el Sheet vivo (Portada)
 
-**ACCIÓN:** click en pestaña "Transacciones" del Sheet. Mostrá las 15 filas existentes (no toques nada).
+**ACCION:** comparti pantalla, pestaña Portada del Sheet. Visibles: logo OLIVAR DEL SUR + EFECTIVO TRAZADO TOTAL + 3 buckets + KPIs + alertas.
 
-> "Esto es el repositorio vivo de una importadora venezolana en USA. Cada fila es un movimiento. Mirá lo que pasa cuando ella recibe un Zelle nuevo."
+> "Esto es el repositorio vivo de Olivar del Sur, una importadora de aceite de oliva. Mira: arriba el efectivo total trazado, los tres buckets de cash, los KPIs del mes, las alertas operativas. Esto se actualiza solo cuando le llega un pago."
 
-**ACCIÓN:** cambiá a la imagen del PNG de Zelle (alt+tab o segunda pantalla).
+### [0:25 – 0:40] Demo problema → captura llega
 
-> "Le llega esta captura de Bank of America. María González le mandó 500 dólares por aceite de oliva. Antes ella copiaba esto a Excel a mano: nombre, monto, fecha, código. Ahora simplemente lo reenvía al WhatsApp de la asistente como si se lo mandara a una amiga. Sin app, sin login, sin formulario."
+**ACCION:** alt+tab al visor de imagenes, mostra `zelle-fake-01-maria.png` (Maria Gonzalez $500).
 
-### [0:35 – 1:00] Demo magia → resultado en Sheet
+> "Le llega esta captura de Bank of America. Maria Gonzalez le mando 500 dolares por aceite de oliva. Antes ella copiaba esto a Excel a mano. Ahora simplemente lo reenvia al WhatsApp de la asistente como si se lo mandara a una amiga. Sin app, sin login, sin formulario."
 
-**ACCIÓN:** volvé al Sheet, pestaña Transacciones. Apuntá con el cursor a la **PRIMERA FILA** (María González $500 cobro_cliente).
+**(opcional 2 seg)** alt+tab a WhatsApp Web → "asi le llega":
+> "Lo reenvia aca, listo."
 
-> "En menos de 8 segundos, la asistente lee la captura, identifica el cliente, el monto, el código de confirmación, la categoriza correctamente entre 16 categorías contables, valida que no sea duplicada, y la escribe acá en el Sheet."
+### [0:40 – 1:00] Demo magia → resultado en Sheet
 
-**ACCIÓN:** click en la pestaña **"Portada"**. Mostrá los 3 buckets arriba.
+**ACCION:** volve al Sheet, click en pestaña **"Transacciones"**. Apunta con cursor a la PRIMERA FILA (Maria Gonzalez $500 cobro_cliente con Conf# ABC123XYZ).
 
-> "Y arriba en el dashboard, los tres buckets de efectivo se actualizan solos: cuánto tiene en banco, cuánto está en gandolas, cuánto le deben sus clientes. Cero data-entry."
+> "En menos de 8 segundos, la asistente lee la captura, identifica el cliente, el monto, el codigo de confirmacion, la categoriza correctamente entre 16 categorias contables, valida que no sea duplicada, y la escribe aca."
 
-### [1:00 – 1:20] Diferenciadores rápidos
+**ACCION:** click en pestaña **"Cashflow"** → muestra el grafico de cashflow diario.
 
-**ACCIÓN:** click en la pestaña **"Deudas"**. Mostrá las 3 filas de préstamos (Luis Mendoza, Pedro Ramos, Royal Caribena).
+> "Y todo lo que entra alimenta el cashflow diario. Aca ves la curva acumulada del mes."
 
-> "Tracker de préstamos con interés mensual, exposición neta, audit log con timestamp para revisión fiscal."
+**ACCION:** click vuelta a **"Portada"** → pointer a los 3 buckets.
 
-**ACCIÓN:** volvé a cámara (cierra el share de pantalla o hacé que tu cara ocupe más).
+> "Y los tres buckets se recalculan solos: cuanto tiene en banco, cuanto esta en gandolas, cuanto le deben. Cero data-entry."
 
-> "Yenifer, nuestra clienta, pasó de seis horas semanales en Excel a cero. Esto es lo que hacemos en Zenia: asistentes de IA personalizadas para tu operación específica."
+### [1:00 – 1:20] Diferenciadores rapidos
+
+**ACCION:** mostra otras 2-3 capturas rapido (alt+tab):
+- `zelle-fake-02-carlos.png` ($700)
+- `zelle-fake-03-lucia.png` ($650)
+- `wire-fake-04-andes.png` ($2,800 wire saliente)
+
+> "Da igual el banco, da igual si es Zelle, wire o transferencia. Si es ingreso o gasto. Da igual el monto. La asistente las procesa todas igual."
+
+**ACCION:** click en pestaña **"Deudas"**.
+
+> "Tracker de prestamos con interes mensual, exposicion neta, audit log con timestamp para revision fiscal."
+
+**ACCION:** volve a camara (cierra share o aumenta tu burbuja).
+
+> "Nuestra clienta paso de seis horas semanales en Excel a cero. Esto es lo que hacemos en Zenia: asistentes de IA personalizadas para tu operacion especifica."
 
 ### [1:20 – 1:30] Cierre + CTA
 
-> "Si tu negocio recibe Zelle o transferencias y aún las cuadrás a mano, agendá una llamada de 30 minutos en el link debajo. Te muestro qué se vería con tus capturas reales. Hasta pronto."
+> "Si tu negocio recibe Zelle o transferencias y aun las cuadras a mano, agenda una llamada de 30 minutos en el link debajo. Te muestro que se veria con tus capturas reales. Hasta pronto."
 
 ---
 
-## 4. Después de grabar
+## 4. Despues de grabar
 
-1. Loom te genera el link automáticamente cuando le das stop.
-2. Edición opcional (Loom tiene editor): cortá silencios al inicio/final si te quedaron largos.
-3. Configurá en Loom el thumbnail: elegí un frame donde aparezca el Sheet con los 3 buckets visibles.
+1. Loom genera el link automatico cuando le das stop.
+2. Edicion opcional: corta silencios al inicio/final.
+3. Configura thumbnail: elegi un frame con el Sheet visible (Portada con buckets) o tu cara hablando.
 4. **Mandame el link.** Yo lo embebo en:
-   - 30 landings programáticas (`/en/ai-bookkeeping-importer-*` y `/es/contabilidad-ia-importadora-*`)
+   - 30 landings programaticas (`/en/ai-bookkeeping-importer-*` y `/es/contabilidad-ia-importadora-*`)
    - Case study principal (`/cases/whatsapp-bookkeeping-importer.html`)
    - Lead magnet thank-you page (`/lead-magnets/cashflow-importer.html`)
-   - Templates SmartLead (reemplazo `[LOOM_LINK]` placeholder en los 3 templates v2)
+   - Templates SmartLead (reemplazo del placeholder `[LOOM_LINK]`)
    - Email signature (opcional)
 
 ---
 
-## 5. Tiempo total estimado para vos
+## 5. Tiempo total para vos
 
 - Setup: 5 min
-- 1 grabación buena (probable que la primera salga ok): 2 min
-- Buffer si querés re-grabar: 5 min adicionales
-- **Total: 10-15 min máximo**
-
-Si no querés mostrar tu cara, podés grabar solo screen + voz (Loom tiene esa opción). Pero la cara genera más confianza, por eso el script asume que sí aparecés.
+- 1 grabacion buena: 2 min
+- Buffer si re-grabas: 5 min
+- **Total: 10-15 min maximo**
 
 ---
 
-## 6. Qué NO hacer
+## 6. Que NO hacer
 
-- No improvises sobre cifras de Yenifer que no estén en el Sheet (mantenelo controlado).
-- No menciones nombres reales que no sean los del demo (María González, Luis Mendoza, Pedro Ramos, Royal Caribena = inventados).
-- No promet 100% precisión. Decí "menos de 8 segundos" y "categoriza correctamente entre 16 categorías" sin claim absoluto.
-- No vayas más allá de 1:30 min. Si pasaste de 1:40, regrabá.
+- No improvises cifras que no esten en el Sheet.
+- No uses nombres de clientes reales (Yenifer, Golden Oil, etc). El demo dice **OLIVAR DEL SUR** y **Carmen Alvarez** a proposito.
+- No prometas 100% precision. Decí "menos de 8 segundos" y "categoriza entre 16 categorias" sin claim absoluto.
+- No te pases de 1:30 min. Si pasaste de 1:40, regraba.
 
 ---
 
-## 7. Versión INGLÉS (si querés grabar las dos)
+## 7. Version INGLES
 
-Está en [loom-walkthrough-script.md](loom-walkthrough-script.md) bajo "SCRIPT VERSIÓN INGLÉS". Mismo timing, mismas acciones.
+Esta en [loom-walkthrough-script.md](loom-walkthrough-script.md) bajo "SCRIPT VERSION INGLES". Mismo timing, mismas acciones, brand OLIVAR DEL SUR.

@@ -1,11 +1,14 @@
 # Loom Walk-Through Script — 90 segundos
 
+**Marca demo:** OLIVAR DEL SUR (importadora ficticia de aceite de oliva). Cliente ficticia: Carmen Alvarez. Datos inventados para no comprometer al cliente real.
+
 **Setup:**
-- Grábalo con Loom o Loom alternativa (Soapbox, Vidyard) en idioma español neutro o inglés según vertical
-- Camara on (face cam pequeña en esquina) + screen share del Sheet de Yenifer (con permiso)
+- Grabá con Loom (Screen + Cam, HD 1080p)
+- Camara on (face cam pequeña en esquina) + screen share del Sheet demo OLIVAR DEL SUR
 - Tono casual, ejecutivo, peruano neutro
 - Vestimenta: business casual, fondo limpio
 - Audio: micrófono externo si tienes, sino el del laptop pero en habitación silenciosa
+- Para guia paso a paso ver [loom-recording-cheatsheet.md](loom-recording-cheatsheet.md)
 
 ---
 
@@ -19,7 +22,7 @@
 
 (Compartir pantalla del Sheet de Yenifer, pestaña Transacciones vacía)
 
-> "Esto es el repositorio vivo de una importadora venezolana en USA. Mira lo que pasa cuando ella recibe un Zelle."
+> "Esto es el repositorio vivo de Olivar del Sur, una importadora de aceite de oliva. Mira lo que pasa cuando ella recibe un Zelle."
 
 (Cambiar a WhatsApp Web mostrando una captura de Zelle siendo enviada al chat de Gaia)
 
@@ -43,7 +46,7 @@
 
 (Volver a cámara)
 
-> "Yenifer pasó de 6 horas semanales en Excel a cero. Esto es lo que hacemos en Zenia: asistentes de IA personalizadas para tu operación específica."
+> "Nuestra clienta pasó de 6 horas semanales en Excel a cero. Esto es lo que hacemos en Zenia: asistentes de IA personalizadas para tu operación específica."
 
 **[1:20 – 1:30] Cierre + CTA**
 
@@ -61,7 +64,7 @@
 
 (Share Sheet, then WhatsApp)
 
-> "This is the live repository of a Venezuelan-American cross-border importer. Watch what happens when she receives a Zelle payment."
+> "This is the live repository of Olivar del Sur, an olive-oil cross-border importer. Watch what happens when she receives a Zelle payment."
 
 (Show capture being sent in WhatsApp)
 

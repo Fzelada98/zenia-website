@@ -23,7 +23,6 @@ DARK_BG = "1F4D2E"
 GOLD = "C9A961"
 GOLD_DARK = "8B6914"
 GOLD_LIGHT = "F5ECD7"
-LINK_COLOR = "059669"
 WHITE = "FFFFFF"
 TEXT_PRIMARY = "1A1A1A"
 TEXT_MUTED = "94A3B8"
@@ -32,11 +31,17 @@ GREEN_TEXT = "166534"
 RED_BG = "FEE2E2"
 RED_TEXT = "991B1B"
 BLUE_BG = "DBEAFE"
-BLUE_TEXT = "2563EB"
 AMBER_BG = "FEF3C7"
 AMBER_TEXT = "92400E"
 ORANGE_BG = "FED7AA"
 ORANGE_TEXT = "9A3412"
+
+# IB finance color convention
+INPUT_BLUE  = "0070C0"   # hardcoded input (saldo inicial, datos transaccion)
+FORMULA_BK  = "1A1A1A"   # formula misma hoja
+LINK_GREEN  = "00B050"   # formula cross-sheet (referencia a otra pestana)
+LINK_COLOR  = LINK_GREEN  # alias
+BLUE_TEXT   = INPUT_BLUE  # alias
 
 wb = Workbook()
 thin = Side(border_style="thin", color="E2E8F0")
@@ -172,7 +177,7 @@ ws_d['B7'].alignment = Alignment(horizontal='center', vertical='center')
 ws_d.row_dimensions[7].height = 22
 
 ws_d['B8'] = "=C12+E12+G12"
-ws_d['B8'].font = Font(size=36, bold=True, color=DARK_BG)
+ws_d['B8'].font = Font(size=36, bold=True, color=FORMULA_BK)
 ws_d['B8'].fill = fill(GOLD_LIGHT)
 ws_d['B8'].number_format = '"$"#,##0.00'
 ws_d.merge_cells('B8:I8')
@@ -220,7 +225,9 @@ for c_left, c_right, label, formula, sub, bg in cards:
     rng2 = f"{c_left}12:{c_right}12"
     ws_d.merge_cells(rng2)
     ws_d[f"{c_left}12"] = formula
-    ws_d[f"{c_left}12"].font = Font(size=20, bold=True, color=DARK_BG)
+    # Buckets B/D/F = SUMIFS Trans (cross-sheet) -> GREEN. H = same sheet sum -> BLACK
+    bucket_color = FORMULA_BK if c_left == 'H' else LINK_GREEN
+    ws_d[f"{c_left}12"].font = Font(size=20, bold=True, color=bucket_color)
     ws_d[f"{c_left}12"].fill = fill(bg)
     ws_d[f"{c_left}12"].alignment = Alignment(horizontal='center', vertical='center')
     ws_d[f"{c_left}12"].number_format = '"$"#,##0.00'
@@ -260,7 +267,9 @@ for c_left, c_right, label, formula, sub, bg in kpi_cards:
     rng2 = f"{c_left}18:{c_right}18"
     ws_d.merge_cells(rng2)
     ws_d[f"{c_left}18"] = formula
-    ws_d[f"{c_left}18"].font = Font(size=20, bold=True, color=LINK_COLOR)
+    # B/D = SUMIFS Trans cross-sheet -> GREEN. F/H = same-sheet formulas -> BLACK
+    kpi_color = LINK_GREEN if c_left in ('B', 'D') else FORMULA_BK
+    ws_d[f"{c_left}18"].font = Font(size=20, bold=True, color=kpi_color)
     ws_d[f"{c_left}18"].fill = fill(bg)
     ws_d[f"{c_left}18"].alignment = Alignment(horizontal='center', vertical='center')
     ws_d[f"{c_left}18"].number_format = '"$"#,##0.00'
@@ -422,7 +431,7 @@ for i, w in enumerate(widths, 1):
 
 
 # =========================
-# 4. CASHFLOW (con grafico mejorado)
+# 4. CASHFLOW (HORIZONTAL: fechas como columnas, metricas como filas)
 # =========================
 ws_cf = wb.create_sheet("Cashflow")
 ws_cf.sheet_view.showGridLines = False
@@ -430,28 +439,22 @@ ws_cf.sheet_view.showGridLines = False
 ws_cf['B2'] = "CASHFLOW DIARIO  ·  Mayo 2026"
 ws_cf['B2'].font = Font(size=18, bold=True, color=GOLD)
 ws_cf['B2'].fill = fill(DARK_BG)
-ws_cf.merge_cells('B2:G2')
+ws_cf.merge_cells('B2:U2')
 ws_cf['B2'].alignment = Alignment(horizontal='left', vertical='center', indent=1)
 ws_cf.row_dimensions[2].height = 38
 
-ws_cf['B3'] = "Movimientos consolidados por fecha. Ingresos / Gastos / Flujo / Saldo acumulado."
+ws_cf['B3'] = "Movimientos consolidados por fecha. Filas: Ingresos / Gastos / Flujo Neto / Saldo Acumulado."
 ws_cf['B3'].font = Font(size=10, italic=True, color="64748B")
-ws_cf.merge_cells('B3:G3')
+ws_cf.merge_cells('B3:Q3')
 
-cf_headers = ["Fecha", "Ingresos", "Gastos", "Flujo Neto", "Saldo Acumulado"]
-for i, h in enumerate(cf_headers, 2):
-    c = ws_cf.cell(row=5, column=i, value=h)
-    c.font = Font(bold=True, color=GOLD, size=11)
-    c.fill = fill(DARK_BG)
-    c.alignment = Alignment(horizontal='center', vertical='center')
-ws_cf.row_dimensions[5].height = 28
-
-# Saldo inicial reference
-ws_cf['I3'] = "Saldo inicial (Dashboard!E5):"
-ws_cf['I3'].font = Font(size=9, italic=True, color="64748B")
-ws_cf['J3'] = "=Dashboard!E5"
-ws_cf['J3'].font = Font(size=10, bold=True, color=BLUE_TEXT)
-ws_cf['J3'].number_format = '"$"#,##0.00'
+# Saldo inicial reference (caja arriba a la derecha)
+ws_cf['R3'] = "Saldo inicial (Dashboard!E5):"
+ws_cf['R3'].font = Font(size=9, italic=True, color="64748B")
+ws_cf['R3'].alignment = Alignment(horizontal='right')
+ws_cf.merge_cells('R3:T3')
+ws_cf['U3'] = "=Dashboard!E5"
+ws_cf['U3'].font = Font(size=10, bold=True, color=LINK_GREEN)
+ws_cf['U3'].number_format = '"$"#,##0.00'
 
 dates = [
     "2026-04-18", "2026-04-19", "2026-04-20", "2026-04-21", "2026-04-22",
@@ -459,38 +462,113 @@ dates = [
     "2026-04-28", "2026-04-29", "2026-04-30", "2026-05-01", "2026-05-02",
     "2026-05-03", "2026-05-04",
 ]
-for idx, d in enumerate(dates):
-    row = 6 + idx
-    ws_cf.cell(row=row, column=2, value=d).font = Font(size=10, color=TEXT_PRIMARY)
-    ws_cf.cell(row=row, column=2).alignment = Alignment(horizontal='center')
-    ws_cf.cell(row=row, column=3, value=f'=SUMIFS(Transacciones!D:D,Transacciones!E:E,"in",Transacciones!B:B,"{d}")')
-    ws_cf.cell(row=row, column=3).font = Font(size=10, color=GREEN_TEXT)
-    ws_cf.cell(row=row, column=3).number_format = '"$"#,##0.00'
-    ws_cf.cell(row=row, column=4, value=f'=SUMIFS(Transacciones!D:D,Transacciones!E:E,"out",Transacciones!B:B,"{d}")')
-    ws_cf.cell(row=row, column=4).font = Font(size=10, color=RED_TEXT)
-    ws_cf.cell(row=row, column=4).number_format = '"$"#,##0.00'
-    ws_cf.cell(row=row, column=5, value=f"=C{row}-D{row}")
-    ws_cf.cell(row=row, column=5).font = Font(size=10, bold=True, color=DARK_BG)
-    ws_cf.cell(row=row, column=5).number_format = '"$"#,##0.00'
-    if idx == 0:
-        ws_cf.cell(row=row, column=6, value=f"=$J$3+E{row}")
-    else:
-        ws_cf.cell(row=row, column=6, value=f"=F{row-1}+E{row}")
-    ws_cf.cell(row=row, column=6).font = Font(size=10, bold=True, color=BLUE_TEXT)
-    ws_cf.cell(row=row, column=6).number_format = '"$"#,##0.00'
 
-totals_row = 6 + len(dates)
-ws_cf.cell(row=totals_row, column=2, value="TOTAL PERIODO").font = Font(bold=True, color=DARK_BG, size=11)
-ws_cf.cell(row=totals_row, column=2).fill = fill(GOLD_LIGHT)
-ws_cf.cell(row=totals_row, column=2).alignment = Alignment(horizontal='center')
-ws_cf.cell(row=totals_row, column=3, value=f"=SUM(C6:C{totals_row-1})").font = Font(bold=True, color=GREEN_TEXT, size=11)
-ws_cf.cell(row=totals_row, column=3).number_format = '"$"#,##0.00'
-ws_cf.cell(row=totals_row, column=4, value=f"=SUM(D6:D{totals_row-1})").font = Font(bold=True, color=RED_TEXT, size=11)
-ws_cf.cell(row=totals_row, column=4).number_format = '"$"#,##0.00'
-ws_cf.cell(row=totals_row, column=5, value=f"=C{totals_row}-D{totals_row}").font = Font(bold=True, color=DARK_BG, size=11)
-ws_cf.cell(row=totals_row, column=5).number_format = '"$"#,##0.00'
-ws_cf.cell(row=totals_row, column=6, value=f"=F{totals_row-1}").font = Font(bold=True, color=BLUE_TEXT, size=11)
-ws_cf.cell(row=totals_row, column=6).number_format = '"$"#,##0.00'
+# Header row 5: "Concepto" | dates as columns | Total
+ws_cf.cell(row=5, column=2, value="Concepto").font = Font(bold=True, color=GOLD, size=11)
+ws_cf.cell(row=5, column=2).fill = fill(DARK_BG)
+ws_cf.cell(row=5, column=2).alignment = Alignment(horizontal='center', vertical='center')
+
+for i, d in enumerate(dates):
+    col = 3 + i  # C, D, E, ...
+    # Show only month-day for compactness e.g. "18-Abr"
+    short = datetime.strptime(d, "%Y-%m-%d").strftime("%d-%b")
+    c = ws_cf.cell(row=5, column=col, value=short)
+    c.font = Font(bold=True, color=GOLD, size=10)
+    c.fill = fill(DARK_BG)
+    c.alignment = Alignment(horizontal='center', vertical='center')
+
+total_col = 3 + len(dates)  # column index of "Total"
+ct = ws_cf.cell(row=5, column=total_col, value="Total")
+ct.font = Font(bold=True, color=GOLD, size=11)
+ct.fill = fill(GOLD_DARK)
+ct.alignment = Alignment(horizontal='center', vertical='center')
+ws_cf.row_dimensions[5].height = 32
+
+# Row 6: Ingresos
+ws_cf.cell(row=6, column=2, value="INGRESOS").font = Font(size=10, bold=True, color=GREEN_TEXT)
+ws_cf.cell(row=6, column=2).fill = fill(GREEN_BG)
+ws_cf.cell(row=6, column=2).alignment = Alignment(horizontal='left', indent=1, vertical='center')
+for i, d in enumerate(dates):
+    col = 3 + i
+    cell = ws_cf.cell(row=6, column=col, value=f'=SUMIFS(Transacciones!$D:$D,Transacciones!$E:$E,"in",Transacciones!$B:$B,"{d}")')
+    cell.font = Font(size=9, color=LINK_GREEN)  # cross-sheet
+    cell.number_format = '"$"#,##0;[Red]-"$"#,##0;""'
+    cell.alignment = Alignment(horizontal='right')
+    cell.fill = fill("F0FDF4")
+# Total
+tot_in_letter = get_column_letter(total_col)
+first_letter = get_column_letter(3)
+last_letter = get_column_letter(total_col - 1)
+ws_cf.cell(row=6, column=total_col, value=f"=SUM({first_letter}6:{last_letter}6)").font = Font(size=10, bold=True, color=FORMULA_BK)
+ws_cf.cell(row=6, column=total_col).number_format = '"$"#,##0'
+ws_cf.cell(row=6, column=total_col).fill = fill(GOLD_LIGHT)
+ws_cf.cell(row=6, column=total_col).alignment = Alignment(horizontal='right')
+
+# Row 7: Gastos
+ws_cf.cell(row=7, column=2, value="GASTOS").font = Font(size=10, bold=True, color=RED_TEXT)
+ws_cf.cell(row=7, column=2).fill = fill(RED_BG)
+ws_cf.cell(row=7, column=2).alignment = Alignment(horizontal='left', indent=1, vertical='center')
+for i, d in enumerate(dates):
+    col = 3 + i
+    cell = ws_cf.cell(row=7, column=col, value=f'=SUMIFS(Transacciones!$D:$D,Transacciones!$E:$E,"out",Transacciones!$B:$B,"{d}")')
+    cell.font = Font(size=9, color=LINK_GREEN)  # cross-sheet
+    cell.number_format = '"$"#,##0;[Red]-"$"#,##0;""'
+    cell.alignment = Alignment(horizontal='right')
+    cell.fill = fill("FEF2F2")
+ws_cf.cell(row=7, column=total_col, value=f"=SUM({first_letter}7:{last_letter}7)").font = Font(size=10, bold=True, color=FORMULA_BK)
+ws_cf.cell(row=7, column=total_col).number_format = '"$"#,##0'
+ws_cf.cell(row=7, column=total_col).fill = fill(GOLD_LIGHT)
+ws_cf.cell(row=7, column=total_col).alignment = Alignment(horizontal='right')
+
+# Row 8: Flujo Neto (formula misma hoja)
+ws_cf.cell(row=8, column=2, value="FLUJO NETO").font = Font(size=10, bold=True, color=DARK_BG)
+ws_cf.cell(row=8, column=2).fill = fill(GOLD_LIGHT)
+ws_cf.cell(row=8, column=2).alignment = Alignment(horizontal='left', indent=1, vertical='center')
+for i, d in enumerate(dates):
+    col = 3 + i
+    col_letter = get_column_letter(col)
+    cell = ws_cf.cell(row=8, column=col, value=f"={col_letter}6-{col_letter}7")
+    cell.font = Font(size=9, bold=True, color=FORMULA_BK)
+    cell.number_format = '"$"#,##0;[Red]-"$"#,##0;""'
+    cell.alignment = Alignment(horizontal='right')
+ws_cf.cell(row=8, column=total_col, value=f"={tot_in_letter}6-{tot_in_letter}7").font = Font(size=10, bold=True, color=FORMULA_BK)
+ws_cf.cell(row=8, column=total_col).number_format = '"$"#,##0'
+ws_cf.cell(row=8, column=total_col).fill = fill(GOLD_LIGHT)
+ws_cf.cell(row=8, column=total_col).alignment = Alignment(horizontal='right')
+
+# Row 9: Saldo Acumulado (running)
+ws_cf.cell(row=9, column=2, value="SALDO ACUMULADO").font = Font(size=10, bold=True, color=DARK_BG)
+ws_cf.cell(row=9, column=2).fill = fill(BLUE_BG)
+ws_cf.cell(row=9, column=2).alignment = Alignment(horizontal='left', indent=1, vertical='center')
+for i, d in enumerate(dates):
+    col = 3 + i
+    col_letter = get_column_letter(col)
+    if i == 0:
+        formula = f"=$U$3+{col_letter}8"
+    else:
+        prev_letter = get_column_letter(col - 1)
+        formula = f"={prev_letter}9+{col_letter}8"
+    cell = ws_cf.cell(row=9, column=col, value=formula)
+    cell.font = Font(size=9, bold=True, color=FORMULA_BK)
+    cell.number_format = '"$"#,##0'
+    cell.alignment = Alignment(horizontal='right')
+    cell.fill = fill("EFF6FF")
+# Total saldo: =U3+totals_flujo
+ws_cf.cell(row=9, column=total_col, value=f"=$U$3+{tot_in_letter}8").font = Font(size=10, bold=True, color=FORMULA_BK)
+ws_cf.cell(row=9, column=total_col).number_format = '"$"#,##0'
+ws_cf.cell(row=9, column=total_col).fill = fill(GOLD)
+ws_cf.cell(row=9, column=total_col).alignment = Alignment(horizontal='right')
+
+# Borders + row heights for cf table
+for r in range(5, 10):
+    ws_cf.row_dimensions[r].height = 26 if r > 5 else 32
+
+# Column widths
+ws_cf.column_dimensions['A'].width = 2
+ws_cf.column_dimensions['B'].width = 22
+for i in range(len(dates)):
+    ws_cf.column_dimensions[get_column_letter(3 + i)].width = 11
+ws_cf.column_dimensions[get_column_letter(total_col)].width = 14
 
 # === Chart matplotlib (brand colors, embedded as PNG) ===
 # Pre-compute daily aggregations from demo_txs
@@ -576,16 +654,12 @@ chart_png = os.path.join("posts", "_cashflow-chart.png")
 plt.savefig(chart_png, dpi=150, bbox_inches='tight', facecolor='white')
 plt.close()
 
-# Embed in Cashflow sheet
+# Embed in Cashflow sheet — debajo de la tabla horizontal (a partir de fila 12)
 chart_img = XLImage(chart_png)
-chart_img.width = 820
-chart_img.height = 350
-chart_img.anchor = "H5"
+chart_img.width = 980
+chart_img.height = 380
+chart_img.anchor = "B12"
 ws_cf.add_image(chart_img)
-
-cf_widths = [3, 14, 14, 14, 14, 18, 4, 4, 30, 16]
-for i, w in enumerate(cf_widths, 1):
-    ws_cf.column_dimensions[get_column_letter(i)].width = w
 
 
 # =========================
@@ -668,36 +742,185 @@ for i, w in enumerate(ws3_widths, 1):
 
 
 # =========================
-# 6. KPIs
+# 6. KPIs (visual impactante)
 # =========================
 ws4 = wb.create_sheet("KPIs")
 ws4.sheet_view.showGridLines = False
-ws4['B2'] = "KPIs (referencia tecnica)"
-ws4['B2'].font = Font(size=16, bold=True, color=DARK_BG)
 
-kpi_list = [
-    ("Total Ingresos",        '=SUMIFS(Transacciones!D:D,Transacciones!E:E,"in")',  "money"),
-    ("Total Gastos",          '=SUMIFS(Transacciones!D:D,Transacciones!E:E,"out")', "money"),
-    ("Pagos a Proveedores",   '=SUMIFS(Transacciones!D:D,Transacciones!F:F,"pago_proveedor")', "money"),
-    ("Pagos Deuda Interes",   '=SUMIFS(Transacciones!D:D,Transacciones!F:F,"pago_deuda_interes")', "money"),
-    ("Pagos Deuda Capital",   '=SUMIFS(Transacciones!D:D,Transacciones!F:F,"pago_deuda_capital")', "money"),
-    ("Cobros Clientes",       '=SUMIFS(Transacciones!D:D,Transacciones!F:F,"cobro_cliente")', "money"),
-    ("Flujo Neto",            '=C5-C6',                                              "money"),
-    ("# Cobros",              '=COUNTIFS(Transacciones!E:E,"in")',                  "count"),
-    ("# Pagos",               '=COUNTIFS(Transacciones!E:E,"out")',                 "count"),
-    ("Banco (calculado)",     '=Dashboard!C12',                                      "money"),
-    ("Gandolas (calculado)",  '=Dashboard!E12',                                      "money"),
-    ("Por Cobrar (calculado)",'=Dashboard!G12',                                      "money"),
-    ("Total Trazado",         '=Dashboard!B8',                                       "money"),
-]
-for i, (label, formula, fmt) in enumerate(kpi_list, 5):
-    ws4.cell(row=i, column=2, value=label).font = Font(size=11, color=TEXT_PRIMARY)
-    c = ws4.cell(row=i, column=3, value=formula)
-    c.font = Font(size=12, bold=True, color=BLUE_TEXT)
-    c.number_format = '#,##0' if fmt == "count" else '"$"#,##0.00'
+# Column widths
+for col, w in zip(['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'],
+                  [3, 22, 18, 22, 18, 22, 18, 22, 18]):
+    ws4.column_dimensions[col].width = w
 
-ws4.column_dimensions['B'].width = 32
-ws4.column_dimensions['C'].width = 22
+# Title banner
+ws4['B2'] = "KPIs OPERATIVOS  ·  OLIVAR DEL SUR"
+ws4['B2'].font = Font(size=20, bold=True, color=GOLD)
+ws4['B2'].fill = fill(DARK_BG)
+ws4.merge_cells('B2:I2')
+ws4['B2'].alignment = Alignment(horizontal='center', vertical='center')
+ws4.row_dimensions[2].height = 44
+
+ws4['B3'] = "Mes en curso · Mayo 2026  ·  Datos vivos: cualquier captura nueva recalcula esta vista"
+ws4['B3'].font = Font(size=10, italic=True, color="64748B")
+ws4.merge_cells('B3:I3')
+ws4['B3'].alignment = Alignment(horizontal='center')
+
+# === HERO: FLUJO NETO ===
+ws4['B5'] = "FLUJO NETO DEL PERIODO"
+ws4['B5'].font = Font(size=11, bold=True, color=GOLD)
+ws4['B5'].fill = fill(DARK_BG)
+ws4.merge_cells('B5:I5')
+ws4['B5'].alignment = Alignment(horizontal='center', vertical='center')
+ws4.row_dimensions[5].height = 22
+
+ws4['B6'] = '=SUMIFS(Transacciones!D:D,Transacciones!E:E,"in")-SUMIFS(Transacciones!D:D,Transacciones!E:E,"out")'
+ws4['B6'].font = Font(size=40, bold=True, color=LINK_GREEN)
+ws4['B6'].fill = fill(GOLD_LIGHT)
+ws4['B6'].number_format = '"$"#,##0.00;[Red]-"$"#,##0.00'
+ws4.merge_cells('B6:I6')
+ws4['B6'].alignment = Alignment(horizontal='center', vertical='center')
+ws4.row_dimensions[6].height = 60
+
+ws4['B7'] = "Ingresos cobrados − Gastos pagados"
+ws4['B7'].font = Font(size=10, italic=True, color="64748B")
+ws4.merge_cells('B7:I7')
+ws4['B7'].alignment = Alignment(horizontal='center')
+
+
+def kpi_card(ws, row, c_left, c_right, label, formula, sub, bg, value_color, fmt='"$"#,##0.00'):
+    rng_h = f"{c_left}{row}:{c_right}{row}"
+    ws.merge_cells(rng_h)
+    ws[f"{c_left}{row}"] = label
+    ws[f"{c_left}{row}"].font = Font(size=9, bold=True, color=DARK_BG)
+    ws[f"{c_left}{row}"].fill = fill(bg)
+    ws[f"{c_left}{row}"].alignment = Alignment(horizontal='center', vertical='center')
+    ws.row_dimensions[row].height = 20
+
+    rng_v = f"{c_left}{row+1}:{c_right}{row+1}"
+    ws.merge_cells(rng_v)
+    cell = ws[f"{c_left}{row+1}"]
+    cell.value = formula
+    cell.font = Font(size=18, bold=True, color=value_color)
+    cell.fill = fill(bg)
+    cell.alignment = Alignment(horizontal='center', vertical='center')
+    cell.number_format = fmt
+    ws.row_dimensions[row+1].height = 44
+
+    rng_s = f"{c_left}{row+2}:{c_right}{row+2}"
+    ws.merge_cells(rng_s)
+    ws[f"{c_left}{row+2}"] = sub
+    ws[f"{c_left}{row+2}"].font = Font(size=8, italic=True, color="64748B")
+    ws[f"{c_left}{row+2}"].fill = fill(bg)
+    ws[f"{c_left}{row+2}"].alignment = Alignment(horizontal='center')
+    ws.row_dimensions[row+2].height = 16
+
+
+# === SECCION 1: DESGLOSE INGRESOS ===
+ws4['B10'] = "DESGLOSE DE INGRESOS"
+ws4['B10'].font = Font(size=12, bold=True, color=GOLD)
+ws4['B10'].fill = fill(DARK_BG)
+ws4.merge_cells('B10:I10')
+ws4['B10'].alignment = Alignment(horizontal='left', vertical='center', indent=1)
+ws4.row_dimensions[10].height = 26
+
+kpi_card(ws4, 12, 'B', 'C', 'COBROS A CLIENTES',
+         '=SUMIFS(Transacciones!D:D,Transacciones!F:F,"cobro_cliente")',
+         'Categoria cobro_cliente', GREEN_BG, LINK_GREEN)
+kpi_card(ws4, 12, 'D', 'E', 'COBROS A CREDITO',
+         '=SUMIFS(Transacciones!D:D,Transacciones!F:F,"cobro_credito")',
+         'Categoria cobro_credito', GREEN_BG, LINK_GREEN)
+kpi_card(ws4, 12, 'F', 'G', 'RETORNO GANDOLAS',
+         '=SUMIFS(Transacciones!D:D,Transacciones!F:F,"retorno_gandola")',
+         'Categoria retorno_gandola', GREEN_BG, LINK_GREEN)
+kpi_card(ws4, 12, 'H', 'I', 'TOTAL INGRESOS',
+         '=SUMIFS(Transacciones!D:D,Transacciones!E:E,"in")',
+         'Suma direccion in', GOLD_LIGHT, LINK_GREEN)
+
+
+# === SECCION 2: DESGLOSE GASTOS ===
+ws4['B17'] = "DESGLOSE DE GASTOS"
+ws4['B17'].font = Font(size=12, bold=True, color=GOLD)
+ws4['B17'].fill = fill(DARK_BG)
+ws4.merge_cells('B17:I17')
+ws4['B17'].alignment = Alignment(horizontal='left', vertical='center', indent=1)
+ws4.row_dimensions[17].height = 26
+
+kpi_card(ws4, 19, 'B', 'C', 'PAGOS A PROVEEDORES',
+         '=SUMIFS(Transacciones!D:D,Transacciones!F:F,"pago_proveedor")',
+         'Categoria pago_proveedor', RED_BG, LINK_GREEN)
+kpi_card(ws4, 19, 'D', 'E', 'INTERES DE DEUDA',
+         '=SUMIFS(Transacciones!D:D,Transacciones!F:F,"pago_deuda_interes")',
+         'Categoria pago_deuda_interes', RED_BG, LINK_GREEN)
+kpi_card(ws4, 19, 'F', 'G', 'CAPITAL DE DEUDA',
+         '=SUMIFS(Transacciones!D:D,Transacciones!F:F,"pago_deuda_capital")',
+         'Abonos a principal', RED_BG, LINK_GREEN)
+kpi_card(ws4, 19, 'H', 'I', 'TOTAL GASTOS',
+         '=SUMIFS(Transacciones!D:D,Transacciones!E:E,"out")',
+         'Suma direccion out', GOLD_LIGHT, LINK_GREEN)
+
+
+# === SECCION 3: OPERACION ===
+ws4['B24'] = "OPERACION"
+ws4['B24'].font = Font(size=12, bold=True, color=GOLD)
+ws4['B24'].fill = fill(DARK_BG)
+ws4.merge_cells('B24:I24')
+ws4['B24'].alignment = Alignment(horizontal='left', vertical='center', indent=1)
+ws4.row_dimensions[24].height = 26
+
+kpi_card(ws4, 26, 'B', 'C', '# COBROS RECIBIDOS',
+         '=COUNTIFS(Transacciones!E:E,"in")',
+         'Capturas entrantes', BLUE_BG, LINK_GREEN, '#,##0')
+kpi_card(ws4, 26, 'D', 'E', '# PAGOS REALIZADOS',
+         '=COUNTIFS(Transacciones!E:E,"out")',
+         'Salidas de caja', BLUE_BG, LINK_GREEN, '#,##0')
+kpi_card(ws4, 26, 'F', 'G', 'TICKET PROMEDIO COBRO',
+         '=IFERROR(SUMIFS(Transacciones!D:D,Transacciones!E:E,"in")/COUNTIFS(Transacciones!E:E,"in"),0)',
+         'Promedio por captura', BLUE_BG, FORMULA_BK)
+kpi_card(ws4, 26, 'H', 'I', 'TICKET PROMEDIO GASTO',
+         '=IFERROR(SUMIFS(Transacciones!D:D,Transacciones!E:E,"out")/COUNTIFS(Transacciones!E:E,"out"),0)',
+         'Promedio salida', BLUE_BG, FORMULA_BK)
+
+
+# === SECCION 4: BUCKETS DE EFECTIVO (link Dashboard) ===
+ws4['B31'] = "POSICION DE EFECTIVO  (link Dashboard)"
+ws4['B31'].font = Font(size=12, bold=True, color=GOLD)
+ws4['B31'].fill = fill(DARK_BG)
+ws4.merge_cells('B31:I31')
+ws4['B31'].alignment = Alignment(horizontal='left', vertical='center', indent=1)
+ws4.row_dimensions[31].height = 26
+
+kpi_card(ws4, 33, 'B', 'C', 'EFECTIVO EN BANCO',
+         '=Dashboard!C12', 'Saldo liquido', BLUE_BG, LINK_GREEN)
+kpi_card(ws4, 33, 'D', 'E', 'CAPITAL EN GANDOLAS',
+         '=Dashboard!E12', 'En transito', AMBER_BG, LINK_GREEN)
+kpi_card(ws4, 33, 'F', 'G', 'CUENTAS POR COBRAR',
+         '=Dashboard!G12', 'Pendiente', ORANGE_BG, LINK_GREEN)
+kpi_card(ws4, 33, 'H', 'I', 'TOTAL TRAZADO',
+         '=Dashboard!B8', 'Suma 3 buckets', GOLD_LIGHT, LINK_GREEN)
+
+
+# === SECCION 5: COLOR LEGEND (footer) ===
+ws4['B38'] = "Convencion de colores (estandar finance / IB)"
+ws4['B38'].font = Font(size=10, bold=True, color=DARK_BG)
+ws4.merge_cells('B38:I38')
+
+ws4['B39'] = "AZUL"
+ws4['B39'].font = Font(size=10, bold=True, color=INPUT_BLUE)
+ws4['C39'] = "input hardcodeado (saldo inicial, datos de transaccion)"
+ws4['C39'].font = Font(size=10, color="64748B")
+ws4.merge_cells('C39:I39')
+
+ws4['B40'] = "NEGRO"
+ws4['B40'].font = Font(size=10, bold=True, color=FORMULA_BK)
+ws4['C40'] = "formula que opera sobre celdas de la misma pestaña"
+ws4['C40'].font = Font(size=10, color="64748B")
+ws4.merge_cells('C40:I40')
+
+ws4['B41'] = "VERDE"
+ws4['B41'].font = Font(size=10, bold=True, color=LINK_GREEN)
+ws4['C41'] = "formula que referencia OTRA pestaña (link cross-sheet)"
+ws4['C41'].font = Font(size=10, color="64748B")
+ws4.merge_cells('C41:I41')
 
 
 output_path = os.path.join("posts", "demo-sheet-for-loom.xlsx")

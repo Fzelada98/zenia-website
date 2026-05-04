@@ -139,7 +139,7 @@ PHASE-SPECIFIC:
   * Dice SÍ → agendar fecha + confirmar asistentes
   * Duda → Voss label + loop a valor
   * "Lo consulto con el equipo" → ofrecer walkthrough conjunto
-  * "Mándame info" → contrarrestar con 15 min juntos
+  * "Mándame info" → contrarrestar con 30 min juntos
   * Frase final que quede grabada (callback a frase ancla)
 
 Concise. Framework, not a book.`;

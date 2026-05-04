@@ -9,7 +9,7 @@ name: Auto-merge sandbox PRs (safety net)
 #
 # Triggers:
 #  1. push to any claude/* branch (fast path, fires within seconds)
-#  2. cron every 30 min (safety net for missed pushes, stuck branches)
+#  2. cron every 4h (safety net for stuck branches, less noise than 30 min)
 #  3. manual workflow_dispatch
 
 on:
@@ -17,7 +17,7 @@ on:
     branches:
       - 'claude/**'
   schedule:
-    - cron: '*/30 * * * *'
+    - cron: '0 */4 * * *'
   workflow_dispatch:
 
 permissions:
@@ -43,9 +43,6 @@ jobs:
         run: |
           git fetch origin --prune
 
-          # Identify sandbox branches that have commits NOT yet on main.
-          # Use `git cherry` which correctly handles squash-merged branches
-          # (unlike --no-merged which false-positives on squash).
           CANDIDATES=$(git for-each-ref --format='%(refname:short)' refs/remotes/origin/claude/ | sed 's|origin/||' | xargs)
 
           if [ -z "$CANDIDATES" ]; then
@@ -56,10 +53,19 @@ jobs:
           echo "Candidate sandbox branches: $CANDIDATES"
 
           MERGED_ANY=false
+          SKIPPED_CONFLICTS=()
 
           for BRANCH in $CANDIDATES; do
             echo ""
             echo "=== Processing $BRANCH ==="
+
+            # CRITICAL: hard reset to clean state before each branch attempt.
+            # Without this, a failed merge leaves the working directory in a
+            # broken state that cascades to all subsequent branches.
+            git reset --hard origin/main
+            git clean -fd
+            git checkout main
+            git pull --ff-only origin main
 
             LATEST_MSG=$(git log "origin/$BRANCH" -1 --pretty=%s 2>/dev/null || echo "")
             if [ -z "$LATEST_MSG" ]; then
@@ -68,9 +74,8 @@ jobs:
             fi
             echo "Latest commit: $LATEST_MSG"
 
-            # Only act on known routine prefixes
             case "$LATEST_MSG" in
-              blog:*|haro:*|report:*)
+              blog:*|haro:*|report:*|tracker:*)
                 echo "Prefix matched, proceeding."
                 ;;
               *)
@@ -79,42 +84,33 @@ jobs:
                 ;;
             esac
 
-            # Detect squash-merged branches via patch-id equivalence.
-            # `git cherry origin/main origin/$BRANCH` lists commits with
-            # `+` (not on main by patch) or `-` (already on main by patch).
             UNMERGED=$(git cherry origin/main "origin/$BRANCH" | grep -c '^+' || true)
 
             if [ "$UNMERGED" = "0" ]; then
-              echo "All commits on $BRANCH are already on main (squash-merged). Deleting branch."
-              git push origin --delete "$BRANCH" 2>&1 || echo "Delete failed, will retry next run"
+              echo "All commits already on main. Deleting branch."
+              git push origin --delete "$BRANCH" 2>&1 || echo "Delete failed, non-fatal"
               continue
             fi
 
-            echo "$BRANCH has $UNMERGED new commit(s). Squash-merging into main."
-
-            # Squash-merge: apply the changes from the branch as a single commit on main.
-            git checkout main
-            git pull origin main
+            echo "$BRANCH has $UNMERGED new commit(s). Squash-merging."
 
             if git merge --squash "origin/$BRANCH"; then
               if git diff --staged --quiet; then
-                echo "No staged changes after squash (branch is effectively empty). Deleting."
+                echo "Empty staged diff after squash. Deleting branch."
                 git push origin --delete "$BRANCH" 2>&1 || true
                 continue
               fi
 
-              git commit -m "$LATEST_MSG (auto-merged from $BRANCH)" || {
-                echo "Commit failed, aborting merge of $BRANCH"
-                git merge --abort || true
+              if ! git commit -m "$LATEST_MSG (auto-merged from $BRANCH)"; then
+                echo "Commit failed, resetting state for next branch."
+                git reset --hard origin/main
                 continue
-              }
+              fi
 
-              # Push main with retry on race condition
               PUSHED=false
               for i in 1 2 3; do
                 if git push origin main; then
                   PUSHED=true
-                  echo "Push ok on attempt $i"
                   break
                 fi
                 echo "Push rejected attempt $i, rebasing"
@@ -124,18 +120,27 @@ jobs:
 
               if [ "$PUSHED" = "true" ]; then
                 MERGED_ANY=true
-                echo "Successfully merged $BRANCH to main"
-                git push origin --delete "$BRANCH" 2>&1 || echo "Branch delete failed, non-fatal"
+                echo "Successfully merged $BRANCH"
+                git push origin --delete "$BRANCH" 2>&1 || echo "Delete failed, non-fatal"
               else
-                echo "Could not push main after 3 attempts for $BRANCH"
+                echo "Push failed after 3 attempts for $BRANCH"
+                git reset --hard origin/main
               fi
             else
-              echo "Squash-merge had conflicts for $BRANCH, skipping. Manual intervention needed."
-              git merge --abort || true
+              echo "Squash-merge conflict for $BRANCH. Skipping (manual intervention needed)."
+              SKIPPED_CONFLICTS+=("$BRANCH")
+              # CRITICAL: explicitly reset state. merge --abort fails on squash conflicts
+              # ("There is no merge to abort, MERGE_HEAD missing"), leaving working dir broken.
+              git reset --hard origin/main
+              git clean -fd
             fi
           done
 
           echo ""
           echo "=== Summary ==="
           echo "Merged any: $MERGED_ANY"
+          if [ ${#SKIPPED_CONFLICTS[@]} -gt 0 ]; then
+            echo "Branches with conflicts (manual fix needed):"
+            printf '  - %s\n' "${SKIPPED_CONFLICTS[@]}"
+          fi
           git log origin/main --oneline -5

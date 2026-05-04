@@ -16,15 +16,15 @@
 
 **[0:00 – 0:10] Hook (cámara en ti, Sheet detrás)**
 
-> "Hola, soy Fabrizzio de Zenia. Si recibes pagos por Zelle o transferencia y aún cuadras tus libros a mano, este video es para ti. Te muestro en 90 segundos cómo trabaja una de nuestras clientas hoy."
+> "Hola, soy Fabrizzio de Zenia. Si recibes pagos por transferencia bancaria y aún cuadras tus libros a mano, este video es para ti. Te muestro en 90 segundos cómo trabaja una de nuestras clientas hoy."
 
 **[0:10 – 0:35] Demo problema → captura**
 
 (Compartir pantalla del Sheet de Yenifer, pestaña Transacciones vacía)
 
-> "Esto es el repositorio vivo de Olivar del Sur, una importadora de aceite de oliva. Mira lo que pasa cuando ella recibe un Zelle."
+> "Esto es el repositorio vivo de Olivar del Sur, una importadora de aceite de oliva. Mira lo que pasa cuando ella recibe un pago."
 
-(Cambiar a WhatsApp Web mostrando una captura de Zelle siendo enviada al chat de Gaia)
+(Cambiar a WhatsApp Web mostrando un comprobante de pago siendo enviado al chat de Gaia)
 
 > "Ella simplemente reenvía la captura a un número de WhatsApp como si se la mandara a una amiga. Sin app, sin login, sin formulario."
 
@@ -50,7 +50,7 @@
 
 **[1:20 – 1:30] Cierre + CTA**
 
-> "Si tu negocio recibe Zelle o transferencias y aún las cuadras a mano, agenda una llamada de 30 minutos en el link debajo. Te muestro qué se vería con tus capturas reales. Hasta pronto."
+> "Si tu negocio recibe transferencias bancarias y aún las cuadras a mano, agenda una llamada de 30 minutos en el link debajo. Te muestro qué se vería con tus capturas reales. Hasta pronto."
 
 ---
 
@@ -58,13 +58,13 @@
 
 **[0:00 – 0:10] Hook**
 
-> "Hi, I'm Fabrizzio from Zenia. If your business receives Zelle or wire transfers and you still reconcile your books manually, this 90-second video is for you. Here's how one of our clients works today."
+> "Hi, I'm Fabrizzio from Zenia. If your business receives bank transfers and you still reconcile your books manually, this 90-second video is for you. Here's how one of our clients works today."
 
 **[0:10 – 0:35] Demo problem → capture**
 
 (Share Sheet, then WhatsApp)
 
-> "This is the live repository of Olivar del Sur, an olive-oil cross-border importer. Watch what happens when she receives a Zelle payment."
+> "This is the live repository of Olivar del Sur, an olive-oil cross-border importer. Watch what happens when she receives a bank transfer."
 
 (Show capture being sent in WhatsApp)
 
@@ -92,7 +92,7 @@
 
 **[1:20 – 1:30] Close + CTA**
 
-> "If your business receives Zelle or wire transfers and still reconciles by hand, book a 30-minute call in the link below. I'll show you what it would look like with your real captures. See you soon."
+> "If your business receives bank transfers and still reconciles by hand, book a 30-minute call in the link below. I'll show you what it would look like with your real captures. See you soon."
 
 ---
 

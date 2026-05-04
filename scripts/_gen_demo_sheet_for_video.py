@@ -4,7 +4,7 @@ Marca: OLIVAR DEL SUR (importadora ficticia de aceite de oliva)
 - 6 pestanas: Portada, Dashboard, Transacciones, Cashflow, Deudas, KPIs
 - Logo embebido en Portada y Dashboard
 - 30 transacciones con pagos proveedores + cobros clientes + pagos deuda
-- Cashflow diario + grafico LineChart (sin gridlines, fechas legibles)
+- Cashflow diario + chart matplotlib PNG embebido (brand colors)
 - 3 buckets calculados con formulas
 - Hero stat + alertas
 """
@@ -12,7 +12,10 @@ from openpyxl import Workbook
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 from openpyxl.utils import get_column_letter
 from openpyxl.drawing.image import Image as XLImage
-from openpyxl.chart import LineChart, Reference
+from collections import defaultdict
+from datetime import datetime
+import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
 import os
 
 # Brand palette OLIVAR DEL SUR
@@ -69,7 +72,7 @@ for r in range(1, 9):
     ws.row_dimensions[r].height = 22
 
 # Tagline
-ws['B11'] = "REPOSITORIO ZELLE  ·  CONTROL FINANCIERO 360"
+ws['B11'] = "REPOSITORIO DE PAGOS Y COBROS  ·  CONTROL FINANCIERO 360"
 ws['B11'].font = Font(size=18, bold=True, color=GOLD)
 ws['B11'].fill = fill(DARK_BG)
 ws.merge_cells('B11:I11')
@@ -489,30 +492,96 @@ ws_cf.cell(row=totals_row, column=5).number_format = '"$"#,##0.00'
 ws_cf.cell(row=totals_row, column=6, value=f"=F{totals_row-1}").font = Font(bold=True, color=BLUE_TEXT, size=11)
 ws_cf.cell(row=totals_row, column=6).number_format = '"$"#,##0.00'
 
-# Chart fixes: no gridlines, wider, label skip
-chart = LineChart()
-chart.title = "Cashflow diario · Saldo acumulado"
-chart.style = 12
-chart.y_axis.title = "Monto USD"
-chart.x_axis.title = "Fecha"
-chart.height = 11
-chart.width = 26
+# === Chart matplotlib (brand colors, embedded as PNG) ===
+# Pre-compute daily aggregations from demo_txs
+ingresos_daily = defaultdict(float)
+gastos_daily = defaultdict(float)
+for tx in demo_txs:
+    _, fecha, _, monto, direccion, *_ = tx
+    if direccion == "in":
+        ingresos_daily[fecha] += monto
+    else:
+        gastos_daily[fecha] += monto
 
-# Remove gridlines
-chart.y_axis.majorGridlines = None
-chart.x_axis.majorGridlines = None
+date_objs = [datetime.strptime(d, "%Y-%m-%d") for d in dates]
+ingresos_arr = [ingresos_daily.get(d, 0) for d in dates]
+gastos_arr = [gastos_daily.get(d, 0) for d in dates]
+flujo_arr = [i - g for i, g in zip(ingresos_arr, gastos_arr)]
+acumulado_arr = []
+running = 35000  # saldo inicial
+for f in flujo_arr:
+    running += f
+    acumulado_arr.append(running)
 
-# Reduce x-axis label density (skip every other date)
-chart.x_axis.tickLblSkip = 2
+# Render
+fig, ax1 = plt.subplots(figsize=(13, 5.5), dpi=150)
+fig.patch.set_facecolor('#FFFFFF')
+ax1.set_facecolor('#FAFBF7')
 
-# Number format for axes
-chart.y_axis.number_format = '"$"#,##0'
+# Saldo acumulado as filled area (gold/green)
+ax1.fill_between(date_objs, acumulado_arr, alpha=0.18, color="#1F4D2E", linewidth=0)
+line_acum = ax1.plot(date_objs, acumulado_arr, color="#1F4D2E", linewidth=3.0,
+                     marker='o', markersize=6, markerfacecolor="#1F4D2E",
+                     markeredgecolor='white', markeredgewidth=1.5,
+                     label='Saldo acumulado')
 
-data = Reference(ws_cf, min_col=5, min_row=5, max_col=6, max_row=5 + len(dates))
-chart.add_data(data, titles_from_data=True)
-cats = Reference(ws_cf, min_col=2, min_row=6, max_row=5 + len(dates))
-chart.set_categories(cats)
-ws_cf.add_chart(chart, "H6")
+# Flujo neto on secondary axis as bars
+ax2 = ax1.twinx()
+bar_colors = ['#16A34A' if f >= 0 else '#DC2626' for f in flujo_arr]
+ax2.bar(date_objs, flujo_arr, color=bar_colors, alpha=0.55, width=0.7,
+        edgecolor='none', label='Flujo neto')
+
+# Y axis primary (saldo acumulado)
+ax1.set_ylabel('Saldo acumulado (USD)', color="#1F4D2E", fontsize=11, fontweight='bold')
+ax1.tick_params(axis='y', labelcolor="#1F4D2E", labelsize=10)
+ax1.yaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f'${int(x):,}'))
+
+# Y axis secondary (flujo neto)
+ax2.set_ylabel('Flujo neto diario (USD)', color="#64748B", fontsize=10)
+ax2.tick_params(axis='y', labelcolor="#64748B", labelsize=9)
+ax2.yaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f'${int(x):,}'))
+ax2.axhline(0, color='#CBD5E1', linewidth=0.8, linestyle='-')
+
+# X axis dates
+ax1.xaxis.set_major_locator(mdates.DayLocator(interval=2))
+ax1.xaxis.set_major_formatter(mdates.DateFormatter('%d-%b'))
+ax1.tick_params(axis='x', rotation=0, labelsize=9, colors="#475569")
+
+# Remove spines
+for spine in ['top', 'right']:
+    ax1.spines[spine].set_visible(False)
+    ax2.spines[spine].set_visible(False)
+ax1.spines['left'].set_color('#CBD5E1')
+ax1.spines['bottom'].set_color('#CBD5E1')
+ax2.spines['left'].set_visible(False)
+
+# No gridlines
+ax1.grid(False)
+ax2.grid(False)
+
+# Title
+fig.suptitle('Cashflow diario  ·  Saldo acumulado vs flujo neto',
+             fontsize=15, fontweight='bold', color="#1F4D2E", y=0.97, x=0.05, ha='left')
+ax1.set_title('OLIVAR DEL SUR  ·  Mayo 2026', loc='left', fontsize=10,
+              color="#8B6914", style='italic', pad=8)
+
+# Legend
+lines1, labels1 = ax1.get_legend_handles_labels()
+import matplotlib.patches as mpatches
+neto_patch = mpatches.Patch(color='#16A34A', alpha=0.55, label='Flujo neto')
+ax1.legend(handles=lines1 + [neto_patch], loc='upper right', frameon=False, fontsize=10)
+
+plt.tight_layout(rect=[0, 0, 1, 0.94])
+chart_png = os.path.join("posts", "_cashflow-chart.png")
+plt.savefig(chart_png, dpi=150, bbox_inches='tight', facecolor='white')
+plt.close()
+
+# Embed in Cashflow sheet
+chart_img = XLImage(chart_png)
+chart_img.width = 820
+chart_img.height = 350
+chart_img.anchor = "H5"
+ws_cf.add_image(chart_img)
 
 cf_widths = [3, 14, 14, 14, 14, 18, 4, 4, 30, 16]
 for i, w in enumerate(cf_widths, 1):

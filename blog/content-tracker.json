@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-05-03T22:00:00Z",
+  "lastRun": "2026-05-04T12:00:00Z",
   "posts": [
     {
       "slug": "automatizar-reservas-restaurante-whatsapp",
@@ -334,8 +334,8 @@
       "keyword": "recordatorios citas medicas whatsapp",
       "tier": 2,
       "cluster": "clinicas",
-      "status": "pending",
-      "date": null
+      "status": "published",
+      "date": "2026-05-04"
     },
     {
       "slug": "atencion-al-cliente-ecommerce-ia",

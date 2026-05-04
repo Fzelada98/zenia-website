@@ -27,7 +27,7 @@ We just shipped a case study where a cross-border importer replaced all of that 
 
 Case here: https://zeniapartners.com/cases/whatsapp-bookkeeping-importer.html
 
-15 min call to see if it fits how [Company] operates?
+30 min call to see if it fits how [Company] operates?
 
 Best,
 Fabrizzio
@@ -42,7 +42,7 @@ Hi [First Name],
 
 Following up. The piece that hits hardest with importers is the cash traceability across three buckets — most owners I talk to can't tell at any given moment what's sitting in the bank vs locked in trucks vs owed by clients.
 
-If reconciling that takes you more than an hour a week, worth a 15 min call.
+If reconciling that takes you more than an hour a week, worth a 30 min call.
 
 Calendly: https://calendly.com/zeladauriartef/30min
 
@@ -83,7 +83,7 @@ Case here: https://zeniapartners.com/cases/whatsapp-bookkeeping-importer.html
 
 Restaurants have the same operational pattern: high transaction volume, multiple categories (suppliers, payroll, taxes, deliveries), and the owner spending nights catching up on Excel.
 
-15 min call?
+30 min call?
 
 Best,
 Fabrizzio
@@ -115,7 +115,7 @@ Two ways to engage:
 
 Case study showing the system in action: https://zeniapartners.com/cases/whatsapp-bookkeeping-importer.html
 
-15 min call to see if this fits your client base?
+30 min call to see if this fits your client base?
 
 Best,
 Fabrizzio

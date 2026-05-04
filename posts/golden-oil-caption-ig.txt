@@ -1,0 +1,32 @@
+🤝 NUEVA ALIANZA — Zenia × Golden Oil
+
+Una de las decisiones operativas más caras para una PYME que recibe pagos digitales no es lo que cobra. Es el tiempo que invierte cuadrando libros, persiguiendo capturas de Zelle y armando Excel a las 2 a.m. antes del cierre del mes.
+
+Eso fue exactamente el problema de Golden Oil, una importadora venezolana que opera entre Colombia y USA, mueve gandolas, cobra clientes vía Zelle y maneja deudas, créditos rotativos con proveedores y gastos transfronterizos.
+
+La dueña dependía de capturas dispersas en WhatsApp y un Excel que se descuadraba cada semana.
+
+Construimos una asistente de IA personalizada que vive dentro de WhatsApp y conecta directo a Google Sheets. Le mandas la captura del Zelle como a una amiga: ella lee, clasifica entre 16 categorías contables, valida que no haya duplicados, y guarda en un Sheet vivo con dashboard ejecutivo, cashflow diario y top de pagadores actualizándose en tiempo real.
+
+Lo más importante: ella nunca toca el Excel. Cero data-entry manual.
+
+Lo que quedó construido:
+
+· Captura de WhatsApp a registro contable en menos de 8 segundos
+· 16 categorías contables (cobros, gastos, deudas, gandolas, créditos)
+· Trazabilidad del efectivo en 3 buckets calculados: Banco · Gandolas · Cuentas por Cobrar
+· Pestaña Deudas con interés mensual, capital vivo y status
+· Inteligencia de gandolas: cuando una cierra, la asistente distribuye el efectivo y los créditos por cliente automáticamente
+· Audit log con timestamp para trazabilidad fiscal
+· Modismos venezolanos integrados (chévere, vaina, verdes, lukas)
+· Multi-captura: 20 fotos seguidas se procesan como un solo batch
+
+Esto es lo que hacemos en Zenia. No vendemos plantillas. Construimos asistentes de IA personalizadas que se adaptan al lenguaje, los rubros y los tics operativos de cada cliente.
+
+Si tu negocio recibe transferencias y aún las cuadras a mano, te dejas dinero y horas en la mesa.
+
+DM o link en bio para una llamada.
+
+Gracias Yenifer por confiar.
+
+#Zenia #IA #Automatizacion #PYME #Contabilidad #Fintech #Venezuela #LATAM #USA #ZelleTracker #WhatsAppBusiness #AIagent #BusinessAutomation #SmallBusiness

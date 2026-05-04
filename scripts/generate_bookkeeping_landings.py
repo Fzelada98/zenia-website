@@ -169,7 +169,7 @@ def en_template(city_slug, city_name, related):
       Forward your Zelle screenshots to WhatsApp. Get live bookkeeping with three cash buckets calculated automatically. No more late-night Excel.
     </p>
     <div style="margin-top: 28px;">
-      <a href="https://calendly.com/zeladauriartef/30min" class="btn btn-primary" target="_blank" rel="noopener" style="font-size: 1.05rem;">Book a 15 min strategy call</a>
+      <a href="https://calendly.com/zeladauriartef/30min" class="btn btn-primary" target="_blank" rel="noopener" style="font-size: 1.05rem;">Book a 30 min strategy call</a>
     </div>
   </div>
 </section>
@@ -224,7 +224,7 @@ def en_template(city_slug, city_name, related):
   <div class="container" style="text-align: center;">
     <h2 class="section-title">Ready to put your bookkeeping on autopilot in {city_name}?</h2>
     <p style="color: #94A3B8; font-size: 1.1rem; margin: 20px 0 32px;">
-      Book a 15 min strategy call. We'll walk through your operation and show you what your dashboard would look like.
+      Book a 30 min strategy call. We'll walk through your operation and show you what your dashboard would look like.
     </p>
     <a href="https://calendly.com/zeladauriartef/30min" class="btn btn-primary" target="_blank" rel="noopener" style="font-size: 1.05rem;">Book a Strategy Call</a>
   </div>
@@ -391,7 +391,7 @@ def es_template(city_slug, city_name, related):
       Reenvía las capturas de Zelle por WhatsApp. Recibe libros vivos con tres buckets de efectivo calculados automaticamente. Sin Excel a las 2 a.m.
     </p>
     <div style="margin-top: 28px;">
-      <a href="https://calendly.com/zeladauriartef/30min" class="btn btn-primary" target="_blank" rel="noopener" style="font-size: 1.05rem;">Agenda 15 min de descubrimiento</a>
+      <a href="https://calendly.com/zeladauriartef/30min" class="btn btn-primary" target="_blank" rel="noopener" style="font-size: 1.05rem;">Agenda 30 min de descubrimiento</a>
     </div>
   </div>
 </section>
@@ -446,7 +446,7 @@ def es_template(city_slug, city_name, related):
   <div class="container" style="text-align: center;">
     <h2 class="section-title">¿Listo para poner tu contabilidad en piloto automatico en {city_name}?</h2>
     <p style="color: #94A3B8; font-size: 1.1rem; margin: 20px 0 32px;">
-      Agenda una llamada de 15 minutos. Caminamos juntos por tu operacion y te mostramos como se veria tu dashboard.
+      Agenda una llamada de 30 minutos. Caminamos juntos por tu operacion y te mostramos como se veria tu dashboard.
     </p>
     <a href="https://calendly.com/zeladauriartef/30min" class="btn btn-primary" target="_blank" rel="noopener" style="font-size: 1.05rem;">Agenda llamada estrategica</a>
   </div>

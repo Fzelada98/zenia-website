@@ -404,6 +404,8 @@ DM me if you run a dental practice and want the eight-flow framework.
 ---
 ## 2026-05-03 - AI patient management for clinics
 
+<!-- SCHEDULED:sp_mh8pIRjkt5IyYpSiV2EbW at 2026-05-04T07:00:00.000Z -->
+
 Outpatient no-show rates sit at 23-33% and each missed appointment costs the average clinic ~200 USD. Wolters Kluwer's 2026 survey shows physician AI usage jumped from 38% to 66% in a year, yet only 19% of practices use any intelligent assistant for patient communication.
 
 A 5-provider clinic running a personalized AI agent on WhatsApp typically drops no-shows from 24% to 10% and reactivates 14-22% of dormant patients per quarter. ROI lands at 30-70x.
@@ -415,6 +417,8 @@ Full guide with metrics, RGPD setup and 5-week rollout: https://zeniapartners.co
 ---
 
 ## 2026-05-04 - Recordatorios de citas medicas por WhatsApp
+
+<!-- SCHEDULED:sp_rktHmpX2YeAsWjL5ftx at 2026-05-05T07:00:00.000Z -->
 
 A 2026 systematic review of 105 outpatient studies found a 23% average no-show rate, with US healthcare losing $150B/year to missed appointments at ~$200 per slot.
 

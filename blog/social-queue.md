@@ -413,3 +413,17 @@ Full guide with metrics, RGPD setup and 5-week rollout: https://zeniapartners.co
 #healthtech #patientretention #AI #automation
 
 ---
+
+## 2026-05-04 - Recordatorios de citas medicas por WhatsApp
+
+A 2026 systematic review of 105 outpatient studies found a 23% average no-show rate, with US healthcare losing $150B/year to missed appointments at ~$200 per slot.
+
+The fix is not another email reminder (20% open rate, read days late) or another phone call campaign (40-50% contact rate, 4 hours of front desk daily). SMS reminders cut no-shows 38-50%; WhatsApp with a personalized AI agent pushes that to 70%+ thanks to 98% open rate, conversational confirm/reschedule and an automatic waitlist that fills cancelled slots in under 15 minutes.
+
+A typical 80-appointments/day clinic going from 22% to 6% no-shows recovers 12+ slots daily. At 46 EUR per visit that is 9-10K EUR/month, before counting the 4 daily front-desk hours freed up.
+
+Reply if you run a clinic with this problem and I will share the exact reminder cadence and waitlist logic that works in our deployments.
+
+#healthtech #patientretention #AI #WhatsAppBusiness
+
+---

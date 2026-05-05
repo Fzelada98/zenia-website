@@ -29,6 +29,13 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  <!-- Blog: Atención al Cliente Ecommerce con IA (ES) -->
+  <url>
+    <loc>https://zeniapartners.com/blog/atencion-al-cliente-ecommerce-ia.html</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- Blog: Recordatorios de Citas Médicas por WhatsApp (ES) -->
   <url>
     <loc>https://zeniapartners.com/blog/recordatorios-citas-medicas-whatsapp.html</loc>

@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-05-04T12:00:00Z",
+  "lastRun": "2026-05-05T12:00:00Z",
   "posts": [
     {
       "slug": "automatizar-reservas-restaurante-whatsapp",
@@ -342,8 +342,8 @@
       "keyword": "atencion al cliente ecommerce ia",
       "tier": 2,
       "cluster": "ecommerce",
-      "status": "pending",
-      "date": null
+      "status": "published",
+      "date": "2026-05-05"
     },
     {
       "slug": "automatizar-postventa-online",

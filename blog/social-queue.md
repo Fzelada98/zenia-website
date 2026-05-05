@@ -444,3 +444,16 @@ Reply if you run an ecommerce with this pattern, happy to share the deflection b
 #retailtech #ecommerce #AI #automation
 
 ---
+## 2026-05-05 - Automatizar postventa online (ecommerce post-purchase)
+
+Most DTC brands spend 60-80% of marketing budget on acquisition and treat the post-purchase journey as a thank-you email. The math punishes that: automated post-purchase messages drive 38% of email revenue from under 3% of volume, and a 5% lift in retention moves profits 25-95%.
+
+In 2026, the gap between brands that automate post-purchase and brands that do not is the difference between 24% and 42% repeat-purchase rate. The five flows that move that needle: D+1 onboarding (cuts avoidable returns 50%), D+7 review request via WhatsApp (lifts review rate from 3% to 22%), D+21 cross-sell with logical complement (6-12% conversion vs 1.5% on email), D+45 reactivation with novelty + benefit, and a 24/7 conversational support agent.
+
+On a 600-orders/month store: ~4,500 EUR/month net ROI from month two, climbing as LTV history compounds in the CRM. The hard part is not the tech, it is killing the assumption that "thank you" is a strategy.
+
+Reply if you run a DTC brand with high acquisition cost and weak repeat rate, happy to share the exact flow timing we use.
+
+#ecommerce #retailtech #AI #WhatsAppBusiness
+
+---

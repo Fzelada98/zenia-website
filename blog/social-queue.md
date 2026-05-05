@@ -433,6 +433,8 @@ Reply if you run a clinic with this problem and I will share the exact reminder 
 ---
 ## 2026-05-05 - Atencion al cliente ecommerce con IA
 
+<!-- SCHEDULED:sp_5gk1KT44BeJmdFvxbr6c3 at 2026-05-06T00:10:59.301Z -->
+
 A typical online store handles 1,500 support tickets per month at 6 EUR each in human cost. With a personalized AI agent connected to the catalog, ERP and order system, that drops to 0.50 EUR per ticket and 55-86% of tickets resolve without a human ever touching them.
 
 The deflection rate is not even the most interesting number. 21% of live chat conversations today go entirely unanswered, and 30-45% of tickets land in your inbox outside business hours. AI agents recover 2-3x more abandoned carts than human chat for one reason: they show up at 11pm on a Sunday.
@@ -445,6 +447,8 @@ Reply if you run an ecommerce with this pattern, happy to share the deflection b
 
 ---
 ## 2026-05-05 - Automatizar postventa online (ecommerce post-purchase)
+
+<!-- SCHEDULED:sp_NbD9YEHoaNGJ7tHiegNg at 2026-05-07T06:00:00.000Z -->
 
 Most DTC brands spend 60-80% of marketing budget on acquisition and treat the post-purchase journey as a thank-you email. The math punishes that: automated post-purchase messages drive 38% of email revenue from under 3% of volume, and a 5% lift in retention moves profits 25-95%.
 

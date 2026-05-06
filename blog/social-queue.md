@@ -474,3 +474,16 @@ Reply if you are running an ecommerce above 1,000 abandoned carts/month, happy t
 #ecommerce #retailtech #AI #WhatsAppBusiness
 
 ---
+## 2026-05-06 - Upselling automatico en ecommerce con IA
+
+It costs 5 to 25x more to acquire a new buyer than to grow revenue from one already checking out, yet most stores still leave AOV flat. Personalized recommendations drive up to 30% of mature ecommerce revenue and post-purchase upsells convert at 15-25% when a personalized AI agent picks the offer in real time.
+
+The pattern that works: one offer (not three), priced 25-60% of the cart value, decided by a model trained on your actual co-purchase data. On a 50,000 orders/year store this moves AOV from 52 to 65 EUR and adds about 13,500 EUR/month in net margin.
+
+Read the full framework with the five upsell placements ranked by acceptance rate: https://zeniapartners.com/blog/upselling-automatico-ecommerce-ia.html
+
+Reply if you run an ecommerce with stuck AOV, happy to share the placement map we use.
+
+#ecommerce #retailtech #AI #automation
+
+---

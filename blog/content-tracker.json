@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-05-06T15:00:00Z",
+  "lastRun": "2026-05-06T22:00:00Z",
   "posts": [
     {
       "slug": "automatizar-reservas-restaurante-whatsapp",
@@ -366,8 +366,8 @@
       "keyword": "upselling automatico ecommerce ia",
       "tier": 2,
       "cluster": "ecommerce",
-      "status": "pending",
-      "date": null
+      "status": "published",
+      "date": "2026-05-06"
     },
     {
       "slug": "crm-inmobiliarias-leads",

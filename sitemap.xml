@@ -29,6 +29,13 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  <!-- Blog: CRM Inmobiliarias Leads (ES) -->
+  <url>
+    <loc>https://zeniapartners.com/blog/crm-inmobiliarias-leads.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- Blog: Upselling Automatico Ecommerce con IA (ES) -->
   <url>
     <loc>https://zeniapartners.com/blog/upselling-automatico-ecommerce-ia.html</loc>

@@ -487,3 +487,19 @@ Reply if you run an ecommerce with stuck AOV, happy to share the placement map w
 #ecommerce #retailtech #AI #automation
 
 ---
+
+## 2026-05-06 - CRM para inmobiliarias: convertir leads
+
+78% of property buyers work with the first agent who responds. The average real estate agent takes 917 minutes (over 15 hours) to reply to a new lead.
+
+That gap is where a 38 EUR/lead Idealista or Fotocasa investment quietly dies. Each minute of delay in the first 5 minutes drops qualification rates by 10%, and after 1 hour, conversion odds collapse 90%.
+
+We mapped what actually moves the needle for an agency with 5 brokers and 150 leads/month: an AI agent that responds in under 10 seconds on WhatsApp, qualifies budget and timeline conversationally, and routes the lead to the right broker before it cools. Conversion from lead to viewing went from 7% to 25%, and lead-to-sale from 1.5% to 3.2%, on the same ad budget.
+
+Net impact: roughly 28,000 EUR/month in recovered pipeline against a 497 EUR/month system cost. ROI between 28x and 57x.
+
+Reply if you run a brokerage and want the qualification script we use, happy to share.
+
+#realestate #proptech #AI #WhatsAppBusiness
+
+---

@@ -29,6 +29,13 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  <!-- Blog: Recuperar Carritos Abandonados por WhatsApp (ES) -->
+  <url>
+    <loc>https://zeniapartners.com/blog/recuperar-carritos-abandonados-whatsapp.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- Blog: Automatizar Postventa Online (ES) -->
   <url>
     <loc>https://zeniapartners.com/blog/automatizar-postventa-online.html</loc>

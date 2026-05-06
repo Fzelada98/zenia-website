@@ -461,3 +461,16 @@ Reply if you run a DTC brand with high acquisition cost and weak repeat rate, ha
 #ecommerce #retailtech #AI #WhatsAppBusiness
 
 ---
+## 2026-05-06 - Recuperar carritos abandonados por WhatsApp
+
+70% of ecommerce carts get abandoned. Email recovers 3-8% of them on a good day. WhatsApp with a personalized AI agent recovers 15-25%. Same traffic, same ad spend, three to five times more revenue rescued.
+
+Baymard's 2026 benchmark still puts the average cart abandonment rate at 70.19%, and on mobile it climbs past 78%. Most of those buyers did not reject the product. They got distracted, stuck on shipping costs, or unsure about size. Email gets 20% open rates and a 1-3 hour delay. WhatsApp gets 98% open rates, 45-60% CTR and lands within 60-90 minutes, the window where intent has not cooled yet.
+
+The trick is not blasting "you forgot something" templates. It is a 3-message sequence over 72 hours where an AI agent answers the actual objection: size, payment method, shipping cost, stock anxiety. Skullcandy ran this and reported 25-40% recovered carts and 150x ROI vs their email-only flow.
+
+Reply if you are running an ecommerce above 1,000 abandoned carts/month, happy to send the message timing and copy framework we use.
+
+#ecommerce #retailtech #AI #WhatsAppBusiness
+
+---

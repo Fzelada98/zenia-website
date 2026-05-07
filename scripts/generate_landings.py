@@ -314,6 +314,8 @@ TOP_CITIES_FOR_NEW = [
     "madrid", "barcelona", "valencia", "sevilla", "malaga", "bilbao", "palma",
     "lima", "bogota", "cdmx", "santiago", "buenos-aires",
     "medellin", "monterrey", "miami",
+    "guadalajara", "quito", "guayaquil", "cali", "cartagena",
+    "montevideo", "panama-city", "san-jose-cr",
 ]
 
 # Existing standalone-only verticals × 5 top cities

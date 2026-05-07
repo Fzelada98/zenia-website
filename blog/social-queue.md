@@ -463,6 +463,8 @@ Reply if you run a DTC brand with high acquisition cost and weak repeat rate, ha
 ---
 ## 2026-05-06 - Recuperar carritos abandonados por WhatsApp
 
+<!-- SCHEDULED:sp_2jpJ2cnXMw8zq9ssoOtxG at 2026-05-07T16:12:15.831Z -->
+
 70% of ecommerce carts get abandoned. Email recovers 3-8% of them on a good day. WhatsApp with a personalized AI agent recovers 15-25%. Same traffic, same ad spend, three to five times more revenue rescued.
 
 Baymard's 2026 benchmark still puts the average cart abandonment rate at 70.19%, and on mobile it climbs past 78%. Most of those buyers did not reject the product. They got distracted, stuck on shipping costs, or unsure about size. Email gets 20% open rates and a 1-3 hour delay. WhatsApp gets 98% open rates, 45-60% CTR and lands within 60-90 minutes, the window where intent has not cooled yet.
@@ -475,6 +477,8 @@ Reply if you are running an ecommerce above 1,000 abandoned carts/month, happy t
 
 ---
 ## 2026-05-06 - Upselling automatico en ecommerce con IA
+
+<!-- SCHEDULED:sp_Ah9kDS5VSEISdE4wCev5s at 2026-05-08T06:00:00.000Z -->
 
 It costs 5 to 25x more to acquire a new buyer than to grow revenue from one already checking out, yet most stores still leave AOV flat. Personalized recommendations drive up to 30% of mature ecommerce revenue and post-purchase upsells convert at 15-25% when a personalized AI agent picks the offer in real time.
 
@@ -489,6 +493,8 @@ Reply if you run an ecommerce with stuck AOV, happy to share the placement map w
 ---
 
 ## 2026-05-06 - CRM para inmobiliarias: convertir leads
+
+<!-- SCHEDULED:sp_Y5sfdkun0INkvUPxPBT at 2026-05-11T07:00:00.000Z -->
 
 78% of property buyers work with the first agent who responds. The average real estate agent takes 917 minutes (over 15 hours) to reply to a new lead.
 
@@ -506,6 +512,8 @@ Reply if you run a brokerage and want the qualification script we use, happy to 
 
 ## 2026-05-07 - CRM para tiendas retail: guía 2026
 
+<!-- SCHEDULED:sp_UkqVORvb4qaGFdEXnNzi at 2026-05-12T06:00:00.000Z -->
+
 The average retail store keeps only 63% of its customers year over year, and most owners cannot name 10 of them. A retail CRM with a personalized AI agent on WhatsApp moves retention 8 to 15 points in six months, lifts LTV by 111% and pays back near 20x against a 297-497 EUR/month cost.
 
 Full breakdown in the new guide: https://zeniapartners.com/blog/crm-para-tiendas-retail.html
@@ -517,6 +525,8 @@ Reply if you run a retail store stuck on TPV plus Excel, happy to share the inte
 ---
 
 ## 2026-05-07 - CRM para centro wellness y spa: guía 2026
+
+<!-- SCHEDULED:sp_2Q9IfTHgCccaXJGJsDuFU at 2026-05-13T07:00:00.000Z -->
 
 Spas grew 14.6% last year, the biggest jump in the wellness economy, yet 81% of clients try to book outside business hours and most centers still run on paper agendas. A spa CRM with WhatsApp and a personalized AI agent lifts retention 22%, drops no-shows from 14% to 4% and pushes upselling from 8% to 21%. ROI 15x to 30x against a 297-497 EUR/month cost.
 

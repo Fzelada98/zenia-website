@@ -503,3 +503,15 @@ Reply if you run a brokerage and want the qualification script we use, happy to 
 #realestate #proptech #AI #WhatsAppBusiness
 
 ---
+
+## 2026-05-07 - CRM para tiendas retail: guía 2026
+
+The average retail store keeps only 63% of its customers year over year, and most owners cannot name 10 of them. A retail CRM with a personalized AI agent on WhatsApp moves retention 8 to 15 points in six months, lifts LTV by 111% and pays back near 20x against a 297-497 EUR/month cost.
+
+Full breakdown in the new guide: https://zeniapartners.com/blog/crm-para-tiendas-retail.html
+
+Reply if you run a retail store stuck on TPV plus Excel, happy to share the integration map we use.
+
+#retailtech #CRM #AI #WhatsAppBusiness
+
+---

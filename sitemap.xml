@@ -29,6 +29,13 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  <!-- Blog: CRM para Tiendas Retail (ES) -->
+  <url>
+    <loc>https://zeniapartners.com/blog/crm-para-tiendas-retail.html</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- Blog: CRM Inmobiliarias Leads (ES) -->
   <url>
     <loc>https://zeniapartners.com/blog/crm-inmobiliarias-leads.html</loc>

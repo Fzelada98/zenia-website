@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-05-07T12:00:00Z",
+  "lastRun": "2026-05-07T14:00:00Z",
   "posts": [
     {
       "slug": "automatizar-reservas-restaurante-whatsapp",
@@ -390,8 +390,8 @@
       "keyword": "crm centro wellness spa",
       "tier": 2,
       "cluster": "wellness",
-      "status": "pending",
-      "date": null
+      "status": "published",
+      "date": "2026-05-07"
     },
     {
       "slug": "agente-ia-personalizado-vs-chatbot-generico",

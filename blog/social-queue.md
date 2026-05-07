@@ -515,3 +515,15 @@ Reply if you run a retail store stuck on TPV plus Excel, happy to share the inte
 #retailtech #CRM #AI #WhatsAppBusiness
 
 ---
+
+## 2026-05-07 - CRM para centro wellness y spa: guía 2026
+
+Spas grew 14.6% last year, the biggest jump in the wellness economy, yet 81% of clients try to book outside business hours and most centers still run on paper agendas. A spa CRM with WhatsApp and a personalized AI agent lifts retention 22%, drops no-shows from 14% to 4% and pushes upselling from 8% to 21%. ROI 15x to 30x against a 297-497 EUR/month cost.
+
+Full breakdown in the new guide: https://zeniapartners.com/blog/crm-centro-wellness-spa.html
+
+Reply if you run a spa or wellness center stuck on phone bookings, happy to share the implementation playbook.
+
+#healthtech #spaindustry #AI #WhatsAppBusiness
+
+---

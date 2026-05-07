@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-05-07T14:00:00Z",
+  "lastRun": "2026-05-07T22:00:00Z",
   "posts": [
     {
       "slug": "automatizar-reservas-restaurante-whatsapp",
@@ -398,8 +398,8 @@
       "keyword": "agente ia personalizado vs chatbot generico",
       "tier": 3,
       "cluster": "general",
-      "status": "pending",
-      "date": null
+      "status": "published",
+      "date": "2026-05-07"
     },
     {
       "slug": "automatizar-negocio-pequeno-sin-programar",

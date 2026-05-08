@@ -540,6 +540,8 @@ Reply if you run a spa or wellness center stuck on phone bookings, happy to shar
 
 ## 2026-05-07 - Agente de IA personalizado vs chatbot genérico
 
+<!-- SCHEDULED:sp_uwipgn3B9MxCvMgt5vhR at 2026-05-08T16:13:02.831Z -->
+
 51% of enterprises now run a personalized AI agent in production, with another 23% actively scaling them (OneReach.ai, 2026). Meanwhile, the generic chatbot most SMBs installed in 2022 still resolves only 38% of conversations on its own.
 
 At 800 conversations a month, the math is brutal: chatbot plus human escalation costs around 872 EUR, while a personalized AI agent lands near 602 EUR with 84% autonomous resolution. 270 EUR less per month, fewer derived tickets, better experience.
@@ -550,6 +552,8 @@ Full comparison across 10 dimensions, by sector: https://zeniapartners.com/blog/
 
 ---
 ## 2026-05-08 - Automatizar negocio pequeño sin programar
+
+<!-- SCHEDULED:sp_X2DW7RPSNFu1Sp5FfLo0 at 2026-05-11T07:00:00.000Z -->
 
 Spanish SMBs that automate with AI recover 27 hours per week per person, and in 2026 70% of new business apps are built with no-code (Gartner). The barrier to automation is no longer technical, it is deciding which task to free up first.
 
@@ -562,6 +566,8 @@ Full breakdown with the 6 mistakes that kill 70% of automation projects: https:/
 ---
 
 ## 2026-05-08 - Cómo elegir CRM para PYME
+
+<!-- SCHEDULED:sp_msfwdtklpMgdO1JNVe at 2026-05-12T07:00:00.000Z -->
 
 Only 17% of Spanish SMBs run an integrated CRM, and across the global market 55% to 70% of CRM implementations fail to hit their objectives (Searchlab, Forrester). The software is rarely the issue. The decision before the purchase is.
 

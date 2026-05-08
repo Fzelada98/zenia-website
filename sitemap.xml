@@ -29,6 +29,13 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  <!-- Blog: Automatizar negocio pequeño sin programar (ES) -->
+  <url>
+    <loc>https://zeniapartners.com/blog/automatizar-negocio-pequeno-sin-programar.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- Blog: Agente IA personalizado vs chatbot genérico (ES) -->
   <url>
     <loc>https://zeniapartners.com/blog/agente-ia-personalizado-vs-chatbot-generico.html</loc>

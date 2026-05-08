@@ -549,3 +549,15 @@ Full comparison across 10 dimensions, by sector: https://zeniapartners.com/blog/
 #B2B #SaaS #AI #automation
 
 ---
+## 2026-05-08 - Automatizar negocio pequeño sin programar
+
+Spanish SMBs that automate with AI recover 27 hours per week per person, and in 2026 70% of new business apps are built with no-code (Gartner). The barrier to automation is no longer technical, it is deciding which task to free up first.
+
+We mapped a 30-day plan that any solo operator or small business can run without writing a single line of code: WhatsApp AI agent, lightweight CRM, automated invoicing. Net ROI in our base scenario lands between +2,000 and +2,200 EUR per month against a stack cost under 300 EUR.
+
+Full breakdown with the 6 mistakes that kill 70% of automation projects: https://zeniapartners.com/blog/automatizar-negocio-pequeno-sin-programar.html
+
+#smallbusiness #nocode #AI #automation
+
+---
+

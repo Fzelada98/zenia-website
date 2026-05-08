@@ -29,6 +29,13 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  <!-- Blog: Cómo responder WhatsApp rápido siendo autónomo (ES) -->
+  <url>
+    <loc>https://zeniapartners.com/blog/como-responder-whatsapp-rapido-siendo-autonomo.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- Blog: Cómo elegir CRM para PYME (ES) -->
   <url>
     <loc>https://zeniapartners.com/blog/como-elegir-crm-para-pyme.html</loc>

@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-05-08T00:00:00Z",
+  "lastRun": "2026-05-08T12:00:00Z",
   "posts": [
     {
       "slug": "automatizar-reservas-restaurante-whatsapp",
@@ -414,8 +414,8 @@
       "keyword": "como elegir crm para pyme",
       "tier": 3,
       "cluster": "general",
-      "status": "pending",
-      "date": null
+      "status": "published",
+      "date": "2026-05-08"
     },
     {
       "slug": "como-responder-whatsapp-rapido-siendo-autonomo",

@@ -29,6 +29,13 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  <!-- Blog: Cómo elegir CRM para PYME (ES) -->
+  <url>
+    <loc>https://zeniapartners.com/blog/como-elegir-crm-para-pyme.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- Blog: Automatizar negocio pequeño sin programar (ES) -->
   <url>
     <loc>https://zeniapartners.com/blog/automatizar-negocio-pequeno-sin-programar.html</loc>

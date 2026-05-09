@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-05-09T12:00:00Z",
+  "lastRun": "2026-05-09T14:00:00Z",
   "posts": [
     {
       "slug": "automatizar-reservas-restaurante-whatsapp",
@@ -446,8 +446,8 @@
       "keyword": "herramientas automatizacion pymes 2026",
       "tier": 3,
       "cluster": "general",
-      "status": "pending",
-      "date": null
+      "status": "published",
+      "date": "2026-05-09"
     },
     {
       "slug": "integracion-whatsapp-business-api-espana",

@@ -29,6 +29,13 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  <!-- Blog: Cuánto cuesta un CRM para pymes en 2026 (ES) -->
+  <url>
+    <loc>https://zeniapartners.com/blog/cuanto-cuesta-un-crm-para-pymes.html</loc>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- Blog: CRM vs Hoja de Cálculo: Cuándo Migrar tu Pyme (ES) -->
   <url>
     <loc>https://zeniapartners.com/blog/crm-vs-hoja-de-calculo-cuando-migrar.html</loc>

@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-05-08T14:00:00Z",
+  "lastRun": "2026-05-09T00:00:00Z",
   "posts": [
     {
       "slug": "automatizar-reservas-restaurante-whatsapp",
@@ -430,8 +430,8 @@
       "keyword": "crm vs hoja de calculo cuando migrar",
       "tier": 3,
       "cluster": "general",
-      "status": "pending",
-      "date": null
+      "status": "published",
+      "date": "2026-05-09"
     },
     {
       "slug": "cuanto-cuesta-un-crm-para-pymes",

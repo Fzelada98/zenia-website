@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-05-09T14:00:00Z",
+  "lastRun": "2026-05-10T14:00:00Z",
   "posts": [
     {
       "slug": "automatizar-reservas-restaurante-whatsapp",
@@ -454,8 +454,8 @@
       "keyword": "integracion whatsapp business api espana",
       "tier": 3,
       "cluster": "general",
-      "status": "pending",
-      "date": null
+      "status": "published",
+      "date": "2026-05-10"
     },
     {
       "slug": "perder-clientes-por-no-contestar-whatsapp",

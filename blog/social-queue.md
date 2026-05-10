@@ -632,3 +632,16 @@ DM me if you want the stack recommendation broken down for your sector.
 #B2B #SaaS #AI #automation
 
 ---
+
+## 2026-05-10 - WhatsApp Business API integration in Spain 2026
+
+Spain has 33M WhatsApp users and 91% adoption, the highest in Europe. Most SMBs still run customer conversations on the consumer app, where multi-agent, automation and CRM integration simply do not exist.
+That gap matters more in 2026 because Meta retired the On-Premises API in October 2025. Cloud API is now the only official path, and the pricing model moved from 24-hour conversations to per-template-message billing in July 2025.
+For a typical Spanish SMB sending 5K to 20K messages monthly, total cost lands between 300 and 800 EUR including BSP fees, platform and Meta per-message rates.
+We mapped the full integration: BSP selection, Cloud API setup, message template categories (marketing, utility, authentication, service), GDPR opt-in compliance and the 5 mistakes that get accounts blocked in week one.
+The technical setup is no longer the bottleneck. The conversation flows and the AI agent design behind them are.
+DM me if you want the step-by-step integration checklist for your team.
+
+#B2B #SaaS #AI #automation
+
+---

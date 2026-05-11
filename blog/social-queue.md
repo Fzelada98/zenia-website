@@ -681,3 +681,15 @@ DM me if you run a family restaurant and want the prioritized rollout sheet.
 
 ---
 
+## 2026-05-11 - Why restaurant guests do not come back
+
+70% of first-time restaurant guests never return. Sector average retention is 55% versus a 75% benchmark in other industries.
+Most operators blame the market or the menu. The real cause is structural: no customer profile, no follow-up after the visit, no alert when a regular goes 60 days quiet. The 88% of restaurants with zero post-visit communication are inviting their own churn.
+We rebuilt the loop for a 70-cover restaurant in Valencia. WhatsApp Business API on the existing number, a personalized AI agent that segments customers into six states, contextual recovery messages citing the favorite dish or last visit, and a 36-hour post-visit feedback flow.
+Result in 90 days: recurrence rate from 32% to 51%, average visits per customer per year from 2.3 to 4.7, monthly revenue +14,700 EUR over baseline. System cost: 497 EUR/month.
+Lifting retention 15 points in a 60-cover restaurant is worth 10,000 to 15,000 EUR/month. It is cheaper than buying new traffic.
+Reply if you run a restaurant and want the 5-week rollout checklist.
+
+#restauranttech #customerretention #AI #WhatsAppBusiness
+
+---

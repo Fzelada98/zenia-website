@@ -668,3 +668,16 @@ Full comparison and migration checklist: https://zeniapartners.com/blog/whatsapp
 #B2B #SaaS #AI #WhatsAppBusiness
 
 ---
+## 2026-05-11 - Digitalize a family restaurant
+
+In Madrid 60% of restaurants already manage reservations 100% digital. In the rest of Spain it is 51%. Family restaurants are losing the gap.
+Sector revenue grew 4.6% YoY in 2025, but restaurant margin fell 0.9% in the same period. Selling more, earning less. The only lever left without raising prices is operational productivity.
+We mapped what a family restaurant of 50 covers actually needs: Google Business optimized, modern POS, online reservations, AI agent on WhatsApp, integrated CRM. Total monthly cost between 300 and 700 EUR. Spain's Kit Digital covers up to 12,000 EUR of the initial setup.
+Conservative ROI: +4,500 EUR/month recovered between off-hours reservations, lower no-shows and freed owner time. Net margin moves from 9% to 13% in 6 months.
+The hard part is not the tech. It is deciding the order: most owners start with the website and skip the CRM. Wrong sequence.
+DM me if you run a family restaurant and want the prioritized rollout sheet.
+
+#restauranttech #customerretention #AI #WhatsAppBusiness
+
+---
+

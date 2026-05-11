@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-05-10T23:30:00Z",
+  "lastRun": "2026-05-11T00:00:00Z",
   "posts": [
     {
       "slug": "automatizar-reservas-restaurante-whatsapp",
@@ -478,8 +478,8 @@
       "keyword": "como digitalizar restaurante familiar",
       "tier": 3,
       "cluster": "restaurantes",
-      "status": "pending",
-      "date": null
+      "status": "published",
+      "date": "2026-05-11"
     },
     {
       "slug": "por-que-mis-clientes-no-vuelven-restaurante",

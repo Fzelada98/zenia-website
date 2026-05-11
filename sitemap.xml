@@ -29,6 +29,13 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  <!-- Blog: Cómo digitalizar un restaurante familiar (ES) -->
+  <url>
+    <loc>https://zeniapartners.com/blog/como-digitalizar-restaurante-familiar.html</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- Blog: Perder clientes por no contestar WhatsApp (ES) -->
   <url>
     <loc>https://zeniapartners.com/blog/perder-clientes-por-no-contestar-whatsapp.html</loc>

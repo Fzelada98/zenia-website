@@ -585,6 +585,8 @@ DM me if you want the criteria checklist applied to your specific vertical.
 
 ## 2026-05-08 - How to respond fast on WhatsApp as a freelancer
 
+<!-- SCHEDULED:sp_IdGZLRYA9ShNKM0JQSdS at 2026-05-11T16:14:53.603Z -->
+
 65% of customers expect a WhatsApp reply in under 5 minutes, and 78% of Latin American consumers buy from the first business that responds.
 If you are a freelancer checking your phone between tasks, you are already losing leads. Installing WhatsApp Business and an away message is not enough.
 We mapped a 5-step system (strategic templates, unified triage, smart away, time blocks, personalized AI agent) that gets average response under 1 minute without living glued to the phone.
@@ -597,6 +599,8 @@ Full breakdown: https://zeniapartners.com/blog/como-responder-whatsapp-rapido-si
 
 ## 2026-05-09 - CRM vs spreadsheet: when to migrate your SMB
 
+<!-- SCHEDULED:sp_HDn5cBgW6QrfOClns1ohC at 2026-05-12T07:00:00.000Z -->
+
 94% of business spreadsheets contain at least one error, and only 17% of SMBs in Spain run a CRM integrated with their accounting in 2026.
 Excel works to start. The question is when it stops saving you money and starts burning it.
 We mapped 7 concrete signals (lead volume above 30/month, more than one editor, multi-channel inbound, late follow-ups, blind metrics, missed renewals, recent costly mistakes). Hit three and the spreadsheet is already costing more than a CRM.
@@ -608,6 +612,8 @@ Reply if you want the migration checklist for your industry.
 ---
 
 ## 2026-05-09 - How much a CRM really costs for an SMB
+
+<!-- SCHEDULED:sp_VEeKp2HQozmNXA7BTgeK at 2026-05-13T07:00:00.000Z -->
 
 The CRM price tag on a vendor website lies. Total cost of ownership is 3 to 5 times the license fee for platforms like Salesforce, and SMBs in Spain end up paying 1,500 to 6,000 EUR a year all in.
 The honest question is not "how much per user" but "what do I pay year one with setup, integrations, training and hidden add-ons" and "when does it pay itself back".
@@ -622,6 +628,8 @@ DM me if you want the budget framework broken down for your headcount and vertic
 
 ## 2026-05-09 - SMB automation tools 2026: the real map
 
+<!-- SCHEDULED:sp_LozWX99SxXNiAIpXi6jc at 2026-05-14T07:00:00.000Z -->
+
 47% of SMBs plan to invest in automation tools in 2026, up from 22% in 2024. Only 18% have anything in production.
 The blocker is not budget. It is not knowing which tool solves which problem.
 We mapped the 7 categories every SMB should evaluate (CRM, no-code orchestration, AI agents, WhatsApp Business API, RPA, marketing automation, helpdesk) plus the minimum viable stack per business profile.
@@ -634,6 +642,8 @@ DM me if you want the stack recommendation broken down for your sector.
 ---
 
 ## 2026-05-10 - WhatsApp Business API integration in Spain 2026
+
+<!-- SCHEDULED:sp_oVUKi9I5YKrSleNAsEL at 2026-05-15T07:00:00.000Z -->
 
 Spain has 33M WhatsApp users and 91% adoption, the highest in Europe. Most SMBs still run customer conversations on the consumer app, where multi-agent, automation and CRM integration simply do not exist.
 That gap matters more in 2026 because Meta retired the On-Premises API in October 2025. Cloud API is now the only official path, and the pricing model moved from 24-hour conversations to per-template-message billing in July 2025.
@@ -648,6 +658,8 @@ DM me if you want the step-by-step integration checklist for your team.
 
 ## 2026-05-10 - The hidden cost of slow WhatsApp replies
 
+<!-- SCHEDULED:sp_RXPfjkuJcvQIe3JGSqMnL at 2026-05-18T07:00:00.000Z -->
+
 78% of buyers buy from whoever replies first, yet the average SMB takes 17 hours to answer a lead.
 Every minute past the 5-minute mark cuts contact probability by 10x. After 10 minutes, conversion drops 400%. This is not a customer service problem, it is a math problem.
 We audited 60+ SMBs and the same five leaks show up: messages outside hours (30-40% of leads), the "I will check it later" that never happens, conversations bouncing between team members, leads with zero follow-up, and replies to the wrong question.
@@ -661,6 +673,8 @@ DM me if you want the audit framework, happy to share the spreadsheet we use.
 
 ## 2026-05-10 - WhatsApp Business vs Professional CRM
 
+<!-- SCHEDULED:sp_iZa8X1Y8GLwxHxyNtsmNN at 2026-05-19T07:00:00.000Z -->
+
 WhatsApp Business app caps at 5 device accesses and 250 broadcast recipients per 24 hours. The professional API with Meta verification jumps to 100,000 messages/day in 2026.
 For an SMB at 22% close rate on 150 monthly leads, that ceiling is real money: Infobip data shows automation lifts SMB close rates 10-25% in LATAM.
 Full comparison and migration checklist: https://zeniapartners.com/blog/whatsapp-business-vs-crm-profesional-diferencias.html
@@ -669,6 +683,8 @@ Full comparison and migration checklist: https://zeniapartners.com/blog/whatsapp
 
 ---
 ## 2026-05-11 - Digitalize a family restaurant
+
+<!-- SCHEDULED:sp_WAzKec75p6Nmm4Ll60AG0 at 2026-05-20T08:00:00.000Z -->
 
 In Madrid 60% of restaurants already manage reservations 100% digital. In the rest of Spain it is 51%. Family restaurants are losing the gap.
 Sector revenue grew 4.6% YoY in 2025, but restaurant margin fell 0.9% in the same period. Selling more, earning less. The only lever left without raising prices is operational productivity.
@@ -682,6 +698,8 @@ DM me if you run a family restaurant and want the prioritized rollout sheet.
 ---
 
 ## 2026-05-11 - Why restaurant guests do not come back
+
+<!-- SCHEDULED:sp_78wIXnC5Ol8Qm3xzC2B0 at 2026-05-21T07:00:00.000Z -->
 
 70% of first-time restaurant guests never return. Sector average retention is 55% versus a 75% benchmark in other industries.
 Most operators blame the market or the menu. The real cause is structural: no customer profile, no follow-up after the visit, no alert when a regular goes 60 days quiet. The 88% of restaurants with zero post-visit communication are inviting their own churn.

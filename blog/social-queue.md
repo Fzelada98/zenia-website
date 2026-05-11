@@ -711,3 +711,16 @@ Reply if you run a restaurant and want the 5-week rollout checklist.
 #restauranttech #customerretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-05-11 - Best CRM for beauty salons in Barcelona
+
+The Spanish beauty sector hit 10.4B EUR in 2025 yet 2,800 salons closed in the last four years.
+Costs are up 27%, prices only 3.6%. Margin has nowhere left to hide.
+In Barcelona, salons live or die on three operational metrics: WhatsApp response time, no-show rate, and how many lapsed clients you can reactivate before they walk into the salon next door.
+We rebuilt the customer loop for an Eixample salon with three professionals and 720 active clients. A personalized AI agent on the existing WhatsApp number, cabin-aware scheduling, 48h/24h/2h confirmation cascade, and a churn alert that fires when a client drifts past their normal cadence.
+Result on the modeled run: response time under one minute, no-shows from 11% to 5%, average ticket +9% from contextual upsell. Net impact estimate of 22,000 EUR/month against a sub-500 EUR system cost.
+DM me if you run a salon or beauty center and want the operator playbook for your city.
+
+#beautyindustry #CRM #AI #WhatsAppBusiness
+
+---

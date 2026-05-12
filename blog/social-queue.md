@@ -724,3 +724,15 @@ DM me if you run a salon or beauty center and want the operator playbook for you
 #beautyindustry #CRM #AI #WhatsAppBusiness
 
 ---
+
+## 2026-05-12 - Best CRM for beauty salons in Bilbao
+
+Spain's professional aesthetics sector moved 847M EUR in 2025, yet the average Bizkaia salon still runs its agenda on paper, a Booksy slot list, and a WhatsApp inbox nobody reads after 7 PM.
+The bottleneck is not demand. It is the gap between the conversation and the client file. When the message lives in someone's phone and the file lives in someone's head, retention numbers cannot move.
+We rebuilt the loop for a 5-cabin salon in Indautxu with 6 professionals and 980 active clients. Personalized AI agent on the existing WhatsApp number, VeriFactu-ready invoicing, color-formula and cabin on the client card, dynamic waitlist when a slot opens.
+Modeled outcome: response time under 10 seconds, no-shows from 12% to 4%, lapsed-client reactivation at 18% on the 60-day cohort. Net impact between 4,500 and 7,000 EUR/month on a sub-500 EUR/month stack.
+The cheaper software wins on the invoice and loses on the P&L. Reply if you run a salon in northern Spain and want the operator checklist.
+
+#beautyindustry #CRM #AI #WhatsAppBusiness
+
+---

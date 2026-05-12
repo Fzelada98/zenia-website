@@ -632,3 +632,16 @@ DM me if you want the stack recommendation broken down for your sector.
 #B2B #SaaS #AI #automation
 
 ---
+
+## 2026-05-12 - WhatsApp Business API in Spain: the integration nobody warns you about
+
+Meta closed the old On-Premises API in October 2025 and killed the On-Behalf-Of model. Every new WhatsApp Business API integration in Spain now runs on Cloud API, and almost always through a BSP.
+The pricing flipped on July 1, 2025. Per-conversation is gone. Per-message is in. In Spain a marketing or utility template costs around 0.07 EUR. Service replies inside the 24-hour customer window are free.
+What kills 70% of integrations is not tech, it is paperwork: Meta business verification takes 2 to 7 business days, fiscal documents must match the Registro Mercantil exactly, and template approval rejects anything that reads like an ad in the utility category.
+Real timeline: 3 to 4 weeks from signature to full go-live. The API itself takes hours. Meta paperwork and template approval take the rest.
+One trap to watch: some BSPs register the WhatsApp Business Account in their own name. Demand ownership from day one or you do not own your number, your history or your quality rating.
+DM me if you want the readiness checklist for your Meta verification.
+
+#B2B #SaaS #AI #WhatsAppBusiness
+
+---

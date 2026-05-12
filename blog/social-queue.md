@@ -736,3 +736,15 @@ The cheaper software wins on the invoice and loses on the P&L. Reply if you run 
 #beautyindustry #CRM #AI #WhatsAppBusiness
 
 ---
+
+## 2026-05-12 - Best CRM for beauty salons in Bogota
+
+Colombia's beauty market hit 3.5B USD in 2025 and is projected to reach 5.05B by 2030, growing at 7.63% CAGR.
+Yet most Bogota salons still run on a Google Calendar, a WhatsApp inbox that goes silent after 8 PM, and a 22% no-show rate nobody is tracking.
+We mapped the real ROI for a 4-chair salon in Chapinero: response time under 10 seconds, no-shows from 22% to 8%, 31% of new bookings landing between 9 PM and 7 AM on a personalized AI agent attached to the existing WhatsApp number.
+Modeled net impact is 25 to 26M COP/month against a 1.5 to 2.2M COP/month stack. Payback under 75 days.
+Full comparison vs AgendaPro, Koibox, EasyWeek and Shortcuts: https://zeniapartners.com/blog/mejor-crm-para-belleza-en-bogota.html
+
+#beautyindustry #CRM #AI #WhatsAppBusiness
+
+---

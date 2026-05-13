@@ -748,3 +748,15 @@ Full comparison vs AgendaPro, Koibox, EasyWeek and Shortcuts: https://zeniapartn
 #beautyindustry #CRM #AI #WhatsAppBusiness
 
 ---
+
+## 2026-05-13 - Best CRM for beauty salons in CDMX
+
+Mexico's beauty and personal care market closed 2025 at 16.82B USD and CANIPEC tracks a steady 6% annual growth, with CDMX holding the country's densest cluster of salons, spas and aesthetic clinics.
+Yet a 6-cabin salon in Polanco still loses 70 to 140k MXN/month to no-shows above 15%, WhatsApp messages nobody answers after 8 PM, and CFDI 4.0 invoicing the owner does on Sundays.
+We rebuilt the loop with a personalized AI agent on the existing WhatsApp number, CFDI on demand straight from the chat, Clip and Conekta wired to the client card, and dynamic waitlists when a slot opens.
+Modeled outcome on a 4-week rollout: response time under 10 seconds, no-shows from 18% to 5%, 32% of new bookings landing between 9 PM and 7 AM, 100k MXN/month uplift on a stack under 10k MXN/month.
+Full comparison vs Fresha, Booksy and AgendaPro: https://zeniapartners.com/blog/mejor-crm-para-belleza-en-cdmx.html
+
+#beautyindustry #CRM #AI #WhatsAppBusiness
+
+---

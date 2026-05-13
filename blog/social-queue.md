@@ -760,3 +760,15 @@ Full comparison vs Fresha, Booksy and AgendaPro: https://zeniapartners.com/blog/
 #beautyindustry #CRM #AI #WhatsAppBusiness
 
 ---
+
+## 2026-05-13 - Best CRM for beauty salons in Lima
+
+Peru's beauty market closed 2025 at USD 2.93B and Diario Financiero projects up to 7% growth in 2026, with Lima driving over 60% of that spend.
+Meanwhile a 4-chair salon in Miraflores quietly bleeds S/ 17,000 a month to a 20% no-show rate, WhatsApp messages that go unread after 8 PM, and a client base nobody segments past "frequent" and "the rest".
+We rebuilt the loop with a personalized AI agent on the existing WhatsApp number, recovery flows for clients dormant 60 to 120 days, Yape and Plin wired to the client card, and dynamic waitlists firing the moment a slot opens.
+Modeled impact on a 5-week rollout: response time under 30 seconds, no-shows from 20% to 8%, 41% of new bookings landing between 10 PM and 7 AM, ROI between 15x and 25x against a stack under S/ 2,100 a month.
+Full comparison vs Koibox, AgendaPro and ReservApp: https://zeniapartners.com/blog/mejor-crm-para-belleza-en-lima.html
+
+#beautyindustry #CRM #AI #WhatsAppBusiness
+
+---

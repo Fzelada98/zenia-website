@@ -772,3 +772,15 @@ Full comparison vs Koibox, AgendaPro and ReservApp: https://zeniapartners.com/bl
 #beautyindustry #CRM #AI #WhatsAppBusiness
 
 ---
+
+## 2026-05-13 - Best CRM for beauty salons in Madrid
+
+Madrid hosts roughly 25% of Spain's beauty centers, per STANPA, with over 12,000 salons and aesthetic clinics packed into one metro area.
+The density is so brutal that a 15-minute delay answering a WhatsApp at 22:30 sends the booking to the next salon two blocks down.
+We mapped Koibox, Bookgy, Estetical and Wilapp against a personalized AI agent on WhatsApp, scored on what actually moves revenue for a Salamanca or Chamberi studio: no-shows, after-hours capture, reactivation of dormant clients.
+Modeled outcome on a 4-week rollout for a 3-cabin center with 58 EUR average ticket: no-shows from 17% to 6%, response under 10 seconds 24/7, ROI between 12x and 25x against a stack under 500 EUR a month.
+Full comparison and ROI breakdown: https://zeniapartners.com/blog/mejor-crm-para-belleza-en-madrid.html
+
+#beautyindustry #CRM #AI #WhatsAppBusiness
+
+---

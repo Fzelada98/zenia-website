@@ -807,3 +807,15 @@ Full breakdown with CLP-denominated ROI: https://zeniapartners.com/blog/mejor-cr
 #beautyindustry #CRM #AI #WhatsAppBusiness
 
 ---
+
+## 2026-05-14 - Best CRM for beauty salons in Seville
+
+Seville hosts 1,200+ salons across Nervion, Triana and Los Remedios, and the Spanish aesthetics market hit 847M EUR in 2025 per STANPA while cabins-per-center dropped from 2.1 to 1.8.
+That math says more competition on thinner margin, and the salons losing the race are not the ones with weaker stylists. They are the ones answering WhatsApp 23 minutes after the message arrives and a 14% no-show rate eating Saturday's calendar.
+We modeled a 3-chair center in Triana with 38 EUR average ticket: response under 10 seconds 24/7, no-shows from 14% to 5%, ticket up 28% from contextual upsell, plus 38% of bookings landing outside business hours that previously did not exist.
+Net impact +5,072 EUR/month on a stack under 500 EUR, payback inside 30 days, and Feria de Abril absorbed without adding headcount.
+Full local breakdown with VeriFactu and RGPD notes: https://zeniapartners.com/blog/mejor-crm-para-belleza-en-sevilla.html
+
+#beautyindustry #CRM #AI #WhatsAppBusiness
+
+---

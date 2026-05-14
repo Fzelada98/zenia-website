@@ -796,3 +796,14 @@ Full comparison and ROI breakdown: https://zeniapartners.com/blog/mejor-crm-para
 #beautyindustry #CRM #AI #WhatsAppBusiness
 
 ---
+
+## 2026-05-14 - Best CRM for beauty salons in Santiago Chile
+
+Chile's beauty market jumps from USD 374M in 2025 to USD 412M in 2026 (Mordor Intelligence), and Santiago concentrates more than 40% of that spend across Providencia, Las Condes and Vitacura.
+But the average salon there loses 12 hours a week coordinating WhatsApp and burns 17% of bookings to no-shows that no automated deposit ever caught.
+We compared Reservo, AgendaPro, Turnito and ReservaSimple against a personalized AI agent on WhatsApp with MercadoPago and Khipu wired in: no-shows from 17% to 5%, 60-day rebooking from 34% to 58%, average ticket up 31% from contextual upsell.
+Full breakdown with CLP-denominated ROI: https://zeniapartners.com/blog/mejor-crm-para-belleza-en-santiago.html
+
+#beautyindustry #CRM #AI #WhatsAppBusiness
+
+---

@@ -819,3 +819,14 @@ Full local breakdown with VeriFactu and RGPD notes: https://zeniapartners.com/bl
 #beautyindustry #CRM #AI #WhatsAppBusiness
 
 ---
+
+## 2026-05-15 - Best CRM for beauty salons in Valencia
+
+Valencia has 1,400+ salons crammed into a city with double-peak seasonality (Fallas in March, beach season June to August), and the local beauty market grows 7% a year while every year more salons close than open per Spanish industry data.
+The salons winning that race are not the ones with better stylists. They are the ones answering WhatsApp in 10 seconds, dropping no-shows from 16% to 5%, and capturing the 34% of bookings that land outside business hours.
+We modeled a 3-pro salon in Ruzafa with 38 EUR average ticket: visit frequency up from 3.1 to 4.7 per year, ticket up 28% from automated upsell, net impact +9,535 EUR/month on a stack under 500 EUR.
+Full local breakdown with valenciano + English agent setup and tourist-pricing notes: https://zeniapartners.com/blog/mejor-crm-para-belleza-en-valencia.html
+
+#beautyindustry #CRM #AI #WhatsAppBusiness
+
+---

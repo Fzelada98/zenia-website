@@ -842,3 +842,14 @@ Full local breakdown with the 8-point CRM checklist: https://zeniapartners.com/b
 #fitnessindustry #memberretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-05-15 - Best CRM for gyms in Bilbao
+
+Spanish gyms closed 2025 with a 33% annual churn rate, and 50% of those losses happen in the first 90 days.
+Bilbao's low-cost battle (Fitness Park, VivaGym, Basic-Fit) makes that math brutal: an 800-member club bleeds roughly 264 members a year, or 102K EUR in recurring revenue.
+We modeled what swapping a classic gym software for a CRM with a personalized AI agent does for that same club: churn down to 22%, payment recovery from 38% to 71%, lead conversion from 18% to 31%. Net +119K EUR a year on a stack under 6K.
+Full local breakdown with the 6-point CRM checklist: https://zeniapartners.com/blog/mejor-crm-para-gimnasios-en-bilbao.html
+
+#fitnessindustry #memberretention #AI #WhatsAppBusiness
+
+---

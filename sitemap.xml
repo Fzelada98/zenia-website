@@ -29,6 +29,13 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  <!-- Blog: Mejor CRM para gimnasios en Barcelona (ES) -->
+  <url>
+    <loc>https://zeniapartners.com/blog/mejor-crm-para-gimnasios-en-barcelona.html</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- Blog: Mejor CRM para belleza en Valencia (ES) -->
   <url>
     <loc>https://zeniapartners.com/blog/mejor-crm-para-belleza-en-valencia.html</loc>

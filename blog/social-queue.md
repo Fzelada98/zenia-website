@@ -830,3 +830,15 @@ Full local breakdown with valenciano + English agent setup and tourist-pricing n
 #beautyindustry #CRM #AI #WhatsAppBusiness
 
 ---
+
+## 2026-05-15 - Best CRM for gyms in Barcelona
+
+Barcelona packs 391 gyms, 14% of Spain's total, with the highest gym density per capita in the country and a rival waiting 400 meters down the street.
+At 5.8% monthly churn the math breaks: a 5% retention lift drives 25-95% profit growth per industry benchmarks, yet most operators still spot cancellations after they happen instead of before.
+We modeled an 850-member center in Eixample at 49 EUR average dues: WhatsApp response under 10 seconds 24/7, churn from 5.8% to 3.9%, inbound lead conversion 18% to 34%, plus a one-shot reactivation pass on dormant members.
+Net +9,638 EUR/month on a stack under 500 EUR, with native Spanish, Catalan and English handling so Sant Marti and Eixample expats stop being a friction point.
+Full local breakdown with the 8-point CRM checklist: https://zeniapartners.com/blog/mejor-crm-para-gimnasios-en-barcelona.html
+
+#fitnessindustry #memberretention #AI #WhatsAppBusiness
+
+---

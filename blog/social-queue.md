@@ -727,6 +727,8 @@ DM me if you run a salon or beauty center and want the operator playbook for you
 
 ## 2026-05-12 - Best CRM for beauty salons in Bilbao
 
+<!-- SCHEDULED:sp_am6GWzhOLhwjGWxAwUk4 at 2026-05-19T07:00:00.000Z -->
+
 Spain's professional aesthetics sector moved 847M EUR in 2025, yet the average Bizkaia salon still runs its agenda on paper, a Booksy slot list, and a WhatsApp inbox nobody reads after 7 PM.
 The bottleneck is not demand. It is the gap between the conversation and the client file. When the message lives in someone's phone and the file lives in someone's head, retention numbers cannot move.
 We rebuilt the loop for a 5-cabin salon in Indautxu with 6 professionals and 980 active clients. Personalized AI agent on the existing WhatsApp number, VeriFactu-ready invoicing, color-formula and cabin on the client card, dynamic waitlist when a slot opens.
@@ -738,6 +740,8 @@ The cheaper software wins on the invoice and loses on the P&L. Reply if you run 
 ---
 
 ## 2026-05-12 - Best CRM for beauty salons in Bogota
+
+<!-- SCHEDULED:sp_0O63TjOswU7kK59lpuZGG at 2026-05-20T07:00:00.000Z -->
 
 Colombia's beauty market hit 3.5B USD in 2025 and is projected to reach 5.05B by 2030, growing at 7.63% CAGR.
 Yet most Bogota salons still run on a Google Calendar, a WhatsApp inbox that goes silent after 8 PM, and a 22% no-show rate nobody is tracking.
@@ -751,6 +755,8 @@ Full comparison vs AgendaPro, Koibox, EasyWeek and Shortcuts: https://zeniapartn
 
 ## 2026-05-13 - Best CRM for beauty salons in CDMX
 
+<!-- SCHEDULED:sp_z6rtFCkLYEMEXH5Acuzxz at 2026-05-21T07:00:00.000Z -->
+
 Mexico's beauty and personal care market closed 2025 at 16.82B USD and CANIPEC tracks a steady 6% annual growth, with CDMX holding the country's densest cluster of salons, spas and aesthetic clinics.
 Yet a 6-cabin salon in Polanco still loses 70 to 140k MXN/month to no-shows above 15%, WhatsApp messages nobody answers after 8 PM, and CFDI 4.0 invoicing the owner does on Sundays.
 We rebuilt the loop with a personalized AI agent on the existing WhatsApp number, CFDI on demand straight from the chat, Clip and Conekta wired to the client card, and dynamic waitlists when a slot opens.
@@ -762,6 +768,8 @@ Full comparison vs Fresha, Booksy and AgendaPro: https://zeniapartners.com/blog/
 ---
 
 ## 2026-05-13 - Best CRM for beauty salons in Lima
+
+<!-- SCHEDULED:sp_UPmCSLz6oGWeP1atgIgR5 at 2026-05-22T08:00:00.000Z -->
 
 Peru's beauty market closed 2025 at USD 2.93B and Diario Financiero projects up to 7% growth in 2026, with Lima driving over 60% of that spend.
 Meanwhile a 4-chair salon in Miraflores quietly bleeds S/ 17,000 a month to a 20% no-show rate, WhatsApp messages that go unread after 8 PM, and a client base nobody segments past "frequent" and "the rest".
@@ -775,6 +783,8 @@ Full comparison vs Koibox, AgendaPro and ReservApp: https://zeniapartners.com/bl
 
 ## 2026-05-13 - Best CRM for beauty salons in Madrid
 
+<!-- SCHEDULED:sp_GE1WsPM9SvD1rwpGnKZnW at 2026-05-25T07:00:00.000Z -->
+
 Madrid hosts roughly 25% of Spain's beauty centers, per STANPA, with over 12,000 salons and aesthetic clinics packed into one metro area.
 The density is so brutal that a 15-minute delay answering a WhatsApp at 22:30 sends the booking to the next salon two blocks down.
 We mapped Koibox, Bookgy, Estetical and Wilapp against a personalized AI agent on WhatsApp, scored on what actually moves revenue for a Salamanca or Chamberi studio: no-shows, after-hours capture, reactivation of dormant clients.
@@ -786,6 +796,8 @@ Full comparison and ROI breakdown: https://zeniapartners.com/blog/mejor-crm-para
 ---
 
 ## 2026-05-14 - Best CRM for beauty salons in Malaga
+
+<!-- SCHEDULED:sp_6iJWC1AeZv9RcB0RZO at 2026-05-26T07:00:00.000Z -->
 
 Spain's professional aesthetics sector hit 847M EUR in 2025 per STANPA, and Malaga province alone holds over 3,500 salons across Teatinos, Marbella, Fuengirola and Costa del Sol.
 What kills margin there isn't competition. It's a 20% English-speaking clientele that books at 11 PM in a language the receptionist doesn't handle, plus a no-show rate that hits 18% in tourist season.
@@ -799,6 +811,8 @@ Full comparison and ROI breakdown: https://zeniapartners.com/blog/mejor-crm-para
 
 ## 2026-05-14 - Best CRM for beauty salons in Santiago Chile
 
+<!-- SCHEDULED:sp_sDfPswlxSQJ0eYST7YvoI at 2026-05-27T08:00:00.000Z -->
+
 Chile's beauty market jumps from USD 374M in 2025 to USD 412M in 2026 (Mordor Intelligence), and Santiago concentrates more than 40% of that spend across Providencia, Las Condes and Vitacura.
 But the average salon there loses 12 hours a week coordinating WhatsApp and burns 17% of bookings to no-shows that no automated deposit ever caught.
 We compared Reservo, AgendaPro, Turnito and ReservaSimple against a personalized AI agent on WhatsApp with MercadoPago and Khipu wired in: no-shows from 17% to 5%, 60-day rebooking from 34% to 58%, average ticket up 31% from contextual upsell.
@@ -809,6 +823,8 @@ Full breakdown with CLP-denominated ROI: https://zeniapartners.com/blog/mejor-cr
 ---
 
 ## 2026-05-14 - Best CRM for beauty salons in Seville
+
+<!-- SCHEDULED:sp_TpZUY8CMHuXEwRxyTkibk at 2026-05-28T07:00:00.000Z -->
 
 Seville hosts 1,200+ salons across Nervion, Triana and Los Remedios, and the Spanish aesthetics market hit 847M EUR in 2025 per STANPA while cabins-per-center dropped from 2.1 to 1.8.
 That math says more competition on thinner margin, and the salons losing the race are not the ones with weaker stylists. They are the ones answering WhatsApp 23 minutes after the message arrives and a 14% no-show rate eating Saturday's calendar.
@@ -822,6 +838,8 @@ Full local breakdown with VeriFactu and RGPD notes: https://zeniapartners.com/bl
 
 ## 2026-05-15 - Best CRM for beauty salons in Valencia
 
+<!-- SCHEDULED:sp_gNrrfVl08M9cil5GnDEn at 2026-05-29T07:00:00.000Z -->
+
 Valencia has 1,400+ salons crammed into a city with double-peak seasonality (Fallas in March, beach season June to August), and the local beauty market grows 7% a year while every year more salons close than open per Spanish industry data.
 The salons winning that race are not the ones with better stylists. They are the ones answering WhatsApp in 10 seconds, dropping no-shows from 16% to 5%, and capturing the 34% of bookings that land outside business hours.
 We modeled a 3-pro salon in Ruzafa with 38 EUR average ticket: visit frequency up from 3.1 to 4.7 per year, ticket up 28% from automated upsell, net impact +9,535 EUR/month on a stack under 500 EUR.
@@ -832,6 +850,8 @@ Full local breakdown with valenciano + English agent setup and tourist-pricing n
 ---
 
 ## 2026-05-15 - Best CRM for gyms in Barcelona
+
+<!-- SCHEDULED:sp_k9PwylhC84qgUp5Lt4rSO at 2026-06-01T15:00:00.000Z -->
 
 Barcelona packs 391 gyms, 14% of Spain's total, with the highest gym density per capita in the country and a rival waiting 400 meters down the street.
 At 5.8% monthly churn the math breaks: a 5% retention lift drives 25-95% profit growth per industry benchmarks, yet most operators still spot cancellations after they happen instead of before.
@@ -844,6 +864,8 @@ Full local breakdown with the 8-point CRM checklist: https://zeniapartners.com/b
 ---
 
 ## 2026-05-15 - Best CRM for gyms in Bilbao
+
+<!-- SCHEDULED:sp_DGHbDt5Qa0qydeDWJAXkB at 2026-06-02T15:00:00.000Z -->
 
 Spanish gyms closed 2025 with a 33% annual churn rate, and 50% of those losses happen in the first 90 days.
 Bilbao's low-cost battle (Fitness Park, VivaGym, Basic-Fit) makes that math brutal: an 800-member club bleeds roughly 264 members a year, or 102K EUR in recurring revenue.

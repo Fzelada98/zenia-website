@@ -875,3 +875,14 @@ Full local breakdown with the 6-point CRM checklist: https://zeniapartners.com/b
 #fitnessindustry #memberretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-05-16 - Best CRM for gyms in Bogotá
+
+SmartFit closed 2025 with 224 sites and 700,000 users in Colombia after opening 30 new gyms in a single year, and Bogotá absorbed most of that growth.
+The math on the ground is tougher: average dues sit at 110,000 COP, churn runs 32-41% annually, and over 50% of cancellations happen in the first 90 days.
+We modeled a 1,000-member Bogotá club: WhatsApp under 10 seconds 24/7 with PSE and Nequi links inline, churn from 38% to 25%, payment recovery from 38% to 71%, lead conversion from 17% to 30%. Net +268M COP a year on a stack under 28M.
+Full local breakdown with the 6-point CRM checklist: https://zeniapartners.com/blog/mejor-crm-para-gimnasios-en-bogota.html
+
+#fitnessindustry #memberretention #AI #WhatsAppBusiness
+
+---

@@ -886,3 +886,14 @@ Full local breakdown with the 6-point CRM checklist: https://zeniapartners.com/b
 #fitnessindustry #memberretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-05-16 - Best CRM for gyms in CDMX
+
+Mexico City has 427 active gyms in its directory, yet around 50% of new members drop out before month six and acquiring a new one costs 5 to 7 times more than retaining one.
+Most operators in Polanco, Roma, Condesa and Santa Fe still answer WhatsApp in 4 to 10 hours and recover under 40% of failed dues — that is where the money walks out.
+We modeled an 800-member CDMX club with a personalized AI agent on WhatsApp 24/7 plus Mercado Pago, SPEI and OXXO links inline: churn from 42% to 28%, payment recovery from 36% to 70%, lead conversion from 16% to 28%. Net +1.7M MXN a year on a stack under 130K.
+Full local breakdown with the 6-point CRM checklist: https://zeniapartners.com/blog/mejor-crm-para-gimnasios-en-cdmx.html
+
+#fitnessindustry #memberretention #AI #WhatsAppBusiness
+
+---

@@ -29,6 +29,13 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  <!-- Blog: Mejor CRM para gimnasios en CDMX (ES) -->
+  <url>
+    <loc>https://zeniapartners.com/blog/mejor-crm-para-gimnasios-en-cdmx.html</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- Blog: Mejor CRM para gimnasios en Bogota (ES) -->
   <url>
     <loc>https://zeniapartners.com/blog/mejor-crm-para-gimnasios-en-bogota.html</loc>

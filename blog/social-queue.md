@@ -897,3 +897,14 @@ Full local breakdown with the 6-point CRM checklist: https://zeniapartners.com/b
 #fitnessindustry #memberretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-05-16 - Best CRM for gyms in Lima
+
+Peru closed 2024 with 4,000+ active gyms and 2M users, and 80% of Lima residents now say they train, against a national average of 26%.
+Most mid-size Lima gyms still answer WhatsApp 23 minutes late, run 6% monthly churn and lose 18% of dues to silent late payments through Yape and BCP transfers.
+We modeled a 600-member Miraflores club with a personalized AI agent on WhatsApp 24/7 plus Yape, Plin, Niubiz and Culqi inline, and SUNAT receipts auto-issued: churn from 6% to 3.5% monthly, payment recovery from 82% to 92%, lead conversion from 18% to 32%. Net +34,000 PEN a month on a stack under 2,000 PEN.
+Full local breakdown with the 5-point CRM checklist: https://zeniapartners.com/blog/mejor-crm-para-gimnasios-en-lima.html
+
+#fitnessindustry #memberretention #AI #WhatsAppBusiness
+
+---

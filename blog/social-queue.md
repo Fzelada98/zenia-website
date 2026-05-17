@@ -930,3 +930,14 @@ Full local breakdown with the 8-point CRM checklist: https://zeniapartners.com/b
 #fitnessindustry #memberretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-05-17 - Best CRM for gyms in Santiago
+
+Santiago, Chile already has 311 active gyms in the Metropolitan Region: 37 in Santiago Centro alone, 35 in Las Condes. The market moves USD 176M a year and Smartfit just crossed 100 locations heading to 150 by end of 2026.
+Most mid-size Santiago operators in Las Condes, Nunoa and Providencia run 6 to 9% monthly churn, answer WhatsApp 2 to 8 hours late and chase overdue dues manually until the member ghosts and ODECU starts asking questions.
+We modeled an 800-member Las Condes club with a personalized AI agent on WhatsApp 24/7 plus SII-linked auto-billing through Flow.cl and predictive churn alerts: monthly churn from 7% to 4.5%, dues recovery from 78% to 89% at first attempt, 20 members saved every month. Net +3,942,000 CLP a month on a stack under 500,000 CLP.
+Full local breakdown with the 6-point Chile CRM checklist: https://zeniapartners.com/blog/mejor-crm-para-gimnasios-en-santiago.html
+
+#fitnessindustry #memberretention #AI #WhatsAppBusiness
+
+---

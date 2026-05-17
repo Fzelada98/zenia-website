@@ -714,6 +714,8 @@ Reply if you run a restaurant and want the 5-week rollout checklist.
 
 ## 2026-05-11 - Best CRM for beauty salons in Barcelona
 
+<!-- SCHEDULED:sp_FaqxaTuMt7ZYPqFJn1l8Y at 2026-05-18T07:00:00.000Z -->
+
 The Spanish beauty sector hit 10.4B EUR in 2025 yet 2,800 salons closed in the last four years.
 Costs are up 27%, prices only 3.6%. Margin has nowhere left to hide.
 In Barcelona, salons live or die on three operational metrics: WhatsApp response time, no-show rate, and how many lapsed clients you can reactivate before they walk into the salon next door.
@@ -878,6 +880,8 @@ Full local breakdown with the 6-point CRM checklist: https://zeniapartners.com/b
 
 ## 2026-05-16 - Best CRM for gyms in Bogotá
 
+<!-- SCHEDULED:sp_liyhb1MhF3SMtoKlbQxWy at 2026-05-19T15:00:00.000Z -->
+
 SmartFit closed 2025 with 224 sites and 700,000 users in Colombia after opening 30 new gyms in a single year, and Bogotá absorbed most of that growth.
 The math on the ground is tougher: average dues sit at 110,000 COP, churn runs 32-41% annually, and over 50% of cancellations happen in the first 90 days.
 We modeled a 1,000-member Bogotá club: WhatsApp under 10 seconds 24/7 with PSE and Nequi links inline, churn from 38% to 25%, payment recovery from 38% to 71%, lead conversion from 17% to 30%. Net +268M COP a year on a stack under 28M.
@@ -888,6 +892,8 @@ Full local breakdown with the 6-point CRM checklist: https://zeniapartners.com/b
 ---
 
 ## 2026-05-16 - Best CRM for gyms in CDMX
+
+<!-- SCHEDULED:sp_Gy1foICTzjZpNCYVWrnzB at 2026-05-20T15:00:00.000Z -->
 
 Mexico City has 427 active gyms in its directory, yet around 50% of new members drop out before month six and acquiring a new one costs 5 to 7 times more than retaining one.
 Most operators in Polanco, Roma, Condesa and Santa Fe still answer WhatsApp in 4 to 10 hours and recover under 40% of failed dues — that is where the money walks out.
@@ -900,6 +906,8 @@ Full local breakdown with the 6-point CRM checklist: https://zeniapartners.com/b
 
 ## 2026-05-16 - Best CRM for gyms in Lima
 
+<!-- SCHEDULED:sp_1SzhVWGxqWkDgEz79pB3h at 2026-05-21T15:00:00.000Z -->
+
 Peru closed 2024 with 4,000+ active gyms and 2M users, and 80% of Lima residents now say they train, against a national average of 26%.
 Most mid-size Lima gyms still answer WhatsApp 23 minutes late, run 6% monthly churn and lose 18% of dues to silent late payments through Yape and BCP transfers.
 We modeled a 600-member Miraflores club with a personalized AI agent on WhatsApp 24/7 plus Yape, Plin, Niubiz and Culqi inline, and SUNAT receipts auto-issued: churn from 6% to 3.5% monthly, payment recovery from 82% to 92%, lead conversion from 18% to 32%. Net +34,000 PEN a month on a stack under 2,000 PEN.
@@ -910,6 +918,8 @@ Full local breakdown with the 5-point CRM checklist: https://zeniapartners.com/b
 ---
 
 ## 2026-05-17 - Best CRM for gyms in Madrid
+
+<!-- SCHEDULED:sp_7QJ2QdlM86lb6FlHnszKo at 2026-05-22T15:00:00.000Z -->
 
 Madrid runs the largest gym market in Spain with 720+ active centers across the region, and the sector hit 2.56 billion euros nationally in 2025 with 6.2 million members.
 Most mid-size Madrid clubs in Chamberi, Salamanca and Tetuan still answer WhatsApp 30 to 90 minutes late, run 6.1% monthly churn and lose members faster than they can replace them at a 42-euro CAC.
@@ -922,6 +932,8 @@ Full local breakdown with the 8-point CRM checklist: https://zeniapartners.com/b
 
 ## 2026-05-17 - Best CRM for gyms in Malaga
 
+<!-- SCHEDULED:sp_KYy3TRUQg5VDXFOhuDkHn at 2026-05-25T15:00:00.000Z -->
+
 Malaga and Costa del Sol concentrate close to 120 active gyms across capital and coast, and IHRSA data still shows 50% of new members quit within six months.
 Most mid-size Malaga clubs in Teatinos, Pedregalejo and Marbella answer WhatsApp 30 to 90 minutes late, run 6.4% monthly churn and lose half their summer cohort to mismanaged freezes from June to August.
 We modeled a 1,000-member Teatinos club with a personalized AI agent on WhatsApp 24/7 in Spanish and English, plus SEPA dues recovery and proactive summer freeze flows: churn from 6.4% to 4.1% monthly, lead-to-trial conversion from 18% to 34%, 23 members saved per month. Net +9,486 euros a month on a stack under 500 euros.
@@ -932,6 +944,8 @@ Full local breakdown with the 8-point CRM checklist: https://zeniapartners.com/b
 ---
 
 ## 2026-05-17 - Best CRM for gyms in Santiago
+
+<!-- SCHEDULED:sp_WPK2VOOe6KhOeXhXrfFU at 2026-05-26T15:00:00.000Z -->
 
 Santiago, Chile already has 311 active gyms in the Metropolitan Region: 37 in Santiago Centro alone, 35 in Las Condes. The market moves USD 176M a year and Smartfit just crossed 100 locations heading to 150 by end of 2026.
 Most mid-size Santiago operators in Las Condes, Nunoa and Providencia run 6 to 9% monthly churn, answer WhatsApp 2 to 8 hours late and chase overdue dues manually until the member ghosts and ODECU starts asking questions.

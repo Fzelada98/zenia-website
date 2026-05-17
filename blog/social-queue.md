@@ -919,3 +919,14 @@ Full local breakdown with the 8-point CRM checklist: https://zeniapartners.com/b
 #fitnessindustry #memberretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-05-17 - Best CRM for gyms in Malaga
+
+Malaga and Costa del Sol concentrate close to 120 active gyms across capital and coast, and IHRSA data still shows 50% of new members quit within six months.
+Most mid-size Malaga clubs in Teatinos, Pedregalejo and Marbella answer WhatsApp 30 to 90 minutes late, run 6.4% monthly churn and lose half their summer cohort to mismanaged freezes from June to August.
+We modeled a 1,000-member Teatinos club with a personalized AI agent on WhatsApp 24/7 in Spanish and English, plus SEPA dues recovery and proactive summer freeze flows: churn from 6.4% to 4.1% monthly, lead-to-trial conversion from 18% to 34%, 23 members saved per month. Net +9,486 euros a month on a stack under 500 euros.
+Full local breakdown with the 8-point CRM checklist: https://zeniapartners.com/blog/mejor-crm-para-gimnasios-en-malaga.html
+
+#fitnessindustry #memberretention #AI #WhatsAppBusiness
+
+---

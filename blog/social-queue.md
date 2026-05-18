@@ -955,3 +955,14 @@ Full local breakdown with the 6-point Chile CRM checklist: https://zeniapartners
 #fitnessindustry #memberretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-05-18 - Best CRM for gyms in Seville
+
+Seville city packs 145 active gyms and the province hits 486, inside a Spanish fitness market that closed 2025 with 4,833 facilities, 5.7M members and over EUR 1.5B in revenue.
+Most mid-size Seville operators in Nervion, Triana and Sevilla Este answer WhatsApp 30 to 90 minutes late, run 6.4% monthly churn, and watch June-to-August heat waves quietly drain a third of their base because freezes are managed by hand.
+We modeled a 1,000-member Sevilla Este club with a personalized AI agent on WhatsApp 24/7, SEPA dues recovery, and proactive summer freeze flows tied to the September university reactivation window: churn from 6.4% to 4.1%, lead-to-trial conversion from 18% to 34%, 23 members saved per month. Net +8,969 euros a month on a stack under 500 euros.
+Full local breakdown with the 8-point CRM checklist: https://zeniapartners.com/blog/mejor-crm-para-gimnasios-en-sevilla.html
+
+#fitnessindustry #memberretention #AI #WhatsAppBusiness
+
+---

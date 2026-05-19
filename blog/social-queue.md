@@ -977,3 +977,14 @@ Full local breakdown: https://zeniapartners.com/blog/mejor-crm-para-gimnasios-en
 #fitnessindustry #memberretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-05-19 - Best CRM for restaurants in Barcelona
+
+Barcelona packs 9,359 bars and restaurants, one for every 172 residents, and 90% are independents fighting the same fight: who answers WhatsApp first.
+No-shows in Barcelona hit 3.5%, one of the highest rates in Spain, and most reservations now land on WhatsApp and Instagram before the phone ever rings.
+We modeled a 60-cover spot in Sant Antoni with a personalized AI agent on WhatsApp 24/7, smart wait-list and selective prepay: response time from 30 minutes to 8 seconds, no-shows from 8% to 2.5%, +16,686 euros a month net on a stack under 500 euros.
+Full Barcelona CRM breakdown: https://zeniapartners.com/blog/mejor-crm-para-restaurantes-en-barcelona.html
+
+#restauranttech #customerretention #AI #WhatsAppBusiness
+
+---

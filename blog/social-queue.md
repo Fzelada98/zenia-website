@@ -1020,3 +1020,14 @@ Full Bogotá breakdown with the 4-category comparison: https://zeniapartners.com
 #restauranttech #customerretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-05-20 - Best CRM for restaurants in CDMX
+
+INEGI counts 50,000+ food service businesses in Mexico City, OpenTable saw dining-out in Mexico jump 14% year over year, and CANIRAC reports only 2 in 10 restaurants ever consolidate.
+Most Polanco, Roma and Condesa operators still answer WhatsApp between services, with no-shows stuck between 15% and 22% and lost reservations leaving the door for the place next door.
+We modeled a 60-cover CDMX restaurant with a personalized AI agent on WhatsApp 24/7 in Spanish neutro and Mexican expressions, CFDI/RFC stored in the customer file, dual reminders 24h + 3h and dynamic waitlist: no-shows from 16% to 5%, off-hours bookings captured for the first time, +MXN 316K net per month on a stack under MXN 9.5K.
+Full CDMX breakdown with the 4-category comparison: https://zeniapartners.com/blog/mejor-crm-para-restaurantes-en-cdmx.html
+
+#restauranttech #customerretention #AI #WhatsAppBusiness
+
+---

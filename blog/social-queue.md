@@ -988,3 +988,14 @@ Full Barcelona CRM breakdown: https://zeniapartners.com/blog/mejor-crm-para-rest
 #restauranttech #customerretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-05-20 - Best CRM for restaurants in Bilbao
+
+Bilbao has one hospitality venue for every 112 residents (DIRCE-INE, January 2026), and Bizkaia alone moved EUR 2.144B in hospitality revenue in 2024, 47% of the Basque total.
+Most pintxo bars in Casco Viejo and Indautxu still answer WhatsApp between courses, with response times above 30 minutes during Athletic match days or Aste Nagusia peaks.
+We modeled a 55-cover Bilbao gastrobar with a personalized AI agent on WhatsApp 24/7 in Spanish, Basque, English and French, integrated with Revo/Agora/Numiqa POS: no-shows from 11% to 4%, off-hours bookings captured for the first time, +15,501 euros a month net on a stack under 500 euros.
+Full Bilbao breakdown with the 4-category comparison: https://zeniapartners.com/blog/mejor-crm-para-restaurantes-en-bilbao.html
+
+#restauranttech #customerretention #AI #WhatsAppBusiness
+
+---

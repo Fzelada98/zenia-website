@@ -999,3 +999,14 @@ Full Bilbao breakdown with the 4-category comparison: https://zeniapartners.com/
 #restauranttech #customerretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-05-20 - Best CRM for restaurants in Bogotá
+
+Bogotá had 769+ formally established restaurants in 2024 (Cámara del Sector Gastronómico, ANDI), and operating costs for a formal Bogotá restaurant are projected to rise from 87% to 109% of revenue between 2025 and 2026.
+Most Zona G and Usaquén operators still pay 15-30% commission to Rappi and DiDi Food while a third of their WhatsApp messages land outside the hours an admin can answer, with no-shows stuck between 8% and 14% without automated reminders.
+We modeled a 65-seat Bogotá gastrobar with a personalized AI agent on WhatsApp 24/7, integrated with Loggro/Siigo POS and dual reminders 24h + 3h: no-shows from 12% to 4%, off-hours bookings captured for the first time, +COP 42M net per month on a stack under COP 2.2M.
+Full Bogotá breakdown with the 4-category comparison: https://zeniapartners.com/blog/mejor-crm-para-restaurantes-en-bogota.html
+
+#restauranttech #customerretention #AI #WhatsAppBusiness
+
+---

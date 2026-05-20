@@ -958,6 +958,8 @@ Full local breakdown with the 6-point Chile CRM checklist: https://zeniapartners
 
 ## 2026-05-18 - Best CRM for gyms in Seville
 
+<!-- SCHEDULED:sp_BQwZBom5vmrsOUBr2B7g9 at 2026-05-20T15:00:00.000Z -->
+
 Seville city packs 145 active gyms and the province hits 486, inside a Spanish fitness market that closed 2025 with 4,833 facilities, 5.7M members and over EUR 1.5B in revenue.
 Most mid-size Seville operators in Nervion, Triana and Sevilla Este answer WhatsApp 30 to 90 minutes late, run 6.4% monthly churn, and watch June-to-August heat waves quietly drain a third of their base because freezes are managed by hand.
 We modeled a 1,000-member Sevilla Este club with a personalized AI agent on WhatsApp 24/7, SEPA dues recovery, and proactive summer freeze flows tied to the September university reactivation window: churn from 6.4% to 4.1%, lead-to-trial conversion from 18% to 34%, 23 members saved per month. Net +8,969 euros a month on a stack under 500 euros.
@@ -968,6 +970,8 @@ Full local breakdown with the 8-point CRM checklist: https://zeniapartners.com/b
 ---
 
 ## 2026-05-18 - Best CRM for gyms in Valencia
+
+<!-- SCHEDULED:sp_mrTxTwo99PGBZl4dI73 at 2026-05-21T15:00:00.000Z -->
 
 Spain closed 2025 with EUR 3.2B in fitness revenue and 8M users, and Valencia sits with Madrid and Barcelona among the top three regions for gym density and 2025 opening volume.
 Most Valencia operators in Russafa, Benimaclet and Campanar still juggle three disconnected tools: an access-control system, a spreadsheet of members, and a personal WhatsApp group for classes. Result: monthly churn stuck around 5.5%, leads ghosted after 22:00, and 12-day lag on failed direct debits.
@@ -980,6 +984,8 @@ Full local breakdown: https://zeniapartners.com/blog/mejor-crm-para-gimnasios-en
 
 ## 2026-05-19 - Best CRM for restaurants in Barcelona
 
+<!-- SCHEDULED:sp_MgNeLkmxVufJCI0rbxW1 at 2026-05-22T08:00:00.000Z -->
+
 Barcelona packs 9,359 bars and restaurants, one for every 172 residents, and 90% are independents fighting the same fight: who answers WhatsApp first.
 No-shows in Barcelona hit 3.5%, one of the highest rates in Spain, and most reservations now land on WhatsApp and Instagram before the phone ever rings.
 We modeled a 60-cover spot in Sant Antoni with a personalized AI agent on WhatsApp 24/7, smart wait-list and selective prepay: response time from 30 minutes to 8 seconds, no-shows from 8% to 2.5%, +16,686 euros a month net on a stack under 500 euros.
@@ -991,6 +997,8 @@ Full Barcelona CRM breakdown: https://zeniapartners.com/blog/mejor-crm-para-rest
 
 ## 2026-05-20 - Best CRM for restaurants in Bilbao
 
+<!-- SCHEDULED:sp_M7v8YWORwNqAZ4hzbrm7 at 2026-05-25T08:00:00.000Z -->
+
 Bilbao has one hospitality venue for every 112 residents (DIRCE-INE, January 2026), and Bizkaia alone moved EUR 2.144B in hospitality revenue in 2024, 47% of the Basque total.
 Most pintxo bars in Casco Viejo and Indautxu still answer WhatsApp between courses, with response times above 30 minutes during Athletic match days or Aste Nagusia peaks.
 We modeled a 55-cover Bilbao gastrobar with a personalized AI agent on WhatsApp 24/7 in Spanish, Basque, English and French, integrated with Revo/Agora/Numiqa POS: no-shows from 11% to 4%, off-hours bookings captured for the first time, +15,501 euros a month net on a stack under 500 euros.
@@ -1001,6 +1009,8 @@ Full Bilbao breakdown with the 4-category comparison: https://zeniapartners.com/
 ---
 
 ## 2026-05-20 - Best CRM for restaurants in Bogotá
+
+<!-- SCHEDULED:sp_ZACcFxC5Fl1KwYvWeOFX at 2026-05-26T08:00:00.000Z -->
 
 Bogotá had 769+ formally established restaurants in 2024 (Cámara del Sector Gastronómico, ANDI), and operating costs for a formal Bogotá restaurant are projected to rise from 87% to 109% of revenue between 2025 and 2026.
 Most Zona G and Usaquén operators still pay 15-30% commission to Rappi and DiDi Food while a third of their WhatsApp messages land outside the hours an admin can answer, with no-shows stuck between 8% and 14% without automated reminders.

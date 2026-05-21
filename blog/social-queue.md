@@ -1053,3 +1053,14 @@ Full Madrid breakdown with the 8-vendor comparison: https://zeniapartners.com/bl
 #restauranttech #customerretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-05-21 - Best CRM for restaurants in Málaga
+
+Málaga is European Capital of Gastronomy 2026-2027, closed 2025 with 1.83 million hotel travelers and just earned 4 new Sol Repsol stars (Promesa, Blossom, Tragatá, Back), yet most Centro, Soho and Pedregalejo operators still answer WhatsApp between services and lose 6 reservations a day to slow replies.
+The cost is brutal: 13% no-shows in low season, 19% during Feria de Agosto, and zero capture of the 41% of summer bookings that arrive after 23:00 from hotel guests planning dinner post-siesta.
+We modeled a 70-cover Centro restaurant with a personalized AI agent on WhatsApp 24/7 in Spanish, English, German and French, integrated with Revo/Ágora/Glop, automatic deposits during high-risk weekends and dynamic waitlist: no-shows from 13% to 5%, off-hours bookings captured for the first time, +€25,690 net per month on a stack under €500.
+Full Málaga breakdown with the 5-vendor comparison: https://zeniapartners.com/blog/mejor-crm-para-restaurantes-en-malaga.html
+
+#restauranttech #customerretention #AI #WhatsAppBusiness
+
+---

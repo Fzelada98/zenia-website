@@ -1042,3 +1042,14 @@ Full Lima breakdown with the 7-criteria comparison: https://zeniapartners.com/bl
 #restauranttech #customerretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-05-21 - Best CRM for restaurants in Madrid
+
+Madrid has 10,417 registered restaurants and Spanish food service revenue grew 4.9% YoY in January 2026 (INE), yet most Salamanca, Chamberí and Centro operators still answer WhatsApp between services with no-shows stuck between 14% and 22%.
+The hidden tax is bigger than the rent: 5 bookings/day lost to slow replies, 16% no-shows on a Thursday night, and 25-30% commission paid to Glovo and Uber Eats on orders that could have landed directly in WhatsApp.
+We modeled a 60-cover Madrid restaurant with a personalized AI agent on WhatsApp 24/7 in Spanish and English, Verifactu-ready, Bizum deposit on every reservation, dual reminders 24h + 4h and dynamic waitlist: no-shows from 16% to 5%, off-hours bookings captured for the first time, +€19,859 net per month on a stack under €500.
+Full Madrid breakdown with the 8-vendor comparison: https://zeniapartners.com/blog/mejor-crm-para-restaurantes-en-madrid.html
+
+#restauranttech #customerretention #AI #WhatsAppBusiness
+
+---

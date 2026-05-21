@@ -1031,3 +1031,14 @@ Full CDMX breakdown with the 4-category comparison: https://zeniapartners.com/bl
 #restauranttech #customerretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-05-21 - Best CRM for restaurants in Lima
+
+Peru's restaurant sector grew 5.97% in January 2026, Maido was just named World's Best Restaurant, and 47,000+ Peruvian companies now run on verified WhatsApp Business API (+185% YoY).
+Yet most Miraflores, Barranco and San Isidro operators still answer WhatsApp between services, lose 30% of inquiries to slow replies, and pay 18-25% commission to PedidosYa and Rappi on orders that could have come directly.
+We modeled a 60-cover Lima restaurant with a personalized AI agent on WhatsApp 24/7 in Spanish and English, integrated with SUNAT, Yape/Plin, PedidosYa, Rappi and Didi Food, dual reminders 24h + 4h and dynamic waitlist: no-shows from 16% to 5%, off-hours bookings captured for the first time, +S/ 47,911 net per month on a stack under S/ 2,000.
+Full Lima breakdown with the 7-criteria comparison: https://zeniapartners.com/blog/mejor-crm-para-restaurantes-en-lima.html
+
+#restauranttech #customerretention #AI #WhatsAppBusiness
+
+---

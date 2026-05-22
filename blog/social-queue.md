@@ -1075,3 +1075,14 @@ Full Santiago breakdown with the 5-vendor comparison: https://zeniapartners.com/
 #restauranttech #customerretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-05-22 - Best CRM for restaurants in Seville
+
+Seville closed 2025 as Spain's fastest-growing restaurant market at +2.9% (UVE Data Market Horeca), and yet most Triana, Arenal and Santa Cruz operators still answer WhatsApp between services and lose 11-14 bookings/day during Holy Week and Feria de Abril.
+The tourism mix makes it worse: 3.2 million visitors in 2025 means one in three WhatsApp messages arrives in English, French or Italian, and any restaurant with a Spanish-only inbox loses that revenue silently.
+We modeled a 60-cover Centro restaurant with a personalized AI agent on WhatsApp 24/7 in 6 languages, integrated with CoverManager, dynamic waitlist during high-demand weeks and automatic reactivation of inactive guests: no-shows from 13% to 5%, off-hours bookings captured for the first time, +€200,000 net in the first year on a stack under €500/month.
+Full Seville breakdown with the CoverManager, TheFork and SevenRooms comparison: https://zeniapartners.com/blog/mejor-crm-para-restaurantes-en-sevilla.html
+
+#restauranttech #customerretention #AI #WhatsAppBusiness
+
+---

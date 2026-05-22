@@ -29,6 +29,13 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  <!-- Blog: Mejor CRM para restaurantes en Sevilla (ES) -->
+  <url>
+    <loc>https://zeniapartners.com/blog/mejor-crm-para-restaurantes-en-sevilla.html</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- Blog: Mejor CRM para restaurantes en Santiago (ES) -->
   <url>
     <loc>https://zeniapartners.com/blog/mejor-crm-para-restaurantes-en-santiago.html</loc>

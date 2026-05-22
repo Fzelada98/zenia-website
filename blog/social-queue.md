@@ -1086,3 +1086,14 @@ Full Seville breakdown with the CoverManager, TheFork and SevenRooms comparison:
 #restauranttech #customerretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-05-22 - Best CRM for restaurants in Valencia
+
+Valencia hospitality grew 7.78% during Fallas 2026 (Coordinadora de Hostelería de los Barrios) yet most operators in Ruzafa, Cabanyal and El Carmen still take reservations on paper.
+The no-show rate sits at 3.2%, one of Spain's lowest per TheFork, but the silent killer is the 30% of WhatsApp messages that go unanswered for more than 5 minutes and quietly walk over to the restaurant next door.
+For a 60-cover Valencia restaurant with €36 ticket we modeled a personalized AI agent on WhatsApp Business API, multilingual in Spanish, Valencian, English and French, integrated with Glop and Revo and with optional deposit for weekend bookings: response time 8 seconds, no-shows from 3.2% to 0.9%, off-hours bookings captured for the first time, +€16,389 net per month on a stack under €500.
+Full Valencia breakdown with the four-family CRM comparison: https://zeniapartners.com/blog/mejor-crm-para-restaurantes-en-valencia.html
+
+#restauranttech #customerretention #AI #WhatsAppBusiness
+
+---

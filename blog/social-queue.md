@@ -1064,3 +1064,14 @@ Full Málaga breakdown with the 5-vendor comparison: https://zeniapartners.com/b
 #restauranttech #customerretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-05-22 - Best CRM for restaurants in Santiago
+
+Santiago concentrates over 40% of Chile's gastronomic spend and 2026 is hitting Lastarria, Italia and Vitacura with a wave of new openings, yet LATAM restaurants still lose 20-30% of bookings to no-shows and 40-60% of leads to slow WhatsApp replies.
+A documented Santiago case automated WhatsApp re-engagement for inactive guests and watched Q3 retention climb to 31%, reservations +22%, monthly revenue from CLP 38M to CLP 46M.
+We modeled a 60-cover Providencia restaurant with a personalized AI agent on WhatsApp 24/7 in Spanish, English and Portuguese, integrated with Toteat/Praxia/Bsale, Ley 19.628 compliant, automatic deposits during Fiestas Patrias and Año Nuevo: no-shows from 16% to 6%, off-hours bookings captured for the first time, +CLP 23.4M net per month on a stack under CLP 500k.
+Full Santiago breakdown with the 5-vendor comparison: https://zeniapartners.com/blog/mejor-crm-para-restaurantes-en-santiago.html
+
+#restauranttech #customerretention #AI #WhatsAppBusiness
+
+---

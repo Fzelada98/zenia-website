@@ -1120,3 +1120,14 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-peluquerias.html
 #beautyindustry #CRM #AI #WhatsAppBusiness
 
 ---
+
+## 2026-05-23 - Customer loyalty for coffee shops
+
+Loyal customers drive 60-70% of sales in an independent coffee shop and spend 67% more than a first-timer, yet most cafes still run a cardboard stamp card that 80% of people never finish.
+We swapped the cardboard for a digital loyalty program on WhatsApp: customers join in 10 seconds by scanning a QR, stamps register automatically, and the cafe can finally talk back (98% open rate vs 20% for email).
+For a neighborhood cafe with 600 regulars we modeled +EUR 8,230 net per month from higher visit frequency, bigger average ticket, and automatic win-back of dormant customers. No app to download, 4-week setup.
+Full breakdown: https://zeniapartners.com/blog/fidelizacion-clientes-cafeteria.html
+
+#coffeeshop #customerretention #AI #WhatsAppBusiness
+
+---

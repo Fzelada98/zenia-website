@@ -1108,3 +1108,15 @@ Full comparison and ROI breakdown: https://zeniapartners.com/blog/app-gestion-gi
 #fitnessindustry #memberretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-05-23 - AI agent for hair salons
+
+Spain has ~50,000 hair salons and half of them are run by one or two stylists who also answer WhatsApp between clients (Professional Beauty 2025 sector balance). Average response time to a Sunday-night booking request: 6 hours. Conversion lost: 30%.
+A personalized AI agent on WhatsApp Business API takes that response down to 9 seconds, runs the calendar with real service durations, sends automatic deposit links that drop no-shows from 18% to 6% (Booksy data), and reactivates inactive clients with a 22-28% recovery rate (vs 4-6% for email).
+For an 800-service salon at EUR 35 ticket we modeled +EUR 10,040 net per month: recovered bookings, reduced no-shows, off-hours capture, ficha-based upselling that lifts average ticket 8-14%, and 6-7x more Google reviews because the agent asks at the right time.
+4-week implementation, integrates with Booksy, Treatwell, Phorest, Koibox and Bewe.
+Full breakdown: https://zeniapartners.com/blog/agente-ia-para-peluquerias.html
+
+#beautyindustry #CRM #AI #WhatsAppBusiness
+
+---

@@ -29,6 +29,13 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  <!-- Blog: Agente IA para Peluquerías (ES) -->
+  <url>
+    <loc>https://zeniapartners.com/blog/agente-ia-para-peluquerias.html</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- Blog: Mejor CRM para restaurantes en Valencia (ES) -->
   <url>
     <loc>https://zeniapartners.com/blog/mejor-crm-para-restaurantes-en-valencia.html</loc>

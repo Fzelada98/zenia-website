@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-05-23T00:00:00Z",
+  "lastRun": "2026-05-23T14:10:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-peluquerias",
+      "keyword": "agente ia para peluquerias",
+      "tier": 1,
+      "cluster": "belleza",
+      "status": "published",
+      "date": "2026-05-23"
+    },
     {
       "slug": "app-gestion-gimnasio-vs-crm-personalizado",
       "keyword": "app gestion gimnasio vs crm personalizado",

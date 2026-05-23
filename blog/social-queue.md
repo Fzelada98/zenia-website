@@ -1097,3 +1097,14 @@ Full Valencia breakdown with the four-family CRM comparison: https://zeniapartne
 #restauranttech #customerretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-05-23 - App gestion gimnasio vs CRM personalizado
+
+1 in 3 gym members in Spain churns every year (industry retention sits at 66.4% per Gitnux and GymMaster), yet most operators still trust that retention to a management app that only collects dues and books classes.
+Management apps and a personalized AI CRM are not the same product: one runs operations, the other runs the member lifecycle. Best-in-class gyms keep monthly churn at 4%; anything above 6% is a retention-system failure, not a member-quality issue.
+For a 600-member gym at EUR 45/month we modeled adding a personalized AI agent on WhatsApp on top of Trainingym or Resasports: churn from 6% to 3.5%, lead-to-member conversion from 16% to 30%, recovered onboarding (87% still active at 6 months with structured onboarding vs 60% without), +EUR 11,000-12,500 net per month on a stack delta under EUR 500.
+Full comparison and ROI breakdown: https://zeniapartners.com/blog/app-gestion-gimnasio-vs-crm-personalizado.html
+
+#fitnessindustry #memberretention #AI #WhatsAppBusiness
+
+---

@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-05-22T23:30:00Z",
+  "lastRun": "2026-05-23T00:00:00Z",
   "posts": [
+    {
+      "slug": "app-gestion-gimnasio-vs-crm-personalizado",
+      "keyword": "app gestion gimnasio vs crm personalizado",
+      "tier": 1,
+      "cluster": "gimnasios",
+      "status": "published",
+      "date": "2026-05-23"
+    },
     {
       "slug": "automatizar-reservas-restaurante-whatsapp",
       "keyword": "automatizar reservas restaurante whatsapp",

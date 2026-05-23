@@ -1023,6 +1023,8 @@ Full Bogotá breakdown with the 4-category comparison: https://zeniapartners.com
 
 ## 2026-05-20 - Best CRM for restaurants in CDMX
 
+<!-- SCHEDULED:sp_VBBMcRiArETKBCYMDGdgm at 2026-05-25T08:00:00.000Z -->
+
 INEGI counts 50,000+ food service businesses in Mexico City, OpenTable saw dining-out in Mexico jump 14% year over year, and CANIRAC reports only 2 in 10 restaurants ever consolidate.
 Most Polanco, Roma and Condesa operators still answer WhatsApp between services, with no-shows stuck between 15% and 22% and lost reservations leaving the door for the place next door.
 We modeled a 60-cover CDMX restaurant with a personalized AI agent on WhatsApp 24/7 in Spanish neutro and Mexican expressions, CFDI/RFC stored in the customer file, dual reminders 24h + 3h and dynamic waitlist: no-shows from 16% to 5%, off-hours bookings captured for the first time, +MXN 316K net per month on a stack under MXN 9.5K.
@@ -1033,6 +1035,8 @@ Full CDMX breakdown with the 4-category comparison: https://zeniapartners.com/bl
 ---
 
 ## 2026-05-21 - Best CRM for restaurants in Lima
+
+<!-- SCHEDULED:sp_s3nck2yddEevYbINbuCb at 2026-05-26T08:00:00.000Z -->
 
 Peru's restaurant sector grew 5.97% in January 2026, Maido was just named World's Best Restaurant, and 47,000+ Peruvian companies now run on verified WhatsApp Business API (+185% YoY).
 Yet most Miraflores, Barranco and San Isidro operators still answer WhatsApp between services, lose 30% of inquiries to slow replies, and pay 18-25% commission to PedidosYa and Rappi on orders that could have come directly.
@@ -1045,6 +1049,8 @@ Full Lima breakdown with the 7-criteria comparison: https://zeniapartners.com/bl
 
 ## 2026-05-21 - Best CRM for restaurants in Madrid
 
+<!-- SCHEDULED:sp_vZudGomYG4fKh1EYc75bX at 2026-05-27T08:00:00.000Z -->
+
 Madrid has 10,417 registered restaurants and Spanish food service revenue grew 4.9% YoY in January 2026 (INE), yet most Salamanca, Chamberí and Centro operators still answer WhatsApp between services with no-shows stuck between 14% and 22%.
 The hidden tax is bigger than the rent: 5 bookings/day lost to slow replies, 16% no-shows on a Thursday night, and 25-30% commission paid to Glovo and Uber Eats on orders that could have landed directly in WhatsApp.
 We modeled a 60-cover Madrid restaurant with a personalized AI agent on WhatsApp 24/7 in Spanish and English, Verifactu-ready, Bizum deposit on every reservation, dual reminders 24h + 4h and dynamic waitlist: no-shows from 16% to 5%, off-hours bookings captured for the first time, +€19,859 net per month on a stack under €500.
@@ -1055,6 +1061,8 @@ Full Madrid breakdown with the 8-vendor comparison: https://zeniapartners.com/bl
 ---
 
 ## 2026-05-21 - Best CRM for restaurants in Málaga
+
+<!-- SCHEDULED:sp_nTy2TnovddEPV9P4WBHzh at 2026-05-28T08:00:00.000Z -->
 
 Málaga is European Capital of Gastronomy 2026-2027, closed 2025 with 1.83 million hotel travelers and just earned 4 new Sol Repsol stars (Promesa, Blossom, Tragatá, Back), yet most Centro, Soho and Pedregalejo operators still answer WhatsApp between services and lose 6 reservations a day to slow replies.
 The cost is brutal: 13% no-shows in low season, 19% during Feria de Agosto, and zero capture of the 41% of summer bookings that arrive after 23:00 from hotel guests planning dinner post-siesta.
@@ -1067,6 +1075,8 @@ Full Málaga breakdown with the 5-vendor comparison: https://zeniapartners.com/b
 
 ## 2026-05-22 - Best CRM for restaurants in Santiago
 
+<!-- SCHEDULED:sp_tHkj3BsTZOYz2w3V5AtK at 2026-05-29T08:00:00.000Z -->
+
 Santiago concentrates over 40% of Chile's gastronomic spend and 2026 is hitting Lastarria, Italia and Vitacura with a wave of new openings, yet LATAM restaurants still lose 20-30% of bookings to no-shows and 40-60% of leads to slow WhatsApp replies.
 A documented Santiago case automated WhatsApp re-engagement for inactive guests and watched Q3 retention climb to 31%, reservations +22%, monthly revenue from CLP 38M to CLP 46M.
 We modeled a 60-cover Providencia restaurant with a personalized AI agent on WhatsApp 24/7 in Spanish, English and Portuguese, integrated with Toteat/Praxia/Bsale, Ley 19.628 compliant, automatic deposits during Fiestas Patrias and Año Nuevo: no-shows from 16% to 6%, off-hours bookings captured for the first time, +CLP 23.4M net per month on a stack under CLP 500k.
@@ -1077,6 +1087,8 @@ Full Santiago breakdown with the 5-vendor comparison: https://zeniapartners.com/
 ---
 
 ## 2026-05-22 - Best CRM for restaurants in Seville
+
+<!-- SCHEDULED:sp_qJfwHl3tH01LFl2kq8hoA at 2026-06-01T08:00:00.000Z -->
 
 Seville closed 2025 as Spain's fastest-growing restaurant market at +2.9% (UVE Data Market Horeca), and yet most Triana, Arenal and Santa Cruz operators still answer WhatsApp between services and lose 11-14 bookings/day during Holy Week and Feria de Abril.
 The tourism mix makes it worse: 3.2 million visitors in 2025 means one in three WhatsApp messages arrives in English, French or Italian, and any restaurant with a Spanish-only inbox loses that revenue silently.
@@ -1089,6 +1101,8 @@ Full Seville breakdown with the CoverManager, TheFork and SevenRooms comparison:
 
 ## 2026-05-22 - Best CRM for restaurants in Valencia
 
+<!-- SCHEDULED:sp_oBMpu4KjZG5SYJHSItG at 2026-06-02T08:00:00.000Z -->
+
 Valencia hospitality grew 7.78% during Fallas 2026 (Coordinadora de Hostelería de los Barrios) yet most operators in Ruzafa, Cabanyal and El Carmen still take reservations on paper.
 The no-show rate sits at 3.2%, one of Spain's lowest per TheFork, but the silent killer is the 30% of WhatsApp messages that go unanswered for more than 5 minutes and quietly walk over to the restaurant next door.
 For a 60-cover Valencia restaurant with €36 ticket we modeled a personalized AI agent on WhatsApp Business API, multilingual in Spanish, Valencian, English and French, integrated with Glop and Revo and with optional deposit for weekend bookings: response time 8 seconds, no-shows from 3.2% to 0.9%, off-hours bookings captured for the first time, +€16,389 net per month on a stack under €500.
@@ -1099,6 +1113,8 @@ Full Valencia breakdown with the four-family CRM comparison: https://zeniapartne
 ---
 
 ## 2026-05-23 - App gestion gimnasio vs CRM personalizado
+
+<!-- SCHEDULED:sp_sGIfGcxEnW1Coju7IwVni at 2026-06-03T15:00:00.000Z -->
 
 1 in 3 gym members in Spain churns every year (industry retention sits at 66.4% per Gitnux and GymMaster), yet most operators still trust that retention to a management app that only collects dues and books classes.
 Management apps and a personalized AI CRM are not the same product: one runs operations, the other runs the member lifecycle. Best-in-class gyms keep monthly churn at 4%; anything above 6% is a retention-system failure, not a member-quality issue.
@@ -1111,6 +1127,8 @@ Full comparison and ROI breakdown: https://zeniapartners.com/blog/app-gestion-gi
 
 ## 2026-05-23 - AI agent for hair salons
 
+<!-- SCHEDULED:sp_Me21lYxJPwgDY4II6uIBi at 2026-06-04T07:00:00.000Z -->
+
 Spain has ~50,000 hair salons and half of them are run by one or two stylists who also answer WhatsApp between clients (Professional Beauty 2025 sector balance). Average response time to a Sunday-night booking request: 6 hours. Conversion lost: 30%.
 A personalized AI agent on WhatsApp Business API takes that response down to 9 seconds, runs the calendar with real service durations, sends automatic deposit links that drop no-shows from 18% to 6% (Booksy data), and reactivates inactive clients with a 22-28% recovery rate (vs 4-6% for email).
 For an 800-service salon at EUR 35 ticket we modeled +EUR 10,040 net per month: recovered bookings, reduced no-shows, off-hours capture, ficha-based upselling that lifts average ticket 8-14%, and 6-7x more Google reviews because the agent asks at the right time.
@@ -1122,6 +1140,8 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-peluquerias.html
 ---
 
 ## 2026-05-23 - Customer loyalty for coffee shops
+
+<!-- SCHEDULED:sp_WOz00LQqNUIwizVg4iZAf at 2026-06-05T07:00:00.000Z -->
 
 Loyal customers drive 60-70% of sales in an independent coffee shop and spend 67% more than a first-timer, yet most cafes still run a cardboard stamp card that 80% of people never finish.
 We swapped the cardboard for a digital loyalty program on WhatsApp: customers join in 10 seconds by scanning a QR, stamps register automatically, and the cafe can finally talk back (98% open rate vs 20% for email).

@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-05-24T14:00:00Z",
+  "lastRun": "2026-05-24T22:00:00Z",
   "posts": [
     {
       "slug": "agente-ia-para-peluquerias",
@@ -758,6 +758,14 @@
       "keyword": "automatizar pedidos restaurante whatsapp",
       "tier": 1,
       "cluster": "restaurantes",
+      "status": "published",
+      "date": "2026-05-24"
+    },
+    {
+      "slug": "conseguir-resenas-google-whatsapp",
+      "keyword": "conseguir resenas google whatsapp",
+      "tier": 1,
+      "cluster": "general",
       "status": "published",
       "date": "2026-05-24"
     }

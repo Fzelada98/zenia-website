@@ -1154,6 +1154,8 @@ Full breakdown: https://zeniapartners.com/blog/fidelizacion-clientes-cafeteria.h
 
 ## 2026-05-24 - Automating restaurant orders on WhatsApp
 
+<!-- SCHEDULED:sp_1R4tlaKKmcANufDJPZSPE at 2026-05-25T08:00:00.000Z -->
+
 Delivery marketplaces take 15-35% of every restaurant order. On a EUR 38 ticket that is up to EUR 13 gone, in a business that already runs on 2-8% margins.
 We moved orders to the channel the customer already uses: WhatsApp, where 98% of messages get opened and 66% of conversations end in a purchase.
 A personalized AI agent takes the order, suggests add-ons that lift the average ticket 20-30%, charges directly with no middleman, and turns every order into first-party data the marketplace never hands over.

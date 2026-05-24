@@ -1179,3 +1179,15 @@ Full breakdown: https://zeniapartners.com/blog/conseguir-resenas-google-whatsapp
 #localseo #googlereviews #AI #WhatsAppBusiness
 
 ---
+
+## 2026-05-24 - Raising restaurant average check without raising prices
+
+Most restaurants obsess over filling more tables. The more profitable question is how much each table you already have actually spends.
+Adding just 3 EUR to the average check of an 80-cover-a-day restaurant is over 6,200 EUR of extra revenue a month, and since it comes from high-margin items (a second glass of wine, a dessert), almost all of it drops straight to profit. No new customers, no extra rent, no extra marketing.
+The catch is that upselling depends on a tired waiter remembering to suggest it, table after table. We moved that job to a personalized AI agent connected to the CRM: it suggests the right extra at booking, personalizes offers by each guest's history (a calibrated offer can lift spend 21-58% above their own average), and reactivates dormant regulars over WhatsApp.
+Realistic target: +15-25% average check in 90 days, fully measured against a baseline.
+Full breakdown: https://zeniapartners.com/blog/aumentar-ticket-medio-restaurante.html
+
+#restauranttech #customerretention #AI #WhatsAppBusiness
+
+---

@@ -1168,6 +1168,8 @@ Full breakdown: https://zeniapartners.com/blog/automatizar-pedidos-restaurante-w
 
 ## 2026-05-24 - Getting Google reviews on WhatsApp
 
+<!-- SCHEDULED:sp_6Yi35sQzC60hxPkJ6Aq at 2026-05-25T07:00:00.000Z -->
+
 97% of people read reviews before choosing a local business, and a business with 50+ Google reviews gets 266% more leads than one with fewer than 10. The bottleneck is not unhappy customers, it is that almost nobody leaves the review.
 We moved the ask to the channel the customer already has open: WhatsApp, where 98% of messages get opened and conversion runs 45-60%, versus 2-5% on email.
 A personalized AI agent asks at the moment of peak satisfaction, sends the direct review link, and quietly routes complaints to support instead of pushing them to Google. No incentives, no review gating, fully within Google's rules.

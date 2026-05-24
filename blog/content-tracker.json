@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-05-23T16:00:00Z",
+  "lastRun": "2026-05-24T14:00:00Z",
   "posts": [
     {
       "slug": "agente-ia-para-peluquerias",
@@ -752,6 +752,14 @@
       "cluster": "cafeterias",
       "status": "published",
       "date": "2026-05-23"
+    },
+    {
+      "slug": "automatizar-pedidos-restaurante-whatsapp",
+      "keyword": "automatizar pedidos restaurante whatsapp",
+      "tier": 1,
+      "cluster": "restaurantes",
+      "status": "published",
+      "date": "2026-05-24"
     }
   ]
 }

@@ -1191,3 +1191,15 @@ Full breakdown: https://zeniapartners.com/blog/aumentar-ticket-medio-restaurante
 #restauranttech #customerretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-05-25 - Reactivating dormant customers over WhatsApp
+
+Winning back a lapsed customer costs 5 to 6 times less than acquiring a new one, while acquisition costs have climbed 222% in eight years and another 18.4% in 2025 alone.
+Yet most SMBs let their entire customer database go cold without sending a single message. Existing customers drive about 65% of revenue, and a 5% lift in retention can raise profit anywhere from 25% to 95%.
+The reason nobody does win-back is simple: finding who lapsed, writing each message, and following up never reaches the top of the list.
+We hand that to a personalized AI agent on WhatsApp. It segments the base, runs a 4-step sequence, and stops the moment someone replies. WhatsApp gets 98% open rates, and Rappi's reactivation campaign drove 80% more purchases than the push-and-email control group.
+Reply if you want the 4-step sequence, happy to map it to your industry.
+
+#customerretention #CRM #AI #WhatsAppBusiness
+
+---

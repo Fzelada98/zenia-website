@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-05-25T14:00:00Z",
+  "lastRun": "2026-05-25T22:00:00Z",
   "posts": [
     {
       "slug": "agente-ia-para-peluquerias",
@@ -782,6 +782,14 @@
       "keyword": "reactivar clientes inactivos whatsapp",
       "tier": 1,
       "cluster": "general",
+      "status": "published",
+      "date": "2026-05-25"
+    },
+    {
+      "slug": "campanas-marketing-whatsapp-restaurante",
+      "keyword": "campanas marketing whatsapp restaurante",
+      "tier": 1,
+      "cluster": "restaurantes",
       "status": "published",
       "date": "2026-05-25"
     }

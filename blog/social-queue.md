@@ -1203,3 +1203,15 @@ Reply if you want the 4-step sequence, happy to map it to your industry.
 #customerretention #CRM #AI #WhatsAppBusiness
 
 ---
+
+## 2026-05-25 - WhatsApp campaigns for restaurants
+
+A restaurant's promo email gets opened by 43% of the list and clicked by 1 in 30. A WhatsApp campaign gets read by most of the list and clicks around 58%.
+That gap is why the smartest restaurants stopped emailing offers and moved their campaigns to WhatsApp: a Tuesday-night promo that actually gets seen the same afternoon, not buried in a promotions tab.
+The blocker was always volume. Send to 400 contacts, get 60 replies mid-service, and nobody can answer them. We hand that to a personalized AI agent: it replies in seconds, checks availability, books the table, and logs everything in the CRM.
+With AI-personalized sequences, click rates hit 74%, nearly 7x an equivalent email campaign.
+Full breakdown: https://zeniapartners.com/blog/campanas-marketing-whatsapp-restaurante.html
+
+#restauranttech #customerretention #AI #WhatsAppBusiness
+
+---

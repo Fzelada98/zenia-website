@@ -1215,3 +1215,15 @@ Full breakdown: https://zeniapartners.com/blog/campanas-marketing-whatsapp-resta
 #restauranttech #customerretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-05-25 - AI agent for gyms
+
+A third of gym members cancel every year, and half of new members quit before month six (HFA 2025).
+Gyms pour budget into acquisition while the back door stays wide open. Retaining a member costs 5 to 7 times less than winning a new one.
+The fix is not another report that tells you who already left. It is a personalized AI agent watching every member's attendance and payments, then acting on WhatsApp the day the first warning sign appears.
+Results we see: churn down about 50%, failed payments recovered jumped from 35% to 78%, and a well-timed message reactivates 40 to 60% of at-risk members. WhatsApp opens at 98% versus 20% for email.
+Full breakdown: https://zeniapartners.com/blog/agente-ia-para-gimnasios.html
+
+#fitnessindustry #memberretention #AI #WhatsAppBusiness
+
+---

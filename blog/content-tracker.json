@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-05-25T22:00:00Z",
+  "lastRun": "2026-05-25T23:30:00Z",
   "posts": [
     {
       "slug": "agente-ia-para-peluquerias",
@@ -790,6 +790,14 @@
       "keyword": "campanas marketing whatsapp restaurante",
       "tier": 1,
       "cluster": "restaurantes",
+      "status": "published",
+      "date": "2026-05-25"
+    },
+    {
+      "slug": "agente-ia-para-gimnasios",
+      "keyword": "agente ia para gimnasios",
+      "tier": 1,
+      "cluster": "gimnasios",
       "status": "published",
       "date": "2026-05-25"
     }

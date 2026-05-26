@@ -1239,3 +1239,15 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-restaurantes.html
 #restauranttech #customerretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-05-26 - AI agent for dental clinics
+
+In Spain, 21% of patients admit they simply forget their dental appointment, and every empty chair costs a practice 200 to 400 EUR in lost production it never gets back.
+Front desk cannot fix this alone. They are with the patient in the chair, on the phone, and chasing WhatsApp at the same time, so reminders and recall are always what slips.
+A personalized AI agent handles WhatsApp 24/7: it books against real availability, confirms with one tap, runs recall, and wakes up patients who have not visited in over a year.
+Numbers we see in dental: no-shows down up to 40%, 80% of appointments confirmed in a single tap, and 25 to 35% more operating capacity with no extra hires (ADA 2025).
+Full breakdown: https://zeniapartners.com/blog/agente-ia-para-clinicas-dentales.html
+
+#healthtech #patientretention #AI #automation
+
+---

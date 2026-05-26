@@ -1251,3 +1251,15 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-clinicas-dentales.
 #healthtech #patientretention #AI #automation
 
 ---
+
+## 2026-05-26 - Restaurant satisfaction surveys
+
+70% of unhappy restaurant guests never complain. They just don't come back, and they tell their friends why.
+Owners try to fix this with email surveys, but those get a 12-15% response rate, and the people who reply are the extremes, not the quiet majority that actually decides your repeat business.
+Move the same survey to WhatsApp and response jumps past 40% (95-98% open rate vs 20-25% on email).
+A personalized AI agent sends it 2 hours after the visit, routes happy guests to a Google review and unhappy ones to a private fix before they're gone. In a 2,000-cover-a-month restaurant, recovering half of the unhappy guests is worth about 6,700 EUR a year.
+Full breakdown: https://zeniapartners.com/blog/encuestas-satisfaccion-clientes-restaurante.html
+
+#restauranttech #customerretention #AI #WhatsAppBusiness
+
+---

@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-05-27T14:00:00Z",
+  "lastRun": "2026-05-27T22:00:00Z",
   "posts": [
     {
       "slug": "agente-ia-para-peluquerias",
@@ -838,6 +838,14 @@
       "keyword": "agente ia para ecommerce",
       "tier": 2,
       "cluster": "ecommerce",
+      "status": "published",
+      "date": "2026-05-27"
+    },
+    {
+      "slug": "recordatorios-citas-peluqueria-whatsapp",
+      "keyword": "recordatorios citas peluqueria whatsapp",
+      "tier": 1,
+      "cluster": "belleza",
       "status": "published",
       "date": "2026-05-27"
     }

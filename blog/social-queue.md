@@ -1303,3 +1303,15 @@ Full breakdown with the ROI math: https://zeniapartners.com/blog/agente-ia-para-
 #retailtech #ecommerce #AI #automation
 
 ---
+
+## 2026-05-27 - WhatsApp appointment reminders for salons
+
+Around 30% of salon appointments are lost or cancelled every year, and one no-show on a color service is two empty hours and 40 to 80 EUR gone.
+Most salons still send reminders by hand, on the days they have time, which are never the busy days that cause the most no-shows.
+We set up a personalized AI agent that sends WhatsApp reminders 24h and 2h before, lets the client confirm or reschedule in one tap, and fills the freed slot from the waitlist (it recovers 55 to 70% of them). WhatsApp opens at 95 to 98% vs 20 to 25% for email, so the message actually gets seen.
+For a 3-chair salon that is around 4,500 EUR a month back on the table.
+Full breakdown: https://zeniapartners.com/blog/recordatorios-citas-peluqueria-whatsapp.html
+
+#beautyindustry #CRM #AI #WhatsAppBusiness
+
+---

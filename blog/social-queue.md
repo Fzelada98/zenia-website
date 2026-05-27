@@ -1182,6 +1182,8 @@ Full breakdown: https://zeniapartners.com/blog/conseguir-resenas-google-whatsapp
 
 ## 2026-05-24 - Raising restaurant average check without raising prices
 
+<!-- SCHEDULED:sp_ODgkD4YQ89hfjVo6nKxmu at 2026-05-27T08:00:00.000Z -->
+
 Most restaurants obsess over filling more tables. The more profitable question is how much each table you already have actually spends.
 Adding just 3 EUR to the average check of an 80-cover-a-day restaurant is over 6,200 EUR of extra revenue a month, and since it comes from high-margin items (a second glass of wine, a dessert), almost all of it drops straight to profit. No new customers, no extra rent, no extra marketing.
 The catch is that upselling depends on a tired waiter remembering to suggest it, table after table. We moved that job to a personalized AI agent connected to the CRM: it suggests the right extra at booking, personalizes offers by each guest's history (a calibrated offer can lift spend 21-58% above their own average), and reactivates dormant regulars over WhatsApp.
@@ -1193,6 +1195,8 @@ Full breakdown: https://zeniapartners.com/blog/aumentar-ticket-medio-restaurante
 ---
 
 ## 2026-05-25 - Reactivating dormant customers over WhatsApp
+
+<!-- SCHEDULED:sp_Z7CluLZUcB8z3AuEcod1E at 2026-05-28T07:00:00.000Z -->
 
 Winning back a lapsed customer costs 5 to 6 times less than acquiring a new one, while acquisition costs have climbed 222% in eight years and another 18.4% in 2025 alone.
 Yet most SMBs let their entire customer database go cold without sending a single message. Existing customers drive about 65% of revenue, and a 5% lift in retention can raise profit anywhere from 25% to 95%.
@@ -1206,6 +1210,8 @@ Reply if you want the 4-step sequence, happy to map it to your industry.
 
 ## 2026-05-25 - WhatsApp campaigns for restaurants
 
+<!-- SCHEDULED:sp_pvsbZSoyMm11x4m4gfdU at 2026-05-29T08:00:00.000Z -->
+
 A restaurant's promo email gets opened by 43% of the list and clicked by 1 in 30. A WhatsApp campaign gets read by most of the list and clicks around 58%.
 That gap is why the smartest restaurants stopped emailing offers and moved their campaigns to WhatsApp: a Tuesday-night promo that actually gets seen the same afternoon, not buried in a promotions tab.
 The blocker was always volume. Send to 400 contacts, get 60 replies mid-service, and nobody can answer them. We hand that to a personalized AI agent: it replies in seconds, checks availability, books the table, and logs everything in the CRM.
@@ -1217,6 +1223,8 @@ Full breakdown: https://zeniapartners.com/blog/campanas-marketing-whatsapp-resta
 ---
 
 ## 2026-05-25 - AI agent for gyms
+
+<!-- SCHEDULED:sp_wqXACeORByzPIj014zHFt at 2026-06-01T15:00:00.000Z -->
 
 A third of gym members cancel every year, and half of new members quit before month six (HFA 2025).
 Gyms pour budget into acquisition while the back door stays wide open. Retaining a member costs 5 to 7 times less than winning a new one.
@@ -1230,6 +1238,8 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-gimnasios.html
 
 ## 2026-05-26 - AI agent for restaurants
 
+<!-- SCHEDULED:sp_AHc9QyLU9S9yNKx5jzk8r at 2026-06-02T08:00:00.000Z -->
+
 26% of restaurant operators already run AI tools in 2026, and the ones doing it well pull in an extra $3,000 to $18,000 per month per location (National Restaurant Association).
 Most owners still treat "AI" as a reservation widget. The real leverage is one personalized AI agent covering the five spots where a restaurant bleeds money: no-shows, delivery commissions, missing reviews, lapsed regulars, and average ticket.
 On WhatsApp it confirms tables in 8 seconds, takes orders straight to the kitchen with no platform fee, and asks happy guests for a Google review at the right moment.
@@ -1241,6 +1251,8 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-restaurantes.html
 ---
 
 ## 2026-05-26 - AI agent for dental clinics
+
+<!-- SCHEDULED:sp_RiRph7jf5hHtUMwWkVnMc at 2026-06-03T07:00:00.000Z -->
 
 In Spain, 21% of patients admit they simply forget their dental appointment, and every empty chair costs a practice 200 to 400 EUR in lost production it never gets back.
 Front desk cannot fix this alone. They are with the patient in the chair, on the phone, and chasing WhatsApp at the same time, so reminders and recall are always what slips.
@@ -1254,6 +1266,8 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-clinicas-dentales.
 
 ## 2026-05-26 - Restaurant satisfaction surveys
 
+<!-- SCHEDULED:sp_lJqexVc8bap9HFdR4vkMr at 2026-06-04T08:00:00.000Z -->
+
 70% of unhappy restaurant guests never complain. They just don't come back, and they tell their friends why.
 Owners try to fix this with email surveys, but those get a 12-15% response rate, and the people who reply are the extremes, not the quiet majority that actually decides your repeat business.
 Move the same survey to WhatsApp and response jumps past 40% (95-98% open rate vs 20-25% on email).
@@ -1265,6 +1279,8 @@ Full breakdown: https://zeniapartners.com/blog/encuestas-satisfaccion-clientes-r
 ---
 
 ## 2026-05-27 - AI agent for customer service
+
+<!-- SCHEDULED:sp_ogovjLHIqipwdxStI3sx1 at 2026-06-05T07:00:00.000Z -->
 
 Your customers wait 6+ hours for a first reply. An AI agent answers in 3.8 seconds.
 A human agent costs 6 to 8 EUR per interaction and works one chat at a time on a schedule. A personalized AI agent costs 0.50 to 0.70 EUR, never sleeps, and resolves 60 to 80% of incoming questions on its own.

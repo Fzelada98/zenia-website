@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-05-26T23:30:00Z",
+  "lastRun": "2026-05-27T06:09:00Z",
   "posts": [
     {
       "slug": "agente-ia-para-peluquerias",
@@ -824,6 +824,14 @@
       "cluster": "restaurantes",
       "status": "published",
       "date": "2026-05-26"
+    },
+    {
+      "slug": "agente-ia-para-atencion-al-cliente",
+      "keyword": "agente ia para atencion al cliente",
+      "tier": 1,
+      "cluster": "general",
+      "status": "published",
+      "date": "2026-05-27"
     }
   ]
 }

@@ -1263,3 +1263,15 @@ Full breakdown: https://zeniapartners.com/blog/encuestas-satisfaccion-clientes-r
 #restauranttech #customerretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-05-27 - AI agent for customer service
+
+Your customers wait 6+ hours for a first reply. An AI agent answers in 3.8 seconds.
+A human agent costs 6 to 8 EUR per interaction and works one chat at a time on a schedule. A personalized AI agent costs 0.50 to 0.70 EUR, never sleeps, and resolves 60 to 80% of incoming questions on its own.
+The 2026 data is hard to argue with: 80% of routine interactions now run fully automated, support costs drop 30 to 50%, and every euro put into AI support returns about 3.50.
+For most SMBs the payback lands in 30 to 90 days and frees 50 to 120 team hours a month for the work that actually needs a person.
+Full breakdown: https://zeniapartners.com/blog/agente-ia-para-atencion-al-cliente.html
+
+#B2B #SaaS #AI #automation
+
+---

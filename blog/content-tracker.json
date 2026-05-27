@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-05-27T06:09:00Z",
+  "lastRun": "2026-05-27T14:00:00Z",
   "posts": [
     {
       "slug": "agente-ia-para-peluquerias",
@@ -830,6 +830,14 @@
       "keyword": "agente ia para atencion al cliente",
       "tier": 1,
       "cluster": "general",
+      "status": "published",
+      "date": "2026-05-27"
+    },
+    {
+      "slug": "agente-ia-para-ecommerce",
+      "keyword": "agente ia para ecommerce",
+      "tier": 2,
+      "cluster": "ecommerce",
       "status": "published",
       "date": "2026-05-27"
     }

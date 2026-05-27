@@ -1291,3 +1291,15 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-atencion-al-client
 #B2B #SaaS #AI #automation
 
 ---
+
+## 2026-05-27 - AI agent for ecommerce
+
+A human support resolution costs 7.40 USD. An AI agent resolves the same ticket for 0.62 (McKinsey 2026).
+But the cost cut is the boring half. The real shift is on the revenue side.
+An AI agent connected to your catalog and order system handles 40 to 70% of ecommerce tickets on its own, and the stores doing it well report AOV up 10 to 30%, revenue per visit up 15 to 35%, and returns down 15 to 40% in fashion and footwear.
+The reason is simple: an agent that solves the size question before checkout sells more and refunds less than any static banner ever will.
+Full breakdown with the ROI math: https://zeniapartners.com/blog/agente-ia-para-ecommerce.html
+
+#retailtech #ecommerce #AI #automation
+
+---

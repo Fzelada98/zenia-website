@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-05-28T14:00:00Z",
+  "lastRun": "2026-05-28T14:09:00Z",
   "posts": [
+    {
+      "slug": "crm-con-inteligencia-artificial",
+      "keyword": "crm con inteligencia artificial",
+      "tier": 1,
+      "cluster": "general",
+      "status": "published",
+      "date": "2026-05-28"
+    },
     {
       "slug": "agente-ia-para-peluquerias",
       "keyword": "agente ia para peluquerias",

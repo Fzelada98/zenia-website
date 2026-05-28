@@ -1294,6 +1294,8 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-atencion-al-client
 
 ## 2026-05-27 - AI agent for ecommerce
 
+<!-- SCHEDULED:sp_qyOfcWtpyxuagI153mm2h at 2026-05-28T16:25:22.621Z -->
+
 A human support resolution costs 7.40 USD. An AI agent resolves the same ticket for 0.62 (McKinsey 2026).
 But the cost cut is the boring half. The real shift is on the revenue side.
 An AI agent connected to your catalog and order system handles 40 to 70% of ecommerce tickets on its own, and the stores doing it well report AOV up 10 to 30%, revenue per visit up 15 to 35%, and returns down 15 to 40% in fashion and footwear.
@@ -1305,6 +1307,8 @@ Full breakdown with the ROI math: https://zeniapartners.com/blog/agente-ia-para-
 ---
 
 ## 2026-05-27 - WhatsApp appointment reminders for salons
+
+<!-- SCHEDULED:sp_tdoxGDS5ngMe6fX4UtKR at 2026-05-29T07:00:00.000Z -->
 
 Around 30% of salon appointments are lost or cancelled every year, and one no-show on a color service is two empty hours and 40 to 80 EUR gone.
 Most salons still send reminders by hand, on the days they have time, which are never the busy days that cause the most no-shows.
@@ -1318,6 +1322,8 @@ Full breakdown: https://zeniapartners.com/blog/recordatorios-citas-peluqueria-wh
 
 ## 2026-05-28 - AI agent for real estate agencies
 
+<!-- SCHEDULED:sp_MjAOEl0waSZTICKP778yN at 2026-06-01T07:00:00.000Z -->
+
 78% of property buyers work with the first agency that responds to their inquiry. The average human response time in real estate is 4 to 24 hours, while a personalized AI agent on WhatsApp replies in 8 seconds, 24/7.
 That single change makes a lead 21x more likely to qualify (2026 industry data).
 We deployed AI agents for agencies handling 500+ monthly leads from Idealista, Fotocasa and ads. The agent qualifies, books viewings, and only escalates to the human commercial when there is real intent. Result: lead-to-deal conversion up from 0.8% to 2.1%, cost per qualified lead down 60%, and 42% of new qualified leads come in outside office hours, leads that previously evaporated.
@@ -1329,6 +1335,8 @@ Full breakdown with the ROI math: https://zeniapartners.com/blog/agente-ia-para-
 ---
 
 ## 2026-05-28 - CRM with AI: the real ROI math
+
+<!-- SCHEDULED:sp_nkEc6Pkx6UGEu1ETYv8dP at 2026-06-02T07:00:00.000Z -->
 
 Nucleus Research put a number on it: AI-powered CRMs return 13.50 USD per dollar invested, 55% higher than a regular CRM (8.71).
 The gap is not the software. It is what the team stops doing manually: research time down 34%, email drafting down 36%, lead scoring accuracy up 42%. By 2026 Gartner expects 81% of SMBs to operate on AI-powered CRMs.

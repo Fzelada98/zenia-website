@@ -1315,3 +1315,15 @@ Full breakdown: https://zeniapartners.com/blog/recordatorios-citas-peluqueria-wh
 #beautyindustry #CRM #AI #WhatsAppBusiness
 
 ---
+
+## 2026-05-28 - AI agent for real estate agencies
+
+78% of property buyers work with the first agency that responds to their inquiry. The average human response time in real estate is 4 to 24 hours, while a personalized AI agent on WhatsApp replies in 8 seconds, 24/7.
+That single change makes a lead 21x more likely to qualify (2026 industry data).
+We deployed AI agents for agencies handling 500+ monthly leads from Idealista, Fotocasa and ads. The agent qualifies, books viewings, and only escalates to the human commercial when there is real intent. Result: lead-to-deal conversion up from 0.8% to 2.1%, cost per qualified lead down 60%, and 42% of new qualified leads come in outside office hours, leads that previously evaporated.
+Most agencies say they use AI, but only 17% report material impact. The gap is workflow design, not the tool.
+Full breakdown with the ROI math: https://zeniapartners.com/blog/agente-ia-para-inmobiliarias.html
+
+#realestate #proptech #AI #WhatsAppBusiness
+
+---

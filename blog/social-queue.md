@@ -1349,6 +1349,8 @@ Full ROI breakdown for SMBs: https://zeniapartners.com/blog/crm-con-inteligencia
 
 ## 2026-05-28 - AI agent for academies
 
+<!-- SCHEDULED:sp_hG1ZpUoQxCm5df5XLqt2 at 2026-05-29T00:17:25.198Z -->
+
 73% of academy form fills get a reply more than 24 hours later. By then, the matriculation probability has dropped 80% (Harvard Business Review on lead response time).
 We deployed personalized AI agents for academies handling 100+ monthly leads from WhatsApp, Instagram and web forms. The agent qualifies in 8 seconds, books level tests, and only escalates to the advisor when intent is real. Result: matriculations up 35%, admin time down 70%, and 42% of new leads now arrive between 21:00 and 01:00, exactly when human staff is offline.
 The retention layer is where the real ROI sits: renewals to the next term move from 28% to 46%.

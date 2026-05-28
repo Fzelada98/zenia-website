@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-05-27T22:00:00Z",
+  "lastRun": "2026-05-28T14:00:00Z",
   "posts": [
     {
       "slug": "agente-ia-para-peluquerias",
@@ -848,6 +848,14 @@
       "cluster": "belleza",
       "status": "published",
       "date": "2026-05-27"
+    },
+    {
+      "slug": "agente-ia-para-inmobiliarias",
+      "keyword": "agente ia para inmobiliarias",
+      "tier": 1,
+      "cluster": "inmobiliarias",
+      "status": "published",
+      "date": "2026-05-28"
     }
   ]
 }

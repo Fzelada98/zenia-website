@@ -1370,3 +1370,14 @@ Full ROI math and 5-week rollout: https://zeniapartners.com/blog/agente-ia-para-
 #legaltech #B2B #AI #WhatsAppBusiness
 
 ---
+
+## 2026-05-29 - AI agent for SMBs
+
+41% of Spanish SMBs already use AI daily, but in companies with under 50 employees adoption drops below 18%. The gap is not interest, it is implementation.
+We deployed personalized AI agents for SMBs covering 5 use cases that pay back in under 90 days: customer service, lead qualification, dormant client reactivation, appointment reminders and collections. Average operating cost drop sits around 35%, with first measurable ROI in roughly 60 days.
+For a 4-stylist hair salon we ran the numbers: +5,798 EUR/month net, 12.6x ROI on the full stack, with Spanish Kit Digital covering up to 12,000 EUR of the deployment.
+Full breakdown plus a 4-week rollout plan: https://zeniapartners.com/blog/agente-ia-para-pymes.html
+
+#B2B #SaaS #AI #automation
+
+---

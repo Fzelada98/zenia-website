@@ -1359,3 +1359,14 @@ Full ROI math for an academy with 800 active students: https://zeniapartners.com
 #edtech #B2B #AI #WhatsAppBusiness
 
 ---
+
+## 2026-05-29 - AI agent for lawyers
+
+Law firms that take 4+ hours to reply to a WhatsApp lead lose 50-60% of those clients. The ones answering in 10 seconds are converting 40% more.
+We deployed personalized AI agents for Spanish law firms handling intake on WhatsApp Business API. The agent qualifies by area of law, checks conflicts against the CRM, books with the right partner, and stays inside GDPR and attorney-client privilege.
+Result for a 4-lawyer firm: +9 new clients per month, 12 hours per week per lawyer freed from intake, around 22,000 EUR of monthly recovered capacity.
+Full ROI math and 5-week rollout: https://zeniapartners.com/blog/agente-ia-para-abogados.html
+
+#legaltech #B2B #AI #WhatsAppBusiness
+
+---

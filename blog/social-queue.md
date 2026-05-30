@@ -1403,3 +1403,15 @@ For a 10,000 EUR/month cafe the net upside lands around 5,225 EUR/month at an 18
 #restauranttech #customerretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-05-30 - AI agent for photographers
+
+Photographers who reply to a lead in under 5 minutes close 6 to 8 times more sessions than those who respond the next day (HoneyBook 2025).
+The median pro photographer loses 12 hours a week to admin and lets 70-80% of inquiries cool off.
+A personalized AI agent on WhatsApp Business qualifies leads 24/7, sends packages, books the discovery call and triggers the contract, while the creative work stays human.
+Studios automating the front of the funnel jump from 20-30% to 45-65% inquiry-to-consult conversion and add around 25,000 USD a year (Shootproof 2025) without raising prices.
+Full breakdown with the 7 flows and ROI math: https://zeniapartners.com/blog/agente-ia-para-fotografos.html
+
+#photographybusiness #studioautomation #AI #WhatsAppBusiness
+
+---

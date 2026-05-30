@@ -1381,3 +1381,14 @@ Full breakdown plus a 4-week rollout plan: https://zeniapartners.com/blog/agente
 #B2B #SaaS #AI #automation
 
 ---
+
+## 2026-05-30 - AI agent for retail
+
+Online retailers lose 27% of would-be sales because shoppers cannot get an answer in time, and 64% of tickets are the same five questions: order status, stock, sizes, returns and payment methods.
+We deployed personalized AI agents for retail brands integrated with the CRM and WhatsApp Business API. The agent resolves 50-70% of tickets without a human, recovers 15% of abandoned carts and lifts AOV by 24%.
+For a 50,000 EUR/month store, that adds up to roughly 29,000 EUR of net monthly upside, with the system live in 5 weeks.
+Full ROI math and the seven retail use cases that pay back fastest: https://zeniapartners.com/blog/agente-ia-para-retail.html
+
+#retailtech #ecommerce #AI #automation
+
+---

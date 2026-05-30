@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-05-29T14:00:00Z",
+  "lastRun": "2026-05-30T00:00:00Z",
   "posts": [
     {
       "slug": "agente-ia-para-pymes",
@@ -888,6 +888,14 @@
       "cluster": "inmobiliarias",
       "status": "published",
       "date": "2026-05-28"
+    },
+    {
+      "slug": "agente-ia-para-retail",
+      "keyword": "agente ia para retail",
+      "tier": 1,
+      "cluster": "retail",
+      "status": "published",
+      "date": "2026-05-30"
     }
   ]
 }

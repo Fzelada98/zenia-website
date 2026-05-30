@@ -1392,3 +1392,14 @@ Full ROI math and the seven retail use cases that pay back fastest: https://zeni
 #retailtech #ecommerce #AI #automation
 
 ---
+
+## 2026-05-30 - AI agent for coffee shops
+
+77% of coffee shop customers never come back after their first visit. The 22.6% who do return spend up to 26x more in lifetime value, yet most cafes still cannot tell a regular from a one-time walk-in.
+We deployed personalized AI agents for independent coffee shops on WhatsApp Business API: orders in 38 seconds, digital loyalty tied to the phone number (no cardboard cards), automatic reactivation of dormant customers at 14, 30 and 60 days, and Google review requests after every positive visit.
+Real numbers from operators: +33% visit frequency in identified regulars, +38% average ticket from personalized upselling, 18-24% recovery of inactive customers vs. 2-3% with generic email.
+For a 10,000 EUR/month cafe the net upside lands around 5,225 EUR/month at an 18x ROI, live in 4 weeks. DM me if you want the full ROI sheet for your kind of shop.
+
+#restauranttech #customerretention #AI #WhatsAppBusiness
+
+---

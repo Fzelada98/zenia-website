@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-05-30T22:00:00Z",
+  "lastRun": "2026-05-31T00:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-medicos",
+      "keyword": "agente ia para medicos",
+      "tier": 1,
+      "cluster": "clinicas",
+      "status": "published",
+      "date": "2026-05-31"
+    },
     {
       "slug": "agente-ia-para-fotografos",
       "keyword": "agente ia para fotografos",

@@ -1415,3 +1415,15 @@ Full breakdown with the 7 flows and ROI math: https://zeniapartners.com/blog/age
 #photographybusiness #studioautomation #AI #WhatsAppBusiness
 
 ---
+
+## 2026-05-31 - AI agent for medical practices
+
+Doctors spend 2 hours on admin for every 1 hour with a patient (Annals of Internal Medicine), and 81% of Spanish physicians say it directly degrades the quality of their consultations.
+We deployed personalized AI agents for private medical practices on WhatsApp Business API: bidirectional reminders that cut no-shows 25-40% (JAMIA), natural-language scheduling, FAQ resolution, dynamic waitlists, and post-visit NPS plus Google review requests.
+Real impact on a 25-patient/day practice: -72% admin hours, -86% incoming calls, +400% Google reviews, +10,978 EUR/month net at a 20x ROI inside the first 6 months. RGPD-compliant, EU servers, no clinical decisions.
+Gartner expects 80% of healthcare providers to invest in conversational AI before end of 2026. The window to be first in your city is now.
+Full operator playbook: https://zeniapartners.com/blog/agente-ia-para-medicos.html
+
+#healthtech #patientretention #AI #automation
+
+---

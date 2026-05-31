@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-05-31T00:00:00Z",
+  "lastRun": "2026-05-31T12:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-consultorias",
+      "keyword": "agente ia para consultorias",
+      "tier": 1,
+      "cluster": "consultorias",
+      "status": "published",
+      "date": "2026-05-31"
+    },
     {
       "slug": "agente-ia-para-medicos",
       "keyword": "agente ia para medicos",

@@ -1427,3 +1427,14 @@ Full operator playbook: https://zeniapartners.com/blog/agente-ia-para-medicos.ht
 #healthtech #patientretention #AI #automation
 
 ---
+
+## 2026-05-31 - AI agent for consulting firms
+
+A boutique consulting firm of 8 people loses 38% of its billable capacity to non-consulting work: proposals, scheduling, meeting notes, follow-up, weekly reports.
+Gartner expects 80%+ of consulting firms to deploy AI agents in their operations before end of 2026, and the firms running personalized AI agents are already reporting 250% ROI inside 18 months.
+After 90 days with a custom AI agent connected to their CRM, calendar and comms stack: -79% time-to-proposal, +24% billable hours per consultant, NPS from 34 to 56.
+Full playbook with the 90-day plan and the 6 common mistakes: https://zeniapartners.com/blog/agente-ia-para-consultorias.html
+
+#consulting #B2B #AI #automation
+
+---

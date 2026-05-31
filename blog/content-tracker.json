@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-05-31T12:00:00Z",
+  "lastRun": "2026-05-31T22:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-barberias",
+      "keyword": "agente ia para barberias",
+      "tier": 1,
+      "cluster": "belleza",
+      "status": "published",
+      "date": "2026-05-31"
+    },
     {
       "slug": "agente-ia-para-consultorias",
       "keyword": "agente ia para consultorias",

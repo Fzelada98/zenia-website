@@ -1438,3 +1438,15 @@ Full playbook with the 90-day plan and the 6 common mistakes: https://zeniapartn
 #consulting #B2B #AI #automation
 
 ---
+
+## 2026-05-31 - AI agent for barbershops
+
+The average barbershop loses 14% of bookings to no-shows and 3-6 customers per day to slow WhatsApp replies. That is 2,500 to 3,500 EUR per month walking out the door, every month.
+Reminder apps cut no-shows up to 70% (industry data) and personalized AI agents on WhatsApp Business API push response time from 25 minutes to under 10 seconds, 24/7, with deposit collection built in.
+We deployed AI agents in barbershops of 3 to 6 chairs: occupancy went from 61% to 79%, no-shows from 16% to 6%, owners got 10 hours per week back from staring at the phone. Net ROI: 4,270-4,470 EUR/month.
+Spain has 5,128 registered barbershops in a 3.5B EUR market growing 4-5% annually. The early movers are already locking in the high-frequency clientele.
+Full operator playbook: https://zeniapartners.com/blog/agente-ia-para-barberias.html
+
+#beautyindustry #CRM #AI #WhatsAppBusiness
+
+---

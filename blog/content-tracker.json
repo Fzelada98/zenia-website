@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-06-01T12:00:00Z",
+  "lastRun": "2026-06-01T22:07:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-clinicas-veterinarias",
+      "keyword": "agente ia para clinicas veterinarias",
+      "tier": 1,
+      "cluster": "clinicas",
+      "status": "published",
+      "date": "2026-06-01"
+    },
     {
       "slug": "agente-ia-para-hoteles",
       "keyword": "agente ia para hoteles",

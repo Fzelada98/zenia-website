@@ -1463,3 +1463,16 @@ Reply if you run a nutrition practice with this exact retention problem, happy t
 #healthtech #patientretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-01 - AI agent for hotels
+
+Independent hotels lose 30 to 40% of potential bookings to slow replies and then pay Booking and Expedia 18 to 25% commission on the rest. Both sides of that math are fixable.
+22% of US travelers already use AI tools to plan and book stays (industry survey, 2025), and the OTAs have integrated their own AI agents. If your front desk takes 28 minutes to answer a WhatsApp message at 22:00, that guest is already booked somewhere else.
+We deployed a personalized AI agent for boutique hotels connected to WhatsApp Business API and the PMS (Cloudbeds, Mews, Apaleo): response time from 28 min to 8 seconds, direct bookings from 22% to 38-45%, no-shows from 11% to 5%, upselling revenue per guest +12 to 18%, 80% of guest queries resolved without front-desk involvement.
+For a 50-room hotel at 68% occupancy and 110 EUR ADR, that nets around +23,000 EUR per month vs. a 297-497 EUR/month system cost. Most of it is OTA commission you stop paying.
+BCG already calls this the "AI-first hotel" model. Hotels that wait will be competing on price against properties that compete on response time.
+DM me if you run a hotel and want the full ROI breakdown for your room count and ADR.
+
+#hospitalitytech #hoteltech #AI #WhatsAppBusiness
+
+---

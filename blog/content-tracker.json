@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-06-01T00:00:00Z",
+  "lastRun": "2026-06-01T12:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-hoteles",
+      "keyword": "agente ia para hoteles",
+      "tier": 1,
+      "cluster": "hoteles",
+      "status": "published",
+      "date": "2026-06-01"
+    },
     {
       "slug": "agente-ia-para-nutricionistas",
       "keyword": "agente ia para nutricionistas",

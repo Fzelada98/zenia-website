@@ -1362,6 +1362,8 @@ Full ROI math for an academy with 800 active students: https://zeniapartners.com
 
 ## 2026-05-29 - AI agent for lawyers
 
+<!-- SCHEDULED:sp_vVWXoFnDq70CQgdcHNd7 at 2026-06-01T16:15:59.992Z -->
+
 Law firms that take 4+ hours to reply to a WhatsApp lead lose 50-60% of those clients. The ones answering in 10 seconds are converting 40% more.
 We deployed personalized AI agents for Spanish law firms handling intake on WhatsApp Business API. The agent qualifies by area of law, checks conflicts against the CRM, books with the right partner, and stays inside GDPR and attorney-client privilege.
 Result for a 4-lawyer firm: +9 new clients per month, 12 hours per week per lawyer freed from intake, around 22,000 EUR of monthly recovered capacity.
@@ -1372,6 +1374,8 @@ Full ROI math and 5-week rollout: https://zeniapartners.com/blog/agente-ia-para-
 ---
 
 ## 2026-05-29 - AI agent for SMBs
+
+<!-- SCHEDULED:sp_yAvKdTUZwhdQwKmZNaw at 2026-06-02T07:00:00.000Z -->
 
 41% of Spanish SMBs already use AI daily, but in companies with under 50 employees adoption drops below 18%. The gap is not interest, it is implementation.
 We deployed personalized AI agents for SMBs covering 5 use cases that pay back in under 90 days: customer service, lead qualification, dormant client reactivation, appointment reminders and collections. Average operating cost drop sits around 35%, with first measurable ROI in roughly 60 days.
@@ -1384,6 +1388,8 @@ Full breakdown plus a 4-week rollout plan: https://zeniapartners.com/blog/agente
 
 ## 2026-05-30 - AI agent for retail
 
+<!-- SCHEDULED:sp_89HLlGcXtYtIn13zaoML at 2026-06-03T06:00:00.000Z -->
+
 Online retailers lose 27% of would-be sales because shoppers cannot get an answer in time, and 64% of tickets are the same five questions: order status, stock, sizes, returns and payment methods.
 We deployed personalized AI agents for retail brands integrated with the CRM and WhatsApp Business API. The agent resolves 50-70% of tickets without a human, recovers 15% of abandoned carts and lifts AOV by 24%.
 For a 50,000 EUR/month store, that adds up to roughly 29,000 EUR of net monthly upside, with the system live in 5 weeks.
@@ -1395,6 +1401,8 @@ Full ROI math and the seven retail use cases that pay back fastest: https://zeni
 
 ## 2026-05-30 - AI agent for coffee shops
 
+<!-- SCHEDULED:sp_SV6aV7AnmfzOvXluGDG at 2026-06-04T07:00:00.000Z -->
+
 77% of coffee shop customers never come back after their first visit. The 22.6% who do return spend up to 26x more in lifetime value, yet most cafes still cannot tell a regular from a one-time walk-in.
 We deployed personalized AI agents for independent coffee shops on WhatsApp Business API: orders in 38 seconds, digital loyalty tied to the phone number (no cardboard cards), automatic reactivation of dormant customers at 14, 30 and 60 days, and Google review requests after every positive visit.
 Real numbers from operators: +33% visit frequency in identified regulars, +38% average ticket from personalized upselling, 18-24% recovery of inactive customers vs. 2-3% with generic email.
@@ -1405,6 +1413,8 @@ For a 10,000 EUR/month cafe the net upside lands around 5,225 EUR/month at an 18
 ---
 
 ## 2026-05-30 - AI agent for photographers
+
+<!-- SCHEDULED:sp_bJzcXO4xenL1mRNaOhDo at 2026-06-05T07:00:00.000Z -->
 
 Photographers who reply to a lead in under 5 minutes close 6 to 8 times more sessions than those who respond the next day (HoneyBook 2025).
 The median pro photographer loses 12 hours a week to admin and lets 70-80% of inquiries cool off.
@@ -1418,6 +1428,8 @@ Full breakdown with the 7 flows and ROI math: https://zeniapartners.com/blog/age
 
 ## 2026-05-31 - AI agent for medical practices
 
+<!-- SCHEDULED:sp_CqVxOAz4PBx7cvGvXrcIF at 2026-06-08T07:00:00.000Z -->
+
 Doctors spend 2 hours on admin for every 1 hour with a patient (Annals of Internal Medicine), and 81% of Spanish physicians say it directly degrades the quality of their consultations.
 We deployed personalized AI agents for private medical practices on WhatsApp Business API: bidirectional reminders that cut no-shows 25-40% (JAMIA), natural-language scheduling, FAQ resolution, dynamic waitlists, and post-visit NPS plus Google review requests.
 Real impact on a 25-patient/day practice: -72% admin hours, -86% incoming calls, +400% Google reviews, +10,978 EUR/month net at a 20x ROI inside the first 6 months. RGPD-compliant, EU servers, no clinical decisions.
@@ -1430,6 +1442,8 @@ Full operator playbook: https://zeniapartners.com/blog/agente-ia-para-medicos.ht
 
 ## 2026-05-31 - AI agent for consulting firms
 
+<!-- SCHEDULED:sp_G0WwWorae5A1KU57Tmmei at 2026-06-09T07:00:00.000Z -->
+
 A boutique consulting firm of 8 people loses 38% of its billable capacity to non-consulting work: proposals, scheduling, meeting notes, follow-up, weekly reports.
 Gartner expects 80%+ of consulting firms to deploy AI agents in their operations before end of 2026, and the firms running personalized AI agents are already reporting 250% ROI inside 18 months.
 After 90 days with a custom AI agent connected to their CRM, calendar and comms stack: -79% time-to-proposal, +24% billable hours per consultant, NPS from 34 to 56.
@@ -1440,6 +1454,8 @@ Full playbook with the 90-day plan and the 6 common mistakes: https://zeniapartn
 ---
 
 ## 2026-05-31 - AI agent for barbershops
+
+<!-- SCHEDULED:sp_7mAYsylDZaZebmrML3pEv at 2026-06-10T07:00:00.000Z -->
 
 The average barbershop loses 14% of bookings to no-shows and 3-6 customers per day to slow WhatsApp replies. That is 2,500 to 3,500 EUR per month walking out the door, every month.
 Reminder apps cut no-shows up to 70% (industry data) and personalized AI agents on WhatsApp Business API push response time from 25 minutes to under 10 seconds, 24/7, with deposit collection built in.
@@ -1453,6 +1469,8 @@ Full operator playbook: https://zeniapartners.com/blog/agente-ia-para-barberias.
 
 ## 2026-06-01 - AI agent for nutritionists
 
+<!-- SCHEDULED:sp_lhkKjh2jSWpHKDXFNmkuO at 2026-06-11T07:00:00.000Z -->
+
 41% of patients drop nutritional therapy before they even start it, and obesity treatment abandonment passes 50% inside the first year (Revista Española de Nutrición Humana y Dietética).
 The drop-off rarely happens during the consultation. It happens in the 13-28 days between visits, when the patient texts a question at 22:30 on a Sunday and the nutritionist replies 14 hours later.
 We deployed a personalized AI agent for nutritionists connected to WhatsApp Business API: response time from 4-14 hours to 30 seconds, lead-to-consult conversion from 14% to 32%, paket completion from 58% to 80%, no-shows from 16% to 5%.
@@ -1465,6 +1483,8 @@ Reply if you run a nutrition practice with this exact retention problem, happy t
 ---
 
 ## 2026-06-01 - AI agent for hotels
+
+<!-- SCHEDULED:sp_IujSwh4og4IPD3UDKJIPz at 2026-06-12T07:00:00.000Z -->
 
 Independent hotels lose 30 to 40% of potential bookings to slow replies and then pay Booking and Expedia 18 to 25% commission on the rest. Both sides of that math are fixable.
 22% of US travelers already use AI tools to plan and book stays (industry survey, 2025), and the OTAs have integrated their own AI agents. If your front desk takes 28 minutes to answer a WhatsApp message at 22:00, that guest is already booked somewhere else.

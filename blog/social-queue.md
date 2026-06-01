@@ -1496,3 +1496,15 @@ DM me if you run a hotel and want the full ROI breakdown for your room count and
 #hospitalitytech #hoteltech #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-01 - AI agent for veterinary clinics
+
+An average vet clinic loses around 87,000 USD a year in missed appointments and lapsed wellness plans (AVMA). Most of it goes through one bottleneck: WhatsApp messages waiting 35 to 90 minutes for a reply while reception runs the desk, the phone and the consultation door at the same time.
+Multi-touch reminder sequences alone cut no-shows by 35% (VetSuccess), and clinics with automated systems run vaccination compliance at 85% to 92% versus 55% to 65% manual.
+We deployed a personalized AI agent for veterinary clinics on WhatsApp Business API integrated with Pulselive, Onevet and Geriatric: response time from 50 minutes to 8 seconds, no-shows from 18% to 9%, vaccination compliance from 58% to 88%, urgencies detected and escalated in under 5 minutes 24/7, reception got back 50 minutes per day.
+For a 2-vet clinic with 1,400 active patients that nets around 11,000 EUR per month vs. a 297-497 EUR system cost. The AI never gives clinical advice. It absorbs the operational noise so the clinician owns the medicine.
+Reply if you run a vet clinic with this exact triage and reminder problem, happy to send the full breakdown.
+
+#healthtech #patientretention #AI #WhatsAppBusiness
+
+---

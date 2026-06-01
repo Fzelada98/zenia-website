@@ -1450,3 +1450,16 @@ Full operator playbook: https://zeniapartners.com/blog/agente-ia-para-barberias.
 #beautyindustry #CRM #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-01 - AI agent for nutritionists
+
+41% of patients drop nutritional therapy before they even start it, and obesity treatment abandonment passes 50% inside the first year (Revista Española de Nutrición Humana y Dietética).
+The drop-off rarely happens during the consultation. It happens in the 13-28 days between visits, when the patient texts a question at 22:30 on a Sunday and the nutritionist replies 14 hours later.
+We deployed a personalized AI agent for nutritionists connected to WhatsApp Business API: response time from 4-14 hours to 30 seconds, lead-to-consult conversion from 14% to 32%, paket completion from 58% to 80%, no-shows from 16% to 5%.
+For an individual nutritionist with 80 active patients, that is +6,700 EUR net per month at Starter pricing. For a 3-nutritionist clinic, +18,000 to +22,000 EUR.
+The agent does not give clinical advice. It absorbs the operational layer so the clinician can focus on the cases that need a human.
+Reply if you run a nutrition practice with this exact retention problem, happy to send detail.
+
+#healthtech #patientretention #AI #WhatsAppBusiness
+
+---

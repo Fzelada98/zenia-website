@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-05-31T22:00:00Z",
+  "lastRun": "2026-06-01T00:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-nutricionistas",
+      "keyword": "agente ia para nutricionistas",
+      "tier": 1,
+      "cluster": "clinicas",
+      "status": "published",
+      "date": "2026-06-01"
+    },
     {
       "slug": "agente-ia-para-barberias",
       "keyword": "agente ia para barberias",

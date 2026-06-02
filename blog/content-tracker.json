@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-06-02T14:00:00Z",
+  "lastRun": "2026-06-02T22:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-entrenadores-personales",
+      "keyword": "agente ia para entrenadores personales",
+      "tier": 1,
+      "cluster": "gimnasios",
+      "status": "published",
+      "date": "2026-06-02"
+    },
     {
       "slug": "agente-ia-para-psicologos",
       "keyword": "agente ia para psicologos",

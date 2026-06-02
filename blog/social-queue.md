@@ -1531,3 +1531,15 @@ Full breakdown: zeniapartners.com/blog/agente-ia-para-psicologos.html
 #healthtech #mentalhealth #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-02 - AI agent for personal trainers
+
+64% of personal trainers already use AI weekly, yet the industry still loses 30% to 50% of clients every year (2026 State of the Personal Training Industry Report). The gap is not knowledge, it is operations.
+A trainer with 30 clients spends 15 to 22 hours per week on admin: leads on Instagram, schedule changes on WhatsApp, payment chases, adherence tracking, plan tweaks. None of that pays. All of it leaks revenue.
+We built a personalized AI agent for trainers that runs the entire admin layer: lead qualification 24/7, smart rescheduling, recurring billing with retry logic, churn alerts when a client misses two sessions, and adherence check-ins. Trainers using AI for support see +71% adherence and around +25% retention.
+Result on a 30-client roster: lead-to-client conversion from 15% to 30%, churn from 10% to 5%, around 60 hours of admin time recovered per month. Net impact +2,500 EUR/month against a 297 EUR setup. The trainer trains, the agent runs the business.
+DM me if you coach 15+ clients and want the playbook for your niche.
+
+#fitnessindustry #personaltraining #AI #WhatsAppBusiness
+
+---

@@ -1520,3 +1520,14 @@ Full breakdown: zeniapartners.com/blog/agente-ia-para-fisioterapia.html
 #healthtech #patientretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-02 - AI agent for psychology practices
+
+Psychology practices lose 22% to 30% of sessions to no-shows (PubMed) and roughly half of first-contact leads because the reply lands 24 hours late. The patient decides to ask for help at 23:00, not during office hours.
+We deployed a personalized AI agent on WhatsApp for a private practice. Admin only, never therapy: first contact, RGPD consent, calendar booking, 24h and 2h reminders, dynamic waitlist, payments, 3 and 6 month reactivation. Crisis keywords are auto-escalated to the clinician within seconds.
+After 90 days: response time from 14 hours to 12 seconds, no-shows from 24% to 9%, first-contact conversion from 34% to 58%. For a 30-session-per-week practice at 65 EUR that nets around +7,000 EUR/month vs. a 297-497 EUR system cost. EU servers, article 9 special-category data handled by design.
+Full breakdown: zeniapartners.com/blog/agente-ia-para-psicologos.html
+
+#healthtech #mentalhealth #AI #WhatsAppBusiness
+
+---

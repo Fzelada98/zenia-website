@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-06-02T00:00:00Z",
+  "lastRun": "2026-06-02T14:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-psicologos",
+      "keyword": "agente ia para psicologos",
+      "tier": 1,
+      "cluster": "clinicas",
+      "status": "published",
+      "date": "2026-06-02"
+    },
     {
       "slug": "agente-ia-para-fisioterapia",
       "keyword": "agente ia para fisioterapia",

@@ -1508,3 +1508,15 @@ Reply if you run a vet clinic with this exact triage and reminder problem, happy
 #healthtech #patientretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-02 - AI agent for physiotherapy clinics
+
+More than half of physiotherapy clinics in Spain still run their agenda on paper, Excel or Google Calendar, and no-shows sit between 15% and 30% (Serenna, 2026). Both are fixable in 5 weeks.
+We deployed a personalized AI agent on WhatsApp for a 2-treatment-room clinic: response time from 4 hours to 8 seconds, no-shows from 18% to 6%, new-patient conversion from 25% to 55%, 5 to 7 hours per week freed for the physio.
+For a clinic billing 50 sessions/week at 45 EUR, that nets around +3,500 EUR/month vs. a 297-497 EUR system cost. The AI never gives clinical advice. It absorbs admin so the clinician owns the treatment.
+Urgencies (acute pain, post-op, loss of strength) are auto-escalated to the human team within seconds. Non-negotiable safety layer.
+Full breakdown: zeniapartners.com/blog/agente-ia-para-fisioterapia.html
+
+#healthtech #patientretention #AI #WhatsAppBusiness
+
+---

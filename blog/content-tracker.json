@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-06-03T12:00:00Z",
+  "lastRun": "2026-06-03T14:30:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-autoescuelas",
+      "keyword": "agente ia para autoescuelas",
+      "tier": 1,
+      "cluster": "academias",
+      "status": "published",
+      "date": "2026-06-03"
+    },
     {
       "slug": "agente-ia-para-spas",
       "keyword": "agente ia para spas",

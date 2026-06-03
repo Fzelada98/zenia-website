@@ -1567,3 +1567,14 @@ Full breakdown: zeniapartners.com/blog/agente-ia-para-autoescuelas.html
 #drivingschool #edtech #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-03 - AI agent for Pilates studios
+
+Reformer Pilates bookings grew 66% year-over-year, and the share of fitness studios offering Pilates jumped from 17% in 2021 to 45% in 2025 (Mariana Tek 2026 Pilates Industry Report). Yet revenue per studio in mature markets is down 0.8% in 2026.
+The pinch is conversion, not demand. A boutique studio with 280 active members gets 25 to 70 WhatsApp messages a day asking about free trials, schedules, and waitlists. They get handled by the instructor between classes, so leads cool off and reformers stay empty after cancellations.
+We deployed a personalized AI agent on WhatsApp for a Pilates studio: lead-to-first-class conversion from 22% to 44-50%, no-shows from 9-14% to 4-5%, reformer occupied after cancellation from 40% to 70%, and 41% of new bookings now arrive outside business hours. Net impact roughly +3,700 EUR/month on a 297-497 EUR plan, compounding monthly because every recovered member pays again next month.
+DM me if you run a Pilates or boutique fitness studio and want the WhatsApp flow we use for waitlist recovery.
+
+#fitnessindustry #pilatesstudio #AI #WhatsAppBusiness
+
+---

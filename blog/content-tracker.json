@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-06-02T22:00:00Z",
+  "lastRun": "2026-06-03T12:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-spas",
+      "keyword": "agente ia para spas",
+      "tier": 1,
+      "cluster": "wellness",
+      "status": "published",
+      "date": "2026-06-03"
+    },
     {
       "slug": "agente-ia-para-entrenadores-personales",
       "keyword": "agente ia para entrenadores personales",

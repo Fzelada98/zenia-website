@@ -1543,3 +1543,15 @@ DM me if you coach 15+ clients and want the playbook for your niche.
 #fitnessindustry #personaltraining #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-03 - AI agent for spas and wellness centers
+
+The global spa services market grows at a 19.23% CAGR through 2034 (Fortune Business Insights), yet 71% of clients abandon a booking if the center is slow to reply and 81% want to book outside business hours (Zenoti 2026 benchmark). The demand is there, the capacity to capture it is not.
+A typical 8-room urban spa receives 50 to 90 WhatsApp messages a day. Manual handling means 35 minute to 4 hour replies and a queue of unanswered messages by 23:00. New-client visits also fell 8 to 11% in 2025, so leaks at the top of funnel hurt twice.
+We deployed a personalized AI agent on WhatsApp for a wellness center: response time from hours to 8 seconds, no-shows from 18-25% down to 4-7%, 34% of new bookings now come in outside business hours, average ticket +18-24% via auto-upsell, and 30% of dormant clients reactivated through automated campaigns.
+For an 8-room spa at a 75 EUR average ticket the conservative net impact lands near +17,000 EUR/month vs. a 297-497 EUR plan cost. Recipe: integrate the real agenda, drop the phone-only model, let the AI run the admin.
+Full breakdown: zeniapartners.com/blog/agente-ia-para-spas.html
+
+#beautyindustry #wellnessindustry #AI #WhatsAppBusiness
+
+---

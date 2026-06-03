@@ -1555,3 +1555,15 @@ Full breakdown: zeniapartners.com/blog/agente-ia-para-spas.html
 #beautyindustry #wellnessindustry #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-03 - AI agent for driving schools
+
+50% of driving license candidates in Spain fail the theory exam in 2026, the worst rate since 2019 (Cope, May 2026). It is not that the test got harder. It is that contact between school and student breaks down between lessons.
+A mid-sized driving school with 180 active students loses 4,000 to 6,000 EUR every month on late cancellations not enforced, payment packages that take 17 days to collect, and theory questions left unanswered after office hours. The 48-hour cancellation policy exists on paper but rarely gets applied because nobody wants the fight on WhatsApp.
+We deployed a personalized AI agent that validates lesson balance before booking, runs Bizum or Stripe payments inside the chat, sends profile-specific reminders (frequent canceller vs. first-time student), and pushes adaptive theory drills based on each student's mistake history.
+Results: late cancellations from 69% to 23%, after-hours questions resolved from 9% to 76%, theory pass-on-first-try from 54% to 67%, and Google reviews up 3 to 4x post-license. Net impact around +5,755 EUR/month on a 297-497 EUR plan.
+Full breakdown: zeniapartners.com/blog/agente-ia-para-autoescuelas.html
+
+#drivingschool #edtech #AI #WhatsAppBusiness
+
+---

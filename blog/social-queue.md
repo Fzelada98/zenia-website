@@ -1499,6 +1499,8 @@ DM me if you run a hotel and want the full ROI breakdown for your room count and
 
 ## 2026-06-01 - AI agent for veterinary clinics
 
+<!-- SCHEDULED:sp_ies9DFZPEGDTjOUMhLm at 2026-06-04T16:17:11.231Z -->
+
 An average vet clinic loses around 87,000 USD a year in missed appointments and lapsed wellness plans (AVMA). Most of it goes through one bottleneck: WhatsApp messages waiting 35 to 90 minutes for a reply while reception runs the desk, the phone and the consultation door at the same time.
 Multi-touch reminder sequences alone cut no-shows by 35% (VetSuccess), and clinics with automated systems run vaccination compliance at 85% to 92% versus 55% to 65% manual.
 We deployed a personalized AI agent for veterinary clinics on WhatsApp Business API integrated with Pulselive, Onevet and Geriatric: response time from 50 minutes to 8 seconds, no-shows from 18% to 9%, vaccination compliance from 58% to 88%, urgencies detected and escalated in under 5 minutes 24/7, reception got back 50 minutes per day.
@@ -1510,6 +1512,8 @@ Reply if you run a vet clinic with this exact triage and reminder problem, happy
 ---
 
 ## 2026-06-02 - AI agent for physiotherapy clinics
+
+<!-- SCHEDULED:sp_slpWpcyyfG4QP4Xw4kka at 2026-06-05T07:00:00.000Z -->
 
 More than half of physiotherapy clinics in Spain still run their agenda on paper, Excel or Google Calendar, and no-shows sit between 15% and 30% (Serenna, 2026). Both are fixable in 5 weeks.
 We deployed a personalized AI agent on WhatsApp for a 2-treatment-room clinic: response time from 4 hours to 8 seconds, no-shows from 18% to 6%, new-patient conversion from 25% to 55%, 5 to 7 hours per week freed for the physio.
@@ -1523,6 +1527,8 @@ Full breakdown: zeniapartners.com/blog/agente-ia-para-fisioterapia.html
 
 ## 2026-06-02 - AI agent for psychology practices
 
+<!-- SCHEDULED:sp_S620qXa6z9H4oCMDckiC at 2026-06-08T07:00:00.000Z -->
+
 Psychology practices lose 22% to 30% of sessions to no-shows (PubMed) and roughly half of first-contact leads because the reply lands 24 hours late. The patient decides to ask for help at 23:00, not during office hours.
 We deployed a personalized AI agent on WhatsApp for a private practice. Admin only, never therapy: first contact, RGPD consent, calendar booking, 24h and 2h reminders, dynamic waitlist, payments, 3 and 6 month reactivation. Crisis keywords are auto-escalated to the clinician within seconds.
 After 90 days: response time from 14 hours to 12 seconds, no-shows from 24% to 9%, first-contact conversion from 34% to 58%. For a 30-session-per-week practice at 65 EUR that nets around +7,000 EUR/month vs. a 297-497 EUR system cost. EU servers, article 9 special-category data handled by design.
@@ -1533,6 +1539,8 @@ Full breakdown: zeniapartners.com/blog/agente-ia-para-psicologos.html
 ---
 
 ## 2026-06-02 - AI agent for personal trainers
+
+<!-- SCHEDULED:sp_2mlwXwJLKf9JUZFBLsoDY at 2026-06-09T15:00:00.000Z -->
 
 64% of personal trainers already use AI weekly, yet the industry still loses 30% to 50% of clients every year (2026 State of the Personal Training Industry Report). The gap is not knowledge, it is operations.
 A trainer with 30 clients spends 15 to 22 hours per week on admin: leads on Instagram, schedule changes on WhatsApp, payment chases, adherence tracking, plan tweaks. None of that pays. All of it leaks revenue.
@@ -1546,6 +1554,8 @@ DM me if you coach 15+ clients and want the playbook for your niche.
 
 ## 2026-06-03 - AI agent for spas and wellness centers
 
+<!-- SCHEDULED:sp_wm41oqbVCXxFM7FellLh at 2026-06-10T07:00:00.000Z -->
+
 The global spa services market grows at a 19.23% CAGR through 2034 (Fortune Business Insights), yet 71% of clients abandon a booking if the center is slow to reply and 81% want to book outside business hours (Zenoti 2026 benchmark). The demand is there, the capacity to capture it is not.
 A typical 8-room urban spa receives 50 to 90 WhatsApp messages a day. Manual handling means 35 minute to 4 hour replies and a queue of unanswered messages by 23:00. New-client visits also fell 8 to 11% in 2025, so leaks at the top of funnel hurt twice.
 We deployed a personalized AI agent on WhatsApp for a wellness center: response time from hours to 8 seconds, no-shows from 18-25% down to 4-7%, 34% of new bookings now come in outside business hours, average ticket +18-24% via auto-upsell, and 30% of dormant clients reactivated through automated campaigns.
@@ -1557,6 +1567,8 @@ Full breakdown: zeniapartners.com/blog/agente-ia-para-spas.html
 ---
 
 ## 2026-06-03 - AI agent for driving schools
+
+<!-- SCHEDULED:sp_JWr8jS3JjorvdeLpZnfzL at 2026-06-11T07:00:00.000Z -->
 
 50% of driving license candidates in Spain fail the theory exam in 2026, the worst rate since 2019 (Cope, May 2026). It is not that the test got harder. It is that contact between school and student breaks down between lessons.
 A mid-sized driving school with 180 active students loses 4,000 to 6,000 EUR every month on late cancellations not enforced, payment packages that take 17 days to collect, and theory questions left unanswered after office hours. The 48-hour cancellation policy exists on paper but rarely gets applied because nobody wants the fight on WhatsApp.
@@ -1570,6 +1582,8 @@ Full breakdown: zeniapartners.com/blog/agente-ia-para-autoescuelas.html
 
 ## 2026-06-03 - AI agent for Pilates studios
 
+<!-- SCHEDULED:sp_DHiI9MIL8v6OYfw9NG50T at 2026-06-12T15:00:00.000Z -->
+
 Reformer Pilates bookings grew 66% year-over-year, and the share of fitness studios offering Pilates jumped from 17% in 2021 to 45% in 2025 (Mariana Tek 2026 Pilates Industry Report). Yet revenue per studio in mature markets is down 0.8% in 2026.
 The pinch is conversion, not demand. A boutique studio with 280 active members gets 25 to 70 WhatsApp messages a day asking about free trials, schedules, and waitlists. They get handled by the instructor between classes, so leads cool off and reformers stay empty after cancellations.
 We deployed a personalized AI agent on WhatsApp for a Pilates studio: lead-to-first-class conversion from 22% to 44-50%, no-shows from 9-14% to 4-5%, reformer occupied after cancellation from 40% to 70%, and 41% of new bookings now arrive outside business hours. Net impact roughly +3,700 EUR/month on a 297-497 EUR plan, compounding monthly because every recovered member pays again next month.
@@ -1580,6 +1594,8 @@ DM me if you run a Pilates or boutique fitness studio and want the WhatsApp flow
 ---
 
 ## 2026-06-04 - AI agent for optical stores
+
+<!-- SCHEDULED:sp_xoTEPEK5mp7JEUMGGkSD at 2026-06-15T07:00:00.000Z -->
 
 Spain lost 188 optical stores net in 2024 while the market still grew 2.9% to 2.166 billion EUR. The gap is recall and retention, not foot traffic.
 35% of optical patients never come back for their annual exam because nobody calls them. Average optometry no-show sits between 23% and 33%. Independent stores compete against chains that have full call centers running 12 hour shifts.
@@ -1592,6 +1608,8 @@ DM me if you run an indie optical store and want the WhatsApp recall flow we use
 ---
 
 ## 2026-06-04 - AI agent for clothing stores
+
+<!-- SCHEDULED:sp_5zahGxdjOvvytEWBmiOy at 2026-06-16T06:00:00.000Z -->
 
 70.19% of fashion ecommerce carts get abandoned and 79% of clothing sales still happen in physical stores, yet AI-driven traffic to fashion brands grew 396% year-over-year (ITSitio 2026).
 The gap is conversation, not catalog. A boutique gets 35-50 daily DMs about sizing and stock that get answered late, while Shein responds in seconds.

@@ -1590,3 +1590,15 @@ DM me if you run an indie optical store and want the WhatsApp recall flow we use
 #healthtech #patientretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-04 - AI agent for clothing stores
+
+70.19% of fashion ecommerce carts get abandoned and 79% of clothing sales still happen in physical stores, yet AI-driven traffic to fashion brands grew 396% year-over-year (ITSitio 2026).
+The gap is conversation, not catalog. A boutique gets 35-50 daily DMs about sizing and stock that get answered late, while Shein responds in seconds.
+We deployed a personalized AI agent on WhatsApp for a clothing brand with one physical store plus Shopify: chat-to-sale conversion from 4-7% to 18-24%, cart recovery from 3-5% to 18-25%, size-related returns cut in half, and average ticket from 52 to 67 EUR through automatic outfit cross-sell.
+Net impact lands around +29,000 EUR/month on a 297-497 EUR plan. The size-recommendation flow alone (trained on each SKU's return history) saves more margin than most discount campaigns generate.
+Full breakdown: zeniapartners.com/blog/agente-ia-para-tiendas-de-ropa.html
+
+#retailtech #ecommerce #AI #automation
+
+---

@@ -1620,3 +1620,15 @@ Full breakdown: zeniapartners.com/blog/agente-ia-para-tiendas-de-ropa.html
 #retailtech #ecommerce #AI #automation
 
 ---
+
+## 2026-06-04 - AI agent for travel agencies
+
+54% of travelers will trust AI to plan trips in 2026, up from 47% a year ago, and 87% of travel brands are already invisible to AI agents according to SALT.agency.
+Independent agencies lose 22% of WhatsApp leads to Booking and Expedia simply because they take 38 minutes to 6 hours to send a quote. The product is fine. The response time is the problem.
+We deployed a personalized AI agent for a travel agency with 4 advisors: response time from hours to 22 seconds, daily quotes from 12-18 to 60-90, conversion from 11-14% to 18-25%, and NPS from 42 to 61.
+Net impact lands around +21,000 EUR/month at a 1,450 EUR average ticket and 14% margin, against a 297-497 EUR plan cost. The biggest single lever was not the new leads, it was the cold-quote recovery flow that brought back 12-18% of pipelines already written off.
+DM me if you run a travel agency and want the WhatsApp quote-recovery sequence we use for cold leads.
+
+#traveltech #B2C #AI #WhatsAppBusiness
+
+---

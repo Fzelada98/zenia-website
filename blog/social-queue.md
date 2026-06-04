@@ -1578,3 +1578,15 @@ DM me if you run a Pilates or boutique fitness studio and want the WhatsApp flow
 #fitnessindustry #pilatesstudio #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-04 - AI agent for optical stores
+
+Spain lost 188 optical stores net in 2024 while the market still grew 2.9% to 2.166 billion EUR. The gap is recall and retention, not foot traffic.
+35% of optical patients never come back for their annual exam because nobody calls them. Average optometry no-show sits between 23% and 33%. Independent stores compete against chains that have full call centers running 12 hour shifts.
+We deployed a personalized AI agent on WhatsApp for an optical store: response time from 4 hours to 10 seconds, annual exam compliance from 35% to 60%, no-shows down from 22% to 8%, and 34% of new appointments now book outside business hours.
+For a neighborhood store at a 220 EUR average ticket the conservative net impact is around +20,000 EUR/month versus a 297-497 EUR plan cost. The recall flow at 11 months is the single biggest win, recovering 18 to 25% of patients who had quietly drifted to a competitor.
+DM me if you run an indie optical store and want the WhatsApp recall flow we use for 11-month re-engagement.
+
+#healthtech #patientretention #AI #WhatsAppBusiness
+
+---

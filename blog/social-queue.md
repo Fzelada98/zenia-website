@@ -1644,3 +1644,15 @@ DM me if you run a dealership and want the 3-question BANT qualification script 
 #automotive #automotivesales #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-05 - AI agent for auto repair shops
+
+62% of independent auto repair shops in Spain say they are unhappy with their profitability, and they spend up to 30% of the workday on admin tasks that could be automated (ASETRA 2026 posventa report).
+The typical shop misses 18 to 25 calls a week during peak hours because the lead mechanic is under a car. Each lost call is a 280 EUR average ticket walking to the shop on the next street.
+We deployed a personalized AI agent on WhatsApp connected to the shop's ERP (TallerGP, WinMotor, GestFuturo): response time from 1-3 hours to 10 seconds, 72% of missed calls recovered via instant WhatsApp follow-up, no-shows from 13% to 5%, quotes accepted under 24h from 22% to 61%, and a 38% lift coming from after-hours bookings (people who message at 10pm after dinner).
+Net impact lands around +20,500 EUR/month on a 297-497 EUR plan. The single biggest lever was the maintenance reminder flow: customers used to come back every 22 months, now every 12 months.
+Reply if you run an auto repair shop and want the maintenance reminder sequence we use to bring customers back on time.
+
+#automotive #aftermarket #AI #WhatsAppBusiness
+
+---

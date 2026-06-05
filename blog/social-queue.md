@@ -1632,3 +1632,15 @@ DM me if you run a travel agency and want the WhatsApp quote-recovery sequence w
 #traveltech #B2C #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-05 - AI agent for car dealerships
+
+78% of car dealership leads get their first reply after 30 minutes. 32% never get a reply at all. Cox Automotive found that leads contacted under 5 minutes convert at 25-32% while the same lead at 60 minutes converts at 3-5%.
+A mid-size dealership getting 200 digital leads/month at a 22,000 EUR average ticket and 8% margin is leaving 18,000 to 35,000 EUR of margin on the table every single month, mostly because the salesperson who should reply is closing another deal on the floor.
+We deployed a personalized AI agent on WhatsApp connected to the DMS and CRM: response time from 47 min to 9 seconds, uncontacted leads from 32% to under 2%, lead-to-test-drive from 11% to 27%, test drive no-show from 38% to 17%, and 34% of new leads now captured outside showroom hours.
+Conservative net impact lands around +25,000 EUR/month on a 497 EUR plan. The single biggest lever is the after-hours capture, leads from Saturday at 10pm that used to be read on Monday at 11am.
+DM me if you run a dealership and want the 3-question BANT qualification script we use before the salesperson even sees the lead.
+
+#automotive #automotivesales #AI #WhatsAppBusiness
+
+---

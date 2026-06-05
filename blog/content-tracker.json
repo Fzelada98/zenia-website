@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-06-04T14:00:00Z",
+  "lastRun": "2026-06-05T00:00:00Z",
   "posts": [
     {
       "slug": "agente-ia-para-agencias-de-viajes",
@@ -1032,6 +1032,14 @@
       "cluster": "retail",
       "status": "published",
       "date": "2026-05-30"
+    },
+    {
+      "slug": "agente-ia-para-concesionarios",
+      "keyword": "agente ia para concesionarios",
+      "tier": 1,
+      "cluster": "automocion",
+      "status": "published",
+      "date": "2026-06-05"
     }
   ]
 }

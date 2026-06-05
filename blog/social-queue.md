@@ -1656,3 +1656,17 @@ Reply if you run an auto repair shop and want the maintenance reminder sequence 
 #automotive #aftermarket #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-05 - Agente IA para Floristerías
+
+41% of florist orders come in between 9pm and 9am. Your shop is closed. Your competitor's AI agent on WhatsApp isn't.
+
+The global online flower delivery market closes 2026 at $8.77B and grows to $14.85B by 2035 (Business Research Insights). In Spain and LATAM, 78% of orders enter via WhatsApp or Instagram, and the average florist takes 35 minutes to 4 hours to reply. That gap costs a single-store florist 6 lost orders a day, around 9,000 EUR a month.
+
+We deployed a personalized AI agent connected to the shop's live catalog and CRM: response time 9 seconds, conversion from 18-24% up to 41-52%, average ticket from 52 to 67 EUR with auto-upsell of complements, and recurring orders per customer per year from 1.4 to 2.9. The biggest unlock was the key-date reactivation flow: the agent remembers birthdays, anniversaries and Mother's Day and reaches out one week before with a ready proposal.
+
+Full breakdown with ROI math and 5-week rollout plan: https://zeniapartners.com/blog/agente-ia-para-floristerias.html
+
+#retailtech #ecommerce #AI #WhatsAppBusiness
+
+---

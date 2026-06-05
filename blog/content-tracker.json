@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-06-05T14:17:05Z",
+  "lastRun": "2026-06-05T22:08:04Z",
   "posts": [
     {
       "slug": "agente-ia-para-agencias-de-viajes",
@@ -1046,6 +1046,14 @@
       "keyword": "agente ia para talleres mecanicos",
       "tier": 1,
       "cluster": "automocion",
+      "status": "published",
+      "date": "2026-06-05"
+    },
+    {
+      "slug": "agente-ia-para-floristerias",
+      "keyword": "agente ia para floristerias",
+      "tier": 1,
+      "cluster": "retail",
       "status": "published",
       "date": "2026-06-05"
     }

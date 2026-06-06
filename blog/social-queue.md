@@ -1670,3 +1670,19 @@ Full breakdown with ROI math and 5-week rollout plan: https://zeniapartners.com/
 #retailtech #ecommerce #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-06 - Agente IA para Gestorías
+
+Spain has 66,939 active tax and accounting firms (Área de Pymes). 68% spend more than 20 hours a week on repetitive tasks (Copilot Gestoría 2026 study). And only 10% are actually digital.
+
+Wolters Kluwer 2025 puts it bluntly: an accountant spends 86% of their time on work that could be automated. Chasing client invoices. Sending reminders. Forwarding the same justificante for the twentieth time. The other 14% is where the firm actually charges by value, not by the hour.
+
+We deployed a personalized AI agent for a 5-person Spanish firm with 180 clients. It runs on WhatsApp Business API connected to A3 / Holded / Sage and handles tier-1 client support, AEAT deadline reminders, 30-minute new-client onboarding via OCR, and VeriFactu validation per invoice. Numbers after 90 days: response time from 2-6 hours to 9 seconds, 12-15 weekly hours of document chasing reclaimed, AEAT deadlines missed per quarter from 2-4 to zero, capacity per accountant from 35-45 clients to 60-80. Net impact: +7,700 EUR/month against a 297-497 EUR plan. Payback in 7 months.
+
+The firm that automates in 2026 absorbs the client base of the one that doesn't in 2027.
+
+DM me if you run an accounting or tax firm and want the AEAT reminder + VeriFactu validation playbook we use.
+
+#B2B #SaaS #AI #automation
+
+---

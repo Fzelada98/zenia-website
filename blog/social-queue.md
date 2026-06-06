@@ -1623,6 +1623,8 @@ Full breakdown: zeniapartners.com/blog/agente-ia-para-tiendas-de-ropa.html
 
 ## 2026-06-04 - AI agent for travel agencies
 
+<!-- SCHEDULED:sp_ACPWzunvNg7c3ahPwu1jL at 2026-06-08T07:00:00.000Z -->
+
 54% of travelers will trust AI to plan trips in 2026, up from 47% a year ago, and 87% of travel brands are already invisible to AI agents according to SALT.agency.
 Independent agencies lose 22% of WhatsApp leads to Booking and Expedia simply because they take 38 minutes to 6 hours to send a quote. The product is fine. The response time is the problem.
 We deployed a personalized AI agent for a travel agency with 4 advisors: response time from hours to 22 seconds, daily quotes from 12-18 to 60-90, conversion from 11-14% to 18-25%, and NPS from 42 to 61.
@@ -1634,6 +1636,8 @@ DM me if you run a travel agency and want the WhatsApp quote-recovery sequence w
 ---
 
 ## 2026-06-05 - AI agent for car dealerships
+
+<!-- SCHEDULED:sp_z7Uk1BbbiuJj1foalwj4 at 2026-06-09T07:00:00.000Z -->
 
 78% of car dealership leads get their first reply after 30 minutes. 32% never get a reply at all. Cox Automotive found that leads contacted under 5 minutes convert at 25-32% while the same lead at 60 minutes converts at 3-5%.
 A mid-size dealership getting 200 digital leads/month at a 22,000 EUR average ticket and 8% margin is leaving 18,000 to 35,000 EUR of margin on the table every single month, mostly because the salesperson who should reply is closing another deal on the floor.
@@ -1647,6 +1651,8 @@ DM me if you run a dealership and want the 3-question BANT qualification script 
 
 ## 2026-06-05 - AI agent for auto repair shops
 
+<!-- SCHEDULED:sp_G7X73JkObUtBcwIJtB46 at 2026-06-10T07:00:00.000Z -->
+
 62% of independent auto repair shops in Spain say they are unhappy with their profitability, and they spend up to 30% of the workday on admin tasks that could be automated (ASETRA 2026 posventa report).
 The typical shop misses 18 to 25 calls a week during peak hours because the lead mechanic is under a car. Each lost call is a 280 EUR average ticket walking to the shop on the next street.
 We deployed a personalized AI agent on WhatsApp connected to the shop's ERP (TallerGP, WinMotor, GestFuturo): response time from 1-3 hours to 10 seconds, 72% of missed calls recovered via instant WhatsApp follow-up, no-shows from 13% to 5%, quotes accepted under 24h from 22% to 61%, and a 38% lift coming from after-hours bookings (people who message at 10pm after dinner).
@@ -1658,6 +1664,8 @@ Reply if you run an auto repair shop and want the maintenance reminder sequence 
 ---
 
 ## 2026-06-05 - Agente IA para Floristerías
+
+<!-- SCHEDULED:sp_rJt9AcDZXOl9ju9ndeIOj at 2026-06-11T06:00:00.000Z -->
 
 41% of florist orders come in between 9pm and 9am. Your shop is closed. Your competitor's AI agent on WhatsApp isn't.
 
@@ -1672,6 +1680,8 @@ Full breakdown with ROI math and 5-week rollout plan: https://zeniapartners.com/
 ---
 
 ## 2026-06-06 - Agente IA para Gestorías
+
+<!-- SCHEDULED:sp_0XxsJy93HjUAauL2rt at 2026-06-12T07:00:00.000Z -->
 
 Spain has 66,939 active tax and accounting firms (Área de Pymes). 68% spend more than 20 hours a week on repetitive tasks (Copilot Gestoría 2026 study). And only 10% are actually digital.
 

@@ -1696,3 +1696,19 @@ DM me if you run an accounting or tax firm and want the AEAT reminder + VeriFact
 #B2B #SaaS #AI #automation
 
 ---
+
+## 2026-06-06 - Agente IA para Clínicas Estéticas
+
+Spain has 7,600+ licensed aesthetic medicine centers (SEME). The sector grows 12% a year. And between 12% and 19% of booked appointments never show up.
+
+70% of same-day cancellations stay empty because nobody calls the waitlist in time. For a 3-cabin clinic with a 180 EUR average ticket, that's roughly 22,000 EUR a month walking out the door silently.
+
+We deployed a personalized AI agent on WhatsApp Business API connected to the clinic's scheduling software (Versum, Bookgy, ClinicCloud). It identifies the treatment, books the right professional, sends pre-treatment prep instructions per procedure, fires staggered reminders at 48h and 4h, and triggers a dynamic waitlist the moment a cancellation hits. Results after 60 days: no-shows from 16% to 5%, agenda occupancy from 61% to 83%, 90-day return rate from 32% to 54%, and 38% of bookings now come in outside business hours. Net impact: +28,500 EUR/month against a 297-497 EUR plan.
+
+The unlock wasn't the bookings. It was the post-treatment protocol: the agent automatically schedules the next session by clinical protocol (baby botox at 4 months, hydration at 30 days) so the patient never disappears.
+
+DM me if you run an aesthetic clinic and want the no-show + waitlist playbook.
+
+#beautyindustry #healthtech #AI #WhatsAppBusiness
+
+---

@@ -1717,6 +1717,8 @@ DM me if you run an aesthetic clinic and want the no-show + waitlist playbook.
 
 ## 2026-06-06 - Agente IA para Academias de Idiomas
 
+<!-- SCHEDULED:sp_ECgC3uNzUcUFN4oqFu1D at 2026-06-08T06:00:00.000Z -->
+
 The conversion window for a language school lead is under 5 minutes. Median industry response time is 90 minutes by email, 3 hours by WhatsApp. By then the lead has already enrolled at the school next door.
 
 Spain has 470+ official language centers and thousands of private academies, with English alone driving 65% of private enrollment in Madrid and Barcelona. Demand is not the problem. Speed and retention are. Online formats lose up to 53% of students per term (Demand Sage 2026), and Aunoa reports that 22-38% of inbound leads never get contacted at all.

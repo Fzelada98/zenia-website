@@ -1699,6 +1699,8 @@ DM me if you run an accounting or tax firm and want the AEAT reminder + VeriFact
 
 ## 2026-06-06 - Agente IA para Clínicas Estéticas
 
+<!-- SCHEDULED:sp_rpMUJWMiIuxNwwOMbcmg at 2026-06-08T07:00:00.000Z -->
+
 Spain has 7,600+ licensed aesthetic medicine centers (SEME). The sector grows 12% a year. And between 12% and 19% of booked appointments never show up.
 
 70% of same-day cancellations stay empty because nobody calls the waitlist in time. For a 3-cabin clinic with a 180 EUR average ticket, that's roughly 22,000 EUR a month walking out the door silently.

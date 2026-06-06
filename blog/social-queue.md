@@ -1714,3 +1714,19 @@ DM me if you run an aesthetic clinic and want the no-show + waitlist playbook.
 #beautyindustry #healthtech #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-06 - Agente IA para Academias de Idiomas
+
+The conversion window for a language school lead is under 5 minutes. Median industry response time is 90 minutes by email, 3 hours by WhatsApp. By then the lead has already enrolled at the school next door.
+
+Spain has 470+ official language centers and thousands of private academies, with English alone driving 65% of private enrollment in Madrid and Barcelona. Demand is not the problem. Speed and retention are. Online formats lose up to 53% of students per term (Demand Sage 2026), and Aunoa reports that 22-38% of inbound leads never get contacted at all.
+
+We deployed a personalized AI agent on WhatsApp Business API for a Spanish language school with 180 active students. It qualifies the lead (language, MCER level, modality, schedule), books the placement test directly on the teacher's calendar, processes payment via Stripe or Bizum, and fires early churn alerts when a student misses two classes in a row. Numbers after 90 days: response time from 90 min to 9 seconds, lead-to-enrollment conversion from 19% to 31%, placement-test-to-enrollment from 41% to 62%, term abandonment from 28% to 18%, term-over-term renewal from 52% to 71%, and 39% of new leads now come in outside office hours. Net impact: +10,300 EUR/month against a 297-497 EUR plan.
+
+The win was not enrollment. It was the retention loop: the agent knows when a student is about to ghost before the coordinator does, and reaches out in the language the student wrote in.
+
+DM me if you run a language school and want the early-churn detection playbook we built for online and hybrid programs.
+
+#edtech #B2B #AI #WhatsAppBusiness
+
+---

@@ -1766,3 +1766,14 @@ DM me if you run a coaching practice and want the operator playbook we built for
 #coachingbusiness #B2B #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-07 - Agente IA para Joyerias
+
+Only 9.9% of first-time jewelry buyers come back within 12 months, the worst repeat rate in retail.
+A Valencia jeweler we worked with moved that number from 11% to 38% in 6 months by deploying a personalized AI agent on WhatsApp that fires reminders 21 days before each customer's saved date (anniversary, partner birthday) and reactivates the 9-month silent base.
+Monthly revenue: 28,000 EUR to 41,500 EUR. Average ticket: 198 EUR to 256 EUR.
+Full breakdown: https://zeniapartners.com/blog/agente-ia-para-joyerias.html
+
+#retailtech #luxuryretail #AI #WhatsAppBusiness
+
+---

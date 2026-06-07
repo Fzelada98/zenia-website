@@ -1750,3 +1750,19 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-panaderias.html
 #bakeryindustry #smallbusiness #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-07 - Agente IA para Coaches
+
+The average coach retains only 65% of clients per year (ICF data). 30% of all coach-client communication is pure scheduling logistics. That math is brutal: most coaches lose clients to operations, not methodology.
+
+Gallup found that the single strongest predictor of retention is regular communication between sessions. The exact thing that breaks first when an independent coach is juggling 20+ clients.
+
+We deployed a personalized AI agent on WhatsApp for a portfolio of coaches: it handles bookings, sends 24-hour reminders, runs check-ins on the commitments each client made in session, and onboards new clients (contract, intake form, first session, materials) in 30 minutes instead of 3-4 hours. Numbers after 90 days: response time from 3-8 hours to 8 seconds, no-shows from 13% to 4%, annual retention from 62% to 82%, admin hours per week from 12 to 3. Net ROI for a coach with 20 clients at 350 EUR/month: +4,800 EUR/month against a 297-497 EUR plan.
+
+The line we never crossed: the agent never tries to coach. It handles logistics and escalates anything reflective straight to the human, with full context. That contrast is what makes the retention curve bend.
+
+DM me if you run a coaching practice and want the operator playbook we built for retention.
+
+#coachingbusiness #B2B #AI #WhatsAppBusiness
+
+---

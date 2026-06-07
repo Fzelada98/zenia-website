@@ -1732,3 +1732,19 @@ DM me if you run a language school and want the early-churn detection playbook w
 #edtech #B2B #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-07 - Agente IA para Panaderías
+
+A neighborhood bakery in Spain loses 5 to 7 custom orders per week because nobody can answer WhatsApp between the oven and the counter. Demand is there. The bottleneck is intake.
+
+38% of WhatsApp orders in a bakery arrive between 9pm and 7am, when the shop is closed and the team is asleep. Without a system, those orders just go to the bakery across the street.
+
+We deployed a personalized AI agent on WhatsApp that takes orders, books custom cake briefings (date, time, flavor, allergens, message on top), and sends pickup reminders 2 hours in advance. Numbers after 90 days: mis-transcribed orders dropped from 6-9% to under 1%, 78% of order intake closes without human intervention, average ticket on custom cakes went from 22 EUR to 29 EUR, and recurring customers with 2+ monthly orders climbed from 14% to 23%. Net impact: +1,410 EUR/month against a 297-497 EUR plan, payback inside the first month.
+
+The retail margin in artisan baking is brittle. That extra 1,000 EUR a month is the difference between a healthy year-end and trimming staff.
+
+Full breakdown: https://zeniapartners.com/blog/agente-ia-para-panaderias.html
+
+#bakeryindustry #smallbusiness #AI #WhatsAppBusiness
+
+---

@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-06-07T12:00:00Z",
+  "lastRun": "2026-06-07T14:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-coaches",
+      "keyword": "agente ia para coaches",
+      "tier": 1,
+      "cluster": "coaching",
+      "status": "published",
+      "date": "2026-06-07"
+    },
     {
       "slug": "agente-ia-para-panaderias",
       "keyword": "agente ia para panaderias",

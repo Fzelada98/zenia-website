@@ -1735,6 +1735,8 @@ DM me if you run a language school and want the early-churn detection playbook w
 
 ## 2026-06-07 - Agente IA para Panaderías
 
+<!-- SCHEDULED:sp_FFbBfoEMt7xDH7fgY59Fz at 2026-06-08T06:00:00.000Z -->
+
 A neighborhood bakery in Spain loses 5 to 7 custom orders per week because nobody can answer WhatsApp between the oven and the counter. Demand is there. The bottleneck is intake.
 
 38% of WhatsApp orders in a bakery arrive between 9pm and 7am, when the shop is closed and the team is asleep. Without a system, those orders just go to the bakery across the street.

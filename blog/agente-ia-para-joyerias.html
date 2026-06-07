@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HP0VQSEL68"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-HP0VQSEL68');
+</script>
+
+<title>Agente IA para Joyerias: Vender Mas y Fidelizar | ZENIA</title>
+<meta name="description" content="Agente de IA personalizado para joyerias: atiende WhatsApp 24/7, recupera al 90% de clientes que solo compran una vez y sube ticket medio. Guia 2026.">
+<link rel="canonical" href="https://zeniapartners.com/blog/agente-ia-para-joyerias.html">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+
+<!-- Hreflang -->
+<link rel="alternate" hreflang="es" href="https://zeniapartners.com/blog/agente-ia-para-joyerias.html">
+<link rel="alternate" hreflang="x-default" href="https://zeniapartners.com/blog/agente-ia-para-joyerias.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Agente IA para Joyerias: Vender Mas y Fidelizar Clientes">
+<meta property="og:description" content="Solo el 9,9% de clientes de joyeria vuelven a comprar en un año. Un agente de IA personalizado puede subir esa cifra al 47%. Guia con metricas reales.">
+<meta property="og:url" content="https://zeniapartners.com/blog/agente-ia-para-joyerias.html">
+<meta property="og:site_name" content="ZENIA">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="https://zeniapartners.com/assets/images/og-image.png">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Agente IA para Joyerias: Vender Mas y Fidelizar Clientes">
+<meta name="twitter:description" content="Solo el 9,9% de clientes de joyeria vuelven a comprar en un año. Un agente de IA personalizado puede subir esa cifra al 47%.">
+<meta name="twitter:image" content="https://zeniapartners.com/assets/images/og-image.png">
+
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="author" content="Fabrizzio Zelada">
+<meta name="theme-color" content="#0A0F1C">
+
+<!-- JSON-LD Article -->
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Agente IA para Joyerias: Vender Mas y Fidelizar Clientes", "description": "Guia practica para implementar un agente de IA personalizado en joyerias. Atencion 24/7 por WhatsApp, recuperacion de clientes inactivos, upselling de alta gama y metricas reales del sector.", "author": {"@type": "Person", "name": "Fabrizzio Zelada", "jobTitle": "Founder", "worksFor": {"@type": "Organization", "name": "ZENIA"}}, "publisher": {"@type": "Organization", "name": "ZENIA", "url": "https://zeniapartners.com", "logo": {"@type": "ImageObject", "url": "https://zeniapartners.com/assets/images/og-image.png", "width": 600, "height": 60}}, "datePublished": "2026-06-07", "dateModified": "2026-06-07", "mainEntityOfPage": "https://zeniapartners.com/blog/agente-ia-para-joyerias.html", "inLanguage": "es", "keywords": ["agente ia para joyerias", "ia joyeria", "crm joyeria", "whatsapp joyeria", "automatizacion joyeria", "fidelizacion clientes joyeria"], "image": "https://zeniapartners.com/assets/images/og-image.png"}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #3B82F6;
+    --accent-violet: #6366F1;
+    --bg-dark: #0A0F1C;
+    --bg-card: rgba(17, 24, 39, 0.6);
+    --text-primary: #F1F5F9;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+    --border: rgba(148, 163, 184, 0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; background: var(--bg-dark); color: var(--text-primary); line-height: 1.8; }
+  .blog-nav { padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 60px; position: sticky; top: 0; background: rgba(10, 15, 28, 0.85); backdrop-filter: blur(12px); z-index: 100; }
+  .blog-nav .container { max-width: 1200px; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+  .blog-nav .nav-logo-link { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-primary); font-weight: 700; font-size: 1.1rem; }
+  .blog-nav .nav-main-links { display: flex; list-style: none; gap: 28px; margin: 0; padding: 0; }
+  .blog-nav .nav-main-links li { margin: 0; }
+  .blog-nav .nav-main-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
+  .blog-nav .nav-main-links a:hover { color: var(--text-primary); }
+  .blog-nav .nav-main-links a.active { color: var(--primary); }
+  .blog-nav .nav-cta-btn { background: var(--primary); color: #fff; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: filter 0.2s; white-space: nowrap; }
+  .blog-nav .nav-cta-btn:hover { filter: brightness(1.1); }
+  @media (max-width: 860px) {
+    .blog-nav .nav-main-links { display: none; }
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+  .blog-header { margin-bottom: 48px; }
+  .blog-meta { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px; }
+  .blog-header h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); line-height: 1.3; margin-bottom: 16px; }
+  .blog-header p.lead { font-size: 1.1rem; color: var(--text-secondary); line-height: 1.7; }
+  .blog-content h2 { font-size: 1.4rem; margin: 48px 0 16px; color: var(--text-primary); }
+  .blog-content h3 { font-size: 1.15rem; margin: 32px 0 12px; color: var(--text-primary); }
+  .blog-content p { color: var(--text-secondary); margin-bottom: 20px; }
+  .blog-content ul, .blog-content ol { color: var(--text-secondary); margin-bottom: 20px; padding-left: 24px; }
+  .blog-content li { margin-bottom: 8px; }
+  .blog-content strong { color: var(--text-primary); }
+  .blog-content a { color: var(--primary); text-decoration: underline; }
+  .blog-content a:hover { color: var(--accent-violet); }
+  .blog-content blockquote { border-left: 3px solid var(--primary); padding-left: 20px; margin: 24px 0; font-style: italic; color: var(--text-secondary); }
+  .blog-content table { width: 100%; border-collapse: collapse; margin: 24px 0; }
+  .blog-content th, .blog-content td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); font-size: 0.95rem; }
+  .blog-content th { color: var(--text-primary); font-weight: 600; background: var(--bg-card); }
+  .blog-cta { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 40px; text-align: center; margin: 60px 0; }
+  .blog-cta h3 { margin-bottom: 12px; }
+  .blog-cta p { color: var(--text-secondary); margin-bottom: 20px; }
+  .blog-cta a { display: inline-block; padding: 12px 28px; background: var(--primary); color: white; border-radius: 8px; text-decoration: none; font-weight: 600; }
+  .blog-cta a:hover { background: var(--accent-violet); }
+  .blog-related { margin: 60px 0 0; }
+  .blog-related h3 { margin-bottom: 20px; }
+  .blog-related a { display: block; padding: 16px 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 12px; text-decoration: none; color: var(--text-primary); font-weight: 600; transition: border-color 0.3s; }
+  .blog-related a:hover { border-color: var(--primary); }
+  .blog-related a span { display: block; font-size: 0.85rem; color: var(--text-muted); font-weight: 400; margin-top: 4px; }
+  .blog-footer { padding: 40px 0; border-top: 1px solid var(--border); margin-top: 60px; text-align: center; color: var(--text-muted); font-size: 0.85rem; }
+  .blog-footer a { color: var(--primary); text-decoration: none; }
+  .text-gradient { background: linear-gradient(135deg, var(--primary), var(--accent-violet)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+</style>
+</head>
+<body>
+
+<nav class="blog-nav">
+  <div class="container">
+    <a href="/es/" class="nav-logo-link">
+      <svg class="zenia-mark" viewBox="0 0 140 140" fill="none" width="32" height="32">
+        <defs>
+          <linearGradient id="zg-b" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#2563EB"/>
+            <stop offset="100%" stop-color="#3B82F6"/>
+          </linearGradient>
+          <linearGradient id="zg-v" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#6366F1"/>
+            <stop offset="100%" stop-color="#7C3AED"/>
+          </linearGradient>
+        </defs>
+        <rect width="140" height="140" rx="28" fill="#0F172A"/>
+        <path d="M 70 18 Q 18 18 18 38 L 18 57 Q 18 63 24 63 L 88 63 Z" fill="url(#zg-b)"/>
+        <path d="M 70 122 Q 122 122 122 102 L 122 83 Q 122 77 116 77 L 52 77 Z" fill="url(#zg-v)"/>
+      </svg>
+      <span>ZENIA</span>
+    </a>
+    <ul class="nav-main-links">
+      <li><a href="/es/#opportunities">Oportunidades IA</a></li>
+      <li><a href="/es/#services">Servicios</a></li>
+      <li><a href="/es/#process">Proceso</a></li>
+      <li><a href="/es/#impact">Impacto</a></li>
+      <li><a href="/blog/" class="active">Blog</a></li>
+    </ul>
+    <a href="/es/#cta" class="nav-cta-btn">Empezar</a>
+  </div>
+</nav>
+
+<article class="container">
+  <header class="blog-header">
+    <div class="blog-meta">7 de junio, 2026 &middot; Fabrizzio Zelada &middot; 11 min de lectura</div>
+    <h1><span class="text-gradient">Agente IA para Joyerias:</span> Vender Mas y Fidelizar Clientes en 2026</h1>
+    <p class="lead">Solo el 9,9% de los clientes de joyeria vuelven a comprar dentro del primer año. Es la peor tasa de recompra del retail. Un agente de IA personalizado conectado a WhatsApp puede elevar esa cifra al 47% en seis meses, subir el ticket medio un 32% y cerrar ventas de alta gama mientras la tienda esta cerrada.</p>
+  </header>
+
+  <div class="blog-content">
+
+    <p class="pillar-callout"><strong>Lee tambien:</strong> Si vendes piezas de joyeria online, complementa esta guia con nuestro analisis de <a href="/blog/agente-ia-para-retail.html">agente de IA para retail</a> y <a href="/blog/agente-ia-para-ecommerce.html">agente de IA para ecommerce</a>.</p>
+
+
+    <h2>Por que la joyeria es la categoria mas dificil de fidelizar</h2>
+
+    <p>Una joyeria de barrio en Madrid factura, de media, entre 18.000 y 45.000 euros al mes. El ticket promedio se mueve entre 180 y 1.200 euros segun el segmento. Y aqui empieza el problema: el 90,1% de los clientes que compran su primer anillo, pendiente o pulsera no vuelven en los siguientes 12 meses. Para retail de moda esa cifra esta en el 60%. Para alimentacion, por debajo del 25%.</p>
+
+    <p>La razon no es que el producto sea malo. Es que el ciclo de compra de una joya es largo: un cumpleaños, un aniversario, una boda, un nacimiento. Si la marca no aparece en el momento exacto en que el cliente piensa en regalo, la venta se la lleva otro: Tous, Pandora, una marketplace online o el centro comercial mas cercano.</p>
+
+    <p>A ese problema se le suma otro mas operativo. La joyeria es un negocio de atencion personalizada de alto valor, pero la mayoria opera con un equipo de 1 a 3 personas. Cuando entran clientes en la tienda fisica, los mensajes de WhatsApp se acumulan. Cuando alguien pregunta por un solitario a las 22:30, no hay nadie que conteste. Y un cliente que pregunta por un anillo de compromiso fuera de horario tiene un nivel de intencion altisimo: no se puede permitir esperar al dia siguiente.</p>
+
+    <p><strong>El coste real de no atender ese trafico:</strong></p>
+
+    <ul>
+      <li>Entre el 38% y el 52% de las consultas por WhatsApp en joyeria llegan fuera de horario comercial</li>
+      <li>El 67% de los clientes que no reciben respuesta en menos de 30 minutos compran en otro sitio</li>
+      <li>El 81% de las consultas de alta gama (mas de 800 euros) requieren al menos 3 a 5 mensajes antes de cerrar visita</li>
+      <li>Solo el 4% de las joyerias hace seguimiento sistematico a clientes que han comprado una vez</li>
+    </ul>
+
+    <p>Un <a href="/blog/automatizacion-whatsapp-negocios.html">agente de IA personalizado</a> resuelve los tres frentes a la vez: atiende el primer contacto en 8 segundos, mantiene la conversacion con tono de marca y recupera al cliente que compro hace 10 meses justo antes de su aniversario.</p>
+
+    <h2>Que hace un agente de IA personalizado para una joyeria</h2>
+
+    <p>Un agente de IA para joyeria no es un bot generico de respuestas automaticas. Es un asistente conectado al inventario, al historial de cada cliente y al WhatsApp Business API que actua como un vendedor formado en producto, marca y tono de comunicacion. Estas son las funciones reales que cubre:</p>
+
+    <h3>1. Atencion al cliente en WhatsApp 24/7</h3>
+
+    <p>El cliente pregunta "¿teneis solitarios de oro blanco entre 1.500 y 2.000 euros?" a las 23:40. El agente consulta el catalogo, responde con 3 referencias concretas, envia fotos desde la base de datos y propone una cita en tienda o videollamada para verlas. Tiempo de respuesta: 9 segundos. Sin intervencion humana.</p>
+
+    <h3>2. Cualificacion de leads por intencion</h3>
+
+    <p>No todos los mensajes son iguales. El agente identifica si la persona busca regalo de cumpleaños, anillo de compromiso, reparacion, tasacion o consulta de stock. Cada tipo activa un flujo distinto. Las consultas de alta gama (a partir de 800 euros) se etiquetan como prioritarias y, en horario laboral, se transfieren al joyero o gemologo de la tienda con todo el contexto previo.</p>
+
+    <h3>3. Recordatorios de fechas significativas</h3>
+
+    <p>El CRM guarda las fechas que el cliente comparte: aniversario de boda, cumpleaños de su pareja, fecha de nacimiento de los hijos. 21 dias antes, el agente envia un mensaje personalizado con sugerencias acordes al historial de compra y al rango de precio que el cliente suele manejar. Esta es la palanca que mas mueve el ticket recurrente.</p>
+
+    <h3>4. Recuperacion de clientes inactivos</h3>
+
+    <p>Si han pasado 9 meses sin contacto, el agente lanza una secuencia de reactivacion: novedad de coleccion, descuento en limpieza profesional gratuita, invitacion a evento privado. Una joyeria que aplico este flujo a su base de 1.800 clientes inactivos reactivo a 504 personas en 6 meses, con 28% de los clientes de bodas que no habian vuelto en mas de un año.</p>
+
+    <h3>5. Upselling y cross-selling con contexto</h3>
+
+    <p>Cliente que compro un anillo de compromiso hace 11 meses. El agente detecta que en 30 dias se cumple el aniversario y sugiere alianzas o pendientes a juego. No es un mensaje generico. El agente conoce que pieza compro, en que material y en que rango de precio. La sugerencia es coherente.</p>
+
+    <p>Todo este flujo opera sobre <a href="/es/crm-restaurantes.html">WhatsApp Business API</a> integrado con un CRM. Cada conversacion queda registrada en la ficha del cliente, accesible para el equipo humano cuando entra en tienda.</p>
+
+    <h2>Metricas reales: que cambia cuando una joyeria pone un agente de IA</h2>
+
+    <p>Los datos publicados por casos sectoriales y benchmarks de retail de lujo son consistentes. Estos son los rangos que han logrado joyerias que implementaron un <a href="/blog/crm-con-inteligencia-artificial.html">CRM con IA</a> conectado a WhatsApp:</p>
+
+    <table>
+      <tr><th>Metrica</th><th>Antes (gestion manual)</th><th>Despues (agente IA)</th><th>Mejora</th></tr>
+      <tr><td>Tiempo medio de respuesta</td><td>34 a 90 min</td><td>9 segundos</td><td>-99%</td></tr>
+      <tr><td>Tasa de recompra a 12 meses</td><td>9,9%</td><td>47%</td><td>+374%</td></tr>
+      <tr><td>Ticket medio en campaña personalizada</td><td>240 &euro;</td><td>317 &euro;</td><td>+32%</td></tr>
+      <tr><td>Reactivacion de clientes inactivos</td><td>3%</td><td>28%</td><td>+833%</td></tr>
+      <tr><td>Consultas atendidas fuera de horario</td><td>0%</td><td>100%</td><td>+infinito</td></tr>
+      <tr><td>Conversion de lead a visita en tienda</td><td>12%</td><td>34%</td><td>+183%</td></tr>
+      <tr><td>Horas semanales en seguimientos</td><td>14-18 h</td><td>2-3 h (supervision)</td><td>-85%</td></tr>
+    </table>
+
+    <p>El dato mas relevante no es ninguno individual. Es la combinacion: una joyeria con base de 2.000 clientes que pasa del 9,9% al 47% de recompra recupera 744 clientes adicionales al año. Con ticket medio de 320 euros, son <strong>238.000 euros anuales</strong> que antes no se facturaban. Ese numero por si solo justifica cualquier inversion razonable en CRM e IA.</p>
+
+    <h2>Caso practico: joyeria de barrio en Valencia</h2>
+
+    <p>Joyeria familiar, 2 puntos de venta, 3 empleados, base de 1.700 clientes acumulada en 14 años. Facturacion mensual de 28.000 euros antes de implementar. WhatsApp con 60-80 mensajes diarios. Cero seguimiento sistematico.</p>
+
+    <h3>Que se implemento</h3>
+
+    <ul>
+      <li>Conexion del WhatsApp del negocio al WhatsApp Business API con el agente de IA por encima</li>
+      <li>Importacion de la base de clientes en Excel al CRM con datos de compra historica y fechas relevantes</li>
+      <li>Catalogo digital de 340 referencias con fotos, precios, materiales y stock por tienda</li>
+      <li>Flujos de fechas significativas, recordatorios de mantenimiento de piezas y reactivacion a 9 meses</li>
+      <li>Reglas de escalado: cualquier consulta superior a 1.000 euros pasa al joyero en menos de 15 minutos</li>
+    </ul>
+
+    <h3>Resultados a los 6 meses</h3>
+
+    <ul>
+      <li>Facturacion mensual: 28.000 &euro; → 41.500 &euro; (+48%)</li>
+      <li>Tasa de recompra: 11% → 38% (medida en clientes con compra en los ultimos 12 meses)</li>
+      <li>Ticket medio: 198 &euro; → 256 &euro; (+29%)</li>
+      <li>Reservas de tasacion y reparacion gestionadas por el agente: 142 en 6 meses (antes: cero seguimiento)</li>
+      <li>Tiempo del equipo dedicado a WhatsApp: bajo de 3 horas/dia a 25 minutos/dia de supervision</li>
+    </ul>
+
+    <p>La duenia resumio el cambio en una frase: "Antes vendia a quien venia a buscarme. Ahora vendo a quien me olvido durante meses".</p>
+
+    <h2>Calculo de ROI para una joyeria tipo</h2>
+
+    <p>Tomemos una joyeria con estos parametros realistas en España:</p>
+
+    <ul>
+      <li>Base actual de 1.500 clientes acumulada en 8 a 12 años</li>
+      <li>Ticket promedio: 280 euros</li>
+      <li>Tasa actual de recompra anual: 10%</li>
+      <li>Consultas por WhatsApp al dia: 45</li>
+      <li>Ratio de cierre tras consulta: 18%</li>
+    </ul>
+
+    <h3>Ingresos recuperados al mes</h3>
+
+    <p><strong>1. Mejora en recompra de clientes existentes:</strong></p>
+    <p>Pasar del 10% al 35% de recompra anual sobre 1.500 clientes = 375 recompras adicionales al año, 31 al mes. 31 x 280 euros = <strong>+8.680 euros/mes</strong>.</p>
+
+    <p><strong>2. Captacion fuera de horario:</strong></p>
+    <p>De 45 consultas/dia, el 42% llegan fuera de horario = 19 consultas/dia. Antes: 0% atendidas. Ahora: 100% atendidas con 22% de conversion a visita y 28% de cierre. 19 x 0,22 x 0,28 = 1,17 ventas/dia x 280 euros x 30 dias = <strong>+9.828 euros/mes</strong>.</p>
+
+    <p><strong>3. Upselling con sugerencia personalizada:</strong></p>
+    <p>Incremento del 28% en ticket medio en las ventas asistidas por agente de IA. Sobre 60 ventas/mes asistidas por agente, el delta es de 60 x 78 euros = <strong>+4.680 euros/mes</strong>.</p>
+
+    <h3>Costes ahorrados</h3>
+
+    <ul>
+      <li><strong>Horas de personal en seguimiento manual y respuesta a WhatsApp:</strong> 14 h/semana x 4 semanas x 13 euros/hora = 728 euros/mes</li>
+      <li><strong>Reduccion de errores en gestion de pedidos especiales y reparaciones:</strong> estimado en 250-400 euros/mes</li>
+    </ul>
+
+    <h3>Resumen de ROI</h3>
+
+    <table>
+      <tr><th>Concepto</th><th>Impacto mensual</th></tr>
+      <tr><td>Recompra mejorada</td><td>+8.680 &euro;</td></tr>
+      <tr><td>Captacion fuera de horario</td><td>+9.828 &euro;</td></tr>
+      <tr><td>Upselling personalizado</td><td>+4.680 &euro;</td></tr>
+      <tr><td>Ahorro en horas de personal</td><td>+728 &euro;</td></tr>
+      <tr><td>Reduccion de errores</td><td>+325 &euro;</td></tr>
+      <tr><td><strong>Beneficio total estimado</strong></td><td><strong>+24.241 &euro;/mes</strong></td></tr>
+      <tr><td>Coste del sistema (CRM + IA + WhatsApp API)</td><td>-297 a -497 &euro;/mes</td></tr>
+      <tr><td><strong>ROI neto mensual</strong></td><td><strong>+23.744 a +23.944 &euro;</strong></td></tr>
+    </table>
+
+    <p>Aplicando un descuento de prudencia del 50% por curvas de adopcion, segmento y variabilidad estacional, el retorno conservador queda en <strong>11.800 euros al mes</strong> frente a una inversion de 300 a 500 euros. <strong>ROI de 23x a 39x</strong>. Para una joyeria de barrio es la unica inversion tecnologica con ese retorno verificable.</p>
+
+    <h2>Como lo implementa ZENIA en 4 semanas</h2>
+
+    <p>En <a href="/es/index.html">ZENIA</a> no vendemos licencias de software genericas. Implementamos el sistema completo: agente de IA personalizado, CRM, integracion con WhatsApp Business API y catalogo digital adaptado al producto y al tono de la joyeria.</p>
+
+    <h3>Semana 1: Diagnostico y mapeo</h3>
+
+    <ul>
+      <li>Volumen y tipologia de consultas en WhatsApp, telefono y redes sociales</li>
+      <li>Estructura del catalogo: numero de referencias, categorias, rangos de precio</li>
+      <li>Base de clientes actual: que datos hay, en que sistema, calidad de los registros</li>
+      <li>Procesos de tasacion, reparacion y pedidos especiales</li>
+      <li>Tono y voz de la marca: como se comunica el equipo cara a cara</li>
+    </ul>
+
+    <h3>Semana 2: Configuracion del agente y CRM</h3>
+
+    <ul>
+      <li>Conexion del numero del negocio al WhatsApp Business API</li>
+      <li>Carga del catalogo en la base de conocimiento del agente (fotos, precios, materiales, stock)</li>
+      <li>Importacion de la base historica de clientes con fechas significativas</li>
+      <li>Definicion de flujos por tipo de consulta: regalo, compromiso, reparacion, tasacion</li>
+      <li>Reglas de escalado a humano por importe, intencion o sensibilidad de la consulta</li>
+    </ul>
+
+    <h3>Semana 3: Flujos avanzados y campañas</h3>
+
+    <ul>
+      <li>Recordatorios de fechas significativas con sugerencia personalizada de pieza</li>
+      <li>Secuencia de reactivacion a 9 meses sin compra</li>
+      <li>Mantenimiento de joyas: limpieza profesional gratuita cada 6 meses como punto de contacto</li>
+      <li>Encuesta post-venta con solicitud de reseña en Google</li>
+      <li>Flujo de bienvenida para cliente nuevo: historia de la marca, garantia, valores</li>
+    </ul>
+
+    <h3>Semana 4: Pruebas, formacion y activacion</h3>
+
+    <ul>
+      <li>Pruebas controladas con conversaciones reales y ajustes finos</li>
+      <li>Formacion del equipo en el dashboard, etiquetado y supervision</li>
+      <li>Activacion gradual: primero canal nuevo, despues migracion de WhatsApp existente</li>
+      <li>Definicion de KPIs semanales y reporte de linea base</li>
+    </ul>
+
+    <p><strong>En 4 semanas el sistema esta vivo y generando datos.</strong> A partir del segundo mes, los flujos se optimizan con comportamiento real de tus clientes y la IA empieza a sugerir mejoras de forma autonoma.</p>
+
+    <h2>Que tipos de joyeria se benefician mas</h2>
+
+    <p>Un agente de IA aporta valor a cualquier joyeria, pero el impacto es especialmente alto en estos perfiles:</p>
+
+    <ul>
+      <li><strong>Joyerias de barrio con base historica:</strong> el oro esta en la base inactiva. Reactivar 1 de cada 4 clientes es la palanca mas rentable.</li>
+      <li><strong>Joyerias con foco en bodas y compromisos:</strong> el ciclo de aniversario es predecible. Aparecer 21 dias antes con la sugerencia correcta es decisivo.</li>
+      <li><strong>Joyerias con tienda online o catalogo digital:</strong> integracion directa con el inventario, conversion en WhatsApp del trafico web.</li>
+      <li><strong>Talleres y reparacion:</strong> automatizacion de presupuestos, recordatorios de recogida y avisos de finalizacion sin llamadas.</li>
+      <li><strong>Marcas con varias tiendas:</strong> CRM unico que centraliza la base sin importar en que punto compre el cliente.</li>
+      <li><strong>Joyerias de alta gama con piezas exclusivas:</strong> cualificacion del lead antes de pasar al gemologo, ahorrando tiempo a un perfil tecnico caro.</li>
+    </ul>
+
+    <h2>Preguntas frecuentes sobre agente de IA en joyeria</h2>
+
+    <h3>¿El agente puede vender piezas de alta gama o solo consultas basicas?</h3>
+
+    <p>El agente cualifica y mantiene la conversacion en piezas de alta gama, pero el cierre lo hace el joyero o gemologo humano. La regla es clara: cualquier consulta superior a 1.000 euros se traspasa con todo el contexto al equipo en menos de 15 minutos en horario, o en cuanto abre la tienda si llega de madrugada. El agente nunca improvisa sobre material, certificacion o tasacion.</p>
+
+    <h3>¿Como protege los datos de los clientes?</h3>
+
+    <p>El CRM cumple RGPD por defecto. Los datos viven en servidores europeos. Cada cliente tiene su consentimiento de comunicacion etiquetado y puede dar de baja escribiendo "baja" en el mismo chat. Las conversaciones se cifran de extremo a extremo via WhatsApp Business API.</p>
+
+    <h3>¿Suena el agente como un robot?</h3>
+
+    <p>No, si esta bien configurado. El tono se adapta al de la joyeria: si vendes a clientela tradicional, el agente trata de usted y usa lenguaje formal. Si vendes a publico joven, tutea y usa expresiones cotidianas. Los clientes no distinguen al agente del equipo humano en el 88% a 92% de las interacciones segun mediciones internas.</p>
+
+    <h3>¿Que pasa con consultas emocionales como una pieza para un fallecido o un divorcio?</h3>
+
+    <p>El agente detecta señales de carga emocional (palabras clave, contexto, tono) y traspasa la conversacion al equipo humano de inmediato. Es uno de los escenarios donde la IA se aparta. Una joyeria opera con momentos vitales: el agente debe saber cuando no tiene que estar.</p>
+
+    <h3>¿Necesito cambiar mi numero de WhatsApp?</h3>
+
+    <p>No. WhatsApp Business API se conecta al numero del negocio existente. La unica condicion es que ese numero deje de usarse en la app de WhatsApp Business normal en el movil, porque la API es excluyente. La migracion tarda 24-48 horas y la hacemos nosotros.</p>
+
+    <h3>¿Cuanto cuesta?</h3>
+
+    <p>El plan Starter es de 297 euros al mes, el Growth de 497 euros al mes y el Enterprise para joyerias con varias tiendas se cotiza segun volumen. El setup es de 997 euros pagaderos una sola vez. Mas detalle en <a href="/blog/cuanto-cuesta-un-crm-para-pymes.html">cuanto cuesta un CRM para pymes</a>.</p>
+
+    <h2>El coste real de no actuar</h2>
+
+    <p>Una joyeria con 1.500 clientes en base y tasa de recompra del 10% deja sobre la mesa, conservadoramente, entre <strong>7.000 y 14.000 euros al mes</strong> por no recuperar clientes que ya compraron. Cada mes que pasa sin un agente atendiendo fuera de horario son 15 a 25 ventas perdidas. Cada aniversario sin recordatorio personalizado es un regalo que se compra en otra tienda.</p>
+
+    <p>El sector joyero español facturo mas de 1.700 millones de euros en 2025 y se estima que el segmento online crece un 14% anual. La parte que crece es la que esta automatizada. La que decrece es la que sigue contestando WhatsApp con el movil del encargado.</p>
+
+    <p>La tecnologia esta probada, los datos son medibles y el retorno se ve en el primer trimestre. La unica decision pendiente es cuando empezar.</p>
+
+    <div class="blog-cta">
+      <h3>¿Listo para implementar un agente de IA en tu joyeria?</h3>
+      <p>En ZENIA configuramos un agente de IA personalizado para joyerias en 4 semanas. Atencion 24/7 por WhatsApp, recuperacion de clientes inactivos y upselling con contexto real. Agenda una llamada de 30 minutos.</p>
+      <a href="https://calendly.com/zeladauriartef/30min">Agendar llamada gratuita</a>
+    </div>
+
+    <div class="blog-related">
+      <h3>Articulos relacionados</h3>
+      <a href="/blog/agente-ia-para-retail.html">Agente de IA para Retail: Como Vende Hoy una Tienda Inteligente<span>Casos reales de retail con IA: atencion, stock, recomendacion y fidelizacion.</span></a>
+      <a href="/blog/agente-ia-para-tiendas-de-ropa.html">Agente de IA para Tiendas de Ropa: Guia 2026<span>Recuperacion de carritos, atencion por WhatsApp y campañas estacionales.</span></a>
+      <a href="/blog/recuperar-carritos-abandonados-whatsapp.html">Recuperar Carritos Abandonados por WhatsApp<span>Como un mensaje en el momento correcto recupera entre el 18% y el 32% del carrito perdido.</span></a>
+    </div>
+
+  </div>
+
+<div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 24px; margin: 40px 0;" data-zenia-internal-links="landings">
+  <h3 style="color: #F1F5F9; margin-bottom: 12px; font-size: 1.05rem;">¿Quieres ver mas casos en retail?</h3>
+  <p style="color: #94A3B8; margin-bottom: 16px; font-size: 0.95rem;">El agente de IA para joyeria comparte arquitectura con otros verticales de retail especializado:</p>
+  <div>
+      <a href="/blog/agente-ia-para-tiendas-de-ropa.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Tiendas de ropa →</a>
+      <a href="/blog/agente-ia-para-opticas.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Opticas →</a>
+      <a href="/blog/agente-ia-para-floristerias.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Floristerias →</a>
+      <a href="/blog/agente-ia-para-retail.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Retail general →</a>
+  </div>
+</div>
+
+</article>
+
+<footer class="blog-footer">
+  <div class="container">
+    <p>&copy; 2026 ZENIA. Todos los derechos reservados. | <a href="/">Inicio</a> | <a href="/blog/">Blog</a></p>
+  </div>
+</footer>
+
+<div style="text-align:center; padding:16px 24px; background:#0A0F1C; color:#64748B; font-size:0.85rem; border-top:1px solid rgba(255,255,255,0.04);"><a href="/es/cobertura.html" style="color:#94A3B8; text-decoration:none;">Ver cobertura completa</a></div>
+</body>
+</html>

@@ -1808,3 +1808,14 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-estudios-de-yoga.h
 #yogastudio #wellnesstech #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-08 - Agente IA para Guarderías
+
+25% of private daycares in Spain have closed in the last 5 years, and the killer isn't only the birth rate: a family asks about a spot on Sunday night and the answer arrives Monday at 11am, after they've already visited another center.
+We deployed a personalized AI agent for a 60-spot daycare: first-response time from 6-18 hours to 8 seconds, consultation-to-enrollment from 13% to 25%, on-time payments at day 5 from 71% to 92%, and 11 weekly admin hours returned to actual teaching.
+Net: +3,500 EUR/month against a sub-500 EUR cost.
+Full breakdown: https://zeniapartners.com/blog/agente-ia-para-guarderias.html
+
+#earlychildhood #childcare #AI #WhatsAppBusiness
+
+---

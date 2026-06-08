@@ -1777,3 +1777,14 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-joyerias.html
 #retailtech #luxuryretail #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-08 - Agente IA para Tiendas de Mascotas
+
+65% of pet owners have switched stores because of poor customer service, in a market where customer lifetime value is 43% higher than retail average (Spain alone: 5.77B EUR in 2025).
+Most independent pet stores lose recurring food sales not on price but on timing: nobody has time to message Marta that Luna's kibble runs out next Friday.
+We deployed a personalized AI agent with per-pet memory: it knows the breed, the food, the cycle, and writes 5 days before the bag ends. Pet food repurchase rate jumped from 52% to 78%, monthly ticket per active customer from 34 EUR to 47 EUR, annual retention from 38% to 61%.
+Full breakdown: https://zeniapartners.com/blog/agente-ia-para-tiendas-de-mascotas.html
+
+#retailtech #petindustry #AI #WhatsAppBusiness
+
+---

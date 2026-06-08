@@ -1753,6 +1753,8 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-panaderias.html
 
 ## 2026-06-07 - Agente IA para Coaches
 
+<!-- SCHEDULED:sp_FL41aATaeCnAMCjEeSpl at 2026-06-08T16:16:46.117Z -->
+
 The average coach retains only 65% of clients per year (ICF data). 30% of all coach-client communication is pure scheduling logistics. That math is brutal: most coaches lose clients to operations, not methodology.
 
 Gallup found that the single strongest predictor of retention is regular communication between sessions. The exact thing that breaks first when an independent coach is juggling 20+ clients.
@@ -1769,6 +1771,8 @@ DM me if you run a coaching practice and want the operator playbook we built for
 
 ## 2026-06-07 - Agente IA para Joyerias
 
+<!-- SCHEDULED:sp_gMxrtQGS7dZVN27yoSGRf at 2026-06-09T06:00:00.000Z -->
+
 Only 9.9% of first-time jewelry buyers come back within 12 months, the worst repeat rate in retail.
 A Valencia jeweler we worked with moved that number from 11% to 38% in 6 months by deploying a personalized AI agent on WhatsApp that fires reminders 21 days before each customer's saved date (anniversary, partner birthday) and reactivates the 9-month silent base.
 Monthly revenue: 28,000 EUR to 41,500 EUR. Average ticket: 198 EUR to 256 EUR.
@@ -1780,6 +1784,8 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-joyerias.html
 
 ## 2026-06-08 - Agente IA para Tiendas de Mascotas
 
+<!-- SCHEDULED:sp_eTgaHHVofdhpL9SLMyBJ at 2026-06-10T06:00:00.000Z -->
+
 65% of pet owners have switched stores because of poor customer service, in a market where customer lifetime value is 43% higher than retail average (Spain alone: 5.77B EUR in 2025).
 Most independent pet stores lose recurring food sales not on price but on timing: nobody has time to message Marta that Luna's kibble runs out next Friday.
 We deployed a personalized AI agent with per-pet memory: it knows the breed, the food, the cycle, and writes 5 days before the bag ends. Pet food repurchase rate jumped from 52% to 78%, monthly ticket per active customer from 34 EUR to 47 EUR, annual retention from 38% to 61%.
@@ -1790,6 +1796,8 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-tiendas-de-mascota
 ---
 
 ## 2026-06-08 - Agente IA para Estudios de Yoga
+
+<!-- SCHEDULED:sp_KMwtHdpzjzF8Ko1DYXJ8 at 2026-06-11T08:00:00.000Z -->
 
 22% of yoga class spots stay empty because of no-shows nobody bothers to reactivate, and 40% of students who quit do so silently, without a complaint or a formal cancellation.
 The yoga software market is growing from 120M to 250M USD by 2033 (9.2% CAGR), but most boutique studios still run on a spreadsheet plus a WhatsApp inbox that nobody answers after 9pm.

@@ -1788,3 +1788,15 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-tiendas-de-mascota
 #retailtech #petindustry #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-08 - Agente IA para Estudios de Yoga
+
+22% of yoga class spots stay empty because of no-shows nobody bothers to reactivate, and 40% of students who quit do so silently, without a complaint or a formal cancellation.
+The yoga software market is growing from 120M to 250M USD by 2033 (9.2% CAGR), but most boutique studios still run on a spreadsheet plus a WhatsApp inbox that nobody answers after 9pm.
+We deployed a personalized AI agent for a 180-student studio: reservations answered in 8 seconds, dynamic waitlist refilled cancellations on the spot, pre-expiration nudges lifted pass renewals from 68% to 90%, and inactive-student reactivation recovered 14 members/month who were about to ghost. Net result: +8,500 EUR/month against a sub-500 EUR cost.
+Vibefam and Mariana Tek data: studios with active analytics retain 6x more clients. A 5% retention bump moves studio profit 25-95%.
+Full breakdown: https://zeniapartners.com/blog/agente-ia-para-estudios-de-yoga.html
+
+#yogastudio #wellnesstech #AI #WhatsAppBusiness
+
+---

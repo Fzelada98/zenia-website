@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-06-09T12:00:00Z",
+  "lastRun": "2026-06-09T14:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-escuelas-de-musica",
+      "keyword": "agente ia para escuelas de musica",
+      "tier": 1,
+      "cluster": "academias",
+      "status": "published",
+      "date": "2026-06-09"
+    },
     {
       "slug": "agente-ia-para-arquitectos",
       "keyword": "agente ia para arquitectos",

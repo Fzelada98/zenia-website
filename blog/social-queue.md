@@ -1842,3 +1842,15 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-arquitectos.html
 #architecture #aectech #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-09 - Agente IA para Escuelas de Música
+
+Music schools lose 12% of students every quarter, and most of those exits have nothing to do with the music. Average WhatsApp response time from admin is 2h 40min, and 18% of parent messages never get answered at all.
+
+A personalized AI agent connected to the academic system replies in 9 seconds, runs fee recovery, and flags at-risk students 6 to 8 weeks before they cancel. Real numbers from 6 months of data: churn from 12% to 6%, lead-to-trial up from 27% to 52%, +€33K net per year for a 150-student school at €92/month.
+
+Full breakdown: https://zeniapartners.com/blog/agente-ia-para-escuelas-de-musica.html
+
+#musiceducation #edtech #AI #WhatsAppBusiness
+
+---

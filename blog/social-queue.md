@@ -1831,3 +1831,14 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-asesores-financier
 #wealthmanagement #fintech #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-09 - Agente IA para Arquitectos
+
+Spain has 47,662 active licensed architects and 151,000+ architecture and engineering firms competing for the same residential client. The top 100 studios take 70% of the revenue (Alimarket 2025 sector report). Small studios fight for the other 30%, and the bottleneck is rarely design talent. It's the funnel: turning inquiries into site visits, site visits into signed projects.
+A 4-person studio receives 45 inquiries a month and converts 8% (3.6 projects). With a personalized AI agent qualifying by typology, location and budget, that conversion moves to 12-14%. On a 12,500 EUR average ticket that's +22,500 EUR/month in additional billing, plus 5-7 weekly hours the partners stop spending on WhatsApp triage.
+The CTE 2026 energy-rehab wave + Next Generation funds is a once-a-decade demand spike. The studios that answer in 30 seconds will take the share. The ones who reply 4 hours later watch the client sign with whoever responded first.
+Full breakdown: https://zeniapartners.com/blog/agente-ia-para-arquitectos.html
+
+#architecture #aectech #AI #WhatsAppBusiness
+
+---

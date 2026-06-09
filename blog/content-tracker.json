@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-06-08T23:00:00Z",
+  "lastRun": "2026-06-09T00:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-asesores-financieros",
+      "keyword": "agente ia para asesores financieros",
+      "tier": 1,
+      "cluster": "asesores",
+      "status": "published",
+      "date": "2026-06-09"
+    },
     {
       "slug": "agente-ia-para-guarderias",
       "keyword": "agente ia para guarderias",

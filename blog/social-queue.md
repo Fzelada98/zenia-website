@@ -1819,3 +1819,15 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-guarderias.html
 #earlychildhood #childcare #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-09 - Agente IA para Asesores Financieros
+
+71% of mid-market investors leave their financial advisor when responses take more than 4 hours on a recurring basis, per Capgemini's World Wealth Report 2026.
+A solo advisor with 200 clients physically cannot reply in under 4 hours while also running portfolio reviews, MiFID II reporting and pre-meeting prep. So they lose 18 clients a year at 1,400 EUR each, plus the referrals those clients would have generated.
+We deployed a personalized AI agent for a 200-client advisory: WhatsApp response time from 5-28 hours to 9 seconds, 65-72% of operational queries resolved without the advisor, churn cut from 10% to 5%, and 12 weekly hours recovered for actual client work.
+Schwab's 2026 Advisor AI in Action study reports NPS jumping from 64 to 82 in firms using AI, and 63% of RIAs already use it in some capacity. Net ROI on this deployment: +57k EUR/year on a sub-6k setup.
+Full breakdown: https://zeniapartners.com/blog/agente-ia-para-asesores-financieros.html
+
+#wealthmanagement #fintech #AI #WhatsAppBusiness
+
+---

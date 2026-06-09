@@ -1811,6 +1811,8 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-estudios-de-yoga.h
 
 ## 2026-06-08 - Agente IA para Guarderías
 
+<!-- SCHEDULED:sp_FfBkhB2q54wIlLldVzCik at 2026-06-10T00:17:34.313Z -->
+
 25% of private daycares in Spain have closed in the last 5 years, and the killer isn't only the birth rate: a family asks about a spot on Sunday night and the answer arrives Monday at 11am, after they've already visited another center.
 We deployed a personalized AI agent for a 60-spot daycare: first-response time from 6-18 hours to 8 seconds, consultation-to-enrollment from 13% to 25%, on-time payments at day 5 from 71% to 92%, and 11 weekly admin hours returned to actual teaching.
 Net: +3,500 EUR/month against a sub-500 EUR cost.
@@ -1821,6 +1823,8 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-guarderias.html
 ---
 
 ## 2026-06-09 - Agente IA para Asesores Financieros
+
+<!-- SCHEDULED:sp_UyH17US1cw2nngXFLRef at 2026-06-11T07:00:00.000Z -->
 
 71% of mid-market investors leave their financial advisor when responses take more than 4 hours on a recurring basis, per Capgemini's World Wealth Report 2026.
 A solo advisor with 200 clients physically cannot reply in under 4 hours while also running portfolio reviews, MiFID II reporting and pre-meeting prep. So they lose 18 clients a year at 1,400 EUR each, plus the referrals those clients would have generated.
@@ -1834,6 +1838,8 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-asesores-financier
 
 ## 2026-06-09 - Agente IA para Arquitectos
 
+<!-- SCHEDULED:sp_7IFJrnfoPpvpqNrnNWI at 2026-06-12T07:00:00.000Z -->
+
 Spain has 47,662 active licensed architects and 151,000+ architecture and engineering firms competing for the same residential client. The top 100 studios take 70% of the revenue (Alimarket 2025 sector report). Small studios fight for the other 30%, and the bottleneck is rarely design talent. It's the funnel: turning inquiries into site visits, site visits into signed projects.
 A 4-person studio receives 45 inquiries a month and converts 8% (3.6 projects). With a personalized AI agent qualifying by typology, location and budget, that conversion moves to 12-14%. On a 12,500 EUR average ticket that's +22,500 EUR/month in additional billing, plus 5-7 weekly hours the partners stop spending on WhatsApp triage.
 The CTE 2026 energy-rehab wave + Next Generation funds is a once-a-decade demand spike. The studios that answer in 30 seconds will take the share. The ones who reply 4 hours later watch the client sign with whoever responded first.
@@ -1844,6 +1850,8 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-arquitectos.html
 ---
 
 ## 2026-06-09 - Agente IA para Escuelas de Música
+
+<!-- SCHEDULED:sp_GVRd5G5C1frI4n8tD5mT at 2026-06-15T07:00:00.000Z -->
 
 Music schools lose 12% of students every quarter, and most of those exits have nothing to do with the music. Average WhatsApp response time from admin is 2h 40min, and 18% of parent messages never get answered at all.
 

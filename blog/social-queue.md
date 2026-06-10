@@ -1874,3 +1874,15 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-academias-de-baile
 #danceeducation #studiomanagement #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-10 - Agente IA para Centros de Masajes
+
+Massage therapists run at 65% utilization and lose 12 to 20% of daily revenue every time a client no-shows. With 60 to 90 minute slots, one missed appointment wipes out a fifth of the day.
+
+A personalized AI agent on WhatsApp handles bookings 24/7, sends double reminders 24h and 1h before, and refills cancellations from a live waitlist. Real numbers from massage centers with 4 therapists at €55/session: no-shows down from 18% to 5-8%, utilization up to 79%, rebooking from 34% to 53%, and 31% of bookings captured outside reception hours. Net impact: +€14K/month against a €300-500/month stack.
+
+Reply if you run a wellness center and want the operating playbook.
+
+#wellness #massagetherapy #AI #WhatsAppBusiness
+
+---

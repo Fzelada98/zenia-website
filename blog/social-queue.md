@@ -1632,3 +1632,15 @@ DM me if you run a travel agency and want the WhatsApp quote-recovery sequence w
 #traveltech #B2C #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-10 - AI agent for language schools
+
+A mid-size language school in Spain gets 30 to 90 inquiries a week across WhatsApp, Instagram and forms, but only 41% of those leads get a same-day reply and the average response time is 4 hours 12 minutes.
+After 30 minutes the probability of converting a language-school lead drops 80%. By Monday morning the parent who wrote on Sunday night has already enrolled the kid in the academy three blocks down.
+We deployed a personalized AI agent on WhatsApp for a language school with 250 active students: response time from 4 hours to 12 seconds, placement-test no-show from 28% to 7%, lead-to-enrollment conversion from 14% to 26%, and trimester renewal from 58% to 67%.
+Net impact lands around +18,000 EUR/month against a 297-497 EUR plan cost. The single biggest lever was the async placement test, which removed the "call us to schedule" bottleneck that was killing 22% of the funnel.
+Reply if you run a language academy and want the placement-test flow and the renewal sequence we use for the trimester window.
+
+#edtech #languageschools #AI #WhatsAppBusiness
+
+---

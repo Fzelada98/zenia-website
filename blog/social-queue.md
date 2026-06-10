@@ -1862,3 +1862,15 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-escuelas-de-musica
 #musiceducation #edtech #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-10 - Agente IA para Academias de Baile
+
+56% of dance schools still run enrollment on spreadsheets and paper forms, with WhatsApp response times of 23 to 41 minutes. By the time the school replies, the parent has already messaged 3 other studios.
+
+A personalized AI agent on WhatsApp closes the enrollment inside the chat, runs recurring tuition charges with auto-retries, and flags at-risk students before they drop. Real numbers on 280-student studios: lead-to-enrollment from 22% to 42%, monthly churn from 6.5% to 3.8%, late payments from 12% to 3.5%, +€4,300/month net.
+
+Full breakdown: https://zeniapartners.com/blog/agente-ia-para-academias-de-baile.html
+
+#danceeducation #studiomanagement #AI #WhatsAppBusiness
+
+---

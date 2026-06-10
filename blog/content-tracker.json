@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-06-09T14:00:00Z",
+  "lastRun": "2026-06-10T00:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-academias-de-baile",
+      "keyword": "agente ia para academias de baile",
+      "tier": 1,
+      "cluster": "academias",
+      "status": "published",
+      "date": "2026-06-10"
+    },
     {
       "slug": "agente-ia-para-escuelas-de-musica",
       "keyword": "agente ia para escuelas de musica",

@@ -1904,3 +1904,15 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-clinicas-capilares
 #healthtech #hairtransplant #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-11 - Agente IA para Podologos
+
+Spain went from 3,362 podiatrists in 2003 to 10,247 in 2023, a 204% jump in 20 years. Competition is crowded but most clinics still run scheduling on a personal WhatsApp and a paper notebook.
+
+A personalized AI agent on the clinic's calendar and CRM books, reminds, follows up after visits, and reactivates dormant patients. Real numbers from clinics with 800 active files: no-shows from 14% to 4.5%, 22% of bookings captured outside opening hours (mostly 9pm to 1am), 5 to 8 Google reviews per month, 14 weekly admin hours freed up. Net impact: +€5K/month against a €300-500 stack.
+
+Full breakdown: https://zeniapartners.com/blog/agente-ia-para-podologos.html
+
+#healthtech #patientretention #AI #automation
+
+---

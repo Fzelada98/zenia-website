@@ -1865,6 +1865,8 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-escuelas-de-musica
 
 ## 2026-06-10 - Agente IA para Academias de Baile
 
+<!-- SCHEDULED:sp_IvybwCMtZwMybS5U0hQZq at 2026-06-11T07:00:00.000Z -->
+
 56% of dance schools still run enrollment on spreadsheets and paper forms, with WhatsApp response times of 23 to 41 minutes. By the time the school replies, the parent has already messaged 3 other studios.
 
 A personalized AI agent on WhatsApp closes the enrollment inside the chat, runs recurring tuition charges with auto-retries, and flags at-risk students before they drop. Real numbers on 280-student studios: lead-to-enrollment from 22% to 42%, monthly churn from 6.5% to 3.8%, late payments from 12% to 3.5%, +€4,300/month net.
@@ -1877,6 +1879,8 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-academias-de-baile
 
 ## 2026-06-10 - Agente IA para Centros de Masajes
 
+<!-- SCHEDULED:sp_Cq6sKISKROXXHqdJypehJ at 2026-06-12T07:00:00.000Z -->
+
 Massage therapists run at 65% utilization and lose 12 to 20% of daily revenue every time a client no-shows. With 60 to 90 minute slots, one missed appointment wipes out a fifth of the day.
 
 A personalized AI agent on WhatsApp handles bookings 24/7, sends double reminders 24h and 1h before, and refills cancellations from a live waitlist. Real numbers from massage centers with 4 therapists at €55/session: no-shows down from 18% to 5-8%, utilization up to 79%, rebooking from 34% to 53%, and 31% of bookings captured outside reception hours. Net impact: +€14K/month against a €300-500/month stack.
@@ -1888,6 +1892,8 @@ Reply if you run a wellness center and want the operating playbook.
 ---
 
 ## 2026-06-11 - Agente IA para Clinicas Capilares
+
+<!-- SCHEDULED:sp_pVi0VWMQT2ycsXqhEM5R at 2026-06-15T07:00:00.000Z -->
 
 Hair restoration clinics pay €30 to €60 per lead and convert only 10% into surgery, because first response time is 4 to 18 hours while patients are already messaging 5 to 12 clinics.
 

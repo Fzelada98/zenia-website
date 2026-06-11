@@ -1916,3 +1916,17 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-podologos.html
 #healthtech #patientretention #AI #automation
 
 ---
+
+## 2026-06-11 - Agente IA para Clinicas de Logopedia
+
+Public speech therapy waiting lists hit 3 years in Madrid and the Canary Islands, so families turn to private clinics where 12% to 18% of sessions still vanish to no-shows and bonos that nobody renews on time.
+
+A personalized AI agent on WhatsApp answers the first consultation in 8 seconds, runs the 24h and 2h reminders, moves the waitlist whenever a slot opens, and chases home exercises between sessions. For a 3-therapist clinic running 72 sessions a week at €42, the numbers we see: no-shows from 15% to 6%, slot recovery from 22% to 71%, bono renewal from 54% to 78%, +€9.7K to +€9.9K net per month against a €297-497 stack.
+
+The most underrated metric: between-session adherence finally gets measured, and it jumps to 62%.
+
+Full breakdown: https://zeniapartners.com/blog/agente-ia-para-clinicas-de-logopedia.html
+
+#healthtech #patientretention #AI #WhatsAppBusiness
+
+---

@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-06-10T12:00:00Z",
+  "lastRun": "2026-06-11T12:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-clinicas-capilares",
+      "keyword": "agente ia para clinicas capilares",
+      "tier": 1,
+      "cluster": "clinicas",
+      "status": "published",
+      "date": "2026-06-11"
+    },
     {
       "slug": "agente-ia-para-centros-de-masajes",
       "keyword": "agente ia para centros de masajes",

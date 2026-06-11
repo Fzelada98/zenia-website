@@ -1886,3 +1886,15 @@ Reply if you run a wellness center and want the operating playbook.
 #wellness #massagetherapy #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-11 - Agente IA para Clinicas Capilares
+
+Hair restoration clinics pay €30 to €60 per lead and convert only 10% into surgery, because first response time is 4 to 18 hours while patients are already messaging 5 to 12 clinics.
+
+A personalized AI agent on WhatsApp answers in 12 seconds, qualifies the case using the Norwood scale, and nurtures the patient through the 6 to 14 month decision cycle. Real numbers: CPL down 35%, lead-to-consultation up from 22% to 41%, consultation-to-surgery up from 28% to 38%, +€33K/month margin against a €497/month stack.
+
+Full breakdown: https://zeniapartners.com/blog/agente-ia-para-clinicas-capilares.html
+
+#healthtech #hairtransplant #AI #WhatsAppBusiness
+
+---

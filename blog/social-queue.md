@@ -1930,3 +1930,17 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-clinicas-de-logope
 #healthtech #patientretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-12 - Agente IA para Tintorerias
+
+Spain's dry-cleaning and laundry market is worth €900M a year, and the typical neighborhood shop still loses 6% of garments to "the customer never came back to pick it up" while the owner takes 45 calls a day asking "is mine ready yet?".
+
+A personalized AI agent on WhatsApp Business cotizes in 5 seconds, sends an auto-notice the moment the ticket is marked ready, runs staggered pickup reminders at 3, 7, 30 and 75 days (right before the 90-day legal limit), and coordinates home delivery without burying the driver in calls. Real numbers on a 150-garment-per-day shop with 500 active customers: forgotten garments from 6% to 2.5%, mostro calls from 45 to 8 daily, visit frequency from 2.8 to 4.1 per year, +€5.3K to +€5.5K net per month against a €297-497 stack.
+
+The metric nobody talks about: 71% of out-of-hours messages come from customers who simply never wrote before because they assumed no one was listening.
+
+Full breakdown: https://zeniapartners.com/blog/agente-ia-para-tintorerias.html
+
+#smallbusiness #retailtech #AI #WhatsAppBusiness
+
+---

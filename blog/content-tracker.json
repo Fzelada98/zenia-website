@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-06-12T14:00:00Z",
+  "lastRun": "2026-06-12T22:30:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-academias-de-oposiciones",
+      "keyword": "agente ia para academias de oposiciones",
+      "tier": 1,
+      "cluster": "academias",
+      "status": "published",
+      "date": "2026-06-12"
+    },
     {
       "slug": "agente-ia-para-clubes-de-padel",
       "keyword": "agente ia para clubes de padel",

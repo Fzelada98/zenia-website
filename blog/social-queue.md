@@ -1958,3 +1958,17 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-clubes-de-padel.ht
 #sportstech #padel #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-12 - Agente IA para Academias de Oposiciones
+
+Spain's Public Employment Offer hit 36,588 plazas in 2025 and 2026 is tracking similar (Real Decreto 651/2025). Demand is at an all-time high, but the average oposiciones academy still converts only 9 to 14 percent of leads, and 35 percent of matriculated students drop out before exam day.
+
+A personalized AI agent on WhatsApp replies under 10 seconds, qualifies the opositor by target oposicion and modality, closes the matricula with 10-month financing inside the chat, and catches drop-out signals from the LMS in real time. Real numbers on a mid-size academy with 160 monthly leads: lead-to-matricula from 11 to 19 percent, drop-out from 35 to 12 percent, NPS from 32 to 61, +22,500 EUR net monthly at a 497 EUR stack.
+
+The under-priced lever: reactivating former opositores. Every BOE convocatoria is a campaign trigger most academies still ignore.
+
+Full breakdown: https://zeniapartners.com/blog/agente-ia-para-academias-de-oposiciones.html
+
+#edtech #B2B #AI #WhatsAppBusiness
+
+---

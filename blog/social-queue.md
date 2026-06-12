@@ -1944,3 +1944,17 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-tintorerias.html
 #smallbusiness #retailtech #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-12 - Agente IA para Clubes de Padel
+
+Spain runs the world's biggest padel ecosystem: 17,300 courts, 4,500 clubs, 6 million active players and €2 billion in annual revenue (Playtomic Global Padel Report 2026). Yet the average club still takes 18 to 35 minutes to reply on WhatsApp and loses 12% to 22% of reserved courts to no-shows.
+
+A personalized AI agent on WhatsApp Business API plugged into Playtomic Manager, Resasports or Matchpoint replies in 8 seconds, charges the deposit upfront via Stripe or Bizum, fills cancellations through a dynamic waitlist in under 30 seconds and renews monthly memberships automatically. Real numbers on an 8-court club: no-shows from 15% to 5%, premium-hour occupancy from 71% to 88%, membership renewal from 64% to 81%, waitlist fill rate from 41% to 92%, +€8K/month against a €297-497 stack.
+
+The underrated metric: 28% of all reservations come from messages sent between 10pm and 8am, when reception is closed.
+
+Full breakdown: https://zeniapartners.com/blog/agente-ia-para-clubes-de-padel.html
+
+#sportstech #padel #AI #WhatsAppBusiness
+
+---

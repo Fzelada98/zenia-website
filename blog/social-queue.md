@@ -1972,3 +1972,17 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-academias-de-oposi
 #edtech #B2B #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-13 - Agente IA para Ferreterías
+
+Spain's hardware-store sector did EUR 12.2B in 2025 with 4 percent annual growth, but 70 percent of the market belongs to chains like Leroy Merlin and Bricomart. Two out of three independent customers churn for bad service, not price. The average barrio ferretería leaves 11 WhatsApp queries per day unanswered and takes 24 to 72 hours to send a B2B quote.
+
+A personalized AI agent on WhatsApp Business API wired to the ERP (Verial, FactuSOL, Holded, Hizen) replies in 12 seconds, reads live stock, applies the right professional tariff per customer type, ships PDF quotes in 3 minutes, proposes proactive reorders to recurring electricians and fitters, and triggers a Google review request 48 hours after sale. Real numbers across 14 Spanish ferreterías: unanswered queries from 25 percent to under 2 percent, B2B purchase cycle from 45 to 35 days, Google reviews from 0.7 to 5 per month, +EUR 9K net monthly on a EUR 297-497 stack.
+
+The underrated lever: the owner gets 14 hours per week back. That is two full working days redirected from reactive WhatsApp triage to chasing maintenance contracts and supplier negotiation.
+
+Full breakdown: https://zeniapartners.com/blog/agente-ia-para-ferreterias.html
+
+#retailtech #hardware #AI #WhatsAppBusiness
+
+---

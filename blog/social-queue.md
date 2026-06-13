@@ -1907,6 +1907,8 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-clinicas-capilares
 
 ## 2026-06-11 - Agente IA para Podologos
 
+<!-- SCHEDULED:sp_QAQx8Mszh91p60jGgX5dQ at 2026-06-15T07:00:00.000Z -->
+
 Spain went from 3,362 podiatrists in 2003 to 10,247 in 2023, a 204% jump in 20 years. Competition is crowded but most clinics still run scheduling on a personal WhatsApp and a paper notebook.
 
 A personalized AI agent on the clinic's calendar and CRM books, reminds, follows up after visits, and reactivates dormant patients. Real numbers from clinics with 800 active files: no-shows from 14% to 4.5%, 22% of bookings captured outside opening hours (mostly 9pm to 1am), 5 to 8 Google reviews per month, 14 weekly admin hours freed up. Net impact: +€5K/month against a €300-500 stack.
@@ -1918,6 +1920,8 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-podologos.html
 ---
 
 ## 2026-06-11 - Agente IA para Clinicas de Logopedia
+
+<!-- SCHEDULED:sp_OfehysFrusCkgTxdU1jV at 2026-06-16T07:00:00.000Z -->
 
 Public speech therapy waiting lists hit 3 years in Madrid and the Canary Islands, so families turn to private clinics where 12% to 18% of sessions still vanish to no-shows and bonos that nobody renews on time.
 
@@ -1933,6 +1937,8 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-clinicas-de-logope
 
 ## 2026-06-12 - Agente IA para Tintorerias
 
+<!-- SCHEDULED:sp_rmNMmXd7xQ7wyER3bkdHF at 2026-06-17T06:00:00.000Z -->
+
 Spain's dry-cleaning and laundry market is worth €900M a year, and the typical neighborhood shop still loses 6% of garments to "the customer never came back to pick it up" while the owner takes 45 calls a day asking "is mine ready yet?".
 
 A personalized AI agent on WhatsApp Business cotizes in 5 seconds, sends an auto-notice the moment the ticket is marked ready, runs staggered pickup reminders at 3, 7, 30 and 75 days (right before the 90-day legal limit), and coordinates home delivery without burying the driver in calls. Real numbers on a 150-garment-per-day shop with 500 active customers: forgotten garments from 6% to 2.5%, mostro calls from 45 to 8 daily, visit frequency from 2.8 to 4.1 per year, +€5.3K to +€5.5K net per month against a €297-497 stack.
@@ -1946,6 +1952,8 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-tintorerias.html
 ---
 
 ## 2026-06-12 - Agente IA para Clubes de Padel
+
+<!-- SCHEDULED:sp_tn9aXX4MM06FztuIIFzjp at 2026-06-18T08:00:00.000Z -->
 
 Spain runs the world's biggest padel ecosystem: 17,300 courts, 4,500 clubs, 6 million active players and €2 billion in annual revenue (Playtomic Global Padel Report 2026). Yet the average club still takes 18 to 35 minutes to reply on WhatsApp and loses 12% to 22% of reserved courts to no-shows.
 
@@ -1961,6 +1969,8 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-clubes-de-padel.ht
 
 ## 2026-06-12 - Agente IA para Academias de Oposiciones
 
+<!-- SCHEDULED:sp_rpPEzJPB2DsK3CX64d570 at 2026-06-19T07:00:00.000Z -->
+
 Spain's Public Employment Offer hit 36,588 plazas in 2025 and 2026 is tracking similar (Real Decreto 651/2025). Demand is at an all-time high, but the average oposiciones academy still converts only 9 to 14 percent of leads, and 35 percent of matriculated students drop out before exam day.
 
 A personalized AI agent on WhatsApp replies under 10 seconds, qualifies the opositor by target oposicion and modality, closes the matricula with 10-month financing inside the chat, and catches drop-out signals from the LMS in real time. Real numbers on a mid-size academy with 160 monthly leads: lead-to-matricula from 11 to 19 percent, drop-out from 35 to 12 percent, NPS from 32 to 61, +22,500 EUR net monthly at a 497 EUR stack.
@@ -1974,6 +1984,8 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-academias-de-oposi
 ---
 
 ## 2026-06-13 - Agente IA para Ferreterías
+
+<!-- SCHEDULED:sp_PcHCcxX0yeaO0B0OUOx at 2026-06-22T06:00:00.000Z -->
 
 Spain's hardware-store sector did EUR 12.2B in 2025 with 4 percent annual growth, but 70 percent of the market belongs to chains like Leroy Merlin and Bricomart. Two out of three independent customers churn for bad service, not price. The average barrio ferretería leaves 11 WhatsApp queries per day unanswered and takes 24 to 72 hours to send a B2B quote.
 
@@ -1989,6 +2001,8 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-ferreterias.html
 
 ## 2026-06-13 - Agente IA para Residencias de Mayores
 
+<!-- SCHEDULED:sp_itCe2npXZ3bGsyXfUKa6 at 2026-06-23T07:00:00.000Z -->
+
 Spanish care home directors lose 22 hours per week answering non-urgent family calls. Only 11 percent of senior-care providers run AI in real production (myEZCare 2026 industry report), and that gap is what is killing both operational margin and NPS.
 
 A personalized AI agent on WhatsApp Business API plugged into the clinical system (Resiplus, Cenpos, in-house) answers families in 12 seconds, surfaces the shift's care notes only under signed consent, syncs medical appointments with transport and external geriatricians, and qualifies prospect families 24/7 with auto-booked visits. Real numbers on a 90-bed residence: family NPS from 34 to 61, formal complaints from 11 to 2 per month, lead-to-contract conversion from 22 to 38 percent, Google reviews from 1.5 to 7.8 per month, +EUR 4,200 net monthly on a 497 EUR stack.
@@ -2002,6 +2016,8 @@ Reply if you run a residencia and want the integration map for your clinical sys
 ---
 
 ## 2026-06-13 - Agente IA para Tatuadores
+
+<!-- SCHEDULED:sp_PdufiH4qBIvjP5dorE7qY at 2026-06-24T07:00:00.000Z -->
 
 Tattoo studios in Spain (2,800+ active, EUR 80-150 per session) burn 10-14 hours a week on Instagram DMs, price-quote ping pong and chasing deposits that never arrive. The non-show rate without an upfront deposit sits at 15-25 percent. That is one full lost day per artist per month, every month.
 

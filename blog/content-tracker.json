@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-06-13T06:08:00Z",
+  "lastRun": "2026-06-13T14:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-residencias-de-mayores",
+      "keyword": "agente ia para residencias de mayores",
+      "tier": 1,
+      "cluster": "salud",
+      "status": "published",
+      "date": "2026-06-13"
+    },
     {
       "slug": "agente-ia-para-ferreterias",
       "keyword": "agente ia para ferreterias",

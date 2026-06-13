@@ -2000,3 +2000,17 @@ Reply if you run a residencia and want the integration map for your clinical sys
 #healthtech #seniorcare #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-13 - Agente IA para Tatuadores
+
+Tattoo studios in Spain (2,800+ active, EUR 80-150 per session) burn 10-14 hours a week on Instagram DMs, price-quote ping pong and chasing deposits that never arrive. The non-show rate without an upfront deposit sits at 15-25 percent. That is one full lost day per artist per month, every month.
+
+A personalized AI agent on WhatsApp Business API and Instagram DM, trained on the studio's real prices per zone and style, qualifies the lead in 8 seconds, blocks the slot only after the deposit is paid via Stripe or Bizum, sends pre-session care 48 and 24 hours out, ships aftercare tuned to the tattoo zone, and requests a Google review at day 7. Real numbers across implemented studios: response time from 4-14 hours to 8 seconds, no-shows from 18 percent to 4 percent, consult-to-paid-deposit conversion from 14 percent to 30 percent, Google reviews from 3 to 15 per month, +EUR 10K net monthly on a EUR 297-497 stack.
+
+The underrated lever: 41 percent of serious tattoo enquiries land between 22:00 and 02:00, when the customer is in bed scrolling references. If nobody replies until next morning, half of those leads already booked elsewhere.
+
+Reply if you run a studio and want the deposit flow that took us from 18 to 4 percent no-shows.
+
+#tattooindustry #smallbusiness #AI #WhatsAppBusiness
+
+---

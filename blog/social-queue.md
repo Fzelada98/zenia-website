@@ -1986,3 +1986,17 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-ferreterias.html
 #retailtech #hardware #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-13 - Agente IA para Residencias de Mayores
+
+Spanish care home directors lose 22 hours per week answering non-urgent family calls. Only 11 percent of senior-care providers run AI in real production (myEZCare 2026 industry report), and that gap is what is killing both operational margin and NPS.
+
+A personalized AI agent on WhatsApp Business API plugged into the clinical system (Resiplus, Cenpos, in-house) answers families in 12 seconds, surfaces the shift's care notes only under signed consent, syncs medical appointments with transport and external geriatricians, and qualifies prospect families 24/7 with auto-booked visits. Real numbers on a 90-bed residence: family NPS from 34 to 61, formal complaints from 11 to 2 per month, lead-to-contract conversion from 22 to 38 percent, Google reviews from 1.5 to 7.8 per month, +EUR 4,200 net monthly on a 497 EUR stack.
+
+The underrated lever: 41 percent of family interactions happen outside the residence's admin hours. Without 24/7 coverage, that is the exact window where dissatisfaction compounds into churn and negative reviews.
+
+Reply if you run a residencia and want the integration map for your clinical system, happy to share detail.
+
+#healthtech #seniorcare #AI #WhatsAppBusiness
+
+---

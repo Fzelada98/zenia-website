@@ -2030,3 +2030,15 @@ Reply if you run a studio and want the deposit flow that took us from 18 to 4 pe
 #tattooindustry #smallbusiness #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-14 - Agente IA para Cl&iacute;nicas de Fertilidad
+
+Between 54 percent and 65 percent of fertility patients drop out before completing treatment, one in four after the first cycle (2026 systematic review, Int J Gynecol Obstet). In Spain alone, 168,372 IVF cycles were run in 2023 with only 39,555 babies born.
+
+That gap is operational, not clinical. A personalized AI agent on WhatsApp Business API qualifies the first informative consultation, follows dosing day by day, flags risk symptoms to the medical team and re-activates inactive patients with tone validated by the clinic's psychologist. Real numbers on a clinic with 60 digital leads/month: first-consult to study conversion from 45 to 65-71 percent, between-cycle drop-off from 30 to 14-19 percent, no-shows to controls from 9-12 to 3-5 percent, NPS from 42-55 to 68-77 and roughly +50K EUR net per month on a 500-1,500 EUR stack.
+
+Full breakdown: https://zeniapartners.com/blog/agente-ia-para-clinicas-de-fertilidad.html
+
+#healthtech #fertility #AI #WhatsAppBusiness
+
+---

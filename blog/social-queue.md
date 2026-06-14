@@ -2044,3 +2044,15 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-clinicas-de-fertil
 #healthtech #fertility #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-14 - Agente IA para Academias de Cocina
+
+Cooking school bookings are up 27 percent year-over-year in 2026 (Amra and Elma) and corporate cooking workshops grew 21 percent in 2025, yet most academies still lose 40 percent of WhatsApp leads because nobody answers on Friday night.
+
+The bottleneck is never the chef. It is the admin team juggling matriculations, expiring class packs, corporate quotes and aforo conflicts from a shared inbox. A personalized AI agent on WhatsApp Business API connected to the CRM takes lead-to-enrollment conversion from 22 to 38 percent, drops no-shows from 16 to 6 percent and frees 12 hours a week. Real numbers across implemented schools: +10K EUR net monthly on a 297-497 EUR stack.
+
+Full breakdown: https://zeniapartners.com/blog/agente-ia-para-academias-de-cocina.html
+
+#culinaryeducation #cookingschool #AI #WhatsAppBusiness
+
+---

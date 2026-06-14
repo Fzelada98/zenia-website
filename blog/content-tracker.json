@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-06-14T22:00:00Z",
+  "lastRun": "2026-06-14T22:30:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-pastelerias",
+      "keyword": "agente ia para pastelerias",
+      "tier": 1,
+      "cluster": "panaderias",
+      "status": "published",
+      "date": "2026-06-14"
+    },
     {
       "slug": "agente-ia-para-academias-de-cocina",
       "keyword": "agente ia para academias de cocina",

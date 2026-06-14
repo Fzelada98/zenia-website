@@ -2056,3 +2056,15 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-academias-de-cocin
 #culinaryeducation #cookingschool #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-14 - Agente IA para Pastelerías
+
+82 percent of custom cake orders in Spain come through WhatsApp, yet 70 percent of independent bakeries still track them in a paper book. The result is 3 lost orders a day and 3-5 returned cakes a month from order-sheet errors (size, allergens, pickup time).
+
+The bottleneck is never the master pastry chef. It is the 12-20 variables per custom order piling up in a chat nobody reads on Sunday night. A personalized AI agent on WhatsApp Business API qualifies the order in 12 seconds, validates allergens against EU regulation, charges a deposit via Bizum and slots it into the bakery's capacity-aware schedule. Real numbers in 90 days: order-sheet errors from 9-13 to under 1 percent, repeat customers from 18 to 34 percent, +380 percent Google reviews and roughly +7.3K EUR net monthly on the 297 EUR Starter stack (12x ROI minimum).
+
+Full breakdown: https://zeniapartners.com/blog/agente-ia-para-pastelerias.html
+
+#bakeryindustry #pastryshop #AI #WhatsAppBusiness
+
+---

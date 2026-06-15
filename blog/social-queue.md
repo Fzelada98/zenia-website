@@ -2102,3 +2102,17 @@ DM if you run a notary, a gestoría or a law firm and want the implementation pl
 #legaltech #notaria #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-15 - Agente IA para Farmacias
+
+Spain's 22,231 community pharmacies burn 12 hours a week just managing supply incidents, and the counter WhatsApp eats another 14-19 hours on repeated stock and prescription questions.
+
+A personalized AI agent connected to Bitfarma, Unycop Win or Farmatic absorbs 78-84 percent of those messages in 8 seconds, drops top-200 stockouts from 12 to 4 percent, and lifts chronic-patient reactivation at 90 days from 22 to 45 percent.
+
+For an average pharmacy of 800 patients per week and 1.1M EUR in revenue: roughly +10K EUR gross monthly on a 297 EUR stack, plus the pharmacist actually goes back to giving pharmaceutical advice instead of chasing WhatsApps between dispensations.
+
+Full breakdown: https://zeniapartners.com/blog/agente-ia-para-farmacias.html
+
+#pharmacy #healthtech #AI #WhatsAppBusiness
+
+---

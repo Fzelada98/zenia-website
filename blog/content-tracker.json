@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-06-15T12:00:00Z",
+  "lastRun": "2026-06-15T14:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-farmacias",
+      "keyword": "agente ia para farmacias",
+      "tier": 1,
+      "cluster": "salud",
+      "status": "published",
+      "date": "2026-06-15"
+    },
     {
       "slug": "agente-ia-para-notarias",
       "keyword": "agente ia para notarias",

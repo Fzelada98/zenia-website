@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-06-14T22:30:00Z",
+  "lastRun": "2026-06-15T00:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-coworking",
+      "keyword": "agente ia para coworking",
+      "tier": 1,
+      "cluster": "servicios",
+      "status": "published",
+      "date": "2026-06-15"
+    },
     {
       "slug": "agente-ia-para-pastelerias",
       "keyword": "agente ia para pastelerias",

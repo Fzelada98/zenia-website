@@ -2068,3 +2068,15 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-pastelerias.html
 #bakeryindustry #pastryshop #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-15 - Agente IA para Coworking
+
+38 percent of coworking leads arrive outside office hours and meeting-room occupancy is stuck at 41 percent across the industry.
+
+A personalized AI agent on WhatsApp Business API connected to Andcards, OfficeRnD, Optix or Spacebring answers in 8 seconds, books rooms in real time and runs digital onboarding with payment and access activation in 1-2 hours. Real operators in 2026: lead-to-tour conversion from 22-30 to 48-55 percent, room occupancy from 41 to 52-67 percent, member retention from 14 to 22 months. ROI on a 150-desk space: +11.4K EUR net monthly.
+
+Full breakdown: https://zeniapartners.com/blog/agente-ia-para-coworking.html
+
+#coworking #flexibleworkspace #AI #WhatsAppBusiness
+
+---

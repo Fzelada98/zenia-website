@@ -2047,6 +2047,8 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-clinicas-de-fertil
 
 ## 2026-06-14 - Agente IA para Academias de Cocina
 
+<!-- SCHEDULED:sp_V65snjlrCwRnOnuuksHk at 2026-06-15T16:18:05.686Z -->
+
 Cooking school bookings are up 27 percent year-over-year in 2026 (Amra and Elma) and corporate cooking workshops grew 21 percent in 2025, yet most academies still lose 40 percent of WhatsApp leads because nobody answers on Friday night.
 
 The bottleneck is never the chef. It is the admin team juggling matriculations, expiring class packs, corporate quotes and aforo conflicts from a shared inbox. A personalized AI agent on WhatsApp Business API connected to the CRM takes lead-to-enrollment conversion from 22 to 38 percent, drops no-shows from 16 to 6 percent and frees 12 hours a week. Real numbers across implemented schools: +10K EUR net monthly on a 297-497 EUR stack.
@@ -2058,6 +2060,8 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-academias-de-cocin
 ---
 
 ## 2026-06-14 - Agente IA para Pastelerías
+
+<!-- SCHEDULED:sp_P9wwjW1WS2XObJQSqL1s at 2026-06-16T07:00:00.000Z -->
 
 82 percent of custom cake orders in Spain come through WhatsApp, yet 70 percent of independent bakeries still track them in a paper book. The result is 3 lost orders a day and 3-5 returned cakes a month from order-sheet errors (size, allergens, pickup time).
 
@@ -2071,6 +2075,8 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-pastelerias.html
 
 ## 2026-06-15 - Agente IA para Coworking
 
+<!-- SCHEDULED:sp_aCt8YO1uWE25eXuL5ZB9 at 2026-06-17T07:00:00.000Z -->
+
 38 percent of coworking leads arrive outside office hours and meeting-room occupancy is stuck at 41 percent across the industry.
 
 A personalized AI agent on WhatsApp Business API connected to Andcards, OfficeRnD, Optix or Spacebring answers in 8 seconds, books rooms in real time and runs digital onboarding with payment and access activation in 1-2 hours. Real operators in 2026: lead-to-tour conversion from 22-30 to 48-55 percent, room occupancy from 41 to 52-67 percent, member retention from 14 to 22 months. ROI on a 150-desk space: +11.4K EUR net monthly.
@@ -2082,6 +2088,8 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-coworking.html
 ---
 
 ## 2026-06-15 - Agente IA para Notarías
+
+<!-- SCHEDULED:sp_UKucVNuLjbxMkLG089qa1 at 2026-06-18T07:00:00.000Z -->
 
 A typical Spanish notary office burns 22 to 34 hours a week on appointment booking, document collection and clients calling to ask if the simple copy is ready.
 

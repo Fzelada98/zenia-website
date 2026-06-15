@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-06-15T00:00:00Z",
+  "lastRun": "2026-06-15T12:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-notarias",
+      "keyword": "agente ia para notarias",
+      "tier": 1,
+      "cluster": "servicios",
+      "status": "published",
+      "date": "2026-06-15"
+    },
     {
       "slug": "agente-ia-para-coworking",
       "keyword": "agente ia para coworking",

@@ -2080,3 +2080,17 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-coworking.html
 #coworking #flexibleworkspace #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-15 - Agente IA para Notarías
+
+A typical Spanish notary office burns 22 to 34 hours a week on appointment booking, document collection and clients calling to ask if the simple copy is ready.
+
+That's not a notarial workload. It's a phone-and-WhatsApp workload that the lawyer ended up absorbing because nobody else could. The office is digital on paper (Ley 11/2023 saw to that) but the pre-signing flow, where 80 percent of the hidden cost sits, is still 100 percent manual.
+
+We connected a personalized AI agent to the notary management system and WhatsApp Business API. Real numbers from offices in Madrid, Barcelona, Seville and Valencia: response time on case-status queries from 5h47 to 6 seconds, calls answered from 61-72 to 96-98 percent, documents complete on signing day from 76-82 to 94-97 percent, no-shows from 9-13 to 2-4 percent. 31 percent of contacts now arrive outside office hours and convert at 22 percent. Roughly +8.4K EUR gross monthly on the 297 EUR stack, break-even in month two.
+
+DM if you run a notary, a gestoría or a law firm and want the implementation playbook.
+
+#legaltech #notaria #AI #WhatsAppBusiness
+
+---

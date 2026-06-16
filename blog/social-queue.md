@@ -2105,6 +2105,8 @@ DM if you run a notary, a gestoría or a law firm and want the implementation pl
 
 ## 2026-06-15 - Agente IA para Farmacias
 
+<!-- SCHEDULED:sp_mHCXj96FstJqfpqmyT0Tv at 2026-06-16T07:00:00.000Z -->
+
 Spain's 22,231 community pharmacies burn 12 hours a week just managing supply incidents, and the counter WhatsApp eats another 14-19 hours on repeated stock and prescription questions.
 
 A personalized AI agent connected to Bitfarma, Unycop Win or Farmatic absorbs 78-84 percent of those messages in 8 seconds, drops top-200 stockouts from 12 to 4 percent, and lifts chronic-patient reactivation at 90 days from 22 to 45 percent.
@@ -2118,6 +2120,8 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-farmacias.html
 ---
 
 ## 2026-06-16 - Agente IA para Dermatologos
+
+<!-- SCHEDULED:sp_xzvRJExiXHgiRxlSbGyg7 at 2026-06-17T07:00:00.000Z -->
 
 Dermatology clinics run with a 17-31% no-show rate (JAAD Reviews, 2026). Every empty slot is 80-150 EUR gone and a patient who needed a mole checked.
 

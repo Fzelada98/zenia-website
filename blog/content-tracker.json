@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-06-16T14:00:00Z",
+  "lastRun": "2026-06-16T22:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-agencias-de-seguros",
+      "keyword": "agente ia para agencias de seguros",
+      "tier": 1,
+      "cluster": "servicios",
+      "status": "published",
+      "date": "2026-06-16"
+    },
     {
       "slug": "agente-ia-para-escuelas-infantiles",
       "keyword": "agente ia para escuelas infantiles",

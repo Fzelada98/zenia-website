@@ -2144,3 +2144,17 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-escuelas-infantile
 #earlychildhood #edtech #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-16 - Agente IA para Agencias de Seguros
+
+82% of clients will switch their insurance broker over slow response time (Zywave Broker Services Survey, 2025). Yet 38% of an advisor's day still goes to sending cards, receipts and certificates one by one.
+
+64% of US insurance agencies now use AI in at least one workflow. The brokerages that wired a personalized AI agent into WhatsApp Business API and their AMS dropped lapse rate from 14.2% to 9.7% in eight months, preserving 1.7M USD in recurring premium on a 38M USD book. Lead conversion went 11% to 19%. Cross-sell from 1.3 to 1.8 policies per client.
+
+The advisor stops being a document courier and goes back to selling complex coverage. That's where the margin is.
+
+Full breakdown: https://zeniapartners.com/blog/agente-ia-para-agencias-de-seguros.html
+
+#insurtech #insurance #AI #WhatsAppBusiness
+
+---

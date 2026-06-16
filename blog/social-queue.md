@@ -2132,3 +2132,15 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-dermatologos.html
 #healthtech #dermatology #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-16 - Agente IA para Escuelas Infantiles
+
+A childcare center with 80 places handles 120+ messages a day between families, secretary and educators. Most are the same question repeated: meal times, enrollment dates, pickup changes.
+
+A personalized AI agent on WhatsApp answers 78% of those in 6 seconds, logs absences in the kid's file, and only escalates when a real decision is needed. Result after 90 days: director's WhatsApp time drops from 2.8h to 0.4h a day, response time from 2.5h to 6 seconds, and 38% of new enrollment inquiries land between 9pm and 8am (when no one was answering before).
+
+Full breakdown: https://zeniapartners.com/blog/agente-ia-para-escuelas-infantiles.html
+
+#earlychildhood #edtech #AI #WhatsAppBusiness
+
+---

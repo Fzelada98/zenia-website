@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-06-15T14:00:00Z",
+  "lastRun": "2026-06-16T06:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-dermatologos",
+      "keyword": "agente ia para dermatologos",
+      "tier": 1,
+      "cluster": "clinicas",
+      "status": "published",
+      "date": "2026-06-16"
+    },
     {
       "slug": "agente-ia-para-farmacias",
       "keyword": "agente ia para farmacias",

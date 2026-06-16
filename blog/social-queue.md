@@ -2116,3 +2116,15 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-farmacias.html
 #pharmacy #healthtech #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-16 - Agente IA para Dermatologos
+
+Dermatology clinics run with a 17-31% no-show rate (JAAD Reviews, 2026). Every empty slot is 80-150 EUR gone and a patient who needed a mole checked.
+
+A personalized AI agent on WhatsApp Business API doesn't diagnose. It books, runs 48h/24h/2h reminders, automates post-op protocols and escalates urgent cases. Real numbers six months in: no-shows from 22% to 6-9%, agenda occupancy from 71% to 89%, response time from 1-4h to 12 seconds, and 38% of requests arrive outside clinic hours.
+
+Full breakdown: https://zeniapartners.com/blog/agente-ia-para-dermatologos.html
+
+#healthtech #dermatology #AI #WhatsAppBusiness
+
+---

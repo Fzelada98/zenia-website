@@ -2170,3 +2170,15 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-centros-de-depilac
 #beautyindustry #medspa #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-17 - Agente IA para Clínicas Pediátricas
+
+Pediatric clinics lose up to 19% of revenue to no-shows. A 20-patient-a-day practice running that rate burns roughly $150K a year in empty slots.
+
+The fix is not more reminder calls. A personalized AI agent on WhatsApp answers parents in 8 seconds 24/7, tracks the 24-month vaccine calendar autonomously, and escalates real urgencies to the on-call pediatrician. Clinics we work with cut no-shows from 16% to 6% in the first quarter and recover 28% more on-time vaccinations.
+
+Full breakdown: https://zeniapartners.com/blog/agente-ia-para-clinicas-pediatricas.html
+
+#healthtech #pediatrics #AI #WhatsAppBusiness
+
+---

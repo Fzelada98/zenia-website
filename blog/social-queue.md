@@ -2158,3 +2158,15 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-agencias-de-seguro
 #insurtech #insurance #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-17 - Agente IA para Centros de Depilación Láser
+
+The average med spa retains only 30% of new clients. Well-run laser clinics push that to 60%, and most of the gap is bonos that never finish: 35-50% of 8-session packages get abandoned somewhere between session 4 and 8.
+
+A personalized AI agent on WhatsApp tracks every bono in real time, reminds clients at the optimal interval per body zone, and triggers renewal offers before the package runs out. Centers we work with go from 55% bono completion to 80%, with no-shows dropping from 18% to 6% in the first quarter. The math on a 4-cabin center: an extra 23K EUR per month, against 297-497 EUR for the system.
+
+Full breakdown: https://zeniapartners.com/blog/agente-ia-para-centros-de-depilacion-laser.html
+
+#beautyindustry #medspa #AI #WhatsAppBusiness
+
+---

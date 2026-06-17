@@ -2135,6 +2135,8 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-dermatologos.html
 
 ## 2026-06-16 - Agente IA para Escuelas Infantiles
 
+<!-- SCHEDULED:sp_BSJPRkYLhkJyulfx1UDCe at 2026-06-17T16:16:15.515Z -->
+
 A childcare center with 80 places handles 120+ messages a day between families, secretary and educators. Most are the same question repeated: meal times, enrollment dates, pickup changes.
 
 A personalized AI agent on WhatsApp answers 78% of those in 6 seconds, logs absences in the kid's file, and only escalates when a real decision is needed. Result after 90 days: director's WhatsApp time drops from 2.8h to 0.4h a day, response time from 2.5h to 6 seconds, and 38% of new enrollment inquiries land between 9pm and 8am (when no one was answering before).
@@ -2146,6 +2148,8 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-escuelas-infantile
 ---
 
 ## 2026-06-16 - Agente IA para Agencias de Seguros
+
+<!-- SCHEDULED:sp_RioYMnnmLdD7I0xS6pW8 at 2026-06-18T07:00:00.000Z -->
 
 82% of clients will switch their insurance broker over slow response time (Zywave Broker Services Survey, 2025). Yet 38% of an advisor's day still goes to sending cards, receipts and certificates one by one.
 
@@ -2161,6 +2165,8 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-agencias-de-seguro
 
 ## 2026-06-17 - Agente IA para Centros de Depilación Láser
 
+<!-- SCHEDULED:sp_RPjxsdebcnssBOTTTkSR0 at 2026-06-19T07:00:00.000Z -->
+
 The average med spa retains only 30% of new clients. Well-run laser clinics push that to 60%, and most of the gap is bonos that never finish: 35-50% of 8-session packages get abandoned somewhere between session 4 and 8.
 
 A personalized AI agent on WhatsApp tracks every bono in real time, reminds clients at the optimal interval per body zone, and triggers renewal offers before the package runs out. Centers we work with go from 55% bono completion to 80%, with no-shows dropping from 18% to 6% in the first quarter. The math on a 4-cabin center: an extra 23K EUR per month, against 297-497 EUR for the system.
@@ -2172,6 +2178,8 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-centros-de-depilac
 ---
 
 ## 2026-06-17 - Agente IA para Clínicas Pediátricas
+
+<!-- SCHEDULED:sp_P9A6WXBP5Ab2unoLEFsi at 2026-06-22T07:00:00.000Z -->
 
 Pediatric clinics lose up to 19% of revenue to no-shows. A 20-patient-a-day practice running that rate burns roughly $150K a year in empty slots.
 

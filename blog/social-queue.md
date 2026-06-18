@@ -2204,3 +2204,19 @@ DM me if you want the protocol breakdown for ophthalmology.
 #healthtech #ophthalmology #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-18 - Agente IA para Clínicas de Cirugía Plástica
+
+41% of plastic surgery leads land between 9pm and 1am. The administrative team opens at 9:30am.
+
+By the time a receptionist answers Saturday's WhatsApp on Monday morning, that patient has already booked a valoration with three other clinics. With a 57% buy-within-7-days window and a 12,500 EUR LTV, every hour of silence on the chat is a four-figure cost.
+
+Clinics running a personalized AI agent on WhatsApp move lead-to-consult conversion from 18% to 46%, drop no-shows from 22% to 6% and qualify 92% of contacts before the surgeon's calendar is touched. Same 80 leads, 23 more valorations a month, eleven extra surgeries at 4,500 EUR each.
+
+The surgeons stop spending Tuesday morning answering "how many days off do I need".
+
+DM me if you want the qualification protocol we use for aesthetic and reconstructive practices.
+
+#healthtech #plasticsurgery #AI #WhatsAppBusiness
+
+---

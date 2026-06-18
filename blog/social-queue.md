@@ -2190,3 +2190,17 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-clinicas-pediatric
 #healthtech #pediatrics #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-18 - Agente IA para Clínicas de Oftalmología
+
+60% of patients with diabetic retinopathy disappear from follow-up every year. The American Academy of Ophthalmology calls it the silent attrition behind 8B USD in avoidable vision loss claims.
+
+Ophthalmology clinics running a personalized AI agent on WhatsApp Business API (85-95% opt-in vs 15-25% for email) bring no-shows down from 22% to 7% in revisions, from 11% to 3% in refractive surgery, and pull 38% of those lost diabetics back into the schedule. On a 2-consult + 1-OR clinic, that lands around 29K EUR a month against a 297-497 EUR system. NPS post-op moves +22 points.
+
+The receptionist stops being a confirmation call center and goes back to running the floor.
+
+DM me if you want the protocol breakdown for ophthalmology.
+
+#healthtech #ophthalmology #AI #WhatsAppBusiness
+
+---

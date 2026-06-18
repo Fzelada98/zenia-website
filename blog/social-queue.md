@@ -2220,3 +2220,17 @@ DM me if you want the qualification protocol we use for aesthetic and reconstruc
 #healthtech #plasticsurgery #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-18 - Agente IA para Clínicas de Osteopatía
+
+31% of first-time osteopathy bookings come in between 9pm and 8am. By morning, 44% of them have already booked somewhere else or just bought ibuprofen.
+
+Solo and two-person osteopathy clinics lose between 5,000 and 9,000 EUR every month to slow WhatsApp replies, 22% no-shows and patients who quietly drop off after the third session.
+
+A personalized AI agent on WhatsApp Business API answers in 8 seconds 24/7, drops no-shows from 22% to 7%, reactivates 30% of patients inactive for 90+ days and frees the osteopath from 90 minutes of daily admin. Same clinic, 2 extra billable sessions a day.
+
+Full ROI breakdown with the 5-week implementation plan: https://zeniapartners.com/blog/agente-ia-para-clinicas-de-osteopatia.html
+
+#healthtech #osteopathy #AI #WhatsAppBusiness
+
+---

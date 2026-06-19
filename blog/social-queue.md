@@ -2248,3 +2248,17 @@ Full breakdown with ROI table and 5 week plan: https://zeniapartners.com/blog/ag
 #swimschool #customerretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-19 - Agente IA para Academias de Tenis
+
+48% court occupancy. 26% adult churn per year. Two numbers that quietly bleed every tennis academy in Spain.
+
+The funny part: it's almost never the tennis. It's a 4 to 12 hour reply time on WhatsApp, dead reposition slots that nobody offers back to the waiting list, and zero structured detection of students drifting away after month four.
+
+A personalized AI agent on WhatsApp Business API pushes court occupancy to 72%, drops adult churn to 9%, doubles trial-to-member conversion from 32% to 61% and recovers 51 reposition hours per month that used to evaporate. Net impact on a 4-court, 320-student academy: +6,300 EUR/month, no new hires.
+
+Full ROI breakdown and 5 week implementation plan: https://zeniapartners.com/blog/agente-ia-para-academias-de-tenis.html
+
+#tennis #sportstech #memberretention #AI #WhatsAppBusiness
+
+---

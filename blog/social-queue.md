@@ -2234,3 +2234,17 @@ Full ROI breakdown with the 5-week implementation plan: https://zeniapartners.co
 #healthtech #osteopathy #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-19 - Agente IA para escuelas de natación
+
+Swim schools lose 4.99% of students every month (First Class Software, 2025). Acquiring a new swimmer costs 5x more than keeping one.
+
+The bleed isn't lesson quality. It's the 1.5 to 4 hour reply time on WhatsApp, dead waiting lists that take 8 to 14 days to fill, and zero structured churn flow. 41% of new family inquiries arrive between 8pm and midnight, when no human coordinator is reading.
+
+We documented a 220 student swim school that cut monthly attrition to 2.5%, filled waiting lists in under 24 hours, and added +4,345 EUR/month in net margin by month six. No new hires.
+
+Full breakdown with ROI table and 5 week plan: https://zeniapartners.com/blog/agente-ia-para-escuelas-de-natacion.html
+
+#swimschool #customerretention #AI #WhatsAppBusiness
+
+---

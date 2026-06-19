@@ -2272,3 +2272,17 @@ Full ROI breakdown and 5 week implementation plan: https://zeniapartners.com/blo
 #tennis #sportstech #memberretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-19 - Agente IA para Clinicas Auditivas
+
+Spain's hearing aid market closed 2025 at 432,868 units distributed, up 18% year over year (Optimoda). More patients than ever walking through audiology center doors.
+
+The bottleneck isn't demand. Audiologists spend 2 to 3 hours a day coordinating appointments instead of doing fittings. No-show rates on free audiometries sit between 22% and 38%. Trial-phase abandonment runs 35% to 45% because nobody follows up on day 3, day 7, day 14.
+
+A personalized AI agent on WhatsApp Business API drops no-shows to 8-12%, lifts trial-to-sale conversion from 30% to 44%, and reactivates the dormant patient base at 6%. Net impact on a 3-audiologist center: +25,930 EUR/month, no extra hires.
+
+Full ROI breakdown and 5 week implementation plan: https://zeniapartners.com/blog/agente-ia-para-clinicas-auditivas.html
+
+#healthtech #patientretention #AI #WhatsAppBusiness
+
+---

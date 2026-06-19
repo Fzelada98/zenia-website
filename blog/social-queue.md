@@ -2193,6 +2193,8 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-clinicas-pediatric
 
 ## 2026-06-18 - Agente IA para Clínicas de Oftalmología
 
+<!-- SCHEDULED:sp_9nVhcm9O5QNBqQ773m9o at 2026-06-19T16:14:03.580Z -->
+
 60% of patients with diabetic retinopathy disappear from follow-up every year. The American Academy of Ophthalmology calls it the silent attrition behind 8B USD in avoidable vision loss claims.
 
 Ophthalmology clinics running a personalized AI agent on WhatsApp Business API (85-95% opt-in vs 15-25% for email) bring no-shows down from 22% to 7% in revisions, from 11% to 3% in refractive surgery, and pull 38% of those lost diabetics back into the schedule. On a 2-consult + 1-OR clinic, that lands around 29K EUR a month against a 297-497 EUR system. NPS post-op moves +22 points.
@@ -2206,6 +2208,8 @@ DM me if you want the protocol breakdown for ophthalmology.
 ---
 
 ## 2026-06-18 - Agente IA para Clínicas de Cirugía Plástica
+
+<!-- SCHEDULED:sp_ejvZwR0USZVDnDfLC3ug at 2026-06-22T07:00:00.000Z -->
 
 41% of plastic surgery leads land between 9pm and 1am. The administrative team opens at 9:30am.
 
@@ -2223,6 +2227,8 @@ DM me if you want the qualification protocol we use for aesthetic and reconstruc
 
 ## 2026-06-18 - Agente IA para Clínicas de Osteopatía
 
+<!-- SCHEDULED:sp_Vubpqqa3OvLxqlfB8td at 2026-06-23T07:00:00.000Z -->
+
 31% of first-time osteopathy bookings come in between 9pm and 8am. By morning, 44% of them have already booked somewhere else or just bought ibuprofen.
 
 Solo and two-person osteopathy clinics lose between 5,000 and 9,000 EUR every month to slow WhatsApp replies, 22% no-shows and patients who quietly drop off after the third session.
@@ -2237,6 +2243,8 @@ Full ROI breakdown with the 5-week implementation plan: https://zeniapartners.co
 
 ## 2026-06-19 - Agente IA para escuelas de natación
 
+<!-- SCHEDULED:sp_KSmwMydmp4urasrk0uV4p at 2026-06-24T07:00:00.000Z -->
+
 Swim schools lose 4.99% of students every month (First Class Software, 2025). Acquiring a new swimmer costs 5x more than keeping one.
 
 The bleed isn't lesson quality. It's the 1.5 to 4 hour reply time on WhatsApp, dead waiting lists that take 8 to 14 days to fill, and zero structured churn flow. 41% of new family inquiries arrive between 8pm and midnight, when no human coordinator is reading.
@@ -2250,6 +2258,8 @@ Full breakdown with ROI table and 5 week plan: https://zeniapartners.com/blog/ag
 ---
 
 ## 2026-06-19 - Agente IA para Academias de Tenis
+
+<!-- SCHEDULED:sp_H19raKNqagYsKJTyoh1 at 2026-06-25T07:00:00.000Z -->
 
 48% court occupancy. 26% adult churn per year. Two numbers that quietly bleed every tennis academy in Spain.
 

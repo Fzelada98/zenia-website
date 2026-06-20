@@ -2286,3 +2286,17 @@ Full ROI breakdown and 5 week implementation plan: https://zeniapartners.com/blo
 #healthtech #patientretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-20 - Agente IA para Clinicas de Medicina Estetica
+
+Spain has 6,305 authorized U.48 aesthetic medicine centers billing 3.585 billion EUR a year (SEME), and the average Instagram lead goes cold in 15 minutes.
+
+Clinics that still triage WhatsApp manually lose 30 to 40% of leads to whoever replies first, run no-shows at 18 to 25%, and never reactivate the dormant patient base sitting in their software.
+
+A personalized AI agent on WhatsApp Business API lifts lead to first-consult conversion from 26% to 65%, drops no-shows to 8%, cuts CPL on Meta Ads by 58% and pushes monthly Google reviews from 5 to 30+. Net impact on a 2-doctor, 4-cabin clinic: +34,500 EUR/month, no extra hires.
+
+Full ROI breakdown and 5 week implementation plan: https://zeniapartners.com/blog/agente-ia-para-clinicas-de-medicina-estetica.html
+
+#beautyindustry #medspa #AI #WhatsAppBusiness
+
+---

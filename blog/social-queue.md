@@ -2324,3 +2324,22 @@ DM me if you want the full retention framework for chiropractic or physiotherapy
 #healthtech #patientretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-20 - Agente IA para empresas de catering
+
+A catering company with 120 monthly leads at 1,850 EUR average ticket loses 60% of its pipeline because reply time exceeds one hour. The buyer doesn't wait. They book whoever quotes first.
+
+We mapped 90 days of caterers running a personalized AI agent on WhatsApp Business API + CRM. The numbers from operators we work with:
+
+- Lead-to-contract close rate: 18% to 30%
+- Tasting no-shows: 22% to 7%
+- Sales-rep admin hours: 14-22h/week down to 3-5h
+- Inactive database reactivation: 18-24% recovered
+
+For a mid-size operator: roughly 39,000 EUR/month in incremental revenue against a 297-497 EUR/month subscription. The bottleneck stopped being lead generation a long time ago. It's response speed.
+
+DM me if you run a catering business and want the qualification framework we use.
+
+#catering #B2B #AI #WhatsAppBusiness
+
+---

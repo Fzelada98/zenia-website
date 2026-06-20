@@ -2275,6 +2275,8 @@ Full ROI breakdown and 5 week implementation plan: https://zeniapartners.com/blo
 
 ## 2026-06-19 - Agente IA para Clinicas Auditivas
 
+<!-- SCHEDULED:sp_EDp4Vr6yxDbIn0XeGpo3 at 2026-06-22T07:00:00.000Z -->
+
 Spain's hearing aid market closed 2025 at 432,868 units distributed, up 18% year over year (Optimoda). More patients than ever walking through audiology center doors.
 
 The bottleneck isn't demand. Audiologists spend 2 to 3 hours a day coordinating appointments instead of doing fittings. No-show rates on free audiometries sit between 22% and 38%. Trial-phase abandonment runs 35% to 45% because nobody follows up on day 3, day 7, day 14.
@@ -2288,6 +2290,8 @@ Full ROI breakdown and 5 week implementation plan: https://zeniapartners.com/blo
 ---
 
 ## 2026-06-20 - Agente IA para Clinicas de Medicina Estetica
+
+<!-- SCHEDULED:sp_w2wkeKqs3rfp4aTS50Rg at 2026-06-23T07:00:00.000Z -->
 
 Spain has 6,305 authorized U.48 aesthetic medicine centers billing 3.585 billion EUR a year (SEME), and the average Instagram lead goes cold in 15 minutes.
 
@@ -2304,6 +2308,8 @@ Full ROI breakdown and 5 week implementation plan: https://zeniapartners.com/blo
 ---
 
 ## 2026-06-20 - Agente de IA para Clínicas de Quiropráctica
+
+<!-- SCHEDULED:sp_ae3ponNz1sfGFUAWepP6h at 2026-06-24T07:00:00.000Z -->
 
 Only 38% of chiropractic patients complete their initial care plan. The other 62% drop off around session 4 or 5, taking 4 to 7 unbilled sessions with them.
 

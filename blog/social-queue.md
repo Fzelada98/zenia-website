@@ -2300,3 +2300,21 @@ Full ROI breakdown and 5 week implementation plan: https://zeniapartners.com/blo
 #beautyindustry #medspa #AI #WhatsAppBusiness
 
 ---
+
+---
+
+## 2026-06-20 - Agente de IA para Clínicas de Quiropráctica
+
+Only 38% of chiropractic patients complete their initial care plan. The other 62% drop off around session 4 or 5, taking 4 to 7 unbilled sessions with them.
+
+That's not a treatment problem. It's a follow-up problem. Clinics rely on a receptionist to call patients who go quiet, and that call rarely happens.
+
+We deployed personalized AI agents in chiropractic clinics across Spain and LATAM. Result over 90 days: plan completion from 38% to 62%, no-shows from 14% to 5%, and maintenance patients from 14% to 32% of the active base.
+
+For a single-practitioner clinic with 400 active patients, that's roughly 11.000 EUR per month in recurring revenue that was already inside the building, just unclaimed.
+
+DM me if you want the full retention framework for chiropractic or physiotherapy.
+
+#healthtech #patientretention #AI #WhatsAppBusiness
+
+---

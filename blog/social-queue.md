@@ -2359,3 +2359,22 @@ Reply if you run an independent bookstore and want the breakdown.
 #retailtech #booksellers #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-21 - Agente de IA para Clínicas de Rehabilitación
+
+50% to 65% of patients prescribed rehab quit before discharge. It isn't about willpower. It's about follow-up that nobody is staffing.
+
+We ran the numbers with rehab clinics deploying a personalized AI agent on WhatsApp Business API. Over 90 days:
+
+- No-show rate: 14-18% down to 4-6%
+- Premature dropout: 48% down to 26%
+- Home-exercise adherence: 35% up to 70%
+- Bonus packages renewed without manual chasing: 38% to 71%
+
+For a 4-therapist clinic that's roughly 8,500 EUR/month in recovered revenue against a 297-497 EUR/month subscription. The clinical outcome moves before the P&L does. Patients who finish their treatment become the referral base that ad spend cannot buy.
+
+Reply if you run a physio or rehab clinic and want the adherence framework.
+
+#healthtech #patientretention #AI #WhatsAppBusiness
+
+---

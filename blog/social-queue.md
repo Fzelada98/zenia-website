@@ -2343,3 +2343,19 @@ DM me if you run a catering business and want the qualification framework we use
 #catering #B2B #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-21 - Agente de IA para Librerías
+
+Spain lost 223 independent bookstores in three years. The 2,754 still standing are competing with Amazon on the wrong axis.
+
+Average response time to a WhatsApp question about a title: 1 hour 40 minutes. 35-45% of those readers buy from Amazon before the bookseller replies. The competitive moat is curation and community, not price, and it's leaking through the messaging app nobody is staffing.
+
+We built a personalized AI agent trained on the lead bookseller's taste, plugged into the catalog and CRM. Replies in 8 seconds, recommends 2-3 titles based on the reader's history, runs the monthly book club, and reactivates readers dormant for 90+ days. Result over 90 days: consultation-to-sale conversion 22% to 41%, event attendance from 14% to 34%, average ticket up 22%.
+
+Brick-and-mortar retail wins on relationship. AI is finally the tool that scales it.
+
+Reply if you run an independent bookstore and want the breakdown.
+
+#retailtech #booksellers #AI #WhatsAppBusiness
+
+---

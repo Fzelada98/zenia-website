@@ -2378,3 +2378,19 @@ Reply if you run a physio or rehab clinic and want the adherence framework.
 #healthtech #patientretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-21 - Agente IA para Clínicas de Acupuntura
+
+The 2026 benchmark for acupuncture clinics sets patient retention at 65%. Most clinics we audit operate below 60%, and the gap is rarely clinical. It's operational.
+
+The bleed shows up in three places: messages answered hours late on WhatsApp, the next session that never gets booked at the end of the visit, and inactive patients nobody reactivates. A personalized AI agent connected to the calendar and patient record closes those three at once.
+
+Numbers from clinics live on the system for 90 days: reply time from 34-72 minutes down to 9 seconds, no-shows from 14-18% down to 4-6%, retention from 55-62% up to 72-78%, and 9-14 dormant patients pulled back into care every month.
+
+For a 2-acupuncturist clinic at 22 sessions/day and a 55 EUR ticket, that's roughly 16,000 EUR/month in recovered revenue against a 297-497 EUR subscription. The treatment plan, not the single visit, is the unit economic that actually matters.
+
+Reply if you run an acupuncture or integrative-medicine clinic and want the retention playbook.
+
+#healthtech #patientretention #AI #WhatsAppBusiness
+
+---

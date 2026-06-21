@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-06-21T06:05:00Z",
+  "lastRun": "2026-06-21T14:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-clinicas-de-rehabilitacion",
+      "keyword": "agente ia para clinicas de rehabilitacion",
+      "tier": 1,
+      "cluster": "clinicas",
+      "status": "published",
+      "date": "2026-06-21"
+    },
     {
       "slug": "agente-ia-para-librerias",
       "keyword": "agente ia para librerias",

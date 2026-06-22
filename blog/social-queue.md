@@ -2394,3 +2394,19 @@ Reply if you run an acupuncture or integrative-medicine clinic and want the rete
 #healthtech #patientretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-22 - Agente de IA para Empresas de Limpieza
+
+The average cleaning company answers 58% of inbound calls during the day and close to zero after 6pm. 41% of cleaning quote requests arrive outside office hours. That gap is the whole P&L story.
+
+We measure three failures, not one. Calls that ring out. Quotes that take a day. One-off jobs that never become recurring. A personalized AI agent on WhatsApp closes all three, and recurring customers are 8-12x more valuable than one-offs.
+
+After 90 days live: answer rate from 58% to 99%, quote-to-contract conversion from 22% to 44%, recurring attach from 13% to 35%, CAC down 50% on Meta and Google. For an 8-operator company at 120 jobs/month, that's about 14,000 EUR/month in net new contribution against a 297-497 EUR subscription.
+
+The interesting metric is recurring attach. It's quiet, it compounds, and almost nobody measures it.
+
+Reply if you run a cleaning operation and want the recurring playbook.
+
+#B2B #SaaS #AI #automation
+
+---

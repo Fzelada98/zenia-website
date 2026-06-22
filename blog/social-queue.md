@@ -2426,3 +2426,19 @@ Reply if you operate a bar or cocktail venue and want the private-events playboo
 #restauranttech #customerretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-22 - Agente IA para Empresas de Reformas
+
+When a homeowner asks for a renovation quote, they message three companies at once and pick whoever replies first. Not the cheapest. Not the best rated. The first.
+
+Spain runs 1.9M renovations a year across 332,000 fragmented contractors. The whole P&L gap sits in response time, not pricing. 47% of quote requests land outside office hours, when nobody is reading the WhatsApp.
+
+A personalized AI agent on WhatsApp Business API qualifies the lead in 60 seconds, sends a pre-quote from m² baselines, and books the site visit straight into the foreman's calendar. After 90 days live: lead-to-visit conversion jumps from 22% to 50%, visit-to-signed contract from 30% to 46%, cost per qualified lead drops 60% on Habitissimo and Houzz.
+
+For a 6-operator firm at 80 leads/month and a 22,000 EUR average ticket, that's roughly 24,000 EUR/month in extra gross margin against a 297-497 EUR subscription. The metric that quietly moves the P&L is reactivation of cold leads at 30/60/90 days, not new traffic.
+
+Reply if you run a renovation or contracting business and want the lead qualification playbook.
+
+#B2B #SaaS #AI #automation
+
+---

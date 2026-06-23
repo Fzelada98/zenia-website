@@ -2458,3 +2458,17 @@ Reply if you operate a moving company and want the response-time playbook.
 #B2B #SaaS #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-23 - Agente IA para clínicas de traumatología
+
+Orthopedic clinics in Spain lose 35-50% of patients between the first consult and the last rehab session. Not for medical reasons. Operational ones: nobody answers WhatsApp after 8pm, reminders are sent only to "important" patients, abandoned cases get detected 30 days too late.
+
+41% of new appointment requests arrive between 20:00 and 09:00. In manual workflows, those messages get answered the next day, when half of those patients have already called another clinic.
+
+We built a personalized AI agent for orthopedic clinics that responds in 8 seconds 24/7, schedules the full rehab block at once, sends staggered 48h + 4h reminders, and flags abandonment risk before it happens. Result on a 3-trauma-surgeon clinic with 1 PT: +10,800 EUR/month in net recovered revenue, no-show on consults from 14-22% to 6-9%, rehab abandonment from 35-50% down to 22-30%.
+
+Full breakdown with the ROI math: https://zeniapartners.com/blog/agente-ia-para-clinicas-de-traumatologia.html
+
+#healthtech #patientretention #AI #automation
+
+---

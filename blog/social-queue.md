@@ -2442,3 +2442,19 @@ Reply if you run a renovation or contracting business and want the lead qualific
 #B2B #SaaS #AI #automation
 
 ---
+
+## 2026-06-23 - Agente IA para Empresas de Mudanzas
+
+A family planning a move asks four moving companies for a quote on the same Saturday afternoon. They sign with whoever replies first with a clear number. Not the cheapest. Not the best reviewed. The first.
+
+Moving leads decay in minutes. Industry data: companies that automate follow-up and digital estimates close 38% of inbound leads. The ones running on manual quotes close 22%. Leads contacted within 5 minutes convert 4x more, yet only 38% of movers hit that window. 43% of leads arrive Friday night through Sunday, when the commercial team is offline.
+
+A personalized AI agent on WhatsApp Business API qualifies origin, destination, m3, floor and elevator in 60 seconds, prices against your real tariff, takes a 20-30% deposit and signs the contract inside the same chat. After 90 days live: response time from 1.5-4 hours to 8 seconds, quote-to-contract from 22% to 42%, CAC down 54%, monthly Google reviews from 1-3 to 14-22.
+
+For an 8-operator company at 120 leads/month and a 1,150 EUR average ticket, that's roughly 18,000 EUR/month in additional net margin against a 297-497 EUR subscription. The quiet metric that moves the P&L is reactivation of cold quotes at day 3 and day 14 with progressive incentive.
+
+Reply if you operate a moving company and want the response-time playbook.
+
+#B2B #SaaS #AI #WhatsAppBusiness
+
+---

@@ -2472,3 +2472,17 @@ Full breakdown with the ROI math: https://zeniapartners.com/blog/agente-ia-para-
 #healthtech #patientretention #AI #automation
 
 ---
+
+## 2026-06-23 - Agente IA para empresas de jardinería
+
+67% of landscaping quote requests never close because the company takes more than 24 hours to reply. By then the client has already contacted two competitors and the conversation becomes a price war instead of a consultative sale.
+
+The bottleneck isn't the crews in the field. It's the office. Most landscaping companies with 4 to 10 gardeners lose 16 to 20 weekly hours on admin work that an AI agent can absorb without complaint.
+
+We built a personalized AI agent for landscaping companies that qualifies leads, quotes off your real rate card, books site visits, follows up at 3, 7 and 15 days, and triggers maintenance renewals 45 days before they lapse. Results on a 4-gardener firm with 60 active maintenance contracts: response time from 18-36h to 40 seconds, close rate from 18% to 27%, renewals from 75-80% up to 92-95%, and +8,200 EUR/month in net stabilized profit against a 297-497 EUR system cost.
+
+Reply if you run a landscaping or grounds-maintenance business and want the office playbook.
+
+#B2B #SaaS #AI #automation
+
+---

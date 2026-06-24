@@ -2512,3 +2512,15 @@ Reply if you run an agency and want the full ROI sheet for your team size.
 #B2B #SaaS #AI #automation
 
 ---
+
+## 2026-06-24 - Agente IA para Empresas de Fontanería
+
+Plumbing companies in Spain miss 27 to 40% of incoming calls and 85% of those callers never call back. The reason is physical: the tech is under a sink, in a crawlspace, or in traffic between jobs.
+
+A 4-tech operation we worked with was losing 18 leads a day worth roughly €1,600 in same-day revenue. After deploying a personalized AI agent on phone and WhatsApp connected to live calendar and tech location: missed calls dropped below 2%, lead-to-visit conversion jumped from 24% to 58%, and 34% of jobs now get booked outside office hours that were dark before. Net upside of about €47k/month against €497/month in tooling. Payback in roughly 21 days.
+
+Full breakdown with the ROI table and 4-week rollout: https://zeniapartners.com/blog/agente-ia-para-empresas-de-fontaneria.html
+
+#fieldservice #plumbing #AI #WhatsAppBusiness
+
+---

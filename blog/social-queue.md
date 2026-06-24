@@ -2498,3 +2498,17 @@ Full breakdown (data, ROI, 5-week plan): https://zeniapartners.com/blog/agente-i
 #retailtech #ecommerce #AI #automation
 
 ---
+
+## 2026-06-24 - Agente IA para Agencias de Marketing
+
+45% of marketing teams now run agentic AI in production, up from 15% in 2024. The agencies still doing reporting by hand are losing the math.
+
+A typical 8-person agency burns 14 hours per week per account manager on reporting, lead qualifying and retainer comms. None of that is billable strategy work. It is the tax of growth without leverage.
+
+We just published a playbook on how to integrate a personalized AI agent across the four flows that move the P&L: inbound qualifying 24/7, weekly client reports drafted in 12 minutes instead of 2 hours, retainer WhatsApp triage and 7-day account onboarding. Median impact in the agencies we work with: CAC down 19%, retainer churn cut in half, capacity per account manager up 71%, with €43k/month of net upside on a €60k/month agency.
+
+Reply if you run an agency and want the full ROI sheet for your team size.
+
+#B2B #SaaS #AI #automation
+
+---

@@ -2486,3 +2486,15 @@ Reply if you run a landscaping or grounds-maintenance business and want the offi
 #B2B #SaaS #AI #automation
 
 ---
+
+## 2026-06-24 - Agente IA para Zapaterías
+
+81% of online shoe buyers in Spain hit friction at checkout. 48% of it boils down to one question: what size am I in this brand?
+
+That single doubt drives the 23-30% return rate quietly killing footwear ecommerce margins. Result for one Spanish retailer (1 store + ecommerce, €42k/month) after deploying a personalized AI agent on WhatsApp connected to live stock and a brand-by-brand fit table: size-related returns cut from 27% to 11%, cart recovery up from 3% to 21%, +€8,600/month net.
+
+Full breakdown (data, ROI, 5-week plan): https://zeniapartners.com/blog/agente-ia-para-zapaterias.html
+
+#retailtech #ecommerce #AI #automation
+
+---

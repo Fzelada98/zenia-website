@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-06-24T22:06:00Z",
+  "lastRun": "2026-06-25T00:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-electricistas",
+      "keyword": "agente ia para electricistas",
+      "tier": 1,
+      "cluster": "servicios",
+      "status": "published",
+      "date": "2026-06-25"
+    },
     {
       "slug": "agente-ia-para-empresas-de-fontaneria",
       "keyword": "agente ia para empresas de fontaneria",

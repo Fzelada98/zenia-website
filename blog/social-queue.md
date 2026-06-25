@@ -2524,3 +2524,15 @@ Full breakdown with the ROI table and 4-week rollout: https://zeniapartners.com/
 #fieldservice #plumbing #AI #WhatsAppBusiness
 
 ---
+## 2026-06-25 - Agente IA para Electricistas
+
+The average electrical contractor loses $42,000 a year in revenue to unanswered calls. The reason is physical: you can't pick up the phone while you're rewiring a panel or stripping cable on a ladder.
+
+62% of incoming home-services calls go unanswered, 85% of those callers never call back, and more than 75% of homeowners hire the first electrician who responds. A 2-tech operation we set up was bleeding 8 qualified leads a week. After deploying a personalized AI agent on WhatsApp connected to live calendar, price book and tech routing: response time dropped from 3-6 hours to under 60 seconds, lead-to-visit conversion went from 32% to 58%, 38% of new jobs now get booked outside office hours. Net upside ~€14k/month against €497/month in tooling.
+
+Full breakdown with the ROI table and 4-week rollout: https://zeniapartners.com/blog/agente-ia-para-electricistas.html
+
+#fieldservice #electrician #AI #WhatsAppBusiness
+
+---
+

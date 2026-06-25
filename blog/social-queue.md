@@ -2547,3 +2547,14 @@ If you run a locksmith shop and want the ROI table plus the 4-week rollout, DM m
 
 ---
 
+## 2026-06-25 - Agente IA para Heladerias
+
+A Spanish artisanal ice cream shop earns 70% of its annual revenue in 4 months. The other 8 months, 90% of them shut down their digital channel entirely.
+
+Meanwhile in season they get 60-180 messages/day across WhatsApp and Instagram and ignore 28% of them in July-August. That is 4 to 7 birthday cakes lost per week at €38 each. A neighborhood shop we set up with a personalized AI agent connected to their POS, payment gateway and 1,800-contact database cut ignored messages from 28% to 3%, lifted to-go ticket size +22%, recovered 27% of orders from Glovo/Just Eat into their own channel, and ran 3 campaigns/month from October through May worth ~€1,400 each. Net upside €37k/year against €297/month in tooling.
+
+Reply if you run a seasonal food business with the same gap, happy to share the campaign calendar.
+
+#restauranttech #foodbusiness #AI #WhatsAppBusiness
+
+---

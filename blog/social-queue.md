@@ -2535,4 +2535,15 @@ Full breakdown with the ROI table and 4-week rollout: https://zeniapartners.com/
 #fieldservice #electrician #AI #WhatsAppBusiness
 
 ---
+## 2026-06-25 - Agente IA para Cerrajeros
+
+A locksmith loses 38% to 60% of overnight calls. Each missed lockout call is €90 to €220 walking to whoever picks up first on Google.
+
+The average emergency customer dials 3.4 locksmiths before someone answers. The one who answers takes the job. A 2-van shop we set up was losing 18 overnight calls a week. After deploying a personalized AI agent on phone and WhatsApp connected to a real price book and on-call rotation: answered-in-10-seconds went from 34% to 98%, conversion via instant price range jumped from 41% to 78%, and 47% of closed jobs now happen between 1 AM and 6 AM, hours that were dark on the P&L. Net upside ~€27k/month against €497/month in tooling.
+
+If you run a locksmith shop and want the ROI table plus the 4-week rollout, DM me.
+
+#fieldservice #locksmith #AI #WhatsAppBusiness
+
+---
 

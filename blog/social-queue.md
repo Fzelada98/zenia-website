@@ -2558,3 +2558,15 @@ Reply if you run a seasonal food business with the same gap, happy to share the 
 #restauranttech #foodbusiness #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-26 - Agente IA para Empresas de Eventos
+
+A Spanish event planner coordinates 8.4 vendors per project and burns 14 hours on pure scheduling, per Cvent's 2026 report. 73% of day-of incidents trace back to one thing: comms drift between client, team and vendors.
+
+An agency we set up with 3 planners was losing 16 briefs a month to slow replies and missing 11 cake/menu changes per event in catering. After deploying a personalized AI agent on WhatsApp connected to their CRM, supplier book and RSVP flow: brief response went from 11 hours to 8 seconds, qualified-lead close rate jumped from 22% to 38%, guest RSVP rate climbed from 54% to 89%, and each planner closed +12 events/year without working more hours. Net upside ~€73k/month against €497/month in tooling.
+
+Reply if you run a wedding or corporate events agency with the same coordination drag, happy to share the vendor-flow blueprint.
+
+#eventprofs #eventplanning #AI #WhatsAppBusiness
+
+---

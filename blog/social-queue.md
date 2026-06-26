@@ -2570,3 +2570,15 @@ Reply if you run a wedding or corporate events agency with the same coordination
 #eventprofs #eventplanning #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-26 - Agente IA para Empresas de Transporte
+
+A logistics company moving 1,500 shipments a day fields ~600 customer queries: "where is my order, reschedule delivery, no one is home." 76.6% of the sector already has AI in motion per Mecalux 2026, yet most still pay 6 humans €14k/month to answer the same 30 questions.
+
+A regional carrier we deployed a personalized AI agent for, integrated with their TMS over WhatsApp, cut response time from 8 minutes to 6 seconds, resolved 82% of queries without an operator, dropped last-mile failed deliveries from 14% to 8%, and lifted NPS from 32 to 61. Net upside ~€58k/month against €497-1,500/month in tooling. Full breakdown: https://zeniapartners.com/blog/agente-ia-para-empresas-de-transporte.html
+
+Reply if you run a transport or last-mile operation with the same cost-per-contact problem, happy to share the rollout plan.
+
+#logistics #lastmile #AI #WhatsAppBusiness
+
+---

@@ -2582,3 +2582,15 @@ Reply if you run a transport or last-mile operation with the same cost-per-conta
 #logistics #lastmile #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-26 - Agente IA para Apartamentos Tur&iacute;sticos
+
+Spain just lost 47,000 tourist apartments in a year (INE: 329,764 active in Nov 2025) and the survivors are fighting for the same guests with stricter rules. The metric deciding who wins is not price. It is response time, and the median manager still takes 2-12 hours to answer a Booking inquiry while the algorithm punishes anything over 60 minutes.
+
+A 30-apartment manager we deployed a personalized AI agent for, plugged into Avantio and Hostaway over WhatsApp Business API: response time from 4 hours to 8 seconds, inquiry-to-booking conversion from 18% to 38%, cancellations from 10% to 4%, and direct bookings (no OTA commission) from 8% to 22%. Net upside ~€30k/month against €497-997/month in tooling. Full breakdown: https://zeniapartners.com/blog/agente-ia-para-apartamentos-turisticos.html
+
+Reply if you run a vacation rental portfolio and your inbox is the bottleneck, happy to share the integration plan.
+
+#vacationrental #shorttermrental #AI #WhatsAppBusiness
+
+---

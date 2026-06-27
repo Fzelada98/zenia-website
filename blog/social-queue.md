@@ -2618,3 +2618,15 @@ Reply if you run an HVAC, plumbing or trades business and your phone is the bott
 #HVAC #fieldservice #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-27 - Agente IA para Wedding Planners
+
+Engaged couples contact 5-7 wedding planners in parallel and book the first one who replies professionally. The median planner spends 60-70% of their week on admin work and answers a first lead 6-24 hours later. By then someone else already signed the contract.
+
+For a Spanish boutique studio running 24 weddings/year at a €4,800 fee, we deployed a personalized AI agent on WhatsApp Business API + their CRM: first-touch response from 8 hours to 30 seconds, lead-to-meeting conversion from 18% to 42%, admin hours from 36/week to 12/week, and weddings managed per senior planner from 14 to 24. Net upside roughly €120k/year against €6-9k in tooling. ROI 13-20x and the creative work stayed human.
+
+Reply if you run a wedding studio or events agency and proposal follow-up is the bottleneck, happy to share the qualification flow.
+
+#weddingplanner #eventindustry #AI #WhatsAppBusiness
+
+---

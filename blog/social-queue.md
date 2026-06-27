@@ -2594,3 +2594,15 @@ Reply if you run a vacation rental portfolio and your inbox is the bottleneck, h
 #vacationrental #shorttermrental #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-27 - Agente IA para Empresas de Placas Solares
+
+Spanish solar installers pay €25-45 per qualified lead, then share that contact with 3-4 competitors. 78% of the deal goes to whoever responds first. The median installer still takes 4-22 hours to reply, and 62% of leads come in outside office hours.
+
+A residential solar company we deployed a personalized AI agent for, plugged into HubSpot over WhatsApp Business API: response time from 9 hours to 8 seconds, qualified leads passed to sales from 21% to 54%, close rate from 3.8% to 7.1%, and CAC from €5,200 to €2,300. Net upside ~€23k/month in incremental margin against €297-497/month in tooling. Full breakdown: https://zeniapartners.com/blog/agente-ia-para-empresas-de-placas-solares.html
+
+Reply if you install solar and your reps still chase leads who do not own the roof, happy to share the qualification script.
+
+#solarenergy #leadresponse #AI #WhatsAppBusiness
+
+---

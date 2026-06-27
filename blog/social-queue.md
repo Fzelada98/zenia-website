@@ -2606,3 +2606,15 @@ Reply if you install solar and your reps still chase leads who do not own the ro
 #solarenergy #leadresponse #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-27 - Agente IA para Empresas de Climatizaci&oacute;n
+
+Spanish HVAC contractors lose 20-40% of their inbound calls, and 78% of customers hire the first company that picks up. The trade median first-response time still tops 2 hours, with only 11% replying inside an hour, while 62% of leads come in after 18:00, on weekends or holidays.
+
+For a 2-technician installer doing ~15 inbound contacts/day at a €480 average ticket, we deployed a personalized AI agent on WhatsApp Business API + the technician calendar: missed calls from 25% to 0%, first response from 2 hours to 10 seconds, lead-to-visit conversion from 30% to 60%, and qualified leads with full data from 50% to 92%. Net upside ~€31k/month against €297-497/month in tooling. Full breakdown: https://zeniapartners.com/blog/agente-ia-para-empresas-de-climatizacion.html
+
+Reply if you run an HVAC, plumbing or trades business and your phone is the bottleneck, happy to share the rollout plan.
+
+#HVAC #fieldservice #AI #WhatsAppBusiness
+
+---

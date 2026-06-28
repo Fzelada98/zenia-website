@@ -2642,3 +2642,13 @@ Reply if you run a security company and your central is drowning in non-operatio
 #securityindustry #B2B #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-28 - Agente IA para Empresas de Pintura
+
+More than 50% of painting contractors take 5+ days to respond to a new lead, yet 78% of customers hire the first company that answers. We deployed a personalized AI agent on WhatsApp Business API + CRM for a 4-person painting business: first-touch response from 5 hours to 47 seconds, lead-to-visit conversion from 15% to 40%, and 34% of leads now captured outside office hours. Net upside roughly €19.7k/month against €297-497/month in tooling. Full breakdown: https://zeniapartners.com/blog/agente-ia-para-empresas-de-pintura.html
+
+Reply if you run a contractor business where leads die because nobody picks up the phone fast enough, happy to share the qualification flow.
+
+#paintingcontractors #B2B #AI #WhatsAppBusiness
+
+---

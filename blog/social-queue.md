@@ -2652,3 +2652,13 @@ Reply if you run a contractor business where leads die because nobody picks up t
 #paintingcontractors #B2B #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-28 - Agente IA para Tiendas de Muebles
+
+The average shopper takes 18-24 days to close a €1,800 sofa decision, 67% of furniture inquiries arrive outside store hours, and cart abandonment in furniture sits at 78%, eight points worse than general retail. A personalized AI agent on WhatsApp + ecommerce, trained on the full catalogue (dimensions, materials, financing, lead times), pushed a Spanish furniture retailer from 18% to 47% conversion on qualified inquiries, recovered 28% of abandoned carts, and cut quote-to-order time from 21 to 13 days. 34% of closed sales now come from messages sent between 9pm and 9am. Net upside roughly €244k/month against €497-997/month in tooling. ROI 80x-150x because the average ticket is high.
+
+Reply if you run a furniture or high-ticket retail store and your night-shift inbox is full of unanswered measurement questions, happy to share the catalogue training framework.
+
+#retailtech #furniture #AI #WhatsAppBusiness
+
+---

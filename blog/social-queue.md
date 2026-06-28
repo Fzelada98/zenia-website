@@ -2630,3 +2630,15 @@ Reply if you run a wedding studio or events agency and proposal follow-up is the
 #weddingplanner #eventindustry #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-28 - Agente IA para Empresas de Seguridad
+
+Spain's private security industry hit €6.44B in 2024 (+7.6%) across 1,547 licensed companies, yet most still run sales on WhatsApp screenshots and chase renewals from spreadsheets. The math is brutal: ~42% of new alarm leads come in outside office hours and 10-15% of contracts churn at renewal because nobody called in time.
+
+For a typical 800-contract security company at €38/month average fee, we deployed a personalized AI agent on WhatsApp Business API integrated with the CRM and alarm platform: commercial response from 18 hours to 3 minutes, lead conversion from 13% to 24%, renewals retained from 78% to 91%, support tickets resolved without a technician visit from 32% to 60%. Net upside roughly €9k/month against €297-497/month in tooling. Full breakdown: https://zeniapartners.com/blog/agente-ia-para-empresas-de-seguridad.html
+
+Reply if you run a security company and your central is drowning in non-operational calls, happy to share the routing rules we use.
+
+#securityindustry #B2B #AI #WhatsAppBusiness
+
+---

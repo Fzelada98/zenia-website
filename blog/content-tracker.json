@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-06-29T14:00:00Z",
+  "lastRun": "2026-06-29T22:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-empresas-de-logistica",
+      "keyword": "agente ia para empresas de logistica",
+      "tier": 1,
+      "cluster": "logistica",
+      "status": "published",
+      "date": "2026-06-29"
+    },
     {
       "slug": "agente-ia-para-imprentas",
       "keyword": "agente ia para imprentas",

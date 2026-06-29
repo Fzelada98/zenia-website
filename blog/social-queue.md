@@ -2682,3 +2682,13 @@ Reply if you run a print shop where the commercial team spends half the day in E
 #printingindustry #B2B #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-29 - Agente IA para Empresas de Logística
+
+A mid-size logistics operator in Spain handles 800-3,500 "where is my package?" messages a month. 75% are repetitive tracking queries the TMS already has the answer to, 60% land outside office hours, and each one costs the operator €4-9 when a human resolves it. Salesforce State of Service 2026 shows 66% of service orgs now run AI agents, and in logistics those deployments cut cost per interaction from €7.40 to €0.62 — a 91% drop. We deployed a personalized AI agent on WhatsApp Business API + TMS + CRM for a 40-driver operator running 2,500 deliveries/day: 75% of tracking calls deflected, manual incidence handling down 30%, disruption response 25% faster, total logistics cost down 15%, and 34% of conversations now resolved between 10pm and 8am. Net upside ~€29k/month against €580/month in tooling. ROI roughly 50x because the inbound volume is brutal and the questions are all the same five.
+
+Reply if you run a logistics or last-mile operator where traffic and admin spend half the day answering tracking pings, happy to share the deflection playbook we use.
+
+#logistics #supplychain #AI #WhatsAppBusiness
+
+---

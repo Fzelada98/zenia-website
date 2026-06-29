@@ -2662,3 +2662,13 @@ Reply if you run a furniture or high-ticket retail store and your night-shift in
 #retailtech #furniture #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-29 - Agente IA para Empresas de Construcción
+
+The average Spanish construction firm receives 60-140 quote requests a month and loses 47% of them because nobody replies in the first 4 hours. Only 27% of AEC firms use AI today, yet the 38% that do report measurable business impact (up from 17% a year ago). We deployed a personalized AI agent on WhatsApp Business API + CRM for a 14-person construction company: response from 6-28 hours to 9 seconds, qualified leads from 30% to 78%, quote-to-contract closing from 14% to 28%, lead-to-contract cycle from 42 to 23 days, and 34% of inquiries now captured outside office hours. Net upside conservatively €35k/month against €497-997/month in tooling.
+
+Reply if you run a construction or reform company where the commercial team spends 11+ hours a week chasing leads that never close, happy to share the qualification rules we use.
+
+#construction #B2B #AI #WhatsAppBusiness
+
+---

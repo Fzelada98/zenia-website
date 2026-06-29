@@ -2672,3 +2672,13 @@ Reply if you run a construction or reform company where the commercial team spen
 #construction #B2B #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-29 - Agente IA para Imprentas
+
+A mid-sized print shop in Spain gets 25-60 quote requests a day across email, WhatsApp and web, and 41% of them never get answered in under 4 hours. The global digital printing market hits $55.5B in 2026 with 11.9% annual growth, but 78% of Spanish print shops still quote by hand from an Excel rate sheet. We deployed a personalized AI agent on WhatsApp Business API + CRM + production ERP: quote turnaround from 22-45 minutes to 60-90 seconds, response-under-1h from 34% to 98%, quote-to-order conversion from 22% to 38%, reprints from PDF errors down from 6% to 1.5%, and 41% of cotizaciones now generated outside office hours. Net upside conservatively €40k/month against €297-497/month in tooling.
+
+Reply if you run a print shop where the commercial team spends half the day in Excel cotizando the same flyers and tarjetas, happy to share the catalogue + margin framework we use.
+
+#printingindustry #B2B #AI #WhatsAppBusiness
+
+---

@@ -2327,6 +2327,8 @@ DM me if you want the full retention framework for chiropractic or physiotherapy
 
 ## 2026-06-20 - Agente IA para empresas de catering
 
+<!-- SCHEDULED:sp_gBaePkutzCkbihYhMgzB at 2026-06-30T16:14:32.951Z -->
+
 A catering company with 120 monthly leads at 1,850 EUR average ticket loses 60% of its pipeline because reply time exceeds one hour. The buyer doesn't wait. They book whoever quotes first.
 
 We mapped 90 days of caterers running a personalized AI agent on WhatsApp Business API + CRM. The numbers from operators we work with:
@@ -2346,6 +2348,8 @@ DM me if you run a catering business and want the qualification framework we use
 
 ## 2026-06-21 - Agente de IA para Librerías
 
+<!-- SCHEDULED:sp_byVgu9jRwCUAIs0YhRON at 2026-07-01T06:00:00.000Z -->
+
 Spain lost 223 independent bookstores in three years. The 2,754 still standing are competing with Amazon on the wrong axis.
 
 Average response time to a WhatsApp question about a title: 1 hour 40 minutes. 35-45% of those readers buy from Amazon before the bookseller replies. The competitive moat is curation and community, not price, and it's leaking through the messaging app nobody is staffing.
@@ -2361,6 +2365,8 @@ Reply if you run an independent bookstore and want the breakdown.
 ---
 
 ## 2026-06-21 - Agente de IA para Clínicas de Rehabilitación
+
+<!-- SCHEDULED:sp_tW4SMk3ejGtgjqDmCTEE0 at 2026-07-02T07:00:00.000Z -->
 
 50% to 65% of patients prescribed rehab quit before discharge. It isn't about willpower. It's about follow-up that nobody is staffing.
 
@@ -2381,6 +2387,8 @@ Reply if you run a physio or rehab clinic and want the adherence framework.
 
 ## 2026-06-21 - Agente IA para Clínicas de Acupuntura
 
+<!-- SCHEDULED:sp_RhLYQg1MuNyVz2OHc1sn at 2026-07-03T07:00:00.000Z -->
+
 The 2026 benchmark for acupuncture clinics sets patient retention at 65%. Most clinics we audit operate below 60%, and the gap is rarely clinical. It's operational.
 
 The bleed shows up in three places: messages answered hours late on WhatsApp, the next session that never gets booked at the end of the visit, and inactive patients nobody reactivates. A personalized AI agent connected to the calendar and patient record closes those three at once.
@@ -2396,6 +2404,8 @@ Reply if you run an acupuncture or integrative-medicine clinic and want the rete
 ---
 
 ## 2026-06-22 - Agente de IA para Empresas de Limpieza
+
+<!-- SCHEDULED:sp_D0ruo2ql1JmQ53v2BxH at 2026-07-06T07:00:00.000Z -->
 
 The average cleaning company answers 58% of inbound calls during the day and close to zero after 6pm. 41% of cleaning quote requests arrive outside office hours. That gap is the whole P&L story.
 
@@ -2413,6 +2423,8 @@ Reply if you run a cleaning operation and want the recurring playbook.
 
 ## 2026-06-22 - Agente IA para Bares
 
+<!-- SCHEDULED:sp_W7vHPuc1PwnWbURB0WEAe at 2026-07-07T08:00:00.000Z -->
+
 60% of customers who don't get a reply within 30 minutes contact a competitor instead. For a city bar handling 60-120 WhatsApp messages a day, that's not a service issue. That's quiet revenue going next door.
 
 The wound shows up in three places: reservations lost to slow replies, private events that get quoted by someone faster, and regulars nobody recognises on the second visit. A personalized AI agent on WhatsApp Business API closes all three in one move.
@@ -2428,6 +2440,8 @@ Reply if you operate a bar or cocktail venue and want the private-events playboo
 ---
 
 ## 2026-06-22 - Agente IA para Empresas de Reformas
+
+<!-- SCHEDULED:sp_i2em0Wy9WbuFQzFeU4HiT at 2026-07-08T07:00:00.000Z -->
 
 When a homeowner asks for a renovation quote, they message three companies at once and pick whoever replies first. Not the cheapest. Not the best rated. The first.
 
@@ -2445,6 +2459,8 @@ Reply if you run a renovation or contracting business and want the lead qualific
 
 ## 2026-06-23 - Agente IA para Empresas de Mudanzas
 
+<!-- SCHEDULED:sp_pQwP3UaaRKqgTf5aIGqD at 2026-07-09T07:00:00.000Z -->
+
 A family planning a move asks four moving companies for a quote on the same Saturday afternoon. They sign with whoever replies first with a clear number. Not the cheapest. Not the best reviewed. The first.
 
 Moving leads decay in minutes. Industry data: companies that automate follow-up and digital estimates close 38% of inbound leads. The ones running on manual quotes close 22%. Leads contacted within 5 minutes convert 4x more, yet only 38% of movers hit that window. 43% of leads arrive Friday night through Sunday, when the commercial team is offline.
@@ -2461,6 +2477,8 @@ Reply if you operate a moving company and want the response-time playbook.
 
 ## 2026-06-23 - Agente IA para clínicas de traumatología
 
+<!-- SCHEDULED:sp_h658WSAzWDT5GblIwZjq at 2026-07-10T07:00:00.000Z -->
+
 Orthopedic clinics in Spain lose 35-50% of patients between the first consult and the last rehab session. Not for medical reasons. Operational ones: nobody answers WhatsApp after 8pm, reminders are sent only to "important" patients, abandoned cases get detected 30 days too late.
 
 41% of new appointment requests arrive between 20:00 and 09:00. In manual workflows, those messages get answered the next day, when half of those patients have already called another clinic.
@@ -2474,6 +2492,8 @@ Full breakdown with the ROI math: https://zeniapartners.com/blog/agente-ia-para-
 ---
 
 ## 2026-06-23 - Agente IA para empresas de jardinería
+
+<!-- SCHEDULED:sp_hYftIWNe0vohG4h7FMDjl at 2026-07-13T07:00:00.000Z -->
 
 67% of landscaping quote requests never close because the company takes more than 24 hours to reply. By then the client has already contacted two competitors and the conversation becomes a price war instead of a consultative sale.
 
@@ -2489,6 +2509,8 @@ Reply if you run a landscaping or grounds-maintenance business and want the offi
 
 ## 2026-06-24 - Agente IA para Zapaterías
 
+<!-- SCHEDULED:sp_v7K6R8qnYR0CHTIGuG5SX at 2026-07-14T06:00:00.000Z -->
+
 81% of online shoe buyers in Spain hit friction at checkout. 48% of it boils down to one question: what size am I in this brand?
 
 That single doubt drives the 23-30% return rate quietly killing footwear ecommerce margins. Result for one Spanish retailer (1 store + ecommerce, €42k/month) after deploying a personalized AI agent on WhatsApp connected to live stock and a brand-by-brand fit table: size-related returns cut from 27% to 11%, cart recovery up from 3% to 21%, +€8,600/month net.
@@ -2500,6 +2522,8 @@ Full breakdown (data, ROI, 5-week plan): https://zeniapartners.com/blog/agente-i
 ---
 
 ## 2026-06-24 - Agente IA para Agencias de Marketing
+
+<!-- SCHEDULED:sp_pQr6CEpQTBksjmycBMZq at 2026-07-15T07:00:00.000Z -->
 
 45% of marketing teams now run agentic AI in production, up from 15% in 2024. The agencies still doing reporting by hand are losing the math.
 
@@ -2515,6 +2539,8 @@ Reply if you run an agency and want the full ROI sheet for your team size.
 
 ## 2026-06-24 - Agente IA para Empresas de Fontanería
 
+<!-- SCHEDULED:sp_CdpNv6XA1ne5awhvAWcgE at 2026-07-16T07:00:00.000Z -->
+
 Plumbing companies in Spain miss 27 to 40% of incoming calls and 85% of those callers never call back. The reason is physical: the tech is under a sink, in a crawlspace, or in traffic between jobs.
 
 A 4-tech operation we worked with was losing 18 leads a day worth roughly €1,600 in same-day revenue. After deploying a personalized AI agent on phone and WhatsApp connected to live calendar and tech location: missed calls dropped below 2%, lead-to-visit conversion jumped from 24% to 58%, and 34% of jobs now get booked outside office hours that were dark before. Net upside of about €47k/month against €497/month in tooling. Payback in roughly 21 days.
@@ -2526,6 +2552,8 @@ Full breakdown with the ROI table and 4-week rollout: https://zeniapartners.com/
 ---
 ## 2026-06-25 - Agente IA para Electricistas
 
+<!-- SCHEDULED:sp_rn9OHlViFcwtwJdPs4k2 at 2026-07-17T07:00:00.000Z -->
+
 The average electrical contractor loses $42,000 a year in revenue to unanswered calls. The reason is physical: you can't pick up the phone while you're rewiring a panel or stripping cable on a ladder.
 
 62% of incoming home-services calls go unanswered, 85% of those callers never call back, and more than 75% of homeowners hire the first electrician who responds. A 2-tech operation we set up was bleeding 8 qualified leads a week. After deploying a personalized AI agent on WhatsApp connected to live calendar, price book and tech routing: response time dropped from 3-6 hours to under 60 seconds, lead-to-visit conversion went from 32% to 58%, 38% of new jobs now get booked outside office hours. Net upside ~€14k/month against €497/month in tooling.
@@ -2536,6 +2564,8 @@ Full breakdown with the ROI table and 4-week rollout: https://zeniapartners.com/
 
 ---
 ## 2026-06-25 - Agente IA para Cerrajeros
+
+<!-- SCHEDULED:sp_O7OJhCWIfPFD8UNtg8csE at 2026-07-20T07:00:00.000Z -->
 
 A locksmith loses 38% to 60% of overnight calls. Each missed lockout call is €90 to €220 walking to whoever picks up first on Google.
 
@@ -2549,6 +2579,8 @@ If you run a locksmith shop and want the ROI table plus the 4-week rollout, DM m
 
 ## 2026-06-25 - Agente IA para Heladerias
 
+<!-- SCHEDULED:sp_ZogYCOK8vw6hgBYc273JC at 2026-07-21T07:00:00.000Z -->
+
 A Spanish artisanal ice cream shop earns 70% of its annual revenue in 4 months. The other 8 months, 90% of them shut down their digital channel entirely.
 
 Meanwhile in season they get 60-180 messages/day across WhatsApp and Instagram and ignore 28% of them in July-August. That is 4 to 7 birthday cakes lost per week at €38 each. A neighborhood shop we set up with a personalized AI agent connected to their POS, payment gateway and 1,800-contact database cut ignored messages from 28% to 3%, lifted to-go ticket size +22%, recovered 27% of orders from Glovo/Just Eat into their own channel, and ran 3 campaigns/month from October through May worth ~€1,400 each. Net upside €37k/year against €297/month in tooling.
@@ -2560,6 +2592,8 @@ Reply if you run a seasonal food business with the same gap, happy to share the 
 ---
 
 ## 2026-06-26 - Agente IA para Empresas de Eventos
+
+<!-- SCHEDULED:sp_Mqe682gpl6L79KPMe8NK at 2026-07-22T07:00:00.000Z -->
 
 A Spanish event planner coordinates 8.4 vendors per project and burns 14 hours on pure scheduling, per Cvent's 2026 report. 73% of day-of incidents trace back to one thing: comms drift between client, team and vendors.
 
@@ -2573,6 +2607,8 @@ Reply if you run a wedding or corporate events agency with the same coordination
 
 ## 2026-06-26 - Agente IA para Empresas de Transporte
 
+<!-- SCHEDULED:sp_KbLV9kyeLNSPpE9pufPhS at 2026-07-23T07:00:00.000Z -->
+
 A logistics company moving 1,500 shipments a day fields ~600 customer queries: "where is my order, reschedule delivery, no one is home." 76.6% of the sector already has AI in motion per Mecalux 2026, yet most still pay 6 humans €14k/month to answer the same 30 questions.
 
 A regional carrier we deployed a personalized AI agent for, integrated with their TMS over WhatsApp, cut response time from 8 minutes to 6 seconds, resolved 82% of queries without an operator, dropped last-mile failed deliveries from 14% to 8%, and lifted NPS from 32 to 61. Net upside ~€58k/month against €497-1,500/month in tooling. Full breakdown: https://zeniapartners.com/blog/agente-ia-para-empresas-de-transporte.html
@@ -2584,6 +2620,8 @@ Reply if you run a transport or last-mile operation with the same cost-per-conta
 ---
 
 ## 2026-06-26 - Agente IA para Apartamentos Tur&iacute;sticos
+
+<!-- SCHEDULED:sp_39mY0Dueujsaq7plVQgLd at 2026-07-24T07:00:00.000Z -->
 
 Spain just lost 47,000 tourist apartments in a year (INE: 329,764 active in Nov 2025) and the survivors are fighting for the same guests with stricter rules. The metric deciding who wins is not price. It is response time, and the median manager still takes 2-12 hours to answer a Booking inquiry while the algorithm punishes anything over 60 minutes.
 
@@ -2597,6 +2635,8 @@ Reply if you run a vacation rental portfolio and your inbox is the bottleneck, h
 
 ## 2026-06-27 - Agente IA para Empresas de Placas Solares
 
+<!-- SCHEDULED:sp_m224neHlmoaxiP3NfdpOi at 2026-07-27T07:00:00.000Z -->
+
 Spanish solar installers pay €25-45 per qualified lead, then share that contact with 3-4 competitors. 78% of the deal goes to whoever responds first. The median installer still takes 4-22 hours to reply, and 62% of leads come in outside office hours.
 
 A residential solar company we deployed a personalized AI agent for, plugged into HubSpot over WhatsApp Business API: response time from 9 hours to 8 seconds, qualified leads passed to sales from 21% to 54%, close rate from 3.8% to 7.1%, and CAC from €5,200 to €2,300. Net upside ~€23k/month in incremental margin against €297-497/month in tooling. Full breakdown: https://zeniapartners.com/blog/agente-ia-para-empresas-de-placas-solares.html
@@ -2608,6 +2648,8 @@ Reply if you install solar and your reps still chase leads who do not own the ro
 ---
 
 ## 2026-06-27 - Agente IA para Empresas de Climatizaci&oacute;n
+
+<!-- SCHEDULED:sp_z5l3V0SLRPlbrC8FM0Edd at 2026-07-28T07:00:00.000Z -->
 
 Spanish HVAC contractors lose 20-40% of their inbound calls, and 78% of customers hire the first company that picks up. The trade median first-response time still tops 2 hours, with only 11% replying inside an hour, while 62% of leads come in after 18:00, on weekends or holidays.
 
@@ -2621,6 +2663,8 @@ Reply if you run an HVAC, plumbing or trades business and your phone is the bott
 
 ## 2026-06-27 - Agente IA para Wedding Planners
 
+<!-- SCHEDULED:sp_plmxGvJPNmlFnBnlhTZ0v at 2026-07-29T07:00:00.000Z -->
+
 Engaged couples contact 5-7 wedding planners in parallel and book the first one who replies professionally. The median planner spends 60-70% of their week on admin work and answers a first lead 6-24 hours later. By then someone else already signed the contract.
 
 For a Spanish boutique studio running 24 weddings/year at a €4,800 fee, we deployed a personalized AI agent on WhatsApp Business API + their CRM: first-touch response from 8 hours to 30 seconds, lead-to-meeting conversion from 18% to 42%, admin hours from 36/week to 12/week, and weddings managed per senior planner from 14 to 24. Net upside roughly €120k/year against €6-9k in tooling. ROI 13-20x and the creative work stayed human.
@@ -2632,6 +2676,8 @@ Reply if you run a wedding studio or events agency and proposal follow-up is the
 ---
 
 ## 2026-06-28 - Agente IA para Empresas de Seguridad
+
+<!-- SCHEDULED:sp_kMHMKoqw8y8gG8aCJnGB at 2026-07-30T07:00:00.000Z -->
 
 Spain's private security industry hit €6.44B in 2024 (+7.6%) across 1,547 licensed companies, yet most still run sales on WhatsApp screenshots and chase renewals from spreadsheets. The math is brutal: ~42% of new alarm leads come in outside office hours and 10-15% of contracts churn at renewal because nobody called in time.
 
@@ -2645,6 +2691,8 @@ Reply if you run a security company and your central is drowning in non-operatio
 
 ## 2026-06-28 - Agente IA para Empresas de Pintura
 
+<!-- SCHEDULED:sp_WNMOCpCcJ2uGtM6BTfiJ at 2026-07-31T07:00:00.000Z -->
+
 More than 50% of painting contractors take 5+ days to respond to a new lead, yet 78% of customers hire the first company that answers. We deployed a personalized AI agent on WhatsApp Business API + CRM for a 4-person painting business: first-touch response from 5 hours to 47 seconds, lead-to-visit conversion from 15% to 40%, and 34% of leads now captured outside office hours. Net upside roughly €19.7k/month against €297-497/month in tooling. Full breakdown: https://zeniapartners.com/blog/agente-ia-para-empresas-de-pintura.html
 
 Reply if you run a contractor business where leads die because nobody picks up the phone fast enough, happy to share the qualification flow.
@@ -2654,6 +2702,8 @@ Reply if you run a contractor business where leads die because nobody picks up t
 ---
 
 ## 2026-06-28 - Agente IA para Tiendas de Muebles
+
+<!-- SCHEDULED:sp_ZFtorz7VT7JSL9nuLWfgO at 2026-08-03T06:00:00.000Z -->
 
 The average shopper takes 18-24 days to close a €1,800 sofa decision, 67% of furniture inquiries arrive outside store hours, and cart abandonment in furniture sits at 78%, eight points worse than general retail. A personalized AI agent on WhatsApp + ecommerce, trained on the full catalogue (dimensions, materials, financing, lead times), pushed a Spanish furniture retailer from 18% to 47% conversion on qualified inquiries, recovered 28% of abandoned carts, and cut quote-to-order time from 21 to 13 days. 34% of closed sales now come from messages sent between 9pm and 9am. Net upside roughly €244k/month against €497-997/month in tooling. ROI 80x-150x because the average ticket is high.
 
@@ -2665,6 +2715,8 @@ Reply if you run a furniture or high-ticket retail store and your night-shift in
 
 ## 2026-06-29 - Agente IA para Empresas de Construcción
 
+<!-- SCHEDULED:sp_iBIm4fTls2DuLWo0kJT3R at 2026-08-04T07:00:00.000Z -->
+
 The average Spanish construction firm receives 60-140 quote requests a month and loses 47% of them because nobody replies in the first 4 hours. Only 27% of AEC firms use AI today, yet the 38% that do report measurable business impact (up from 17% a year ago). We deployed a personalized AI agent on WhatsApp Business API + CRM for a 14-person construction company: response from 6-28 hours to 9 seconds, qualified leads from 30% to 78%, quote-to-contract closing from 14% to 28%, lead-to-contract cycle from 42 to 23 days, and 34% of inquiries now captured outside office hours. Net upside conservatively €35k/month against €497-997/month in tooling.
 
 Reply if you run a construction or reform company where the commercial team spends 11+ hours a week chasing leads that never close, happy to share the qualification rules we use.
@@ -2674,6 +2726,8 @@ Reply if you run a construction or reform company where the commercial team spen
 ---
 
 ## 2026-06-29 - Agente IA para Imprentas
+
+<!-- SCHEDULED:sp_GCxDtcyACBKqmaVW64db3 at 2026-08-05T07:00:00.000Z -->
 
 A mid-sized print shop in Spain gets 25-60 quote requests a day across email, WhatsApp and web, and 41% of them never get answered in under 4 hours. The global digital printing market hits $55.5B in 2026 with 11.9% annual growth, but 78% of Spanish print shops still quote by hand from an Excel rate sheet. We deployed a personalized AI agent on WhatsApp Business API + CRM + production ERP: quote turnaround from 22-45 minutes to 60-90 seconds, response-under-1h from 34% to 98%, quote-to-order conversion from 22% to 38%, reprints from PDF errors down from 6% to 1.5%, and 41% of cotizaciones now generated outside office hours. Net upside conservatively €40k/month against €297-497/month in tooling.
 
@@ -2685,6 +2739,8 @@ Reply if you run a print shop where the commercial team spends half the day in E
 
 ## 2026-06-29 - Agente IA para Empresas de Logística
 
+<!-- SCHEDULED:sp_5KaH8Ipt9ge16WBlLLOw at 2026-08-06T07:00:00.000Z -->
+
 A mid-size logistics operator in Spain handles 800-3,500 "where is my package?" messages a month. 75% are repetitive tracking queries the TMS already has the answer to, 60% land outside office hours, and each one costs the operator €4-9 when a human resolves it. Salesforce State of Service 2026 shows 66% of service orgs now run AI agents, and in logistics those deployments cut cost per interaction from €7.40 to €0.62 — a 91% drop. We deployed a personalized AI agent on WhatsApp Business API + TMS + CRM for a 40-driver operator running 2,500 deliveries/day: 75% of tracking calls deflected, manual incidence handling down 30%, disruption response 25% faster, total logistics cost down 15%, and 34% of conversations now resolved between 10pm and 8am. Net upside ~€29k/month against €580/month in tooling. ROI roughly 50x because the inbound volume is brutal and the questions are all the same five.
 
 Reply if you run a logistics or last-mile operator where traffic and admin spend half the day answering tracking pings, happy to share the deflection playbook we use.
@@ -2695,6 +2751,8 @@ Reply if you run a logistics or last-mile operator where traffic and admin spend
 
 ## 2026-06-30 - Agente IA para Tiendas de Electrónica
 
+<!-- SCHEDULED:sp_5ThK2ZoBHHCekVpqIdQi at 2026-08-07T06:00:00.000Z -->
+
 A neighborhood electronics shop with 800 active SKUs gets 60-140 WhatsApp messages a day: stock, price, comparisons, RMA status. We mapped 12 stores across Spain and LATAM and 71% of those questions can be answered with data the ERP already has. The AI customer service market hit $15.12B in 2026 (25.8% CAGR) and 63% of retailers now run AI on customer interactions, but most independent shops still juggle ERP, an Excel of RMA tickets and the manager's memory. We deployed a personalized AI agent on WhatsApp Business API + CRM + Holded/Odoo: response time from 38 minutes to 9 seconds, chat-to-sale conversion from 9% to 21%, average ticket from €148 to €183 thanks to contextual accessory upsell, RMA self-service from 22% to 78%, and 28% of revenue now coming in between 9pm and 9am when the shutter is down. Net upside ~€28k/month against €297-497/month in tooling.
 
 Reply if you run an electronics retailer where the team spends half the shift on "do you have it in stock?" pings, happy to share the ERP-integration playbook we use.
@@ -2704,6 +2762,8 @@ Reply if you run an electronics retailer where the team spends half the shift on
 ---
 
 ## 2026-06-30 - Agente IA para Pizzerías
+
+<!-- SCHEDULED:sp_kirAANK3msJUgJ2A8JNYm at 2026-08-10T07:00:00.000Z -->
 
 A neighborhood pizzeria billing €26k/month hands 50% of its orders to Glovo and Uber Eats and pays a 15-30% commission on every one of them, which works out to €3,250 a month in margin that never reaches the kitchen. We benchmarked 9 independent pizzerias in Spain: 14-32 minute response times at Friday peak, 4-9% order errors, 18-24% of Saturday-night messages going unanswered, and recurrence stuck at 33% because nobody keeps a customer profile. We deployed a personalized AI agent on WhatsApp Business API connected to the POS (Lightspeed, Glop, Revo) and Bizum/Stripe for in-chat payment: response time 6 seconds, aggregator share down to 22-28%, average ticket up from €22 to €27 from automated upsell, 30-day recurrence from 33% to 52%, and Google reviews 4-5x what they had before. Net upside ~€6.5k/month against €297-497/month in tooling, with payback of the full €997 setup hitting at week 5.
 

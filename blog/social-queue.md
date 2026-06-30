@@ -2772,3 +2772,13 @@ Reply if you run a pizzeria where Glovo eats a quarter of the bill and the phone
 #restauranttech #pizzeria #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-30 - Agente IA para Empresas de Carpintería
+
+A small carpentry shop in Spain gets 15-35 quote requests a month and 78% of those buyers hire the first pro who answers them. Sector average response time is 47 hours. 52% of leads land outside office hours. The shop owner is answering WhatsApp at 11pm between jobs, sending PDF quotes three days later from a laptop in the workshop, and never following up on the ones that went cold. We deployed a personalized AI agent on WhatsApp Business API plus a CRM trained on the shop's own rates, materials and tone: response time 8 seconds, lead-to-visit conversion from 22-30% to 48-58%, visit-to-signed-quote from 35-42% to 55-68%, jobs closed monthly from 5-7 to 11-14, and revenue from €9-12k to €19-25k. Net upside ~€15k/month against €297-497/month in tooling. The agent gives orientational price ranges ("built-in wardrobe 2.5x2.4m in white melamine: €1,450-1,890"), books the on-site measurement, and runs the 2/5/10/20-day follow-up so the owner can stay in the workshop.
+
+Reply if you run a carpentry shop where the owner is the only one closing deals and quotes pile up unanswered, happy to share the playbook.
+
+#carpinteria #smallbusiness #AI #WhatsAppBusiness
+
+---

@@ -2692,3 +2692,13 @@ Reply if you run a logistics or last-mile operator where traffic and admin spend
 #logistics #supplychain #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-30 - Agente IA para Tiendas de Electrónica
+
+A neighborhood electronics shop with 800 active SKUs gets 60-140 WhatsApp messages a day: stock, price, comparisons, RMA status. We mapped 12 stores across Spain and LATAM and 71% of those questions can be answered with data the ERP already has. The AI customer service market hit $15.12B in 2026 (25.8% CAGR) and 63% of retailers now run AI on customer interactions, but most independent shops still juggle ERP, an Excel of RMA tickets and the manager's memory. We deployed a personalized AI agent on WhatsApp Business API + CRM + Holded/Odoo: response time from 38 minutes to 9 seconds, chat-to-sale conversion from 9% to 21%, average ticket from €148 to €183 thanks to contextual accessory upsell, RMA self-service from 22% to 78%, and 28% of revenue now coming in between 9pm and 9am when the shutter is down. Net upside ~€28k/month against €297-497/month in tooling.
+
+Reply if you run an electronics retailer where the team spends half the shift on "do you have it in stock?" pings, happy to share the ERP-integration playbook we use.
+
+#retailtech #ecommerce #AI #WhatsAppBusiness
+
+---

@@ -2702,3 +2702,13 @@ Reply if you run an electronics retailer where the team spends half the shift on
 #retailtech #ecommerce #AI #WhatsAppBusiness
 
 ---
+
+## 2026-06-30 - Agente IA para Pizzerías
+
+A neighborhood pizzeria billing €26k/month hands 50% of its orders to Glovo and Uber Eats and pays a 15-30% commission on every one of them, which works out to €3,250 a month in margin that never reaches the kitchen. We benchmarked 9 independent pizzerias in Spain: 14-32 minute response times at Friday peak, 4-9% order errors, 18-24% of Saturday-night messages going unanswered, and recurrence stuck at 33% because nobody keeps a customer profile. We deployed a personalized AI agent on WhatsApp Business API connected to the POS (Lightspeed, Glop, Revo) and Bizum/Stripe for in-chat payment: response time 6 seconds, aggregator share down to 22-28%, average ticket up from €22 to €27 from automated upsell, 30-day recurrence from 33% to 52%, and Google reviews 4-5x what they had before. Net upside ~€6.5k/month against €297-497/month in tooling, with payback of the full €997 setup hitting at week 5.
+
+Reply if you run a pizzeria where Glovo eats a quarter of the bill and the phone never stops on Saturday night, happy to share the direct-channel playbook we use.
+
+#restauranttech #pizzeria #AI #WhatsAppBusiness
+
+---

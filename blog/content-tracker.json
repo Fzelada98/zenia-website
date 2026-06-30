@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-06-30T06:00:00Z",
+  "lastRun": "2026-06-30T14:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-pizzerias",
+      "keyword": "agente ia para pizzerias",
+      "tier": 1,
+      "cluster": "restaurantes",
+      "status": "published",
+      "date": "2026-06-30"
+    },
     {
       "slug": "agente-ia-para-tiendas-de-electronica",
       "keyword": "agente ia para tiendas de electronica",

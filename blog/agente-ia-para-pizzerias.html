@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HP0VQSEL68"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-HP0VQSEL68');
+</script>
+
+<title>Agente IA para Pizzerías: Pedidos y Reservas 24/7 | ZENIA</title>
+<meta name="description" content="Agente de IA para pizzerías: pedidos por WhatsApp, recordatorios automáticos y menos comisión de aggregators. ROI calculado y caso operativo 2026.">
+<link rel="canonical" href="https://zeniapartners.com/blog/agente-ia-para-pizzerias.html">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+
+<!-- Hreflang -->
+<link rel="alternate" hreflang="es" href="https://zeniapartners.com/blog/agente-ia-para-pizzerias.html">
+<link rel="alternate" hreflang="x-default" href="https://zeniapartners.com/blog/agente-ia-para-pizzerias.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Agente IA para Pizzerías: Pedidos y Reservas en Piloto Automático">
+<meta property="og:description" content="Agente de IA para pizzerías: pedidos por WhatsApp, recordatorios automáticos y menos comisión de Glovo o Uber Eats. ROI real y caso operativo 2026.">
+<meta property="og:url" content="https://zeniapartners.com/blog/agente-ia-para-pizzerias.html">
+<meta property="og:site_name" content="ZENIA">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="https://zeniapartners.com/assets/images/og-image.png">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Agente IA para Pizzerías: Pedidos y Reservas en Piloto Automático">
+<meta name="twitter:description" content="Pedidos directos por WhatsApp, menos 30% de comisión de aggregators y ROI en menos de 2 meses.">
+<meta name="twitter:image" content="https://zeniapartners.com/assets/images/og-image.png">
+
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="author" content="Fabrizzio Zelada">
+<meta name="theme-color" content="#0A0F1C">
+
+<!-- JSON-LD Article -->
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Agente IA para Pizzerías: Pedidos y Reservas en Piloto Automático", "description": "Cómo un agente de IA personalizado en WhatsApp gestiona pedidos, reservas y recordatorios de una pizzería, reduce las comisiones de aggregators y aumenta el ticket medio. Métricas reales 2026.", "author": {"@type": "Person", "name": "Fabrizzio Zelada", "jobTitle": "Founder", "worksFor": {"@type": "Organization", "name": "ZENIA"}}, "publisher": {"@type": "Organization", "name": "ZENIA", "url": "https://zeniapartners.com", "logo": {"@type": "ImageObject", "url": "https://zeniapartners.com/assets/images/og-image.png", "width": 600, "height": 60}}, "datePublished": "2026-06-30", "dateModified": "2026-06-30", "mainEntityOfPage": "https://zeniapartners.com/blog/agente-ia-para-pizzerias.html", "inLanguage": "es", "keywords": ["agente ia para pizzerias", "pedidos whatsapp pizzeria", "automatizacion pizzeria", "crm pizzerias", "agente ia pizzeria delivery"], "image": "https://zeniapartners.com/assets/images/og-image.png"}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #3B82F6;
+    --accent-violet: #6366F1;
+    --bg-dark: #0A0F1C;
+    --bg-card: rgba(17, 24, 39, 0.6);
+    --text-primary: #F1F5F9;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+    --border: rgba(148, 163, 184, 0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; background: var(--bg-dark); color: var(--text-primary); line-height: 1.8; }
+  .blog-nav { padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 60px; position: sticky; top: 0; background: rgba(10, 15, 28, 0.85); backdrop-filter: blur(12px); z-index: 100; }
+  .blog-nav .container { max-width: 1200px; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+  .blog-nav .nav-logo-link { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-primary); font-weight: 700; font-size: 1.1rem; }
+  .blog-nav .nav-main-links { display: flex; list-style: none; gap: 28px; margin: 0; padding: 0; }
+  .blog-nav .nav-main-links li { margin: 0; }
+  .blog-nav .nav-main-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
+  .blog-nav .nav-main-links a:hover { color: var(--text-primary); }
+  .blog-nav .nav-main-links a.active { color: var(--primary); }
+  .blog-nav .nav-cta-btn { background: var(--primary); color: #fff; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: filter 0.2s; white-space: nowrap; }
+  .blog-nav .nav-cta-btn:hover { filter: brightness(1.1); }
+  @media (max-width: 860px) {
+    .blog-nav .nav-main-links { display: none; }
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+  .blog-header { margin-bottom: 48px; }
+  .blog-meta { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px; }
+  .blog-header h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); line-height: 1.3; margin-bottom: 16px; }
+  .blog-header p.lead { font-size: 1.1rem; color: var(--text-secondary); line-height: 1.7; }
+  .blog-content h2 { font-size: 1.4rem; margin: 48px 0 16px; color: var(--text-primary); }
+  .blog-content h3 { font-size: 1.15rem; margin: 32px 0 12px; color: var(--text-primary); }
+  .blog-content p { color: var(--text-secondary); margin-bottom: 20px; }
+  .blog-content ul, .blog-content ol { color: var(--text-secondary); margin-bottom: 20px; padding-left: 24px; }
+  .blog-content li { margin-bottom: 8px; }
+  .blog-content strong { color: var(--text-primary); }
+  .blog-content a { color: var(--primary); text-decoration: underline; }
+  .blog-content a:hover { color: var(--accent-violet); }
+  .blog-content blockquote { border-left: 3px solid var(--primary); padding-left: 20px; margin: 24px 0; font-style: italic; color: var(--text-secondary); }
+  .blog-content table { width: 100%; border-collapse: collapse; margin: 24px 0; }
+  .blog-content th, .blog-content td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); font-size: 0.95rem; }
+  .blog-content th { color: var(--text-primary); font-weight: 600; background: var(--bg-card); }
+  .blog-cta { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 40px; text-align: center; margin: 60px 0; }
+  .blog-cta h3 { margin-bottom: 12px; }
+  .blog-cta p { color: var(--text-secondary); margin-bottom: 20px; }
+  .blog-cta a { display: inline-block; padding: 12px 28px; background: var(--primary); color: white; border-radius: 8px; text-decoration: none; font-weight: 600; }
+  .blog-cta a:hover { background: var(--accent-violet); }
+  .blog-related { margin: 60px 0 0; }
+  .blog-related h3 { margin-bottom: 20px; }
+  .blog-related a { display: block; padding: 16px 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 12px; text-decoration: none; color: var(--text-primary); font-weight: 600; transition: border-color 0.3s; }
+  .blog-related a:hover { border-color: var(--primary); }
+  .blog-related a span { display: block; font-size: 0.85rem; color: var(--text-muted); font-weight: 400; margin-top: 4px; }
+  .blog-footer { padding: 40px 0; border-top: 1px solid var(--border); margin-top: 60px; text-align: center; color: var(--text-muted); font-size: 0.85rem; }
+  .blog-footer a { color: var(--primary); text-decoration: none; }
+  .text-gradient { background: linear-gradient(135deg, var(--primary), var(--accent-violet)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+</style>
+</head>
+<body>
+
+<nav class="blog-nav">
+  <div class="container">
+    <a href="/es/" class="nav-logo-link">
+      <svg class="zenia-mark" viewBox="0 0 140 140" fill="none" width="32" height="32">
+        <defs>
+          <linearGradient id="zg-b" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#2563EB"/>
+            <stop offset="100%" stop-color="#3B82F6"/>
+          </linearGradient>
+          <linearGradient id="zg-v" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#6366F1"/>
+            <stop offset="100%" stop-color="#7C3AED"/>
+          </linearGradient>
+        </defs>
+        <rect width="140" height="140" rx="28" fill="#0F172A"/>
+        <path d="M 70 18 Q 18 18 18 38 L 18 57 Q 18 63 24 63 L 88 63 Z" fill="url(#zg-b)"/>
+        <path d="M 70 122 Q 122 122 122 102 L 122 83 Q 122 77 116 77 L 52 77 Z" fill="url(#zg-v)"/>
+      </svg>
+      <span>ZENIA</span>
+    </a>
+    <ul class="nav-main-links">
+      <li><a href="/es/#opportunities">Oportunidades IA</a></li>
+      <li><a href="/es/#services">Servicios</a></li>
+      <li><a href="/es/#process">Proceso</a></li>
+      <li><a href="/es/#impact">Impacto</a></li>
+      <li><a href="/blog/" class="active">Blog</a></li>
+    </ul>
+    <a href="/es/#cta" class="nav-cta-btn">Empezar</a>
+  </div>
+</nav>
+
+<article class="container">
+  <header class="blog-header">
+    <div class="blog-meta">30 de junio, 2026 &middot; Fabrizzio Zelada &middot; 12 min de lectura</div>
+    <h1><span class="text-gradient">Agente IA para Pizzerías:</span> Pedidos, Reservas y Menos Comisión de Aggregators</h1>
+    <p class="lead">Una pizzería de barrio en Madrid factura una media de 28.000 euros al mes y entrega entre el 40% y el 65% de sus pedidos por delivery. Si reparte por Glovo o Uber Eats, las comisiones (15% a 30% por pedido) le comen entre 1.700 y 5.450 euros mensuales. Un agente de IA personalizado en WhatsApp recupera buena parte de ese margen y libera al equipo de la cocina del teléfono. Esta guía explica cómo, con números reales.</p>
+  </header>
+
+  <div class="blog-content">
+
+    <p class="pillar-callout"><strong>Lee también:</strong> Si gestionas un grupo con varios locales, mira primero la <a href="/blog/crm-restaurantes-guia-completa.html">guía completa de CRM para restaurantes 2026</a>: lo de pizzerías es una particularización del flujo de pedido + reserva.</p>
+
+
+    <h2>El problema real de una pizzería: tres horarios pico y un teléfono que arde</h2>
+
+    <p>Una pizzería de barrio funciona en bloques. Comidas de 13:00 a 15:30, cenas de 20:30 a 23:30, y un repunte fuerte de delivery los viernes y sábados entre 21:00 y 23:00. Durante esos picos llegan al mismo tiempo: clientes en sala, pedidos por WhatsApp, llamadas a fijo y pedidos de Glovo o Uber Eats sonando en la tablet. El cuello de botella suele ser una sola persona, el encargado o el dueño, contestando teléfono en una mano y cobrando con la otra.</p>
+
+    <p>El resultado se ve en los KPI operativos. Estos son los promedios que medimos en pizzerías independientes con facturación entre 22.000 y 60.000 euros al mes:</p>
+
+    <ul>
+      <li>Entre 35% y 65% del total de pedidos llegan por aggregators (Glovo, Uber Eats, Just Eat) que cobran del 15% al 30% de comisión</li>
+      <li>Tiempo medio de respuesta en WhatsApp directo durante el pico de viernes: 14 a 32 minutos</li>
+      <li>Tasa de pedidos no respondidos los sábados después de las 22:30: 18% a 24%</li>
+      <li>Errores de transcripción telefónica (ingredientes, alergias, dirección): entre 4% y 9% de los pedidos</li>
+      <li>Tasa de clientes que repiten en menos de 30 días: 28% a 38% (techo bajo porque la pizzería no guarda perfiles)</li>
+    </ul>
+
+    <p>Tomemos una pizzería con 26.000 euros de facturación mensual, ticket medio de 22 euros y 1.180 pedidos al mes. Si el 50% pasa por aggregators con un 25% de comisión, está pagando 3.250 euros mensuales en margen. Sumar 5 pedidos perdidos al día por respuesta lenta en WhatsApp añade otros 3.300 euros de ingresos no facturados. <strong>Estamos hablando de un agujero de 6.500 euros al mes</strong>, equivalente al sueldo de un cocinero completo, generado por procesos manuales.</p>
+
+    <p>La salida no es contratar a una persona para contestar WhatsApp ni pelearse con Glovo. La salida es un <a href="/blog/agente-ia-para-restaurantes.html">agente de IA personalizado</a> que reciba pedidos directos, gestione reservas y mantenga al cliente fidelizado fuera de los aggregators. Vamos a verlo paso a paso.</p>
+
+    <h2>Cómo funciona el agente de IA en una pizzería (flujo completo)</h2>
+
+    <p>El agente no es un menú automático con teclas ni un bot de respuestas fijas. Es un asistente inteligente que entiende lenguaje natural, lee la carta de la pizzería, conoce horarios, gestiona stock real y se acuerda del cliente que llamó la semana pasada pidiendo la napolitana sin cebolla.</p>
+
+    <h3>Paso 1: El cliente escribe o llama al WhatsApp de la pizzería</h3>
+
+    <p>"Hola, dos pizzas margarita grandes, una con borde de queso y otra sin albahaca, para entrega en calle Goya 45 a las 21:30, pagaré en efectivo". El cliente escribe como hablaría con cualquier persona. El agente entiende ingredientes, modificaciones, dirección, hora y método de pago en una sola lectura.</p>
+
+    <h3>Paso 2: El agente valida menú y stock en tiempo real</h3>
+
+    <p>En menos de 4 segundos el agente:</p>
+
+    <ul>
+      <li>Confirma que las pizzas pedidas están en la carta y disponibles</li>
+      <li>Verifica si hay capacidad de cocina para entregar a la hora pedida (sin saturar el horno)</li>
+      <li>Calcula el precio aplicando promociones activas (martes 2x1, descuento estudiante, código de fidelidad)</li>
+      <li>Si la dirección queda fuera de la zona de reparto, ofrece pickup o sugiere franja con riders disponibles</li>
+      <li>Si una pizza no está disponible (se acabó la masa integral), sugiere alternativa equivalente</li>
+    </ul>
+
+    <h3>Paso 3: Confirmación, cobro y ticket</h3>
+
+    <p>El agente envía un mensaje con el desglose: productos, precio final, dirección, hora estimada y enlace de pago (Bizum, tarjeta, Stripe). Cuando el pago se confirma, el pedido entra automáticamente en la pantalla de cocina o en el TPV. Sin papelitos, sin transcripción humana, sin errores de "pensaba que era para llevar".</p>
+
+    <h3>Paso 4: Seguimiento durante la preparación y reparto</h3>
+
+    <p>Sin que el cliente tenga que preguntar, el agente avisa tres veces: "Tu pedido entró en cocina", "Listo, ya está saliendo" y "Tu rider está a 4 minutos". Esa visibilidad reduce las llamadas de "¿dónde está mi pizza?" en un 70% y mejora la percepción de servicio sin coste adicional.</p>
+
+    <h3>Paso 5: Postventa, reseña y reactivación</h3>
+
+    <p>30 minutos después de la entrega, el agente pide nota de 1 a 5. Si es 4 o 5, le pasa al cliente el link directo de Google Reviews. Si es 3 o menos, escala al encargado con todo el contexto del pedido. A los 21 días sin volver, manda un mensaje de reactivación con la pizza favorita del cliente y un código de descuento del 15%. Esto no es teoría: la tasa de recompra entre los reactivados se sitúa entre el 22% y el 31%.</p>
+
+    <p>Todo este flujo corre sobre <a href="/blog/automatizacion-whatsapp-negocios.html">WhatsApp Business API</a> conectada a un <a href="/blog/crm-con-inteligencia-artificial.html">CRM con IA</a>, por lo que cada conversación se queda registrada en el perfil del cliente. No vive en el teléfono personal del encargado ni desaparece al final del turno.</p>
+
+    <h2>Métricas reales: qué cambia cuando una pizzería automatiza</h2>
+
+    <p>Estos números vienen de pizzerías independientes que pasaron de gestión manual a agente de IA en WhatsApp con un <a href="/blog/crm-restaurantes-guia-completa.html">CRM con IA</a> configurado correctamente. Son rangos, no promesas: el resultado depende del volumen, del barrio y de la calidad de la carta.</p>
+
+    <table>
+      <tr><th>Métrica</th><th>Antes (manual)</th><th>Después (agente IA)</th><th>Mejora</th></tr>
+      <tr><td>Tiempo de respuesta en pico</td><td>14-32 min</td><td>6 segundos</td><td>-99%</td></tr>
+      <tr><td>Pedidos perdidos por tardanza (viernes)</td><td>18-24%</td><td>&lt;3%</td><td>-87%</td></tr>
+      <tr><td>Errores de pedido (ingredientes/dirección)</td><td>4-9%</td><td>&lt;1%</td><td>-90%</td></tr>
+      <tr><td>Porcentaje de pedidos vía aggregators</td><td>50%</td><td>22-28%</td><td>-50%</td></tr>
+      <tr><td>Ticket medio en pedido directo</td><td>22 &euro;</td><td>27 &euro;</td><td>+22%</td></tr>
+      <tr><td>Tasa de recompra a 30 días</td><td>28-38%</td><td>48-57%</td><td>+58%</td></tr>
+      <tr><td>Horario activo de atención de pedidos</td><td>11:00-23:30</td><td>24/7</td><td>+100%</td></tr>
+      <tr><td>Comisiones pagadas a aggregators (al mes)</td><td>3.250 &euro;</td><td>1.400 &euro;</td><td>-57%</td></tr>
+    </table>
+
+    <p>Dos datos no caben en la tabla pero son los que más mueven la aguja. El primero es el <strong>34% de pedidos que entran fuera del horario operativo</strong>: gente que tantea pedir a las 2 de la mañana después de una fiesta o que reserva para el día siguiente desde el trabajo. Sin agente, esos clientes no aparecían en el sistema. El segundo es el aumento del ticket medio: el agente sugiere bebidas, postres y combos que un humano cansado olvida. Solo el upselling automatizado paga la inversión.</p>
+
+    <h2>Manual frente a agente IA: comparativa operativa</h2>
+
+    <p>Para ver el cambio del día a día, esta es la diferencia entre cómo opera una pizzería sin agente y con agente integrado.</p>
+
+    <h3>Operativa manual (lo que hace el 80% de las pizzerías)</h3>
+
+    <ul>
+      <li>El encargado contesta WhatsApp y teléfono entre pedidos, normalmente con retraso de 8 a 20 minutos en pico</li>
+      <li>Apunta el pedido en una hoja o lo dicta al cocinero. Errores frecuentes en ingredientes y dirección</li>
+      <li>Si Glovo o Uber Eats falla, no hay plan B: el cliente se va a la pizzería de al lado</li>
+      <li>No hay base de datos. El cliente que pidió hace 3 semanas vuelve a llamar como si fuera la primera vez</li>
+      <li>Reseñas en Google solo cuando alguien se molesta en pedirlas verbalmente, dos veces al mes</li>
+      <li>Aggregators concentran el 50% del volumen y se quedan con el 15-30% de cada euro</li>
+    </ul>
+
+    <h3>Operativa con agente IA (escenario optimizado)</h3>
+
+    <ul>
+      <li>Cada mensaje se responde en menos de 8 segundos, sea pico o madrugada</li>
+      <li>El pedido entra directo en pantalla de cocina con desglose limpio. Cero transcripción humana</li>
+      <li>Cuando el horno está saturado, el agente desplaza la franja sin perder al cliente</li>
+      <li>Cada conversación queda ligada al perfil. El cliente recurrente recibe trato personalizado desde mensaje uno</li>
+      <li>Solicitud automática de reseña tras cada pedido entregado. Multiplica las reseñas en Google por 4 o 5</li>
+      <li>Aggregators bajan al 22-28% porque el cliente prefiere pedir directo (mismo precio, menos clicks, mismo WhatsApp)</li>
+    </ul>
+
+    <p>La diferencia operativa importa, pero lo que justifica la inversión es la diferencia financiera. Vamos al cálculo.</p>
+
+    <h2>Cálculo de ROI: pizzería independiente de 26.000 € al mes</h2>
+
+    <p>Trabajemos sobre una pizzería tipo en una capital de provincia española, con los parámetros que vemos en la mayoría de casos reales:</p>
+
+    <ul>
+      <li>1.180 pedidos al mes, ticket medio 22 euros, facturación 26.000 euros</li>
+      <li>50% de pedidos por aggregators (Glovo, Uber Eats), 35% directo por teléfono o WhatsApp, 15% en sala</li>
+      <li>Comisión media de aggregators: 25% sobre cada pedido</li>
+      <li>5 pedidos perdidos al día por respuesta lenta en pico de viernes y sábado</li>
+      <li>Tasa de recompra a 30 días: 33%</li>
+    </ul>
+
+    <h3>Ingresos recuperados y costes evitados</h3>
+
+    <p><strong>1. Pedidos directos que sustituyen a aggregators.</strong></p>
+    <p>Si el agente baja la cuota de aggregators del 50% al 25%, esos 295 pedidos al mes (1.180 x 0.25) vuelven a la venta directa. La comisión que se ahorra: 295 x 22 euros x 25% = <strong>+1.622 euros/mes</strong> de margen recuperado.</p>
+
+    <p><strong>2. Pedidos que ya no se pierden por respuesta lenta.</strong></p>
+    <p>5 pedidos perdidos/día x 22 euros x 30 días = 3.300 euros/mes de potencial. Asumiendo que el agente captura el 75% (no todos los mensajes se convierten siempre): <strong>+2.475 euros/mes</strong>.</p>
+
+    <p><strong>3. Upselling automatizado de bebidas, postres y combos.</strong></p>
+    <p>El agente sugiere bebida y postre en cada pedido. La conversión observada está entre el 18% y el 26%. Si 1.180 pedidos x 22% x 4 euros adicionales = <strong>+1.038 euros/mes</strong>.</p>
+
+    <p><strong>4. Reactivación de clientes inactivos.</strong></p>
+    <p>De los 380 clientes inactivos del último trimestre, el flujo de <a href="/blog/reactivar-clientes-inactivos-whatsapp.html">reactivación por WhatsApp</a> recupera entre el 8% y el 12%. 380 x 10% x 22 euros = <strong>+836 euros/mes</strong> en pedidos antes perdidos.</p>
+
+    <p><strong>5. Horas del encargado que se devuelven a operativa.</strong></p>
+    <p>2 horas/día x 30 días x 13 euros/hora = <strong>600 euros/mes</strong> de coste laboral redirigido a cocina o atención presencial.</p>
+
+    <h3>Resumen ROI mensual</h3>
+
+    <table>
+      <tr><th>Concepto</th><th>Impacto mensual</th></tr>
+      <tr><td>Margen recuperado de aggregators</td><td>+1.622 &euro;</td></tr>
+      <tr><td>Pedidos no perdidos por tardanza</td><td>+2.475 &euro;</td></tr>
+      <tr><td>Upselling automatizado</td><td>+1.038 &euro;</td></tr>
+      <tr><td>Reactivación de inactivos</td><td>+836 &euro;</td></tr>
+      <tr><td>Ahorro en horas de gestión</td><td>+600 &euro;</td></tr>
+      <tr><td><strong>Total beneficio estimado</strong></td><td><strong>+6.571 &euro;/mes</strong></td></tr>
+      <tr><td>Coste de ZENIA Starter o Growth</td><td>-297 a -497 &euro;/mes</td></tr>
+      <tr><td><strong>ROI neto mensual</strong></td><td><strong>+6.074 a +6.274 &euro;</strong></td></tr>
+    </table>
+
+    <p>Incluso recortando las estimaciones a la mitad por prudencia, la pizzería se queda con +3.000 euros netos al mes frente a una inversión de 300 a 500 euros. <strong>El payback del setup completo (997 euros) ocurre en la quinta semana</strong>. Si quieres simularlo con tus números reales, usa la <a href="/blog/calcular-roi-crm-restaurante.html">calculadora de ROI para restaurantes</a>.</p>
+
+    <h2>Cómo ZENIA monta el agente IA de tu pizzería en 5 semanas</h2>
+
+    <p>En <a href="/es/index.html">ZENIA</a> no vendemos software genérico ni una licencia que ya viene hecha. Construimos un agente personalizado encima de tu carta, tu zona de reparto, tu TPV y tu base de clientes. El proceso completo dura cinco semanas.</p>
+
+    <h3>Semana 1: Diagnóstico operativo y carta</h3>
+
+    <p>Pasamos un día completo en la pizzería viendo el flujo real.</p>
+
+    <ul>
+      <li>Volumen y origen de pedidos por canal (sala, WhatsApp, teléfono, Glovo, Uber Eats, Just Eat)</li>
+      <li>Carta completa con variantes, alérgenos, modificadores y precios actualizados</li>
+      <li>Zonas y tiempos de reparto reales (riders propios o externos)</li>
+      <li>Tasa actual de errores, ticket medio por canal y porcentaje de comisión efectiva pagada</li>
+      <li>Base de clientes (si existe), reseñas históricas y reclamaciones más frecuentes</li>
+    </ul>
+
+    <h3>Semana 2: Configuración del agente y conexión con el TPV</h3>
+
+    <ul>
+      <li>Alta de WhatsApp Business API en el número del local (sin perder los chats actuales)</li>
+      <li>Entrenamiento del agente con la carta completa, alérgenos y combinaciones permitidas</li>
+      <li>Integración con tu TPV o sistema de comandas (Lightspeed, Glop, Revo, Holded, propios)</li>
+      <li>Conexión con pasarela de pago (Bizum, Stripe, Redsys) para cobrar dentro del chat</li>
+      <li>Importación de base de clientes y unificación de duplicados</li>
+    </ul>
+
+    <h3>Semana 3: Flujos completos</h3>
+
+    <ul>
+      <li>Flujo de pedido a domicilio con validación de dirección y tiempo</li>
+      <li>Flujo de recogida en local con franja horaria</li>
+      <li>Flujo de reserva de mesa (terraza, interior, mesa alta, eventos)</li>
+      <li>Seguimiento automatizado del estado del pedido</li>
+      <li>Post-pedido: encuesta NPS, solicitud de reseña en Google y reactivación a 21 días</li>
+      <li>Escalado a humano cuando hay reclamación, alergia compleja o queja</li>
+    </ul>
+
+    <h3>Semana 4: Pruebas, ajustes y entrenamiento</h3>
+
+    <ul>
+      <li>Pruebas con pedidos reales en entorno controlado durante 5 días</li>
+      <li>Formación del equipo en el dashboard y en el modo "escalado"</li>
+      <li>Calibración de tono: el agente debe sonar como tu pizzería, no como un asistente genérico</li>
+      <li>Activación parcial: primero solo recogida, después también delivery</li>
+    </ul>
+
+    <h3>Semana 5: Optimización con datos reales</h3>
+
+    <ul>
+      <li>Lectura de las primeras métricas reales y comparación con la línea base</li>
+      <li>Ajustes en el flujo de upselling según conversión por producto</li>
+      <li>Activación de campañas de <a href="/blog/campanas-marketing-whatsapp-restaurante.html">marketing por WhatsApp</a> segmentadas por barrio o frecuencia</li>
+      <li>Informe ejecutivo con ROI mensual proyectado vs. real</li>
+    </ul>
+
+    <p><strong>Al cabo de las 5 semanas el agente está operativo en producción y generando datos limpios.</strong> A partir del segundo mes el sistema empieza a optimizar por sí mismo: detecta horas valle, sugiere promos por barrio y predice cancelaciones antes de que ocurran.</p>
+
+    <h2>Qué tipo de pizzerías sacan más rendimiento</h2>
+
+    <p>El agente de IA en WhatsApp funciona en cualquier pizzería con un volumen razonable. Donde más rendimiento da es en estos perfiles:</p>
+
+    <ul>
+      <li><strong>Pizzerías con fuerte cuota de delivery (más del 40%):</strong> la reducción de comisiones de aggregators paga el setup completo en 5 a 8 semanas</li>
+      <li><strong>Pizzerías con carta amplia y muchas variantes:</strong> el agente reduce errores de pedido en un 90% donde antes la confusión era frecuente</li>
+      <li><strong>Pizzerías de barrio con clientela recurrente:</strong> el CRM con perfiles convierte clientes ocasionales en habituales, subiendo la frecuencia de visita de 1.4 a 2.1 al mes</li>
+      <li><strong>Cadenas pequeñas (2 a 8 locales):</strong> un solo sistema central, un solo agente que sabe la carta de cada local y enruta cada pedido al horno correcto</li>
+      <li><strong>Pizzerías con horno saturable en pico:</strong> el agente desplaza franjas horarias automáticamente para evitar saturaciones que matan la calidad</li>
+      <li><strong>Locales que apenas tienen reseñas en Google:</strong> el flujo post-pedido sube las reseñas de 10-15 al mes a 60-90 en menos de un trimestre</li>
+    </ul>
+
+    <h2>Preguntas frecuentes sobre el agente IA para pizzerías</h2>
+
+    <h3>¿El agente entiende modificaciones complejas como "sin lactosa con borde de queso"?</h3>
+
+    <p>Sí. Si el ingrediente está en la carta como modificador permitido, el agente lo aplica. Si una combinación es imposible (sin lactosa con queso normal), lo detecta y propone la alternativa correcta antes de confirmar el pedido.</p>
+
+    <h3>¿Funciona con mi TPV (Lightspeed, Glop, Revo, Holded, propio)?</h3>
+
+    <p>Sí, en el 90% de los casos. Si tu TPV tiene API, el pedido entra directo en la pantalla de cocina. Si no la tiene, montamos una integración intermedia o usamos un sistema híbrido. Lo evaluamos en la semana 1.</p>
+
+    <h3>¿Y si Glovo o Uber Eats me bajan en el ranking cuando reduzca su volumen?</h3>
+
+    <p>Es probable que ocurra. Por eso el plan no es eliminar aggregators de golpe, sino bajar progresivamente su cuota mientras crece la venta directa. El margen recuperado por pedido directo (entre 3 y 7 euros) compensa de sobra una bajada de visibilidad en plataformas.</p>
+
+    <h3>¿Puedo seguir usando mi número de WhatsApp habitual?</h3>
+
+    <p>Sí. La WhatsApp Business API se conecta al número actual sin perder chats. Los clientes siguen escribiendo al mismo contacto de siempre.</p>
+
+    <h3>¿El agente cobra dentro del chat?</h3>
+
+    <p>Sí. Integramos Bizum, Stripe, Redsys o pasarela equivalente. El cliente paga sin salir de WhatsApp y el pedido entra en cocina solo cuando el pago se confirma. Esto elimina los "pedidos fantasma" que nunca se recogen.</p>
+
+    <h3>¿Y si el cliente no quiere hablar con una IA?</h3>
+
+    <p>Sucede en menos del 6% de las conversaciones. Cuando ocurre, el agente escala al encargado con todo el historial. El cliente no tiene que repetirse y el cambio de manos es invisible.</p>
+
+    <h2>El coste de no automatizar tu pizzería</h2>
+
+    <p>Muchos dueños de pizzería ven el agente IA como un gasto adicional. La pregunta correcta es la inversa: ¿cuánto margen está cediendo cada mes a Glovo, Uber Eats y a la cola de WhatsApp sin responder?</p>
+
+    <p>Una pizzería tipo que factura 26.000 euros al mes con 50% de aggregators y respuesta manual pierde entre <strong>4.000 y 6.500 euros mensuales</strong> en comisiones, pedidos no respondidos y clientes que no vuelven. Mientras la pizzería de la siguiente manzana implementa un agente de IA que responde en 6 segundos y cobra por Bizum, tu clientela emigra.</p>
+
+    <p>La tecnología existe, está probada y se amortiza en menos de dos meses. No es una apuesta. Es aritmética.</p>
+
+    <p>Ahora ya lo sabes.</p>
+
+    <div class="blog-cta">
+      <h3>¿Listo para montar el agente IA de tu pizzería?</h3>
+      <p>En ZENIA implementamos agentes de IA personalizados para pizzerías que reciben pedidos por WhatsApp, cobran dentro del chat y bajan la comisión de aggregators. Sistema operativo en 5 semanas. Agenda una llamada de 30 minutos y te enseñamos cómo funcionaría con tu carta y tu zona de reparto.</p>
+      <a href="https://calendly.com/zeladauriartef/30min">Agendar llamada gratuita</a>
+    </div>
+
+    <div class="blog-related">
+      <h3>Artículos relacionados</h3>
+      <a href="/blog/agente-ia-para-restaurantes.html">Agente de IA para Restaurantes: Guía Completa 2026<span>Cómo funciona un agente IA para reservas, pedidos y fidelización en restaurantes de cualquier tamaño.</span></a>
+      <a href="/blog/automatizar-pedidos-restaurante-whatsapp.html">Automatizar Pedidos de Restaurante por WhatsApp<span>Flujo completo de pedido, pago y entrega en el mismo chat. Sin apps externas, sin comisiones de aggregators.</span></a>
+      <a href="/blog/automatizar-reservas-restaurante-whatsapp.html">Automatizar Reservas por WhatsApp: Guía con Métricas Reales<span>El flujo de reserva 24/7, recordatorios y lista de espera dinámica que reduce no-shows un 65%.</span></a>
+      <a href="/blog/calcular-roi-crm-restaurante.html">Cómo Calcular el ROI de un CRM en tu Restaurante<span>Plantilla aritmética para estimar el retorno del agente IA en pedidos, reservas y upselling.</span></a>
+    </div>
+
+  </div>
+
+<div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 24px; margin: 40px 0;" data-zenia-internal-links="landings">
+  <h3 style="color: #F1F5F9; margin-bottom: 12px; font-size: 1.05rem;">¿En qué ciudad operas?</h3>
+  <p style="color: #94A3B8; margin-bottom: 16px; font-size: 0.95rem;">Personalizamos la implementación según tu mercado local. Ve la guía específica para tu ciudad:</p>
+  <div>
+      <a href="/es/crm-restaurantes-madrid.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Crm Restaurantes en Madrid →</a>
+      <a href="/es/crm-restaurantes-barcelona.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Crm Restaurantes en Barcelona →</a>
+      <a href="/es/crm-restaurantes-lima.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Crm Restaurantes en Lima →</a>
+      <a href="/es/crm-restaurantes.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Crm Restaurantes (guía nacional) →</a>
+  </div>
+</div>
+
+</article>
+
+<footer class="blog-footer">
+  <div class="container">
+    <p>&copy; 2026 ZENIA. Todos los derechos reservados. | <a href="/">Inicio</a> | <a href="/blog/">Blog</a></p>
+  </div>
+</footer>
+
+<div style="text-align:center; padding:16px 24px; background:#0A0F1C; color:#64748B; font-size:0.85rem; border-top:1px solid rgba(255,255,255,0.04);"><a href="/es/cobertura.html" style="color:#94A3B8; text-decoration:none;">Ver cobertura completa</a></div>
+</body>
+</html>

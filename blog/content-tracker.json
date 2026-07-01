@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-06-30T22:00:00Z",
+  "lastRun": "2026-07-01T00:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-clinicas-de-ginecologia",
+      "keyword": "agente ia para clinicas de ginecologia",
+      "tier": 1,
+      "cluster": "clinicas",
+      "status": "published",
+      "date": "2026-07-01"
+    },
     {
       "slug": "agente-ia-para-empresas-de-carpinteria",
       "keyword": "agente ia para empresas de carpinteria",

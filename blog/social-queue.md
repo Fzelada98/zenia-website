@@ -2782,3 +2782,13 @@ Reply if you run a carpentry shop where the owner is the only one closing deals 
 #carpinteria #smallbusiness #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-01 - Agente IA para Clínicas de Ginecología
+
+A private gynecology clinic with two exam rooms and one ultrasound suite in Spain runs a 16% monthly no-show rate, answers WhatsApp 2-6 hours late, and only 45% of patients come back for their annual check-up. That's €18-32k a month leaving the P&L before you even talk about growth. We deployed a personalized AI agent on WhatsApp Business API integrated with Doctoralia PRO and the clinic's own EMR: response time from hours to 12 seconds, no-shows from 16% to 6% with a 48h + 24h double reminder, lead-to-first-appointment conversion from 32% to 68%, annual check-up return from 44% to 71%, and 31% of appointment requests handled outside reception hours. The agent computes gestational week from LMP, schedules the correct prenatal visit with the right prep (full bladder, fasting for GTT, day-of-cycle for HSG), triages obstetric red flags to the on-call midwife in seconds, and never gives clinical advice. Net upside ~€29k/month against €297-497/month in tooling. LOPDGDD-compliant with encrypted messaging and separation of clinical vs administrative data.
+
+Reply if you run a private gynecology practice where the receptionist is drowning and patients quietly slip to the clinic next door, happy to share the operating playbook.
+
+#healthtech #gynecology #patientretention #AI #WhatsAppBusiness
+
+---

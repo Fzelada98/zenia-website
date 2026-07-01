@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-07-01T12:00:00Z",
+  "lastRun": "2026-07-01T14:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-administradores-de-fincas",
+      "keyword": "agente ia para administradores de fincas",
+      "tier": 1,
+      "cluster": "servicios",
+      "status": "published",
+      "date": "2026-07-01"
+    },
     {
       "slug": "agente-ia-para-clinicas-de-urologia",
       "keyword": "agente ia para clinicas de urologia",

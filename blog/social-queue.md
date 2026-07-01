@@ -2796,3 +2796,13 @@ Reply if you run a private gynecology practice where the receptionist is drownin
 #healthtech #gynecology #patientretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-01 - Agente IA para Clínicas de Urología
+
+A private urology clinic with two urologists gets 45-90 calls and WhatsApp messages a day. The receptionist picks up 62% of the time and 41% of missed callers never call back. In urology that's not just a lost appointment: it's a PSA follow-up that never books, a BPH patient who drops the annual review, a post-TURP check that skips the 30-day window. Baseline no-show rate sits around 14% in clinics without structured reminders (published research shows 5% is achievable). We deployed a personalized AI agent on WhatsApp Business API integrated with the urologists' calendars and the clinical protocols for six flows: first visit for elevated PSA and LUTS, BPH and incontinence follow-up, kidney stone recall, post-surgery sequence at 7/30/90 days, results delivery, and filtered reactivation that excludes oncology patients. Response time from 14h off-hours to under 45 seconds, no-shows from 14% to 6%, annual review recall from 66% to 88%, and 38% of appointment requests handled outside reception hours. Net upside ~€6.9k/month against €297-497/month in tooling, before you count the surgical margin behind every recovered first visit. GDPR compliant as special-category data under Art. 9: data processor agreement, TLS 1.3, AES-256, EU-region servers, pseudonymization and full traceability.
+
+Reply if you run a private urology clinic where PSA follow-ups quietly slip through and BPH patients disappear off the annual schedule, happy to share the operating playbook.
+
+#healthtech #urology #patientretention #AI #WhatsAppBusiness
+
+---

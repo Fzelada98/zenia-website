@@ -2775,6 +2775,8 @@ Reply if you run a pizzeria where Glovo eats a quarter of the bill and the phone
 
 ## 2026-06-30 - Agente IA para Empresas de Carpintería
 
+<!-- SCHEDULED:sp_8uzxwXyWe53re8Dm5r24F at 2026-07-01T07:00:00.000Z -->
+
 A small carpentry shop in Spain gets 15-35 quote requests a month and 78% of those buyers hire the first pro who answers them. Sector average response time is 47 hours. 52% of leads land outside office hours. The shop owner is answering WhatsApp at 11pm between jobs, sending PDF quotes three days later from a laptop in the workshop, and never following up on the ones that went cold. We deployed a personalized AI agent on WhatsApp Business API plus a CRM trained on the shop's own rates, materials and tone: response time 8 seconds, lead-to-visit conversion from 22-30% to 48-58%, visit-to-signed-quote from 35-42% to 55-68%, jobs closed monthly from 5-7 to 11-14, and revenue from €9-12k to €19-25k. Net upside ~€15k/month against €297-497/month in tooling. The agent gives orientational price ranges ("built-in wardrobe 2.5x2.4m in white melamine: €1,450-1,890"), books the on-site measurement, and runs the 2/5/10/20-day follow-up so the owner can stay in the workshop.
 
 Reply if you run a carpentry shop where the owner is the only one closing deals and quotes pile up unanswered, happy to share the playbook.
@@ -2784,6 +2786,8 @@ Reply if you run a carpentry shop where the owner is the only one closing deals 
 ---
 
 ## 2026-07-01 - Agente IA para Clínicas de Ginecología
+
+<!-- SCHEDULED:sp_dGabnrg2dIm2wrutGUzS at 2026-07-02T07:00:00.000Z -->
 
 A private gynecology clinic with two exam rooms and one ultrasound suite in Spain runs a 16% monthly no-show rate, answers WhatsApp 2-6 hours late, and only 45% of patients come back for their annual check-up. That's €18-32k a month leaving the P&L before you even talk about growth. We deployed a personalized AI agent on WhatsApp Business API integrated with Doctoralia PRO and the clinic's own EMR: response time from hours to 12 seconds, no-shows from 16% to 6% with a 48h + 24h double reminder, lead-to-first-appointment conversion from 32% to 68%, annual check-up return from 44% to 71%, and 31% of appointment requests handled outside reception hours. The agent computes gestational week from LMP, schedules the correct prenatal visit with the right prep (full bladder, fasting for GTT, day-of-cycle for HSG), triages obstetric red flags to the on-call midwife in seconds, and never gives clinical advice. Net upside ~€29k/month against €297-497/month in tooling. LOPDGDD-compliant with encrypted messaging and separation of clinical vs administrative data.
 

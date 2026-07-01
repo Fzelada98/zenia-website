@@ -2799,6 +2799,8 @@ Reply if you run a private gynecology practice where the receptionist is drownin
 
 ## 2026-07-01 - Agente IA para Clínicas de Urología
 
+<!-- SCHEDULED:sp_DcibW0rU18LAnVded6XhJ at 2026-07-02T00:16:40.709Z -->
+
 A private urology clinic with two urologists gets 45-90 calls and WhatsApp messages a day. The receptionist picks up 62% of the time and 41% of missed callers never call back. In urology that's not just a lost appointment: it's a PSA follow-up that never books, a BPH patient who drops the annual review, a post-TURP check that skips the 30-day window. Baseline no-show rate sits around 14% in clinics without structured reminders (published research shows 5% is achievable). We deployed a personalized AI agent on WhatsApp Business API integrated with the urologists' calendars and the clinical protocols for six flows: first visit for elevated PSA and LUTS, BPH and incontinence follow-up, kidney stone recall, post-surgery sequence at 7/30/90 days, results delivery, and filtered reactivation that excludes oncology patients. Response time from 14h off-hours to under 45 seconds, no-shows from 14% to 6%, annual review recall from 66% to 88%, and 38% of appointment requests handled outside reception hours. Net upside ~€6.9k/month against €297-497/month in tooling, before you count the surgical margin behind every recovered first visit. GDPR compliant as special-category data under Art. 9: data processor agreement, TLS 1.3, AES-256, EU-region servers, pseudonymization and full traceability.
 
 Reply if you run a private urology clinic where PSA follow-ups quietly slip through and BPH patients disappear off the annual schedule, happy to share the operating playbook.
@@ -2808,6 +2810,8 @@ Reply if you run a private urology clinic where PSA follow-ups quietly slip thro
 ---
 
 ## 2026-07-01 - Agente IA para Administradores de Fincas
+
+<!-- SCHEDULED:sp_7NL1admNT2YkRN9MnZK1P at 2026-07-03T07:00:00.000Z -->
 
 Spain has 1.4M homeowner associations and 12,000 property management firms. 73% of property managers say answering repetitive owner queries eats over 40% of their day, and 74% of owners already prefer a message to a phone call. Meanwhile the firms lose 8-12% of their book every year to owners who switch citing "they never reply when something happens." We deployed a personalized AI agent on WhatsApp Business API integrated with Gesfincas, Fincas Plus and Fynkus for six flows: informational queries, incident intake with photo classification by trade and urgency, fee reminders with a Bizum payment link, document delivery with permission checks, meeting logistics, and intelligent escalation with full context. Response time from 4-22h to 6-9 seconds, 68% of messages resolved without a human, urgent incidents attended in under 15 min going from 32% to 96%, admin hours per person down 58%, arrears recovery up 28%, and 41% of the traffic handled outside office hours. For a 40-community firm the net upside is around €8.6k/month against €297-497/month in tooling, and one senior can now handle 45 communities instead of 28.
 

@@ -2834,6 +2834,8 @@ Reply if you run a private cardiology clinic where annual reviews quietly slip a
 ---
 ## 2026-07-02 - Agente IA para Clínicas de Neurología
 
+<!-- SCHEDULED:sp_qx2X9QR7T78v797dlSisS at 2026-07-03T00:15:45.966Z -->
+
 Spain runs neurology on a shoestring: 2.2M patients a year, 1,607 active neurologists, a ratio of 3.40 per 100k against the 5 the EFNS recommends. Waiting lists sit above 45 days and 19% of scheduled visits still no-show, with 56% of those flagged as avoidable (forgetfulness, admin errors, communication gaps). Every empty EEG slot is €90-140 that walks out the door plus a slot that could have gone to a patient stuck on the list. We deployed a personalized AI agent on WhatsApp Business API integrated with Doctoralia, Docline and DriCloud for six flows: intake classified by motive (headache, epilepsy, movement disorder, cognitive decline, sleep), 48h and 24h reminders with prep instructions per test, dynamic waitlist that fills late cancellations by clinical urgency, results delivery with auto-scheduled follow-up, monthly check-ins for chronic patients on epilepsy, MS, Parkinson and migraine, and hard red-flag escalation to the on-call neurologist (acute motor deficit, thunderclap headache, first adult seizure). Response time from 4-26h to 8 seconds, no-shows from 19% to 7%, active 24h confirmations from 28% to 82%, admin hours per day from 3-4h to 45 min, 38% of new appointments now booked outside business hours. For a 3-neurologist clinic that's ~€10.5k/month net against €297-497/month in tooling, ROI 10-34x. Fully GDPR compliant, escalation-first design: the agent never diagnoses, never adjusts medication.
 
 Reply if you run a private neurology unit where the waitlist keeps growing while EEG slots go empty, happy to share the operating playbook.
@@ -2843,6 +2845,8 @@ Reply if you run a private neurology unit where the waitlist keeps growing while
 ---
 
 ## 2026-07-02 - Agente IA para Carnicerías
+
+<!-- SCHEDULED:sp_lvv3eoVWKvWK2LFGHjGWJ at 2026-07-06T06:00:00.000Z -->
 
 A neighborhood butcher shop in Spain handles 60-150 weekly custom orders by phone and loses 8-15 calls every Saturday morning during peak. 42% of consumers under 45 already prefer WhatsApp for meat orders, but only 29% of small food retailers have any active digital channel. We deployed a personalized AI agent on WhatsApp Business API + CRM for a mid-sized butcher: response time from 18-40 minutes to 10 seconds, weight/cut transcription errors from 6-12% down to under 1%, average custom-order ticket from €28-32 to €36-41 (+27% via contextual upselling), and 24% of orders now captured outside store hours. Net upside conservatively €5,295/month against €297-497/month in tooling. Payback under 30 days.
 

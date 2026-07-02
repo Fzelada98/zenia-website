@@ -2841,3 +2841,13 @@ Reply if you run a private neurology unit where the waitlist keeps growing while
 #healthtech #neurology #patientretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-02 - Agente IA para Carnicerías
+
+A neighborhood butcher shop in Spain handles 60-150 weekly custom orders by phone and loses 8-15 calls every Saturday morning during peak. 42% of consumers under 45 already prefer WhatsApp for meat orders, but only 29% of small food retailers have any active digital channel. We deployed a personalized AI agent on WhatsApp Business API + CRM for a mid-sized butcher: response time from 18-40 minutes to 10 seconds, weight/cut transcription errors from 6-12% down to under 1%, average custom-order ticket from €28-32 to €36-41 (+27% via contextual upselling), and 24% of orders now captured outside store hours. Net upside conservatively €5,295/month against €297-497/month in tooling. Payback under 30 days.
+
+Reply if you run a butcher shop, deli, or small food store where Saturday mornings feel like the phone is winning, happy to share the catalogue + peak-hour framework we use.
+
+#retailtech #foodindustry #AI #WhatsAppBusiness
+
+---

@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-07-02T00:00:00Z",
+  "lastRun": "2026-07-02T14:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-clinicas-de-neurologia",
+      "keyword": "agente ia para clinicas de neurologia",
+      "tier": 1,
+      "cluster": "clinicas",
+      "status": "published",
+      "date": "2026-07-02"
+    },
     {
       "slug": "agente-ia-para-clinicas-de-cardiologia",
       "keyword": "agente ia para clinicas de cardiologia",

@@ -2832,3 +2832,12 @@ Reply if you run a private cardiology clinic where annual reviews quietly slip a
 #healthtech #cardiology #patientretention #AI #WhatsAppBusiness
 
 ---
+## 2026-07-02 - Agente IA para Clínicas de Neurología
+
+Spain runs neurology on a shoestring: 2.2M patients a year, 1,607 active neurologists, a ratio of 3.40 per 100k against the 5 the EFNS recommends. Waiting lists sit above 45 days and 19% of scheduled visits still no-show, with 56% of those flagged as avoidable (forgetfulness, admin errors, communication gaps). Every empty EEG slot is €90-140 that walks out the door plus a slot that could have gone to a patient stuck on the list. We deployed a personalized AI agent on WhatsApp Business API integrated with Doctoralia, Docline and DriCloud for six flows: intake classified by motive (headache, epilepsy, movement disorder, cognitive decline, sleep), 48h and 24h reminders with prep instructions per test, dynamic waitlist that fills late cancellations by clinical urgency, results delivery with auto-scheduled follow-up, monthly check-ins for chronic patients on epilepsy, MS, Parkinson and migraine, and hard red-flag escalation to the on-call neurologist (acute motor deficit, thunderclap headache, first adult seizure). Response time from 4-26h to 8 seconds, no-shows from 19% to 7%, active 24h confirmations from 28% to 82%, admin hours per day from 3-4h to 45 min, 38% of new appointments now booked outside business hours. For a 3-neurologist clinic that's ~€10.5k/month net against €297-497/month in tooling, ROI 10-34x. Fully GDPR compliant, escalation-first design: the agent never diagnoses, never adjusts medication.
+
+Reply if you run a private neurology unit where the waitlist keeps growing while EEG slots go empty, happy to share the operating playbook.
+
+#healthtech #neurology #patientretention #AI #WhatsAppBusiness
+
+---

@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-07-03T14:00:00Z",
+  "lastRun": "2026-07-03T22:07:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-tiendas-de-bicicletas",
+      "keyword": "agente ia para tiendas de bicicletas",
+      "tier": 1,
+      "cluster": "retail",
+      "status": "published",
+      "date": "2026-07-03"
+    },
     {
       "slug": "agente-ia-para-empresas-de-alquiler-de-coches",
       "keyword": "agente ia para empresas de alquiler de coches",

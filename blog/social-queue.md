@@ -2865,3 +2865,12 @@ Full breakdown with the ROI table: https://zeniapartners.com/blog/agente-ia-para
 #restauranttech #customerretention #AI #WhatsAppBusiness
 
 ---
+## 2026-07-03 - Agente IA para Empresas de Alquiler de Coches
+
+Spain's rent-a-car sector will hit €2.4B in 2025 with 4% annual growth, but 76% of the market sits inside 10 big players. The rest are SMBs with 40-120 vehicles fighting on response speed, and losing: average first response is 32-58 minutes when 75%+ of bookings happen on mobile and the customer contacts 2-3 companies before deciding. We built a personalized AI agent on WhatsApp Business API for a rent-a-car with 80 vehicles across 2 depots: quotation-to-booking conversion jumped from 11-14% to 27-34%, out-of-hours bookings from near 0% to 31% (34% of demand hits between 20:00 and 08:00), extras upsell from 6% to 18% by shifting the offer to 24h before pickup, and counter disputes over deposits fell from 26% to 9%. Net upside ~€23k/month against €297-497 in tooling. The unlock isn't a scripted bot, it's a booking closer that works while your team sleeps.
+
+DM me if you run a rent-a-car with 40-150 vehicles and want the deposit-explanation flow we use to cut 65% of counter incidents.
+
+#automotive #rentalfleet #AI #WhatsAppBusiness
+
+---

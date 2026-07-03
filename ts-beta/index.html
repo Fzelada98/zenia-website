@@ -9,7 +9,8 @@
 (function(){
   var exp = new Date('2026-04-03T23:59:59Z');
   if(new Date() > exp){
-    document.documentElement.innerHTML = '<body style="background:#0a0a0a;color:#999;font-family:Inter,sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;text-align:center"><div><h1 style="color:#d4b88c;font-size:28px;margin-bottom:12px">Demo Expired</h1><p>This demo link has expired. Contact Fabrizzio at fabrizzio.zelada@zeniapartners.com for access.</p></div></body>';
+    document.documentElement.innerHTML = '<body style="background:#0a0a0a;color:#999;font-family:Inter,sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;text-align:center"><div><h1 style="color:#d4b88c;font-size:28px;margin-bottom:12px">Demo Expired</h1><p>This demo link has expired. Contact Fabrizzio at fabrizzio.zelada@zeniapartners.com for access.</p></div><script>document.addEventListener("click",function(e){var t=e.target,a=t.closest?t.closest('a[href*="wa.me"]'):null;if(!a)return;try{navigator.sendBeacon("https://gaia-relojes.onrender.com/gwb/lead",JSON.stringify({site:"zenia",path:location.pathname,ref:document.referrer||""}))}catch(r){}},true);</script>
+</body>';
   }
 })();
 </script>

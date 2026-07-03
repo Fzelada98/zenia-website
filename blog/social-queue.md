@@ -2855,3 +2855,13 @@ Reply if you run a butcher shop, deli, or small food store where Saturday mornin
 #retailtech #foodindustry #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-03 - Agente IA para Hamburgueserías
+
+Spanish burger joints hand 20-30% of every order to Glovo, Uber Eats and Just Eat, with fees spiking to 35% off-peak. Fast food in Spain is a $185B market in 2026 growing 12.96% CAGR through 2035, and 34% of LATAM operators already migrated 30%+ of delivery volume to direct WhatsApp in 2025. We built a personalized AI agent on WhatsApp for burger operators: digital menu with variants and diets, Bizum/Stripe checkout inline, kitchen sync, own-rider dispatch and a customer database the apps can never touch. On 60 orders/day at a €22 ticket, migrating 45% of app volume to direct saves €3.5k/month in commissions alone. Upselling + off-hours capture adds another €5-6k net.
+
+Full breakdown with the ROI table: https://zeniapartners.com/blog/agente-ia-para-hamburgueserias.html
+
+#restauranttech #customerretention #AI #WhatsAppBusiness
+
+---

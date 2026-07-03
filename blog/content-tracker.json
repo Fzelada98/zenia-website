@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-07-02T22:00:00Z",
+  "lastRun": "2026-07-03T06:15:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-hamburgueserias",
+      "keyword": "agente ia para hamburgueserias",
+      "tier": 1,
+      "cluster": "restaurantes",
+      "status": "published",
+      "date": "2026-07-03"
+    },
     {
       "slug": "agente-ia-para-carnicerias",
       "keyword": "agente ia para carnicerias",

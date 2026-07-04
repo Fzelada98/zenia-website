@@ -2883,3 +2883,12 @@ Reply if you run a bike shop with a workshop, I'll send the exact 90/365-day rev
 #retailtech #ecommerce #AI #automation
 
 ---
+## 2026-07-04 - Agente IA para Tiendas de Deportes
+
+Spain lost 557 sporting-goods stores in 2024 and opened 315. Small independents took the worst hit at -3.5%, while the top 5 chains kept 55.5% of a €9B market. The gap is not price, it is response speed: 41% of WhatsApp inquiries hit outside store hours and 60% of those customers buy elsewhere before Monday. We deployed a personalized AI agent for an independent sports retailer (2 stores, €700k revenue, 400 weekly WhatsApp inquiries): consult-to-sale conversion moved from 18% to 34%, average ticket from €52 to €71, size-return rate from 14% to 6% (the agent asks weight, foot strike, weekly km before recommending), and abandoned-cart recovery from 3% to 19%. Net upside ~€8k/month against €297-497 in tooling. IBM and Juniper Research clock generative WhatsApp agents at 74% resolution without human escalation, McKinsey at 57.4% conversion on conversational retail campaigns. The moat is not the model, it is the catalog and stock integration behind it.
+
+DM me if you run a specialty sports store and want the size-recommendation matrix we use across Nike, Asics, Salomon and Bullpadel.
+
+#retailtech #ecommerce #AI #WhatsAppBusiness
+
+---

@@ -2892,3 +2892,12 @@ DM me if you run a specialty sports store and want the size-recommendation matri
 #retailtech #ecommerce #AI #WhatsAppBusiness
 
 ---
+## 2026-07-04 - Agente IA para Pescaderías
+
+Spain has lost over 5,000 traditional fishmongers since 2007 and per capita fresh fish consumption has dropped roughly 32%. The ones surviving are not the cheapest, they are the ones who reply in seconds and set the product aside before the customer walks in. 60% of Spanish fishmongers admit less than 20% of their sales are remote, yet 38% of automated orders land outside counter hours. We deployed a personalized AI agent on WhatsApp Business API for a neighborhood fishmonger: response time dropped from 18-45 min to 10 seconds, lost orders from 25-30% to under 4%, fresh-product waste from 7-10% to 3-4%, and average ticket lifted from €22 to €29 thanks to proactive alerts when specific catches arrive from the lonja. Net upside around €9.2k/month against €297-497 in tooling. The unlock is not the chat, it is the CRM knowing which customer asks for rodaballo every October so the alert lands on the right phones.
+
+Reply if you run a fresh-food retail shop and want the "produce-arrival alert" flow we use, works the same for butchers and bakeries.
+
+#retailtech #foodretail #AI #WhatsAppBusiness
+
+---

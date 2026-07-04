@@ -2901,3 +2901,12 @@ Reply if you run a fresh-food retail shop and want the "produce-arrival alert" f
 #retailtech #foodretail #AI #WhatsAppBusiness
 
 ---
+## 2026-07-04 - Agente IA para Reparación de Móviles
+
+Spain's phone repair market grows 10-13% annually and screen repairs alone account for 40-50% of shop volume, yet in a sample of 15 independent shops in Madrid and Barcelona, 47% of new WhatsApp conversations never reached a formal quote because nobody replied in time. The technician is inside a device with a precision screwdriver and cannot check the phone every 3 minutes. We deployed a personalized AI agent connected to the shop's price list and ticket system: average response time went from 38 min to 28 sec, quote-to-repair conversion moved from 34% to 49% in a month, 31% of quotes now close outside store hours, and abandoned repairs (device sits unclaimed 30+ days) dropped from 18% to 4%. Net upside around €17.7k/month in margin against €297-497 in tooling. The unlock is not the chat, it is that the agent knows if a specific ticket is ready before the customer walks over.
+
+DM me if you run a phone repair shop or franchise and want the exact 48h/96h/7-day pickup reminder flow that unlocks trapped cash.
+
+#retailtech #mobilerepair #AI #WhatsAppBusiness
+
+---

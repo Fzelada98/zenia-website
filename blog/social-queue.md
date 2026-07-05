@@ -2858,6 +2858,8 @@ Reply if you run a butcher shop, deli, or small food store where Saturday mornin
 
 ## 2026-07-03 - Agente IA para Hamburgueserías
 
+<!-- SCHEDULED:sp_PblTT1ASG0mwUb5Vh4xtq at 2026-07-06T07:00:00.000Z -->
+
 Spanish burger joints hand 20-30% of every order to Glovo, Uber Eats and Just Eat, with fees spiking to 35% off-peak. Fast food in Spain is a $185B market in 2026 growing 12.96% CAGR through 2035, and 34% of LATAM operators already migrated 30%+ of delivery volume to direct WhatsApp in 2025. We built a personalized AI agent on WhatsApp for burger operators: digital menu with variants and diets, Bizum/Stripe checkout inline, kitchen sync, own-rider dispatch and a customer database the apps can never touch. On 60 orders/day at a €22 ticket, migrating 45% of app volume to direct saves €3.5k/month in commissions alone. Upselling + off-hours capture adds another €5-6k net.
 
 Full breakdown with the ROI table: https://zeniapartners.com/blog/agente-ia-para-hamburgueserias.html
@@ -2866,6 +2868,8 @@ Full breakdown with the ROI table: https://zeniapartners.com/blog/agente-ia-para
 
 ---
 ## 2026-07-03 - Agente IA para Empresas de Alquiler de Coches
+
+<!-- SCHEDULED:sp_h7WExDlt7qCEGZQa8GJXt at 2026-07-07T07:00:00.000Z -->
 
 Spain's rent-a-car sector will hit €2.4B in 2025 with 4% annual growth, but 76% of the market sits inside 10 big players. The rest are SMBs with 40-120 vehicles fighting on response speed, and losing: average first response is 32-58 minutes when 75%+ of bookings happen on mobile and the customer contacts 2-3 companies before deciding. We built a personalized AI agent on WhatsApp Business API for a rent-a-car with 80 vehicles across 2 depots: quotation-to-booking conversion jumped from 11-14% to 27-34%, out-of-hours bookings from near 0% to 31% (34% of demand hits between 20:00 and 08:00), extras upsell from 6% to 18% by shifting the offer to 24h before pickup, and counter disputes over deposits fell from 26% to 9%. Net upside ~€23k/month against €297-497 in tooling. The unlock isn't a scripted bot, it's a booking closer that works while your team sleeps.
 
@@ -2876,6 +2880,8 @@ DM me if you run a rent-a-car with 40-150 vehicles and want the deposit-explanat
 ---
 ## 2026-07-03 - Agente IA para Tiendas de Bicicletas
 
+<!-- SCHEDULED:sp_AHIajKMC4xYzrFyjwVLSU at 2026-07-08T06:00:00.000Z -->
+
 Europe's e-bike market closed 2025 at €18B and grows 7.6% yearly through 2035, yet the average bike shop still loses 22-35% of sales inquiries because a WhatsApp goes unread until the mechanic looks up from the workbench. We deployed a personalized AI agent for a 3-person shop with a workshop: sales-inquiry response time went from 4-12 hours to under 15 seconds, prepaid year-one service bookings jumped from 41-59% to 82-88%, the mechanic recovered 10 hours a week of workshop time, and cart recovery on their ecommerce went from 3% (email) to 14% (WhatsApp). Net upside around €8.1k/month against €297-497 in tooling. The interesting one wasn't sales, it was the year-one revisions: nobody was calling those customers back, and each one triggers €45 average in accessories at pickup.
 
 Reply if you run a bike shop with a workshop, I'll send the exact 90/365-day revision reminder flow.
@@ -2884,6 +2890,8 @@ Reply if you run a bike shop with a workshop, I'll send the exact 90/365-day rev
 
 ---
 ## 2026-07-04 - Agente IA para Tiendas de Deportes
+
+<!-- SCHEDULED:sp_78Qf0525yXGRbuhCKjnvK at 2026-07-09T06:00:00.000Z -->
 
 Spain lost 557 sporting-goods stores in 2024 and opened 315. Small independents took the worst hit at -3.5%, while the top 5 chains kept 55.5% of a €9B market. The gap is not price, it is response speed: 41% of WhatsApp inquiries hit outside store hours and 60% of those customers buy elsewhere before Monday. We deployed a personalized AI agent for an independent sports retailer (2 stores, €700k revenue, 400 weekly WhatsApp inquiries): consult-to-sale conversion moved from 18% to 34%, average ticket from €52 to €71, size-return rate from 14% to 6% (the agent asks weight, foot strike, weekly km before recommending), and abandoned-cart recovery from 3% to 19%. Net upside ~€8k/month against €297-497 in tooling. IBM and Juniper Research clock generative WhatsApp agents at 74% resolution without human escalation, McKinsey at 57.4% conversion on conversational retail campaigns. The moat is not the model, it is the catalog and stock integration behind it.
 
@@ -2894,6 +2902,8 @@ DM me if you run a specialty sports store and want the size-recommendation matri
 ---
 ## 2026-07-04 - Agente IA para Pescaderías
 
+<!-- SCHEDULED:sp_zIc9PTYkjid6pgfrJuy at 2026-07-10T06:00:00.000Z -->
+
 Spain has lost over 5,000 traditional fishmongers since 2007 and per capita fresh fish consumption has dropped roughly 32%. The ones surviving are not the cheapest, they are the ones who reply in seconds and set the product aside before the customer walks in. 60% of Spanish fishmongers admit less than 20% of their sales are remote, yet 38% of automated orders land outside counter hours. We deployed a personalized AI agent on WhatsApp Business API for a neighborhood fishmonger: response time dropped from 18-45 min to 10 seconds, lost orders from 25-30% to under 4%, fresh-product waste from 7-10% to 3-4%, and average ticket lifted from €22 to €29 thanks to proactive alerts when specific catches arrive from the lonja. Net upside around €9.2k/month against €297-497 in tooling. The unlock is not the chat, it is the CRM knowing which customer asks for rodaballo every October so the alert lands on the right phones.
 
 Reply if you run a fresh-food retail shop and want the "produce-arrival alert" flow we use, works the same for butchers and bakeries.
@@ -2902,6 +2912,8 @@ Reply if you run a fresh-food retail shop and want the "produce-arrival alert" f
 
 ---
 ## 2026-07-04 - Agente IA para Reparación de Móviles
+
+<!-- SCHEDULED:sp_LsgYMGjFZC3VGvEf6jZZ at 2026-07-13T06:00:00.000Z -->
 
 Spain's phone repair market grows 10-13% annually and screen repairs alone account for 40-50% of shop volume, yet in a sample of 15 independent shops in Madrid and Barcelona, 47% of new WhatsApp conversations never reached a formal quote because nobody replied in time. The technician is inside a device with a precision screwdriver and cannot check the phone every 3 minutes. We deployed a personalized AI agent connected to the shop's price list and ticket system: average response time went from 38 min to 28 sec, quote-to-repair conversion moved from 34% to 49% in a month, 31% of quotes now close outside store hours, and abandoned repairs (device sits unclaimed 30+ days) dropped from 18% to 4%. Net upside around €17.7k/month in margin against €297-497 in tooling. The unlock is not the chat, it is that the agent knows if a specific ticket is ready before the customer walks over.
 
@@ -2912,6 +2924,8 @@ DM me if you run a phone repair shop or franchise and want the exact 48h/96h/7-d
 ---
 ## 2026-07-05 - Agente IA para Clínicas de Ortodoncia
 
+<!-- SCHEDULED:sp_O8CjhnWTOpKkBRCaBSDK5 at 2026-07-14T07:00:00.000Z -->
+
 Orthodontic practices in Spain average a 22% no-show rate on control appointments. The industry benchmark is under 1%. Meanwhile 31.7% of first visits never accept the treatment plan and 90% of orthodontists still expect to grow in 2026 (Orthodontic Practice Survey 2025). The bottleneck is not demand, it is the front desk drowning in confirmations, bracket-emergency questions and stalled leads. We deployed a personalized AI agent on WhatsApp Business API connected to the practice management software: 72h + 24h double-check confirmations dropped no-shows from 24% to 8%, first-visit case acceptance moved from 66% to 74%, and a 3/15/45-day re-engagement sequence recovered 15% of open cases that would have been written off. On a 400-active-patient book with a €3,800 average treatment, that is roughly €39k/month in recovered revenue against €497 in tooling. Full breakdown, RGPD and LOPDGDD notes here: zeniapartners.com/blog/agente-ia-para-clinicas-de-ortodoncia.html
 
 Reply if you run an orthodontic practice and want the exact double-check confirmation script we use.
@@ -2921,6 +2935,8 @@ Reply if you run an orthodontic practice and want the exact double-check confirm
 ---
 
 ## 2026-07-05 - Agente IA para Funerarias
+
+<!-- SCHEDULED:sp_oeJJlSjnPNfPKK6OUHUvu at 2026-07-15T07:00:00.000Z -->
 
 The Spanish funeral sector bills €1.716B a year across 1,100 companies and 13,000 employees, yet 68% still run on rotating on-call shifts that lose 5-12% of first calls between midnight and 6am. 41% of new contracts arrive at those hours. A personalized AI agent trained on grief-aware scripts and integrated with the funeral ERP answers every channel in 8 seconds, triages the call (in-progress death vs commercial vs admin vs post-service), and only wakes the on-call technician when the case actually requires it. Numbers we saw: first-contact conversion from 54% to 71%, admin queries to the manager down 76%, coordination time per service from 3.5h to 1.2h, 78% of inquiries resolved without human escalation. Net upside conservatively €21k/month against €297-497/month in tooling.
 

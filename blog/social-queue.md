@@ -2945,3 +2945,13 @@ Reply if you operate a funeral home and your on-call team is burning out coverin
 #funeralindustry #B2B #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-05 - Agente IA para Peluquerías Caninas
+
+Spain's dog grooming services market hit $162M in 2024 and is growing 7.3% a year to 2030 (Grand View Research), riding a 25% jump in pet adoption between 2020 and 2023. But 82% of grooming salons still run WhatsApp manually: 55-180 min response times, 3 to 6 missed appointments a week and the pet's file scribbled in a notebook. We deployed a personalized AI agent on WhatsApp Business API that recognizes the breed, applies the correct price, offers alternative slots and sends 24h reminders with a canine checklist (no big meal before, harness instead of collar for sensitive dogs). The killer flow: it books the next appointment 6-8 weeks out based on coat type, which pushed annual retention from 48% to 72% on a 220-active-client book. Net upside for a 12-dogs-a-day salon: roughly €4k/month against €297-497/month in tooling.
+
+Reply if you run a grooming salon and want the exact 6-week rebook script we use.
+
+#petindustry #customerretention #AI #WhatsAppBusiness
+
+---

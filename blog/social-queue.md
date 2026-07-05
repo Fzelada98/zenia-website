@@ -2910,3 +2910,12 @@ DM me if you run a phone repair shop or franchise and want the exact 48h/96h/7-d
 #retailtech #mobilerepair #AI #WhatsAppBusiness
 
 ---
+## 2026-07-05 - Agente IA para Clínicas de Ortodoncia
+
+Orthodontic practices in Spain average a 22% no-show rate on control appointments. The industry benchmark is under 1%. Meanwhile 31.7% of first visits never accept the treatment plan and 90% of orthodontists still expect to grow in 2026 (Orthodontic Practice Survey 2025). The bottleneck is not demand, it is the front desk drowning in confirmations, bracket-emergency questions and stalled leads. We deployed a personalized AI agent on WhatsApp Business API connected to the practice management software: 72h + 24h double-check confirmations dropped no-shows from 24% to 8%, first-visit case acceptance moved from 66% to 74%, and a 3/15/45-day re-engagement sequence recovered 15% of open cases that would have been written off. On a 400-active-patient book with a €3,800 average treatment, that is roughly €39k/month in recovered revenue against €497 in tooling. Full breakdown, RGPD and LOPDGDD notes here: zeniapartners.com/blog/agente-ia-para-clinicas-de-ortodoncia.html
+
+Reply if you run an orthodontic practice and want the exact double-check confirmation script we use.
+
+#healthtech #patientretention #AI #WhatsAppBusiness
+
+---

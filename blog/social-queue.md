@@ -2919,3 +2919,13 @@ Reply if you run an orthodontic practice and want the exact double-check confirm
 #healthtech #patientretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-05 - Agente IA para Funerarias
+
+The Spanish funeral sector bills €1.716B a year across 1,100 companies and 13,000 employees, yet 68% still run on rotating on-call shifts that lose 5-12% of first calls between midnight and 6am. 41% of new contracts arrive at those hours. A personalized AI agent trained on grief-aware scripts and integrated with the funeral ERP answers every channel in 8 seconds, triages the call (in-progress death vs commercial vs admin vs post-service), and only wakes the on-call technician when the case actually requires it. Numbers we saw: first-contact conversion from 54% to 71%, admin queries to the manager down 76%, coordination time per service from 3.5h to 1.2h, 78% of inquiries resolved without human escalation. Net upside conservatively €21k/month against €297-497/month in tooling.
+
+Reply if you operate a funeral home and your on-call team is burning out covering admin calls at 3am, happy to share the triage playbook.
+
+#funeralindustry #B2B #AI #WhatsAppBusiness
+
+---

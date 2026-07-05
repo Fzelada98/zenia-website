@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-07-05T14:15:00Z",
+  "lastRun": "2026-07-05T18:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-peluquerias-caninas",
+      "keyword": "agente ia para peluquerias caninas",
+      "tier": 1,
+      "cluster": "mascotas",
+      "status": "published",
+      "date": "2026-07-05"
+    },
     {
       "slug": "agente-ia-para-funerarias",
       "keyword": "agente ia para funerarias",

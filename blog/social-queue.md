@@ -2969,3 +2969,13 @@ DM me if you run rural cottages and want the channel sync setup we use.
 #ruraltourism #hospitality #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-06 - Agente IA para Bodegas
+
+Top-quartile wineries grew 22% in direct-to-consumer last year. The median stayed flat. The bottom quartile dropped 13% (2026 DTC Wine Report). The gap is not the wine, it is who answers on Saturday night when someone wants to book a tasting or renew their wine club. We put a personalized AI agent on WhatsApp for a Spanish winery selling 80,000 bottles a year: response time from 3-9h to 10 seconds, wine club churn 12% to 6%, tasting reservations confirmed and paid 48% to 82%, average DTC ticket €62 to €84. 37% of tasting bookings and 29% of DTC orders arrive outside business hours. Full breakdown: zeniapartners.com/blog/agente-ia-para-bodegas.html
+
+Reply if you run a winery with a WhatsApp inbox no one is watching after 6pm.
+
+#winetech #DTC #AI #WhatsAppBusiness
+
+---

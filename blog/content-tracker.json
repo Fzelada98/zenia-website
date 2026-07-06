@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-07-06T00:00:00Z",
+  "lastRun": "2026-07-06T12:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-bodegas",
+      "keyword": "agente ia para bodegas",
+      "tier": 1,
+      "cluster": "retail",
+      "status": "published",
+      "date": "2026-07-06"
+    },
     {
       "slug": "agente-ia-para-casas-rurales",
       "keyword": "agente ia para casas rurales",

@@ -2979,3 +2979,13 @@ Reply if you run a winery with a WhatsApp inbox no one is watching after 6pm.
 #winetech #DTC #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-06 - Agente IA para Lavanderias
+
+Spain's self-service laundry market clocks €236.6M a year and has grown 60% in five years, with almost 2,000 stores active in 2025 (La Wash, Lexpress Franchise). The next 20% of margin will not come from more machines. It will come from who answers WhatsApp when a family with two comforters messages on Sunday at 10pm asking for pickup. We rolled out a personalized AI agent on WhatsApp for a mid-size laundry with door-to-door service: response time from hours to 8 seconds, daily pickups from 8 to 15, first-consult to booked ratio 38% to 71%, ticket per active client €18 to €26, and 45-day repeat rate 28% to 52%. 41% of the incoming requests hit outside business hours. Net upside: roughly €4,770 a month against €297-497/month in tooling.
+
+Reply if you run a laundry or dry cleaner and want the exact pickup-route script we use.
+
+#laundryindustry #localservices #AI #WhatsAppBusiness
+
+---

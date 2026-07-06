@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-07-06T12:00:00Z",
+  "lastRun": "2026-07-06T14:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-lavanderias",
+      "keyword": "agente ia para lavanderias",
+      "tier": 1,
+      "cluster": "servicios",
+      "status": "published",
+      "date": "2026-07-06"
+    },
     {
       "slug": "agente-ia-para-bodegas",
       "keyword": "agente ia para bodegas",

@@ -2948,6 +2948,8 @@ Reply if you operate a funeral home and your on-call team is burning out coverin
 
 ## 2026-07-05 - Agente IA para Peluquerías Caninas
 
+<!-- SCHEDULED:sp_bNngdwf8eNvxjEIvzLnw at 2026-07-06T07:00:00.000Z -->
+
 Spain's dog grooming services market hit $162M in 2024 and is growing 7.3% a year to 2030 (Grand View Research), riding a 25% jump in pet adoption between 2020 and 2023. But 82% of grooming salons still run WhatsApp manually: 55-180 min response times, 3 to 6 missed appointments a week and the pet's file scribbled in a notebook. We deployed a personalized AI agent on WhatsApp Business API that recognizes the breed, applies the correct price, offers alternative slots and sends 24h reminders with a canine checklist (no big meal before, harness instead of collar for sensitive dogs). The killer flow: it books the next appointment 6-8 weeks out based on coat type, which pushed annual retention from 48% to 72% on a 220-active-client book. Net upside for a 12-dogs-a-day salon: roughly €4k/month against €297-497/month in tooling.
 
 Reply if you run a grooming salon and want the exact 6-week rebook script we use.
@@ -2957,6 +2959,8 @@ Reply if you run a grooming salon and want the exact 6-week rebook script we use
 ---
 
 ## 2026-07-06 - Agente IA para Casas Rurales
+
+<!-- SCHEDULED:sp_Rt7lmdC4IW6oBitftwO at 2026-07-07T07:00:00.000Z -->
 
 Spain's rural tourism averaged just 20.3% bed occupancy in May 2026 and 34.6% even on weekends (INE), despite overnight stays growing 4.9% YoY. The demand is there. What's missing is a landlord who can answer WhatsApp at 22:47 on Thursday when a family of six decides to escape for the weekend. We deployed a personalized AI agent on WhatsApp Business API for 14 rural cottages in Castilla y León, Andalucía and Cataluña: response time from 3-9h to 8 seconds, consult-to-booking conversion from 28% to 47%, annual occupancy 21% to 34%, reviews per stay 0.18 to 0.71. On a 4-bedroom cottage at €130/night, that occupancy jump is roughly €15,600 extra a year against €297/month in tooling. Sync across Booking, Airbnb, Escapadarural and Rentalia included. Full breakdown here: zeniapartners.com/blog/agente-ia-para-casas-rurales.html
 

@@ -2955,3 +2955,13 @@ Reply if you run a grooming salon and want the exact 6-week rebook script we use
 #petindustry #customerretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-06 - Agente IA para Casas Rurales
+
+Spain's rural tourism averaged just 20.3% bed occupancy in May 2026 and 34.6% even on weekends (INE), despite overnight stays growing 4.9% YoY. The demand is there. What's missing is a landlord who can answer WhatsApp at 22:47 on Thursday when a family of six decides to escape for the weekend. We deployed a personalized AI agent on WhatsApp Business API for 14 rural cottages in Castilla y León, Andalucía and Cataluña: response time from 3-9h to 8 seconds, consult-to-booking conversion from 28% to 47%, annual occupancy 21% to 34%, reviews per stay 0.18 to 0.71. On a 4-bedroom cottage at €130/night, that occupancy jump is roughly €15,600 extra a year against €297/month in tooling. Sync across Booking, Airbnb, Escapadarural and Rentalia included. Full breakdown here: zeniapartners.com/blog/agente-ia-para-casas-rurales.html
+
+DM me if you run rural cottages and want the channel sync setup we use.
+
+#ruraltourism #hospitality #AI #WhatsAppBusiness
+
+---

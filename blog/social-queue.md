@@ -3017,3 +3017,19 @@ Reply if you run a dojo or academia and half your admin week is spent chasing re
 #martialarts #memberretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-07 - Agente de IA para Academias de CrossFit
+
+50% of new CrossFit members quit before month 6, and the ones who show up fewer than 4 times in their first month have an 80% probability of canceling (HFA 2025 Fitness Industry Benchmarking Report).
+
+The retention problem in a box is not the workout. It is the WhatsApp inbox nobody checks between WODs.
+
+We deployed a personalized AI agent on WhatsApp for a 150-member box: monthly churn from 5% to 3%, class fill rate from 58% to 78%, lead-to-trial conversion from 18% to 41%, and 6-month retention on new members jumped from 60% to 87% (the number every box owner keeps missing because they never track the cohort).
+
+Full breakdown with the ROI math: zeniapartners.com/blog/agente-ia-para-academias-de-crossfit.html
+
+Reply if you run a CrossFit box and want the exact 21-day onboarding flow we use.
+
+#fitnessindustry #memberretention #AI #WhatsAppBusiness
+
+---

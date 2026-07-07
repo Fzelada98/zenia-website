@@ -2972,6 +2972,8 @@ DM me if you run rural cottages and want the channel sync setup we use.
 
 ## 2026-07-06 - Agente IA para Bodegas
 
+<!-- SCHEDULED:sp_QVFg5rosJcZJzoYHM4iY6 at 2026-07-07T16:20:48.140Z -->
+
 Top-quartile wineries grew 22% in direct-to-consumer last year. The median stayed flat. The bottom quartile dropped 13% (2026 DTC Wine Report). The gap is not the wine, it is who answers on Saturday night when someone wants to book a tasting or renew their wine club. We put a personalized AI agent on WhatsApp for a Spanish winery selling 80,000 bottles a year: response time from 3-9h to 10 seconds, wine club churn 12% to 6%, tasting reservations confirmed and paid 48% to 82%, average DTC ticket €62 to €84. 37% of tasting bookings and 29% of DTC orders arrive outside business hours. Full breakdown: zeniapartners.com/blog/agente-ia-para-bodegas.html
 
 Reply if you run a winery with a WhatsApp inbox no one is watching after 6pm.
@@ -2981,6 +2983,8 @@ Reply if you run a winery with a WhatsApp inbox no one is watching after 6pm.
 ---
 
 ## 2026-07-06 - Agente IA para Lavanderias
+
+<!-- SCHEDULED:sp_bklFBIQmj9jtCbiUNRFG at 2026-07-08T07:00:00.000Z -->
 
 Spain's self-service laundry market clocks €236.6M a year and has grown 60% in five years, with almost 2,000 stores active in 2025 (La Wash, Lexpress Franchise). The next 20% of margin will not come from more machines. It will come from who answers WhatsApp when a family with two comforters messages on Sunday at 10pm asking for pickup. We rolled out a personalized AI agent on WhatsApp for a mid-size laundry with door-to-door service: response time from hours to 8 seconds, daily pickups from 8 to 15, first-consult to booked ratio 38% to 71%, ticket per active client €18 to €26, and 45-day repeat rate 28% to 52%. 41% of the incoming requests hit outside business hours. Net upside: roughly €4,770 a month against €297-497/month in tooling.
 
@@ -2992,6 +2996,8 @@ Reply if you run a laundry or dry cleaner and want the exact pickup-route script
 
 ## 2026-07-07 - Agente IA para Tiendas de Instrumentos Musicales
 
+<!-- SCHEDULED:sp_23VmDtZgHDOpHKPtVNUB at 2026-07-09T06:00:00.000Z -->
+
 Spain's musical instrument market is compounding at 6.93% a year through 2030, with online sales growing 8.9% (Bonafide Research, GMInsights). But independent stores still lose 18-25% of their leads to slow replies, because a musician's question doesn't wait for opening hours. We put a personalized AI agent on WhatsApp for a specialty music store trained on their real catalog: response time from 4-26h to 8 seconds, conversion from consult to sale 12% to 24%, average ticket +17% with contextual upsell, and 41% of the closed orders came from customers who had never set foot in the store. Full breakdown: zeniapartners.com/blog/agente-ia-para-tiendas-de-instrumentos-musicales.html
 
 DM me if you run a music store losing weekend leads to Thomann and want the exact playbook.
@@ -3001,6 +3007,8 @@ DM me if you run a music store losing weekend leads to Thomann and want the exac
 ---
 
 ## 2026-07-07 - Agente IA para Academias de Artes Marciales
+
+<!-- SCHEDULED:sp_i3gtMcnWWIMpjVhm7vWN7 at 2026-07-10T07:00:00.000Z -->
 
 Half of martial arts students quit inside their first year, and 28% churn in the first 90 days. That's before yellow belt, before they've built any identity as a practitioner. The dirty secret: 23% of that churn is billing friction alone (Kombat Evolve 2025). Nobody chases the bounced card. Nobody notices the alumno who missed two Saturdays. We deployed a personalized AI agent on WhatsApp for a 180-student mixed karate/BJJ school: dropout from 45% down to 20% annual, bounced-payment recovery from 34% to 78% in under 48 hours, consultation-to-trial-class conversion from 18% to 34%, and belt-exam attendance from 61% to 84%. Net upside conservatively €4.7k/month at a €65/mo cuota against €297-497/mo in tooling. LTV per student went from 14 to 20 months.
 

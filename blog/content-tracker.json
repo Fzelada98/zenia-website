@@ -1,6 +1,198 @@
 {
-  "lastRun": "2026-06-29T14:00:00Z",
+  "lastRun": "2026-07-07T14:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-academias-de-artes-marciales",
+      "keyword": "agente ia para academias de artes marciales",
+      "tier": 1,
+      "cluster": "academias",
+      "status": "published",
+      "date": "2026-07-07"
+    },
+    {
+      "slug": "agente-ia-para-tiendas-de-instrumentos-musicales",
+      "keyword": "agente ia para tiendas de instrumentos musicales",
+      "tier": 1,
+      "cluster": "retail",
+      "status": "published",
+      "date": "2026-07-07"
+    },
+    {
+      "slug": "agente-ia-para-lavanderias",
+      "keyword": "agente ia para lavanderias",
+      "tier": 1,
+      "cluster": "servicios",
+      "status": "published",
+      "date": "2026-07-06"
+    },
+    {
+      "slug": "agente-ia-para-bodegas",
+      "keyword": "agente ia para bodegas",
+      "tier": 1,
+      "cluster": "retail",
+      "status": "published",
+      "date": "2026-07-06"
+    },
+    {
+      "slug": "agente-ia-para-casas-rurales",
+      "keyword": "agente ia para casas rurales",
+      "tier": 1,
+      "cluster": "turismo",
+      "status": "published",
+      "date": "2026-07-06"
+    },
+    {
+      "slug": "agente-ia-para-peluquerias-caninas",
+      "keyword": "agente ia para peluquerias caninas",
+      "tier": 1,
+      "cluster": "mascotas",
+      "status": "published",
+      "date": "2026-07-05"
+    },
+    {
+      "slug": "agente-ia-para-funerarias",
+      "keyword": "agente ia para funerarias",
+      "tier": 1,
+      "cluster": "servicios",
+      "status": "published",
+      "date": "2026-07-05"
+    },
+    {
+      "slug": "agente-ia-para-clinicas-de-ortodoncia",
+      "keyword": "agente ia para clinicas de ortodoncia",
+      "tier": 1,
+      "cluster": "clinicas",
+      "status": "published",
+      "date": "2026-07-05"
+    },
+    {
+      "slug": "agente-ia-para-reparacion-de-moviles",
+      "keyword": "agente ia para reparacion de moviles",
+      "tier": 1,
+      "cluster": "servicios",
+      "status": "published",
+      "date": "2026-07-04"
+    },
+    {
+      "slug": "agente-ia-para-pescaderias",
+      "keyword": "agente ia para pescaderias",
+      "tier": 1,
+      "cluster": "retail",
+      "status": "published",
+      "date": "2026-07-04"
+    },
+    {
+      "slug": "agente-ia-para-tiendas-de-deportes",
+      "keyword": "agente ia para tiendas de deportes",
+      "tier": 1,
+      "cluster": "retail",
+      "status": "published",
+      "date": "2026-07-04"
+    },
+    {
+      "slug": "agente-ia-para-tiendas-de-bicicletas",
+      "keyword": "agente ia para tiendas de bicicletas",
+      "tier": 1,
+      "cluster": "retail",
+      "status": "published",
+      "date": "2026-07-03"
+    },
+    {
+      "slug": "agente-ia-para-empresas-de-alquiler-de-coches",
+      "keyword": "agente ia para empresas de alquiler de coches",
+      "tier": 1,
+      "cluster": "automocion",
+      "status": "published",
+      "date": "2026-07-03"
+    },
+    {
+      "slug": "agente-ia-para-hamburgueserias",
+      "keyword": "agente ia para hamburgueserias",
+      "tier": 1,
+      "cluster": "restaurantes",
+      "status": "published",
+      "date": "2026-07-03"
+    },
+    {
+      "slug": "agente-ia-para-carnicerias",
+      "keyword": "agente ia para carnicerias",
+      "tier": 1,
+      "cluster": "retail",
+      "status": "published",
+      "date": "2026-07-02"
+    },
+    {
+      "slug": "agente-ia-para-clinicas-de-neurologia",
+      "keyword": "agente ia para clinicas de neurologia",
+      "tier": 1,
+      "cluster": "clinicas",
+      "status": "published",
+      "date": "2026-07-02"
+    },
+    {
+      "slug": "agente-ia-para-clinicas-de-cardiologia",
+      "keyword": "agente ia para clinicas de cardiologia",
+      "tier": 1,
+      "cluster": "clinicas",
+      "status": "published",
+      "date": "2026-07-02"
+    },
+    {
+      "slug": "agente-ia-para-administradores-de-fincas",
+      "keyword": "agente ia para administradores de fincas",
+      "tier": 1,
+      "cluster": "servicios",
+      "status": "published",
+      "date": "2026-07-01"
+    },
+    {
+      "slug": "agente-ia-para-clinicas-de-urologia",
+      "keyword": "agente ia para clinicas de urologia",
+      "tier": 1,
+      "cluster": "clinicas",
+      "status": "published",
+      "date": "2026-07-01"
+    },
+    {
+      "slug": "agente-ia-para-clinicas-de-ginecologia",
+      "keyword": "agente ia para clinicas de ginecologia",
+      "tier": 1,
+      "cluster": "clinicas",
+      "status": "published",
+      "date": "2026-07-01"
+    },
+    {
+      "slug": "agente-ia-para-empresas-de-carpinteria",
+      "keyword": "agente ia para empresas de carpinteria",
+      "tier": 1,
+      "cluster": "servicios",
+      "status": "published",
+      "date": "2026-06-30"
+    },
+    {
+      "slug": "agente-ia-para-pizzerias",
+      "keyword": "agente ia para pizzerias",
+      "tier": 1,
+      "cluster": "restaurantes",
+      "status": "published",
+      "date": "2026-06-30"
+    },
+    {
+      "slug": "agente-ia-para-tiendas-de-electronica",
+      "keyword": "agente ia para tiendas de electronica",
+      "tier": 1,
+      "cluster": "retail",
+      "status": "published",
+      "date": "2026-06-30"
+    },
+    {
+      "slug": "agente-ia-para-empresas-de-logistica",
+      "keyword": "agente ia para empresas de logistica",
+      "tier": 1,
+      "cluster": "logistica",
+      "status": "published",
+      "date": "2026-06-29"
+    },
     {
       "slug": "agente-ia-para-imprentas",
       "keyword": "agente ia para imprentas",

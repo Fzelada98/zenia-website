@@ -2999,3 +2999,13 @@ DM me if you run a music store losing weekend leads to Thomann and want the exac
 #retailtech #musicindustry #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-07 - Agente IA para Academias de Artes Marciales
+
+Half of martial arts students quit inside their first year, and 28% churn in the first 90 days. That's before yellow belt, before they've built any identity as a practitioner. The dirty secret: 23% of that churn is billing friction alone (Kombat Evolve 2025). Nobody chases the bounced card. Nobody notices the alumno who missed two Saturdays. We deployed a personalized AI agent on WhatsApp for a 180-student mixed karate/BJJ school: dropout from 45% down to 20% annual, bounced-payment recovery from 34% to 78% in under 48 hours, consultation-to-trial-class conversion from 18% to 34%, and belt-exam attendance from 61% to 84%. Net upside conservatively €4.7k/month at a €65/mo cuota against €297-497/mo in tooling. LTV per student went from 14 to 20 months.
+
+Reply if you run a dojo or academia and half your admin week is spent chasing rebotados and reminding parents about horarios, happy to send the retention flow we use.
+
+#martialarts #memberretention #AI #WhatsAppBusiness
+
+---

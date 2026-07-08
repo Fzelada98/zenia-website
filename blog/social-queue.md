@@ -3063,3 +3063,19 @@ DM me if you run a bootcamp and want the early-abandonment detection playbook.
 #edtech #bootcamp #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-08 - Agente de IA para Franquicias
+
+Spanish franchise networks lose €30k to €60k a month per 20-store brand to slow lead response and inconsistent local scripts. Not to competitors. To their own franchisees.
+
+The 2026 Tormo report shows the sector hit €38.5B in revenue with 92,129 active franchisees, but the number of brands dropped 9.7% year over year. The market is professionalizing. The ones that survive centralize customer intake instead of leaving it to each unit.
+
+We built a central AI agent for a franchise network with 20 units: response time from 100 minutes to 7 seconds, leads lost to queue from 28% to 3%, close rate per franchisee from 18% to 29%, and commercial script consistency in audits from 52% to 94%. 36% of conversations arrive outside local business hours and now they get answered.
+
+The real unlock is not routing leads faster. It is that headquarters can finally audit how the brand actually sounds in every location, and reassign leads when a franchisee is not working them.
+
+DM me if you run a network and want the escalation rules we use for underperforming units.
+
+#franchising #B2B #AI #WhatsAppBusiness
+
+---

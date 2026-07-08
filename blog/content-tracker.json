@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-07-08T14:00:00Z",
+  "lastRun": "2026-07-08T22:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-franquicias",
+      "keyword": "agente ia para franquicias",
+      "tier": 1,
+      "cluster": "franquicias",
+      "status": "published",
+      "date": "2026-07-08"
+    },
     {
       "slug": "agente-ia-para-academias-de-programacion",
       "keyword": "agente ia para academias de programacion",

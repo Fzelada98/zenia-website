@@ -3033,3 +3033,17 @@ Reply if you run a CrossFit box and want the exact 21-day onboarding flow we use
 #fitnessindustry #memberretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-08 - Agente de IA para Clubes de Golf
+
+Golf clubs lose 22 to 28% of their green fee requests to a slow answer. Not to price. Not to distance. To the receptionist who checked WhatsApp 41 minutes later.
+
+Meanwhile the National Golf Foundation reports a 23% retention lift in clubs running integrated software, and 38% of the reservation traffic hits outside the reception's 08:30-20:00 window. That demand exists whether the club answers it or not.
+
+We deployed a personalized AI agent on WhatsApp for an 18-hole club with 600 socios: response time from 31-68 minutes to 9 seconds, no-shows from 13% to 5%, unpaid cuotas from 4.5% to under 2%, and annual member retention from 82% to 91%. Conservatively €42.5k/month upside against €497-997/mo in tooling, most of it captured in the first 60 days.
+
+DM me if you run a club with a receptionist drowning in "cuanto cuesta el green fee del sabado" and want the reactivation flow we use for dormant socios.
+
+#golfindustry #memberretention #AI #WhatsAppBusiness
+
+---

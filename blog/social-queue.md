@@ -3047,3 +3047,19 @@ DM me if you run a club with a receptionist drowning in "cuanto cuesta el green 
 #golfindustry #memberretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-08 - Agente de IA para Academias de Programacion
+
+Coding academies convert 4.2% of leads to enrolled students and lose 15 to 30% of them before graduation. Meanwhile Google Ads on "bootcamp full stack" runs €8 to €22 per click.
+
+EDUCAUSE 2025 shows universities running personalized AI agents lift prospect-to-enrolled conversion by 30 to 40%. A London test prep company that switched prospect comms from email to WhatsApp reported a 42% jump in inquiry-to-paid.
+
+We deployed a personalized AI agent on WhatsApp for a coding academy with 200 active students: response time from 4-8 hours to under 90 seconds, lead-to-enrollment from 4.2% to 7.1%, cost per qualified lead from €32 to €14, and bootcamp dropout from 22% to 12% because two missed classes now trigger a mentor call the same day, not the same month.
+
+The unlock is not the chatbot. It is that 38% of coding academy leads write at night or on Sundays, when the admissions team is offline. That lead used to go cold. Now it books a call before it does.
+
+DM me if you run a bootcamp and want the early-abandonment detection playbook.
+
+#edtech #bootcamp #AI #WhatsAppBusiness
+
+---

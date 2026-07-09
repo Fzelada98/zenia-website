@@ -3079,3 +3079,19 @@ DM me if you run a network and want the escalation rules we use for underperform
 #franchising #B2B #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-09 - Agente de IA para Empresas de Piscinas
+
+Pool service technicians in Spain and LATAM lose 390 hours a year to paperwork, quotes, and WhatsApp coordination. That's a full technician's summer, spent not in the pool.
+
+The sector grew 6.5% in 2025 to €1.7B and 28,000 new pools got built. But 94% of pool service companies still miss appointments every month (about €85 each in wasted fuel and time), and the average invoice takes 32 days to get paid, right when the offseason cash squeeze starts.
+
+We deployed a personalized AI agent for a mid-sized pool operator with 200 pools in maintenance: response time on incoming requests from 2-6 hours to 40 seconds, same-day quotes from 18% to 82%, technician visits per day from 6.1 to 8.4, and average payment cycle from 32 to 12 days. Annual maintenance contract ratio doubled to 47%.
+
+The counterintuitive win was not the routing. It was that 29% of requests arrive outside office hours (green water panic on a Saturday night) and used to go to whoever picked up first. Now they enter the system, get triaged, and get scheduled.
+
+Reply if you run a service business with a seasonal peak and want the escalation rules we use for after-hours urgencies.
+
+#poolservice #fieldservice #AI #WhatsAppBusiness
+
+---

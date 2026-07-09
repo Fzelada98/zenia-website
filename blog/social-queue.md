@@ -3095,3 +3095,19 @@ Reply if you run a service business with a seasonal peak and want the escalation
 #poolservice #fieldservice #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-09 - Agente IA para empresas de mantenimiento
+
+65% of maintenance teams plan to adopt AI in 2026, yet 22% of incoming service tickets still die between jobs, unanswered because the technician is on a roof and the administrator is on the phone.
+
+Pattern in the field: WhatsApp, email, portal, and phone all land in different places. A personalized AI agent catches every channel, classifies trade and urgency in 12 seconds, and dispatches the right technician along an optimized route. Quotes get sent while the customer is still reading the first reply.
+
+We deployed one for a 6-technician facility company at €240 average ticket. In 90 days: first response from 34-96 minutes to 12 seconds, quotes closed in 48h from 28% to 47%, preventive contracts from 1-2 per month to 5-8, missed visits due to no-shows down 55%. 38% of tickets arrive outside office hours.
+
+Full breakdown with metrics and ROI math: https://zeniapartners.com/blog/agente-ia-para-empresas-de-mantenimiento.html
+
+DM me if you run a maintenance SMB and want the dispatch rules we use for after-hours emergencies.
+
+#facilitymanagement #maintenance #AI #WhatsAppBusiness
+
+---

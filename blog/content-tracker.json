@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-07-10T14:00:00Z",
+  "lastRun": "2026-07-10T22:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-escuelas-de-futbol",
+      "keyword": "agente ia para escuelas de futbol",
+      "tier": 1,
+      "cluster": "deportes",
+      "status": "published",
+      "date": "2026-07-10"
+    },
     {
       "slug": "agente-ia-para-perfumerias",
       "keyword": "agente ia para perfumerias",

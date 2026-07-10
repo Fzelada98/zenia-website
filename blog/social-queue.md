@@ -3143,3 +3143,19 @@ DM me if you run an independent beauty store and want the recompra cadence we us
 #retailtech #beautyindustry #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-10 - Agente IA para escuelas de futbol
+
+Youth football clubs in Spain handle 3.200 WhatsApp messages/month per 200 kids. And still 22% of monthly fees arrive late by day 15.
+
+52.421 football and futsal teams are registered with the RFEF, mostly grassroots clubs run by unpaid coordinators. WhatsApp chat chaos, Excel fee tracking and burnout are the norm.
+
+We deployed a personalized AI agent for 6 pilot clubs: fee collection before day 5 went 58% → 84%, mid-month delinquency 19% → 7%, season dropouts 18% → 11%, coordinator's WhatsApp hours 24h → 6h per week. Practice call-ups now hit 91% confirm rate instead of 32%.
+
+Full ROI breakdown: https://zeniapartners.com/blog/agente-ia-para-escuelas-de-futbol.html
+
+DM me if you run a grassroots club and want the fee-cycle rules we use.
+
+#youthsports #footballbusiness #AI #WhatsAppBusiness
+
+---

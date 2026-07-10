@@ -3020,6 +3020,8 @@ Reply if you run a dojo or academia and half your admin week is spent chasing re
 
 ## 2026-07-07 - Agente de IA para Academias de CrossFit
 
+<!-- SCHEDULED:sp_ytd7JKszfrvVig5eIqCm at 2026-07-13T15:00:00.000Z -->
+
 50% of new CrossFit members quit before month 6, and the ones who show up fewer than 4 times in their first month have an 80% probability of canceling (HFA 2025 Fitness Industry Benchmarking Report).
 
 The retention problem in a box is not the workout. It is the WhatsApp inbox nobody checks between WODs.
@@ -3036,6 +3038,8 @@ Reply if you run a CrossFit box and want the exact 21-day onboarding flow we use
 
 ## 2026-07-08 - Agente de IA para Clubes de Golf
 
+<!-- SCHEDULED:sp_BqOcs88WMbBnc9O4wWXj at 2026-07-14T15:00:00.000Z -->
+
 Golf clubs lose 22 to 28% of their green fee requests to a slow answer. Not to price. Not to distance. To the receptionist who checked WhatsApp 41 minutes later.
 
 Meanwhile the National Golf Foundation reports a 23% retention lift in clubs running integrated software, and 38% of the reservation traffic hits outside the reception's 08:30-20:00 window. That demand exists whether the club answers it or not.
@@ -3049,6 +3053,8 @@ DM me if you run a club with a receptionist drowning in "cuanto cuesta el green 
 ---
 
 ## 2026-07-08 - Agente de IA para Academias de Programacion
+
+<!-- SCHEDULED:sp_8wBiT2NqQSNt5dZLCj3Z at 2026-07-15T07:00:00.000Z -->
 
 Coding academies convert 4.2% of leads to enrolled students and lose 15 to 30% of them before graduation. Meanwhile Google Ads on "bootcamp full stack" runs €8 to €22 per click.
 
@@ -3066,6 +3072,8 @@ DM me if you run a bootcamp and want the early-abandonment detection playbook.
 
 ## 2026-07-08 - Agente de IA para Franquicias
 
+<!-- SCHEDULED:sp_dtmoJxp8JmIxczMHVAbJM at 2026-07-16T07:00:00.000Z -->
+
 Spanish franchise networks lose €30k to €60k a month per 20-store brand to slow lead response and inconsistent local scripts. Not to competitors. To their own franchisees.
 
 The 2026 Tormo report shows the sector hit €38.5B in revenue with 92,129 active franchisees, but the number of brands dropped 9.7% year over year. The market is professionalizing. The ones that survive centralize customer intake instead of leaving it to each unit.
@@ -3081,6 +3089,8 @@ DM me if you run a network and want the escalation rules we use for underperform
 ---
 
 ## 2026-07-09 - Agente de IA para Empresas de Piscinas
+
+<!-- SCHEDULED:sp_EideQ90R7rgQgNJW4xLW9 at 2026-07-17T07:00:00.000Z -->
 
 Pool service technicians in Spain and LATAM lose 390 hours a year to paperwork, quotes, and WhatsApp coordination. That's a full technician's summer, spent not in the pool.
 
@@ -3098,6 +3108,8 @@ Reply if you run a service business with a seasonal peak and want the escalation
 
 ## 2026-07-09 - Agente IA para empresas de mantenimiento
 
+<!-- SCHEDULED:sp_UXiVqIHLpJaQxF1SiMkq at 2026-07-20T07:00:00.000Z -->
+
 65% of maintenance teams plan to adopt AI in 2026, yet 22% of incoming service tickets still die between jobs, unanswered because the technician is on a roof and the administrator is on the phone.
 
 Pattern in the field: WhatsApp, email, portal, and phone all land in different places. A personalized AI agent catches every channel, classifies trade and urgency in 12 seconds, and dispatches the right technician along an optimized route. Quotes get sent while the customer is still reading the first reply.
@@ -3113,6 +3125,8 @@ DM me if you run a maintenance SMB and want the dispatch rules we use for after-
 ---
 
 ## 2026-07-10 - Agente IA para escuelas de surf
+
+<!-- SCHEDULED:sp_7bqidXvpqfrN63FYa8GF at 2026-07-21T07:00:00.000Z -->
 
 Surf schools in Spain lose 18-27% of bookings each season. Not to the surf, not to the season. To slow WhatsApp replies and weather reschedules run by hand.
 
@@ -3130,6 +3144,8 @@ Reply if you run a weather-dependent operator and want the reschedule rules we u
 
 ## 2026-07-10 - Agente IA para perfumerias
 
+<!-- SCHEDULED:sp_8BjOVNkkL3F8BTUyKEfMP at 2026-07-22T06:00:00.000Z -->
+
 Spain's cosmetics and perfumery market hit €11.2B in 2024, +7.7% YoY (STANPA). Perfumery alone: +11.3%.
 
 Yet the independent perfumeria still loses 15-22% of WhatsApp messages sent on Sunday nights while Sephora eats those sales.
@@ -3145,6 +3161,8 @@ DM me if you run an independent beauty store and want the recompra cadence we us
 ---
 
 ## 2026-07-10 - Agente IA para escuelas de futbol
+
+<!-- SCHEDULED:sp_yaZJ1Uv4qmQAR3xLn8lr at 2026-07-23T07:00:00.000Z -->
 
 Youth football clubs in Spain handle 3.200 WhatsApp messages/month per 200 kids. And still 22% of monthly fees arrive late by day 15.
 

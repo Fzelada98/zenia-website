@@ -3127,3 +3127,19 @@ Reply if you run a weather-dependent operator and want the reschedule rules we u
 #surfschool #tourismtech #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-10 - Agente IA para perfumerias
+
+Spain's cosmetics and perfumery market hit €11.2B in 2024, +7.7% YoY (STANPA). Perfumery alone: +11.3%.
+
+Yet the independent perfumeria still loses 15-22% of WhatsApp messages sent on Sunday nights while Sephora eats those sales.
+
+We wired a personalized AI agent into a 2-store perfumery: 3 months in, repeat purchase rate went from 31% to 47%, and dormant clients reactivated at 22% via WhatsApp (email average: 4%). Ticket size +12-18% via context-aware cross-selling, not push promos.
+
+Full breakdown with ROI math: https://zeniapartners.com/blog/agente-ia-para-perfumerias.html
+
+DM me if you run an independent beauty store and want the recompra cadence we use per product family.
+
+#retailtech #beautyindustry #AI #WhatsAppBusiness
+
+---

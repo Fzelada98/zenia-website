@@ -3111,3 +3111,19 @@ DM me if you run a maintenance SMB and want the dispatch rules we use for after-
 #facilitymanagement #maintenance #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-10 - Agente IA para escuelas de surf
+
+Surf schools in Spain lose 18-27% of bookings each season. Not to the surf, not to the season. To slow WhatsApp replies and weather reschedules run by hand.
+
+European surf is projected to triple in the next years, largely thanks to schools and surfcamps. Most still run bookings, rebooks and off-season from a shared spreadsheet.
+
+We deployed a personalized AI agent for a Cantabrian school (180 students/month, 3 monitors). Reply time 34 min → 10 sec. No-shows 17% → 6%. Weather rebooks from 2-3 hours per event to 90 automated seconds. Google reviews x4. Off-season revenue +€4.8K/month reactivating real ex-students.
+
+Full ROI teardown: https://zeniapartners.com/blog/agente-ia-para-escuelas-de-surf.html
+
+Reply if you run a weather-dependent operator and want the reschedule rules we use.
+
+#surfschool #tourismtech #AI #WhatsAppBusiness
+
+---

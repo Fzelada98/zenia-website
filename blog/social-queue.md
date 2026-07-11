@@ -3177,3 +3177,19 @@ DM me if you run a grassroots club and want the fee-cycle rules we use.
 #youthsports #footballbusiness #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-11 - Agente IA para tiendas de vinos
+
+Independent wine shops lose 15-22% of WhatsApp messages every weekend to slow response. The champagne quietly walks over to Amazon and Bodeboca.
+
+Meta Business Conversations 2026 confirms 74% of European buyers prefer WhatsApp over calls — for wine, 81% in the 30-55 bracket. The channel already won. Most vinotecas just haven't staffed for it.
+
+We deployed a personalized AI agent for an urban vinoteca (420k€ revenue, 180 club members): response time 34 min → 8 sec, average WhatsApp ticket €48 → €61 (+27%), wine club renewals 63% → 81%, Google reviews 4 → 22 per month.
+
+Full ROI math: https://zeniapartners.com/blog/agente-ia-para-tiendas-de-vinos.html
+
+DM me if you run a wine shop and want the club-of-members retention cadence we use.
+
+#retailtech #ecommerce #AI #WhatsAppBusiness
+
+---

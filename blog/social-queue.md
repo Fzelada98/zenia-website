@@ -3207,3 +3207,19 @@ DM me if you run a rheumatology or chronic-care clinic and want the exact cadenc
 #healthtech #patientretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-11 - Agente IA para hostales
+
+Independent hostels give away 17% of every bed-night to OTA commissions, then eat cancellation rates that double what direct bookings deliver.
+
+Cloudbeds' 2026 State of Hostels (32M bookings across 180 countries) puts OTA share at 73.7%, dorm ADR down 8.2%, and cancellations at 2x direct. Meanwhile a night receptionist can't cover 6 languages of DMs at 2am.
+
+We deployed a personalized AI agent over WhatsApp for a 60-bed urban hostel: response time 2-6h → 8 sec, direct-vs-OTA mix 26/74 → 38/62, no-shows 13% → 6%, cancellations 28% → 19%, physical check-in 12 min → 3 min, reviews +45%. Net ROI: €7.2k-€7.4k/month.
+
+Full ROI math and stack: https://zeniapartners.com/blog/agente-ia-para-hostales.html
+
+DM me if you run a hostel and want the direct-booking recovery playbook we use.
+
+#hospitality #hosteltech #AI #WhatsAppBusiness
+
+---

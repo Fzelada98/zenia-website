@@ -3193,3 +3193,17 @@ DM me if you run a wine shop and want the club-of-members retention cadence we u
 #retailtech #ecommerce #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-11 - Agente IA para clinicas de reumatologia
+
+Rheumatology clinics see a 22% no-show rate on chronic-patient appointments. Every missed follow-up on a DMARD raises the odds of a flare, and each unfilled slot is €90+ walking out the door.
+
+ACR data pins the range at 18-29% depending on setting. Clinics still relying on one-way SMS reminders convert 8-12% into action; two-way WhatsApp confirmations convert 41%.
+
+We deployed a personalized AI agent for a 3-rheumatologist private clinic in Spain: WhatsApp response 3-6h → 12 sec, first-visit no-shows 18-29% → 6-9%, pre-visit lab adherence 61% → 89%, 72% of e-prescription renewals now handled asynchronously without stealing agenda slots. Net ROI: €14.4k-€14.6k/month.
+
+DM me if you run a rheumatology or chronic-care clinic and want the exact cadence we use for adherence and reactivation.
+
+#healthtech #patientretention #AI #WhatsAppBusiness
+
+---

@@ -3237,3 +3237,15 @@ DM me if you run a chocolate or artisan food shop and want the corporate-quote p
 #retailtech #foodindustry #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-12 - Agente IA para tiendas de decoración
+
+Home decor shops leak revenue in the least obvious place: 46% of their WhatsApp and Instagram consultations arrive outside opening hours, and 30% of those buyers are already checking out at a competitor within 5 minutes.
+
+Global home decor is a $888B market in 2026 growing 6.8% CAGR, but retail retention sits at 63%, twelve points below the cross-industry average. We deployed a personalized AI agent trained on a decor shop's catalog, stock, and style: reply time 34 min → 8 sec, ticket average €78 → €112, 90-day repurchase 18% → 34%, dormant customer reactivation 3% → 21%. Net ROI: €26.8k-€27k/month against a €297-497 stack.
+
+DM me if you run a furniture or home decor store and want the cross-sell playbook we use to move ticket size without discounting.
+
+#retailtech #homedecor #AI #WhatsAppBusiness
+
+---

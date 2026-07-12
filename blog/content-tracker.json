@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-07-12T12:00:00Z",
+  "lastRun": "2026-07-12T14:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-asesorias-fiscales",
+      "keyword": "agente ia para asesorias fiscales",
+      "tier": 1,
+      "cluster": "asesores",
+      "status": "published",
+      "date": "2026-07-12"
+    },
     {
       "slug": "agente-ia-para-tiendas-de-decoracion",
       "keyword": "agente ia para tiendas de decoracion",

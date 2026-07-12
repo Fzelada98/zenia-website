@@ -3249,3 +3249,15 @@ DM me if you run a furniture or home decor store and want the cross-sell playboo
 #retailtech #homedecor #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-12 - Agente IA para asesorias fiscales
+
+Spain has 30,000 tax advisory firms serving SMBs, most with teams of 3-20 and books of 80-400 recurring clients. INE says only 2.9% of Spanish SMBs use AI, so the firms that advise them are stuck educating clients on tools they haven't adopted themselves.
+
+We deployed a personalized AI agent for an 8-person tax firm: 55-65% of repetitive client queries resolved without a human, response time cut from 4-12h to 15 seconds, 100-200 hours a month recovered across the team. Net ROI €9,945/month against a €497 stack, payback in month one. The 3-5 hours a week each professional used to spend chasing paperwork now goes into strategic advice they can actually bill.
+
+Reply if you run a tax firm or accounting practice and want the deployment checklist we use for RGPD, EU AI Act, and VeriFactu compliance.
+
+#B2B #SaaS #AI #automation
+
+---

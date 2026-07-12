@@ -3223,3 +3223,17 @@ DM me if you run a hostel and want the direct-booking recovery playbook we use.
 #hospitality #hosteltech #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-12 - Agente IA para chocolaterías
+
+Artisan chocolate shops in Spain lose ~22% of corporate quote requests just because nobody answers WhatsApp fast enough during the November-February window that carries 55-65% of their annual revenue.
+
+Spain's confectionery sector moves €7.5B a year across ~12,000 businesses, 70% of them family PYMEs. A personalized AI agent on WhatsApp took one chocolatería from a 6-18h reply time to 8 seconds, +40% ticket on corporate orders, and 34% recompra vs 18%. Net ROI: €7.5k+/month.
+
+Full ROI math and 4-week rollout: https://zeniapartners.com/blog/agente-ia-para-chocolaterias.html
+
+DM me if you run a chocolate or artisan food shop and want the corporate-quote playbook.
+
+#retailtech #foodindustry #AI #WhatsAppBusiness
+
+---

@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-07-11T22:00:00Z",
+  "lastRun": "2026-07-12T00:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-chocolaterias",
+      "keyword": "agente ia para chocolaterias",
+      "tier": 1,
+      "cluster": "retail",
+      "status": "published",
+      "date": "2026-07-12"
+    },
     {
       "slug": "agente-ia-para-hostales",
       "keyword": "agente ia para hostales",

@@ -3261,3 +3261,19 @@ Reply if you run a tax firm or accounting practice and want the deployment check
 #B2B #SaaS #AI #automation
 
 ---
+
+## 2026-07-13 - Agente IA para tiendas de juguetes
+
+The Spanish toy industry does 60% of its annual sales between Black Friday and January 6th (AEFJ data), and the last three weeks before Reyes alone concentrate 30% of the year.
+
+A neighborhood toy shop goes from 20 WhatsApp messages a day in October to 180 the week before Reyes. One person at the counter cannot cover both physical customers and the phone, so 25-35% of chats go unanswered that same day.
+
+We built a personalized AI agent for a Spanish toy retailer that handles age-based recommendations, deposit reservations via Bizum, waitlist alerts, and post-Reyes exchanges, all on WhatsApp.
+
+Across the 7-week campaign: 68% of chats resolved without a human, 22% of revenue captured after 22:00 (previously zero), roughly EUR 25,900 net gained versus a EUR 2,500 setup plus 3-month plan.
+
+DM me if you run a toy retailer or a specialty shop facing the same seasonal wall.
+
+#retailtech #ecommerce #AI #WhatsAppBusiness
+
+---

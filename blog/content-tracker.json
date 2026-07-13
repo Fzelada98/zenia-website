@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-07-12T14:00:00Z",
+  "lastRun": "2026-07-13T06:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-tiendas-de-juguetes",
+      "keyword": "agente ia para tiendas de juguetes",
+      "tier": 1,
+      "cluster": "retail",
+      "status": "published",
+      "date": "2026-07-13"
+    },
     {
       "slug": "agente-ia-para-asesorias-fiscales",
       "keyword": "agente ia para asesorias fiscales",

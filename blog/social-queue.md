@@ -3277,3 +3277,17 @@ DM me if you run a toy retailer or a specialty shop facing the same seasonal wal
 #retailtech #ecommerce #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-13 - Agente IA para tiendas de cosmeticos
+
+Beauty stores lose 55-70% of first-time buyers before the second order. The reason is rarely the product.
+
+It's the silence after checkout: no personalized recommendation, no WhatsApp reply after 20:00, no postpurchase follow-up. Loyalty members in beauty spend 43% more than non-members (Antavo).
+
+We built a personalized AI agent that recommends by skin type, recovers online carts and runs postsale on WhatsApp 24/7. In a store billing EUR 22K/month it lifts 90-day repurchase from 26% to 40%, ticket from EUR 42 to EUR 52, and delivers 12x to 40x net ROI in 4 weeks.
+
+Full breakdown: https://zeniapartners.com/blog/agente-ia-para-tiendas-de-cosmeticos.html
+
+#beautyindustry #retailtech #AI #WhatsAppBusiness
+
+---

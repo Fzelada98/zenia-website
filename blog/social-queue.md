@@ -3291,3 +3291,17 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-tiendas-de-cosmeti
 #beautyindustry #retailtech #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-13 - Agente IA para ortopedias
+
+The Spanish orthopedic devices market hit USD 939M in 2023 and is growing 6.6% CAGR through 2033 (Spherical Insights). Yet the average neighborhood orthopedic shop still loses 20-30% of WhatsApp inquiries because nobody replies in under 60 minutes.
+
+Every missed inquiry on a wheelchair, custom insole or compression sleeve is EUR 500 to EUR 3,000 walking to the competitor down the street.
+
+We built a personalized AI agent for orthopedic shops that reads the prescription photo, checks catalog and stock, books the fitting cabin appointment and triggers automatic refills for chronic consumables. Across 22 shops in Spain and Peru: 82% of chats resolved without a human, no-shows down from 22% to 7%, and recurring revenue up 22% within 6 months.
+
+Reply if you run an orthopedic shop or pharmacy chain and want to see the flow map.
+
+#healthtech #patientretention #AI #WhatsAppBusiness
+
+---

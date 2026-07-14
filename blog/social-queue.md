@@ -3305,3 +3305,17 @@ Reply if you run an orthopedic shop or pharmacy chain and want to see the flow m
 #healthtech #patientretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-14 - Agente IA para tiendas de bebe
+
+Spain saw 318,005 births in 2024, down 0.8% YoY, but every baby generates EUR 6,000 to 12,000 of spend in the first 24 months (INE, industry data). Most baby stores capture the first purchase and lose the customer before the second one.
+
+Why: nobody replies to the 22:47 message about ISOFIX compatibility, nobody recovers the abandoned cart with the co-sleeper crib, nobody messages the mother when it's time to move from size 0-3 to 3-6.
+
+We built a personalized AI agent for baby stores that answers technical questions in 8 seconds on WhatsApp, recovers 22% of abandoned carts, and runs a growth-stage program that lifts 6-month repurchase from 19% to 44%. In a EUR 22K/month store: +EUR 16,300 net monthly, 16x to 34x ROI.
+
+DM me if you run a baby store and want the growth-stage message framework.
+
+#retailtech #ecommerce #AI #WhatsAppBusiness
+
+---

@@ -3319,3 +3319,19 @@ DM me if you run a baby store and want the growth-stage message framework.
 #retailtech #ecommerce #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-14 - Agente IA para tiendas de suplementos
+
+Supplement buyers spend USD 78/visit with expert consultation vs USD 38 without, and visit 2.8x per week vs 1.9x (2026 retail benchmarks). But 38% of WhatsApp messages to supplement stores arrive between 20:00 and 08:00, when nobody replies.
+
+Result: your best salesperson is asleep while Amazon sells the exact same whey protein in 40 seconds.
+
+We built a personalized AI agent for supplement stores that asesora, cross-sells protein + creatine, and reorders the tub before it runs out. Ticket goes from EUR 41 to EUR 68, repurchase at 60 days jumps from 22% to 61%, monthly subscription churn drops from 7.4% to 3.1% (top-quartile territory). Net impact: +EUR 9,000/month on a 400-customer store.
+
+The differentiator is not the product. It is who answers at 22:47 on a Sunday.
+
+DM me if you run a supplement store and want the reorder cadence framework we use.
+
+#retailtech #ecommerce #AI #WhatsAppBusiness
+
+---

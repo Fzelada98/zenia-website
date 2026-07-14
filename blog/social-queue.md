@@ -3335,3 +3335,19 @@ DM me if you run a supplement store and want the reorder cadence framework we us
 #retailtech #ecommerce #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-14 - Agente IA para academias de canto
+
+Music education reports drop-out rates of up to 80% in Spanish conservatories, and private singing academies typically lose 35-50% of students every year (research review on music dropout, 2025).
+
+The reason is almost never price or the teacher. It is silence: nobody messages the student between classes, nobody follows up after two absences, nobody remembers them in August.
+
+We built a personalized AI agent for singing academies that answers WhatsApp in 8 seconds, sends personalized post-class follow-ups, flags churn risk after two consecutive absences, and recovers 75% of late payments. Trimestral dropout falls from 14% to 7%, lead conversion goes 18% to 34%, and LTV per student climbs from EUR 820 to EUR 1,180.
+
+Full breakdown: https://zeniapartners.com/blog/agente-ia-para-academias-de-canto.html
+
+DM me if you run a music or vocal academy and want the two-absence retention playbook.
+
+#musictech #retention #AI #WhatsAppBusiness
+
+---

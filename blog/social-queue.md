@@ -3351,3 +3351,21 @@ DM me if you run a music or vocal academy and want the two-absence retention pla
 #musictech #retention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-15 - Agente IA para escuelas de negocios
+
+Business schools generate 400 to 1,200 leads per MBA intake. Only 22% get a response within one hour. The other 78% enroll somewhere else, or nowhere.
+
+Every hour without a reply cuts conversion probability by 10%. At 24 hours the lead is cold. At a EUR 130 cost per lead, that is roughly EUR 93,600 spent per intake on leads that quietly die in a shared inbox.
+
+We built a personalized AI agent for business schools that answers WhatsApp in 8 seconds, qualifies candidates against real MBA/EMBA criteria, and books the interview with the right admissions counselor. In 2026 data across education deployments, this shifts enrollment conversion up 25 to 35% and cuts routine inquiries to the sales team by 40 to 60%.
+
+For a mid-sized school with 2,400 leads per year at EUR 22,000 average ticket, the incremental impact is 60 to 120 extra enrollments annually. That is EUR 1.3M to EUR 2.6M in revenue currently going to competitors.
+
+Full playbook, ROI math and 6-week implementation plan: https://zeniapartners.com/blog/agente-ia-para-escuelas-de-negocios.html
+
+DM me if you run admissions at a business school and want the qualification framework.
+
+#B2B #SaaS #AI #WhatsAppBusiness
+
+---

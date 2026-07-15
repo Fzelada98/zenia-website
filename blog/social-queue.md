@@ -3369,3 +3369,19 @@ DM me if you run admissions at a business school and want the qualification fram
 #B2B #SaaS #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-15 - Agente IA para tiendas de electrodomesticos
+
+Appliance retailers in Spain receive 60 to 140 WhatsApp messages a day. Manual response time: 34 to 67 minutes. Between 18% and 25% of those messages never get answered before the customer buys on Amazon or MediaMarkt.
+
+Meanwhile, 41% of consumer inquiries arrive after 20:00 or on weekends, when the store is closed. Losing 20 conversations a day at a EUR 640 average ticket is roughly EUR 30,000 per month leaking to bigger competitors.
+
+We built a personalized AI agent for appliance stores that responds in 9 seconds, quotes with financing, books installation slots on the technician's calendar, and rescues abandoned ecommerce carts by WhatsApp. Conversion goes from 8% to 15%. Average ticket climbs from EUR 640 to EUR 780. Cart recovery lands at 24%, six to ten times better than email.
+
+Full breakdown with 5-week implementation plan: https://zeniapartners.com/blog/agente-ia-para-tiendas-de-electrodomesticos.html
+
+DM me if you run an appliance retail chain and want the pre-sale plus post-sale playbook.
+
+#retailtech #ecommerce #AI #automation
+
+---

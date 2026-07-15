@@ -3385,3 +3385,19 @@ DM me if you run an appliance retail chain and want the pre-sale plus post-sale 
 #retailtech #ecommerce #AI #automation
 
 ---
+
+## 2026-07-15 - Agente IA para academias de teatro
+
+3 out of 5 people who message a theater academy asking "how much are classes and when do you start?" never get a reply in the first hour. By day two most of them have already signed up somewhere else.
+
+A mid-sized academy in Spain runs 140 active students at EUR 210 per trimester. Losing 40 potential enrollments a quarter to slow WhatsApp replies is roughly EUR 33,600 a year handed to competitors, before you count trimester drop-off and the dead ex-student database nobody reactivates.
+
+We built a personalized AI agent for theater and performing arts schools that answers in 10 seconds by WhatsApp, books trial classes straight into the teacher's calendar, and flags students who miss two classes in a row before the next invoice goes out. Trial bookings move from 32% to 58% of inquiries. Trimester drop-off falls from 23% to 12%. Directors get 10 to 15 hours a week back to actually run classes and mount productions.
+
+Full breakdown with 5-week implementation plan: https://zeniapartners.com/blog/agente-ia-para-academias-de-teatro.html
+
+DM me if you run a theater, dance or performing arts academy and want the enrollment plus retention playbook.
+
+#B2B #SaaS #AI #automation
+
+---

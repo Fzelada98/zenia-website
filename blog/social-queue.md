@@ -3401,3 +3401,19 @@ DM me if you run a theater, dance or performing arts academy and want the enroll
 #B2B #SaaS #AI #automation
 
 ---
+
+## 2026-07-16 - Agente IA para tiendas de informática
+
+A small computer shop in Spain gets 60 to 120 WhatsApp inquiries a day: stock, prices, repair quotes, warranty questions. About 1 in 5 never gets answered before the customer buys somewhere else.
+
+Spanish IT wholesale sales grew 14.5% in 2025 to EUR 7.34B according to Context. Demand is there. The problem is that the shop owner is behind the counter mounting a custom PC while the WhatsApp queue piles up. By 22:00 when they finally reply, that RTX 5070 Ti buyer already ordered on PcComponentes.
+
+We built a personalized AI agent for computer shops that connects to Odoo and to the repair-ticket system. It answers stock in 12 seconds, quotes a battery replacement in 30 seconds with a real price range, tracks open work orders, and handles warranty and RMA with the invoice already attached. Quote-to-repair conversion moves from 40% to 68%. Average ticket climbs from EUR 180 to EUR 221 with assisted upselling. 32% of the new revenue comes from inquiries that arrive after 20:00, when the shop used to be closed.
+
+Full breakdown with 5-week implementation plan: https://zeniapartners.com/blog/agente-ia-para-tiendas-de-informatica.html
+
+DM me if you run a computer or IT shop and want the full playbook for stock, repairs and warranty automation.
+
+#retailtech #AI #WhatsAppBusiness #automation
+
+---

@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-07-16T14:08:00Z",
+  "lastRun": "2026-07-16T22:07:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-asadores",
+      "keyword": "agente ia para asadores",
+      "tier": 1,
+      "cluster": "restaurantes",
+      "status": "published",
+      "date": "2026-07-16"
+    },
     {
       "slug": "agente-ia-para-cervecerias",
       "keyword": "agente ia para cervecerias",

@@ -3180,6 +3180,8 @@ DM me if you run a grassroots club and want the fee-cycle rules we use.
 
 ## 2026-07-11 - Agente IA para tiendas de vinos
 
+<!-- SCHEDULED:sp_eXixTchiKwgUBwAlIzrGb at 2026-07-17T00:15:34.593Z -->
+
 Independent wine shops lose 15-22% of WhatsApp messages every weekend to slow response. The champagne quietly walks over to Amazon and Bodeboca.
 
 Meta Business Conversations 2026 confirms 74% of European buyers prefer WhatsApp over calls — for wine, 81% in the 30-55 bracket. The channel already won. Most vinotecas just haven't staffed for it.
@@ -3196,6 +3198,8 @@ DM me if you run a wine shop and want the club-of-members retention cadence we u
 
 ## 2026-07-11 - Agente IA para clinicas de reumatologia
 
+<!-- SCHEDULED:sp_YqBCvyNa1LNL5Up8zXL at 2026-07-20T07:00:00.000Z -->
+
 Rheumatology clinics see a 22% no-show rate on chronic-patient appointments. Every missed follow-up on a DMARD raises the odds of a flare, and each unfilled slot is €90+ walking out the door.
 
 ACR data pins the range at 18-29% depending on setting. Clinics still relying on one-way SMS reminders convert 8-12% into action; two-way WhatsApp confirmations convert 41%.
@@ -3209,6 +3213,8 @@ DM me if you run a rheumatology or chronic-care clinic and want the exact cadenc
 ---
 
 ## 2026-07-11 - Agente IA para hostales
+
+<!-- SCHEDULED:sp_hpHzo16GCS06ELHjgaIL at 2026-07-21T07:00:00.000Z -->
 
 Independent hostels give away 17% of every bed-night to OTA commissions, then eat cancellation rates that double what direct bookings deliver.
 
@@ -3226,6 +3232,8 @@ DM me if you run a hostel and want the direct-booking recovery playbook we use.
 
 ## 2026-07-12 - Agente IA para chocolaterías
 
+<!-- SCHEDULED:sp_2bYnXVvkdlI2OPTmnV7Pu at 2026-07-22T06:00:00.000Z -->
+
 Artisan chocolate shops in Spain lose ~22% of corporate quote requests just because nobody answers WhatsApp fast enough during the November-February window that carries 55-65% of their annual revenue.
 
 Spain's confectionery sector moves €7.5B a year across ~12,000 businesses, 70% of them family PYMEs. A personalized AI agent on WhatsApp took one chocolatería from a 6-18h reply time to 8 seconds, +40% ticket on corporate orders, and 34% recompra vs 18%. Net ROI: €7.5k+/month.
@@ -3240,6 +3248,8 @@ DM me if you run a chocolate or artisan food shop and want the corporate-quote p
 
 ## 2026-07-12 - Agente IA para tiendas de decoración
 
+<!-- SCHEDULED:sp_QzwptLhBLWjNdQeodbrri at 2026-07-23T06:00:00.000Z -->
+
 Home decor shops leak revenue in the least obvious place: 46% of their WhatsApp and Instagram consultations arrive outside opening hours, and 30% of those buyers are already checking out at a competitor within 5 minutes.
 
 Global home decor is a $888B market in 2026 growing 6.8% CAGR, but retail retention sits at 63%, twelve points below the cross-industry average. We deployed a personalized AI agent trained on a decor shop's catalog, stock, and style: reply time 34 min → 8 sec, ticket average €78 → €112, 90-day repurchase 18% → 34%, dormant customer reactivation 3% → 21%. Net ROI: €26.8k-€27k/month against a €297-497 stack.
@@ -3252,6 +3262,8 @@ DM me if you run a furniture or home decor store and want the cross-sell playboo
 
 ## 2026-07-12 - Agente IA para asesorias fiscales
 
+<!-- SCHEDULED:sp_bDKMsCPtFGDLQWxwreu at 2026-07-24T07:00:00.000Z -->
+
 Spain has 30,000 tax advisory firms serving SMBs, most with teams of 3-20 and books of 80-400 recurring clients. INE says only 2.9% of Spanish SMBs use AI, so the firms that advise them are stuck educating clients on tools they haven't adopted themselves.
 
 We deployed a personalized AI agent for an 8-person tax firm: 55-65% of repetitive client queries resolved without a human, response time cut from 4-12h to 15 seconds, 100-200 hours a month recovered across the team. Net ROI €9,945/month against a €497 stack, payback in month one. The 3-5 hours a week each professional used to spend chasing paperwork now goes into strategic advice they can actually bill.
@@ -3263,6 +3275,8 @@ Reply if you run a tax firm or accounting practice and want the deployment check
 ---
 
 ## 2026-07-13 - Agente IA para tiendas de juguetes
+
+<!-- SCHEDULED:sp_kEEz1HN3enCNgEegm1UEO at 2026-07-27T08:00:00.000Z -->
 
 The Spanish toy industry does 60% of its annual sales between Black Friday and January 6th (AEFJ data), and the last three weeks before Reyes alone concentrate 30% of the year.
 
@@ -3280,6 +3294,8 @@ DM me if you run a toy retailer or a specialty shop facing the same seasonal wal
 
 ## 2026-07-13 - Agente IA para tiendas de cosmeticos
 
+<!-- SCHEDULED:sp_xwGg2sFl0AomDppgB4yV at 2026-07-28T06:00:00.000Z -->
+
 Beauty stores lose 55-70% of first-time buyers before the second order. The reason is rarely the product.
 
 It's the silence after checkout: no personalized recommendation, no WhatsApp reply after 20:00, no postpurchase follow-up. Loyalty members in beauty spend 43% more than non-members (Antavo).
@@ -3293,6 +3309,8 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-tiendas-de-cosmeti
 ---
 
 ## 2026-07-13 - Agente IA para ortopedias
+
+<!-- SCHEDULED:sp_fj2JUo9vkrsnFHEZnXoB at 2026-07-29T07:00:00.000Z -->
 
 The Spanish orthopedic devices market hit USD 939M in 2023 and is growing 6.6% CAGR through 2033 (Spherical Insights). Yet the average neighborhood orthopedic shop still loses 20-30% of WhatsApp inquiries because nobody replies in under 60 minutes.
 
@@ -3308,6 +3326,8 @@ Reply if you run an orthopedic shop or pharmacy chain and want to see the flow m
 
 ## 2026-07-14 - Agente IA para tiendas de bebe
 
+<!-- SCHEDULED:sp_W0ngXGuirg3e3qit2UUVl at 2026-07-30T06:00:00.000Z -->
+
 Spain saw 318,005 births in 2024, down 0.8% YoY, but every baby generates EUR 6,000 to 12,000 of spend in the first 24 months (INE, industry data). Most baby stores capture the first purchase and lose the customer before the second one.
 
 Why: nobody replies to the 22:47 message about ISOFIX compatibility, nobody recovers the abandoned cart with the co-sleeper crib, nobody messages the mother when it's time to move from size 0-3 to 3-6.
@@ -3321,6 +3341,8 @@ DM me if you run a baby store and want the growth-stage message framework.
 ---
 
 ## 2026-07-14 - Agente IA para tiendas de suplementos
+
+<!-- SCHEDULED:sp_FGcWWObvwV5HAT9x1y at 2026-07-31T06:00:00.000Z -->
 
 Supplement buyers spend USD 78/visit with expert consultation vs USD 38 without, and visit 2.8x per week vs 1.9x (2026 retail benchmarks). But 38% of WhatsApp messages to supplement stores arrive between 20:00 and 08:00, when nobody replies.
 
@@ -3338,6 +3360,8 @@ DM me if you run a supplement store and want the reorder cadence framework we us
 
 ## 2026-07-14 - Agente IA para academias de canto
 
+<!-- SCHEDULED:sp_31TPATC5rGHKdSWzYApNo at 2026-08-03T07:00:00.000Z -->
+
 Music education reports drop-out rates of up to 80% in Spanish conservatories, and private singing academies typically lose 35-50% of students every year (research review on music dropout, 2025).
 
 The reason is almost never price or the teacher. It is silence: nobody messages the student between classes, nobody follows up after two absences, nobody remembers them in August.
@@ -3353,6 +3377,8 @@ DM me if you run a music or vocal academy and want the two-absence retention pla
 ---
 
 ## 2026-07-15 - Agente IA para escuelas de negocios
+
+<!-- SCHEDULED:sp_E5f7qkD4Oogzo5RZ9Y8X1 at 2026-08-04T07:00:00.000Z -->
 
 Business schools generate 400 to 1,200 leads per MBA intake. Only 22% get a response within one hour. The other 78% enroll somewhere else, or nowhere.
 
@@ -3372,6 +3398,8 @@ DM me if you run admissions at a business school and want the qualification fram
 
 ## 2026-07-15 - Agente IA para tiendas de electrodomesticos
 
+<!-- SCHEDULED:sp_kY3AHKVBYQqsiuuBKRxib at 2026-08-05T06:00:00.000Z -->
+
 Appliance retailers in Spain receive 60 to 140 WhatsApp messages a day. Manual response time: 34 to 67 minutes. Between 18% and 25% of those messages never get answered before the customer buys on Amazon or MediaMarkt.
 
 Meanwhile, 41% of consumer inquiries arrive after 20:00 or on weekends, when the store is closed. Losing 20 conversations a day at a EUR 640 average ticket is roughly EUR 30,000 per month leaking to bigger competitors.
@@ -3387,6 +3415,8 @@ DM me if you run an appliance retail chain and want the pre-sale plus post-sale 
 ---
 
 ## 2026-07-15 - Agente IA para academias de teatro
+
+<!-- SCHEDULED:sp_ekD2utsH4qVYgnbWU336K at 2026-08-06T07:00:00.000Z -->
 
 3 out of 5 people who message a theater academy asking "how much are classes and when do you start?" never get a reply in the first hour. By day two most of them have already signed up somewhere else.
 
@@ -3404,6 +3434,8 @@ DM me if you run a theater, dance or performing arts academy and want the enroll
 
 ## 2026-07-16 - Agente IA para tiendas de informática
 
+<!-- SCHEDULED:sp_Tar7H0NjnJg3vAB47H1Ly at 2026-08-07T06:00:00.000Z -->
+
 A small computer shop in Spain gets 60 to 120 WhatsApp inquiries a day: stock, prices, repair quotes, warranty questions. About 1 in 5 never gets answered before the customer buys somewhere else.
 
 Spanish IT wholesale sales grew 14.5% in 2025 to EUR 7.34B according to Context. Demand is there. The problem is that the shop owner is behind the counter mounting a custom PC while the WhatsApp queue piles up. By 22:00 when they finally reply, that RTX 5070 Ti buyer already ordered on PcComponentes.
@@ -3420,6 +3452,8 @@ DM me if you run a computer or IT shop and want the full playbook for stock, rep
 
 ## 2026-07-16 - Agente IA para cervecerías
 
+<!-- SCHEDULED:sp_6aVd2SpIfYEDa75dIilQW at 2026-08-10T07:00:00.000Z -->
+
 Spain's craft beer market hit USD 2.5B in 2025 and is compounding at 8.4% a year through 2034. A 90-seat brewery with taproom gets 55 to 110 WhatsApp messages daily: table bookings, group-of-20 anniversaries, "what IPA is on tap tonight", guided-tasting requests, gluten-free questions. When a keg blows at 22:00, the tap list on WhatsApp is out of date within an hour.
 
 We built a personalized AI agent for breweries that keeps the tap list current from the bar manager's phone, books groups with automatic Bizum/Stripe deposits, and proactively sells guided tastings inside the same chat. Group no-shows dropped from 22% to 6%. Monthly guided tastings went from 6 to 22. Google reviews per month climbed 275%. Net monthly ROI: +EUR 16.8K vs. a EUR 297-497 stack.
@@ -3433,6 +3467,8 @@ DM me if you run a brewery or brewpub and want the tap-list and tasting-sales pl
 ---
 
 ## 2026-07-16 - Agente IA para asadores
+
+<!-- SCHEDULED:sp_J7g0vXJkiuqTu6gQgLy at 2026-08-11T08:00:00.000Z -->
 
 A typical steakhouse in Spain runs at EUR 62 average ticket with 4.2-person tables. Most reservations still arrive by WhatsApp, and 41% of large-group bookings are lost when the maitre takes more than 2 hours to reply. Meanwhile 41% of Spanish restaurants already use AI in operations, and margin lifts 16% when reservations get automated.
 

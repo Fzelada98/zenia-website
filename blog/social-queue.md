@@ -3431,3 +3431,17 @@ DM me if you run a brewery or brewpub and want the tap-list and tasting-sales pl
 #restauranttech #craftbeer #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-16 - Agente IA para asadores
+
+A typical steakhouse in Spain runs at EUR 62 average ticket with 4.2-person tables. Most reservations still arrive by WhatsApp, and 41% of large-group bookings are lost when the maitre takes more than 2 hours to reply. Meanwhile 41% of Spanish restaurants already use AI in operations, and margin lifts 16% when reservations get automated.
+
+We built a personalized AI agent for steakhouses that closes group bookings in a single conversation, requests deposits, suggests wine pairings from the actual cellar, and pushes cook-time expectations to the grill before service. For a 70-cover steakhouse: weekend no-shows dropped from 15% to 5%, wine attach climbed 14%, and the maitre reclaimed 1.5 to 2 hours a day. Net monthly ROI lands around +EUR 33K against a EUR 297-497 stack.
+
+Full breakdown with the 5-week rollout plan: https://zeniapartners.com/blog/agente-ia-para-asadores.html
+
+DM me if you run a steakhouse or asador and want the group-booking and cellar-upsell playbook.
+
+#restauranttech #hospitality #AI #WhatsAppBusiness
+
+---

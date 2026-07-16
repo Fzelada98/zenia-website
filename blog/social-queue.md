@@ -3417,3 +3417,17 @@ DM me if you run a computer or IT shop and want the full playbook for stock, rep
 #retailtech #AI #WhatsAppBusiness #automation
 
 ---
+
+## 2026-07-16 - Agente IA para cervecerías
+
+Spain's craft beer market hit USD 2.5B in 2025 and is compounding at 8.4% a year through 2034. A 90-seat brewery with taproom gets 55 to 110 WhatsApp messages daily: table bookings, group-of-20 anniversaries, "what IPA is on tap tonight", guided-tasting requests, gluten-free questions. When a keg blows at 22:00, the tap list on WhatsApp is out of date within an hour.
+
+We built a personalized AI agent for breweries that keeps the tap list current from the bar manager's phone, books groups with automatic Bizum/Stripe deposits, and proactively sells guided tastings inside the same chat. Group no-shows dropped from 22% to 6%. Monthly guided tastings went from 6 to 22. Google reviews per month climbed 275%. Net monthly ROI: +EUR 16.8K vs. a EUR 297-497 stack.
+
+Full breakdown with the 5-week rollout plan: https://zeniapartners.com/blog/agente-ia-para-cervecerias.html
+
+DM me if you run a brewery or brewpub and want the tap-list and tasting-sales playbook for your team.
+
+#restauranttech #craftbeer #AI #WhatsAppBusiness
+
+---

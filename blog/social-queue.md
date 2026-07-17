@@ -3499,3 +3499,17 @@ DM me if you run a padel school or a club with an active academy and want the wa
 #padel #sportstech #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-17 - Agente IA para colegios
+
+Spanish private schools bill EUR 14.4B a year and enrollment demand keeps rising, but 65% of prospective families expect a reply in under 5 minutes and only 4% will wait more than an hour. Without AI, admissions offices in LatAm take 18 to 42 minutes to respond. With a personalized AI agent, that drops to 90 seconds.
+
+For a 600-student school we saw contact-to-visit conversion jump from 22% to 42%, visit-to-enrollment from 36% to 56%, and open-house no-shows fall from 30% to 8%. First-year impact modeled at +EUR 371K vs a EUR 3.5-6K annual stack. The bottleneck was never the offer. It was response time on WhatsApp.
+
+Admissions teams stopped burning 15 hours a week on repeat questions and started running actual family conversations.
+
+DM me if you run a private or concertado school and want the 6-week admissions playbook for your center.
+
+#education #edtech #AI #WhatsAppBusiness
+
+---

@@ -3518,6 +3518,8 @@ DM me if you run a private or concertado school and want the 6-week admissions p
 
 ## 2026-07-17 - Agente IA para clinicas de podologia
 
+<!-- SCHEDULED:sp_UcNKK8LJJiaAhJZtclJyS at 2026-07-20T07:00:00.000Z -->
+
 Spain has 10,227 registered podiatrists, up 250% in twenty years, and demand still outruns supply. Yet the average private clinic loses 15% to 25% of its appointments to no-shows, missed calls after 8pm, and zero maintenance reactivation.
 
 We built a personalized AI agent on WhatsApp that cuts no-shows from 15% to 5% with a double reminder flow, lifts 8-week maintenance reactivation from 22% to 48%, and frees 2.5 hours a day of reception time. For a 2-box clinic running 20 patients a day, net monthly ROI lands around +EUR 5,500 vs a EUR 297-497 stack. Rollout is 5 weeks with VeriFactu and LOPDGDD included.

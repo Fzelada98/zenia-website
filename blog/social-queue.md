@@ -3484,6 +3484,8 @@ DM me if you run a steakhouse or asador and want the group-booking and cellar-up
 
 ## 2026-07-17 - Agente IA para escuelas de padel
 
+<!-- SCHEDULED:sp_BgbUD0loe6NMozNjeoEbE at 2026-07-17T08:00:00.000Z -->
+
 Spain crossed 6M padel players and federation licenses grew 175% since 2012, yet PwC's 2026 report shows the top clubs make 5x more per court than the average ones (EUR 3,500 vs EUR 736/month). The bottleneck is almost never real estate. It is how the school runs WhatsApp.
 
 A 3-court school moves 60 to 120 WhatsApp messages a day: reservations, level questions, bono renewals, last-minute cancellations. The monitor answers between sets, response time drifts to 35-90 minutes, and late-night waitlists never move. Meanwhile Playtomic and Anolla quietly eat the margin the school could keep.

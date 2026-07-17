@@ -3481,3 +3481,19 @@ DM me if you run a steakhouse or asador and want the group-booking and cellar-up
 #restauranttech #hospitality #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-17 - Agente IA para escuelas de padel
+
+Spain crossed 6M padel players and federation licenses grew 175% since 2012, yet PwC's 2026 report shows the top clubs make 5x more per court than the average ones (EUR 3,500 vs EUR 736/month). The bottleneck is almost never real estate. It is how the school runs WhatsApp.
+
+A 3-court school moves 60 to 120 WhatsApp messages a day: reservations, level questions, bono renewals, last-minute cancellations. The monitor answers between sets, response time drifts to 35-90 minutes, and late-night waitlists never move. Meanwhile Playtomic and Anolla quietly eat the margin the school could keep.
+
+We built a personalized AI agent for padel schools that fills 62% of cancelled slots automatically, lifts bono renewal from 48% to 81%, and pushes court occupancy from 55% to 74%. Net monthly ROI: around +EUR 13K for a 3-court school vs a EUR 297-497 stack.
+
+Full breakdown with the 5-week rollout plan: https://zeniapartners.com/blog/agente-ia-para-escuelas-de-padel.html
+
+DM me if you run a padel school or a club with an active academy and want the waitlist + bono-renewal playbook for your team.
+
+#padel #sportstech #AI #WhatsAppBusiness
+
+---

@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-07-17T22:00:00Z",
+  "lastRun": "2026-07-17T22:30:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-clinicas-de-podologia",
+      "keyword": "agente ia para clinicas de podologia",
+      "tier": 1,
+      "cluster": "clinicas",
+      "status": "published",
+      "date": "2026-07-17"
+    },
     {
       "slug": "agente-ia-para-colegios",
       "keyword": "agente ia para colegios",

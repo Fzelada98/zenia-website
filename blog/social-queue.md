@@ -3531,3 +3531,19 @@ DM me if you run a podiatry clinic or a multi-center group and want the reactiva
 #healthtech #patientretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-18 - Agente IA para escuelas de esqui
+
+When the first serious snowfall hits, a ski school's WhatsApp goes from 15 to 400 messages a day in 48 hours. That single peak week destroys the operational model: 4 to 6 hours of daily office work just answering "hola, precio de clases de esquí para 2 niños". 18% to 25% of new inquiries walk to the school next door because the reply came 90 minutes late.
+
+We built a personalized AI agent that reads the request, detects level, age and modality, cross-checks instructor availability by language, and confirms the booking in under 10 seconds. For a 40-instructor school, instructor utilization goes from 68% to 84%, no-shows drop from 12% to 4%, and after-hours inquiries convert. First-season net impact modeled at +EUR 84K against a EUR 3.5K stack.
+
+The bottleneck was never the snow. It was response time on WhatsApp during the 5 peak weeks that generate 62% of yearly revenue.
+
+Full breakdown with the operating model: https://zeniapartners.com/blog/agente-ia-para-escuelas-de-esqui.html
+
+DM me if you run a ski school in the Pyrenees, the Andes or the Alps and want the pre-season playbook for your team.
+
+#skiindustry #wintersports #AI #WhatsAppBusiness
+
+---

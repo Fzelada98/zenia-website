@@ -3547,3 +3547,17 @@ DM me if you run a ski school in the Pyrenees, the Andes or the Alps and want th
 #skiindustry #wintersports #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-19 - Agente IA para academias de ingles
+
+Spain runs 3,952 private language schools with over 2M students a year (FECEI 2026), and 65.5% raised tuition prices this year. Yet the average English academy still loses 30% to 45% of its trial classes between "great lesson" and "here's my payment info", because the follow-up hits at 9am the next morning when the parent already messaged three competitors.
+
+We built a personalized AI agent on WhatsApp that replies in 8 seconds any hour, qualifies age, level and objective, books the trial class, sends 24h and 2h reminders, and closes enrollment post-class. No-shows drop from 32% to 10%, trial-to-enrollment climbs from ~35% to 60%+, and CPL falls 60% (Aurora Inbox 2026 education benchmark). For a 500-student academy at EUR 65/month, net monthly impact modeled at +EUR 27K vs a EUR 297-497 stack.
+
+Full breakdown with the operating model: https://zeniapartners.com/blog/agente-ia-para-academias-de-ingles.html
+
+DM me if you run a language academy in Spain or LATAM and want the September playbook for your team.
+
+#edtech #languageschools #AI #WhatsAppBusiness
+
+---

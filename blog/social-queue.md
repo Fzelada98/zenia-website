@@ -3575,3 +3575,17 @@ DM me if you run a STEM or robotics academy in Spain or LATAM and want the enrol
 #edtech #STEM #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-19 - Agente IA para escuelas de buceo
+
+The average dive center in Spain loses 6 to 9 course reservations every week because the message arrived Friday night and nobody replies until Monday. The instructor rinsing regulators is the same person answering "do you have a spot for Open Water next week". Nights, Sundays and windy afternoons are dark.
+
+We built a personalized AI agent on WhatsApp that answers in 10 seconds any hour, validates PADI or SSI level, checks tide and boat availability, sends the RSTC medical form and drops the eLearning link the moment the client pays. For a center with 2 boats and 3 instructors at EUR 78 average ticket, late cancellations drop from 20% to 8%, boat occupancy moves from 68% to 84%, monthly PADI/SSI courses go from 20 to 32, and net monthly impact modeled at +EUR 21,070 to +EUR 21,270 vs a EUR 297-497 stack.
+
+Full breakdown with the operating model: https://zeniapartners.com/blog/agente-ia-para-escuelas-de-buceo.html
+
+DM me if you run a diving school in Spain, Canary Islands or LATAM and want the high-season playbook for your center.
+
+#divingindustry #watersports #AI #WhatsAppBusiness
+
+---

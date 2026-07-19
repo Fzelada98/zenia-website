@@ -3534,6 +3534,8 @@ DM me if you run a podiatry clinic or a multi-center group and want the reactiva
 
 ## 2026-07-18 - Agente IA para escuelas de esqui
 
+<!-- SCHEDULED:sp_z6eAUMiDrmLAGpFCpcDOu at 2026-07-20T07:00:00.000Z -->
+
 When the first serious snowfall hits, a ski school's WhatsApp goes from 15 to 400 messages a day in 48 hours. That single peak week destroys the operational model: 4 to 6 hours of daily office work just answering "hola, precio de clases de esquí para 2 niños". 18% to 25% of new inquiries walk to the school next door because the reply came 90 minutes late.
 
 We built a personalized AI agent that reads the request, detects level, age and modality, cross-checks instructor availability by language, and confirms the booking in under 10 seconds. For a 40-instructor school, instructor utilization goes from 68% to 84%, no-shows drop from 12% to 4%, and after-hours inquiries convert. First-season net impact modeled at +EUR 84K against a EUR 3.5K stack.
@@ -3550,6 +3552,8 @@ DM me if you run a ski school in the Pyrenees, the Andes or the Alps and want th
 
 ## 2026-07-19 - Agente IA para academias de ingles
 
+<!-- SCHEDULED:sp_OlhsTg0PfFMZsnUNZvFE at 2026-07-21T07:00:00.000Z -->
+
 Spain runs 3,952 private language schools with over 2M students a year (FECEI 2026), and 65.5% raised tuition prices this year. Yet the average English academy still loses 30% to 45% of its trial classes between "great lesson" and "here's my payment info", because the follow-up hits at 9am the next morning when the parent already messaged three competitors.
 
 We built a personalized AI agent on WhatsApp that replies in 8 seconds any hour, qualifies age, level and objective, books the trial class, sends 24h and 2h reminders, and closes enrollment post-class. No-shows drop from 32% to 10%, trial-to-enrollment climbs from ~35% to 60%+, and CPL falls 60% (Aurora Inbox 2026 education benchmark). For a 500-student academy at EUR 65/month, net monthly impact modeled at +EUR 27K vs a EUR 297-497 stack.
@@ -3564,6 +3568,8 @@ DM me if you run a language academy in Spain or LATAM and want the September pla
 
 ## 2026-07-19 - Agente IA para academias de robotica
 
+<!-- SCHEDULED:sp_WUbSUYYegDpsk1o9Zdcc at 2026-07-22T07:00:00.000Z -->
+
 The robotics education market will hit USD 1.41B in 2026 and grow 22.5% every year through 2034 (Global Growth Insights). Yet the average STEM academy in Spain still loses 41% of its leads because nobody replies to the parent's WhatsApp at 21:15 on a Tuesday. The person who teaches an 8-year-old to build a bipedal robot is the same person answering "do you have a spot on Wednesdays". Nights and weekends are dark.
 
 We built a personalized AI agent on WhatsApp that replies in 12 seconds any hour, qualifies age and interest, books the trial class, sends 24h and 2h reminders, and closes enrollment post-class with a photo of what the kid built. For a 90-student STEM academy at EUR 65/month, trial conversion moves from 22% to 54%, no-shows drop from 30% to 8%, quarterly renewals climb from 68% to 87%, and net monthly impact modeled at +EUR 1,962 to +EUR 2,162 vs a EUR 297-497 stack.
@@ -3577,6 +3583,8 @@ DM me if you run a STEM or robotics academy in Spain or LATAM and want the enrol
 ---
 
 ## 2026-07-19 - Agente IA para escuelas de buceo
+
+<!-- SCHEDULED:sp_xuF5XXCjUtRU2MOrZmV at 2026-07-23T08:00:00.000Z -->
 
 The average dive center in Spain loses 6 to 9 course reservations every week because the message arrived Friday night and nobody replies until Monday. The instructor rinsing regulators is the same person answering "do you have a spot for Open Water next week". Nights, Sundays and windy afternoons are dark.
 

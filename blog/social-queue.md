@@ -3561,3 +3561,17 @@ DM me if you run a language academy in Spain or LATAM and want the September pla
 #edtech #languageschools #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-19 - Agente IA para academias de robotica
+
+The robotics education market will hit USD 1.41B in 2026 and grow 22.5% every year through 2034 (Global Growth Insights). Yet the average STEM academy in Spain still loses 41% of its leads because nobody replies to the parent's WhatsApp at 21:15 on a Tuesday. The person who teaches an 8-year-old to build a bipedal robot is the same person answering "do you have a spot on Wednesdays". Nights and weekends are dark.
+
+We built a personalized AI agent on WhatsApp that replies in 12 seconds any hour, qualifies age and interest, books the trial class, sends 24h and 2h reminders, and closes enrollment post-class with a photo of what the kid built. For a 90-student STEM academy at EUR 65/month, trial conversion moves from 22% to 54%, no-shows drop from 30% to 8%, quarterly renewals climb from 68% to 87%, and net monthly impact modeled at +EUR 1,962 to +EUR 2,162 vs a EUR 297-497 stack.
+
+Full breakdown with the operating model: https://zeniapartners.com/blog/agente-ia-para-academias-de-robotica.html
+
+DM me if you run a STEM or robotics academy in Spain or LATAM and want the enrollment playbook for your size.
+
+#edtech #STEM #AI #WhatsAppBusiness
+
+---

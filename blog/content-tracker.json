@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-07-20T14:10:00Z",
+  "lastRun": "2026-07-20T22:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-clinicas-de-psiquiatria",
+      "keyword": "agente ia para clinicas de psiquiatria",
+      "tier": 1,
+      "cluster": "clinicas",
+      "status": "published",
+      "date": "2026-07-20"
+    },
     {
       "slug": "agente-ia-para-escuelas-de-vela",
       "keyword": "agente ia para escuelas de vela",

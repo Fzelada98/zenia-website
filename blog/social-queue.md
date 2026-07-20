@@ -3627,3 +3627,20 @@ Reply if you run a sailing school in Spain or the Med and want the meteo-aware p
 #watersports #sailingindustry #AI #WhatsAppBusiness
 
 ---
+## 2026-07-20 - Agente IA para Clínicas de Psiquiatría
+
+Psychiatry has the worst no-show rate in medicine: 18-23% on average, and 30-50% in substance-use programs. Twice the rate of primary care, and rising.
+
+The reason isn't laziness. It's structural: stigma, phone-only booking during work hours, and weekly visits that compound every missed slot. A patient who avoids the visit also avoids the reminder call.
+
+We built a personalized AI agent on WhatsApp that replies in 8 seconds any hour, sends 72h and 24h reminders with one-click rescheduling, and activates a clinical urgency protocol the moment it detects self-harm language. It never diagnoses. It routes admin flows and hands sensitive conversations to the human team in under 60 seconds.
+
+Real pilots with 3-psychiatrist clinics: no-shows down from 21% to 6%, occupancy up from 68% to 84%, and roughly 19,000 euros/month recovered vs a 297-497 euros/month stack. 41% of first contacts happen between 22:00 and 02:00 or on Sundays. Those were mostly lost before.
+
+Full breakdown with the RGPD architecture, the urgency protocol, and the ROI math: https://zeniapartners.com/blog/agente-ia-para-clinicas-de-psiquiatria.html
+
+Reply if you run a mental health clinic dealing with the same numbers.
+
+#healthtech #mentalhealth #patientretention #AI #WhatsAppBusiness
+
+---

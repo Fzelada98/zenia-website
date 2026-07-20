@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-07-20T12:00:00Z",
+  "lastRun": "2026-07-20T14:10:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-escuelas-de-vela",
+      "keyword": "agente ia para escuelas de vela",
+      "tier": 1,
+      "cluster": "deportes",
+      "status": "published",
+      "date": "2026-07-20"
+    },
     {
       "slug": "agente-ia-para-clinicas-de-endocrinologia",
       "keyword": "agente ia para clinicas de endocrinologia",

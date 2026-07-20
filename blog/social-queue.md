@@ -3613,3 +3613,17 @@ Reply if you run an endocrinology clinic dealing with this. I can send the full 
 #healthtech #patientretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-20 - Agente IA para Escuelas de Vela
+
+A typical sailing school on the Spanish coast books 68% of its yearly revenue in just 4 months, and loses 6 course reservations every week because the parent messaged Sunday night and the office replies Tuesday morning.
+
+Add levante wind cancellations that get reimbursed instead of rebooked, and PER (skipper license) courses that fall through because someone couldn't chase the parental consent form in time, and a school with 2 instructors and 4 boats leaves 8,500 to 14,000 euros on the table every summer month.
+
+We built a personalized AI agent on WhatsApp that replies in 8 seconds any hour, validates PER vs PNB titles against Spanish DGMM rules, checks AEMET wind forecasts against the school's own suspension thresholds, mass-rebooks affected students in under 1 minute, and reads the boat insurance and safety check dates before assigning a hull to a group. Real pilots across Catalonia, Balearics and Valencia: PER courses closed +71%, no-shows in baptism sessions -66%, weather cancellations rebooked from 28% to 71%, and roughly +12,700 euros/month vs a 297-497 euros/month stack. All under RGPD art. 6.1.b with the same phone number the club already uses.
+
+Reply if you run a sailing school in Spain or the Med and want the meteo-aware playbook for your fleet.
+
+#watersports #sailingindustry #AI #WhatsAppBusiness
+
+---

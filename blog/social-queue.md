@@ -3597,3 +3597,19 @@ DM me if you run a diving school in Spain, Canary Islands or LATAM and want the 
 #divingindustry #watersports #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-20 - Agente IA para Clínicas de Endocrinología
+
+A typical endocrinology clinic loses 9 to 14 new patients a month because someone messaged at 10pm on a Sunday and reception replied on Tuesday.
+
+Add that 46.3% of European adults are overweight or obese, 28% of diabetics have thyroid dysfunction, and 6 to 9% of lab tests get repeated because the patient took levothyroxine before the blood draw or didn't fast long enough.
+
+Our personalized AI agent replies in 8 seconds 24/7, validates prep for each test (fasting hours, biotin cutoff, metformin before contrast), runs the 4-week digestive check for patients starting semaglutide or tirzepatide, and flags the endocrinologist when HbA1c goes above 8.
+
+On a real clinic with 2 endocrinologists and 900 active patients: adherence to GLP-1 up from 53% to 71%, no-shows down 62%, and roughly 15.000 euros/month in recovered revenue vs a 297 to 497 euros/month platform cost. All under RGPD art. 9.2.h with the HCE they already use.
+
+Reply if you run an endocrinology clinic dealing with this. I can send the full protocol map and the ROI math for your case.
+
+#healthtech #patientretention #AI #WhatsAppBusiness
+
+---

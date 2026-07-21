@@ -3659,3 +3659,18 @@ Reply if you run a photography school or a creative academy and want the enrollm
 #education #edtech #creativeindustry #AI #WhatsAppBusiness
 
 ---
+## 2026-07-21 - Agente IA para Escuelas de Moda
+
+Fashion program enrollment is up over 10% in five years, but open-admission schools see completion rates below 30%. The bottleneck isn't marketing spend. It's that 62% of prospective students message on Sunday nights and nobody replies until Tuesday.
+
+A personalized AI agent covers both ends of the funnel: qualifies the lead in under 10 seconds at 2AM, sends the right program dossier, books the admission interview on real calendar slots, then stays around after enrollment sending project reminders and flagging attendance drop before the student churns.
+
+Real pilots with fashion schools running 3 programs at ~4,900 EUR average tuition: lead-to-enrollment conversion up from 8% to 14%, admission interview no-shows down from 22% to 7%, end-of-program retention up from 32% to 55%. Net around +380,000 EUR/year against a stack under 7,000 EUR/year. The admissions team stops recovering weekend leads on Monday morning and starts running high-intent interviews.
+
+With the 2026 enrollment cliff already reshaping demand, the schools that reply first and stay in the loop after the deposit will keep taking share from the ones that don't.
+
+Reply if you run a fashion, design or creative school and want the enrollment + retention playbook.
+
+#education #edtech #creativeindustry #AI #WhatsAppBusiness
+
+---

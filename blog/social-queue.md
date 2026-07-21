@@ -3644,3 +3644,18 @@ Reply if you run a mental health clinic dealing with the same numbers.
 #healthtech #mentalhealth #patientretention #AI #WhatsAppBusiness
 
 ---
+## 2026-07-21 - Agente IA para Academias de Fotografía
+
+85% of prospective photography students research on WhatsApp before enrolling, and if the school replies in 4 hours instead of 90 seconds, 60% of those leads are already gone to a competitor.
+
+A personalized AI agent doesn't fix "response time" as a KPI. It fixes the whole enrollment funnel: it answers the "what camera do I need / is there financing / can a total beginner do portrait" loop in the first minute, scores intent, blocks a seat, and starts the nurturing sequence for the leads that don't close today.
+
+Real pilots with photography academies running 4 active courses at ~690 EUR each: lead-to-enrollment conversion up from 11% to 18%, first-module dropout down from 40% to 22%, late-payment rate down from 18% to 7%. Net around +10,000 EUR/month vs a 297-497 EUR/month stack. And 41% of the new leads land outside office hours, which used to be pure lost revenue.
+
+The unlock isn't automation. It's that the director stops answering "how much does the portrait course cost" fifteen times a day and starts doing the 20-minute calls with high-intent leads that actually close.
+
+Reply if you run a photography school or a creative academy and want the enrollment sequence we use.
+
+#education #edtech #creativeindustry #AI #WhatsAppBusiness
+
+---

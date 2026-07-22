@@ -3674,3 +3674,19 @@ Reply if you run a fashion, design or creative school and want the enrollment + 
 #education #edtech #creativeindustry #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-22 - Agente IA para Academias de Maquillaje
+
+Makeup academies lose 45-65% of Instagram DMs and WhatsApp inquiries before the first invoice ever gets sent. At an average 1,900 EUR ticket per certified program, a mid-sized school leaves 68,000 to 98,000 EUR on the table every month.
+
+The pattern is boring: reply lands 4-26 hours late, information is incomplete (price yes, financing no; dates yes, kit no), nobody nudges between "I'll think about it" and enrollment. Three to five weeks of silence and the student pays a competitor.
+
+A personalized AI agent replies in 8 seconds 24/7 with the full syllabus, three payment options and a booked trial class. It cashes the first installment inside the chat, chases failed cards in 15 minutes and drops morosity from 10% to 2.5%. Pilots across 14 beauty academies: conversion from inquiry to enrollment climbs from 20% to 34-41%, and 38% of new enrollments now close between 21:00 and 8:00 (hours nobody was covering).
+
+Net ROI on a mid-sized school lands around 14,700 EUR/month against a 300-500 EUR stack.
+
+Reply if you run a beauty or vocational academy and want the enrollment + retention playbook.
+
+#beautyindustry #edtech #CRM #AI #WhatsAppBusiness
+
+---

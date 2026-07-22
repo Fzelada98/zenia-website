@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-07-22T06:00:00Z",
+  "lastRun": "2026-07-22T14:10:00Z",
   "posts": [
     {
       "slug": "agente-ia-para-escuelas-de-moda",
@@ -2134,6 +2134,14 @@
       "keyword": "agente ia para clinicas de medicina deportiva",
       "tier": 1,
       "cluster": "clinicas",
+      "status": "published",
+      "date": "2026-07-22"
+    },
+    {
+      "slug": "agente-ia-para-academias-de-maquillaje",
+      "keyword": "agente ia para academias de maquillaje",
+      "tier": 1,
+      "cluster": "belleza",
       "status": "published",
       "date": "2026-07-22"
     }

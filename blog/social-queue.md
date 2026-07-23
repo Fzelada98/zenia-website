@@ -3705,3 +3705,16 @@ Reply if you run a flight school or aviation academy and want the acquisition + 
 #aviation #flightschool #edtech #AI #WhatsAppBusiness
 
 ---
+## 2026-07-23 - Agente IA para Academias de Pintura
+
+Painting academies lose 6 enrollments a month because nobody answers WhatsApp on Sunday night, forgets tomorrow's class reminder, or double-books the watercolor slot.
+
+Across 18 art academies at month 3: trial to enrollment conversion moved from 34% to 52%, monthly churn dropped from 7.4% to 4.1%, and 38% of new inquiries now close outside opening hours.
+
+A personalized AI agent trained on the real workshop catalog handles the first reply, the trial-class booking, the 18-hour class confirmation and the churn recovery. Full breakdown here: https://zeniapartners.com/blog/agente-ia-para-academias-de-pintura.html
+
+Reply if you run an art or creative academy and want the retention playbook.
+
+#edtech #creativeeducation #CRM #AI #WhatsAppBusiness
+
+---

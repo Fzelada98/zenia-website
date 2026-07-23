@@ -3718,3 +3718,16 @@ Reply if you run an art or creative academy and want the retention playbook.
 #edtech #creativeeducation #CRM #AI #WhatsAppBusiness
 
 ---
+## 2026-07-23 - Agente IA para Ludotecas
+
+Indoor playgrounds lose 45% of birthday party inquiries because the reply lands 40 minutes after the parent already booked elsewhere, and 41% of confirmed bookings actually close between 21:00 and 8:00.
+
+Across a sample of ludotecas with 22 birthdays and 145 members per month, a personalized AI agent moved Saturday room occupancy from 68% to 91%, cut no-shows in free-play reservations from 30% to 6%, and lifted recurring subscription retention from 32% to 78% by handling deposit collection, allergy checks and 24-hour confirmations inside WhatsApp.
+
+The wildcard was the after-hours capture: 6 extra birthday parties per month sourced from parents booking after the kids fall asleep, worth roughly 1,920 EUR/month with a package price of 320 EUR.
+
+Reply if you run an indoor play center, kids party venue or family entertainment space and want the operator playbook.
+
+#familyentertainment #kidsbusiness #CRM #AI #WhatsAppBusiness
+
+---

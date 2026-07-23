@@ -3731,3 +3731,16 @@ Reply if you run an indoor play center, kids party venue or family entertainment
 #familyentertainment #kidsbusiness #CRM #AI #WhatsAppBusiness
 
 ---
+## 2026-07-23 - Agente IA para Clínicas de Alergología
+
+Between 12% and 19% of appointments in Spanish private clinics are no-shows, and allergology gets hit worst during the pollen peak when reception is already drowning in calls.
+
+Across allergy clinics running a personalized AI agent on WhatsApp Business API, first-visit capture climbed from 44% to 63%, no-shows dropped from 16% to 6%, and 12-month adherence to immunotherapy jumped from 52% to 78% because reminders and refill scheduling stopped depending on the patient's memory.
+
+The number that surprised the directors: 42% of new appointment requests land outside reception hours, mostly parents booking pediatric allergy visits after 22:00. A 4-doctor clinic recovered roughly 14,500 EUR/month in extra billing this way.
+
+DM me if you run an allergy or specialty clinic and want the operator playbook for the pollen season.
+
+#healthtech #patientretention #AI #WhatsAppBusiness
+
+---

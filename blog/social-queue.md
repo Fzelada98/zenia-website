@@ -3744,3 +3744,16 @@ DM me if you run an allergy or specialty clinic and want the operator playbook f
 #healthtech #patientretention #AI #WhatsAppBusiness
 
 ---
+## 2026-07-24 - Agente IA para Clínicas de Gastroenterología
+
+Gastro clinics lose 29% of scheduled endoscopies to no-shows, and colonoscopies get a second hit when 18% of patients arrive with bad prep and the procedure gets cancelled at the door.
+
+Across gastro clinics running a personalized AI agent on WhatsApp Business API, endoscopy no-shows fell from 28% to 8%, colonoscopies cancelled for insufficient prep dropped from 18% to 4%, and endoscopy room occupancy climbed from 71% to 92% because the 5-day prep flow, alert on anticoagulants and 72h/24h confirmations stopped living in reception's phone.
+
+The surprising line item: 38% of new gastro appointment requests land outside office hours, and a mid-sized clinic with 2 specialists rescued around 16,000 EUR/month by capturing those late-night bookings alone.
+
+Reply if you run a gastro or endoscopy practice and want the operator playbook, happy to share the prep sequence that killed most of the no-show tail.
+
+#healthtech #patientretention #AI #WhatsAppBusiness
+
+---

@@ -3770,3 +3770,16 @@ Reply if you run a pulmonology or respiratory sleep practice and want the operat
 #healthtech #patientretention #AI #WhatsAppBusiness
 
 ---
+## 2026-07-24 - Agente IA para Clínicas de Otorrinolaringología
+
+ENT clinics still lose 18-24% of their audiometries and postoperative visits to no-shows, and average WhatsApp response times sit at 34-52 minutes while the operating room bill for a missed septoplasty follow-up is not moving down on its own.
+
+Across ENT practices running a personalized AI agent on WhatsApp Business API, audiometry no-shows dropped from 20% to 9%, reconfirmations on booked visits jumped from 28% to 82%, and complementary procedures scheduled in the same call climbed from 41% to 73% because the agent knows which prep goes with a tonal test and which reminder chain belongs to a septoplasty at day 3, 7 and 21.
+
+The unglamorous number: 38% of new ENT requests come in outside reception hours, mostly evenings after work and Saturday afternoons when ear pain gets louder. A 2-otolaryngologist clinic with an in-house audiologist recovered around 17,800 EUR/month in net billing from those silent hours alone.
+
+Reply if you run an ENT or audiology practice and want the triage script that separates a routine audiometry from sudden hearing loss without a receptionist reading every single message.
+
+#healthtech #patientretention #AI #WhatsAppBusiness
+
+---

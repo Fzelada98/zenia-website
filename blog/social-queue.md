@@ -3757,3 +3757,16 @@ Reply if you run a gastro or endoscopy practice and want the operator playbook, 
 #healthtech #patientretention #AI #WhatsAppBusiness
 
 ---
+## 2026-07-24 - Agente IA para Clínicas de Neumología
+
+Pulmonology clinics lose between 20% and 27% of scheduled spirometries and sleep studies to no-shows, and the practices worst hit are the ones handling more than 2 million COPD patients and 10% of adults with asthma who need lifelong follow-up.
+
+Across pulmonology clinics running a personalized AI agent on WhatsApp Business API, functional-test no-shows fell from 22% to 7%, mis-prepared spirometries dropped from 12% to under 3%, and annual COPD reviews completed climbed from 54% to 82% because the double reminder, drug-suspension protocol and proactive inhaler renewal stopped living in one receptionist's memory.
+
+The surprising line item: 31% of new pulmonology requests land outside reception hours, most of them between 20:00 and 23:30 when adult patients finally sit down to manage their health. A mid-sized 2-doctor clinic captured around 8,600 EUR/month in net billing from these silent hours alone.
+
+Reply if you run a pulmonology or respiratory sleep practice and want the operator playbook, happy to share the prep sequence that killed most of the no-show tail.
+
+#healthtech #patientretention #AI #WhatsAppBusiness
+
+---

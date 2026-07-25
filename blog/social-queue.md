@@ -3783,3 +3783,16 @@ Reply if you run an ENT or audiology practice and want the triage script that se
 #healthtech #patientretention #AI #WhatsAppBusiness
 
 ---
+## 2026-07-25 - Agente IA para Academias de Flamenco
+
+A mid-sized flamenco academy in Spain runs 90-240 students, monthly fees between EUR 55 and 120, and 30-70 daily WhatsApp messages hitting the director's personal phone at 22:00 on a Sunday when a family finally sits down to organize the season.
+
+Across academies running a personalized AI agent on WhatsApp Business API, silent quarterly dropouts fell from 8-12% to 4-6%, trial-class to enrollment conversion climbed from 38% to 57%, and bounced-payment recovery jumped from 45% to 82% because the agent handles the awkward money conversation the teacher never wanted to have.
+
+The unobvious number: 41% of new enrollments now close between 21:00 and 23:30 or Sunday mornings, hours when the manual academy was still asleep and the family had already messaged three competitors.
+
+Full playbook with the SEPA + RGPD flow inside WhatsApp, the reactivation script that saves 30-45% of at-risk students, and the ROI table for a 160-student academy: https://zeniapartners.com/blog/agente-ia-para-academias-de-flamenco.html
+
+#danceeducation #musicschools #AI #WhatsAppBusiness
+
+---

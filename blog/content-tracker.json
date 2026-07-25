@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-07-25T06:08:00Z",
+  "lastRun": "2026-07-25T14:00:00Z",
   "posts": [
     {
       "slug": "agente-ia-para-clinicas-de-nefrologia",
@@ -2208,6 +2208,14 @@
       "cluster": "belleza",
       "status": "published",
       "date": "2026-07-22"
+    },
+    {
+      "slug": "agente-ia-para-academias-de-flamenco",
+      "keyword": "agente ia para academias de flamenco",
+      "tier": 1,
+      "cluster": "academias",
+      "status": "published",
+      "date": "2026-07-25"
     }
   ]
 }

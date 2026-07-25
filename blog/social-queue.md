@@ -3796,3 +3796,16 @@ Full playbook with the SEPA + RGPD flow inside WhatsApp, the reactivation script
 #danceeducation #musicschools #AI #WhatsAppBusiness
 
 ---
+## 2026-07-25 - Agente IA para Academias de Piano
+
+A mid-sized piano academy in Spain runs 80-200 students, monthly fees around 60-80 EUR, and 90 daily WhatsApp messages that hit reception between 17:00 and 21:00 when the front desk is already flat out with parents dropping kids off for class.
+
+According to Opus1 data, music schools lose 8-10% of students every single month, and most of those dropouts announce themselves for weeks: two missed classes, an unresolved schedule request, an overdue invoice sitting for 12 days. A personalized AI agent on WhatsApp Business API detects that pattern before the family cancels and hands coordination a specific playbook: teacher call this week, move the student to the 18:00 slot, offer 20 EUR next quarter.
+
+Across academies running the agent, dropout rate cut in half, overdue invoices from 7% to 1.4%, trial-class to enrollment jumped from 38% to 56%, and 41% of new enrollments now close between 20:00 and 23:00 when competitors are asleep.
+
+Full ROI breakdown for a 120-student academy and the 5-signal dropout matrix here: https://zeniapartners.com/blog/agente-ia-para-academias-de-piano.html
+
+#musicschools #musiceducation #AI #WhatsAppBusiness
+
+---

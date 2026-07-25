@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-07-25T14:00:00Z",
+  "lastRun": "2026-07-25T22:07:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-academias-de-piano",
+      "keyword": "agente ia para academias de piano",
+      "tier": 1,
+      "cluster": "academias",
+      "status": "published",
+      "date": "2026-07-25"
+    },
     {
       "slug": "agente-ia-para-clinicas-de-nefrologia",
       "keyword": "agente ia para clinicas de nefrologia",

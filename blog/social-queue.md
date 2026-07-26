@@ -3809,3 +3809,16 @@ Full ROI breakdown for a 120-student academy and the 5-signal dropout matrix her
 #musicschools #musiceducation #AI #WhatsAppBusiness
 
 ---
+## 2026-07-26 - Agente IA para Viveros
+
+A mid-sized garden center in Spain fields 45-90 WhatsApp and Instagram messages a day in peak season, and answers most of them 41 minutes to 3 hours later, when the customer already drove to Leroy Merlin.
+
+According to AECJ, the Spanish green sector moves over 950M EUR a year, and 71% of those sales get decided across just 5 months. In that window, a 900 m2 nursery loses 8 commercial conversations a day to slow replies. A personalized AI agent answers in 9 seconds, recommends by climate zone and sun exposure, attaches a real photo of your stock, and cross-sells substrate, fertilizer and pot in the same chat.
+
+Across nurseries running the agent: average ticket up 22%, returns from dead plants down from 11% to 7%, repeat purchases in 6 months from 21% to 38%, and 29% of consultations now come in outside business hours.
+
+Full ROI breakdown for a 340k EUR/year nursery and the 5-step post-sale flow that halves returns: https://zeniapartners.com/blog/agente-ia-para-viveros.html
+
+#retailtech #gardencenter #AI #WhatsAppBusiness
+
+---

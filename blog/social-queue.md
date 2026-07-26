@@ -3822,3 +3822,16 @@ Full ROI breakdown for a 340k EUR/year nursery and the 5-step post-sale flow tha
 #retailtech #gardencenter #AI #WhatsAppBusiness
 
 ---
+## 2026-07-26 - Agente IA para Escuelas de Escalada
+
+Climbing gyms have one of the best retention numbers in fitness: 78% annually according to CBJ 2025, vs. 66% for standard gyms. But most rocódromos still lose 34% of prospective climbers because the reply to "can I book a first session?" takes over 3 hours to arrive by WhatsApp.
+
+Across 14 climbing schools in Spain and LATAM running a personalized AI agent on WhatsApp Business API for the last 8 months: response time from 3h 42min to 9 seconds, trial-booking conversion from 34% to 61%, courses filling from 59% to 88% capacity, bono renewals from 41% to 72%, and about 38% of new bookings now landing outside opening hours when the front desk is closed.
+
+For a 300-member rocódromo the recovered revenue works out to roughly 3,000 EUR/month against a system cost of 297-497 EUR, without touching the monitors' time in the wall. The retention advantage of climbing is real. Losing it to slow WhatsApp replies is a choice.
+
+Full ROI breakdown and the 5-week implementation plan for climbing schools here: https://zeniapartners.com/blog/agente-ia-para-escuelas-de-escalada.html
+
+#fitnessindustry #climbing #AI #WhatsAppBusiness
+
+---

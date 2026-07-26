@@ -3835,3 +3835,16 @@ Full ROI breakdown and the 5-week implementation plan for climbing schools here:
 #fitnessindustry #climbing #AI #WhatsAppBusiness
 
 ---
+## 2026-07-26 - Agente IA para Papelerías
+
+A neighborhood stationery shop in Spain makes 35-55% of its yearly revenue in the 45 days around back-to-school, and most of them lose customers because they can't answer 60-80 WhatsApp messages a day fast enough.
+
+Latest data from OCU and Banqmi puts average back-to-school spending at 422 EUR per student, with 48 EUR going straight to stationery basics. That is the moment 250 local families decide who supplies the whole family for the year. If the reply to a shared school list takes 3 hours, the sale is already at the hypermarket.
+
+Across stationery shops running a personalized AI agent on WhatsApp Business: response time from 2-4 hours to 12 seconds, average ticket per family from 42 EUR to 67 EUR (the agent quotes the full list with a bundle discount), school and AMPA quotes won from 28% to 61%, next-year repeat purchases from 34% to 72% thanks to proactive June messages. For a 180k EUR/year shop, the net annual ROI works out to +15k to +17k EUR against a 3.5-6k EUR system cost.
+
+Full breakdown plus how OCR of school lists actually works in the flow: https://zeniapartners.com/blog/agente-ia-para-papelerias.html
+
+#retailtech #stationery #AI #WhatsAppBusiness
+
+---

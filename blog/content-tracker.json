@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-07-26T14:15:00Z",
+  "lastRun": "2026-07-26T14:30:00Z",
   "posts": [
     {
       "slug": "agente-ia-para-escuelas-de-escalada",
@@ -2240,6 +2240,14 @@
       "cluster": "academias",
       "status": "published",
       "date": "2026-07-25"
+    },
+    {
+      "slug": "agente-ia-para-papelerias",
+      "keyword": "agente ia para papelerias",
+      "tier": 1,
+      "cluster": "retail",
+      "status": "published",
+      "date": "2026-07-26"
     }
   ]
 }

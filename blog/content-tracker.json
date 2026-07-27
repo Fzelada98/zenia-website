@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-07-27T06:00:00Z",
+  "lastRun": "2026-07-27T14:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-tiendas-de-bricolaje",
+      "keyword": "agente ia para tiendas de bricolaje",
+      "tier": 1,
+      "cluster": "retail",
+      "status": "published",
+      "date": "2026-07-27"
+    },
     {
       "slug": "agente-ia-para-escape-rooms",
       "keyword": "agente ia para escape rooms",

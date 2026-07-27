@@ -3848,3 +3848,16 @@ Full breakdown plus how OCR of school lists actually works in the flow: https://
 #retailtech #stationery #AI #WhatsAppBusiness
 
 ---
+## 2026-07-27 - Agente IA para Escape Rooms
+
+Spain runs 1,500+ active escape room salas across 700 operators, projected to hit 250M EUR in annual revenue in 2026. 70% of bookings land less than a week out, and the busiest booking moment is Thursday night. If your reply to a WhatsApp asking "6 people, Saturday 8pm, which room fits us?" takes 4 hours, that booking is at another sala by Friday morning.
+
+Across escape rooms running a personalized AI agent on WhatsApp Business API: response time from 35min-4h down to 8 seconds, unanswered messages from 15-22% down to under 1%, no-shows from 4-6% down to 1-2% because the agent charges the deposit before confirming, and dynamic waitlist recovering 62% of last-minute cancellations. Occupancy moves from 58% to 76% and 90-day repeat bookings from 11% to 27%.
+
+For a 3-sala escape room the numbers work out to +7.5k EUR/month net vs. a 297-497 EUR/month system cost. The room design and puzzles are the moat. Losing bookings because the phone was on silent between partidas is not.
+
+Full ROI breakdown, integration with GestionRoom, MGR App, Bookeo, Anolla and EasyWeek, and the 5-week implementation plan: https://zeniapartners.com/blog/agente-ia-para-escape-rooms.html
+
+#escaperooms #experienceeconomy #AI #WhatsAppBusiness
+
+---

@@ -3861,3 +3861,16 @@ Full ROI breakdown, integration with GestionRoom, MGR App, Bookeo, Anolla and Ea
 #escaperooms #experienceeconomy #AI #WhatsAppBusiness
 
 ---
+## 2026-07-27 - Agente IA para Tiendas de Bricolaje
+
+Spain's DIY and hardware market moves 12.2B EUR a year and grew 5% in 2025, yet the professional client that spends 500-800 EUR per visit rarely gets a call when their usual product is back in stock. That is where the independent shop bleeds to Leroy Merlin, Brico Depôt and ManoMano.
+
+34% of WhatsApp messages hitting a bricolaje shop arrive Saturday afternoon, Sunday, or between 8pm and 9am. Nobody answers, so the customer buys online 15 minutes later. Across shops running a personalized AI agent on WhatsApp Business API connected to their ERP: response time from 34 min to 12 seconds, average ticket up 18% via post-purchase cross-sell (roller + paint → varnish nudge at day 12), pro client frequency from every 14 days to every 9 days, and wrong-item returns from 7% to under 2%.
+
+For a 180 m² neighborhood shop with 350 active clients, that works out to +19.9k to +20.1k EUR/month net vs. a 297-497 EUR/month system cost. The moat is your in-store advice. Losing pro clients to a competitor with automated stock alerts is not something you can out-service manually.
+
+Full ROI breakdown, integration with Bimbisa, Contasol, Factusol, Odoo or Sage, and the 5-week implementation plan: https://zeniapartners.com/blog/agente-ia-para-tiendas-de-bricolaje.html
+
+#retailtech #DIYretail #AI #WhatsAppBusiness
+
+---

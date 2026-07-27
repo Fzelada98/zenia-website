@@ -3874,3 +3874,16 @@ Full ROI breakdown, integration with Bimbisa, Contasol, Factusol, Odoo or Sage, 
 #retailtech #DIYretail #AI #WhatsAppBusiness
 
 ---
+## 2026-07-27 - Agente IA para Academias de Boxeo
+
+Spain runs 16,000+ boxing, martial arts and CrossFit gyms and boxing has moved from purist niche to mass fitness product. The catch: annual dropout in fitness centers sits at 50%, and in boxing academies 45-60% of members quit inside the first 90 days, right when the technique curve frustrates the beginner who does not see progress fast enough.
+
+An 180-member boxing academy losing 60-90 members a year is leaving roughly 46,800 EUR on the table without counting missed trial classes or empty slots. Across academies running a personalized AI agent on WhatsApp Business API: reply time from 3-6 hours down to 8 seconds, trial-to-signup conversion from 28% to 46%, 90-day dropout cut from 50% to 25%, class occupancy from 63% to 82%, and failed direct-debit recovery from 35% to 70%. The coach gets 12+ hours a week back to actually coach.
+
+For an 180-member academy the numbers land around +4.8k to +5.0k EUR/month net vs. a 297-497 EUR/month system cost. Technique is the moat. Losing beginners in week 8 because nobody messaged them is not.
+
+Full ROI breakdown, integration with Trainingym, Resamania, ClubClass, Wodify or custom software, and the 5-week implementation plan: https://zeniapartners.com/blog/agente-ia-para-academias-de-boxeo.html
+
+#fitnessindustry #memberretention #AI #WhatsAppBusiness
+
+---

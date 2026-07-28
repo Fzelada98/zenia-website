@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-07-28T06:00:00Z",
+  "lastRun": "2026-07-28T14:13:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-chiringuitos",
+      "keyword": "agente ia para chiringuitos",
+      "tier": 1,
+      "cluster": "restaurantes",
+      "status": "published",
+      "date": "2026-07-28"
+    },
     {
       "slug": "agente-ia-para-taperias",
       "keyword": "agente ia para taperias",

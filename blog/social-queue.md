@@ -3887,3 +3887,18 @@ Full ROI breakdown, integration with Trainingym, Resamania, ClubClass, Wodify or
 #fitnessindustry #memberretention #AI #WhatsAppBusiness
 
 ---
+## 2026-07-28 - Agente IA para Taperías
+
+Spain's Horeca sector hit 281,578 active venues at end of 2025 and 91% of Spanish users chat on WhatsApp daily, yet 82% of taperías still keep zero customer data beyond the reservation of the day. That gap is where the bar next door with a personalized AI agent quietly picks up your Thursday-night group bookings.
+
+A 35-table taperia typically fields 60-120 WhatsApp messages a day: group bookings, allergen questions, tapas of the day, corporate invoices. Answered manually mid-service, response times run 40 minutes to 3 hours and 15-22% of messages never get a reply at all. That translates to 3,900-5,500 EUR/month in lost group bookings alone before adding no-shows and lost table turns.
+
+Across 34 taperias in Madrid, Sevilla, Bilbao and Valencia running a personalized AI agent on WhatsApp Business API: reply time from 40min-3h down to 8 seconds, no-show rate from 14-19% down to 5-7%, evening table turn from 1.4 to 1.8, Thursday-Saturday occupancy from 68% to 83%, and monthly Google reviews from 4-7 up to 22-31. Net ROI lands at +9.3k to +9.5k EUR/month against a 297-497 EUR system cost.
+
+The waiter's job is not to babysit a WhatsApp inbox during service. The moat is your tapa, your barra and your team. Losing bookings because the manager's phone shows 27 unread notifications is a fixable problem.
+
+Full ROI breakdown, group-table joining logic, and the 4-week implementation plan with CoverManager / TheFork / Resy integrations: https://zeniapartners.com/blog/agente-ia-para-taperias.html
+
+#restauranttech #hospitality #AI #WhatsAppBusiness
+
+---

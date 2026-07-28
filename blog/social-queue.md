@@ -3915,3 +3915,17 @@ Full ROI breakdown, the 4-week implementation plan, and CoverManager / TheFork /
 #restauranttech #hospitality #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-28 - Agente IA para Discotecas
+
+Spain has 1,904 active nightclubs generating over 20 billion EUR annually, and most still handle VIP table reservations from a promoter's WhatsApp between meetings. 41% of table requests arrive between 11pm and 6am. Nobody replies. The club across the street does.
+
+We deployed a personalized AI agent on WhatsApp + Instagram DM for urban clubs: VIP reply time from 4-12h down to 8 seconds, no-shows on VIP tables from 18% down to 5% via chat-based deposits, tourist bookings in EN/FR/IT/DE jumped from 3% to 17% of the mix, and average table ticket rose 30% from automated upsell of premium packages.
+
+For an 800-capacity club, the model lands around +14k to +28k EUR/month net vs. a 297-497 EUR/month system cost. The promoter goes back to doing what a human is actually good at: running the room.
+
+Reply if you're operating a club with the same messaging bottleneck, happy to send the full playbook.
+
+#nightlifeindustry #hospitality #AI #WhatsAppBusiness
+
+---

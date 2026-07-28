@@ -3902,3 +3902,16 @@ Full ROI breakdown, group-table joining logic, and the 4-week implementation pla
 #restauranttech #hospitality #AI #WhatsAppBusiness
 
 ---
+## 2026-07-28 - Agente IA para Chiringuitos
+
+A well-placed Spanish chiringuito serves 150-400 covers a day at 18-35 EUR ticket in August, and packs 80% of annual revenue into 90-180 days, yet 12-18% of bookings ghost and the manager reads WhatsApp between plates while 28% of reservation requests arrive between 10 PM and 9 AM to zero replies.
+
+Across chiringuitos on the Mediterranean coast running a personalized AI agent on WhatsApp Business API: reply time from 40min-3h down to 8 seconds, no-shows from 15% down to 3-6% without asking for a card deposit, off-hours requests captured as new bookings, table turn from 1.4 to 1.9 in the after-lunch window, and multilingual EN/FR/DE conversations without hiring bilingual staff.
+
+For a 200-cover chiringuito the numbers land around +26.6k to +26.8k EUR/month net in August vs. a 297-497 EUR/month system cost. Over the 4 peak months that gap is a new house, or the chiringuito next door quietly taking your Saturday.
+
+Full ROI breakdown, the 4-week implementation plan, and CoverManager / TheFork / Resy integrations: https://zeniapartners.com/blog/agente-ia-para-chiringuitos.html
+
+#restauranttech #hospitality #AI #WhatsAppBusiness
+
+---

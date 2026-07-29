@@ -3945,3 +3945,17 @@ DM me if you're operating a karting business and want the operator playbook we u
 #leisureindustry #karting #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-29 - Agente IA para Campings
+
+Spanish domestic campsite bookings jumped 96% in H1 2026 (Pitchup) and the Spanish Federation of Campsites reports average occupancy near 90%.
+
+The problem stopped being demand and became triage: a mid-size camping of 220 pitches and 40 bungalows loses 5.000-12.000 EUR/month in August to slow WhatsApp replies, avoidable overbookings, and 17% OTA commissions on a canal directo stuck at 28%.
+
+We deployed a personalized AI agent for one this month. Reply time went from 6 hours to 8 seconds, direct-channel share climbed from 28% to 46%, and overbookings dropped from 5-8/month to under 1. The receptionist stopped triaging DMs and started upselling shaded pitches at check-in.
+
+Reply if you're running a camping or seasonal accommodation with the same channel-mix problem, happy to send the ROI model we used.
+
+#hospitality #camping #AI #WhatsAppBusiness
+
+---

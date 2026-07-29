@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-07-29T06:16:00Z",
+  "lastRun": "2026-07-29T14:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-campings",
+      "keyword": "agente ia para campings",
+      "tier": 1,
+      "cluster": "turismo",
+      "status": "published",
+      "date": "2026-07-29"
+    },
     {
       "slug": "agente-ia-para-discotecas",
       "keyword": "agente ia para discotecas",

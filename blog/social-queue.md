@@ -3929,3 +3929,19 @@ Reply if you're operating a club with the same messaging bottleneck, happy to se
 #nightlifeindustry #hospitality #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-29 - Agente IA para Karting
+
+Spain has 198 active karting circuits and 41% of group requests never close because someone answered too late.
+
+The math is brutal: a mid-size track loses 4 group bookings a month to slower reply times, worth around EUR 5.760 in lap fees alone. The circuit next door gets the birthday party while you were between tandas.
+
+We wired a personalized AI agent into a 12-kart circuit's WhatsApp last month. Average reply time dropped from 34 minutes to 9 seconds, group close rate climbed from 59% to 84%, and Tuesday-Wednesday valley tandas filled 38% more with automated 20% discount campaigns to inactive customers.
+
+The unlock wasn't the chat. It was letting the pit boss run races instead of the phone.
+
+DM me if you're operating a karting business and want the operator playbook we used.
+
+#leisureindustry #karting #AI #WhatsAppBusiness
+
+---

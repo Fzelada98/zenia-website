@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-07-28T22:08:00Z",
+  "lastRun": "2026-07-29T06:16:00Z",
   "posts": [
     {
       "slug": "agente-ia-para-discotecas",
@@ -2296,6 +2296,14 @@
       "cluster": "retail",
       "status": "published",
       "date": "2026-07-26"
+    },
+    {
+      "slug": "agente-ia-para-karting",
+      "keyword": "agente ia para karting",
+      "tier": 1,
+      "cluster": "ocio",
+      "status": "published",
+      "date": "2026-07-29"
     }
   ]
 }

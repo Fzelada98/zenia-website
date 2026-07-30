@@ -3987,3 +3987,17 @@ Reply if you run a bowling alley or entertainment venue with the same private-ev
 #leisureindustry #familyentertainment #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-30 - Agente IA para Academias de Patinaje
+
+A skating academy in Spain gets 180 to 250 WhatsApp inquiries every September, and 62% of the families who don't get a reply within the first hour sign up at a competitor before the week is over.
+
+Skating schools live off seasons, not one-off bookings. September and January are the entire year. Miss a lead there and it's gone for 12 months. Most directors already work 60-hour weeks; the problem isn't effort, it's that the hours never reach the messages.
+
+We deployed a personalized AI agent for an academy with 140 students. Trial-class conversion went from 24% to 52%, enrollment from trial to paid rose 61%, quarterly dropout fell from 14% to 7%, and September capacity hit 94% instead of the usual 72%. Net impact after tool cost: roughly 50,000 EUR annually.
+
+Reply if you run a skating, dance, or kids' sports academy dealing with the same September triage, happy to share the trial-to-enrollment flow.
+
+#sportsindustry #AI #WhatsAppBusiness #retention
+
+---

@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-07-30T00:00:00Z",
+  "lastRun": "2026-07-30T14:15:00Z",
   "posts": [
     {
       "slug": "agente-ia-para-academias-de-guitarra",
@@ -2320,6 +2320,14 @@
       "cluster": "ocio",
       "status": "published",
       "date": "2026-07-29"
+    },
+    {
+      "slug": "agente-ia-para-boleras",
+      "keyword": "agente ia para boleras",
+      "tier": 1,
+      "cluster": "ocio",
+      "status": "published",
+      "date": "2026-07-30"
     }
   ]
 }

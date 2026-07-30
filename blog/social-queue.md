@@ -3959,3 +3959,17 @@ Reply if you're running a camping or seasonal accommodation with the same channe
 #hospitality #camping #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-30 - Agente IA para Academias de Guitarra
+
+Roughly 25-30% of guitar students drop out every year, and half of everyone who starts an instrument as a kid quits before 17.
+
+Most guitar schools blame the student. The data says otherwise: dropout is a symptom of admin, not motivation. Missed reminders, silent months from the school, unresolved billing issues, and inquiries that took 6 hours to answer add up to a student who feels forgotten.
+
+We deployed a personalized AI agent for a school with 120 students last quarter. Conversion from inquiry to enrolled went from 25% to 42%, annual dropout fell from 28% to 16%, and the director got 10 hours a week back to actually build a music program. Net impact on the P&L was roughly 4,200 EUR/month after the tool cost.
+
+Reply if you run a music academy dealing with silent churn, happy to share the retention framework we used.
+
+#musiceducation #AI #WhatsAppBusiness #retention
+
+---

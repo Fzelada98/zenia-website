@@ -4001,3 +4001,19 @@ Reply if you run a skating, dance, or kids' sports academy dealing with the same
 #sportsindustry #AI #WhatsAppBusiness #retention
 
 ---
+
+## 2026-07-31 - Agente IA para Academias de Arte
+
+Art academies in Spain lose 40-55% of their WhatsApp leads to slow replies, and 22% of the students who leave never even tell them, they just stop showing up.
+
+Spain's creative sector contributes 2.4% of GDP with 131,811 companies, most of them small art schools running on Excel and one overloaded coordinator. The problem is not the tool, it is that leads arrive at 11pm on a Sunday and the reply lands Tuesday at noon.
+
+We deployed a personalized AI agent for an academy with 140 seats. Lead-to-trial conversion +75%, trial-to-enrollment +29%, quarterly dropout dropped from 18% to 12%, missed fee collection went from 7% to 2%, and the coordinator got 10 hours a week back. Net impact roughly 1,500 EUR/month after tool cost.
+
+Full breakdown here: https://zeniapartners.com/blog/agente-ia-para-academias-de-arte.html
+
+Reply if you run an art, music, or creative academy with the same silent-churn pattern, happy to share the retention playbook.
+
+#arteducation #creativeindustries #AI #WhatsAppBusiness
+
+---

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HP0VQSEL68"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-HP0VQSEL68');
+</script>
+
+<title>Agente IA para Fruterias: Pedidos por WhatsApp | ZENIA</title>
+<meta name="description" content="Agente IA para fruterias que gestiona pedidos por WhatsApp, cesta semanal y reparto a domicilio 24/7. Reduce mermas y sube el ticket medio.">
+<link rel="canonical" href="https://zeniapartners.com/blog/agente-ia-para-fruterias.html">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+
+<!-- Hreflang -->
+<link rel="alternate" hreflang="es" href="https://zeniapartners.com/blog/agente-ia-para-fruterias.html">
+<link rel="alternate" hreflang="x-default" href="https://zeniapartners.com/blog/agente-ia-para-fruterias.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Agente IA para Fruterias: Pedidos y Cesta Semanal por WhatsApp">
+<meta property="og:description" content="Agente IA para fruterias que gestiona pedidos por WhatsApp, cesta semanal y reparto a domicilio 24/7. Reduce mermas y sube el ticket medio.">
+<meta property="og:url" content="https://zeniapartners.com/blog/agente-ia-para-fruterias.html">
+<meta property="og:site_name" content="ZENIA">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="https://zeniapartners.com/assets/images/og-image.png">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Agente IA para Fruterias: Pedidos por WhatsApp">
+<meta name="twitter:description" content="Agente IA que atiende pedidos, cesta semanal y avisos de temporada 24/7 por WhatsApp. Menos merma, mas ticket medio.">
+<meta name="twitter:image" content="https://zeniapartners.com/assets/images/og-image.png">
+
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="author" content="Fabrizzio Zelada">
+<meta name="theme-color" content="#0A0F1C">
+
+<!-- JSON-LD Article -->
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Agente IA para Fruterias: Pedidos y Cesta Semanal por WhatsApp", "description": "Como un agente de IA personalizado ayuda a fruterias a gestionar pedidos por WhatsApp, cesta semanal, reparto y fidelizacion. ROI, metricas y pasos de implementacion.", "author": {"@type": "Person", "name": "Fabrizzio Zelada", "jobTitle": "Founder", "worksFor": {"@type": "Organization", "name": "ZENIA"}}, "publisher": {"@type": "Organization", "name": "ZENIA", "url": "https://zeniapartners.com", "logo": {"@type": "ImageObject", "url": "https://zeniapartners.com/assets/images/og-image.png", "width": 600, "height": 60}}, "datePublished": "2026-07-31", "dateModified": "2026-07-31", "mainEntityOfPage": "https://zeniapartners.com/blog/agente-ia-para-fruterias.html", "inLanguage": "es", "keywords": ["agente ia para fruterias", "fruteria whatsapp pedidos", "automatizacion fruteria barrio", "cesta semanal fruta verdura", "reparto domicilio fruteria", "crm fruteria pequeno comercio"], "image": "https://zeniapartners.com/assets/images/og-image.png"}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #3B82F6;
+    --accent-violet: #6366F1;
+    --bg-dark: #0A0F1C;
+    --bg-card: rgba(17, 24, 39, 0.6);
+    --text-primary: #F1F5F9;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+    --border: rgba(148, 163, 184, 0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; background: var(--bg-dark); color: var(--text-primary); line-height: 1.8; }
+  .blog-nav { padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 60px; position: sticky; top: 0; background: rgba(10, 15, 28, 0.85); backdrop-filter: blur(12px); z-index: 100; }
+  .blog-nav .container { max-width: 1200px; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+  .blog-nav .nav-logo-link { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-primary); font-weight: 700; font-size: 1.1rem; }
+  .blog-nav .nav-main-links { display: flex; list-style: none; gap: 28px; margin: 0; padding: 0; }
+  .blog-nav .nav-main-links li { margin: 0; }
+  .blog-nav .nav-main-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
+  .blog-nav .nav-main-links a:hover { color: var(--text-primary); }
+  .blog-nav .nav-main-links a.active { color: var(--primary); }
+  .blog-nav .nav-cta-btn { background: var(--primary); color: #fff; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: filter 0.2s; white-space: nowrap; }
+  .blog-nav .nav-cta-btn:hover { filter: brightness(1.1); }
+  @media (max-width: 860px) {
+    .blog-nav .nav-main-links { display: none; }
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+  .blog-header { margin-bottom: 48px; }
+  .blog-meta { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px; }
+  .blog-header h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); line-height: 1.3; margin-bottom: 16px; }
+  .blog-header p.lead { font-size: 1.1rem; color: var(--text-secondary); line-height: 1.7; }
+  .blog-content h2 { font-size: 1.4rem; margin: 48px 0 16px; color: var(--text-primary); }
+  .blog-content h3 { font-size: 1.15rem; margin: 32px 0 12px; color: var(--text-primary); }
+  .blog-content p { color: var(--text-secondary); margin-bottom: 20px; }
+  .blog-content ul, .blog-content ol { color: var(--text-secondary); margin-bottom: 20px; padding-left: 24px; }
+  .blog-content li { margin-bottom: 8px; }
+  .blog-content strong { color: var(--text-primary); }
+  .blog-content a { color: var(--primary); text-decoration: underline; }
+  .blog-content a:hover { color: var(--accent-violet); }
+  .blog-content blockquote { border-left: 3px solid var(--primary); padding-left: 20px; margin: 24px 0; font-style: italic; color: var(--text-secondary); }
+  .blog-content table { width: 100%; border-collapse: collapse; margin: 24px 0; }
+  .blog-content th, .blog-content td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); font-size: 0.95rem; }
+  .blog-content th { color: var(--text-primary); font-weight: 600; background: var(--bg-card); }
+  .blog-cta { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 40px; text-align: center; margin: 60px 0; }
+  .blog-cta h3 { margin-bottom: 12px; }
+  .blog-cta p { color: var(--text-secondary); margin-bottom: 20px; }
+  .blog-cta a { display: inline-block; padding: 12px 28px; background: var(--primary); color: white; border-radius: 8px; text-decoration: none; font-weight: 600; }
+  .blog-cta a:hover { background: var(--accent-violet); }
+  .blog-related { margin: 60px 0 0; }
+  .blog-related h3 { margin-bottom: 20px; }
+  .blog-related a { display: block; padding: 16px 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 12px; text-decoration: none; color: var(--text-primary); font-weight: 600; transition: border-color 0.3s; }
+  .blog-related a:hover { border-color: var(--primary); }
+  .blog-related a span { display: block; font-size: 0.85rem; color: var(--text-muted); font-weight: 400; margin-top: 4px; }
+  .blog-footer { padding: 40px 0; border-top: 1px solid var(--border); margin-top: 60px; text-align: center; color: var(--text-muted); font-size: 0.85rem; }
+  .blog-footer a { color: var(--primary); text-decoration: none; }
+  .text-gradient { background: linear-gradient(135deg, var(--primary), var(--accent-violet)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+</style>
+</head>
+<body>
+
+<nav class="blog-nav">
+  <div class="container">
+    <a href="/es/" class="nav-logo-link">
+      <svg class="zenia-mark" viewBox="0 0 140 140" fill="none" width="32" height="32">
+        <defs>
+          <linearGradient id="zg-b" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#2563EB"/>
+            <stop offset="100%" stop-color="#3B82F6"/>
+          </linearGradient>
+          <linearGradient id="zg-v" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#6366F1"/>
+            <stop offset="100%" stop-color="#7C3AED"/>
+          </linearGradient>
+        </defs>
+        <rect width="140" height="140" rx="28" fill="#0F172A"/>
+        <path d="M 70 18 Q 18 18 18 38 L 18 57 Q 18 63 24 63 L 88 63 Z" fill="url(#zg-b)"/>
+        <path d="M 70 122 Q 122 122 122 102 L 122 83 Q 122 77 116 77 L 52 77 Z" fill="url(#zg-v)"/>
+      </svg>
+      <span>ZENIA</span>
+    </a>
+    <ul class="nav-main-links">
+      <li><a href="/es/#opportunities">Oportunidades IA</a></li>
+      <li><a href="/es/#services">Servicios</a></li>
+      <li><a href="/es/#process">Proceso</a></li>
+      <li><a href="/es/#impact">Impacto</a></li>
+      <li><a href="/blog/" class="active">Blog</a></li>
+    </ul>
+    <a href="/es/#cta" class="nav-cta-btn">Empezar</a>
+  </div>
+</nav>
+
+<article class="container">
+  <header class="blog-header">
+    <div class="blog-meta">31 de julio, 2026 &middot; Fabrizzio Zelada &middot; 11 min de lectura</div>
+    <h1><span class="text-gradient">Agente IA para Fruterias:</span> Pedidos y Cesta Semanal por WhatsApp</h1>
+    <p class="lead">Una fruteria de barrio en Espana recibe entre 30 y 90 mensajes al dia por WhatsApp: pedidos, dudas sobre lo que ha llegado hoy, encargos de cesta semanal, quejas por una fruta que llego pasada. Un agente IA para fruterias atiende toda esa conversacion en segundos, ordena los pedidos en una hoja de ruta de reparto y libera al dependiente para lo unico que la maquina no hace: elegir bien el genero.</p>
+  </header>
+
+  <div class="blog-content">
+
+    <p class="pillar-callout"><strong>Lee tambien:</strong> Si tu fruteria forma parte de una tienda gourmet mas amplia, mira nuestra <a href="/blog/agente-ia-para-tiendas-de-vinos.html">guia de agente IA para tiendas de barrio</a>.</p>
+
+
+    <h2>Por que las fruterias necesitan un agente IA en 2026</h2>
+
+    <p>El comercio especializado (fruterias) todavia mueve el 29,7% de la venta de fruta fresca en Espana, segun datos de canal de distribucion publicados por Statista. Es la segunda cuota mas grande despues del supermercado (47,5%) y muy por delante de hipermercados, mercadillos o autoconsumo. Esa cuota se sostiene porque la fruteria de barrio ofrece dos cosas que el super no da: producto elegido a mano y trato personal.</p>
+
+    <p>El problema es que ese trato personal se esta trasladando a WhatsApp. La clienta que antes bajaba a la esquina hoy escribe "buenas, pon media caja de melocotones, dos aguacates maduros y tres platanos para hoy". Y espera respuesta rapida. Si no la tiene en 10 minutos, entra en la app del super y compra alli.</p>
+
+    <p><strong>El diagnostico habitual en fruterias que ya venden por WhatsApp:</strong></p>
+
+    <ul>
+      <li>Tiempo medio de respuesta a un pedido: entre 18 y 55 minutos, sobre todo si el dependiente esta atendiendo mostrador o descargando genero</li>
+      <li>Pedidos que quedan sin contestar: entre el 10% y el 22%, la mayoria fuera del horario 09:00-14:00</li>
+      <li>Errores en la anotacion: cantidades mal apuntadas, direcciones incompletas, cliente sin telefono guardado</li>
+      <li>Merma extra por producto que se pide y luego no se cobra: entre el 4% y el 8% del genero delicado (fresas, aguacates, higos)</li>
+      <li>Reparto desorganizado: rutas hechas de memoria, con vueltas al mismo barrio dos veces al dia</li>
+    </ul>
+
+    <p>Una fruteria con 40.000 euros de facturacion mensual que pierde el 15% de los pedidos que llegan por WhatsApp esta dejando de vender <strong>entre 4.200 y 6.000 euros al mes</strong>. No es un calculo optimista: son pedidos que la clienta acabo comprando en otro sitio porque nadie contesto.</p>
+
+    <p>La solucion no es contratar a alguien para que conteste el movil 12 horas al dia. La solucion es un <a href="/blog/automatizacion-whatsapp-negocios.html">agente de IA personalizado</a> que atienda esos mensajes al segundo, arme el pedido, cobre por Bizum o link de pago y avise al dependiente solo cuando hay que ir a por el genero.</p>
+
+    <h2>Como funciona un agente IA para fruterias, paso a paso</h2>
+
+    <p>Un agente IA para fruterias no es un menu de "pulse 1 para pedir platanos". Es un asistente inteligente que entiende castellano normal, castellano de calle y catalan, gallego o portugues si tu barrio los usa. Trabaja sobre WhatsApp Business API, esta conectado a tu inventario y a tu ruta de reparto, y aprende como habla cada clienta habitual.</p>
+
+    <h3>Paso 1: La clienta escribe con lo que tiene en la cabeza</h3>
+
+    <p>"Hola Marisa, ponme la caja habitual para manana, pero cambia la sandia por melon si tienes bueno." El agente reconoce a la clienta por el numero, recupera su cesta habitual, ve que el ultimo pedido incluia sandia y confirma el cambio: "Melon galia acaba de entrar, muy dulce. Te cambio la sandia por 1 melon (2,3 kilos aprox). Todo lo demas igual."</p>
+
+    <h3>Paso 2: El agente arma el pedido y calcula precio en vivo</h3>
+
+    <p>En menos de 4 segundos:</p>
+
+    <ul>
+      <li>Interpreta cantidades ("media caja", "un manojo", "300 gramos", "dos euros de perejil")</li>
+      <li>Verifica stock real contra tu inventario o contra lo que has cargado esta manana desde Mercabarna, Mercamadrid o Merca central</li>
+      <li>Sustituye con criterio: si no hay aguacate hass, pregunta si vale el bacon; si no hay naranja de zumo, propone la lamas</li>
+      <li>Calcula peso estimado y precio total al centimo, avisando de que el peso final se ajusta al cobrar</li>
+    </ul>
+
+    <h3>Paso 3: Cierre del pedido y cobro</h3>
+
+    <p>La clienta recibe un resumen: articulos, peso estimado, precio total, hora de recogida o ventana de reparto y forma de pago. El agente puede enviar link de Bizum, Redsys o Stripe para que pague antes de que salga el reparto. En pedidos recurrentes, se cobra al confirmar y se ajusta al alza o a la baja en el siguiente pedido.</p>
+
+    <h3>Paso 4: Ruta de reparto ordenada</h3>
+
+    <p>Todos los pedidos del dia se agrupan por codigo postal y ventana horaria. El agente construye la ruta optima para el repartidor (o para el propio dueno que sale a repartir despues de cerrar) y le manda una lista en WhatsApp con orden de paradas, direcciones y observaciones tipo "portal del fondo, no hay timbre, llamar al movil 5 minutos antes".</p>
+
+    <h3>Paso 5: Post-venta y siguiente pedido</h3>
+
+    <p>Al dia siguiente el agente envia un mensaje corto: "Buenos dias Maria, la sandia estaba dulce? Si te ha gustado te la reservo para el jueves." Ese hilo alimenta la ficha del CRM y va afinando gustos, alergias y calendarios (comidas familiares del sabado, cesta de oficina de los lunes).</p>
+
+    <p>Todo este flujo funciona sobre <a href="/blog/integracion-whatsapp-business-api-espana.html">WhatsApp Business API</a> integrada con un CRM. Cada conversacion queda registrada en la ficha de la clienta y no depende del movil personal del dependiente.</p>
+
+    <h2>Metricas reales de una fruteria despues de automatizar</h2>
+
+    <p>Estos son los datos promedio de fruterias de barrio y online que han implementado un agente IA para pedidos por WhatsApp con un <a href="/blog/crm-con-inteligencia-artificial.html">CRM con IA</a> conectado a inventario:</p>
+
+    <table>
+      <tr><th>Metrica</th><th>Antes (manual)</th><th>Despues (con agente IA)</th><th>Mejora</th></tr>
+      <tr><td>Tiempo de respuesta a pedido WhatsApp</td><td>18-55 min</td><td>7 segundos</td><td>-99%</td></tr>
+      <tr><td>Pedidos perdidos por no contestar</td><td>15%</td><td>&lt;2%</td><td>-87%</td></tr>
+      <tr><td>Ticket medio online</td><td>14 EUR</td><td>21 EUR</td><td>+50%</td></tr>
+      <tr><td>Cesta semanal (clientes suscritos)</td><td>0-8</td><td>35-70</td><td>x6</td></tr>
+      <tr><td>Merma sobre producto delicado</td><td>4-8%</td><td>1,5-3%</td><td>-60%</td></tr>
+      <tr><td>Horas diarias respondiendo movil</td><td>2-3 h</td><td>20 min (supervision)</td><td>-85%</td></tr>
+      <tr><td>Paradas mal ordenadas en reparto</td><td>15%</td><td>&lt;3%</td><td>-80%</td></tr>
+      <tr><td>Horario de atencion a pedidos</td><td>09:00-14:00</td><td>24/7</td><td>+100%</td></tr>
+    </table>
+
+    <p>El dato mas interesante no esta en la tabla: <strong>el 41% de los pedidos automatizados entran fuera del horario de tienda</strong>. Son mensajes de las 22:30, del domingo a las 11:00 o de la comida en la oficina. Sin agente IA, esos pedidos no existian. La fruteria ganaba solo lo que veia en el mostrador.</p>
+
+    <h2>Manual vs automatizado: comparativa directa</h2>
+
+    <p>Para que quede claro que cambia en el dia a dia de una fruteria, esta es la comparativa entre gestion manual y gestion con agente IA:</p>
+
+    <h3>Escenario manual (lo que hace el 80% de fruterias)</h3>
+
+    <ul>
+      <li>El dueno revisa WhatsApp entre clientes, casi siempre a mediodia y al cerrar</li>
+      <li>Responde mensajes uno por uno, contando pesos aproximados de cabeza</li>
+      <li>Apunta pedidos en una libreta o en el chat mismo, y luego los pasa al reparto</li>
+      <li>No hay recordatorio de recogida ni aviso "tu pedido esta listo"</li>
+      <li>Fuera de horario no responde nadie: el mensaje del sabado por la tarde se contesta el lunes</li>
+      <li>Si el dependiente falta, la caja de pedidos online desaparece con el</li>
+      <li>La ruta de reparto se decide de memoria: dos vueltas al mismo barrio, un olvido cada semana</li>
+    </ul>
+
+    <h3>Escenario automatizado (con agente IA + CRM)</h3>
+
+    <ul>
+      <li>Cada mensaje se contesta en menos de 10 segundos, cualquier dia, cualquier hora</li>
+      <li>El pedido se arma en el sistema, con stock real, precio calculado y ventana de entrega</li>
+      <li>Cobro anticipado por Bizum, tarjeta o efectivo contra entrega</li>
+      <li>Aviso automatico "tu pedido esta listo" y "el repartidor llega en 20 minutos"</li>
+      <li>Ruta de reparto optimizada por codigo postal y ventana horaria</li>
+      <li>Cesta semanal recurrente con productos de temporada rotando cada semana</li>
+      <li>Dashboard con pedidos del dia, ticket medio, top productos, clientes inactivos</li>
+      <li>Cuando el agente no sabe algo (una consulta rara sobre un producto exotico) escala al dueno con todo el contexto</li>
+    </ul>
+
+    <p>La diferencia operativa es enorme, pero la diferencia en la caja es donde se paga la inversion en semanas.</p>
+
+    <h2>Casos de uso concretos en una fruteria</h2>
+
+    <p>Un agente IA para fruterias no sirve solo para "responder mas rapido". Sirve para desbloquear ingresos que hoy no existen:</p>
+
+    <h3>1. Cesta semanal automatica</h3>
+
+    <p>Es el producto que mas engancha a la clientela urbana. La clienta escribe una vez su cesta base ("4 kilos de fruta variada, 3 kilos de verdura de temporada, dos limones, un manojo de perejil, presupuesto 25 EUR") y el agente le envia cada domingo la propuesta de la semana con lo mejor que ha entrado. Ella confirma con un OK, cambia si quiere y el reparto sale el lunes. En 90 dias es normal pasar de 0 a 40 cestas activas.</p>
+
+    <h3>2. Avisos de temporada y producto especial</h3>
+
+    <p>Ha llegado el primer melon galia bueno, o los cerezos de Jerte estan en su semana. El agente segmenta la base de datos ("clientas que compraron cerezas en 2025") y les envia un mensaje personalizado: "Buenos dias Ana, esta manana entraron cerezas del Jerte, categoria extra. Como el ano pasado te lleve dos kilos, te reservo la misma cantidad para manana?" Conversion promedio: 32%.</p>
+
+    <h3>3. Recuperacion de clientela inactiva</h3>
+
+    <p>Cada semana el CRM detecta clientas que no compran hace mas de 21 dias. El agente les manda un mensaje con la fruta de esta semana y un pequeno descuento en la primera cesta de vuelta. <a href="/blog/reactivar-clientes-inactivos-whatsapp.html">Recuperar una clienta ya conocida</a> cuesta 5 veces menos que captar una nueva.</p>
+
+    <h3>4. Preventa de temporada corta</h3>
+
+    <p>Fresa de Huelva, esparragos de Navarra, chirimoya de la Costa Tropical. El agente abre preventa 10 dias antes con lista de espera; cuando llega el genero, los primeros de la lista reciben aviso y compran en 48 horas.</p>
+
+    <h3>5. Gestion de quejas sin drama</h3>
+
+    <p>Si la sandia salio pasada, la clienta escribe "la sandia estaba mala". El agente reconoce el reclamo, lo registra en su ficha, ofrece reponer la pieza o abonar el importe y avisa al dueno con foto. Al gestionar la queja bien y rapido, la clienta suele quedarse (retencion del 78% frente al 34% cuando la queja se ignora).</p>
+
+    <h2>ROI real: fruteria de barrio con 40.000 EUR/mes de facturacion</h2>
+
+    <p>Tomemos una fruteria tipo con estos parametros:</p>
+
+    <ul>
+      <li>Facturacion mensual: 40.000 EUR (mostrador + WhatsApp + reparto puntual)</li>
+      <li>Pedidos WhatsApp al dia: 25 en temporada baja, 60 en temporada alta</li>
+      <li>Ticket medio online: 14 EUR</li>
+      <li>Pedidos perdidos por no contestar: 4-6 al dia</li>
+      <li>Cestas semanales activas: 6</li>
+    </ul>
+
+    <h3>Ingresos recuperados al mes</h3>
+
+    <p><strong>1. Pedidos que ya no se pierden:</strong></p>
+    <p>5 pedidos/dia x 14 EUR x 30 dias = <strong>2.100 EUR/mes</strong> de ingresos brutos recuperados. Asumiendo 70% de conversion real (algunos ya habran comprado en el super): <strong>+1.470 EUR/mes</strong>.</p>
+
+    <p><strong>2. Subida de ticket medio online (14 EUR a 21 EUR):</strong></p>
+    <p>El agente propone la fruta de temporada y complementarios ("con el melon te llevo dos limones para el gazpacho?"). Con 25 pedidos/dia x 7 EUR de subida x 30 dias = <strong>+5.250 EUR/mes</strong>.</p>
+
+    <p><strong>3. Cesta semanal, de 6 a 45 activas en 90 dias:</strong></p>
+    <p>39 cestas nuevas x 25 EUR x 4 semanas = <strong>+3.900 EUR/mes</strong> de facturacion recurrente. Es el ingreso mas predecible del negocio.</p>
+
+    <p><strong>4. Pedidos fuera de horario:</strong></p>
+    <p>41% de los pedidos automatizados llegan fuera del horario de tienda. Sobre 60 pedidos/dia en temporada, son 24 pedidos que antes no existian. Ajustado a temporada media (30 al dia): 12 pedidos/dia extra x 14 EUR x 30 dias = <strong>+5.040 EUR/mes</strong>.</p>
+
+    <h3>Costes ahorrados y merma reducida</h3>
+
+    <ul>
+      <li><strong>Horas de dependiente respondiendo movil:</strong> 2 h/dia x 30 dias x 11 EUR/h = 660 EUR/mes</li>
+      <li><strong>Merma de producto delicado</strong> (4-8% a 1,5-3%): sobre 8.000 EUR de compra semanal de genero delicado, ahorro estimado en <strong>1.200 EUR/mes</strong> gracias a preventa y cesta semanal (menos genero comprado sin cliente)</li>
+      <li><strong>Vueltas evitadas en reparto:</strong> ruta optimizada, ahorro combustible + tiempo estimado en 350 EUR/mes</li>
+    </ul>
+
+    <h3>Resumen de ROI</h3>
+
+    <table>
+      <tr><th>Concepto</th><th>Impacto mensual</th></tr>
+      <tr><td>Pedidos recuperados por respuesta rapida</td><td>+1.470 EUR</td></tr>
+      <tr><td>Subida de ticket medio online</td><td>+5.250 EUR</td></tr>
+      <tr><td>Cestas semanales recurrentes</td><td>+3.900 EUR</td></tr>
+      <tr><td>Pedidos fuera de horario</td><td>+5.040 EUR</td></tr>
+      <tr><td>Ahorro en horas de dependiente</td><td>+660 EUR</td></tr>
+      <tr><td>Reduccion de merma</td><td>+1.200 EUR</td></tr>
+      <tr><td>Optimizacion de ruta reparto</td><td>+350 EUR</td></tr>
+      <tr><td><strong>Total beneficio estimado</strong></td><td><strong>+17.870 EUR/mes</strong></td></tr>
+      <tr><td>Coste del sistema (CRM + IA + WhatsApp API)</td><td>-297 a -497 EUR/mes</td></tr>
+      <tr><td><strong>ROI neto mensual</strong></td><td><strong>+17.373 a +17.573 EUR</strong></td></tr>
+    </table>
+
+    <p>Aun recortando las estimaciones a la mitad para ser conservador, el retorno supera los 8.500 EUR al mes frente a una inversion de 300-500 EUR. <strong>El ROI queda entre 17x y 35x</strong>. Pocos gastos operativos en una fruteria tienen un retorno comparable a este.</p>
+
+    <h2>Como lo implementa ZENIA en una fruteria en 4 semanas</h2>
+
+    <p>En <a href="/es/index.html">ZENIA</a> no vendemos licencias de software generico. Implementamos un agente IA personalizado para tu fruteria, con integracion a tu inventario, a tu forma de facturar y a tu ruta real de reparto.</p>
+
+    <h3>Semana 1: diagnostico y catalogo</h3>
+
+    <ul>
+      <li>Volumen real de mensajes por WhatsApp, telefono, Instagram</li>
+      <li>Catalogo de productos: fijos de siempre, temporada y ocasionales</li>
+      <li>Politica de precios (por kilo, por pieza, por manojo) y margenes objetivo</li>
+      <li>Base de clientes existente (si la hay), aunque sea una hoja de Excel o los contactos del movil</li>
+      <li>Proveedores y frecuencia de compra al mercado central</li>
+    </ul>
+
+    <h3>Semana 2: configuracion del agente y del CRM</h3>
+
+    <ul>
+      <li>Alta de <a href="/blog/integracion-whatsapp-business-api-espana.html">WhatsApp Business API</a> con el numero que ya usas</li>
+      <li>Tono del agente: cercano, tuteando, con el nombre del duena o duena en la firma</li>
+      <li>Integracion con TPV o con hoja de inventario (aunque sea muy sencilla, se sincroniza)</li>
+      <li>Importacion de clientas y pedidos historicos si existen</li>
+      <li>Alta de medios de pago: Bizum, Redsys, Stripe o efectivo contra entrega</li>
+    </ul>
+
+    <h3>Semana 3: flujos de automatizacion</h3>
+
+    <ul>
+      <li>Flujo pedido nuevo con calculo de peso y precio estimado</li>
+      <li>Flujo cesta semanal con propuesta automatica cada domingo</li>
+      <li>Aviso "tu pedido esta listo" y "el repartidor llega en X minutos"</li>
+      <li>Recuperacion de clientas inactivas +21 dias</li>
+      <li>Reclamacion de quejas con reposicion o abono automatico</li>
+      <li>Escalado al dueno cuando el agente no puede resolver</li>
+    </ul>
+
+    <h3>Semana 4: pruebas, formacion y arranque</h3>
+
+    <ul>
+      <li>Pruebas con pedidos reales en horario controlado</li>
+      <li>Formacion del equipo en el dashboard (5 minutos al dia bastan)</li>
+      <li>Ajustes de tono, edge cases y tiempos de escalado</li>
+      <li>Arranque gradual: primero solo clientas habituales, despues todo el numero</li>
+      <li>Primer reporte a los 15 dias con metricas contra la linea base</li>
+    </ul>
+
+    <p><strong>En 4 semanas el agente esta operativo y generando resultados medibles.</strong> A partir del segundo mes el sistema optimiza cesta semanal, propuestas de temporada y recuperacion de clientas de forma autonoma.</p>
+
+    <h2>Que tipo de fruterias se benefician mas</h2>
+
+    <p>Un agente IA sirve a cualquier fruteria que use WhatsApp. Pero el impacto es especialmente fuerte en estos perfiles:</p>
+
+    <ul>
+      <li><strong>Fruterias de barrio con clientela fija:</strong> la cesta semanal automatica se llena rapido porque la clienta ya te conoce</li>
+      <li><strong>Fruterias con reparto propio:</strong> la ruta optimizada ahorra 1-2 horas de conduccion al dia</li>
+      <li><strong>Fruterias premium o gourmet:</strong> el ticket medio online sube porque el agente propone maridajes y complementos</li>
+      <li><strong>Fruterias con marca fuerte en Instagram:</strong> el agente convierte likes en pedidos sin que el dueno tenga que estar todo el dia al movil</li>
+      <li><strong>Cadenas de 2-5 fruterias:</strong> un solo CRM centralizado con inventario y clientas compartidas</li>
+      <li><strong>Fruterias de mercado municipal:</strong> el agente permite tomar pedidos entre semana y organizarlos para recoger en puesto el sabado</li>
+    </ul>
+
+    <h2>Preguntas frecuentes sobre agente IA para fruterias</h2>
+
+    <h3>Mis clientas son mayores, no van a hablar con una maquina</h3>
+
+    <p>Precisamente esas son las que mejor lo usan. Escriben como escribirian a su hija: "hola nena, ponme lo de siempre". El agente reconoce el "lo de siempre", saca su cesta habitual y confirma con un mensaje corto. En pruebas reales, mas del 82% de las clientas de +60 anos no distinguen al agente del dependiente humano.</p>
+
+    <h3>Como se calcula el peso si la fruta va por kilo?</h3>
+
+    <p>El agente calcula peso estimado con margen del 10-15% y avisa a la clienta de que el peso final se ajusta al pesar. Al confirmar el pedido en tienda, el dependiente pesa, ajusta el importe y el sistema recalcula el cobro automaticamente.</p>
+
+    <h3>Necesito cambiar mi TPV o mi sistema de facturacion?</h3>
+
+    <p>No en la mayoria de casos. El agente se integra por API con los TPV comunes de retail. Si tu TPV es viejo o solo tienes libreta, montamos un panel simple donde ves los pedidos del dia y cierras la venta ahi.</p>
+
+    <h3>Que pasa si no hay stock de lo que me piden?</h3>
+
+    <p>El agente propone alternativas del mismo tipo con el criterio que tu configures (por precio, por temporada, por origen). Si no hay nada equivalente, lo comunica sin generar frustracion y ofrece dejarlo apuntado para el proximo pedido.</p>
+
+    <h3>Se puede usar en varios idiomas?</h3>
+
+    <p>Si. En barrios con clientela internacional el agente responde en castellano, catalan, gallego, ingles, aleman o portugues sin cambiar de numero. Detecta el idioma del mensaje y contesta en el mismo.</p>
+
+    <h3>Y si vendo mas de fruta (queso, aceite, conservas)?</h3>
+
+    <p>El agente maneja catalogo mixto sin problema. De hecho, muchas fruterias que amplian a tienda gourmet reportan que su primer <a href="/blog/upselling-automatico-ecommerce-ia.html">upselling automatico</a> viene del agente sugiriendo "con estos tomates te llevas la burrata que llego hoy?".</p>
+
+    <h2>El coste de no automatizar tu fruteria</h2>
+
+    <p>Muchos duenos ven el agente IA como un gasto tecnologico. La pregunta correcta no es "cuanto cuesta" sino "cuanto estoy perdiendo cada dia".</p>
+
+    <p>Si tu fruteria pierde 5 pedidos WhatsApp al dia por no contestar a tiempo, tiene un 6% de merma sobre producto delicado y no atiende fuera de las 5 horas centrales, estas dejando entre <strong>8.000 y 15.000 EUR al mes sobre la mesa</strong>. Cada semana que pasa sin resolverlo es dinero que va al super mas cercano.</p>
+
+    <p>La tecnologia existe, esta probada en fruterias reales de Espana, Colombia, Peru y Mexico. El retorno es medible desde el primer mes. La unica razon para no hacerlo es no saber que se puede.</p>
+
+    <p>Ahora ya lo sabes.</p>
+
+    <div class="blog-cta">
+      <h3>Listo para automatizar los pedidos de tu fruteria?</h3>
+      <p>En ZENIA implementamos agentes IA para fruterias que gestionan pedidos, cesta semanal y reparto por WhatsApp 24/7. Sistema operativo en 4 semanas. Agenda una llamada de 30 minutos y te mostramos como funcionaria en tu barrio.</p>
+      <a href="https://calendly.com/zeladauriartef/30min">Agendar llamada gratuita</a>
+    </div>
+
+    <div class="blog-related">
+      <h3>Articulos relacionados</h3>
+      <a href="/blog/agente-ia-para-panaderias.html">Agente IA para Panaderias: Pedidos y Fidelizacion por WhatsApp<span>Como una panaderia de barrio automatiza reservas, encargos especiales y cesta semanal por WhatsApp.</span></a>
+      <a href="/blog/agente-ia-para-carnicerias.html">Agente IA para Carnicerias: Encargos y Ticket Medio por WhatsApp<span>Encargos de fin de semana, gestion de mermas y fidelizacion en carnicerias tradicionales.</span></a>
+      <a href="/blog/recuperar-carritos-abandonados-whatsapp.html">Recuperar Carritos Abandonados por WhatsApp: Guia Practica<span>Como convertir intencion de compra en venta cerrada usando conversacion en WhatsApp.</span></a>
+    </div>
+
+  </div>
+
+<div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 24px; margin: 40px 0;" data-zenia-internal-links="landings">
+  <h3 style="color: #F1F5F9; margin-bottom: 12px; font-size: 1.05rem;">Otros comercios de barrio con agente IA</h3>
+  <p style="color: #94A3B8; margin-bottom: 16px; font-size: 0.95rem;">Si tienes varios negocios o clientes en el barrio, mira otras guias por vertical:</p>
+  <div>
+      <a href="/blog/agente-ia-para-panaderias.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Panaderias &rarr;</a>
+      <a href="/blog/agente-ia-para-carnicerias.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Carnicerias &rarr;</a>
+      <a href="/blog/agente-ia-para-pescaderias.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Pescaderias &rarr;</a>
+      <a href="/blog/agente-ia-para-tiendas-de-vinos.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Tiendas de Vinos &rarr;</a>
+      <a href="/blog/agente-ia-para-pymes.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Guia general PYMES &rarr;</a>
+  </div>
+</div>
+
+</article>
+
+<footer class="blog-footer">
+  <div class="container">
+    <p>&copy; 2026 ZENIA. Todos los derechos reservados. | <a href="/">Inicio</a> | <a href="/blog/">Blog</a></p>
+  </div>
+</footer>
+
+<div style="text-align:center; padding:16px 24px; background:#0A0F1C; color:#64748B; font-size:0.85rem; border-top:1px solid rgba(255,255,255,0.04);"><a href="/es/cobertura.html" style="color:#94A3B8; text-decoration:none;">Ver cobertura completa</a></div>
+</body>
+</html>

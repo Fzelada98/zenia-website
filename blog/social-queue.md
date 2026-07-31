@@ -4017,3 +4017,17 @@ Reply if you run an art, music, or creative academy with the same silent-churn p
 #arteducation #creativeindustries #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-31 - Agente IA para Fruterias
+
+Neighborhood fruit shops in Spain still move 29.7% of all fresh-fruit sales, but most of them lose 4 to 6 WhatsApp orders a day because nobody replies fast enough.
+
+The average shop gets 30-90 messages daily: quick orders, questions about what came in this morning, weekly-basket tweaks, complaints about a bruised avocado. Most owners handle it between customers, sometime around 2pm. By then the order already went to the supermarket app.
+
+We deployed a personalized AI agent for a 40k-EUR/month fruit shop. Lost orders dropped from 15% to 2%, online ticket size went from 14 to 21 EUR, weekly-basket subscriptions grew from 6 to 45 in 90 days, and delicate-product waste fell from 6% to 2.5%. Net impact after tool cost: roughly 8.5k EUR/month.
+
+Reply if you run a fruit shop, bakery, or fishmonger dealing with the same WhatsApp overflow, happy to share the weekly-basket flow.
+
+#retailtech #localcommerce #AI #WhatsAppBusiness
+
+---

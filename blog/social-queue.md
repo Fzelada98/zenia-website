@@ -4031,3 +4031,17 @@ Reply if you run a fruit shop, bakery, or fishmonger dealing with the same Whats
 #retailtech #localcommerce #AI #WhatsAppBusiness
 
 ---
+
+## 2026-07-31 - Agente IA para Empresas de Toldos
+
+Awning installers in Spain lose 32% of their weekly leads simply because nobody replies the same day. The installer is up on a facade, the WhatsApp goes cold, and the client already messaged three competitors before dinner.
+
+The Spanish awning and solar protection sector is growing 6.39% a year through 2032, but the average shop still converts only 18-22% of quote requests. It is not a pricing problem, it is a response-time and follow-up problem: 61% of quotes never get a single reminder after being sent.
+
+We deployed a personalized AI agent for a two-crew installer. First-reply time dropped from 2-6 hours to under 15 seconds, unqualified site visits fell from 45% to 12%, and close rate on sent quotes jumped from 20% to 35%. Net impact around 16k EUR/month on a 1,850 EUR average ticket, without hiring anyone.
+
+Reply if you run an installer with technical visits and a variable price sheet, happy to share the qualification playbook.
+
+#B2B #localbusiness #AI #WhatsAppBusiness
+
+---

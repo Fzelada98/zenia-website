@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-07-30T22:00:00Z",
+  "lastRun": "2026-07-31T06:15:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-academias-de-arte",
+      "keyword": "agente ia para academias de arte",
+      "tier": 1,
+      "cluster": "academias",
+      "status": "published",
+      "date": "2026-07-31"
+    },
     {
       "slug": "agente-ia-para-academias-de-patinaje",
       "keyword": "agente ia para academias de patinaje",

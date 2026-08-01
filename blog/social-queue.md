@@ -4059,3 +4059,17 @@ Reply if you run a vocational school in beauty, hair or aesthetics and want the 
 #beautyindustry #vocationaltraining #AI #WhatsAppBusiness
 
 ---
+
+## 2026-08-01 - Agente IA para Herbolarios
+
+Spain has 2,300 active herbal shops that together bill over 3.9B EUR a year, and between 60% and 70% of that revenue comes from clients repurchasing the same probiotic, magnesium or collagen every 30 to 60 days. Yet 42% of those clients drop off not because they switched brands, but because they simply forgot to come back.
+
+The counter is the second problem: the owner spends 2.5 hours a day on the phone answering "do you still have that blue jar Elena sold me last week?", and every message they miss at 10pm is a client walking into a farmacia the next morning.
+
+We deployed a personalized AI agent for an independent herbal shop with 250 active clients. The 60-day repurchase rate went from 34% to 52%, average ticket from 18.40 EUR to 21.70 EUR (+18%), stock-outs on the top 30 SKUs fell from 14% to 3%, and 38% of the daily conversations happen between 8:30pm and 9am, when the shop is closed. Net impact: +5,000 EUR per month against a 300-500 EUR tool cost.
+
+DM me if you run a specialty retail store with recurring products, happy to send the recompra playbook.
+
+#retailtech #healthtech #AI #WhatsAppBusiness
+
+---

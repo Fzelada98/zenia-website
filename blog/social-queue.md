@@ -4045,3 +4045,17 @@ Reply if you run an installer with technical visits and a variable price sheet, 
 #B2B #localbusiness #AI #WhatsAppBusiness
 
 ---
+
+## 2026-08-01 - Agente IA para Academias de Peluqueria
+
+A hairdressing academy in Spain gets 400 to 900 inquiries per intake between WhatsApp, Instagram and the web form, and loses 63% of them to slow replies and manual follow-up. The lead who asks about pricing at 10pm on a Tuesday enrolls somewhere else by Thursday.
+
+Vocational beauty schools sit on years of unclosed leads sitting in a spreadsheet: the person who asked about the September course last March, the parent who wanted info on the FP grado medio last summer, the makeup student who never got a second message. Reactivation is the biggest unlocked pocket of revenue in this vertical.
+
+We deployed a personalized AI agent for an academy with 120 active students and a 2,400 EUR average tuition. Response time went from 4-18 hours to 8 seconds, lead-to-enrollment ratio moved from 11% to 18%, cost per qualified lead dropped from 25 EUR to 9 EUR, and reactivating cold leads added 20 extra enrollments a year. Net annual impact: north of 230,000 EUR against a 3.5k to 6k tool cost.
+
+Reply if you run a vocational school in beauty, hair or aesthetics and want the reactivation script.
+
+#beautyindustry #vocationaltraining #AI #WhatsAppBusiness
+
+---

@@ -4073,3 +4073,17 @@ DM me if you run a specialty retail store with recurring products, happy to send
 #retailtech #healthtech #AI #WhatsAppBusiness
 
 ---
+
+## 2026-08-01 - Agente IA para Empresas de Control de Plagas
+
+Spain has 1,500 active pest control companies (ANECPLA data), and 68% of the emergency calls they receive come in outside office hours. Of those, 43% never get answered in time and the client hires a competitor within 15 minutes.
+
+The math is brutal: a mid-size company (8 technicians) loses 28 leads per month to unanswered nights and weekends. At an average ticket of 240 EUR for one-off jobs and 1,400 EUR for annual APPCC contracts, that's between 18,000 and 30,000 EUR left on the table every month.
+
+We deployed a personalized AI agent for a pest control operator in Spain. Time-to-first-response dropped from 3h 45min to 9 seconds, out-of-hours emergencies captured jumped from 0% to 96%, lead-to-signed-quote conversion moved from 22% to 47%, and APPCC contract renewal climbed from 68% to 91%. Net impact +26k EUR/month against a 297-497 EUR/month tool cost.
+
+Full breakdown of the 7 flows the agent runs autonomously (night emergencies, HACCP renewals, community quotes, warranty regrowth): https://zeniapartners.com/blog/agente-ia-para-empresas-de-control-de-plagas.html
+
+#pestcontrol #fieldservice #AI #WhatsAppBusiness
+
+---

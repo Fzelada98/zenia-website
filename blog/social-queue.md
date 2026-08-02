@@ -4087,3 +4087,17 @@ Full breakdown of the 7 flows the agent runs autonomously (night emergencies, HA
 #pestcontrol #fieldservice #AI #WhatsAppBusiness
 
 ---
+
+## 2026-08-02 - Agente IA para Centros de Yoga
+
+Half of new boutique yoga members cancel before the six-month mark, and if they attend fewer than 4 classes in month one, the probability of quitting jumps to 80% (fitness industry benchmarks).
+
+The retention crisis in boutique wellness is not about the practice. It is about the silence between classes: bono renewals never reminded, no-shows never rebooked, workshops promoted only on Instagram Stories that reach 15% of the active base.
+
+We deployed a personalized AI agent for a 180-member yoga studio. Time-to-first-response on WhatsApp dropped from 6 hours to 8 seconds. Monthly bono renewals moved from 66% to 85%. No-shows fell from 24% to 9%. Workshops filled at 90% via segmented invites instead of 60% via Stories. Net impact +4,700 EUR/month against a 297-497 EUR/month tool cost.
+
+Full breakdown of the flows (renewal, reactivation, workshop segmentation, retreat pricing): https://zeniapartners.com/blog/agente-ia-para-centros-de-yoga.html
+
+#wellnessindustry #memberretention #AI #WhatsAppBusiness
+
+---

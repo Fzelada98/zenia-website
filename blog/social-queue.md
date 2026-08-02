@@ -4101,3 +4101,17 @@ Full breakdown of the flows (renewal, reactivation, workshop segmentation, retre
 #wellnessindustry #memberretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-08-02 - Agente IA para Academias de Zumba
+
+30% of dance-fitness students drop out every year, and 45% of them cite "scheduling conflict" as the reason. What they really mean is that no one noticed they stopped showing up (dance studio industry data 2026).
+
+Meanwhile Spain added 8.3% new fitness members in 2025 and the European market broke 39.1B EUR in revenue. Demand for zumba is not the problem. The problem is that a solo instructor spends 12-18 hours a week on WhatsApp, payments, and no-show chasing, so the student who quietly disappears after week three never gets a message.
+
+We deployed a personalized AI agent for a 200-member zumba academy. Annual churn moved from 30% to 20%. Free-trial conversion moved from 35% to 58%. Failed monthly payments dropped from 10% to 2%. Off-peak class fill rate went from 65% to 84%. The instructor got 12 hours of the week back and the studio recovered ~6,500 EUR/month against a 297-497 EUR/month tool cost.
+
+Full breakdown of the flows (attendance monitoring, silent-churn alerts, trial-to-membership sequence): https://zeniapartners.com/blog/agente-ia-para-academias-de-zumba.html
+
+#fitnessindustry #memberretention #AI #WhatsAppBusiness
+
+---

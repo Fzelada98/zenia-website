@@ -4115,3 +4115,17 @@ Full breakdown of the flows (attendance monitoring, silent-churn alerts, trial-t
 #fitnessindustry #memberretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-08-02 - Agente IA para Restaurantes Japoneses
+
+Reservations at Japanese restaurants in Spain now account for 14% of all national restaurant bookings, second only to Mediterranean cuisine, and the sushi market crossed 278M EUR in 2025 (Revista HR, sector data).
+
+Most Japanese venues still handle those reservations by hand: sushi-bar seats logged in a notebook, omakase coordinated by phone with the chef, allergies asked verbally at the door. A 40-seat izakaya typically loses 2-4 omakase bookings a week just from slow WhatsApp replies at night.
+
+We deployed a personalized AI agent for a Japanese restaurant with sushi bar and omakase. Response time went from 25-45 min to 12 seconds. No-shows dropped from 15% to 6%. Sushi-bar occupancy moved from 60% to 85%. Net impact +23,000 EUR/month against a 497 EUR/month tool cost.
+
+Full breakdown of the flows (bar vs table inventory, omakase rules, allergies as structured data): https://zeniapartners.com/blog/agente-ia-para-restaurantes-japoneses.html
+
+#restauranttech #customerretention #AI #WhatsAppBusiness
+
+---

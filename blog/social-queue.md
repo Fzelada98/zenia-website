@@ -4129,3 +4129,17 @@ Full breakdown of the flows (bar vs table inventory, omakase rules, allergies as
 #restauranttech #customerretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-08-03 - Agente IA para Restaurantes Italianos
+
+Spaniards spent 1.7B EUR at Italian restaurants between Feb 2024 and Feb 2025, and Italian cuisine grew 12.37% year over year (qcom sector data 2025). Madrid alone runs 240 Italian venues.
+
+Yet most trattorias still handle WhatsApp reservations by hand between services. Average reply time in mid-service: 34 minutes. That is 30% of new bookings walking to the pizzeria next door.
+
+We deployed a personalized AI agent for a 60-cover trattoria in Barcelona. Reply time went from 34 min to 9 seconds. No-shows dropped from 13% to 5%. Inbound calls fell 80% in month one. Midweek occupancy moved from 62% to 74%. Net impact +14,600 EUR/month against a 297-497 EUR/month tool cost.
+
+Full breakdown of the flows (menu training, allergies, dynamic waitlist, VIP recognition): https://zeniapartners.com/blog/agente-ia-para-restaurantes-italianos.html
+
+#restauranttech #customerretention #AI #WhatsAppBusiness
+
+---

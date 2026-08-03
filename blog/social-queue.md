@@ -4143,3 +4143,17 @@ Full breakdown of the flows (menu training, allergies, dynamic waitlist, VIP rec
 #restauranttech #customerretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-08-03 - Agente IA para Food Trucks
+
+Europe leads the global food truck market with 39.7% cumulative growth through 2030, and Spain alone is compounding at 8% per year (Bonafide Research, 2026). Yet most operators still handle everything from the chef's personal phone between the plancha and the till.
+
+A typical Spanish food truck bills 60-75% of its weekly revenue in three 4-hour windows. Miss a WhatsApp during those windows and there is no second chance until the next event. 15 lost inquiries a day = roughly 2,100-2,800 EUR walking to the next truck each month.
+
+We deployed a personalized AI agent for a single-unit operator running 4 services a week. Order-ahead volume moved from 10% to 22% of tickets. Private-event bookings jumped from 1-2 to 5-6 per month. Weekly admin dropped from 12 hours to 2. Net impact +9,000 EUR/month against a 297-497 EUR/month tool cost.
+
+Full breakdown of the flows (order-ahead, weekly route broadcast, private events, allergens): https://zeniapartners.com/blog/agente-ia-para-food-trucks.html
+
+#restauranttech #foodtrucks #AI #WhatsAppBusiness
+
+---

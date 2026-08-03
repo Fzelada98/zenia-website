@@ -4157,3 +4157,17 @@ Full breakdown of the flows (order-ahead, weekly route broadcast, private events
 #restauranttech #foodtrucks #AI #WhatsAppBusiness
 
 ---
+
+## 2026-08-03 - Agente IA para Restaurantes Mexicanos
+
+Mexican cuisine in Europe is a 3.58B USD market in 2025, projected to hit 3.83B USD in 2026 (Fortune Business Insights). In Spain alone, the sector grows 13-18.6% per year and Madrid + Barcelona already host 300+ active Mexican restaurants.
+
+Yet most of them still answer WhatsApp reservations and delivery orders from the manager's phone between services. Average reply time in peak service: 27 minutes. Weekend no-shows: 20-30%. Delivery leads lost by slow reply: 40-60%. That is real revenue walking to the taqueria across the street.
+
+We deployed a personalized AI agent for a 50-cover Mexican restaurant with active delivery. Reply time went from 27 min to 8 seconds. No-shows dropped from 22% to 5%. Delivery ticket rose 19% via automated upsell (guac, elote, mezcal). Weekly occupancy climbed from 58% to 76%. Net impact +20,900 EUR/month against a 297-497 EUR/month tool cost.
+
+Full breakdown of the flows (spice-level configurator, allergens, bilingual replies, waitlist automation): https://zeniapartners.com/blog/agente-ia-para-restaurantes-mexicanos.html
+
+#restauranttech #customerretention #AI #WhatsAppBusiness
+
+---

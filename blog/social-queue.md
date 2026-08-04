@@ -4171,3 +4171,17 @@ Full breakdown of the flows (spice-level configurator, allergens, bilingual repl
 #restauranttech #customerretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-08-04 - Agente IA para Empresas de Mensajería
+
+Failed deliveries cost European couriers 14 EUR per package on the first miss. In Spain alone that adds up to 3.2B EUR a year, and 20% of parcels still miss on attempt one (Ecommerce News + OCU 2026).
+
+The root cause is almost never the driver. It is the channel: generic shipper SMS, no direct WhatsApp with the recipient, no address check before the van leaves the depot.
+
+We deployed a personalized AI agent for a 15-vehicle fleet doing 450 shipments/day. Preventive WhatsApp the night before, live 30-min windows, auto-rescheduling under 5 minutes. First-attempt failure dropped from 20% to 11%. Inbound "where's my parcel" calls fell 85%. Driver output +30%. Net impact +19,380 EUR/month against a 297-497 EUR/month tool cost.
+
+Full breakdown of the flows (preventive WhatsApp, live window, address validation, auto-rescheduling, feedback loop): https://zeniapartners.com/blog/agente-ia-para-empresas-de-mensajeria.html
+
+#lastmile #logisticstech #AI #WhatsAppBusiness
+
+---

@@ -4197,3 +4197,17 @@ Full breakdown of the flows (LPR access, in-chat Stripe/Redsys payment, subscrip
 #smartparking #mobility #AI #WhatsAppBusiness
 
 ---
+
+## 2026-08-04 - Agente IA para Empresas de Taxi
+
+Radio Taxi Donosti cut missed calls 72% in high-demand slots after redesigning operations, and the number tells you the real gap in the sector (GipuzkoaDigital, 2025). Every abandoned call is a fare that Uber, Cabify or Bolt picks up while your emisora is still on hold.
+
+The bottleneck is never fare or driver quality. It is the reservation experience. Three operators covering morning, evening and weekend cannot handle simultaneous calls, do not work nights, and cannot run WhatsApp on the side.
+
+We deployed a personalized AI agent for a 40-taxi fleet in Spain. Voice + WhatsApp 24/7, integrated with the fleet software. Missed calls dropped from 25% to 3%. 29% of new bookings now come between 23:00 and 06:30, the window that used to leak straight to Uber. Three operators reduced to one part-time role for exceptions. Net impact +19,825 EUR/month against a 497-797 EUR/month tool cost.
+
+Full breakdown of the flows (voice + WhatsApp dispatch, airport pickup with flight-delay margin, corporate accounts, cooperative fair assignment): https://zeniapartners.com/blog/agente-ia-para-empresas-de-taxi.html
+
+#taxi #mobility #AI #WhatsAppBusiness
+
+---

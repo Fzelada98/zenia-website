@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-08-04T06:15:00Z",
+  "lastRun": "2026-08-04T14:11:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-parkings",
+      "keyword": "agente ia para parkings",
+      "tier": 1,
+      "cluster": "automocion",
+      "status": "published",
+      "date": "2026-08-04"
+    },
     {
       "slug": "agente-ia-para-empresas-de-mensajeria",
       "keyword": "agente ia para empresas de mensajeria",

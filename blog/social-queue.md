@@ -4211,3 +4211,19 @@ Full breakdown of the flows (voice + WhatsApp dispatch, airport pickup with flig
 #taxi #mobility #AI #WhatsAppBusiness
 
 ---
+
+## 2026-08-05 - Agente IA para Restaurantes Veganos
+
+Vegan diners ask 3x more questions before booking than the average guest: allergens, cross-contamination, seed oils, wine clarifiers, kids plant-based options. In Spain the market is 4.4M people (276K vegans + 670K vegetarians + 3.5M flexitarians) and plant-based food grew 34% in 2024, yet most vegan restaurants still answer WhatsApp in 30-minute bursts between services.
+
+The bottleneck is not the menu. It is the response window. Miss the 5-minute mark and 30% of the reservation walks to the next restaurant on Google Maps.
+
+We deployed a personalized AI agent for a 55-seat plant-based restaurant. Every allergen answer is pulled from the dish's official spec sheet, not guessed. Response time dropped from 28 minutes to 8 seconds. Occupancy went from 58% to 76%. No-shows from 16% to 5%. 34% of new bookings arrive outside traditional service hours. Net impact +16,994 EUR/month against a 297-497 EUR/month system cost.
+
+The interesting part is not the ROI. It is that allergen accuracy jumped from 73% to over 99% because the agent physically cannot answer without checking the spec, and that reduces legal risk under EU 1169/2011 more than any employee training round we have seen.
+
+DM me if you run a plant-based venue and want the flow blueprint (menu, allergens, catering groups, loyalty).
+
+#restauranttech #plantbased #AI #WhatsAppBusiness
+
+---

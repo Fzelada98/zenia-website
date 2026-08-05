@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-08-04T14:11:00Z",
+  "lastRun": "2026-08-05T06:20:00Z",
   "posts": [
     {
       "slug": "agente-ia-para-empresas-de-taxi",
@@ -2456,6 +2456,14 @@
       "cluster": "ocio",
       "status": "published",
       "date": "2026-07-30"
+    },
+    {
+      "slug": "agente-ia-para-restaurantes-veganos",
+      "keyword": "agente ia para restaurantes veganos",
+      "tier": 1,
+      "cluster": "restaurantes",
+      "status": "published",
+      "date": "2026-08-05"
     }
   ]
 }

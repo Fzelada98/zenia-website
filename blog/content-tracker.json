@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-08-05T14:21:27Z",
+  "lastRun": "2026-08-05T22:10:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-cines",
+      "keyword": "agente ia para cines",
+      "tier": 1,
+      "cluster": "ocio",
+      "status": "published",
+      "date": "2026-08-05"
+    },
     {
       "slug": "agente-ia-para-empresas-de-alarmas",
       "keyword": "agente ia para empresas de alarmas",

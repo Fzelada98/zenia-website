@@ -4243,3 +4243,17 @@ Reply if you run an alarm business between 1.5K and 15K subscribers, happy to se
 #securitytech #customerretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-08-05 - Agente IA para Cines
+
+Spain's box office dropped 8% in 2025 to 65M spectators. H1 2026 is bouncing back +30%, but only at complexes that moved ticketing into WhatsApp.
+
+An 8-screen multiplex we rebuilt saw: reply time 8h → 8s, conversion 34% → 61%, F&B ticket +23%, subscriber renewal 63% → 81%. Net impact: +€31K/month on a €500-1000/mo stack.
+
+The AI agent handles ticketing, subscribers and snack bar upsell inside one WhatsApp thread. Full breakdown (numbers + 5-week rollout): https://zeniapartners.com/blog/agente-ia-para-cines.html
+
+Reply if you run a cinema circuit and want the WhatsApp + subscriber blueprint.
+
+#cinemaindustry #retailtech #AI #WhatsAppBusiness
+
+---

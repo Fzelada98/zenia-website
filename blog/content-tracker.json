@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-08-06T14:23:00Z",
+  "lastRun": "2026-08-06T22:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-restaurantes-indios",
+      "keyword": "agente ia para restaurantes indios",
+      "tier": 1,
+      "cluster": "restaurantes",
+      "status": "published",
+      "date": "2026-08-06"
+    },
     {
       "slug": "agente-ia-para-cines",
       "keyword": "agente ia para cines",

@@ -4271,3 +4271,17 @@ Reply if you run a Chinese, Japanese or Asian restaurant and want the migration 
 #restauranttech #customerretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-08-06 - Agente IA para Restaurantes Indios
+
+Indian restaurants lose customers before they ever taste the food. 72% of diners prefer messaging over calling, and every "how spicy is the vindaloo, is the paneer vegan, do you have halal" question that takes 20 minutes to answer sends the client elsewhere.
+
+We rebuilt a 50-seat Indian restaurant with a personalized AI agent on WhatsApp that knows the full menu: heat levels, Jain-friendly dishes, halal options, allergens, and takes reservations and takeaway orders in Spanish, English and Hindi. In 90 days: reply time 25 minutes to 8 seconds, direct-channel orders 20% to 55%, average ticket 22 to 27 euros, no-shows 15% to 5%.
+
+Net impact: about +20,000 euros/month on a 300-500 euros/month stack. Most of it comes from margin recovered from delivery apps and orders that used to arrive at 11pm when nobody was answering. Full breakdown with ROI table: https://zeniapartners.com/blog/agente-ia-para-restaurantes-indios.html
+
+Reply if you run an Indian, Thai or ethnic-cuisine restaurant and want the migration playbook.
+
+#restauranttech #customerretention #AI #WhatsAppBusiness
+
+---

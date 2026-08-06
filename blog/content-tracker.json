@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-08-05T22:10:00Z",
+  "lastRun": "2026-08-06T14:00:00Z",
   "posts": [
     {
       "slug": "agente-ia-para-cines",
@@ -2480,6 +2480,14 @@
       "cluster": "restaurantes",
       "status": "published",
       "date": "2026-08-05"
+    },
+    {
+      "slug": "agente-ia-para-restaurantes-chinos",
+      "keyword": "agente ia para restaurantes chinos",
+      "tier": 1,
+      "cluster": "restaurantes",
+      "status": "published",
+      "date": "2026-08-06"
     }
   ]
 }

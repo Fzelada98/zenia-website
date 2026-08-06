@@ -4257,3 +4257,17 @@ Reply if you run a cinema circuit and want the WhatsApp + subscriber blueprint.
 #cinemaindustry #retailtech #AI #WhatsAppBusiness
 
 ---
+
+## 2026-08-06 - Agente IA para Restaurantes Chinos
+
+Chinese restaurants in Spain give up 25% to 35% of every delivery ticket to Glovo, Uber Eats and Just Eat. That is the single biggest leak in the P&L, and almost nobody talks about it.
+
+We rebuilt operations for a 55-seat Chinese restaurant with an AI agent on WhatsApp handling reservations, take-away, delivery and multilingual menu (Spanish, Mandarin, English). In 90 days: direct-channel orders 18% to 41%, no-shows 15% to 5%, average ticket 28 to 34 euros, repeat purchase at 30 days 19% to 36%.
+
+Net impact: about +9,000 euros/month on a 300-500 euros/month stack. The system pays itself with the aggregator commissions saved in the first 30 days.
+
+Reply if you run a Chinese, Japanese or Asian restaurant and want the migration playbook from aggregators to WhatsApp direct.
+
+#restauranttech #customerretention #AI #WhatsAppBusiness
+
+---

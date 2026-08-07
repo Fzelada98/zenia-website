@@ -4311,3 +4311,17 @@ Reply if you run a Peruvian restaurant group in LATAM or Spain and want the deli
 #restauranttech #customerretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-08-07 - Agente IA para Restaurantes Coreanos
+
+Korean restaurants in Madrid and Barcelona sit on the Hallyu wave: KBBQ tables at 91% occupancy on Saturdays, up to 45% of the DMs written in English or Korean, and a 90-minute grill-time-per-table that punishes every missed message.
+
+We built a personalized AI agent for a 60-seat, 12 KBBQ table restaurant. It answers in Spanish, English and Korean in 8 seconds, holds the parrilla by the minute, and collects Bizum deposits for groups of 6+. In 60 days: no-shows 18% to 6%, saturday occupancy 72% to 91%, and about +25,700 euros/month net on a 300-500 euros/month stack.
+
+Full ROI table and the 5-week rollout playbook: https://zeniapartners.com/blog/agente-ia-para-restaurantes-coreanos.html
+
+Reply if you run a Korean, Japanese or asian-fusion group and want the KBBQ deposit script.
+
+#restauranttech #customerretention #AI #WhatsAppBusiness
+
+---

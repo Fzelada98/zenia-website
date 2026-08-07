@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-08-07T14:25:00Z",
+  "lastRun": "2026-08-07T15:30:00Z",
   "posts": [
     {
       "slug": "agente-ia-para-restaurantes-peruanos",
@@ -2520,6 +2520,14 @@
       "cluster": "restaurantes",
       "status": "published",
       "date": "2026-08-06"
+    },
+    {
+      "slug": "agente-ia-para-restaurantes-coreanos",
+      "keyword": "agente ia para restaurantes coreanos",
+      "tier": 1,
+      "cluster": "restaurantes",
+      "status": "published",
+      "date": "2026-08-07"
     }
   ]
 }

@@ -4285,3 +4285,17 @@ Reply if you run an Indian, Thai or ethnic-cuisine restaurant and want the migra
 #restauranttech #customerretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-08-07 - Agente IA para Restaurantes Árabes
+
+Arab restaurants in Spain get 48% of their reservations from groups of 6 to 20 people, but no-shows on those big tables run at 22%. That is not a hospitality problem, it is a deposit and confirmation problem.
+
+We rebuilt reservations for a 70-seat Lebanese restaurant in Madrid with a personalized AI agent on WhatsApp answering in Arabic, English and Spanish, collecting Bizum deposits for groups of 8+, and running the ramadan and iftar calendar on autopilot. In 60 days: no-shows on large groups 22% to 5%, average ticket per person 32 to 41 euros, deposit capture 25% to 92%, weekend occupancy 68% to 84%.
+
+Net impact: about +14,500 euros/month on a 300-500 euros/month stack. Most of it came from group tables that used to reserve elsewhere because nobody replied in Arabic before 5pm. Full breakdown with ROI table: https://zeniapartners.com/blog/agente-ia-para-restaurantes-arabes.html
+
+Reply if you run a Lebanese, Syrian, Moroccan or halal-certified restaurant and want the group-table deposit playbook.
+
+#restauranttech #customerretention #AI #WhatsAppBusiness
+
+---

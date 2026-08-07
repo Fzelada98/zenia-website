@@ -4299,3 +4299,15 @@ Reply if you run a Lebanese, Syrian, Moroccan or halal-certified restaurant and 
 #restauranttech #customerretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-08-07 - Agente IA para Restaurantes Peruanos
+
+Peruvian restaurants in Lima and Madrid get between 60 and 120 WhatsApp messages a day, and 40% to 60% never get answered during service. Every lost message is a reservation gone, a delivery migrated to a competitor, or a repeat customer who moves on.
+
+We built a personalized AI agent for cebicherias, pollerias and chifas that knows the full menu (spice level, sides, options), takes reservations and deliveries in parallel, and integrates Yape, Plin and Bizum. In 90 days: no-shows 22% to 7%, delivery ticket 32 to 39 euros, repeat visits +50%. Net impact about +13,800 euros/month on a 300-500 euros/month stack. Full ROI breakdown: https://zeniapartners.com/blog/agente-ia-para-restaurantes-peruanos.html
+
+Reply if you run a Peruvian restaurant group in LATAM or Spain and want the delivery-migration playbook.
+
+#restauranttech #customerretention #AI #WhatsAppBusiness
+
+---

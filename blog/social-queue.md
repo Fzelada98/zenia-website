@@ -4325,3 +4325,17 @@ Reply if you run a Korean, Japanese or asian-fusion group and want the KBBQ depo
 #restauranttech #customerretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-08-08 - Agente IA para Restaurantes Argentinos
+
+Argentine steakhouses run two restaurants inside one: the Saturday parrilla with a 30-person waiting list, and the Tuesday lunch with half the tables empty. According to Bloom Intelligence, 45% of restaurant guests changed favorites in the last 12 months and 77.4% never return after their first visit.
+
+We built a personalized AI agent for an 80-seat asador in Madrid. It answers in 8 seconds any hour, handles group reservations up to 20 people, pairs each cut with a Malbec suggestion 24h before the visit, and reactivates dormant regulars for the slow midweek lunch. In 90 days: no-shows dropped from 15% to 5%, average ticket climbed from 52 to 69 euros, Tuesday-Wednesday lunch occupancy went from 38% to 61%, and Google reviews jumped +385%. Net impact about +49,800 euros/month on a 300-500 euros/month stack.
+
+Full ROI breakdown and 5-week rollout: https://zeniapartners.com/blog/agente-ia-para-restaurantes-argentinos.html
+
+Reply if you run an Argentine steakhouse or a multi-location grill group and want the Malbec-pairing script.
+
+#restauranttech #customerretention #AI #WhatsAppBusiness
+
+---

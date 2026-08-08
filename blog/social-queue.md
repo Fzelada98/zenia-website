@@ -4352,3 +4352,16 @@ Reply if you run a watch, jewelry or repair-heavy retail store and want the quot
 #retailtech #retail #AI #WhatsAppBusiness
 
 ---
+## 2026-08-08 - Agente IA para Academias de Kickboxing
+
+Monthly churn at MMA and kickboxing gyms runs 10-12% — versus 5-8% at a traditional dojo (Health & Fitness Association 2025). A 200-member academy loses 20 socios every month, and 74% of those exits happen inside the first 90 days.
+
+We built a personalized AI agent for a Spanish kickboxing academy. Churn dropped from 10% to 5%, bounced-payment recovery went from 25% to 68%, trial-class conversion moved from 28% to 52%, and Google reviews jumped 4x. Net impact around +8,900 euros/month on a 300-500 euros/month stack.
+
+Full ROI breakdown and 5-week rollout: https://zeniapartners.com/blog/agente-ia-para-academias-de-kickboxing.html
+
+Reply if you run a kickboxing, MMA or striking academy and want the 14-day absence detection script.
+
+#fitnessindustry #memberretention #AI #WhatsAppBusiness
+
+---

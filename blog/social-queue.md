@@ -4339,3 +4339,16 @@ Reply if you run an Argentine steakhouse or a multi-location grill group and wan
 #restauranttech #customerretention #AI #WhatsAppBusiness
 
 ---
+## 2026-08-08 - Agente IA para Relojerías
+
+A neighborhood watch store handles 400+ WhatsApp messages a month: repair quotes, battery swaps, second-hand appraisals. Today 45% of those quotes get no follow-up and 38% of messages arrive after closing hours.
+
+We built a personalized AI agent for a Spanish watch store. Response time dropped from hours to 12 seconds, quote conversion jumped from 28% to 52%, and annual service reminders now recover 30-45% of past customers at a 40-90 euros average ticket. Net impact around 9,700 euros/month on a 300-500 euros/month stack.
+
+Full ROI breakdown and 5-week rollout: https://zeniapartners.com/blog/agente-ia-para-relojerias.html
+
+Reply if you run a watch, jewelry or repair-heavy retail store and want the quote follow-up script.
+
+#retailtech #retail #AI #WhatsAppBusiness
+
+---

@@ -4378,3 +4378,16 @@ Reply if you run a museum, foundation or cultural center and want the guided-tou
 #museumtech #culturalheritage #AI #WhatsAppBusiness
 
 ---
+## 2026-08-09 - Agente IA para Centros de Bronceado
+
+The average tanning customer books 12 sessions a year and 35% return 2-3 times a month (Zenoti 2025 Benchmark), yet most Spanish centers still track bonos on an Excel and never message the client who stopped coming 5 weeks ago.
+
+We built a personalized AI agent for a Spanish tanning center with 3 cabinas and 400 clients. Response time dropped from 30 minutes to 7 seconds, no-shows fell from 10% to 4%, 38% of new bookings now come from outside opening hours, and inactive-client recovery hit a 22% reply rate. Net impact around +1,270 to +1,470 euros/month on a 297-497 euros/month stack, live in 4 weeks.
+
+Full ROI breakdown and 4-week rollout: https://zeniapartners.com/blog/agente-ia-para-centros-de-bronceado.html
+
+Reply if you run a tanning studio, beauty center or aesthetic clinic and want the bono expiry recovery script.
+
+#beautyindustry #CRM #AI #WhatsAppBusiness
+
+---

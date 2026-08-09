@@ -4391,3 +4391,18 @@ Reply if you run a tanning studio, beauty center or aesthetic clinic and want th
 #beautyindustry #CRM #AI #WhatsAppBusiness
 
 ---
+## 2026-08-09 - Agente IA para Academias de Karate
+
+Karate schools average 60-70% annual retention, and top-tier dojos sit at 75-85% (2026 Martial Arts Industry Statistics). A 5% retention lift moves profit 25% to 95%, yet acquiring a new student still costs 5 to 25x more than keeping one you already have.
+
+The technical curriculum is not the problem. The operation is: parents wait 4 hours for a WhatsApp reply, trial classes never get confirmed, and monthly fees bounce with no alert.
+
+We built a personalized AI agent for a Spanish karate academy of 140 students. Response time went from 5 hours to 8 seconds, trial-to-enrollment conversion jumped from 28% to 52%, monthly payment defaults dropped from 11% to 3%, and annual retention climbed from 68% to 82%. Net impact around +2,800 to +3,000 euros/month on a 297-497 euros/month stack, live in 5 weeks.
+
+Full ROI breakdown and 5-week rollout: https://zeniapartners.com/blog/agente-ia-para-academias-de-karate.html
+
+Reply if you run a dojo of karate, judo, taekwondo or BJJ and want the belt-exam reminder script.
+
+#martialarts #karate #AI #WhatsAppBusiness
+
+---

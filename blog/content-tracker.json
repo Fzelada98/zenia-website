@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-08-09T00:00:00Z",
+  "lastRun": "2026-08-09T14:00:00Z",
   "posts": [
     {
       "slug": "agente-ia-para-academias-de-kickboxing",
@@ -2558,6 +2558,14 @@
       "keyword": "agente ia para museos",
       "tier": 1,
       "cluster": "cultura",
+      "status": "published",
+      "date": "2026-08-09"
+    },
+    {
+      "slug": "agente-ia-para-centros-de-bronceado",
+      "keyword": "agente ia para centros de bronceado",
+      "tier": 1,
+      "cluster": "belleza",
       "status": "published",
       "date": "2026-08-09"
     }

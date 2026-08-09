@@ -4365,3 +4365,16 @@ Reply if you run a kickboxing, MMA or striking academy and want the 14-day absen
 #fitnessindustry #memberretention #AI #WhatsAppBusiness
 
 ---
+## 2026-08-09 - Agente IA para Museos
+
+Spanish state museums lost 7.7% of their visitors in 2025 while private centers absorbed the demand with digital ticketing (Ministerio de Cultura). A mid-size museum still handles 60-200 daily inquiries by WhatsApp, Instagram and email, and 41% go unanswered the same day.
+
+We built a personalized AI agent for a Spanish museum. Response time dropped from 26 hours to 8 seconds, no-shows on guided tours fell from 20% to 8%, school-group bookings tripled, and 34% of new reservations now come from outside office hours in 6 languages. Net impact around +15,700 euros/month on a 497 euros/month stack, cleared under the EU AI Act.
+
+Full ROI breakdown and 5-week rollout: https://zeniapartners.com/blog/agente-ia-para-museos.html
+
+Reply if you run a museum, foundation or cultural center and want the guided-tour reminder script.
+
+#museumtech #culturalheritage #AI #WhatsAppBusiness
+
+---

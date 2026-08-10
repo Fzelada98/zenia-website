@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-08-10T14:00:00Z",
+  "lastRun": "2026-08-10T18:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-academias-de-matematicas",
+      "keyword": "agente ia para academias de matematicas",
+      "tier": 1,
+      "cluster": "academias",
+      "status": "published",
+      "date": "2026-08-10"
+    },
     {
       "slug": "agente-ia-para-academias-de-kickboxing",
       "keyword": "agente ia para academias de kickboxing",

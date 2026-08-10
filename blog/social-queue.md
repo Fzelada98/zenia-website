@@ -4432,3 +4432,16 @@ DM me if you run a math, science or exam-prep academy and want the September-pea
 #edtech #tutoring #AI #WhatsAppBusiness
 
 ---
+## 2026-08-10 - Agente IA para Tiendas de Manualidades
+
+The global arts and crafts market grew from $47.35B in 2025 to $50.7B in 2026 (7.1% CAGR), with online at 36% of distribution. Yet the average craft store still takes 2 to 6 hours to answer a WhatsApp about yarn weight, glue type or paint code, and 41% of the messages they receive are repetitive questions a personalized AI agent resolves without any human touch.
+
+We deployed a personalized AI agent for a craft store with 80 sqm and a Shopify site. Reply time dropped from 4 hours to 8 seconds, consult-to-sale conversion jumped from 18% to 34%, average ticket rose from 28 to 36 euros through smart cross-selling, and 27% of abandoned carts got recovered by WhatsApp (vs 4% by email). 38% of orders now close outside store hours.
+
+Full ROI breakdown, 5-week rollout and Shopify/WooCommerce/Prestashop integration notes: https://zeniapartners.com/blog/agente-ia-para-tiendas-de-manualidades.html
+
+DM me if you run a craft, bellas artes or hobby store and want the cart-recovery + workshop-enrollment script we deployed.
+
+#retailtech #ecommerce #AI #automation
+
+---

@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-08-10T18:00:00Z",
+  "lastRun": "2026-08-10T20:15:00Z",
   "posts": [
     {
       "slug": "agente-ia-para-academias-de-matematicas",
@@ -2590,6 +2590,14 @@
       "keyword": "agente ia para clinicas de radiologia",
       "tier": 1,
       "cluster": "clinicas",
+      "status": "published",
+      "date": "2026-08-10"
+    },
+    {
+      "slug": "agente-ia-para-tiendas-de-manualidades",
+      "keyword": "agente ia para tiendas de manualidades",
+      "tier": 1,
+      "cluster": "retail",
       "status": "published",
       "date": "2026-08-10"
     }

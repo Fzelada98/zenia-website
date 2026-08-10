@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-08-09T22:00:00Z",
+  "lastRun": "2026-08-10T14:00:00Z",
   "posts": [
     {
       "slug": "agente-ia-para-academias-de-kickboxing",
@@ -2576,6 +2576,14 @@
       "cluster": "deportes",
       "status": "published",
       "date": "2026-08-09"
+    },
+    {
+      "slug": "agente-ia-para-clinicas-de-radiologia",
+      "keyword": "agente ia para clinicas de radiologia",
+      "tier": 1,
+      "cluster": "clinicas",
+      "status": "published",
+      "date": "2026-08-10"
     }
   ]
 }

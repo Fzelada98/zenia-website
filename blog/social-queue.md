@@ -4406,3 +4406,16 @@ Reply if you run a dojo of karate, judo, taekwondo or BJJ and want the belt-exam
 #martialarts #karate #AI #WhatsAppBusiness
 
 ---
+## 2026-08-10 - Agente IA para Clinicas de Radiologia
+
+Radiology departments historically run at 15% no-show rates, and a full MRI room sitting at 68% occupancy is where private diagnostic centers quietly lose 25,000 to 45,000 euros per month (AuntMinnie, 2025). The problem is never the scanner. It is the front desk drowning in the phone.
+
+We deployed a personalized AI agent inside a Spanish diagnostic clinic with 2 CT rooms and 1 MRI. Response time dropped from 30 minutes to 10 seconds, no-shows fell from 14% to 6%, MRI occupancy jumped from 68% to 92%, and inbound calls to reception dropped 75%. Live in 5 weeks on a 297-497 euros/month stack.
+
+Full ROI breakdown, 5-week rollout and RIS/HIS integration notes: https://zeniapartners.com/blog/agente-ia-para-clinicas-de-radiologia.html
+
+DM me if you run a radiology, imaging or diagnostic center and want the TAC-preparation and 72/48/24h reminder script.
+
+#healthtech #patientretention #AI #automation
+
+---

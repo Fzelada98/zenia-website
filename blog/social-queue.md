@@ -4419,3 +4419,16 @@ DM me if you run a radiology, imaging or diagnostic center and want the TAC-prep
 #healthtech #patientretention #AI #automation
 
 ---
+## 2026-08-10 - Agente IA para Academias de Matematicas
+
+The global private tutoring market grew from $131B in 2025 to $143B in 2026 (9.1% CAGR, The Business Research Company), and math is the #1 tutored subject worldwide at 66% of all tutoring sessions. Yet the average math academy still takes 34 minutes to answer a parent on WhatsApp and loses 22% of enrollment leads to a competitor 4 streets away.
+
+We deployed a personalized AI agent inside a math academy with 180 students and 4 teachers. Reply time dropped from 34 minutes to 9 seconds, lead-to-enrollment conversion jumped from 34% to 58%, and full-year retention moved from 68% to 87%. Junior renewal in May rose from 62% to 81%. Live in 5 weeks on a 297-497 euros/month stack.
+
+Full ROI breakdown, 5-week rollout and platform integrations (Alexia, Clickedu, Additio): https://zeniapartners.com/blog/agente-ia-para-academias-de-matematicas.html
+
+DM me if you run a math, science or exam-prep academy and want the September-peak enrollment script we deployed.
+
+#edtech #tutoring #AI #WhatsAppBusiness
+
+---

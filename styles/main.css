@@ -927,7 +927,7 @@ a:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; border
   border-top: 1px solid var(--border);
   margin-top: 24px;
 }
-.proof-stat-value { font-size: 2rem; font-weight: 700; letter-spacing: -0.02em; }
+.proof-stat-value { font-size: 2rem; font-weight: 700; letter-spacing: -0.02em; white-space: nowrap; }
 .proof-stat-label { font-size: 13px; color: var(--text-muted); min-height: 3lh; }
 
 @media (max-width: 768px) {

@@ -4445,3 +4445,16 @@ DM me if you run a craft, bellas artes or hobby store and want the cart-recovery
 #retailtech #ecommerce #AI #automation
 
 ---
+## 2026-08-11 - Agente IA para Academias de Ballet
+
+Dance studios average a 30% annual dropout rate, and 45% of the students who leave name scheduling and communication as the reason. A mid-size ballet academy with 240 students loses close to 47,500 euros a year to that churn alone.
+
+We deployed a personalized AI agent for a ballet school running 180-480 students across baby, basic, intermediate and adult groups. Reply time to families dropped from 4-12 hours to under 20 seconds, dropout fell from 30% to 18%, unpaid fees went from 14% to 4%, and trial-to-enrollment conversion moved from 32% to 54%. Director recovered 14 hours a week.
+
+Full ROI breakdown, 5-week rollout and RAD-friendly integration notes (Admidance, Asyala, Kydemy): https://zeniapartners.com/blog/agente-ia-para-academias-de-ballet.html
+
+DM me if you run a ballet, dance or performing-arts school and want the September-enrollment + festival-management script we deployed.
+
+#danceindustry #balletschool #AI #WhatsAppBusiness
+
+---

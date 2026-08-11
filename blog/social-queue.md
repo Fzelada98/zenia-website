@@ -4507,3 +4507,13 @@ DM me if you run a plant-based restaurant and want the allergen + retention play
 
 ---
 
+## 2026-08-11 - Smart home installers are leaving €30K/mo on the table
+
+Spain will have 3.8M smart homes in 2025 (20% of housing stock) and 82% of Spaniards plan to install smart devices in the next two years. Yet the average domotics installer loses 63% of incoming leads because the first response arrives 6 to 28 hours late.
+For a 6-person KNX/Lutron installer we work with, a personalized AI agent qualifies leads in under 60 seconds on WhatsApp, sends a base quote, and books the on-site visit before the competitor even opens the email. Close rate went from 12% to 21%. Failed technical visits dropped from 18% to 4%.
+Net monthly ROI: +€34K on a €497 tool.
+Full breakdown: https://zeniapartners.com/blog/agente-ia-para-empresas-de-domotica.html
+
+#smarthome #domotics #AIagents #WhatsAppBusiness
+
+---

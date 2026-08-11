@@ -4459,16 +4459,16 @@ DM me if you run a ballet, dance or performing-arts school and want the Septembe
 
 ---
 
-## 2026-08-12 - Case study: immigration advisory, Spain-LATAM
+## 2026-08-12 - Case study: boutique law firm, Spain-LATAM
 
 A 23,000-follower audience is not a business. A booking system is.
-An immigration advisory helping Latin Americans study and work in Spain was answering every inquiry by hand, on one phone, in one time zone — while its audience's prime hours were Madrid's 2 a.m.
+A boutique law firm helping Latin Americans study and work in Spain was answering every inquiry by hand, on one phone, in one time zone — while its audience's prime hours were Madrid's 2 a.m.
 We built the system underneath: a conversion landing with transparent milestone pricing, a humanized AI agent covering morning, evening and overnight shifts that qualifies by nationality and books evaluation calls, a CRM where every lead arrives with its source attached, geo-targeted Google Ads with hard budget caps, and 12 SEO guides live at launch.
 Then we put autonomous agents in charge: one audits the ad account daily, one publishes a new guide weekly from real search data, one pings the founder the moment a qualified lead lands.
 Response time now: under 1 minute, 24/7, across every LATAM time zone.
-Full case study (anonymized): https://zeniapartners.com/cases/immigration-advisory-latam.html
+Full case study (anonymized): https://zeniapartners.com/cases/boutique-law-firm-latam.html
 
-#AIagents #immigration #legaltech #leadgeneration
+#AIagents #legaltech #boutiquelawfirm #leadgeneration
 
 ---
 
@@ -4476,22 +4476,22 @@ Full case study (anonymized): https://zeniapartners.com/cases/immigration-adviso
 
 Every Spain-based advisory serving Latin America pays a silent tax: the time-zone gap.
 Your audience scrolls TikTok at 9 p.m. in Lima. That's 3 a.m. in Madrid. The message they send waits 7 hours for a reply — and a high-intent lead cools off before breakfast.
-For an immigration advisory we work with, we solved it structurally: an AI agent with a rotating three-person digital team, whose overnight shift exists precisely to cover LATAM prime time. It answers in under a minute, qualifies by nationality (including the countries the firm legally cannot serve), explains requirements from the official list only, and books the evaluation call.
+For a boutique law firm we work with, we solved it structurally: an AI agent with a rotating three-person digital team, whose overnight shift exists precisely to cover LATAM prime time. It answers in under a minute, qualifies by nationality (including the countries the firm legally cannot serve), explains requirements from the official list only, and books the evaluation call.
 The founder wakes up to booked, qualified consultations instead of a backlog of cold chats.
 If your clients live six time zones away from your office, the fix is not hiring a night shift. It's building one that never sleeps: https://zeniapartners.com/blog/sistema-ia-despachos-extranjeria.html
 
-#AIagents #advisory #immigration #automation
+#AIagents #advisory #legaltech #automation
 
 ---
 
 ## 2026-08-17 - Regulated services need guardrails, not just speed
 
 Everyone sells "AI that answers fast". In regulated verticals, the harder problem is what the AI must refuse to do.
-For an immigration advisory (Spain-LATAM) our agent runs with hard guardrails: it never invents requirements, prices or timelines, never promises outcomes, never gives detailed legal advice by chat, and politely redirects nationalities the firm cannot legally serve — before they consume a call slot.
+For a boutique law firm (Spain-LATAM) our agent runs with hard guardrails: it never invents requirements, prices or timelines, never promises outcomes, never gives detailed legal advice by chat, and politely redirects nationalities the firm cannot legally serve — before they consume a call slot.
 Qualification is not a nice-to-have there. It protects the firm's license, its reputation and its calendar at the same time.
 Speed gets you the lead. Guardrails let you keep the practice.
 How we build it: https://zeniapartners.com/blog/sistema-ia-despachos-extranjeria.html
 
-#legaltech #AIagents #compliance #immigration
+#legaltech #AIagents #compliance #boutiquelaw
 
 ---

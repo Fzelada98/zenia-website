@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-08-11T06:00:00Z",
+  "lastRun": "2026-08-11T14:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-restaurantes-vegetarianos",
+      "keyword": "agente ia para restaurantes vegetarianos",
+      "tier": 1,
+      "cluster": "restaurantes",
+      "status": "published",
+      "date": "2026-08-11"
+    },
     {
       "slug": "agente-ia-para-academias-de-ballet",
       "keyword": "agente ia para academias de ballet",

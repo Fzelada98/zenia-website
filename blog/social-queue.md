@@ -4495,3 +4495,15 @@ How we build it: https://zeniapartners.com/blog/sistema-ia-despachos-extranjeria
 #legaltech #AIagents #compliance #boutiquelaw
 
 ---
+## 2026-08-11 - Vegetarian restaurants are losing €78 per allergen-vague table
+
+11% of the Spanish population is already flexitarian, vegetarian or vegan. That's 4.4M plates on the table every week.
+But most vegetarian restaurants still explain their menu by hand on WhatsApp, one message at a time. A SnackSafely study puts the cost of vague allergen info at €78 per table lost — before the guest even walks in.
+For one plant-based operator we work with, we trained a personalized AI agent on the live menu, allergen matrix and dietary tags (vegan, celiac, nut-free). It answers in 8 seconds, 24/7, cites the actual ingredient, pre-loads the kitchen with allergy notes and reduces no-shows from 15% to 5%.
+Repeat visits from flexitarians in 90 days went from 18% to 34%.
+DM me if you run a plant-based restaurant and want the allergen + retention playbook.
+
+#restauranttech #plantbased #AIagents #WhatsAppBusiness
+
+---
+

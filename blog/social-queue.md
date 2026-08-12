@@ -4528,3 +4528,18 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-clinicas-de-medici
 #healthtech #patientretention #AI #WhatsAppBusiness
 
 ---
+## 2026-08-12 - A Spanish seafood restaurant loses 700 EUR every no-show on Saturday
+
+An 80-cover marisqueria loses 700 EUR every time an 8-top no-shows on a Saturday. Add cleaned percebe, iced gambas and an open Albariño and the whole service goes red.
+
+Off-premise seafood spend in Spain grew 8.1% in Q1 2025 (MAPA) and 22% of Spaniards eat seafood in a restaurant weekly. Most marisquerias still take reservations on a paper log while the sea bass gets colder.
+
+For an 80-cover seafood restaurant we work with, a personalized AI agent answers WhatsApp in 10 seconds, charges 10 to 20 EUR deposit per guest on prime-slot large tables and reloads the wait list when a cancellation hits at 20:15. No-shows on tables of 6+ went from 20% to 5%. Weekend occupancy from 71% to 88%.
+
+Net ROI on an 80-cover room: +20K EUR/month on a 497 EUR tool.
+
+Full breakdown: https://zeniapartners.com/blog/agente-ia-para-restaurantes-de-mariscos.html
+
+#restauranttech #customerretention #AI #WhatsAppBusiness
+
+---

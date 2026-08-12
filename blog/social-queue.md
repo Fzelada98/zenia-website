@@ -4517,3 +4517,14 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-empresas-de-domoti
 #smarthome #domotics #AIagents #WhatsAppBusiness
 
 ---
+
+## 2026-08-12 - Private GP clinics lose €7K/mo before the doctor even sees the patient
+
+In private general medicine clinics, 38% of appointment requests arrive outside opening hours and average WhatsApp response time is 52 minutes. No-shows sit at 16-18%.
+For a two-doctor GP clinic we work with, we deployed a personalized AI agent on WhatsApp Business API that books appointments in under 60 seconds, sends 48h + 3h reminders, and escalates any clinical wording to a human within 9 seconds. In 90 days: no-shows dropped from 18% to 6%, appointment fill rate went from 71% to 88%, and front-desk calls fell from 140 to 58 per day.
+Net ROI: +€9.5K/month on a €497 tool. GDPR-compliant.
+Full breakdown: https://zeniapartners.com/blog/agente-ia-para-clinicas-de-medicina-general.html
+
+#healthtech #patientretention #AI #WhatsAppBusiness
+
+---

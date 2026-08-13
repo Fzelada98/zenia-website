@@ -4543,3 +4543,16 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-restaurantes-de-ma
 #restauranttech #customerretention #AI #WhatsAppBusiness
 
 ---
+## 2026-08-13 - The sushi bar problem is not the fish, it is the phone
+
+The global sushi restaurant market is heading to 14.4B USD by 2035, 39% of chains already run AI menu personalization, and 32% of sushi bar reservations arrive between 22:00 and 09:00. Most independent sushi bars still miss them because the itamae cannot answer WhatsApp mid-service.
+
+For a 40-cover sushi bar we work with, a personalized AI agent handles omakase reservations, closes delivery orders with live stock and remembers Marta always skips raw salmon. Response time dropped from 27 minutes to 8 seconds, no-shows in the bar from 12% to 4.5%, and delivery ticket climbed from 34 to 42 EUR.
+
+Net ROI on a 40-cover room: +19K EUR/month against a 297-497 EUR tool.
+
+Full breakdown: https://zeniapartners.com/blog/agente-ia-para-restaurantes-de-sushi.html
+
+#restauranttech #customerretention #AI #WhatsAppBusiness
+
+---

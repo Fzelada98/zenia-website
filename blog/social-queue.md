@@ -4556,3 +4556,18 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-restaurantes-de-su
 #restauranttech #customerretention #AI #WhatsAppBusiness
 
 ---
+## 2026-08-13 - Vietnamese restaurants in Spain grew 40% in two years, and most still lose orders after 15:00
+
+Vietnamese restaurants opened in every mid-size Spanish city over the past two years, 60% of consumers ate Asian food in the last 12 months, and 74% of customers under 45 prefer WhatsApp over calling. Yet most vietnamitas close WhatsApp between services and lose 36% of orders that arrive after 15:00.
+
+For a 45-cover vietnamita we work with, a personalized AI agent answers pho and banh mi requests in 8 seconds, catches modifications ("no cilantro, extra brotes, mild spice") without errors and reactivates customers who have not ordered in 45 days.
+
+Delivery ticket went from 19 to 23.5 EUR (+24%), no-shows from 13% to 5%, and 60-day repeat rate almost doubled from 18% to 34%.
+
+Net ROI on a 45-cover room: +24K EUR/month against a 297-497 EUR tool.
+
+Full breakdown: https://zeniapartners.com/blog/agente-ia-para-restaurantes-vietnamitas.html
+
+#restauranttech #customerretention #AI #WhatsAppBusiness
+
+---

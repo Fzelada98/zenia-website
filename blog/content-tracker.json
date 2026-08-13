@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-08-13T06:00:00Z",
+  "lastRun": "2026-08-13T14:38:00Z",
   "posts": [
     {
       "slug": "agente-ia-para-restaurantes-de-mariscos",
@@ -2652,6 +2652,14 @@
     {
       "slug": "agente-ia-para-restaurantes-de-sushi",
       "keyword": "agente ia para restaurantes de sushi",
+      "tier": 1,
+      "cluster": "restaurantes",
+      "status": "published",
+      "date": "2026-08-13"
+    },
+    {
+      "slug": "agente-ia-para-restaurantes-vietnamitas",
+      "keyword": "agente ia para restaurantes vietnamitas",
       "tier": 1,
       "cluster": "restaurantes",
       "status": "published",

@@ -4571,3 +4571,18 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-restaurantes-vietn
 #restauranttech #customerretention #AI #WhatsAppBusiness
 
 ---
+## 2026-08-13 - Ad agencies are losing 180K EUR/year to bad communication, not bad creative
+
+53% of agency owners now see AI as a credible threat to their business model (eMarketer 2026). The threat is not that AI writes better copy. It is that 48% of clients now leave over delivery and communication problems, up 14 points YoY.
+
+Average lead response time in agencies is 47 hours. The first agency to reply wins 35-50% of pitches regardless of technical quality. And PPC-focused agencies now churn at 49% annually.
+
+We built a personalized AI agent for a 10-person agency running 18 accounts. Lead response dropped from hours to 8 seconds, weekly reports went from 4 hours to 25 minutes, and churn fell 39% in six months.
+
+Net ROI came in at ~24.5K EUR/month against a 297-497 EUR tool.
+
+DM me if you want the operational framework we used, happy to walk through it for your agency.
+
+#B2B #SaaS #AI #automation
+
+---

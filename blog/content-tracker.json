@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-08-14T14:00:00Z",
+  "lastRun": "2026-08-14T22:09:00Z",
   "posts": [
     {
       "slug": "agente-ia-para-restaurantes-gallegos",
@@ -2688,6 +2688,14 @@
       "cluster": "restaurantes",
       "status": "published",
       "date": "2026-08-13"
+    },
+    {
+      "slug": "agente-ia-para-restaurantes-brasilenos",
+      "keyword": "agente ia para restaurantes brasilenos",
+      "tier": 1,
+      "cluster": "restaurantes",
+      "status": "published",
+      "date": "2026-08-14"
     }
   ]
 }

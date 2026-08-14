@@ -4,6 +4,36 @@ Append new LinkedIn drafts at the BOTTOM. Do not overwrite.
 
 ---
 
+## 2026-08-14 - Agente IA para tiendas de videojuegos
+
+Physical video game retail sales in Spain dropped 18% in 2024. Online rose 20%.
+
+The specialist store isn't dying, it's changing job.
+
+Nobody walks in anymore to "see what's new". They walk in to reserve a collector's edition before it sells out, trade in an old console, or ask if a specific accessory is on the shelf right now.
+
+We built a personalized AI agent for a small gaming retail chain: preorder confirmations went from 28% to 61%, 8 extra trade-ins per month closed by chat, and dormant gamers in the CRM reactivated at 3.8% conversion. All by WhatsApp, no new hires.
+
+DM me if you run a specialty retail store and want to see the exact flows we deployed.
+
+#retailtech #ecommerce #AI #automation
+
+---
+
+## 2026-08-14 - Agente IA para restaurantes brasileños
+
+Brazilian restaurants in Spain lose 47% of large-group reservations to slow WhatsApp response, and rodizio no-shows sit at 20-24% because nobody takes a deposit.
+
+41% of the clientele writes in Portuguese, but the person on shift doesn't always speak it.
+
+We deployed a personalized AI agent for a Madrid churrascaria: bilingual PT/ES, deposit by WhatsApp for groups of 10+, and rodizio confirmations 24/7. Group attendance jumped from 62% to 94%, no-shows dropped to 6%, and Saturday feijoada is fully booked by Thursday.
+
+Full breakdown with metrics and ROI: https://zeniapartners.com/blog/agente-ia-para-restaurantes-brasilenos.html
+
+#restauranttech #customerretention #AI #WhatsAppBusiness
+
+---
+
 ## 2026-04-17 - Fidelización clientes restaurante 2026
 
 <!-- SCHEDULED:sp_M2qpbs4CYUVbrpyVrQO8 at 2026-04-20T08:00:00.000Z -->

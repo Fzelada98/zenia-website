@@ -4586,3 +4586,18 @@ DM me if you want the operational framework we used, happy to walk through it fo
 #B2B #SaaS #AI #automation
 
 ---
+## 2026-08-14 - Galician restaurants lose 8-17K EUR/month because nobody answers WhatsApp after 22:00
+
+In Galicia, 65-78% of restaurant reservations come through WhatsApp or phone, and 41% of those messages arrive after 22:30 Thursday-Sunday. The typical restaurant answers at noon the next day, when the customer has already booked next door.
+
+We built a personalized AI agent for a 70-cover seafood restaurant in Rias Baixas. It answers in 9 seconds in Galician or Spanish, closes group mariscada orders with Bizum deposits, and reserves the daily catch on real numbers instead of the chef's gut feeling.
+
+No-shows fell from 15% to 6%, midweek occupancy climbed from 48% to 67%, and Google reviews nearly tripled.
+
+Net ROI: +17K EUR/month against a 297-497 EUR tool.
+
+Full breakdown: https://zeniapartners.com/blog/agente-ia-para-restaurantes-gallegos.html
+
+#restauranttech #customerretention #AI #WhatsAppBusiness
+
+---

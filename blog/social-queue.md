@@ -4661,3 +4661,18 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-academias-de-ajedr
 #education #edtech #AI #WhatsAppBusiness
 
 ---
+## 2026-08-15 - Turkish restaurants in Spain leave 3.5K EUR on the table every month in unanswered late-night kebab orders
+
+TheFork put Spain's average no-show at 3.3% for 2025, but in Turkish group reservations (weddings, iftar, family celebrations) it still runs 18-22% without a deposit. On top of that, 31-38% of Turkish delivery orders come in between 23:30 and 02:00, when nobody is watching the phone.
+
+We built a personalized AI agent for a Turkish restaurant in Madrid running both dine-in and late-night kebab delivery. It handles reservations, orders, halal and allergen questions in Spanish, English, Turkish, and Arabic, and fires deposit links automatically for parties over 8.
+
+Group no-shows dropped below 3%, upsell in delivery moved the average ticket from 14 EUR to 17 EUR, and the owner got 2 hours a day back off WhatsApp.
+
+Net ROI: +9,590 EUR/month against a 297-497 EUR tool.
+
+Full breakdown: https://zeniapartners.com/blog/agente-ia-para-restaurantes-turcos.html
+
+#restauranttech #customerretention #AI #WhatsAppBusiness
+
+---

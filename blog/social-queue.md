@@ -4631,3 +4631,18 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-restaurantes-galle
 #restauranttech #customerretention #AI #WhatsAppBusiness
 
 ---
+## 2026-08-15 - Spanish tapas bars survive on table turnover, and manual WhatsApp is killing it
+
+Average tapas bar in Spain: 13-18 EUR per cover, 12-15% gross margin, and every table sitting empty for 20 minutes between shifts is money burned.
+
+We built a personalized AI agent for a 60-cover tapas bar. It handles WhatsApp reservations 24/7, sends confirmations that cut no-shows from 15% to 6%, and pushes table rotation on the night shift from 1.4 to 1.8 turns per table.
+
+A real case published in the Spanish press (Logrono): +28% online reservations, 40% fewer no-shows, and 6 hours a week freed for staff.
+
+Net ROI: +15K EUR/month against a 297-497 EUR tool.
+
+Full breakdown: https://zeniapartners.com/blog/agente-ia-para-restaurantes-de-tapas.html
+
+#restauranttech #customerretention #AI #WhatsAppBusiness
+
+---

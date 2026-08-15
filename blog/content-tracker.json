@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-08-15T06:14:00Z",
+  "lastRun": "2026-08-15T14:15:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-academias-de-ajedrez",
+      "keyword": "agente ia para academias de ajedrez",
+      "tier": 1,
+      "cluster": "academias",
+      "status": "published",
+      "date": "2026-08-15"
+    },
     {
       "slug": "agente-ia-para-restaurantes-de-tapas",
       "keyword": "agente ia para restaurantes de tapas",

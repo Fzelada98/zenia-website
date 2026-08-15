@@ -4646,3 +4646,18 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-restaurantes-de-ta
 #restauranttech #customerretention #AI #WhatsAppBusiness
 
 ---
+## 2026-08-15 - Chess academies lose 25% of families in silence, and the director never notices until the next invoice
+
+FIDE counts 25M kids in chess programs and the global chess market hit 3.45B USD in 2025, yet most academies still lose 28-41% of matriculation leads because nobody answers WhatsApp at 22:30 when parents finally have a moment.
+
+We built a personalized AI agent for a 120-student chess academy. It answers families in 6 seconds, handles matriculation and Stripe payments in the same thread, spots two missed classes before they become a silent dropout, and runs internal tournaments with automatic pairings and rating updates.
+
+Matriculation conversion jumped from 21% to 38%, trimester attrition fell from 14% to 5%, and the director recovered 8-10 hours a week to actually teach.
+
+Net ROI: +3,400 EUR/month against a 297-497 EUR tool.
+
+Full breakdown: https://zeniapartners.com/blog/agente-ia-para-academias-de-ajedrez.html
+
+#education #edtech #AI #WhatsAppBusiness
+
+---

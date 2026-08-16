@@ -4687,3 +4687,18 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-florerias.html
 #retailtech #ecommerce #AI #automation
 
 ---
+## 2026-08-16 - Karaoke bars lose 41% of birthday group reservations because nobody sees WhatsApp after midnight
+
+The global karaoke market crossed 5.9B USD in 2026 and the number of venues grew 15% in 5 years (News Market). Almost every group booking now lands on WhatsApp between 22:00 and 03:00 — exactly when a shared phone behind the bar is impossible to watch.
+
+We shipped a personalized AI agent for an urban karaoke with 6 private rooms. It answers in 8 seconds, quotes room + hour + upsell pack, charges the deposit through Bizum, and blocks the calendar before the group compares 3 other venues.
+
+Private-room occupancy Fri-Sat went from 68% to 91%, weeknight rooms from 34% to 58%, and average group ticket from 168 EUR to 214 EUR with automated upsell.
+
+Net ROI: +8,924 EUR/month against a 497 EUR tool.
+
+Full breakdown: https://zeniapartners.com/blog/agente-ia-para-karaokes.html
+
+#hospitalitytech #nightlife #AI #WhatsAppBusiness
+
+---

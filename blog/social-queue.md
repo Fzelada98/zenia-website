@@ -4676,3 +4676,14 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-restaurantes-turco
 #restauranttech #customerretention #AI #WhatsAppBusiness
 
 ---
+## 2026-08-16 - Flower shops lose 38% of digital orders because nobody sees WhatsApp after 8pm
+
+Subscription flower boxes retain 65-75% of customers at 6 months versus 38% for one-time buyers (Dojo Business, Upper). Most independent florists still run WhatsApp between arrangements and lose most of that upside.
+
+A personalized AI agent for a neighborhood flower shop lifted subscribers from 4 to 60, moved average ticket from 32 to 47 EUR with AI upsell, and cut delivery complaints 72%. Net ROI: +17,119 EUR/month.
+
+Full breakdown: https://zeniapartners.com/blog/agente-ia-para-florerias.html
+
+#retailtech #ecommerce #AI #automation
+
+---

@@ -4702,3 +4702,14 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-karaokes.html
 #hospitalitytech #nightlife #AI #WhatsAppBusiness
 
 ---
+## 2026-08-16 - Mediterranean restaurants leave 10-20K EUR/month on the table because WhatsApp reservations go unanswered after service
+
+A Valencia restaurant group with 3 Mediterranean venues (70 covers each) cut no-shows from 14% to 5% and pushed online reservations to 70% by replacing manual WhatsApp with a personalized AI agent. Investment: 380 EUR/month. ROI: 290% in 8 months.
+
+Across 22 Mediterranean restaurants we tracked in Spain, average occupancy jumped 61% to 78%, Google reviews per month went from 18 to 92, and 36% of new bookings now come outside opening hours (22:00-08:00) — reservations that literally did not exist before.
+
+Full breakdown with ROI math for a 70-cover venue: https://zeniapartners.com/blog/agente-ia-para-restaurantes-mediterraneos.html
+
+#restauranttech #hospitalitytech #AI #WhatsAppBusiness
+
+---

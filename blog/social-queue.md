@@ -4739,3 +4739,14 @@ Full ROI math in pesos: https://zeniapartners.com/blog/agente-ia-para-restaurant
 #restauranttech #customerretention #AI #WhatsAppBusiness
 
 ---
+## 2026-08-17 - A Lebanese restaurant runs 58% of its reservations through WhatsApp in three languages, and 41% of catering requests land between 22:00 and 09:00
+
+Most of those catering leads never get answered before the competition closes the deal. Group bookings for 8 to 20 people are 40% of a Lebanese restaurant's monthly ticket. Losing half of them to a slow reply is not a service problem, it's the entire margin.
+
+We shipped a personalized AI agent for a 70-cover Lebanese venue: replies in 7 seconds in Spanish, Arabic and English, closes catering menus for events under 60 guests automatically, and drops no-shows from 16% to 6%. Group bookings confirmed went from 41% to 78%, monthly upside estimated at 26,302 EUR on a 297 EUR/month tool.
+
+Full breakdown with ROI math: https://zeniapartners.com/blog/agente-ia-para-restaurantes-libaneses.html
+
+#restauranttech #customerretention #AI #WhatsAppBusiness
+
+---

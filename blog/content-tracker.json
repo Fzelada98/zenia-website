@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-08-17T14:20:00Z",
+  "lastRun": "2026-08-17T22:00:00Z",
   "posts": [
     {
       "slug": "agente-ia-para-restaurantes-turcos",
@@ -2756,6 +2756,14 @@
     {
       "slug": "agente-ia-para-restaurantes-colombianos",
       "keyword": "agente ia para restaurantes colombianos",
+      "tier": 1,
+      "cluster": "restaurantes",
+      "status": "published",
+      "date": "2026-08-17"
+    },
+    {
+      "slug": "agente-ia-para-restaurantes-libaneses",
+      "keyword": "agente ia para restaurantes libaneses",
       "tier": 1,
       "cluster": "restaurantes",
       "status": "published",

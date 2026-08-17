@@ -4713,3 +4713,16 @@ Full breakdown with ROI math for a 70-cover venue: https://zeniapartners.com/blo
 #restauranttech #hospitalitytech #AI #WhatsAppBusiness
 
 ---
+## 2026-08-17 - Self-defense academies lose 40% of WhatsApp leads because the instructor is on the mat teaching
+
+The typical self-defense academy gets 15-30 inquiries a week across WhatsApp and Instagram DMs. 61% go unanswered the same day, and 4 out of 10 requested trial classes never get booked because the message lands while the instructor is drilling a technique.
+
+We shipped a personalized AI agent for a 130-student academy: it answers in 8 seconds, books trial classes in the real calendar, charges monthly SEPA fees, recovers 78% of failed payments, and flags students who haven't shown up for 10+ days.
+
+Trial-to-paying conversion moved from 32% to 51%. 90-day churn dropped from 34% to 15%. Net upside: 25-34K EUR/year on a 297 EUR/month tool.
+
+Full breakdown by discipline (krav maga, BJJ, boxing, women's-only): https://zeniapartners.com/blog/agente-ia-para-academias-de-defensa-personal.html
+
+#fitnessindustry #memberretention #AI #WhatsAppBusiness
+
+---

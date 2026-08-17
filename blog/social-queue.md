@@ -4726,3 +4726,16 @@ Full breakdown by discipline (krav maga, BJJ, boxing, women's-only): https://zen
 #fitnessindustry #memberretention #AI #WhatsAppBusiness
 
 ---
+## 2026-08-17 - Bogotá restaurants lose 32% of their reservations to no-shows while WhatsApp messages sit unread between services
+
+71% of restaurants, cafés and hotels in Colombia already use WhatsApp as the primary channel, but the average local answers a reservation request 24-51 minutes late. That gap costs a 60-cover Chapinero venue between 25 and 45 million COP per month in unfilled tables, missed delivery orders and lost repeat customers.
+
+We shipped a personalized AI agent for a Colombian restaurant with 60 covers and 25 daily delivery orders: replies in 9 seconds, integrates with Rappi and DiDi Food inventory, charges via PSE and Nequi inside the same chat, and drops no-shows from 28% to 10% with a one-tap reminder 24h before.
+
+Occupancy went from 62% to 76%, average ticket up 12% via contextual upsell, monthly upside between 33 and 34 million COP on a tool costing under 2.2M/month. 36% of new bookings now arrive between 23:00 and 08:00 — orders that literally did not exist before.
+
+Full ROI math in pesos: https://zeniapartners.com/blog/agente-ia-para-restaurantes-colombianos.html
+
+#restauranttech #customerretention #AI #WhatsAppBusiness
+
+---

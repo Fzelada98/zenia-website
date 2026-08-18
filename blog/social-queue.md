@@ -4774,3 +4774,14 @@ Full ROI math for an 80-patient practice: https://zeniapartners.com/blog/agente-
 #healthtech #patientretention #AI #WhatsAppBusiness
 
 ---
+## 2026-08-18 - 38% of a Greek restaurant's WhatsApp bookings hit after midnight. The night maître doesn't check them. Guests book elsewhere
+
+Spain now has 180+ Greek restaurants in Madrid and Barcelona alone, and 71% of weekend bookings come through WhatsApp. Most tabernas still reply manually between services, so 4 out of 10 group requests for 6+ people (mezze night, birthday, cena de empresa) go to the Greek down the street.
+
+We shipped a personalized AI agent for a 55-seat Greek taberna: replies in 8 seconds any hour, proposes a closed mezze menu to any group of 6+, and syncs directly with the reservation book. No-shows dropped from 20% to 6%, group ticket average went from 28 to 34 EUR, +23,916 EUR net per month.
+
+Full ROI math and 5-week rollout: https://zeniapartners.com/blog/agente-ia-para-restaurantes-griegos.html
+
+#restauranttech #customerretention #AI #WhatsAppBusiness
+
+---

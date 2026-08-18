@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-08-17T22:00:00Z",
+  "lastRun": "2026-08-18T00:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-restaurantes-de-alta-cocina",
+      "keyword": "agente ia para restaurantes de alta cocina",
+      "tier": 1,
+      "cluster": "restaurantes",
+      "status": "published",
+      "date": "2026-08-18"
+    },
     {
       "slug": "agente-ia-para-restaurantes-turcos",
       "keyword": "agente ia para restaurantes turcos",

@@ -4750,3 +4750,16 @@ Full breakdown with ROI math: https://zeniapartners.com/blog/agente-ia-para-rest
 #restauranttech #customerretention #AI #WhatsAppBusiness
 
 ---
+## 2026-08-18 - Fine dining restaurants only get 51% of revenue from repeat guests, vs 65-80% in casual dining. The gap isn't the food
+
+Fine dining restaurants only get 51% of revenue from repeat guests, vs 65-80% in casual dining. The gap isn't the food, it's memory: no one remembers who Marta García is, that her husband is allergic to nuts, or which table she asked for last November.
+
+We shipped a personalized AI agent for a 45-seat Michelin-track restaurant: WhatsApp replies in 8 seconds, captures 30% prepay at booking, sends chef an allergen sheet before each service, and briefs the maître with a full VIP dossier 24 hours before the guest arrives.
+
+12-month retention went from 28% to 47%, no-shows from 13% to 4%, allergen errors from 5 per month to zero. Monthly upside: 13,334 EUR net on a 497 EUR/month tool.
+
+Full ROI math and 5-week rollout: https://zeniapartners.com/blog/agente-ia-para-restaurantes-de-alta-cocina.html
+
+#restauranttech #finedining #AI #WhatsAppBusiness
+
+---

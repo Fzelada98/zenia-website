@@ -4763,3 +4763,14 @@ Full ROI math and 5-week rollout: https://zeniapartners.com/blog/agente-ia-para-
 #restauranttech #finedining #AI #WhatsAppBusiness
 
 ---
+## 2026-08-18 - 45-60% of nutrition patients drop out before the fourth session. The problem isn't the diet, it's the silence between visits
+
+Between two appointments, a patient has a doubt at 22:00 on a Tuesday, gets no answer, and quietly quits. That single gap costs a mid-size dietitian practice 3,500 to 5,500 EUR a month in cancelled sessions, unsold plans and referrals that never happen.
+
+We shipped a personalized AI agent for dietitians: WhatsApp replies in 9 seconds 24/7, programmed adherence check-ins, clinical firewall that escalates every medication or symptom question to the professional. Adherence at week 4 jumped from 42% to 68%, retention through session four went from 45% to 78%.
+
+Full ROI math for an 80-patient practice: https://zeniapartners.com/blog/agente-ia-para-dietistas.html
+
+#healthtech #patientretention #AI #WhatsAppBusiness
+
+---

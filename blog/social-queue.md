@@ -4807,3 +4807,14 @@ Full ROI math and 5-week rollout: https://zeniapartners.com/blog/agente-ia-para-
 #retailtech #ecommerce #AI #WhatsAppBusiness
 
 ---
+## 2026-08-19 - Motorcycle repair shops answer WhatsApp 4 hours later. The customer already booked with the shop two doors down
+
+53% of independent workshops still book by phone or paper, and only 47% run an online calendar. Service department retention sits at 58% with 12,500 USD LTV per rider, and 28.6% of shops admit their biggest gap is bringing riders back.
+
+We shipped a personalized AI agent for a 3-lift moto workshop: WhatsApp replies in 8 seconds any hour, quotes from a photo, books straight into the calendar, and pings riders when their next revision hits by mileage. 41% of new bookings now land after closing hours, no-shows dropped from 15% to 6%, +6,100 EUR net per month.
+
+Full ROI math and 5-week rollout: https://zeniapartners.com/blog/agente-ia-para-talleres-de-motos.html
+
+#motorcycleindustry #workshopmanagement #AI #WhatsAppBusiness
+
+---

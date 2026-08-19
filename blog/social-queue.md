@@ -4785,3 +4785,14 @@ Full ROI math and 5-week rollout: https://zeniapartners.com/blog/agente-ia-para-
 #restauranttech #customerretention #AI #WhatsAppBusiness
 
 ---
+## 2026-08-19 - 21% of calls to a car repair shop go unanswered. 85% of those callers never call back
+
+A mid-size auto workshop takes 25 calls a day and quietly loses 5 of them. That is 3 booked services vanishing daily, roughly 21,000 EUR a month walking straight to the shop next door. Meanwhile front desk still spends 3 hours answering "how is my car going" and forgets 85% of ITV renewal dates.
+
+We shipped a personalized AI agent for a 4-bay workshop: WhatsApp replies in 8 seconds any hour, reads plate + service type, books into the real bay calendar, sends a quote range, and pings customers when ITV or mileage service is due. No-shows fell from 20% to 10%, missed calls under 3%, +22,216 EUR net per month.
+
+Full ROI math and 5-week rollout: https://zeniapartners.com/blog/agente-ia-para-talleres-de-coches.html
+
+#autorepair #automotive #AI #WhatsAppBusiness
+
+---

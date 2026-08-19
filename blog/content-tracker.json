@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-08-18T22:00:00Z",
+  "lastRun": "2026-08-19T14:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-talleres-de-coches",
+      "keyword": "agente ia para talleres de coches",
+      "tier": 1,
+      "cluster": "automocion",
+      "status": "published",
+      "date": "2026-08-19"
+    },
     {
       "slug": "agente-ia-para-dietistas",
       "keyword": "agente ia para dietistas",

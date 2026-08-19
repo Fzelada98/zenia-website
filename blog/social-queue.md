@@ -4796,3 +4796,14 @@ Full ROI math and 5-week rollout: https://zeniapartners.com/blog/agente-ia-para-
 #autorepair #automotive #AI #WhatsAppBusiness
 
 ---
+## 2026-08-19 - A costume shop's WhatsApp inbox goes 6x in October. The same 2 people are on the mostrador. Guess how many messages get answered
+
+Halloween and Carnaval account for the entire year for most costume shops. 49% of buyers start hunting in September, 34% of sales close in the final week, and 41% of chats hit outside store hours. Meanwhile team is on the floor cashing out, checking sizes in the stockroom, and 25% of WhatsApp messages die waiting.
+
+We shipped a personalized AI agent for a 120 m2 costume shop with a live catalog: replies in 10 seconds any hour, checks size and stock across store + warehouse, closes the sale with a pay link inside the chat, recovers 21% of abandoned carts, upsells wigs and makeup. Peak-month net: +33,510 EUR, average ticket from 41 to 52 EUR.
+
+Full ROI math and 5-week rollout: https://zeniapartners.com/blog/agente-ia-para-tiendas-de-disfraces.html
+
+#retailtech #ecommerce #AI #WhatsAppBusiness
+
+---

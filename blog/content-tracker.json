@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-08-19T14:00:00Z",
+  "lastRun": "2026-08-19T14:15:00Z",
   "posts": [
     {
       "slug": "agente-ia-para-talleres-de-coches",
@@ -2800,6 +2800,14 @@
       "cluster": "restaurantes",
       "status": "published",
       "date": "2026-08-18"
+    },
+    {
+      "slug": "agente-ia-para-tiendas-de-disfraces",
+      "keyword": "agente ia para tiendas de disfraces",
+      "tier": 1,
+      "cluster": "retail",
+      "status": "published",
+      "date": "2026-08-19"
     }
   ]
 }

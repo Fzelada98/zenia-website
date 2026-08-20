@@ -4844,3 +4844,16 @@ Full ROI breakdown: https://zeniapartners.com/blog/agente-ia-para-centros-de-est
 #beautyindustry #CRM #AI #WhatsAppBusiness
 
 ---
+## 2026-08-20 - Specialty camera stores get 41% of their sales chat between 21:00 and 09:00, when nobody is answering
+
+The camera-store industry sits at 3.2B USD in 2026 but most independent specialists still lose consultations to whoever replies first, and it is rarely the neighborhood shop at 11pm. 22% of inbound messages die in tab-switching between the ERP, the shop floor and the repair bench.
+
+We shipped a personalized AI agent for a specialty photo store: it consults live ERP stock in 9 seconds, quotes repair prices from a photo of the damage, books test appointments with the senior seller, and cross-sells the compatible filter on every body sold. Average ticket moved from 420 to 612 EUR (+46%), consultation-to-sale conversion from 11% to 19%.
+
+Recovered late-night leads + higher ticket + freed expert hours = +38,000 EUR net per month against a 300-500 EUR system cost.
+
+Full breakdown and 5-week rollout: https://zeniapartners.com/blog/agente-ia-para-tiendas-de-fotografia.html
+
+#retailtech #cameraindustry #AI #WhatsAppBusiness
+
+---

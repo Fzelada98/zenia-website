@@ -4818,3 +4818,16 @@ Full ROI math and 5-week rollout: https://zeniapartners.com/blog/agente-ia-para-
 #motorcycleindustry #workshopmanagement #AI #WhatsAppBusiness
 
 ---
+## 2026-08-20 - Primary care clinics lose 10-19% of appointments to no-shows. At 55 EUR per slot, that's 10,000+ EUR walking out of a 3-doctor family medicine practice every month
+
+MGMA benchmarks put family medicine no-show rates at 10.5-19% in 2025, and the Frontiers 2025 study on online scheduling shows a proper reminder sequence cuts them 20-38%. Most independent clinics still route everything through one saturated receptionist and a phone.
+
+We shipped a personalized AI agent for a 3-doctor family medicine clinic: WhatsApp replies in 8 seconds any hour, books into the real calendar, sends 48h/24h/2h reminders that dropped no-shows from 14% to 5%, and clears chronic prescription renewals under approved protocol. GDPR by design (no clinical data in messages, full audit log, DPO-signed retention).
+
+Recovered slots + new after-hours bookings + freed reception time = +17,000 EUR net per month against a 300-500 EUR system cost.
+
+Full ROI math and 5-week rollout: https://zeniapartners.com/blog/agente-ia-para-clinicas-de-medicina-familiar.html
+
+#healthtech #patientretention #AI #WhatsAppBusiness
+
+---

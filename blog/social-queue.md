@@ -4831,3 +4831,16 @@ Full ROI math and 5-week rollout: https://zeniapartners.com/blog/agente-ia-para-
 #healthtech #patientretention #AI #WhatsAppBusiness
 
 ---
+## 2026-08-20 - Beauty clinics lose 2,500-7,500 EUR a month to no-shows and empty booths. It has nothing to do with the treatments
+
+Spain's beauty sector bills over 11.2B EUR a year, and 84% of it is small centers with two or three booths. Yet 12-19% of appointments never show, and 35-45% of inbound messages land after closing time, when the esthetician is with a client and nobody can reply.
+
+We built a personalized AI agent for a 3-booth beauty center: it books over WhatsApp 24/7 respecting the real duration of each treatment, sends 48h/24h reminders that cut no-shows from 17% to 6%, refills cancelled slots from the waitlist in minutes, and flags unused treatment packages before they expire. Recovered appointments + after-hours bookings + saved reception hours = +5,700 EUR net per month against a 300-500 EUR system cost.
+
+The revenue was already yours. It just walked out through an empty booth on a Tuesday.
+
+Full ROI breakdown: https://zeniapartners.com/blog/agente-ia-para-centros-de-estetica.html
+
+#beautyindustry #CRM #AI #WhatsAppBusiness
+
+---

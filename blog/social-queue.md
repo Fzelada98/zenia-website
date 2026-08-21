@@ -4857,3 +4857,16 @@ Full breakdown and 5-week rollout: https://zeniapartners.com/blog/agente-ia-para
 #retailtech #cameraindustry #AI #WhatsAppBusiness
 
 ---
+## 2026-08-21 - Gas stations run on 6 to 9 cents of margin per liter. Every visit that does not become the next visit is a hole in the P&L.
+
+Loyalty transactions already account for 50 to 70% of a station's total revenue, and top operators hit an 85% monthly retention on their members (Petrosoft, 2026). Yet the average station still runs on a plastic points card, generic printed coupons, and a fleet-account inbox that answers 3 days late.
+
+We rolled out a personalized AI agent for a mid-traffic urban station: onboards members over WhatsApp in 8 seconds, sends dynamic coupons based on real consumption (coffee, wash, oil), and lets fleet managers pull statements, duplicates, and driver changes in under 60 seconds by chat. Spend per visit up 18 to 22%, fleet churn down from 14% to under 4%.
+
+For a station doing 800 fills/day at 42 EUR ticket, the net upside is around +23,000 EUR/month against a 300-500 EUR system cost. The margin was already yours. It just walked out through a fleet card that switched brand on a Monday.
+
+Full ROI breakdown and 5-week rollout: https://zeniapartners.com/blog/agente-ia-para-gasolineras.html
+
+#retailtech #fuelretail #AI #WhatsAppBusiness
+
+---

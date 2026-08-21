@@ -4870,3 +4870,14 @@ Full ROI breakdown and 5-week rollout: https://zeniapartners.com/blog/agente-ia-
 #retailtech #fuelretail #AI #WhatsAppBusiness
 
 ---
+## 2026-08-21 - Veterinary clinics lose 18 to 22% of scheduled appointments to no-shows: roughly 94,500 USD/year for the average practice (Staffingly, 2026).
+
+Clinics that layer automated 48h + 24h + morning-of reminders on WhatsApp drop no-shows to 8 to 12%, and AI-driven vaccine campaigns lift compliance by around 60% (Aunoa AI, 2026).
+
+We built a personalized AI agent for veterinary clinics: symptom triage in WhatsApp, booking straight into QVET/ClinicCloud, three-touch vaccine recall, and escalation only for critical urgencies. For a two-vet Spanish clinic at 70 EUR average ticket, recovered revenue lands around +10,500 EUR/month against a 300-500 EUR/month system cost.
+
+Full ROI breakdown and 4-week rollout: https://zeniapartners.com/blog/agente-ia-para-veterinarios.html
+
+#vetmed #healthtech #AI #WhatsAppBusiness
+
+---

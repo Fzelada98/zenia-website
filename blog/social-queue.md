@@ -4907,3 +4907,16 @@ Full breakdown and 5-week rollout: https://zeniapartners.com/blog/agente-ia-para
 #summercamp #edtech #AI #WhatsAppBusiness
 
 ---
+## 2026-08-22 - Brunch restaurants make 55-70% of the week's revenue in 8 hours. Sat and Sun, 10am to 2pm. Miss that window and the week is done.
+
+The global brunch market hit 34.3B USD in 2026 and is growing 5.8% per year (Market Intelo). But 38% of reservations arrive between 10pm and 8am, when nobody at the restaurant is answering. And the no-show rate on weekends is 22%, almost double a regular dinner.
+
+We built a personalized AI agent for brunch spots: WhatsApp replies in 10 seconds around the clock, active 12-hour confirmation that drops no-shows to 6-8%, dynamic walk-in waitlist. Saturday occupancy went from 68% to 91% in the pilot locations.
+
+Net ROI for a 60-seat brunch: about +8,600 EUR/month against 300-500 EUR/month in system cost.
+
+Full breakdown and 4-week rollout: https://zeniapartners.com/blog/agente-ia-para-restaurantes-de-brunch.html
+
+#restauranttech #brunch #AI #WhatsAppBusiness
+
+---

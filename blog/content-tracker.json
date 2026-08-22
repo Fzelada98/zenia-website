@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-08-22T14:00:00Z",
+  "lastRun": "2026-08-22T22:00:00Z",
   "posts": [
     {
       "slug": "agente-ia-para-campamentos-de-verano",
@@ -2878,6 +2878,14 @@
       "keyword": "agente ia para academias de esgrima",
       "tier": 1,
       "cluster": "deportes",
+      "status": "published",
+      "date": "2026-08-22"
+    },
+    {
+      "slug": "agente-ia-para-restaurantes-de-brunch",
+      "keyword": "agente ia para restaurantes de brunch",
+      "tier": 1,
+      "cluster": "restaurantes",
       "status": "published",
       "date": "2026-08-22"
     }

@@ -4881,3 +4881,16 @@ Full ROI breakdown and 4-week rollout: https://zeniapartners.com/blog/agente-ia-
 #vetmed #healthtech #AI #WhatsAppBusiness
 
 ---
+## 2026-08-22 - A fencing academy with 90 members runs three weapons, one master, one Excel, and a summer camp that pays 30% of the annual bill.
+
+The club management software market is growing from 6.02B to 6.84B USD in one year (Verified Market Research, 2026), but almost none of it is built for fencing: the master ends up chasing federation licenses, monthly fees, and camp waitlists on WhatsApp between bouts.
+
+We built a personalized AI agent for fencing academies: 12-second replies to parents, monthly fees auto-charged with staged retries, RFEE license renewals prepared in September, camp slots filled before flyers go out. Retention up from 82% to 93%, master's admin hours down from 12 to 3 per week, camp occupancy at 93%.
+
+For a 90-member club, net ROI lands around +3,100 EUR/month against a 300-500 EUR/month system cost. In a sport where every fencer counts double, that gap is the difference between opening a new group and closing one.
+
+Full breakdown and 5-week rollout: https://zeniapartners.com/blog/agente-ia-para-academias-de-esgrima.html
+
+#sportsmanagement #fencing #AI #WhatsAppBusiness
+
+---

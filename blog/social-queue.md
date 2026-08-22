@@ -4894,3 +4894,16 @@ Full breakdown and 5-week rollout: https://zeniapartners.com/blog/agente-ia-para
 #sportsmanagement #fencing #AI #WhatsAppBusiness
 
 ---
+## 2026-08-22 - The summer camp industry moves 18B USD and serves 26M kids, yet most camps still make parents wait until Monday morning for a reply.
+
+38% of camp enrollment messages land after 9pm or on Sundays, exactly when the parent finally has time to plan July. If nobody answers in 20 minutes, half of those families book somewhere else. A 120-slot camp typically leaves 40,000-80,000 EUR/year on the table because of it.
+
+We built a personalized AI agent for summer camps: WhatsApp replies in 8 seconds, sibling discounts applied automatically, deposits charged inside the chat, waitlist notifications the moment a slot frees up. Occupancy 72% to 91%, interannual repeat rate 48% to 72%.
+
+Net ROI for a 120-slot camp with 4 turns: about +74,000 EUR/year against a 500 EUR/month system cost.
+
+Full breakdown and 5-week rollout: https://zeniapartners.com/blog/agente-ia-para-campamentos-de-verano.html
+
+#summercamp #edtech #AI #WhatsAppBusiness
+
+---

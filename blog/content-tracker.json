@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-08-22T22:00:00Z",
+  "lastRun": "2026-08-23T00:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-clubes-de-tenis",
+      "keyword": "agente ia para clubes de tenis",
+      "tier": 1,
+      "cluster": "deportes",
+      "status": "published",
+      "date": "2026-08-23"
+    },
     {
       "slug": "agente-ia-para-campamentos-de-verano",
       "keyword": "agente ia para campamentos de verano",

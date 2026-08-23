@@ -4920,3 +4920,16 @@ Full breakdown and 4-week rollout: https://zeniapartners.com/blog/agente-ia-para
 #restauranttech #brunch #AI #WhatsAppBusiness
 
 ---
+## 2026-08-23 - Tennis clubs lose 4,400 to 9,000 EUR a month before anyone notices.
+
+A healthy tennis club retains 80%+ members per year and holds monthly churn below 2% (Private Club Marketing, 2026). Most private clubs never get there. Not because the sport is dead. Because a member who wants a court at 20:00 on Saturday finds no answer on WhatsApp until Monday morning, and by then someone else has the slot.
+
+We wired a personalized AI agent to the club's booking software and WhatsApp. Court reservations in 8 seconds, dynamic waitlist that fills a cancellation in 90 seconds, SEPA cobros that retry themselves, and an alert every time a member goes 30 days without booking so the club calls before they cancel.
+
+Peak-hour court occupancy went from 71% to 89%. Unpaid dues dropped from 9% to 3%. Annual member retention climbed 12 points.
+
+DM me if you run a racquet club and want the ROI breakdown for your court count.
+
+#racquetsports #memberretention #AI #WhatsAppBusiness
+
+---

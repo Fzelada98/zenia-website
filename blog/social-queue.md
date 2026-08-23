@@ -4947,3 +4947,14 @@ Full breakdown with metrics and ROI: https://zeniapartners.com/blog/agente-ia-pa
 #musiceducation #CRM #AI #WhatsAppBusiness
 
 ---
+## 2026-08-23 - Agente IA para agencias inmobiliarias
+
+Real estate agencies lose 78% of buyers to whichever agency answers first (NAR, 2026). The five-minute response gap converts 21x better than a 30-minute one, yet 44% of agents give up after the first touch on 80% of deals that need five or more.
+
+We wired a personalized AI agent to a 5-agent Spanish agency's Idealista and Fotocasa inbox with WhatsApp Business API. Every lead gets a full qualification and a booked visit in under 30 seconds, any hour. Lead-to-visit ratio jumped from 11% to 31%, no-show dropped from 21% to 7%, and net revenue landed at +14,500 EUR/month on a 500 EUR/month stack.
+
+Full breakdown with metrics and ROI: https://zeniapartners.com/blog/agente-ia-para-agencias-inmobiliarias.html
+
+#realestate #proptech #AI #WhatsAppBusiness
+
+---

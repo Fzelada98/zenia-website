@@ -4933,3 +4933,17 @@ DM me if you run a racquet club and want the ROI breakdown for your court count.
 #racquetsports #memberretention #AI #WhatsAppBusiness
 
 ---
+
+## 2026-08-23 - Agente IA para academias de batería
+
+Spanish drum academies lose 34% of new-family inquiries because nobody answers WhatsApp between drum lessons.
+
+Average academy: 90 students, 4 soundproof rooms, €9,450/mo. Losing 5 empty room slots and 3 early dropouts eats 12% of monthly revenue silently.
+
+We deployed a personalized AI agent for a music academy stack: matriculation conversion jumped from 19% to 42%, 3-month dropout fell from 22% to 6%, and peak-hour room occupancy went from 71% to 88%. Net ROI: +€4,500/month on a €9,450 base.
+
+Full breakdown with metrics and ROI: https://zeniapartners.com/blog/agente-ia-para-academias-de-bateria.html
+
+#musiceducation #CRM #AI #WhatsAppBusiness
+
+---

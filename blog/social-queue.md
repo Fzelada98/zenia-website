@@ -4971,3 +4971,14 @@ Full breakdown with metrics and ROI: https://zeniapartners.com/blog/agente-ia-pa
 #golfindustry #memberretention #AI #WhatsAppBusiness
 
 ---
+## 2026-08-24 - Agente IA para galerías de arte
+
+Art galleries lose 46% of inquiries when it takes more than 4 hours to answer, and the art gallery management software market hit 750M USD in 2025 growing at 15% CAGR (industry data). With average ticket per piece between 3,500 and 40,000 EUR, that response gap is a competitor closing your sale.
+
+We deployed a personalized AI agent for a mid-size gallery, integrated with their inventory and collector CRM over WhatsApp Business API. Response time went from 6 hours to 12 seconds, inquiry-to-visit conversion moved from 9% to 21%, and out-of-hours weekend sales jumped from 3% to 19% of total. Net ROI landed at +19,685 EUR/month on a 500 EUR/month stack.
+
+Full breakdown with metrics and ROI: https://zeniapartners.com/blog/agente-ia-para-galerias-de-arte.html
+
+#artgallery #CRM #AI #WhatsAppBusiness
+
+---

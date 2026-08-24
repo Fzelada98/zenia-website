@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-08-23T22:00:00Z",
+  "lastRun": "2026-08-24T14:00:00Z",
   "posts": [
     {
       "slug": "agente-ia-para-clubes-de-tenis",
@@ -2912,6 +2912,14 @@
       "cluster": "inmobiliarias",
       "status": "published",
       "date": "2026-08-23"
+    },
+    {
+      "slug": "agente-ia-para-academias-de-golf",
+      "keyword": "agente ia para academias de golf",
+      "tier": 1,
+      "cluster": "deportes",
+      "status": "published",
+      "date": "2026-08-24"
     }
   ]
 }

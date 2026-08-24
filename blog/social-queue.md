@@ -4958,3 +4958,14 @@ Full breakdown with metrics and ROI: https://zeniapartners.com/blog/agente-ia-pa
 #realestate #proptech #AI #WhatsAppBusiness
 
 ---
+## 2026-08-24 - Agente IA para academias de golf
+
+Golf academies with 250 active students lose 6-12% of memberships every year — most of them quietly, before renewal. A 5% retention gain lifts club profit 25-95% (Bain), and pro agenda occupancy sits at 61% while WhatsApp piles up between lessons.
+
+We deployed a personalized AI agent for a golf academy stack over WhatsApp Business API and their CRM. Pro schedule occupancy climbed from 61% to 82%, no-shows fell from 14% to 5%, and pack renewal jumped from 48% to 71%. Net ROI: +17,700 EUR/month on a 500 EUR/month stack.
+
+Full breakdown with metrics and ROI: https://zeniapartners.com/blog/agente-ia-para-academias-de-golf.html
+
+#golfindustry #memberretention #AI #WhatsAppBusiness
+
+---

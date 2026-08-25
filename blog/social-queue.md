@@ -4993,3 +4993,14 @@ Full breakdown with metrics and ROI: https://zeniapartners.com/blog/agente-ia-pa
 #danceindustry #memberretention #AI #WhatsAppBusiness
 
 ---
+## 2026-08-25 - Agente IA para estudios de grabación
+
+Recording studios lose 6-12 hours of empty room per week to slow WhatsApp replies, late cancellations, and forgotten deposits. The global sound recording studio market sits at $6.2B in 2026 (Kentley Insights), and Latin America grew 17.1% last year.
+
+We built a personalized AI agent for a 2-room studio: it books sessions, quotes, and collects deposits over WhatsApp 24/7, synced with the calendar and Stripe. Room occupancy jumped from 54% to 71%, 41% of late cancellations recovered through a smart waitlist, and 30-day unpaid dropped from 18% to 3%. Net ROI: +8,197 EUR/month on a 500 EUR/month stack.
+
+Full breakdown with metrics and ROI: https://zeniapartners.com/blog/agente-ia-para-estudios-de-grabacion.html
+
+#musicindustry #recordingstudio #AI #WhatsAppBusiness
+
+---

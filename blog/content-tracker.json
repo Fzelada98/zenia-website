@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-08-24T22:00:00Z",
+  "lastRun": "2026-08-25T06:00:00Z",
   "posts": [
     {
       "slug": "agente-ia-para-galerias-de-arte",
@@ -2928,6 +2928,14 @@
       "cluster": "deportes",
       "status": "published",
       "date": "2026-08-24"
+    },
+    {
+      "slug": "agente-ia-para-escuelas-de-danza",
+      "keyword": "agente ia para escuelas de danza",
+      "tier": 1,
+      "cluster": "deportes",
+      "status": "published",
+      "date": "2026-08-25"
     }
   ]
 }

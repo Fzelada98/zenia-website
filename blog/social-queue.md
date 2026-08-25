@@ -4982,3 +4982,14 @@ Full breakdown with metrics and ROI: https://zeniapartners.com/blog/agente-ia-pa
 #artgallery #CRM #AI #WhatsAppBusiness
 
 ---
+## 2026-08-25 - Agente IA para escuelas de danza
+
+Dance studios lose 30% of students every year, and 45% cite scheduling conflicts nobody caught in time (Jackrabbit Dance, 2026). At an average student lifetime value of $4,800, that quiet drop is not a soft metric.
+
+We wired a personalized AI agent to a mid-size studio's WhatsApp and CRM. Trial-to-enrollment conversion jumped from 34% to 58%, first-attempt tuition collection went from 72% to 94%, and annual dropout fell 10 points. Net ROI: +8,700 EUR/month on a 500 EUR/month stack.
+
+Full breakdown with metrics and ROI: https://zeniapartners.com/blog/agente-ia-para-escuelas-de-danza.html
+
+#danceindustry #memberretention #AI #WhatsAppBusiness
+
+---

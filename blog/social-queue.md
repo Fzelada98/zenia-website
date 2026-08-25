@@ -5004,3 +5004,14 @@ Full breakdown with metrics and ROI: https://zeniapartners.com/blog/agente-ia-pa
 #musicindustry #recordingstudio #AI #WhatsAppBusiness
 
 ---
+## 2026-08-25 - Agente IA para tapicerías
+
+Upholstery shops lose 55-70% of quote requests because they arrive on WhatsApp after 8pm, when the workshop is closed and photos pile up in a personal camera roll. The global upholstery repair market is $4.19B in 2025 (Data Intelo), with Spain's premium segment growing 4.18% CAGR.
+
+We wired a personalized AI agent to a 3-person shop's WhatsApp: it reads the photo, quotes a price range in 12 seconds, and books the home visit against the upholsterer's live calendar. Quote close rate jumped from 28% to 46%, off-hours capture went from 0% to 62%, and 24-month repurchase from 11% to 27%. Net ROI: +16,689 EUR/month on a 500 EUR/month stack.
+
+Full breakdown with metrics and ROI: https://zeniapartners.com/blog/agente-ia-para-tapicerias.html
+
+#upholstery #smallbusiness #AI #WhatsAppBusiness
+
+---

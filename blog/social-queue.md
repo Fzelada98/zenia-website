@@ -5037,3 +5037,14 @@ DM me if you run a pet-services business and want the ficha-del-perro flow spec.
 #petcare #petindustry #AI #WhatsAppBusiness
 
 ---
+## 2026-08-26 - Agente IA para clinicas de geriatria
+
+Spain has almost 10 million people over 65 (21.1% of the population, CSIC 2025) and half the calls to a geriatric clinic come from a son, a caregiver, or a nursing home, not the patient. Between 22% and 34% of those calls die outside office hours, and first-visit no-shows sit at 18-24%. A 4-specialist clinic leaves 6,000-12,000 EUR/month on the table.
+
+We wired a personalized AI agent to a geriatric clinic's WhatsApp with EHR integration: it identifies the authorized family contact, coordinates nursing homes on the same thread, and sends progressive reminders (72h, 24h, 2h). No-shows dropped to 6-8%, off-hours capture went from 0% to 41% of requests, and administrative time per professional fell 70%. Net ROI: +11,233 EUR/month on a 500 EUR/month stack.
+
+Full breakdown with metrics and ROI: https://zeniapartners.com/blog/agente-ia-para-clinicas-de-geriatria.html
+
+#healthtech #patientretention #AI #WhatsAppBusiness
+
+---

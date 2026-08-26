@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-08-26T14:00:00Z",
+  "lastRun": "2026-08-26T22:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-clinicas-de-geriatria",
+      "keyword": "agente ia para clinicas de geriatria",
+      "tier": 1,
+      "cluster": "clinicas",
+      "status": "published",
+      "date": "2026-08-26"
+    },
     {
       "slug": "agente-ia-para-residencias-caninas",
       "keyword": "agente ia para residencias caninas",

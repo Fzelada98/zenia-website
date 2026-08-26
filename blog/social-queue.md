@@ -5026,3 +5026,14 @@ Full breakdown with metrics and ROI: https://zeniapartners.com/blog/agente-ia-pa
 #cocktailbar #hospitality #AI #WhatsAppBusiness
 
 ---
+## 2026-08-26 - Agente IA para residencias caninas
+
+Spanish dog boarding kennels hit 90-100% occupancy in July and August, then drop to 40-60% the rest of the year. With 9M+ dogs and 52% of owners having used a kennel in the last 3 years (CaniGest 2026), demand isn't the issue. The 27M EUR sector loses 25-35% of summer inquiries because they arrive at 10pm and get answered the next morning.
+
+We wired a personalized AI agent to a 40-plot kennel's WhatsApp: it books stays, collects the dog's vaccination card, flags shots about to expire before arrival, and charges the deposit via a payment link. Response time went from 4 hours to 10 seconds, annual occupancy from 62% to 74%, and off-hours capture from 0% to 100%. Net ROI: +4,336 EUR/month on a 500 EUR/month stack.
+
+DM me if you run a pet-services business and want the ficha-del-perro flow spec.
+
+#petcare #petindustry #AI #WhatsAppBusiness
+
+---

@@ -253,6 +253,28 @@
     if (++reintentos > 20) clearInterval(vigilante);
   }, 700);
 
+
+  /* Registrar también los clics en el correo. El beacon original solo miraba
+   * `a[href*="wa.me"]`, así que quien escribía a fabrizzio.zelada@zeniapartners.com
+   * (publicado en 405 páginas) era INVISIBLE: llegó un lead real el 25-ago
+   * (Veterinaria Rondón) y no había forma de saber de qué página venía.
+   * Aquí no se abre formulario: se deja pasar el mailto y solo se anota. */
+  document.addEventListener("click", function (e) {
+    var t = e.target;
+    if (!t || !t.closest) return;
+    var a = t.closest('a[href^="mailto:"]');
+    if (!a) return;
+    try {
+      var h1 = document.querySelector("h1");
+      navigator.sendBeacon(ENDPOINT, JSON.stringify({
+        site: "zenia", path: location.pathname, ref: document.referrer || "",
+        kind: "email",
+        year: ((h1 ? h1.textContent : document.title) || "")
+          .replace(/\s+/g, " ").split(/\s*[|·:]\s*/)[0].trim().slice(0, 60)
+      }));
+    } catch (err) { /* nunca estorbar al usuario */ }
+  }, true);
+
   document.addEventListener("click", function (e) {
     var t = e.target;
     if (!t || !t.closest) return;

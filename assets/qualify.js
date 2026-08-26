@@ -160,7 +160,7 @@
 
     var priv = document.createElement("p");
     priv.className = "zq-priv";
-    priv.textContent = "Usamos estos datos solo para preparar tu propuesta y responderte por WhatsApp. No los vendemos ni los publicamos.";
+    priv.textContent = "Usamos estos datos solo para preparar tu propuesta y responderte por WhatsApp.";
     body.appendChild(priv);
 
     panel.appendChild(head); panel.appendChild(body); fondo.appendChild(panel);

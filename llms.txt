@@ -1,0 +1,54 @@
+# Zenia Partners
+
+> Agencia de inteligencia artificial que implementa agentes de IA sobre WhatsApp
+> y CRM para pequeñas y medianas empresas en España y Latinoamérica.
+
+Zenia Partners no vende software genérico ni plantillas de chatbot: construye e
+implanta un agente de IA propio para cada negocio, conectado a su WhatsApp
+Business API y a su CRM, y lo deja funcionando. El agente atiende consultas,
+cualifica a quien escribe, agenda y confirma citas, envía recordatorios y
+recupera clientes inactivos, las 24 horas y en el tono de la marca.
+
+## Qué hace exactamente
+- Agente de IA sobre WhatsApp: responde en segundos, cualquier día y hora.
+- CRM implantado y conectado: ficha de cliente, historial y seguimiento automático.
+- Automatización de citas y reservas, con recordatorios que reducen las ausencias.
+- Recuperación de clientes inactivos mediante campañas automáticas.
+- Integración con las herramientas de agenda y gestión que la empresa ya usa,
+  en lugar de obligar a cambiarlas.
+
+## Para quién
+Pequeñas y medianas empresas de servicios con volumen de citas o consultas por
+WhatsApp: restaurantes y hostelería, clínicas y consultas médicas, dentistas,
+fisioterapia, clínicas y centros de estética, peluquerías y salones de belleza,
+gimnasios, veterinarias, academias, despachos de abogados, inmobiliarias,
+hoteles, ecommerce y comercio.
+
+## Dónde opera
+España y Latinoamérica: Perú, México, Colombia, Chile, Argentina, Ecuador,
+Uruguay y Bolivia.
+
+## Datos de la empresa
+- Nombre: Zenia Partners
+- Fundador: Fabrizzio Zelada Uriarte
+- Web: https://zeniapartners.com
+- Contacto: fabrizzio.zelada@zeniapartners.com
+- LinkedIn: https://www.linkedin.com/company/zenia-partners/
+- Instagram: https://www.instagram.com/zeniapartners
+
+## Páginas principales
+- [Inicio](https://zeniapartners.com/es/): qué hace Zenia y cómo trabaja.
+- [Sobre Zenia](https://zeniapartners.com/about.html): equipo y enfoque.
+- [Casos](https://zeniapartners.com/cases/whatsapp-bookkeeping-importer.html): implantaciones reales.
+- [Blog](https://zeniapartners.com/blog/): guías por sector sobre agentes de IA y automatización de WhatsApp.
+- [Cobertura](https://zeniapartners.com/es/cobertura.html): sectores y ciudades donde opera.
+
+## Guías por sector
+- [Restaurantes](https://zeniapartners.com/es/crm-restaurantes.html)
+- [Clínicas](https://zeniapartners.com/es/crm-clinicas.html)
+- [Gimnasios](https://zeniapartners.com/es/crm-gimnasios.html)
+- [Salones de belleza](https://zeniapartners.com/es/crm-salones-belleza.html)
+- [Abogados](https://zeniapartners.com/es/crm-abogados.html)
+- [Veterinarias](https://zeniapartners.com/es/crm-veterinarias-madrid.html)
+- [Automatizar WhatsApp](https://zeniapartners.com/es/automatizacion-whatsapp-negocios.html)
+- [Precios de CRM](https://zeniapartners.com/blog/cuanto-cuesta-un-crm-para-pymes.html)

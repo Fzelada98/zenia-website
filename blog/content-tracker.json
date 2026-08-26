@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-08-25T14:15:00Z",
+  "lastRun": "2026-08-26T00:00:00Z",
   "posts": [
     {
       "slug": "agente-ia-para-tapicerias",
@@ -2952,6 +2952,14 @@
       "cluster": "creativo",
       "status": "published",
       "date": "2026-08-25"
+    },
+    {
+      "slug": "agente-ia-para-coctelerias",
+      "keyword": "agente ia para coctelerias",
+      "tier": 1,
+      "cluster": "bares",
+      "status": "published",
+      "date": "2026-08-26"
     }
   ]
 }

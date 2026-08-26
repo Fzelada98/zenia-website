@@ -5015,3 +5015,14 @@ Full breakdown with metrics and ROI: https://zeniapartners.com/blog/agente-ia-pa
 #upholstery #smallbusiness #AI #WhatsAppBusiness
 
 ---
+## 2026-08-26 - Agente IA para coctelerías
+
+Cocktail bars lose 41% of reservations and event inquiries because they arrive between midnight and 9am, when nobody's at the bar. The Spanish cocktail market grew 10% in recent years and cocktail consumption jumped 20% over the last 5, so the demand is there. What's missing is the response.
+
+We wired a personalized AI agent to a 50-seat cocktail bar's WhatsApp: it books tables, quotes private events, upsells mixology flights, and confirms 4 hours before service instead of 24. No-shows dropped from 20% to 7%, private-event close rate went from 25% to 55%, and average ticket rose 15-22%. Net ROI: +7,290 EUR/month on a 500 EUR/month stack.
+
+Full breakdown with metrics and ROI: https://zeniapartners.com/blog/agente-ia-para-coctelerias.html
+
+#cocktailbar #hospitality #AI #WhatsAppBusiness
+
+---

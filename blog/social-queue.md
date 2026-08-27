@@ -5059,3 +5059,19 @@ DM me if you run a nautical club or marina and want the berth-booking flow spec.
 #marinatech #hospitality #AI #WhatsAppBusiness
 
 ---
+
+## 2026-08-27 - Agente IA para tiendas de té
+
+Europe's tea market hits $20.86B in 2026, and Spain has the highest projected growth in Europe through 2033 (Mordor Intelligence).
+
+But a specialty tea shop that answers WhatsApp in 4 hours loses the sale to one that answers in 30 seconds. Volume isn't the problem. Response time is.
+
+We built a personalized AI agent for a small tea shop in Valencia: recommends teas by profile, closes orders 24/7, manages the monthly subscription and fills tastings without extra staff.
+
+120 days later: revenue +56%, active subscribers +138%, and €1,940/month in overnight orders that used to be zero. Owner went from 2.5 hours/day on chats to 25 minutes.
+
+DM me if you run a specialty retail store and want to see the exact flows and stack.
+
+#retailtech #ecommerce #AI #WhatsAppBusiness
+
+---

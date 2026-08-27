@@ -5075,3 +5075,18 @@ DM me if you run a specialty retail store and want to see the exact flows and st
 #retailtech #ecommerce #AI #WhatsAppBusiness
 
 ---
+## 2026-08-27 - Agente IA para clínicas del sueño
+
+35-40% of adults report a sleep problem, and public sleep-study waits in Spain hit 4-8 months (open respiratory data).
+
+Meanwhile only 40% of CPAP patients meet objective adherence: more than 4 hours a night, 5 nights a week. The other 60% quietly quit and never come back for consumables or follow-ups.
+
+We built a personalized AI agent for sleep clinics: it books polysomnography in 12 seconds on WhatsApp, sends prep reminders at 72h/24h/3h, and checks in on CPAP users at days 3, 7, 15, 30, 60, 90.
+
+Result on 220 first visits/month: no-shows down from 14% to 5%, CPAP adherence at 90 days from 40% to 72%, and around €18,700/month recovered net.
+
+DM me if you run a sleep or pulmonology clinic and want to see the exact flows and CRM stack.
+
+#healthtech #patientretention #AI #WhatsAppBusiness
+
+---

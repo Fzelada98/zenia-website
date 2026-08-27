@@ -5048,3 +5048,14 @@ Full breakdown with metrics and ROI: https://zeniapartners.com/blog/agente-ia-pa
 #healthtech #patientretention #AI #WhatsAppBusiness
 
 ---
+## 2026-08-27 - Agente IA para clubes nauticos
+
+Spain has 289 marinas, 134,200 berths, and around 400 nautical clubs (DBK Sectorial 2026). Most of them still track members and berth reservations in Excel and chase annual dues by phone. A mid-sized Mediterranean club leaks 60,000-90,000 EUR a year: 41% of transit-berth inquiries arrive outside office hours and never get answered, and 14% of annual dues go unpaid.
+
+We wired a personalized AI agent to a 420-member club's WhatsApp: it books transit berths (checking length, draft, beam in real time), collects overdue dues without the awkward phone call, and enrolls kids in the summer sailing camp with a signed medical form and deposit. Transit berth conversion went from 60% to 84%, dues delinquency dropped from 14% to 7%, and the summer camp filled at 92% on opening day. Net return: +80,548 EUR/year on a 6,000 EUR/year stack.
+
+DM me if you run a nautical club or marina and want the berth-booking flow spec.
+
+#marinatech #hospitality #AI #WhatsAppBusiness
+
+---

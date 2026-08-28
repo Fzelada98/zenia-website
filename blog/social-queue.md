@@ -5090,3 +5090,18 @@ DM me if you run a sleep or pulmonology clinic and want to see the exact flows a
 #healthtech #patientretention #AI #WhatsAppBusiness
 
 ---
+## 2026-08-28 - Agente IA para dark kitchens
+
+Aggregators take 22-35% of every order in a dark kitchen. A €18 ticket in Uber Eats leaves the operator €0.60 to €1.20 in net margin after food, packaging and commission.
+
+We built a personalized AI agent for multi-brand dark kitchens: it coordinates orders across Uber Eats, Glovo, Just Eat, WhatsApp and the KDS, and quietly migrates repeat customers to WhatsApp direct with a 3.2% payment gateway fee.
+
+On a 3-brand kitchen doing 180 orders/day: WhatsApp share climbs to 27% in 6 months, effective commission drops from 27.4% to 14.8%, ticket errors fall from 8% to under 1%, and repeat frequency at 30 days goes from 1.3 to 1.9 orders.
+
+Net impact around €18,500/month recovered on the same food volume.
+
+Reply if you run a dark kitchen or ghost brand and want the exact stack we use.
+
+#restauranttech #darkkitchens #AI #WhatsAppBusiness
+
+---

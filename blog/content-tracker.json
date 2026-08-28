@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-08-28T22:00:00Z",
+  "lastRun": "2026-08-28T23:00:00Z",
   "posts": [
+    {
+      "slug": "software-crm-en-valencia",
+      "keyword": "software crm en valencia",
+      "tier": 1,
+      "cluster": "crm-valencia",
+      "status": "published",
+      "date": "2026-08-28",
+      "source": "striking"
+    },
     {
       "slug": "crm-precios-comparativa-2026",
       "keyword": "crm precios",

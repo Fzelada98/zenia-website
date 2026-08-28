@@ -5131,3 +5131,21 @@ Reply if you want the full 5-vendor comparison table with 2026 numbers.
 #B2B #SaaS #CRM #AI
 
 ---
+
+## 2026-08-28 — AI Agent for Restaurants
+
+A pizza shop taking 80 calls a day and missing 25 loses ~$875/day. That is $26,000/month walking out the door.
+
+An AI agent on WhatsApp fixes the four leaks at once:
+- Missed calls fall to WhatsApp (30-40% recover as bookings/orders)
+- No-shows drop from 17% to 5% with a three-touch reminder sequence
+- Pickup orders skip aggregator fees (27-32% margin recovered)
+- Post-visit review requests go out at 90 min (37 new Google reviews/mo vs 2-3)
+
+Case study on a 42-seat Austin Italian: $21,800/mo recovered revenue, payback in 8 days.
+
+Full playbook + 2026 cost ranges: https://zeniapartners.com/blog/ai-agent-for-restaurants.html
+
+#Restaurants #AI #Hospitality #WhatsApp
+
+---

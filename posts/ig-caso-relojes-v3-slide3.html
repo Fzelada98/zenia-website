@@ -1,0 +1,45 @@
+<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><title>ig-caso-relojes-v3-slide3</title><style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { width:1080px; font-family:'Helvetica Neue',Arial,sans-serif; background:#0a0a0a; }
+  .slide { width:1080px; height:1350px; display:flex; flex-direction:column; justify-content:center; align-items:center; position:relative; overflow:hidden; background:radial-gradient(ellipse 120% 90% at 50% 0%, #161311 0%, #0a0a0a 55%, #060606 100%); padding:80px; }
+  .glow { position:absolute; top:-260px; right:-260px; width:720px; height:720px; border-radius:50%; background:radial-gradient(circle, rgba(212,184,140,0.08) 0%, transparent 68%); }
+  .serif { font-family:'Didot','Playfair Display',Georgia,serif; }
+  .badge { display:inline-block; font-size:14px; font-weight:600; letter-spacing:6px; text-transform:uppercase; color:#d4b88c; padding:12px 0; margin-bottom:24px; position:relative; z-index:2; }
+  .rule { width:64px; height:1px; background:linear-gradient(90deg, transparent, #b08d57, transparent); margin:0 auto 48px; position:relative; z-index:2; }
+  .rule.w { width:220px; }
+  .headline { font-family:'Didot','Playfair Display',Georgia,serif; font-size:72px; font-weight:400; color:#f5f0e8; text-align:center; line-height:1.18; letter-spacing:0.5px; max-width:920px; margin-bottom:34px; position:relative; z-index:2; }
+  .headline .gold { background:linear-gradient(115deg,#eadbb4 20%,#c9a468 55%,#eadbb4 85%); -webkit-background-clip:text; background-clip:text; color:transparent; font-style:italic; }
+  .subline { font-size:22px; color:#9a9186; text-align:center; max-width:760px; line-height:1.75; position:relative; z-index:2; letter-spacing:0.3px; }
+  .subline b { color:#7fb08c; font-weight:600; }
+  .kicker { font-size:15px; font-weight:600; letter-spacing:5px; text-transform:uppercase; color:#d4b88c; margin-bottom:14px; text-align:center; position:relative; z-index:2; }
+  .list { display:flex; flex-direction:column; gap:16px; width:100%; max-width:930px; position:relative; z-index:2; }
+  .watch { background:linear-gradient(180deg,#14110e, #100e0c); border:1px solid #241f18; border-radius:18px; padding:26px 34px; display:flex; align-items:center; gap:26px; }
+  .medal { width:74px; height:74px; min-width:74px; border-radius:50%; border:1px solid rgba(212,184,140,0.55); display:flex; align-items:center; justify-content:center; font-family:'Didot',Georgia,serif; font-size:28px; color:#d4b88c; background:radial-gradient(circle at 35% 30%, rgba(212,184,140,0.12), transparent 70%); }
+  .w-body { flex:1; }
+  .w-name { font-family:'Didot','Playfair Display',Georgia,serif; font-size:29px; font-weight:400; color:#f2ede4; letter-spacing:0.4px; }
+  .w-sub { font-size:15.5px; color:#7d756b; margin-top:7px; letter-spacing:0.3px; }
+  .w-val { font-family:'Didot',Georgia,serif; font-size:31px; white-space:nowrap; background:linear-gradient(115deg,#eadbb4,#c9a468); -webkit-background-clip:text; background-clip:text; color:transparent; text-align:right; }
+  .w-val small { display:block; font-family:'Helvetica Neue',Arial,sans-serif; font-size:12.5px; color:#6b6257; -webkit-text-fill-color:#6b6257; letter-spacing:1px; margin-top:4px; text-transform:uppercase; }
+  .stats-grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; width:100%; max-width:930px; margin-bottom:38px; position:relative; z-index:2; }
+  .stat-card { background:linear-gradient(180deg,#14110e,#100e0c); border:1px solid #241f18; border-radius:18px; padding:34px 36px; text-align:center; }
+  .stat-value { font-family:'Didot',Georgia,serif; font-size:64px; line-height:1.05; background:linear-gradient(115deg,#eadbb4 20%,#c9a468 70%); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .stat-value.plain { background:none; -webkit-text-fill-color:#f2ede4; color:#f2ede4; }
+  .stat-value.green { background:none; -webkit-text-fill-color:#7fb08c; color:#7fb08c; }
+  .stat-label { font-size:13px; font-weight:600; text-transform:uppercase; letter-spacing:2.5px; color:#6b6257; margin-top:12px; line-height:1.5; }
+  .note { font-size:14.5px; color:#5c554c; text-align:center; margin-top:28px; position:relative; z-index:2; max-width:780px; line-height:1.6; }
+  .cta { border-top:1px solid rgba(212,184,140,0.25); border-bottom:1px solid rgba(212,184,140,0.25); padding:36px 30px; max-width:860px; text-align:center; position:relative; z-index:2; }
+  .cta-text { font-size:23px; color:#c9c2b8; line-height:1.7; }
+  .cta-text .gold { color:#d4b88c; font-weight:600; }
+  .footer-tag { position:absolute; bottom:46px; left:0; right:0; text-align:center; font-size:13px; color:#3a352e; letter-spacing:3px; text-transform:uppercase; z-index:2; }
+  .arrow { position:absolute; bottom:96px; left:0; right:0; text-align:center; font-size:15px; letter-spacing:4px; color:#8a7a5e; z-index:2; text-transform:uppercase; }
+</style></head><body><div class='slide'><div class='glow'></div>
+  <div class="kicker">Todo esto, en menos de 2 meses</div>
+  <div class="rule w"></div>
+  <div class="stats-grid">
+    <div class="stat-card"><div class="stat-value">249</div><div class="stat-label">Conversaciones de WhatsApp<br>desde cero, en tiempo r&eacute;cord</div></div>
+    <div class="stat-card"><div class="stat-value plain">20</div><div class="stat-label">Pa&iacute;ses &middot; de Bogot&aacute; y Lima<br>a Londres y Madrid</div></div>
+    <div class="stat-card"><div class="stat-value green">0 &euro;</div><div class="stat-label">En anuncios &middot; 100% Google<br>(SEO internacional)</div></div>
+    <div class="stat-card"><div class="stat-value">24/7</div><div class="stat-label">Cualificaci&oacute;n autom&aacute;tica<br>y aviso al m&oacute;vil del due&ntilde;o</div></div>
+  </div>
+  <div class="note">Resultados r&aacute;pidos y 100% org&aacute;nicos: sin un euro en anuncios, los clientes encuentran Throwin' Salt en Google, la IA los cualifica y Anthony (@soyanthonypezer) solo atiende a quien merece la pena.</div>
+<div class='footer-tag'>Zenia Partners &middot; IA + Automatizaci&oacute;n</div></div></body></html>

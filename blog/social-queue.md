@@ -5105,3 +5105,16 @@ Reply if you run a dark kitchen or ghost brand and want the exact stack we use.
 #restauranttech #darkkitchens #AI #WhatsAppBusiness
 
 ---
+## 2026-08-28 - Content automation for retail (EN)
+
+Most mid-market retailers publish 3,000 to 6,000 content assets a year: product descriptions, category pages, WhatsApp flows, ad variants, marketplace listings. Doing it by hand is why 40 to 60 percent of SKUs still have day-one copy that never got updated.
+
+A home-goods retailer we implemented moved from 62 percent SKU coverage to 100 percent, expanded Amazon listings from 41 to 96 percent of catalog, cut campaign time from 6 days to 1.5, and lifted product-page conversion from 1.4 to 2.1 percent. Payback in 34 days.
+
+Full playbook: five-layer stack, the seven automations to build first, 2026 budget ranges, and the three mistakes that sink most rollouts.
+
+Read: https://zeniapartners.com/blog/content-automation-for-retail.html
+
+#retailtech #contentautomation #AI #ecommerce
+
+---

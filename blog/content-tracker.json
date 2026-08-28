@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-08-28T14:00:00Z",
+  "lastRun": "2026-08-28T22:00:00Z",
   "posts": [
+    {
+      "slug": "crm-precios-comparativa-2026",
+      "keyword": "crm precios",
+      "tier": 1,
+      "cluster": "crm-generico",
+      "status": "published",
+      "date": "2026-08-28",
+      "source": "striking"
+    },
     {
       "slug": "agente-ia-para-dark-kitchens",
       "keyword": "agente ia para dark kitchens",

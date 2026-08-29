@@ -5177,3 +5177,19 @@ For a 90k EUR studio, that's roughly +35k EUR of recovered revenue in year one. 
 #B2B #SaaS #AI #automation
 
 ---
+## 2026-08-29 - AI Agent for Dental Clinics (EN)
+
+US dental practices lose $105k to $240k a year to no-shows and unanswered calls. 35 to 40% of no-shows happen because the patient simply forgot, and 63% of after-hours callers pick the next clinic on Google instead of leaving voicemail.
+
+We ran the numbers on a three-op general practice in suburban Ohio after 90 days on WhatsApp + voice AI:
+- Confirmed no-shows: 8.1% to 3.2%
+- Same-day cancellation refills: 19% to 63%
+- Recall attendance: 41% to 67%
+- Missed inbound calls: 34/week to 6/week
+- Added monthly revenue: $46,600 (payback in week 2)
+
+Full playbook, guardrails, and 2-week rollout for Dentrix / Open Dental / Eaglesoft / Curve / Denticon: https://zeniapartners.com/blog/ai-agent-for-dental-clinics.html
+
+#Dental #AI #Automation #WhatsApp
+
+---

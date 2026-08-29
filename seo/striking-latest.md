@@ -11,7 +11,7 @@ Consultas donde zeniapartners.com ya imprime en posición 4-30 (últimos 8 días
 | 25.2 | 23 | cuanto cuesta un crm | /blog/cuanto-cuesta-un-crm-para-pymes.html |
 | 26.3 | 23 | precios de crm | /blog/cuanto-cuesta-un-crm-para-pymes.html |
 | 21.6 | 22 | crm para fotógrafos | /es/crm-fotografos.html · nuevo: [crm para fotógrafos](/blog/crm-para-fotografos.html) |
-| 19.8 | 21 | precios crm online | /blog/cuanto-cuesta-un-crm-para-pymes.html |
+| 19.8 | 21 | precios crm online | /blog/cuanto-cuesta-un-crm-para-pymes.html · nuevo: [precios crm online](/blog/crm-online-precios-guia-2026.html) |
 | 9.5 | 20 | crm belleza | /blog/crm-belleza-salon-estetica.html |
 | 4.8 | 17 | agente ia clínicas de estética | /blog/agente-ia-para-clinicas-esteticas.html |
 | 9.4 | 14 | agente ia clínicas de fisioterapia | /blog/agente-ia-para-fisioterapia.html |

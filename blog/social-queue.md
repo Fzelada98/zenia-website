@@ -5225,3 +5225,17 @@ Full playbook, HIPAA guardrails, and 2-week rollout for Boulevard / Zenoti / Aes
 #MedSpa #AI #Automation #WhatsApp
 
 ---
+
+## 2026-08-29 - IA para tiendas deportivas
+
+Sports retail in Spain hit €5.35B in 2025, up 13.6% year over year — and the average sports store still loses 32-41% of WhatsApp inquiries to slow response.
+
+Size, stock, shipping. Three questions, always the same, blocking the sale every night after the team goes home.
+
+We built a personalized AI agent for a mid-sized sports store: inquiries answered in 8 seconds 24/7, cart recovery from 5% to 18%, size-return refunds cut from 22% to 11%, and 38% of monthly sales now happen between 8pm and 1am — hours the shop wasn't even open before.
+
+Reply if you run a running, cycling or multi-sport store and want the exact flows we deployed.
+
+#retailtech #ecommerce #AI #automation
+
+---

@@ -17,7 +17,7 @@ Consultas donde zeniapartners.com ya imprime en posición 4-30 (últimos 8 días
 | 9.4 | 14 | agente ia clínicas de fisioterapia | /blog/agente-ia-para-fisioterapia.html |
 | 29.6 | 14 | automation whatsapp | /es/automatizacion-whatsapp-negocios.html |
 | 9.8 | 13 | agente ai clínicas de fisioterapia | /blog/agente-ia-para-fisioterapia.html |
-| 24.5 | 12 | ia para tiendas deportivas | /blog/agente-ia-para-tiendas-de-deportes.html |
+| 24.5 | 12 | ia para tiendas deportivas | /blog/agente-ia-para-tiendas-de-deportes.html · nuevo: [ia para tiendas deportivas](/blog/ia-para-tiendas-deportivas.html) |
 | 17.0 | 11 | agente ia clínicas de estética | /blog/agente-ia-para-clinicas-de-medicina-estetica.html |
 | 8.7 | 9 | automatización retail con ia | /blog/automatizacion-retail-tiendas-ia.html |
 | 4.8 | 9 | desarrollo agente ai peluquería | /blog/agente-ia-para-peluquerias.html |

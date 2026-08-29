@@ -5208,3 +5208,20 @@ Full 2026 pricing breakdown (Pipedrive, HubSpot, Zoho, Salesforce, Attio, Client
 #CRM #SaaS #B2B #automation
 
 ---
+## 2026-08-29 - AI Agent for Med Spas
+
+The average US med spa misses 35% of daytime calls, 100% after hours, and rebooks only 47% of first-time clients into a second visit. That is where growth actually leaks in 2026, not at the top of the funnel.
+
+We ran the numbers on a 4-room clinic in Plano, TX after 90 days on WhatsApp + voice AI:
+- Inbound calls captured: 65% to 92%
+- After-hours calls captured: 0% to 88% (15-20 recovered consults/month)
+- Consult no-shows: 21% to 7%
+- Same-day cancellation refill: 18% to 64%
+- First-to-second-visit rebook: 46% to 71%
+- Added monthly revenue: $56,600 (payback in week 2)
+
+Full playbook, HIPAA guardrails, and 2-week rollout for Boulevard / Zenoti / Aesthetic Record / PatientNow / Nextech: https://zeniapartners.com/blog/ai-agent-for-med-spas.html
+
+#MedSpa #AI #Automation #WhatsApp
+
+---

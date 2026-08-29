@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-08-29T00:00:00Z",
+  "lastRun": "2026-08-29T12:00:00Z",
   "market": "US/UK small business",
   "posts": [
     {
@@ -13,7 +13,7 @@
     },
     { "slug": "ai-agent-for-restaurants", "keyword": "ai agent for restaurants", "tier": 1, "cluster": "restaurants", "status": "published", "date": "2026-08-28" },
     { "slug": "ai-agent-for-dental-clinics", "keyword": "ai agent for dental clinics", "tier": 1, "cluster": "healthcare", "status": "published", "date": "2026-08-29" },
-    { "slug": "ai-agent-for-med-spas", "keyword": "ai agent for med spas", "tier": 1, "cluster": "beauty", "status": "pending" },
+    { "slug": "ai-agent-for-med-spas", "keyword": "ai agent for med spas", "tier": 1, "cluster": "beauty", "status": "published", "date": "2026-08-29" },
     { "slug": "ai-agent-for-gyms", "keyword": "ai agent for gyms", "tier": 1, "cluster": "fitness", "status": "pending" },
     { "slug": "ai-agent-for-law-firms", "keyword": "ai agent for law firms", "tier": 1, "cluster": "professional", "status": "pending" },
     { "slug": "ai-agent-for-real-estate", "keyword": "ai agent for real estate", "tier": 1, "cluster": "real-estate", "status": "pending" },

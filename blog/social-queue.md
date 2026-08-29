@@ -5193,3 +5193,18 @@ Full playbook, guardrails, and 2-week rollout for Dentrix / Open Dental / Eagles
 #Dental #AI #Automation #WhatsApp
 
 ---
+## 2026-08-29 - Precios CRM Online 2026
+
+The published price of an online CRM in 2026 sits between €14 and €90 per user per month. The actual year-1 bill lands 40 to 70 percent higher.
+
+Where the delta hides: active-contact caps that trigger tier jumps at 1k, 2.5k, 5k contacts; "premium" modules for AI, WhatsApp API and reporting billed as add-ons at €15 to €40 per user; mandatory onboarding on Enterprise plans (€3k to €12k for HubSpot alone); and monthly vs annual billing (Pipedrive published a 42% delta on their top plan this year).
+
+For a 6-person SMB, the real math on HubSpot Sales Pro + Marketing Starter with 5,000 marketing contacts is €1,400 to €1,800/month, not the €450 the pricing page implies. A vertical CRM with WhatsApp and AI baked in usually clears the same job for €297 to €497/month flat.
+
+The right number to compare against isn't "CRM A vs CRM B". It's "CRM vs the 15 to 30% of pipeline you drop today because Excel and a personal WhatsApp forgot the follow-up."
+
+Full 2026 pricing breakdown (Pipedrive, HubSpot, Zoho, Salesforce, Attio, Clientify) + the 1.4x correction formula I use before signing: https://zeniapartners.com/blog/crm-online-precios-guia-2026.html
+
+#CRM #SaaS #B2B #automation
+
+---

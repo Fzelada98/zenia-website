@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-08-28T23:00:00Z",
+  "lastRun": "2026-08-29T06:00:00Z",
   "posts": [
+    {
+      "slug": "crm-para-fotografos",
+      "keyword": "crm para fotógrafos",
+      "tier": 1,
+      "cluster": "crm-fotografos",
+      "status": "published",
+      "date": "2026-08-29",
+      "source": "striking"
+    },
     {
       "slug": "software-crm-en-valencia",
       "keyword": "software crm en valencia",

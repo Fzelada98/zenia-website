@@ -5161,3 +5161,19 @@ If you're picking or replacing CRM for a business under 30 people, this saves yo
 #B2B #SaaS #CRM #WhatsAppBusiness
 
 ---
+## 2026-08-29 - CRM for Photographers
+
+61% of pro photography studios billing over 60k a year still run on a spreadsheet, WhatsApp and a shared calendar. Every night around 22:00 a couple sends a wedding inquiry. Whoever replies first wins the shoot.
+
+We ran the numbers on 22 studios (8 Spain, 14 LATAM) after switching from manual to a CRM with an AI agent on WhatsApp:
+- Lead response time: 4-9 hours to 20-40 seconds
+- Quote to signed contract: 28% to 47%
+- Deposit collected at signature: 34% to 92%
+- Repeat clients year 2: 9% to 27%
+- Admin hours per week: 11 to 2
+
+For a 90k EUR studio, that's roughly +35k EUR of recovered revenue in year one. Reply if you're a photographer with the same night-inquiry problem, happy to send the full framework.
+
+#B2B #SaaS #AI #automation
+
+---

@@ -5278,3 +5278,14 @@ Full playbook and 2-week rollout for Clio, MyCase, PracticePanther, Lawmatics, F
 #LawFirm #LegalTech #AI #WhatsApp
 
 ---
+## 2026-08-30 - Nutrition Clinics: The Adherence Gap
+
+A nutrition clinic with two dietitians handles 180 to 260 WhatsApp messages a week. 46% never get answered the same day. That silence is why 41% of patients quietly quit before the second month.
+
+A Barcelona clinic wired an AI agent to WhatsApp, its calendar, and its clinical software. First reply in 8 seconds, first-visit no-shows from 22% to 8%, second-month dropout from 41% to 19%, third-month renewals from 34% to 58%. Roughly EUR 11,300 net a month on EUR 400 of software, and the dietist got back 7 clinical hours a week.
+
+DM me if you run a nutrition clinic and want the full 5-week rollout for ClinicFlow, Nubidoc, Nutrium, IA Clini or AgendaPro.
+
+#HealthTech #PatientRetention #AI #WhatsAppBusiness
+
+---

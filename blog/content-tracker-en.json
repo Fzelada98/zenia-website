@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-08-30T12:00:00Z",
+  "lastRun": "2026-08-30T14:00:00Z",
   "market": "US/UK small business",
   "posts": [
     {
@@ -15,7 +15,7 @@
     { "slug": "ai-agent-for-dental-clinics", "keyword": "ai agent for dental clinics", "tier": 1, "cluster": "healthcare", "status": "published", "date": "2026-08-29" },
     { "slug": "ai-agent-for-med-spas", "keyword": "ai agent for med spas", "tier": 1, "cluster": "beauty", "status": "published", "date": "2026-08-29" },
     { "slug": "ai-agent-for-gyms", "keyword": "ai agent for gyms", "tier": 1, "cluster": "fitness", "status": "published", "date": "2026-08-30" },
-    { "slug": "ai-agent-for-law-firms", "keyword": "ai agent for law firms", "tier": 1, "cluster": "professional", "status": "pending" },
+    { "slug": "ai-agent-for-law-firms", "keyword": "ai agent for law firms", "tier": 1, "cluster": "professional", "status": "published", "date": "2026-08-30" },
     { "slug": "ai-agent-for-real-estate", "keyword": "ai agent for real estate", "tier": 1, "cluster": "real-estate", "status": "pending" },
     { "slug": "ai-agent-for-salons", "keyword": "ai agent for hair salons", "tier": 1, "cluster": "beauty", "status": "pending" },
     { "slug": "ai-agent-for-hotels", "keyword": "ai agent for hotels", "tier": 1, "cluster": "hospitality", "status": "pending" },

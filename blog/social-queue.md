@@ -5239,3 +5239,18 @@ Reply if you run a running, cycling or multi-sport store and want the exact flow
 #retailtech #ecommerce #AI #automation
 
 ---
+## 2026-08-30 - CRM para empresas en Valencia
+
+Valencia added 4,925 new companies in Q1 2026 alone — a 34.8% jump, the largest of any big Spanish region.
+
+More companies, same buyers, more noise on WhatsApp. A distributor near Aldaia we audited was answering leads in 3h 17min on average and closing 9% of qualified deals.
+
+We rebuilt the CRM around a personalized AI agent inside WhatsApp Business API, wired to their ERP and the Spanish e-invoicing stack. Five months later: 12-second first reply, 21% close rate (2.3x), 51% 90-day repurchase, and €187,000 in incremental revenue over the semester.
+
+The CRM wasn't the lever. Putting the agent inside the WhatsApp thread and cleaning the data flow to the ERP was.
+
+Reply if you're running a Valencia SMB and want the seven-criteria checklist we use before recommending any vendor.
+
+#B2B #SaaS #AI #automation
+
+---

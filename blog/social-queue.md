@@ -5254,3 +5254,15 @@ Reply if you're running a Valencia SMB and want the seven-criteria checklist we 
 #B2B #SaaS #AI #automation
 
 ---
+
+## 2026-08-30 - AI Agent for Gyms
+
+67% of gym membership inquiries that wait more than an hour for a reply never convert. In an industry where the median studio churns 20% of members every year, that first hour is the whole ballgame.
+
+A 3-location boutique in Austin wired an AI agent to WhatsApp, Instagram, and their Mariana Tek calendar. 90 days later: first reply in 45 seconds, trial-to-member from 32% to 58%, class no-shows from 22% to 9%, and 74 dormant members reactivated. $48,700 in monthly upside on $1,750 of software.
+
+Full playbook and 2-week rollout for Mindbody / Mariana Tek / Glofox / ClubReady / Zen Planner / Wodify: https://zeniapartners.com/blog/ai-agent-for-gyms.html
+
+#GymOwners #FitnessIndustry #AI #WhatsApp
+
+---

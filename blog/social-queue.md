@@ -5301,3 +5301,15 @@ Full 2-week rollout with the exact channels, escalation triggers, and CRM wiring
 #RealEstate #PropTech #AI #WhatsAppBusiness
 
 ---
+
+## 2026-08-31 - AI Agent for Hair Salons
+
+46% of hair salon bookings happen when the salon is closed. 15-30% of the ones that do book quietly ghost the chair. That quiet leak is $31,000 per chair per year on a mid-tier ticket.
+
+A 5-chair Austin color salon wired an AI agent to WhatsApp, Instagram DM, SMS, and Booksy: after-hours bookings captured at 98%, no-shows from 18% to 6.4%, chair utilization from 66% to 81%, rebooking from 44% to 63%. +$28,400 in 90 days without hiring.
+
+Full 2-week rollout for Fresha, Vagaro, Boulevard, Booksy, and Square Appointments: https://zeniapartners.com/blog/ai-agent-for-hair-salons.html
+
+#SalonOwners #HairSalon #AI #WhatsAppBusiness
+
+---

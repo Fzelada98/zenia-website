@@ -17,7 +17,7 @@
     { "slug": "ai-agent-for-gyms", "keyword": "ai agent for gyms", "tier": 1, "cluster": "fitness", "status": "published", "date": "2026-08-30" },
     { "slug": "ai-agent-for-law-firms", "keyword": "ai agent for law firms", "tier": 1, "cluster": "professional", "status": "published", "date": "2026-08-30" },
     { "slug": "ai-agent-for-real-estate", "keyword": "ai agent for real estate", "tier": 1, "cluster": "real-estate", "status": "published", "date": "2026-08-31" },
-    { "slug": "ai-agent-for-salons", "keyword": "ai agent for hair salons", "tier": 1, "cluster": "beauty", "status": "pending" },
+    { "slug": "ai-agent-for-hair-salons", "keyword": "ai agent for hair salons", "tier": 1, "cluster": "beauty", "status": "published", "date": "2026-08-31" },
     { "slug": "ai-agent-for-hotels", "keyword": "ai agent for hotels", "tier": 1, "cluster": "hospitality", "status": "pending" },
     { "slug": "ai-agent-for-ecommerce", "keyword": "ai agent for ecommerce", "tier": 1, "cluster": "ecommerce", "status": "pending" },
     { "slug": "ai-agent-for-accounting-firms", "keyword": "ai agent for accounting firms", "tier": 1, "cluster": "professional", "status": "pending" },

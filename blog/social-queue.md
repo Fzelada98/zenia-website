@@ -5313,3 +5313,14 @@ Full 2-week rollout for Fresha, Vagaro, Boulevard, Booksy, and Square Appointmen
 #SalonOwners #HairSalon #AI #WhatsAppBusiness
 
 ---
+## 2026-08-31 - Agente IA para Clínicas de Oncología
+
+Oncology clinics quietly lose 25% of their scheduled appointments to no-shows, and every skipped session pushes the next treatment cycle further out.
+
+A 40-patient/day center wired an AI agent to WhatsApp: a 48h + 24h + day-of reminder sequence with protocol rules that catch low-platelet reschedules before they turn into gaps. Six weeks in, no-shows dropped from 24% to 6%, oral-therapy adherence climbed from 58% to 80%, and coordinators got 2.5 hours a day back to spend on patients instead of the phone.
+
+Full 6-week rollout with escalation triggers, RGPD setup, and CRM wiring: https://zeniapartners.com/blog/agente-ia-para-clinicas-de-oncologia.html
+
+#healthtech #patientretention #AI #WhatsAppBusiness
+
+---

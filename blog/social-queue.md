@@ -5324,3 +5324,14 @@ Full 6-week rollout with escalation triggers, RGPD setup, and CRM wiring: https:
 #healthtech #patientretention #AI #WhatsAppBusiness
 
 ---
+## 2026-09-01 - AI Agent for Hotels
+
+63.4% of independent-hotel bookings still come through OTAs at 15-25% commission. On a $200 room that is $36 out the door vs $9 direct.
+
+A 24-room Charleston boutique wired an AI agent to WhatsApp, website chat, SMS, and Instagram DM (with the PMS underneath): first reply from 6.4 hours to 41 seconds, OTA share 55% to 42%, no-shows 19% to 7.4%, and $9,800 in pre-arrival upsells in 90 days. No new hires.
+
+Full 4-week rollout with the exact channel stack, PMS wiring, and upsell playbook: https://zeniapartners.com/blog/ai-agent-for-hotels.html
+
+#Hospitality #HotelTech #AI #WhatsAppBusiness
+
+---

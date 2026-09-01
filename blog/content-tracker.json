@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-08-31T22:00:00Z",
+  "lastRun": "2026-09-01T06:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-restaurantes-franceses",
+      "keyword": "agente ia para restaurantes franceses",
+      "tier": 1,
+      "cluster": "restaurantes",
+      "status": "published",
+      "date": "2026-09-01"
+    },
     {
       "slug": "agente-ia-para-clinicas-de-oncologia",
       "keyword": "agente ia para clinicas de oncologia",

@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-09-01T06:00:00Z",
+  "lastRun": "2026-09-01T14:00:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-vinotecas",
+      "keyword": "agente ia para vinotecas",
+      "tier": 1,
+      "cluster": "retail",
+      "status": "published",
+      "date": "2026-09-01"
+    },
     {
       "slug": "agente-ia-para-restaurantes-franceses",
       "keyword": "agente ia para restaurantes franceses",

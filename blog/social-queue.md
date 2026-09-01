@@ -5365,3 +5365,16 @@ Full playbook (channels, integrations, 7 automations in order, 4-week rollout): 
 #Shopify #DTC #ecommerce #AI #WhatsAppBusiness
 
 ---
+## 2026-09-01 - Agente IA para Marisquerías
+
+A 70-cover seafood restaurant in Spain runs a €68 average ticket and 12% no-shows. That combination bleeds €13-27K per month, mostly on Friday and Saturday large groups.
+
+Nobody watches WhatsApp between 13:30 and 16:30. The party of 8 asking about the langoustines just books elsewhere.
+
+We deployed a personalized AI agent for three seafood restaurants in Galicia, Madrid and Valencia. It cross-checks the daily catch loaded that morning by the kitchen, takes a 20% deposit for groups of 6+ over WhatsApp, and pairs Albariño with lobster in the same chat. Weekend occupancy 78% to 94%, no-shows 12% to 4%, beverage ticket up 16% from wine pairing suggestions.
+
+Full breakdown with metrics and ROI: https://zeniapartners.com/blog/agente-ia-para-marisquerias.html
+
+#restauranttech #customerretention #AI #WhatsAppBusiness
+
+---

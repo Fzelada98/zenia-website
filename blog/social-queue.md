@@ -5335,3 +5335,19 @@ Full 4-week rollout with the exact channel stack, PMS wiring, and upsell playboo
 #Hospitality #HotelTech #AI #WhatsAppBusiness
 
 ---
+
+## 2026-09-01 - Agente IA para Vinotecas
+
+22% of a Spanish wine shop's monthly revenue arrives by WhatsApp between 22:00 and 08:00, when nobody is behind the counter.
+
+Buyers decide in bed what they will bring to dinner Saturday. If the local vinoteca replies twelve hours later, the sale already went to a next-day delivery app. ICEX 2026 puts specialty wine channels at 3.44M hectoliters, growing 1.7% in value.
+
+We built a personalized AI agent for three Spanish vinotecas, trained on their real bottle list and the owner's tasting notes. Six months in: average ticket climbed from €32 to €43, tasting seats filled from 62% to 93%, wine-club churn cut from 6% to 2.3%, and 4 sales a day recovered outside opening hours.
+
+Full breakdown with ROI math: https://zeniapartners.com/blog/agente-ia-para-vinotecas.html
+
+Reply if you run a wine shop or a bottle boutique and want the recommendation framework we used.
+
+#retailtech #ecommerce #AI #WhatsAppBusiness
+
+---

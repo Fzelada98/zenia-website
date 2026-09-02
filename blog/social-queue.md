@@ -5417,3 +5417,20 @@ Full 2-week playbook, native ServiceTitan/Jobber/Housecall Pro sync, pricing: ht
 #contractors #hvac #plumbing #AI #WhatsAppBusiness
 
 ---
+## 2026-09-02 - Programa de referidos para gimnasios
+
+Gym referral programs convert at 41%. Meta Ads for the same gym converts at 1-3%.
+
+The gap is not the incentive. It is where the referral lives.
+
+Most gyms still ask the member to fill a form, hand a code to a friend, and remind reception. Conversion collapses to 5% before the friend ever books a class. We move the entire circuit to WhatsApp with a personalized AI agent: the promoter answers one message with a name and a phone, the friend gets contacted in under 2 minutes and books a trial class in the same chat.
+
+Outcome on a 400-member boutique gym: 6 new sign-ups/month at 22 EUR CAC vs 78 EUR on Meta Ads. Referred members show 37% higher LTV and 24% less churn than paid-acquired ones. Payback of the full stack under 60 days.
+
+DM me if you run a gym or a boutique studio and want the exact templates and segmentation we use.
+
+Full breakdown: https://zeniapartners.com/blog/programa-referidos-gimnasio-whatsapp.html
+
+#fitnessindustry #memberretention #AI #WhatsAppBusiness
+
+---

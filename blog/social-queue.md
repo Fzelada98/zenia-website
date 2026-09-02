@@ -5389,3 +5389,19 @@ Full playbook (5 workflows, integrations, AICPA guardrails, 2-week rollout): htt
 #CPA #accountingfirms #AI #WhatsAppBusiness
 
 ---
+
+## 2026-09-02 - Agente IA para tiendas de motos
+
+Spain matriculated 398,219 motorcycles in H1 2026, the best first semester since 2008, and 1,322 dealerships are fighting for the same lead.
+
+The lead that decides between two dealerships doesn't compare price. It compares who answered first.
+
+We deployed a personalized AI agent on WhatsApp Business API for a 22-units-per-month motorcycle dealer: response time from 4h 20min to 8 seconds, test rides booked +133%, accessories per sale up from 1.4 to 2.7, dormant CRM base reactivated at 6-9%. Net impact ~59,000 EUR/month against ~500 EUR of cost.
+
+DM me if you run a dealership and want the exact flows we deployed (DMS integration, financing prescription, gear cross-sell).
+
+Full breakdown: https://zeniapartners.com/blog/agente-ia-para-tiendas-de-motos.html
+
+#retailtech #automotive #AI #WhatsAppBusiness
+
+---

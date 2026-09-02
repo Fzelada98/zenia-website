@@ -5378,3 +5378,14 @@ Full breakdown with metrics and ROI: https://zeniapartners.com/blog/agente-ia-pa
 #restauranttech #customerretention #AI #WhatsAppBusiness
 
 ---
+## 2026-09-02 - AI Agent for Accounting Firms
+
+An accountant at a US CPA firm loses roughly 240 hours per year, worth about $19,000 in recovered billable capacity, to chasing receipts, coding transactions and answering the same 30 questions.
+
+We deployed an AI agent for a 6-person Denver CPA firm on WhatsApp + email, wired into QuickBooks Online, Karbon and SmartVault. Ninety days later: source-doc turnaround from 11 days to 3, month-end close from 9 to 5 business days, billable hours per accountant from 22 to 32, stuck WIP from $61K to $19K. Partners went from 14-18 hours/week on inbound questions to 4-6.
+
+Full playbook (5 workflows, integrations, AICPA guardrails, 2-week rollout): https://zeniapartners.com/blog/ai-agent-for-accounting-firms.html
+
+#CPA #accountingfirms #AI #WhatsAppBusiness
+
+---

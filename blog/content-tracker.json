@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-09-01T22:00:00Z",
+  "lastRun": "2026-09-02T06:00:00Z",
   "posts": [
+    {
+      "slug": "agencia-crm-barcelona",
+      "keyword": "agencia crm barcelona",
+      "tier": 1,
+      "cluster": "crm-barcelona",
+      "status": "published",
+      "date": "2026-09-02",
+      "source": "striking"
+    },
     {
       "slug": "agente-ia-para-marisquerias",
       "keyword": "agente ia para marisquerias",

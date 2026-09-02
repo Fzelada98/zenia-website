@@ -5405,3 +5405,15 @@ Full breakdown: https://zeniapartners.com/blog/agente-ia-para-tiendas-de-motos.h
 #retailtech #automotive #AI #WhatsAppBusiness
 
 ---
+
+## 2026-09-02 - AI Agent for Contractors
+
+US contractors miss 27% of their inbound calls, and 85% of those callers never call back. That is $45K to $120K a year walking to the next contractor on Google.
+
+A 90-day rollout on voice + WhatsApp + web form for a mid-size HVAC/plumbing shop: missed calls 92 -> 4 per month, after-hours capture 11% -> 96%, web lead response 4h 18m -> 48 seconds, estimate show-rate 63% -> 84%, booked jobs +64%, revenue +$72K/month. Same phone number, same ad spend.
+
+Full 2-week playbook, native ServiceTitan/Jobber/Housecall Pro sync, pricing: https://zeniapartners.com/blog/ai-agent-for-contractors.html
+
+#contractors #hvac #plumbing #AI #WhatsAppBusiness
+
+---

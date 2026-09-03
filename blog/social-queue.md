@@ -5436,3 +5436,18 @@ Full breakdown: https://zeniapartners.com/blog/programa-referidos-gimnasio-whats
 #fitnessindustry #memberretention #AI #WhatsAppBusiness
 
 ---
+## 2026-09-03 - Agent stack for specialty coffee shops
+
+A specialty coffee shop is a stateful problem: identify the returning customer in 200ms, decide upsell against inventory in real time, and never miss the moment they slip into churn.
+
+Stack we run for this vertical: WhatsApp Business Cloud API for transport, a vertical LLM agent (small model, tool-calling) with memory tied to a per-customer vector row, webhooks into the POS (Square/Lightspeed/Revo/Loyverse) to ingest tickets, Stripe/Bizum for prepaid pickup, all glued through a job queue that keeps p95 message-in-to-message-out under 900ms.
+
+The interesting part is not the agent, it is the memory layer. Loyalty runs on ticket ingestion + rolling frequency window, not on a stamp counter. Churn detection is a delta on the customer's own baseline, not a global heuristic. That is what moves visit frequency +38% and lifts recurring-customer recovery to 28% on the 90-day cohort.
+
+No mobile app. No push infra. WhatsApp is the client, the POS is the source of truth, the agent is the reasoning layer.
+
+Architecture notes and integration surface: https://zeniapartners.com/blog/agente-ia-para-cafeterias-de-especialidad.html
+
+#B2B #WhatsAppBusinessAPI #AI #systemsdesign
+
+---

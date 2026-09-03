@@ -5480,3 +5480,19 @@ Architecture notes and rollout: https://zeniapartners.com/blog/ai-agent-for-auto
 #B2B #WhatsAppBusinessAPI #systemsdesign #AI
 
 ---
+
+## 2026-09-03 - Agente IA para Estancos (ES)
+
+Field notes from a Spanish tobacconist ("estanco") deployment: a heavily regulated retail vertical with fixed 8.5% margins on tobacco, strict advertising bans, and TPV systems (Estanco Digital, Sistemat, Aitana) built before REST was a thing.
+
+Stack: WhatsApp Business API (Meta Cloud) on the shop's existing landline-linked number, an LLM tool-use loop with hard-coded legal guardrails (never promote a brand, never suggest consumption, transactional replies only), a lightweight sync worker that polls the TPV every 30s to mirror SKU stock and write reservations back, and a supplier-agenda ingest that predicts arrival dates for special orders (habanos, vaping premium).
+
+Two numbers worth flagging under load: first-response p95 on WhatsApp held at 9s across 450 tickets/day of parallel foot traffic, and the SKU resolver hit 94% match accuracy on abbreviated/typo'd queries ("cohiba rob", "marlb gold ct") without escalating to human. Stock-consult conversion moved from 58% to 96% once the agent could quote a concrete restock date instead of "call back later".
+
+The hardest part was not the LLM. It was compressing three unrelated proprietary TPVs into one deterministic tool surface that could answer stock, reserve a SKU, and trigger the arrival webhook without touching the fiscal side of the terminal.
+
+Full architecture and rollout: https://zeniapartners.com/blog/agente-ia-para-estancos.html
+
+#B2B #WhatsAppBusinessAPI #systemsdesign #AI
+
+---

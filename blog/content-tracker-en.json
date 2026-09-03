@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-09-02T14:00:00Z",
+  "lastRun": "2026-09-03T14:00:00Z",
   "market": "US/UK small business",
   "posts": [
     {
@@ -22,7 +22,7 @@
     { "slug": "ai-agent-for-ecommerce", "keyword": "ai agent for ecommerce", "tier": 1, "cluster": "ecommerce", "status": "published", "date": "2026-09-01" },
     { "slug": "ai-agent-for-accounting-firms", "keyword": "ai agent for accounting firms", "tier": 1, "cluster": "professional", "status": "published", "date": "2026-09-02" },
     { "slug": "ai-agent-for-contractors", "keyword": "ai agent for contractors", "tier": 1, "cluster": "trades", "status": "published", "date": "2026-09-02" },
-    { "slug": "ai-agent-for-cleaning-services", "keyword": "ai agent for cleaning services", "tier": 1, "cluster": "services", "status": "pending" },
+    { "slug": "ai-agent-for-cleaning-services", "keyword": "ai agent for cleaning services", "tier": 1, "cluster": "services", "status": "published", "date": "2026-09-03" },
     { "slug": "ai-agent-for-auto-repair-shops", "keyword": "ai agent for auto repair shops", "tier": 1, "cluster": "auto", "status": "pending" },
     { "slug": "ai-agent-for-personal-trainers", "keyword": "ai agent for personal trainers", "tier": 1, "cluster": "fitness", "status": "pending" },
     { "slug": "ai-agent-for-photographers", "keyword": "ai agent for photographers", "tier": 1, "cluster": "creative", "status": "pending" },

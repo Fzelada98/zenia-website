@@ -38,6 +38,20 @@ Full breakdown with metrics and ROI: https://zeniapartners.com/blog/agente-ia-pa
 
 <!-- SCHEDULED:sp_M2qpbs4CYUVbrpyVrQO8 at 2026-04-20T08:00:00.000Z -->
 
+---
+
+## 2026-09-03 - AI Agent for Cleaning Services (EN)
+
+Field notes from a US cleaning-services deployment (6 crews, ~180 recurring customers).
+
+Stack: WhatsApp Business API (Meta Cloud) as the primary channel with Twilio SMS fallback, an LLM tool-use loop with function calls into a pricing matrix and a Google Maps Distance Matrix route optimizer, two-way sync with the operator's existing FSM (Jobber-class), Stripe for card-on-file. Every conversation logged with intent, resolution and revenue attribution.
+
+Two numbers that stood out under load: first-message latency on WhatsApp p95 at 1.4s, and quote-with-three-route-aware-slots delivered end-to-end in under 8s (matrix lookup + calendar read + geo scoring + LLM response). Booking rate on inbound moved 19.5% -> 40.6% in 90 days; the refill loop for cancelled slots hit 62% by scoring the waitlist against the day's live route rather than FIFO.
+
+The hardest part was not the model. It was collapsing the pricing spreadsheet + calendar + route + FSM into one deterministic tool surface the agent could call without hallucinating a booking that a crew could not reach.
+
+Full write-up: https://zeniapartners.com/blog/ai-agent-for-cleaning-services.html
+
 77.4% of restaurant guests never come back. The 22.6% who do return are worth 26x more in lifetime value.
 
 Yet 78.8% annual guest churn costs each location ~$375K/year in lost revenue. That's not a marketing problem. It's a retention system problem.

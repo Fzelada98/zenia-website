@@ -5465,3 +5465,18 @@ Architecture notes and integration surface: https://zeniapartners.com/blog/agent
 #B2B #WhatsAppBusinessAPI #AI #systemsdesign
 
 ---
+## 2026-09-03 - AI agent for auto repair shops
+
+The interesting engineering problem in auto repair is not the conversation, it is the round-trip: read bay availability, quote a labor time, and write an RO into a system (Tekmetric, AutoLeap, Mitchell 1, Shopware) that was not designed for concurrent third-party writers, all under 800ms of user-perceived latency.
+
+Stack we run for this vertical: WhatsApp Business Cloud API on the shop DID with call-forward to an AI agent on the missed-call event, a small tool-calling LLM scoped to the shop's own labor guide and parts catalog, bidirectional adapters into the shop management system's REST + polling for the ones without proper webhooks, and a milestone-diff worker that watches RO state and pushes status to the customer thread. Waitlist reallocation on cancel is a queue subscriber, not a cron.
+
+Two numbers that matter at the infra level: 60-75% of missed inbound calls recovered within 30s of the ring-no-answer event, and p95 booking-flow latency under 1.2s including the SMS-write and calendar sync round-trip.
+
+The agent is boring. The integration surface is where the reliability lives.
+
+Architecture notes and rollout: https://zeniapartners.com/blog/ai-agent-for-auto-repair-shops.html
+
+#B2B #WhatsAppBusinessAPI #systemsdesign #AI
+
+---

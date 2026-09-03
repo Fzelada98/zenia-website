@@ -5419,6 +5419,8 @@ Full 2-week playbook, native ServiceTitan/Jobber/Housecall Pro sync, pricing: ht
 ---
 ## 2026-09-02 - Programa de referidos para gimnasios
 
+<!-- PUBLISHED:make-webhook-manual at 2026-09-03T00:27:02Z -->
+
 Gym referral programs convert at 41%. Meta Ads for the same gym converts at 1-3%.
 
 The gap is not the incentive. It is where the referral lives.

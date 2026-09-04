@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-09-04T06:15:00Z",
+  "lastRun": "2026-09-04T14:15:00Z",
   "posts": [
     {
       "slug": "agente-ia-para-catering",
@@ -3168,6 +3168,14 @@
       "cluster": "clinicas",
       "status": "published",
       "date": "2026-08-27"
+    },
+    {
+      "slug": "agente-ia-para-academias-de-reposteria",
+      "keyword": "agente ia para academias de reposteria",
+      "tier": 1,
+      "cluster": "academias",
+      "status": "published",
+      "date": "2026-09-04"
     }
   ]
 }

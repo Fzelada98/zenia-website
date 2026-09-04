@@ -5527,3 +5527,18 @@ Architecture and rollout notes: https://zeniapartners.com/blog/ai-agent-for-pers
 #B2B #WhatsAppBusinessAPI #systemsdesign #AI
 
 ---
+## 2026-09-04 - AI agent for pastry schools
+
+The interesting engineering problem for a pastry school is not the DM, it is turning a five-day acquisition funnel (WhatsApp, Instagram DM, Meta Ads webhook, web form) into one deduplicated lead record with attribution intact, while charging the deposit inside the same chat where the interest started.
+
+Stack we run for this vertical: WhatsApp Business Cloud API on the school's existing DID, an Instagram Graph API webhook merged into the same thread by phone+handle heuristics, a tool-calling LLM scoped to the course catalog (course_id, cohort, seat_count, prerequisites, price) exposed as typed functions, a Redsys/Stripe hosted-payment link generated per matriculation attempt with the lead_id embedded in the metadata for reconciliation, and a cohort-scheduler worker that fires T-48h and T-2h reminders per session_id read from the timetable, not per lead.
+
+Two numbers that matter at the infra level: p95 first-reply at 8s across mixed WhatsApp/IG surface, and enrollment conversion moved from 12% to 24-28% once the payment link, the seat count, and the material list landed in the same thread as the first question instead of a form on a separate domain.
+
+The seat_count row is the reliability contract. Two students paying for the last seat from two channels in the same hour is the failure mode that costs a refund and a review.
+
+Architecture and integration surface: https://zeniapartners.com/blog/agente-ia-para-academias-de-reposteria.html
+
+#B2B #WhatsAppBusinessAPI #systemsdesign #AI
+
+---

@@ -5561,3 +5561,18 @@ Architecture and integration surface: https://zeniapartners.com/blog/ai-agent-fo
 #B2B #WhatsAppBusinessAPI #systemsdesign #AI
 
 ---
+## 2026-09-04 - AI agent for bridal shops (EN)
+
+The interesting engineering problem in a bridal boutique is not the intake message, it is enforcing a three-way availability contract (fitting_room_id, stylist_id, wedding_month) at appointment time, then holding client state coherent for 6 to 14 months across a multi-hop pipeline: consultation, purchase, 2 to 4 alteration fittings, delivery, and a post-wedding referral trigger.
+
+Stack we run for this vertical: WhatsApp Cloud API + Instagram Graph webhook merged into a single thread per bride (phone + IG handle heuristic on the merge), a tool-calling LLM scoped to the store's real inventory and price bands (typed functions for get_slots, quote_gown, block_room, request_deposit, schedule_alteration), Google Calendar or a sector-specific bridal CRM behind an adapter that treats fitting_room_id, stylist_id and dress_id as first-class resources with soft-lock on write, WhatsApp Flows for in-chat date/time selection so the bride never leaves the thread, a Stripe/Redsys hosted-link generator per deposit attempt with lead_id and dress_sku in metadata for reconciliation, and a wedding_date-relative scheduler that fires deposit, alteration and pickup reminders keyed to the ceremony, not to appointment_id.
+
+Two numbers that matter at the infra level: p95 first-reply at 8s across mixed WhatsApp/IG surface with 62% of inbound landing outside store hours, and consultation-to-purchase conversion moved from 20-24% to 28-34% once the fitting fotos, price band, and second-visit slot landed in the same thread as the first inquiry instead of a follow-up email 48 hours late.
+
+The wedding_month soft-lock is the reliability contract for this vertical. Two brides booking the last stylist-plus-room slot on a Saturday five weeks before their weddings is the failure mode that costs a refund, a review, and a wedding.
+
+Architecture and integration surface: https://zeniapartners.com/blog/agente-ia-para-tiendas-de-vestidos-de-novia.html
+
+#B2B #WhatsAppBusinessAPI #systemsdesign #AI
+
+---

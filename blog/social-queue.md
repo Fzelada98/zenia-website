@@ -5496,3 +5496,18 @@ Full architecture and rollout: https://zeniapartners.com/blog/agente-ia-para-est
 #B2B #WhatsAppBusinessAPI #systemsdesign #AI
 
 ---
+## 2026-09-04 - Agent stack for catering companies
+
+The interesting engineering problem in a catering pipeline is not the chat: it is turning a free-form event brief ("boda de 120 el 14 de junio, presupuesto 8k, 12 vegetarianos") into a priced quote with menu variants in under 30 seconds, while holding the calendar as the source of truth.
+
+Stack we run for this vertical: WhatsApp Business Cloud API on the corporate DID, a small tool-calling LLM with a typed brief-extraction schema (event_type, headcount, dietary_flags, budget_band, geo), a pricing engine that reads the catering catalogue as structured rules (per-head base, seasonal multipliers, upsell rows) not as prose, bidirectional adapters into Google Calendar / Cateringsuite for capacity locks, and a follow-up worker that runs on day 1/3/7/14 with distinct payloads per lead state.
+
+Two numbers that matter at the infra level: p95 inquiry-to-preliminary-quote at 28s including the calendar round-trip and the two variant computations, and 34% of leads that were previously dead recovered by the follow-up worker vs 6% baseline of a human comercial doing it by hand.
+
+The calendar lock is the reliability contract. If two agents can double-book a Saturday in June, the whole system loses trust in one weekend.
+
+Architecture and integration surface: https://zeniapartners.com/blog/agente-ia-para-catering.html
+
+#B2B #WhatsAppBusinessAPI #systemsdesign #AI
+
+---

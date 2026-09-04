@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-09-03T14:15:00Z",
+  "lastRun": "2026-09-04T06:15:00Z",
   "posts": [
+    {
+      "slug": "agente-ia-para-catering",
+      "keyword": "agente ia para catering",
+      "tier": 1,
+      "cluster": "catering",
+      "status": "published",
+      "date": "2026-09-04"
+    },
     {
       "slug": "agente-ia-para-estancos",
       "keyword": "agente ia para estancos",

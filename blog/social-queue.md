@@ -5511,3 +5511,19 @@ Architecture and integration surface: https://zeniapartners.com/blog/agente-ia-p
 #B2B #WhatsAppBusinessAPI #systemsdesign #AI
 
 ---
+
+## 2026-09-04 - AI agent for personal trainers
+
+The interesting engineering problem in a personal training pipeline is not the coaching conversation, it is holding one durable client-state view across three systems that were never meant to co-exist: a coaching platform (Trainerize, TrueCoach, MyPTHub), a payment processor (Stripe/Square), and the trainer's calendar, while messaging traffic arrives over WhatsApp, SMS, and Instagram DM in parallel.
+
+Stack we run for this vertical: WhatsApp Business Cloud API and Twilio SMS multiplexed into a single conversation thread per client, a tool-calling LLM scoped to the trainer's actual program catalog and price sheet, OAuth calendar adapter with a soft-lock queue that survives concurrent booking attempts, a package-state worker that watches session_completed events and fires renewal flows at N-2 of the pack, and an intake extractor that fills the CRM profile from the first 4 messages instead of a form.
+
+Two numbers that matter at the infra level: p95 inquiry-to-first-reply at 12s across mixed WhatsApp/SMS/IG surface, and 74% package renewal rate (from a 51% baseline) once the renewal offer landed in the same thread as the last-session confirmation instead of a separate email.
+
+The soft-lock on the calendar is the reliability contract. Two clients booking the same 6pm slot from two different channels is the failure mode that erodes trust fastest.
+
+Architecture and rollout notes: https://zeniapartners.com/blog/ai-agent-for-personal-trainers.html
+
+#B2B #WhatsAppBusinessAPI #systemsdesign #AI
+
+---

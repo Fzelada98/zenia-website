@@ -5516,6 +5516,8 @@ Architecture and integration surface: https://zeniapartners.com/blog/agente-ia-p
 
 ## 2026-09-04 - AI agent for personal trainers
 
+<!-- PUBLISHED:make-webhook at 2026-09-04T14:30:03Z -->
+
 The interesting engineering problem in a personal training pipeline is not the coaching conversation, it is holding one durable client-state view across three systems that were never meant to co-exist: a coaching platform (Trainerize, TrueCoach, MyPTHub), a payment processor (Stripe/Square), and the trainer's calendar, while messaging traffic arrives over WhatsApp, SMS, and Instagram DM in parallel.
 
 Stack we run for this vertical: WhatsApp Business Cloud API and Twilio SMS multiplexed into a single conversation thread per client, a tool-calling LLM scoped to the trainer's actual program catalog and price sheet, OAuth calendar adapter with a soft-lock queue that survives concurrent booking attempts, a package-state worker that watches session_completed events and fires renewal flows at N-2 of the pack, and an intake extractor that fills the CRM profile from the first 4 messages instead of a form.

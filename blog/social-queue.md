@@ -5546,3 +5546,18 @@ Architecture and integration surface: https://zeniapartners.com/blog/agente-ia-p
 #B2B #WhatsAppBusinessAPI #systemsdesign #AI
 
 ---
+## 2026-09-04 - AI agent for photographers (EN)
+
+The interesting engineering problem in a photography studio is not the reply text, it is holding one client-state view across three tools the studio already refuses to leave: a photographer CRM (HoneyBook, Dubsado, Studio Ninja, Tave), a gallery host (Pixieset, ShootProof, CloudSpot, Pic-Time), and Google Calendar or Acuity, while inbound traffic arrives over WhatsApp Business API, Instagram DM (Meta Graph), Google Business Messages, and a plain contact form.
+
+Stack we run for this vertical: WhatsApp Cloud API and Twilio SMS multiplexed with an IG Graph webhook into a single conversation thread per client, a tool-calling LLM scoped to the studio's actual package sheet and minimum session fee (typed functions for get_availability, quote_package, create_contract, request_deposit, mark_gallery_ready), an OAuth calendar adapter with a soft-lock queue so two Saturday-morning family sessions cannot collide across channels, a payment-state worker that watches Stripe/HoneyBook webhooks and fires the 24h and 72h retainer nudges directly into the same thread, and a delivery hook on the gallery host that triggers the review request on day+5 keyed off gallery_id, not lead_id.
+
+Two numbers that matter at the infra level: p95 inquiry-to-first-reply at 2m40s across mixed WhatsApp/IG/web surface, and deposit-collected-within-72h moved from 58% to 91% once the retainer link, the contract, and the confirmation landed in the same thread as the consult recap instead of an email the client never opened.
+
+The calendar soft-lock is the reliability contract for this vertical. Two clients booking the same Saturday slot from two different channels is the failure mode that erodes the studio's reputation faster than a bad edit.
+
+Architecture and integration surface: https://zeniapartners.com/blog/ai-agent-for-photographers.html
+
+#B2B #WhatsAppBusinessAPI #systemsdesign #AI
+
+---

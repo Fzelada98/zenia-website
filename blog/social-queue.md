@@ -5628,3 +5628,18 @@ Architecture, EHR integration matrix and 2-week rollout: https://zeniapartners.c
 #B2B #healthtech #WhatsAppBusinessAPI #systemsdesign #AIagents
 
 ---
+## 2026-09-05 - CRM stack for the Barcelona SMB market (EN)
+
+The design shift most Barcelona SMB "CRM plus WhatsApp" builds miss in 2026: the message thread is the primary state, the contact record is a materialized view over it, and pipeline updates fire from webhook events, not from CRM UI clicks. That single inversion removes the sync layer that eats 55-70% of the maintenance budget in HubSpot-plus-plugin architectures.
+
+Reference stack we ship for a mid-size Catalan PYME: WhatsApp Cloud API through 360dialog for volumes under 200k monthly conversations, a Claude 5-based agent with typed tool functions bound to Holded (invoicing) or Factorial (HR) or CoverManager (reservations) or Shopify (ecommerce), a per-tenant vector index for business knowledge, and a state machine over Meta's 24-hour service window that auto-promotes to an approved HSM template when the window closes. Idempotency keyed on message_id plus intent-hash so retried webhooks never double-book or double-charge.
+
+Two Catalonia-specific constraints that break naive builds. First, language routing: Catalan plus Spanish plus English plus French detected at token level, with per-language template variants approved separately (Meta counts each as its own asset in the WABA). Second, data residency: EU-only inference and storage, DPA on the LLM provider and every subprocessor, plus the Agente Digitalizador registration number on file to keep Kit Digital eligibility intact.
+
+Two production numbers from mixed verticals in Barcelona (restauracion, estetica, gimnasios, servicios profesionales): p95 first-reply at 9.1s on inbound leads, and 68-82% of conversations closed without human handoff at a token cost under EUR 0.009 per full conversation. The next planning item is Meta's Oct 1, 2026 chargeable service-message change: in-window utility replies stop being free, so routing has to distinguish service versus marketing at generation time, not at send.
+
+Full architecture, integration matrix and cost model: https://zeniapartners.com/blog/software-crm-en-barcelona.html
+
+#B2B #CRM #WhatsAppBusinessAPI #systemsdesign #AIagents
+
+---

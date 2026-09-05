@@ -1,7 +1,16 @@
 {
-  "lastRun": "2026-09-04T00:00:00Z",
+  "lastRun": "2026-09-05T00:00:00Z",
   "market": "US/UK small business",
   "posts": [
+    {
+      "slug": "whatsapp-business-automation",
+      "keyword": "whatsapp business automation",
+      "tier": 0,
+      "cluster": "whatsapp",
+      "status": "published",
+      "date": "2026-09-05",
+      "note": "striking-loop hit: 13 impressions, pos 28.2"
+    },
     {
       "slug": "content-automation-for-retail",
       "keyword": "content automation for retail",

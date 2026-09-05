@@ -5590,3 +5590,17 @@ Ran the annual TCO against four other stacks we've deployed for Madrid PYMEs of 
 #B2B #WhatsAppBusinessAPI #systemsdesign #AIagents
 
 ---
+
+## 2026-09-05 - WhatsApp Business Automation playbook (EN)
+
+The migration question we keep answering for SMB teams in 2026 is not "should we automate WhatsApp" but "at what event surface does the Business App stop being a viable backend". Our line: the moment a second agent needs concurrent inbox access, or an external system needs to trigger sends deterministically, you are on the API. Meta's 2026 coexistence mode removed the migration pain — same phone number, both surfaces running with real-time sync, so the switch is now a BSP-side registration, not a data cutover.
+
+Reference stack we deploy for this: WhatsApp Cloud API via 360dialog (Twilio at higher volume), templates categorized strictly to survive Meta's quality-score classifier, a Claude-based agent with typed tool functions scoped to a knowledge-base index + booking/CRM endpoints, idempotency keyed on message_id + intent-hash so webhook retries never double-book, and a per-country cost model baked into the routing layer (US marketing ~$0.025, DE ~$0.13, IN ~$0.01 — recipient country, not sender).
+
+Two numbers that matter at the infra level: p95 first-reply at ~32s across a mixed inbound surface, and template-quality rating held at "High" over 90 days by capping variables at 4 and enforcing single-tap opt-out on every marketing send. The Oct 1, 2026 chargeable-service-message change is the next thing worth planning for — in-window utility replies stop being free, so budget lines that ignored service traffic need revisiting.
+
+Architecture, pricing model and 2-week rollout: https://zeniapartners.com/blog/whatsapp-business-automation.html
+
+#B2B #WhatsAppBusinessAPI #systemsdesign #AIagents
+
+---

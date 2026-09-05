@@ -5576,3 +5576,17 @@ Architecture and integration surface: https://zeniapartners.com/blog/agente-ia-p
 #B2B #WhatsAppBusinessAPI #systemsdesign #AI
 
 ---
+
+## 2026-09-05 - Software CRM en Madrid
+
+Deployed another CRM stack for a Madrid SMB last week: WhatsApp Business API + a personalized AI agent fronting Zoho and Holded through a thin FastAPI orchestration layer.
+
+Design choices: 360dialog as BSP (cheaper per-message at low volume than Twilio, cleaner template lifecycle), agent runs Claude with tool-calling directly against CRM and invoicing endpoints, and we skipped n8n for the stateful path — a self-hosted state machine keeps p95 end-to-end under 900ms and lets us idempotency-key on WhatsApp message_id + parsed-intent hash, so webhook retries never double-create leads.
+
+Facturae 3.2.2 emission handled downstream in Holded, not in the agent — Ley Crea y Crece compliance stays where the tax authority audits it.
+
+Ran the annual TCO against four other stacks we've deployed for Madrid PYMEs of similar seat count: this config lands under EUR 7k/yr for 8 seats, vs EUR 14–33k for HubSpot Pro / Salesforce Sales Pro at equivalent conversation volume. Comparison breakdown and integration surface: https://zeniapartners.com/blog/software-crm-en-madrid.html
+
+#B2B #WhatsAppBusinessAPI #systemsdesign #AIagents
+
+---

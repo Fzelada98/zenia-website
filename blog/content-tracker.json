@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-09-05T06:17:25Z",
+  "lastRun": "2026-09-05T14:10:00Z",
   "posts": [
+    {
+      "slug": "crm-conversacional-whatsapp-2026",
+      "keyword": "crm conversacional whatsapp",
+      "tier": 2,
+      "cluster": "crm-conversacional",
+      "status": "published",
+      "date": "2026-09-05",
+      "source": "matrix"
+    },
     {
       "slug": "software-crm-en-madrid",
       "keyword": "software crm en madrid",

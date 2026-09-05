@@ -5604,3 +5604,16 @@ Architecture, pricing model and 2-week rollout: https://zeniapartners.com/blog/w
 #B2B #WhatsAppBusinessAPI #systemsdesign #AIagents
 
 ---
+## 2026-09-05 - Conversational CRM WhatsApp architecture (EN)
+
+The design decision most SMB "WhatsApp CRM" builds get wrong in 2026 is treating the CRM as the primary store and WhatsApp as an appended channel. Inverted, it works: the message thread is the state, the contact record is a materialized view over it, and every automation is a webhook consumer. That removes the sync layer that eats 60% of the maintenance budget in HubSpot-and-plugin architectures.
+
+Reference stack we ship: WhatsApp Cloud API through 360dialog for volumes under 200k monthly conversations (Twilio above), a Claude 5-based agent with typed tool functions bound to booking / catalog / payment / CRM endpoints, a vector index for business knowledge scoped per tenant, and a state machine over Meta's 24-hour service window that promotes to an approved HSM template automatically once the window closes. Idempotency is keyed on message_id plus intent-hash so retried webhooks never double-book or double-charge.
+
+Two production numbers from mixed verticals (restaurants, gyms, retail, clinics): p95 first-reply at 8.4s with the small-model router handling ~62% of turns and only escalating structural intents to the frontier model, and 70-85% of conversations resolved without human handoff at a token cost under €0.008 per full conversation. Meta's Oct 1, 2026 chargeable service-message change is the next planning item: in-window utility replies stop being free, so routing needs to distinguish service vs marketing at generation time, not at send.
+
+Full architecture, cost model and vertical benchmarks: https://zeniapartners.com/blog/crm-conversacional-whatsapp-2026.html
+
+#B2B #WhatsAppBusinessAPI #systemsdesign #AIagents
+
+---

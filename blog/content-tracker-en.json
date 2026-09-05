@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-09-05T00:00:00Z",
+  "lastRun": "2026-09-05T12:00:00Z",
   "market": "US/UK small business",
   "posts": [
     {
@@ -35,7 +35,7 @@
     { "slug": "ai-agent-for-auto-repair-shops", "keyword": "ai agent for auto repair shops", "tier": 1, "cluster": "auto", "status": "published", "date": "2026-09-03" },
     { "slug": "ai-agent-for-personal-trainers", "keyword": "ai agent for personal trainers", "tier": 1, "cluster": "fitness", "status": "published", "date": "2026-09-04" },
     { "slug": "ai-agent-for-photographers", "keyword": "ai agent for photographers", "tier": 1, "cluster": "creative", "status": "published", "date": "2026-09-04" },
-    { "slug": "ai-agent-for-chiropractors", "keyword": "ai agent for chiropractors", "tier": 1, "cluster": "healthcare", "status": "pending" },
+    { "slug": "ai-agent-for-chiropractors", "keyword": "ai agent for chiropractors", "tier": 1, "cluster": "healthcare", "status": "published", "date": "2026-09-05" },
     { "slug": "ai-agent-for-physical-therapy-clinics", "keyword": "ai agent for physical therapy clinics", "tier": 1, "cluster": "healthcare", "status": "pending" },
     { "slug": "ai-agent-for-veterinary-clinics", "keyword": "ai agent for veterinary clinics", "tier": 1, "cluster": "healthcare", "status": "pending" },
     { "slug": "ai-agent-for-hvac-companies", "keyword": "ai agent for hvac companies", "tier": 1, "cluster": "trades", "status": "pending" },

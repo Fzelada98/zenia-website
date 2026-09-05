@@ -5615,3 +5615,16 @@ Full architecture, cost model and vertical benchmarks: https://zeniapartners.com
 #B2B #WhatsAppBusinessAPI #systemsdesign #AIagents
 
 ---
+## 2026-09-05 - AI agent for chiropractic front-desk (EN)
+
+The interesting integration problem in chiropractic automation is not the LLM, it is ChiroTouch. The mainstream EHRs in this vertical (ChiroTouch, Jane, ChiroSpring, Noterro, Zanda) all expose scheduling differently: some ship a proper REST API, some only iCal-read plus partner-program write-back, some require a hybrid where the agent is the source of truth for booking and a nightly export reconciles the billing side. Any generic "AI receptionist" that ignores this loses to a copy-paste-into-EHR failure mode by week three.
+
+Reference stack for a solo DC to a 4-provider clinic: WhatsApp Cloud API via 360dialog, SMS via Twilio for the same conversation ID, an AI agent with typed tool functions bound to appointment_search / book / reschedule / intake_write / red_flag_route, a HIPAA BAA path through the LLM provider and every subprocessor, and a state machine over Meta's 24-hour service window that auto-promotes to an approved HSM template for reminders and recall. Idempotency keyed on message_id plus intent-hash so a retried booking webhook does not double-book the 3:15 slot.
+
+Two production numbers on a composite 90-day chiropractic deployment (ChiroTouch, ~35 visits/day): p95 first-reply at 11.2s on the after-hours new-patient flow (from a 4h+ voicemail baseline), and 55% of same-week no-show recoveries closed by the 10-minute rebook loop without human touch. Anchor decision worth making early: the red-flag escalation list is a clinician-signed configuration, not a prompt.
+
+Architecture, EHR integration matrix and 2-week rollout: https://zeniapartners.com/blog/ai-agent-for-chiropractors.html
+
+#B2B #healthtech #WhatsAppBusinessAPI #systemsdesign #AIagents
+
+---

@@ -5669,3 +5669,18 @@ Architecture, EHR integration matrix and 90-day case: https://zeniapartners.com/
 #B2B #HealthTech #WhatsAppBusinessAPI #systemsdesign #AIagents
 
 ---
+## 2026-09-06 - AI agent for a psychology clinic's WhatsApp (EN)
+
+The engineering unlock in outpatient psychology is not the conversation, it is the crisis-classifier that must run before any generative response and hard-branch out of the LLM path. Between 30% and 45% of first-consultation inbound messages arrive outside 09-20 local, private-practice no-shows sit at 12-19%, and every message the terapeuta reads at 22:30 is a lead the competitor already booked at 22:31.
+
+Reference stack we ship for a 1 to 6-psychologist consulta: WhatsApp Cloud API through a GDPR-conformant BSP (360dialog EU) with EU-only inference, a frontier LLM with typed tool functions bound to search_slot / book_first_visit / reschedule / apply_cancellation_policy / route_to_specialty / send_questionnaire, calendar source of truth on Google Calendar or Outlook plus Doctoralia / Psicofactu bridges, per-tenant vector index for tarifas / especialidades / policy language, and a state machine over Meta's 24-hour service window that auto-promotes to an approved utility HSM for the T-24h reminder with one-tap confirm. Idempotency keyed on message_id plus intent-hash so a retried book_first_visit webhook does not double-book the same 50-minute slot in Marta's Thursday.
+
+Two design decisions worth making before code. First, the risk classifier: an inbound-message classifier (self-harm, active ideation, acute psychiatric urgency) runs before any generation, and on a positive it stops the agent entirely, sends a static safety message with 112 and 024, and pages the director clinico by a second channel; never a prompt-only guardrail. Second, the chat carries logistics only (bookings, reminders, payments); clinical content stays in the EHR ficha, never in the WhatsApp thread, so DPA scope and retention windows collapse to a manageable surface.
+
+Two production numbers from composite Spanish deployments (3-therapist consultas, 60-90 sessions/week, EUR 65 avg session): p95 first-reply at 9.4s on off-hours first-consultation messages where the manual baseline was 4 to 26 hours, and no-shows dropped from 14% to 6% at 30 days once the T-24h HSM plus one-tap confirm shipped, on a stack cost under EUR 0.008 per full conversation.
+
+Architecture, GDPR posture and 5-week rollout: https://zeniapartners.com/blog/agente-ia-para-clinicas-de-psicologia.html
+
+#B2B #HealthTech #WhatsAppBusinessAPI #systemsdesign #AIagents
+
+---

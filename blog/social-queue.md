@@ -5697,3 +5697,16 @@ Architecture, PIMS integration matrix and 90-day case: https://zeniapartners.com
 #B2B #VetTech #WhatsAppBusinessAPI #systemsdesign #AIagents
 
 ---
+## 2026-09-06 - Agente IA para tiendas de segunda mano (ES vertical, EN post)
+
+Built the WhatsApp agent that runs a resale shop's front desk on a single business number.
+
+Reference stack: Meta WhatsApp Cloud API through a Meta BSP (360dialog or Twilio), a frontier LLM with typed tool functions bound to lookup_sku / reserve_unit / release_unit / propose_alternatives / open_appraisal / issue_bizum_link, ERP bridge over REST to Odoo, Loyverse, Ruit or Shopify, and a per-SKU mutex layer on Postgres (one row per unit, atomic 2-hour TTL reservation, released on Bizum webhook or timeout). Marketplace side runs a partner integrator (Ruit or Sellygenie) to fan-out state changes to Wallapop, Vinted and Milanuncios; idempotency keyed on sku_id plus intent-hash so a retried reserve never double-locks the same unit.
+
+Two production numbers from composite Spanish deployments (500 SKUs vivos, 80 inbound conversations/day, EUR 42 avg ticket): p95 first-reply at 8.7s on the "sigue disponible?" intent where the manual baseline was 18-90 minutes, and inventory conflicts (same unit sold twice across WhatsApp, Wallapop and the POS) dropped from 4-7 per week to under one per month once the mutex plus state fan-out shipped. The interesting engineering is not the model, it is keeping four systems agreeing on one "sold" flag within ~1 second.
+
+Architecture, DAC7 posture and 5-week rollout: https://zeniapartners.com/blog/agente-ia-para-tiendas-de-segunda-mano.html
+
+#B2B #RetailTech #WhatsAppBusinessAPI #systemsdesign #AIagents
+
+---

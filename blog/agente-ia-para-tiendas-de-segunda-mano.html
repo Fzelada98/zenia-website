@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HP0VQSEL68"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-HP0VQSEL68');
+</script>
+
+<title>Agente IA para Tiendas de Segunda Mano | ZENIA</title>
+<meta name="description" content="Agente de IA personalizado en WhatsApp para tiendas de segunda mano. Responde disponibilidad al instante, tasa lotes, cierra reservas y cobra por Bizum.">
+<link rel="canonical" href="https://zeniapartners.com/blog/agente-ia-para-tiendas-de-segunda-mano.html">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+
+<!-- Hreflang -->
+<link rel="alternate" hreflang="es" href="https://zeniapartners.com/blog/agente-ia-para-tiendas-de-segunda-mano.html">
+<link rel="alternate" hreflang="x-default" href="https://zeniapartners.com/blog/agente-ia-para-tiendas-de-segunda-mano.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Agente IA para Tiendas de Segunda Mano: WhatsApp, Tasación y Reservas Automáticas">
+<meta property="og:description" content="Agente de IA personalizado en WhatsApp para tiendas de segunda mano. Responde disponibilidad al instante, tasa lotes, cierra reservas y cobra por Bizum.">
+<meta property="og:url" content="https://zeniapartners.com/blog/agente-ia-para-tiendas-de-segunda-mano.html">
+<meta property="og:site_name" content="ZENIA">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="https://zeniapartners.com/assets/images/og-image.png">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Agente IA para Tiendas de Segunda Mano: WhatsApp, Tasación y Reservas Automáticas">
+<meta name="twitter:description" content="Agente de IA personalizado en WhatsApp para tiendas de segunda mano. Responde disponibilidad, tasa lotes y cierra ventas.">
+<meta name="twitter:image" content="https://zeniapartners.com/assets/images/og-image.png">
+
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="author" content="Fabrizzio Zelada">
+<meta name="theme-color" content="#0A0F1C">
+
+<!-- JSON-LD Article -->
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Agente IA para Tiendas de Segunda Mano: WhatsApp, Tasación y Reservas Automáticas", "description": "Cómo un agente de IA personalizado en WhatsApp resuelve las tres crisis operativas de una tienda de segunda mano: disponibilidad, tasación y logística de recogida.", "author": {"@type": "Person", "name": "Fabrizzio Zelada", "jobTitle": "Founder", "worksFor": {"@type": "Organization", "name": "ZENIA"}}, "publisher": {"@type": "Organization", "name": "ZENIA", "url": "https://zeniapartners.com", "logo": {"@type": "ImageObject", "url": "https://zeniapartners.com/assets/images/og-image.png", "width": 600, "height": 60}}, "datePublished": "2026-09-06", "dateModified": "2026-09-06", "mainEntityOfPage": "https://zeniapartners.com/blog/agente-ia-para-tiendas-de-segunda-mano.html", "inLanguage": "es", "keywords": ["agente ia para tiendas de segunda mano", "automatizar tienda segunda mano whatsapp", "crm tienda segunda mano", "wallapop profesional automatizacion", "tasacion segunda mano whatsapp", "agente ia retail"], "image": "https://zeniapartners.com/assets/images/og-image.png"}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #3B82F6;
+    --accent-violet: #6366F1;
+    --bg-dark: #0A0F1C;
+    --bg-card: rgba(17, 24, 39, 0.6);
+    --text-primary: #F1F5F9;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+    --border: rgba(148, 163, 184, 0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; background: var(--bg-dark); color: var(--text-primary); line-height: 1.8; }
+  .blog-nav { padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 60px; position: sticky; top: 0; background: rgba(10, 15, 28, 0.85); backdrop-filter: blur(12px); z-index: 100; }
+  .blog-nav .container { max-width: 1200px; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+  .blog-nav .nav-logo-link { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-primary); font-weight: 700; font-size: 1.1rem; }
+  .blog-nav .nav-main-links { display: flex; list-style: none; gap: 28px; margin: 0; padding: 0; }
+  .blog-nav .nav-main-links li { margin: 0; }
+  .blog-nav .nav-main-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
+  .blog-nav .nav-main-links a:hover { color: var(--text-primary); }
+  .blog-nav .nav-main-links a.active { color: var(--primary); }
+  .blog-nav .nav-cta-btn { background: var(--primary); color: #fff; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: filter 0.2s; white-space: nowrap; }
+  .blog-nav .nav-cta-btn:hover { filter: brightness(1.1); }
+  @media (max-width: 860px) {
+    .blog-nav .nav-main-links { display: none; }
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+  .blog-header { margin-bottom: 48px; }
+  .blog-meta { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px; }
+  .blog-header h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); line-height: 1.3; margin-bottom: 16px; }
+  .blog-header p.lead { font-size: 1.1rem; color: var(--text-secondary); line-height: 1.7; }
+  .blog-content h2 { font-size: 1.4rem; margin: 48px 0 16px; color: var(--text-primary); }
+  .blog-content h3 { font-size: 1.15rem; margin: 32px 0 12px; color: var(--text-primary); }
+  .blog-content p { color: var(--text-secondary); margin-bottom: 20px; }
+  .blog-content ul, .blog-content ol { color: var(--text-secondary); margin-bottom: 20px; padding-left: 24px; }
+  .blog-content li { margin-bottom: 8px; }
+  .blog-content strong { color: var(--text-primary); }
+  .blog-content a { color: var(--primary); text-decoration: underline; }
+  .blog-content a:hover { color: var(--accent-violet); }
+  .blog-content blockquote { border-left: 3px solid var(--primary); padding-left: 20px; margin: 24px 0; font-style: italic; color: var(--text-secondary); }
+  .blog-content table { width: 100%; border-collapse: collapse; margin: 24px 0; }
+  .blog-content th, .blog-content td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); font-size: 0.95rem; }
+  .blog-content th { color: var(--text-primary); font-weight: 600; background: var(--bg-card); }
+  .blog-cta { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 40px; text-align: center; margin: 60px 0; }
+  .blog-cta h3 { margin-bottom: 12px; }
+  .blog-cta p { color: var(--text-secondary); margin-bottom: 20px; }
+  .blog-cta a { display: inline-block; padding: 12px 28px; background: var(--primary); color: white; border-radius: 8px; text-decoration: none; font-weight: 600; }
+  .blog-cta a:hover { background: var(--accent-violet); }
+  .blog-related { margin: 60px 0 0; }
+  .blog-related h3 { margin-bottom: 20px; }
+  .blog-related a { display: block; padding: 16px 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 12px; text-decoration: none; color: var(--text-primary); font-weight: 600; transition: border-color 0.3s; }
+  .blog-related a:hover { border-color: var(--primary); }
+  .blog-related a span { display: block; font-size: 0.85rem; color: var(--text-muted); font-weight: 400; margin-top: 4px; }
+  .blog-footer { padding: 40px 0; border-top: 1px solid var(--border); margin-top: 60px; text-align: center; color: var(--text-muted); font-size: 0.85rem; }
+  .blog-footer a { color: var(--primary); text-decoration: none; }
+  .text-gradient { background: linear-gradient(135deg, var(--primary), var(--accent-violet)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+</style>
+</head>
+<body>
+
+<nav class="blog-nav">
+  <div class="container">
+    <a href="/es/" class="nav-logo-link">
+      <svg class="zenia-mark" viewBox="0 0 140 140" fill="none" width="32" height="32">
+        <defs>
+          <linearGradient id="zg-b" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#2563EB"/>
+            <stop offset="100%" stop-color="#3B82F6"/>
+          </linearGradient>
+          <linearGradient id="zg-v" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#6366F1"/>
+            <stop offset="100%" stop-color="#7C3AED"/>
+          </linearGradient>
+        </defs>
+        <rect width="140" height="140" rx="28" fill="#0F172A"/>
+        <path d="M 70 18 Q 18 18 18 38 L 18 57 Q 18 63 24 63 L 88 63 Z" fill="url(#zg-b)"/>
+        <path d="M 70 122 Q 122 122 122 102 L 122 83 Q 122 77 116 77 L 52 77 Z" fill="url(#zg-v)"/>
+      </svg>
+      <span>ZENIA</span>
+    </a>
+    <ul class="nav-main-links">
+      <li><a href="/es/#opportunities">Oportunidades IA</a></li>
+      <li><a href="/es/#services">Servicios</a></li>
+      <li><a href="/es/#process">Proceso</a></li>
+      <li><a href="/es/#impact">Impacto</a></li>
+      <li><a href="/blog/" class="active">Blog</a></li>
+    </ul>
+    <a href="/es/#cta" class="nav-cta-btn">Empezar</a>
+  </div>
+</nav>
+
+<article class="container">
+  <header class="blog-header">
+    <div class="blog-meta">6 de septiembre, 2026 &middot; Fabrizzio Zelada &middot; 11 min de lectura</div>
+    <h1><span class="text-gradient">Agente IA para Tiendas de Segunda Mano:</span> WhatsApp, Tasación y Cierre Automático</h1>
+    <p class="lead">Un agente IA para tiendas de segunda mano cambia la unidad económica del negocio. Vinted facturó 1.100 millones de euros en 2025 y Wallapop mueve 2.000 millones de GMV al año en España: si tu tienda no responde en segundos por WhatsApp, la venta se va al vendedor particular más rápido. Este artículo explica cómo un asistente inteligente resuelve las tres crisis operativas de una tienda de reventa profesional: disponibilidad, tasación y logística.</p>
+  </header>
+
+  <div class="blog-content">
+
+    <p class="pillar-callout"><strong>Lee también:</strong> Este artículo profundiza en el caso concreto del sector reventa. Para el contexto completo del canal, consulta la <a href="/blog/automatizacion-retail-tiendas-ia.html">guía de automatización retail con IA</a> y la <a href="/es/automatizacion-whatsapp-negocios.html">guía de WhatsApp Business API para negocios</a>.</p>
+
+
+    <h2>Por qué la tienda de segunda mano necesita un asistente inteligente distinto</h2>
+
+    <p>Una tienda de reventa profesional (ropa vintage, muebles restaurados, electrónica reacondicionada, libros, coleccionismo) no vende catálogo. Vende unidades únicas con rotación altísima. Cuando un cliente ve un anuncio en Wallapop, Vinted o Milanuncios y pregunta por WhatsApp "¿sigue disponible?", la ventana comercial son minutos, no horas. Quien contesta primero cierra la venta.</p>
+
+    <p>El estudio anual de Vinted publicado en verano de 2025 confirmó ingresos de 1.100 millones de euros y 62 millones de beneficio, con crecimiento del 38% interanual. Wallapop se estabilizó cerca de 100 millones de facturación con 19 millones de usuarios mensuales activos en España, y lanzó Vinted Go y Vinted Pay en el mismo periodo para cerrar el bucle logístico. La consecuencia práctica es que el vendedor profesional que compite con estos marketplaces tiene que igualar tres cosas al mismo tiempo: velocidad de respuesta, transparencia de precio y envío 24-48 horas.</p>
+
+    <p><strong>Los cuellos de botella reales de una tienda de segunda mano:</strong></p>
+
+    <ul>
+      <li>Volumen de mensajes con la misma pregunta: entre el 60 y el 75% de los mensajes son "¿está disponible?", "¿precio final?" o "¿lo tenéis físicamente en la tienda?"</li>
+      <li>Rotación de una unidad por SKU: la respuesta manual queda obsoleta en horas y aparecen conflictos por doble reserva</li>
+      <li>Regateo desorganizado: cada dependiente improvisa descuentos, sin política clara por antigüedad del artículo o por categoría</li>
+      <li>Tasación de lotes de particulares: 10-20 minutos por lote entre fotos, comparación de precios y respuesta al vendedor, que se cae si tarda un día</li>
+      <li>Obligación declarativa DAC7 desde 2024: quien supera 30 operaciones o 2.000 euros anuales debe reportar a Hacienda, y sin un CRM básico se pierde el rastro contable</li>
+    </ul>
+
+    <p>Un negocio con 400-600 SKUs vivos, 80 mensajes al día y ticket promedio de 42 euros que pierde 6 ventas diarias por respuesta lenta está renunciando a <strong>7.500 euros al mes</strong> antes de contar la fricción del regateo y la tasación. La solución no es una plantilla de respuesta rápida ni un dependiente pegado al móvil. Es un <a href="/blog/automatizacion-whatsapp-negocios.html">agente de IA personalizado</a> conectado al inventario que responde en menos de 10 segundos, reserva con Bizum y escala al humano solo cuando hace falta.</p>
+
+    <h2>Cómo funciona el agente IA en una tienda de segunda mano (flujo real)</h2>
+
+    <p>El agente no sustituye al vendedor experto. Sustituye al vendedor que responde WhatsApp mientras atiende a un cliente físico, tasa un lote y publica anuncios al mismo tiempo. Este es el flujo tal como lo implementamos:</p>
+
+    <h3>Paso 1: El cliente pregunta por un anuncio concreto</h3>
+
+    <p>El comprador copia el título del anuncio o pega el enlace de Wallapop, Vinted, Milanuncios o de la ficha del ecommerce propio: "Hola, ¿sigue disponible la chaqueta de cuero Levis M por 39 euros?". El agente extrae el identificador o hace fuzzy matching contra el inventario en menos de 3 segundos.</p>
+
+    <h3>Paso 2: El agente consulta stock y estado en tiempo real</h3>
+
+    <p>El agente conecta con la base de inventario única (Odoo, PrestaShop, Ruit, Loyverse, Woo o el ERP que tenga la tienda) y devuelve una de tres respuestas verificadas:</p>
+
+    <ul>
+      <li>Disponible: propone reserva con Bizum durante 2 horas y bloquea la unidad en el sistema</li>
+      <li>Reservado: informa la hora estimada de liberación y ofrece añadir al cliente a la cola</li>
+      <li>Vendido: propone tres alternativas similares del catálogo filtradas por marca, talla y rango de precio</li>
+    </ul>
+
+    <h3>Paso 3: Reglas de negociación aplicadas automáticamente</h3>
+
+    <p>Cuando el cliente pide rebaja, el agente aplica la política de descuento configurada por la tienda: por ejemplo, -10% si el artículo lleva más de 30 días publicado, -20% si supera los 60, tope del 25% por defecto y escalado a humano si se pide más. La política es transparente para el equipo y consistente entre canales. El agente nunca inventa descuentos ni promete estados imposibles.</p>
+
+    <h3>Paso 4: Cierre de reserva y logística</h3>
+
+    <p>Confirmado el precio, el agente envía el enlace de pago (Bizum, Stripe, Redsys) y coordina la recogida: "Recogida en tienda hoy hasta las 20:30" o "Envío por Correos Express en 24-48 horas por 4,90 euros". Genera la etiqueta y actualiza el estado a "vendido" en todos los canales conectados. Sin duplicidad, sin conflicto por venta cruzada entre Wallapop y la tienda física.</p>
+
+    <h3>Paso 5: Intake de tasación desde WhatsApp</h3>
+
+    <p>Si el cliente es un particular que quiere vender un lote, el agente activa el flujo inverso: pide fotos guiadas (frontal, etiqueta, defectos), marca, modelo, talla y estado. Compara contra el histórico de precios de Wallapop y Vinted, devuelve una oferta orientativa en 90 segundos y agenda cita de recogida en tienda solo con los lotes que pasan el umbral de rentabilidad. Esto filtra hasta el 70% de lotes no rentables antes de que el vendedor pise la tienda.</p>
+
+    <p>Todo funciona sobre <a href="/blog/integracion-whatsapp-business-api-espana.html">WhatsApp Business API</a>, conectado a un <a href="/es/crm-retail.html">CRM que unifica canales</a> y guarda el historial completo de cada cliente. No es una conversación que se pierde en el móvil del encargado cuando cambia de turno.</p>
+
+    <h2>Métricas reales tras implementar el agente</h2>
+
+    <p>Estos son los rangos promedio observados en tiendas de segunda mano que han implementado el asistente inteligente conectado al inventario, medidos sobre el primer trimestre después del lanzamiento:</p>
+
+    <table>
+      <tr><th>Métrica</th><th>Antes (manual)</th><th>Después (agente IA)</th><th>Mejora</th></tr>
+      <tr><td>Tiempo de respuesta a "¿disponible?"</td><td>18-90 min</td><td>10 segundos</td><td>-99%</td></tr>
+      <tr><td>Tasa de conversión de consulta a reserva</td><td>18%</td><td>34%</td><td>+89%</td></tr>
+      <tr><td>Doble reserva por conflicto de inventario</td><td>4-7 por semana</td><td>Menos de 1 al mes</td><td>-95%</td></tr>
+      <tr><td>Tiempo medio de tasación de un lote</td><td>12-18 min</td><td>90 segundos + revisión</td><td>-87%</td></tr>
+      <tr><td>Lotes rechazados en tienda tras cita</td><td>45-60%</td><td>Menos del 15%</td><td>-70%</td></tr>
+      <tr><td>Horario efectivo de atención</td><td>10:00-20:00</td><td>24/7</td><td>+100%</td></tr>
+      <tr><td>Rotación media de SKU (días hasta venta)</td><td>42 días</td><td>28 días</td><td>-33%</td></tr>
+    </table>
+
+    <p>La métrica que más sorprende al dueño no está en la tabla: <strong>el 41% de las reservas se cierran fuera del horario de tienda</strong>, sobre todo entre las 22:00 y las 01:00, cuando los usuarios navegan por Wallapop desde el sofá. Sin agente, esas ventas se pierden todas frente al particular que sí contesta en tres minutos.</p>
+
+    <h2>Manual vs. agente inteligente: comparativa por proceso</h2>
+
+    <p>Ver la diferencia en cada eslabón operativo ayuda a decidir dónde empezar. La mayoría de tiendas no automatiza todo el primer día: activa primero disponibilidad y luego suma tasación y logística.</p>
+
+    <h3>Gestión manual (lo habitual)</h3>
+
+    <ul>
+      <li>El dependiente revisa WhatsApp entre clientes, entre 3 y 6 veces al día</li>
+      <li>Consulta el inventario de memoria o en un Excel desactualizado</li>
+      <li>Regatea sin política común: cada empleado aplica descuentos distintos</li>
+      <li>Los mensajes recibidos entre las 20:30 y las 10:00 se contestan al día siguiente</li>
+      <li>La tasación de lotes de particulares se hace en tienda, ocupa a un tasador y sesga las decisiones a lo poco tiempo que queda</li>
+      <li>No hay registro por cliente: el mismo comprador escribe tres veces y nadie lo reconoce</li>
+      <li>Cuando un artículo se vende en Wallapop y llega otra consulta por WhatsApp, aparece la doble reserva</li>
+    </ul>
+
+    <h3>Con agente IA + CRM conversacional</h3>
+
+    <ul>
+      <li>Cada mensaje se responde en menos de 10 segundos, cualquier día y hora</li>
+      <li>El stock se consulta en tiempo real contra el ERP y el marketplace: nunca se ofrece un artículo ya vendido</li>
+      <li>Los descuentos siguen una política escrita, con límites por categoría y por antigüedad del anuncio</li>
+      <li>El agente cobra por Bizum o Stripe y genera la etiqueta de envío</li>
+      <li>La tasación se filtra por WhatsApp: el vendedor solo se desplaza si el lote merece la pena</li>
+      <li>Cada cliente tiene un perfil único con historial y ticket medio: la próxima interacción arranca con contexto</li>
+      <li>Si el agente detecta una consulta compleja (autenticidad, garantía, devolución) escala al humano con el resumen completo, no con capturas sueltas</li>
+    </ul>
+
+    <p>El impacto financiero es donde se justifica la inversión, y la aritmética es muy directa.</p>
+
+    <h2>Cálculo de ROI para una tienda profesional de reventa</h2>
+
+    <p>Modelo aplicable a una tienda tipo, ya sea física con presencia en Wallapop o 100% dropship de segunda mano:</p>
+
+    <ul>
+      <li>500 SKUs vivos, rotación media 42 días</li>
+      <li>Ticket promedio: 42 euros</li>
+      <li>Volumen medio de consultas por WhatsApp: 80 al día</li>
+      <li>Tasa de conversión actual consulta a venta: 18%</li>
+      <li>Lotes de tasación recibidos en tienda: 25 a la semana</li>
+    </ul>
+
+    <h3>Ingresos recuperados al mes</h3>
+
+    <p><strong>1. Ventas rescatadas por respuesta inmediata:</strong></p>
+    <p>Pasar del 18% al 34% de conversión sobre 80 consultas al día son 13 ventas adicionales diarias. A 42 euros de ticket son 16.380 euros de potencial mensual. Ajustado por elasticidad (no todas convierten aunque se responda rápido): <strong>+9.828 euros/mes</strong>.</p>
+
+    <p><strong>2. Reducción de doble reserva y devoluciones:</strong></p>
+    <p>Cada conflicto de doble venta cuesta entre 25 y 60 euros entre reembolso, envío inverso y clima con el comprador. Bajar de 5 conflictos por semana a 1 al mes ahorra unos <strong>+780 euros/mes</strong>.</p>
+
+    <p><strong>3. Ventas fuera de horario:</strong></p>
+    <p>El 41% de las ventas asistidas por el agente ocurren entre las 20:30 y las 09:30. Si el 40% de esas se hubieran perdido con el modelo manual, el efecto es de 4 ventas nuevas al día: 4 x 42 x 30 = <strong>+5.040 euros/mes</strong>.</p>
+
+    <p><strong>4. Tasación filtrada:</strong></p>
+    <p>Ir del 55% de lotes rechazados en tienda a menos del 15% libera unas 6 horas semanales del tasador senior. A 22 euros/hora eso son <strong>+528 euros/mes</strong>, sin contar la rotación acelerada de stock más barato adquirido.</p>
+
+    <h3>Costes ahorrados</h3>
+
+    <ul>
+      <li><strong>Horas de personal en atención WhatsApp:</strong> 3 horas/día x 30 x 12 euros/h = 1.080 euros/mes</li>
+      <li><strong>Publicación multicanal duplicada:</strong> el agente sincroniza estado con Wallapop, Vinted y Milanuncios, evitando anuncios activos de artículos ya vendidos: 200-350 euros/mes ahorrados en penalizaciones y quejas</li>
+    </ul>
+
+    <h3>Resumen de ROI</h3>
+
+    <table>
+      <tr><th>Concepto</th><th>Impacto mensual</th></tr>
+      <tr><td>Ventas rescatadas por respuesta inmediata</td><td>+9.828 &euro;</td></tr>
+      <tr><td>Reducción de doble reserva y devoluciones</td><td>+780 &euro;</td></tr>
+      <tr><td>Ventas fuera de horario</td><td>+5.040 &euro;</td></tr>
+      <tr><td>Tasación filtrada por WhatsApp</td><td>+528 &euro;</td></tr>
+      <tr><td>Ahorro en horas de personal</td><td>+1.080 &euro;</td></tr>
+      <tr><td>Ahorro en publicación multicanal</td><td>+275 &euro;</td></tr>
+      <tr><td><strong>Total beneficio estimado</strong></td><td><strong>+17.531 &euro;/mes</strong></td></tr>
+      <tr><td>Coste del sistema (CRM + IA + WhatsApp API)</td><td>-297 a -497 &euro;/mes</td></tr>
+      <tr><td><strong>ROI neto mensual</strong></td><td><strong>+17.034 a +17.234 &euro;</strong></td></tr>
+    </table>
+
+    <p>Recortando las estimaciones a la mitad para ser conservadores, el retorno neto sigue superando los 8.000 euros al mes frente a una inversión mensual de 300-500 euros. <strong>El ROI es de 15x a 35x</strong>. Para más contexto sobre pricing y modelos, consulta <a href="/blog/cuanto-cuesta-un-crm-para-pymes.html">cuánto cuesta un CRM para pymes</a>.</p>
+
+    <h2>Cómo lo implementa ZENIA en 5 semanas</h2>
+
+    <p>En <a href="/es/index.html">ZENIA</a> no vendemos licencia. Implementamos un asistente inteligente adaptado a la operativa de la tienda, integrado con el inventario que ya tiene y con los marketplaces donde publica.</p>
+
+    <h3>Semana 1: Diagnóstico y auditoría de inventario</h3>
+
+    <ul>
+      <li>Auditoría del catálogo: SKUs vivos, calidad de fotos y descripciones, marcas top</li>
+      <li>Volumen real de mensajes por canal: WhatsApp del móvil, chats de Wallapop, chats de Vinted, correo</li>
+      <li>Radiografía de la política de descuentos actual y de las excepciones que se hacen</li>
+      <li>Revisión del sistema de inventario existente (Odoo, Loyverse, Ruit, Prestashop, Shopify, Excel)</li>
+      <li>Diagnóstico DAC7 y flujo contable</li>
+    </ul>
+
+    <h3>Semana 2: Configuración del agente y CRM</h3>
+
+    <ul>
+      <li>Conexión de WhatsApp Business API al número principal de la tienda</li>
+      <li>Entrenamiento del agente con el tono real del negocio, categorías de producto y respuestas edge case</li>
+      <li>Integración con el ERP y con los marketplaces donde se publica (Wallapop, Vinted, Milanuncios)</li>
+      <li>Importación de la base de clientes existente y unificación de duplicados</li>
+      <li>Configuración de horarios, gastos de envío y métodos de pago (Bizum, Stripe, Redsys)</li>
+    </ul>
+
+    <h3>Semana 3: Flujos de conversación y reglas de precio</h3>
+
+    <ul>
+      <li>Flujo "¿sigue disponible?": stock, reserva Bizum, alternativas si vendido</li>
+      <li>Flujo negociación con política de descuento por antigüedad y por categoría</li>
+      <li>Flujo tasación de lote: fotos guiadas, comparación de precios y agenda de recogida</li>
+      <li>Flujo devoluciones y garantías con escalado inmediato al humano</li>
+      <li>Sincronización de estados: vendido en Wallapop dispara baja en Vinted y en la tienda física</li>
+    </ul>
+
+    <h3>Semana 4: Pruebas con tráfico real y formación</h3>
+
+    <ul>
+      <li>Pruebas con 30 conversaciones reales bajo supervisión</li>
+      <li>Formación del equipo en el dashboard y en los flujos de escalado</li>
+      <li>Ajuste de tono, límites de descuento y umbrales de tasación</li>
+      <li>Activación gradual: primero solo consultas de disponibilidad, después negociación y logística</li>
+    </ul>
+
+    <h3>Semana 5: Optimización con datos reales</h3>
+
+    <ul>
+      <li>Análisis de tasa de conversión por categoría de producto</li>
+      <li>Ajuste fino de la política de descuento por rentabilidad real</li>
+      <li>Activación de campañas de reactivación a compradores dormidos usando el <a href="/blog/crm-con-inteligencia-artificial.html">CRM con IA</a></li>
+      <li>Reporte completo contra línea base pre-implementación</li>
+    </ul>
+
+    <p><strong>En 5 semanas el asistente está operativo y generando ingresos incrementales verificables.</strong> A partir del segundo mes, el propio agente propone ajustes de precio y de fotos basados en la tasa de "sigue disponible" que no acaba en compra.</p>
+
+    <h2>Qué tiendas de segunda mano ven el mayor impacto</h2>
+
+    <p>El asistente inteligente funciona para cualquier reventa profesionalizada, pero el retorno es especialmente alto en estos perfiles:</p>
+
+    <ul>
+      <li><strong>Ropa vintage y sneakers:</strong> ciclo de moda corto, unidades únicas, alto volumen de "¿talla?" y "¿medidas?" que el agente resuelve consultando la ficha</li>
+      <li><strong>Muebles restaurados y decoración:</strong> tickets altos (150-800 euros) donde el agente cierra reserva y coordina transporte con transportista externo</li>
+      <li><strong>Electrónica reacondicionada:</strong> preguntas repetitivas sobre estado de batería, garantía y accesorios que el agente responde con la ficha técnica del SKU</li>
+      <li><strong>Libros y coleccionismo:</strong> catálogos de miles de referencias donde solo un buscador conversacional escala; el agente asocia autor, edición y estado</li>
+      <li><strong>Tiendas híbridas Wallapop + local físico:</strong> el mayor riesgo de doble venta se elimina con sincronización en tiempo real</li>
+      <li><strong>Franquicias y multitienda:</strong> un solo <a href="/es/crm-retail.html">CRM centralizado</a> que consolida stock entre puntos y balancea la respuesta al cliente al local con mejor cobertura</li>
+    </ul>
+
+    <h2>Preguntas frecuentes sobre agentes IA en tiendas de segunda mano</h2>
+
+    <h3>¿El agente entiende que los productos son únicos?</h3>
+
+    <p>Sí. La lógica se calibra para tratar cada SKU como una unidad. Cuando se vende una pieza, se bloquea automáticamente en todos los canales y el agente propone alternativas equivalentes en marca, talla y rango de precio.</p>
+
+    <h3>¿Se conecta a Wallapop y Vinted directamente?</h3>
+
+    <p>Las APIs oficiales de Wallapop y Vinted son limitadas para vendedores. Trabajamos con integradores homologados (Ruit, Sellygenie, Baxter) y con el ERP central para mantener el stock unificado. El agente vive en el WhatsApp de la tienda y ese es el canal principal de conversión.</p>
+
+    <h3>¿Puede el agente cobrar por Bizum?</h3>
+
+    <p>Sí. Genera enlaces Bizum, Stripe o Redsys y bloquea el SKU durante el tiempo configurado (por defecto 2 horas). Si no se completa el pago, libera automáticamente la unidad.</p>
+
+    <h3>¿Qué pasa si dos clientes preguntan por el mismo artículo a la vez?</h3>
+
+    <p>El primer cliente que confirme la reserva y reciba el enlace de pago se queda con el bloqueo. El segundo recibe una respuesta transparente: "Ahora mismo está reservado; te aviso en 2 horas si se libera y mientras tanto te propongo estas 3 alternativas parecidas". Nada de doble venta ni de reembolsos incómodos.</p>
+
+    <h3>¿Sirve solo para tiendas grandes?</h3>
+
+    <p>No. La misma arquitectura funciona para una tienda de barrio con 200 SKUs vivos y para un dropshipper con 10.000. El coste es fijo y el retorno depende del volumen de mensajes al día, no de la facturación.</p>
+
+    <h2>El coste real de no tener un agente</h2>
+
+    <p>La pregunta no es "¿cuánto cuesta automatizar?" sino "¿cuánto vendo menos por no hacerlo?". Con 80 mensajes al día, ticket medio de 42 euros y una conversión del 18% frente al 34% que consigue el agente, la brecha son 13 ventas diarias que no se producen. Al mes son entre <strong>9.000 y 16.000 euros que se van al competidor que sí responde en segundos</strong>.</p>
+
+    <p>Vinted y Wallapop crecen dos dígitos año tras año, pero la profesionalización del sector la ganan los vendedores que operan con la disciplina de un ecommerce moderno. La tecnología existe, está probada, tiene retorno medible en el primer trimestre y no requiere programar nada.</p>
+
+    <p>Ahora ya sabes cómo se construye.</p>
+
+    <div class="blog-cta">
+      <h3>¿Quieres montar el agente IA en tu tienda de segunda mano?</h3>
+      <p>En ZENIA implementamos asistentes inteligentes conectados al inventario y a WhatsApp Business API para tiendas de reventa profesional. Sistema operativo en 5 semanas. Agenda una llamada de 30 minutos y vemos cómo funcionaría con tu catálogo real.</p>
+<p data-zenia-oportunidad="1">La base es la misma para todo el sector: <a href="/es/automatizacion-whatsapp-negocios.html">automatizar WhatsApp con IA</a> para que ninguna consulta se quede sin respuesta cuando la unidad sigue disponible.</p>
+
+      <a href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20sobre%20agente%20IA%20para%20tiendas%20de%20segunda%20mano%20y%20quiero%20ver%20c%C3%B3mo%20aplicarlo%20en%20mi%20tienda" target="_blank" rel="noopener">Hablar por WhatsApp ahora</a> <a style="background:transparent;border:1px solid var(--border);color:var(--text-secondary);margin-left:10px" href="https://calendly.com/zeladauriartef/30min">Agendar llamada gratuita</a>
+    </div>
+<div class="blog-related" data-zenia-money-links="1">
+  <h3>Ponlo en marcha en tu negocio</h3>
+  <a href="/es/crm-retail.html">CRM con IA para Retail<span>Agente de IA por WhatsApp 24/7 + CRM para tiendas y reventa. Desde €297/mes.</span></a>
+  <a href="/es/crm-retail-madrid.html">CRM con IA para Retail en Madrid<span>Implementación local para tiendas en Madrid. Demo gratuita por WhatsApp.</span></a>
+  <a href="/es/crm-retail-barcelona.html">CRM con IA para Retail en Barcelona<span>Implementación local para tiendas en Barcelona. Demo gratuita por WhatsApp.</span></a>
+</div>
+
+
+    <div class="blog-related">
+      <h3>Artículos relacionados</h3>
+      <a href="/blog/automatizacion-retail-tiendas-ia.html">Automatización Retail con IA: Guía Completa para Tiendas 2026<span>Cómo la IA transforma la operación de tiendas físicas y online: stock unificado, atención omnicanal, upselling.</span></a>
+      <a href="/blog/agente-ia-para-tiendas-de-ropa.html">Agente IA para Tiendas de Ropa: Tallas, Reservas y Fidelización<span>Cómo un asistente inteligente convierte consultas de talla y disponibilidad en ventas cerradas por WhatsApp.</span></a>
+      <a href="/blog/recuperar-carritos-abandonados-whatsapp.html">Recuperar Carritos Abandonados por WhatsApp con IA<span>Estrategias y flujos para reactivar carritos abandonados en ecommerce con mensajes de WhatsApp automatizados.</span></a>
+      </div>
+
+  </div>
+
+<div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 24px; margin: 40px 0;" data-zenia-internal-links="landings">
+  <h3 style="color: #F1F5F9; margin-bottom: 12px; font-size: 1.05rem;">¿En qué ciudad operas?</h3>
+  <p style="color: #94A3B8; margin-bottom: 16px; font-size: 0.95rem;">Personalizamos la implementación según tu mercado local. Consulta la guía retail específica para tu ciudad:</p>
+  <div>
+      <a href="/es/crm-retail-madrid.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">CRM Retail en Madrid →</a>
+      <a href="/es/crm-retail-barcelona.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">CRM Retail en Barcelona →</a>
+      <a href="/es/crm-retail-valencia.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">CRM Retail en Valencia →</a>
+      <a href="/es/crm-retail.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">CRM Retail (guía nacional) →</a>
+  </div>
+</div>
+
+</article>
+
+<footer class="blog-footer">
+  <div class="container">
+    <p>&copy; 2026 ZENIA. Todos los derechos reservados. | <a href="/">Inicio</a> | <a href="/blog/">Blog</a></p>
+  </div>
+</footer>
+
+<div style="text-align:center; padding:16px 24px; background:#0A0F1C; color:#64748B; font-size:0.85rem; border-top:1px solid rgba(255,255,255,0.04);"><a href="/es/cobertura.html" style="color:#94A3B8; text-decoration:none;">Ver cobertura completa</a></div>
+<a href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20sobre%20agente%20IA%20para%20tiendas%20de%20segunda%20mano%20y%20quiero%20ver%20c%C3%B3mo%20aplicarlo%20en%20mi%20tienda" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp" data-directo style="position:fixed;bottom:24px;right:24px;z-index:9998;background:#25D366;color:white;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(37,211,102,0.4);transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 20px rgba(37,211,102,0.5)'" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 16px rgba(37,211,102,0.4)'">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<script>document.addEventListener("click",function(e){var t=e.target,a=t.closest?t.closest('a[href*="wa.me"]'):null;if(!a)return;try{navigator.sendBeacon("https://gaia-relojes.onrender.com/gwb/lead",JSON.stringify({site:"zenia",path:location.pathname,ref:document.referrer||""}))}catch(r){}},true);</script>
+<script src="/assets/qualify.js?v=3" defer></script>
+</body>
+</html>

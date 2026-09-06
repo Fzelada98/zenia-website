@@ -5656,3 +5656,16 @@ Architecture, workflow diagram and 4-week rollout: https://zeniapartners.com/blo
 #B2B #WhatsAppBusinessAPI #systemsdesign #AIagents #retailtech
 
 ---
+## 2026-09-06 - AI agent for outpatient physical therapy (EN)
+
+The engineering unlock in PT front-desk automation is not the WhatsApp thread, it is the two-way write into WebPT, Prompt, Jane or HENO combined with structured outcome-measure delivery. The published no-show band for outpatient PT sits at 15-31% and only 7-30% of patients complete their plan of care, so the agent is worthless if it books into a side calendar someone retypes at 6 PM.
+
+Reference stack we ship for a 2 to 6-therapist clinic: WhatsApp Cloud API through a HIPAA-BAA'd BSP (360dialog or Twilio), a frontier LLM with typed tool functions bound to search_slot / book_eval / reschedule / mark_missed / send_outcome_measure / trigger_recall, EHR bridge via native REST for Prompt and Jane and via partner API plus iCal fallback for WebPT and HENO, per-tenant vector index for payer rules and clinic protocols, and a state machine over Meta's 24-hour service window that auto-promotes to an approved utility HSM for the 72h, 24h and 2h reminder cascade. LEFS, DASH, NDI and Oswestry are scored inline in the conversation and written back to the chart as structured numeric fields, not PDFs. Idempotency keyed on message_id plus intent-hash so a retried book_eval never double-books an initial evaluation slot.
+
+Two production numbers from the composite deployment (WebPT + BCBS/Medicare panel, 60-75 visits/day): p95 first-reply at 8.7s on off-hours referral inquiries where the manual baseline was 5.5 hours, and combined no-show plus same-day cancel dropped from 26% to 10% at 90 days once the 3-step reminder cascade plus 10-minute missed-visit recovery loop shipped. Design decision worth making before code: red-flag detection (saddle anesthesia, post-op wound, suspected DVT) runs as a classifier on every inbound message and hard-escalates to a human queue with EHR context attached, never left to prompt-only guardrails.
+
+Architecture, EHR integration matrix and 90-day case: https://zeniapartners.com/blog/ai-agent-for-physical-therapy-clinics.html
+
+#B2B #HealthTech #WhatsAppBusinessAPI #systemsdesign #AIagents
+
+---

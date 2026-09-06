@@ -5684,3 +5684,16 @@ Architecture, GDPR posture and 5-week rollout: https://zeniapartners.com/blog/ag
 #B2B #HealthTech #WhatsAppBusinessAPI #systemsdesign #AIagents
 
 ---
+## 2026-09-06 - AI agent for veterinary clinics (EN)
+
+The engineering unlock in veterinary front-desk automation is not the phone answer, it is the two-way write into Cornerstone, AVImark, eVetPractice, ezyVet, ImproMed or Provet Cloud combined with a red-flag classifier that hard-branches out of the LLM path before generation. Published data puts daytime missed calls at 20-30%, after-hours voicemail abandonment at 72%, and missed-call revenue leak at USD 100k-182k per clinic per year, so the agent is worthless if the appointment lives in a side calendar someone retypes at 18:00.
+
+Reference stack we ship for a 1 to 6-DVM small-animal practice: WhatsApp Cloud API through a Meta BSP (360dialog or Twilio) plus a voice channel on a low-latency ASR/TTS pipeline, a frontier LLM with typed tool functions bound to search_slot / book_appointment / reschedule / cancel / walk_waitlist / trigger_reactivation / refill_task, PIMS bridge via native REST for eVetPractice / ezyVet / Provet Cloud / Digitail and via partner API plus Rapport/iCal fallback for Cornerstone and AVImark, per-tenant vector index for pricing, protocols and VCPR-safe policy language, and a state machine over Meta's 24-hour service window that auto-promotes to an approved utility HSM for the T-72h / T-24h / T-2h reminder cascade with one-tap confirm. Idempotency keyed on message_id plus intent-hash so a retried book_appointment webhook never double-books the same 30-minute slot on Dr. Chen's Wednesday.
+
+Two production numbers from a composite 3-DVM deployment (Cornerstone, ~55-70 visits/day): p95 first-reply at 5.8s on off-hours new-client inquiries where the manual baseline was after-hours voicemail with 72% abandonment, and combined no-show plus same-day cancel dropped from 21% to 8.3% at 90 days once the 3-touch cascade plus waitlist backfill loop shipped. Design decision worth making before code: an emergency classifier (chocolate/xylitol/lily/HBC/dystocia/post-op wound) runs before any generation on every inbound message and hard-escalates to the on-call DVM by a second channel with PIMS context attached, never left to prompt-only guardrails; the LLM is not permitted to give clinical advice under any state's VCPR.
+
+Architecture, PIMS integration matrix and 90-day case: https://zeniapartners.com/blog/ai-agent-for-veterinary-clinics.html
+
+#B2B #VetTech #WhatsAppBusinessAPI #systemsdesign #AIagents
+
+---

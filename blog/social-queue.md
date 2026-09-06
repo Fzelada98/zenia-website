@@ -5643,3 +5643,16 @@ Full architecture, integration matrix and cost model: https://zeniapartners.com/
 #B2B #CRM #WhatsAppBusinessAPI #systemsdesign #AIagents
 
 ---
+## 2026-09-06 - AI agent for a bespoke tailor's WhatsApp (EN)
+
+The non-obvious integration problem in tailoring automation is not the conversation, it is the fitting calendar and the ticket size. A bespoke tailor books 60 to 90 minute blocks, runs 2 to 4 fittings per garment across 4 to 8 weeks of production, and each miscommunicated slot is a EUR 600 to 3000 loss. A generic "chatbot" that only replies to FAQs skips the actual value: writing to a calendar, capturing measurements, and firing pickup notifications from workshop state.
+
+Reference stack we ship for a workshop from single master to 6-person atelier: WhatsApp Cloud API via 360dialog for volumes under 200k monthly conversations, a frontier LLM agent with typed tool functions bound to appointment_search / book_fitting / send_quote / mark_ready_for_pickup, the workshop's Google Calendar or Outlook as scheduling source of truth, a per-tenant vector index for fabric catalog and pricing bands, and a state machine over Meta's 24-hour service window that auto-promotes to an approved HSM template for fitting reminders and pickup notices. Idempotency keyed on message_id plus intent-hash so a retried book_fitting webhook does not double-book the same 60-minute slot in the master tailor's calendar.
+
+Two production numbers on the composite deployment (mid-tier Spanish bespoke workshops, ~32 pieces per month, EUR 900 average ticket): p95 first-reply at 9.6s on off-hours quote requests where the manual baseline was 6 to 14 hours, and 71% no-show reduction on fittings once the T minus 24h HSM reminder plus one-tap reschedule shipped. Anchor design decision worth making before code: quotes are guardrailed to fabric-band ranges the tailor signed off on, never free-form pricing, so the agent cannot invent a number the workshop cannot honor.
+
+Architecture, workflow diagram and 4-week rollout: https://zeniapartners.com/blog/agente-ia-para-sastrerias.html
+
+#B2B #WhatsAppBusinessAPI #systemsdesign #AIagents #retailtech
+
+---

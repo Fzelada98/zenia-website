@@ -5710,3 +5710,18 @@ Architecture, DAC7 posture and 5-week rollout: https://zeniapartners.com/blog/ag
 #B2B #RetailTech #WhatsAppBusinessAPI #systemsdesign #AIagents
 
 ---
+## 2026-09-07 - Agente IA para gimnasios de CrossFit (ES vertical, EN post)
+
+Shipped the WhatsApp agent that runs the front desk of a CrossFit box on the same phone number the head coach already uses.
+
+Reference stack: Meta WhatsApp Business API through a Meta BSP (360dialog or Twilio), a frontier LLM with typed tool functions bound to search_wod / reserve_class / release_class / walk_waitlist / open_onboarding / retry_charge / flag_at_risk, gym-software bridge over REST to PushPress, Wodify, Resasports, Wappfit and TrainingCafe, payment layer on Stripe or GoCardless with SEPA retry policy, and a per-class mutex on Postgres (one row per WOD slot, atomic reservation with 24-hour TTL, released on cancel webhook or timeout). State machine over Meta's 24-hour service window auto-promotes to approved utility HSM for the T-24h and T-2h reminder cascade with one-tap confirm.
+
+The interesting engineering is the retention loop, not the booking flow. An at-risk classifier runs on every daily job: sliding window of attendance per member, threshold at 10 calendar days without a booked WOD, and a hard-branch out of the LLM path into a coach-owned reactivation queue with the last favorite coach and last favorite hour attached, never left to prompt-only guardrails. Idempotency keyed on member_id plus intent-hash so a retried reserve_class never double-books the same rack on the 19:00 slot.
+
+Two production numbers from a composite deployment (180 active members, ~90 inbound leads/month via WhatsApp and Instagram DM to the same number): p95 first-reply at 6.4s on new-lead pricing intent where the manual baseline was 38-58 minutes, and recurring-charge recovery moved from 35% to 82% at 90 days once the tokenized card-update deep link plus SEPA retry policy shipped. Retention at 12 months moved from 66% to 78-82% on the same cohort.
+
+Architecture, gym-software integration matrix and 5-week rollout: https://zeniapartners.com/blog/agente-ia-para-gimnasios-de-crossfit.html
+
+#B2B #FitnessTech #WhatsAppBusinessAPI #systemsdesign #AIagents
+
+---

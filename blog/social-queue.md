@@ -5738,3 +5738,18 @@ Architecture, integration failure modes and 30-day rollout: https://zeniapartner
 #B2B #FieldService #WhatsAppBusinessAPI #VoiceAI #systemsdesign #AIagents
 
 ---
+## 2026-09-07 - Agente IA para hoteles boutique (ES vertical, EN post)
+
+Shipped the WhatsApp agent that runs the reservations desk of a 25-room boutique hotel on the phone number the front-office team already uses.
+
+Reference stack: Meta WhatsApp Business API through a Meta BSP (360dialog or Twilio), a frontier LLM with typed tool functions bound to quote_stay / hold_room / commit_reservation / propose_upsell / issue_key_code / open_housekeeping_ticket / trigger_review_flow, a PMS bridge over REST and webhooks to Cloudbeds, Mews, Little Hotelier and Apaleo with per-tenant OAuth, a rate cache invalidated on channel manager push (so an OTA closeout in Booking is reflected on WhatsApp within seconds and never oversells), Stripe and Redsys for direct payment with 3DS challenge in-thread, and Salto / Nuki for BLE key issuance at check-in. State machine tracks Meta's 24-hour service window and auto-promotes to approved utility HSMs for T-72h upsell and T-48h post-stay review.
+
+The interesting engineering is not the reservation flow, it is parity enforcement. The agent must offer the same public rate as OTAs (contractual paridad) while opening a legal margin on canal directo: waived resort fee, free late checkout, in-thread welcome amenity, none of which are published on the OTA channel. That logic sits in a rules engine outside the LLM prompt so it can be audited and A/B tested per property. Idempotency keyed on guest_hash plus intent-hash so a retried commit_reservation never double-books room 204 on the same date.
+
+Two production numbers from a composite 25-room deployment (~520 inbound WhatsApp threads/month): p50 quote-with-availability at 6.9s on the initial rate query where the manual baseline was 42 min, and direct-booking share moved from 22% to 47% at 90 days once nocturnal coverage plus the post-stay reactivation flow shipped. HiJiffy's 2026 industry benchmark of 85% guest-query automation lines up with what we see once the PMS integration and rate cache are correct.
+
+Architecture, PMS integration matrix and 5-week rollout: https://zeniapartners.com/blog/agente-ia-para-hoteles-boutique.html
+
+#B2B #HotelTech #WhatsAppBusinessAPI #systemsdesign #AIagents
+
+---

@@ -67,7 +67,7 @@
     if (abierto) return;
     abierto = true;
     var ctx = contexto();
-    var estado = { sector: "", objetivo: "", tamano: "", ciudad: "", nombre: "" };
+    var estado = { sector: "", objetivo: "", tamano: "", ciudad: "", nombre: "", contacto: "" };
 
     var st = document.createElement("style");
     st.textContent = css;
@@ -140,13 +140,23 @@
     body.appendChild(grupo("¿Cuántos sois?", TAMANOS, "tamano"));
     body.appendChild(texto("¿En qué ciudad?", "Ej.: Lima, Madrid, Bogotá", "ciudad"));
     body.appendChild(texto("Tu nombre", "¿Cómo te llamamos?", "nombre"));
+    /* Contacto (7-sep-2026): dos leads con nombre abrieron WhatsApp y nunca
+     * pulsaron enviar; sin su número o email se perdieron. Con esto el aviso
+     * lleva cómo contactarles aunque el mensaje se quede en el borrador. */
+    body.appendChild(texto("Tu WhatsApp o email", "+34 600 000 000 o tu@email.com", "contacto"));
 
     var cta = document.createElement("button");
     cta.type = "button";
     cta.className = "zq-cta";
-    cta.textContent = "Continuar por WhatsApp";
+    cta.textContent = "Abrir WhatsApp y enviar";
     cta.onclick = enviar;
     body.appendChild(cta);
+
+    var pista = document.createElement("p");
+    pista.className = "zq-priv";
+    pista.style.marginTop = "10px";
+    pista.textContent = "Se abrirá WhatsApp con tu mensaje ya escrito. Solo tienes que pulsar enviar.";
+    body.appendChild(pista);
 
     var alt = document.createElement("a");
     alt.className = "zq-alt";
@@ -190,6 +200,7 @@
       if (estado.tamano) l.push("Equipo: " + estado.tamano);
       if (estado.objetivo) l.push("Quiero resolver: " + estado.objetivo);
       if (estado.nombre) l.push("Soy " + estado.nombre);
+      if (estado.contacto) l.push("Contacto: " + estado.contacto);
       var url = "https://wa.me/" + NUM + "?text=" + encodeURIComponent(l.join("\n"));
       // Abrir ANTES de la petición: si se abre después, Safari e iOS lo bloquean
       // por no venir de un gesto directo del usuario.
@@ -199,7 +210,7 @@
           site: "zenia", path: location.pathname, ref: document.referrer || "",
           kind: "qualify", brand: estado.sector, city: estado.ciudad,
           model: estado.objetivo, condition: estado.tamano, name: estado.nombre,
-          year: ctx.slice(0, 30)
+          contact: estado.contacto, year: ctx.slice(0, 30)
         });
         if (navigator.sendBeacon) navigator.sendBeacon(ENDPOINT, carga);
         else fetch(ENDPOINT, { method: "POST", body: carga, keepalive: true });

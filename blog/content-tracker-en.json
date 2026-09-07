@@ -39,7 +39,7 @@
     { "slug": "ai-agent-for-physical-therapy-clinics", "keyword": "ai agent for physical therapy clinics", "tier": 1, "cluster": "healthcare", "status": "published", "date": "2026-09-06" },
     { "slug": "ai-agent-for-veterinary-clinics", "keyword": "ai agent for veterinary clinics", "tier": 1, "cluster": "healthcare", "status": "published", "date": "2026-09-06" },
     { "slug": "ai-agent-for-hvac-companies", "keyword": "ai agent for hvac companies", "tier": 1, "cluster": "trades", "status": "published", "date": "2026-09-07" },
-    { "slug": "ai-agent-for-plumbers", "keyword": "ai agent for plumbers", "tier": 1, "cluster": "trades", "status": "pending" },
+    { "slug": "ai-agent-for-plumbers", "keyword": "ai agent for plumbers", "tier": 1, "cluster": "trades", "status": "published", "date": "2026-09-07" },
     { "slug": "whatsapp-automation-for-restaurants", "keyword": "whatsapp automation for restaurants", "tier": 1, "cluster": "restaurants", "status": "pending" },
     { "slug": "whatsapp-automation-for-real-estate", "keyword": "whatsapp automation for real estate", "tier": 1, "cluster": "real-estate", "status": "pending" },
     { "slug": "whatsapp-automation-for-ecommerce", "keyword": "whatsapp automation for ecommerce", "tier": 1, "cluster": "ecommerce", "status": "pending" },

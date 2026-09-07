@@ -5753,3 +5753,16 @@ Architecture, PMS integration matrix and 5-week rollout: https://zeniapartners.c
 #B2B #HotelTech #WhatsAppBusinessAPI #systemsdesign #AIagents
 
 ---
+## 2026-09-07 - AI agent for plumbers (EN)
+
+Shipped a voice + WhatsApp AI agent as the primary line for an 8-truck residential plumbing shop in Phoenix, integrated into ServiceTitan for live dispatch.
+
+Reference stack: Twilio Programmable Voice with a streaming ASR (Deepgram nova-3) piping into a frontier LLM running typed tool functions bound to classify_intent / verify_service_area / read_pricebook_range / offer_slots / book_job / page_on_call / trigger_reminder_cadence, WhatsApp Business API through a Meta BSP for confirmations, photo intake and reschedule threads, and a ServiceTitan bridge over REST + webhooks for two-way state (reads live tech skill matrix, on-call rotation, capacity, drive time from Google Distance Matrix; writes bookings, notes, status). Service area is enforced as a hard ZIP allowlist outside the LLM path, not a prompt instruction, so the agent physically cannot book a job 45 minutes outside the operating radius. Emergency triage is a deterministic hard-branch classifier ahead of the LLM so an active-flood call jumps queue with a 90-second SLA to pager, not an "I'll try to prioritize" prompt heuristic. A Postgres slot-lock table with 90s TTL serializes offers so two callers cannot claim the same evening window on the same tech.
+
+Two production numbers from the 60-day cohort: end-to-end voice p95 latency at 810 ms per turn (Twilio media stream in, TTS out), which is the threshold below which callers stop noticing the agent is not human, and after-hours booking capture moved from 19 jobs/mo (voicemail-to-callback baseline) to 89 jobs/mo once the agent could commit slots against the live dispatch board. 49% of all inbound bookings closed without a human touching the ticket.
+
+Architecture, integration failure modes and 30-day rollout: https://zeniapartners.com/blog/ai-agent-for-plumbers.html
+
+#B2B #FieldService #WhatsAppBusinessAPI #VoiceAI #systemsdesign #AIagents
+
+---

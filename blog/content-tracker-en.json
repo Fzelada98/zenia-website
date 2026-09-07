@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-09-06T12:00:00Z",
+  "lastRun": "2026-09-07T12:00:00Z",
   "market": "US/UK small business",
   "posts": [
     {
@@ -38,7 +38,7 @@
     { "slug": "ai-agent-for-chiropractors", "keyword": "ai agent for chiropractors", "tier": 1, "cluster": "healthcare", "status": "published", "date": "2026-09-05" },
     { "slug": "ai-agent-for-physical-therapy-clinics", "keyword": "ai agent for physical therapy clinics", "tier": 1, "cluster": "healthcare", "status": "published", "date": "2026-09-06" },
     { "slug": "ai-agent-for-veterinary-clinics", "keyword": "ai agent for veterinary clinics", "tier": 1, "cluster": "healthcare", "status": "published", "date": "2026-09-06" },
-    { "slug": "ai-agent-for-hvac-companies", "keyword": "ai agent for hvac companies", "tier": 1, "cluster": "trades", "status": "pending" },
+    { "slug": "ai-agent-for-hvac-companies", "keyword": "ai agent for hvac companies", "tier": 1, "cluster": "trades", "status": "published", "date": "2026-09-07" },
     { "slug": "ai-agent-for-plumbers", "keyword": "ai agent for plumbers", "tier": 1, "cluster": "trades", "status": "pending" },
     { "slug": "whatsapp-automation-for-restaurants", "keyword": "whatsapp automation for restaurants", "tier": 1, "cluster": "restaurants", "status": "pending" },
     { "slug": "whatsapp-automation-for-real-estate", "keyword": "whatsapp automation for real estate", "tier": 1, "cluster": "real-estate", "status": "pending" },

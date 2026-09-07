@@ -5725,3 +5725,16 @@ Architecture, gym-software integration matrix and 5-week rollout: https://zeniap
 #B2B #FitnessTech #WhatsAppBusinessAPI #systemsdesign #AIagents
 
 ---
+## 2026-09-07 - AI agent for HVAC companies (EN)
+
+Shipped a voice + WhatsApp AI agent for a 12-truck residential HVAC and plumbing operator, wired end-to-end into ServiceTitan.
+
+Reference stack: Twilio Programmable Voice with a streaming ASR (Deepgram nova-3) into a frontier LLM running typed tool functions bound to classify_intent / check_technician_availability / offer_slots / book_job / trigger_dispatch_update / escalate_to_human, WhatsApp Business API via Meta BSP for confirmations and reschedule threads, and a ServiceTitan Dispatch Pro bridge over their REST + webhook API for two-way state (reads live tech GPS, skill matrix, truck stock, drive-time from Google Distance Matrix; writes bookings, notes, and status changes). A Postgres slot-lock table serializes offers so two callers cannot claim the same 2 PM window on the same tech, with a 90-second TTL and a release on abandon. Emergency triage is a hard-branch classifier out of the LLM path, not a prompt instruction, so an AC-out in July jumps queue with deterministic priority.
+
+Two production numbers from the 90-day cohort: end-to-end voice p95 latency at 780 ms per turn (Twilio media stream in, TTS out) which is the threshold under which callers stop noticing the agent is not human, and after-hours booking conversion moved from 14% (voicemail-to-callback baseline) to 61% once the agent could actually commit slots against the live dispatch board. 41% of all bookings closed without a human touching the ticket.
+
+Architecture, integration failure modes and 30-day rollout: https://zeniapartners.com/blog/ai-agent-for-hvac-companies.html
+
+#B2B #FieldService #WhatsAppBusinessAPI #VoiceAI #systemsdesign #AIagents
+
+---

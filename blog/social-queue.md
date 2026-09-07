@@ -5768,3 +5768,18 @@ Architecture, integration failure modes and 30-day rollout: https://zeniapartner
 #B2B #FieldService #WhatsAppBusinessAPI #VoiceAI #systemsdesign #AIagents
 
 ---
+## 2026-09-07 - Agente IA para empresas de traducción (ES vertical, EN post)
+
+Shipped a WhatsApp + CRM agent for a mid-size translation agency where the project manager was burning 62% of the day on coordination rather than QA or account work.
+
+Reference stack: Meta WhatsApp Business API through a Meta BSP, a frontier LLM with typed tool functions bound to intake_lead / estimate_wordcount / quote_project / assign_translator / notify_deadline / issue_invoice / trigger_dunning, a TAO bridge over REST to memoQ, Trados, Phrase and Smartcat to pull translation-memory leverage and repetition counts into the quote before the human ever sees it, a CRM data model where project state (received / quoted / accepted / assigned / in-progress / delivered / invoiced / paid) is the single source of truth, and a Holded / Quipu connector for one-way invoice sync. The rate engine is deterministic and lives outside the LLM prompt so language-pair rates, urgency multipliers and volume discounts can be audited per row and A/B tested; the LLM only frames the message.
+
+The non-obvious engineering is escalation, not automation. Sworn translations, complex multilingual bundles and VIP accounts route to the PM with the partial quote pre-computed instead of being auto-answered, because the cost of a wrong sworn-translation quote is much higher than the cost of a slow one. Idempotency keyed on lead_hash plus intent_hash so a retried assign_translator never double-books the same freelancer on overlapping deadlines.
+
+Two production numbers from a 90-day cohort at ~110 quote requests/month: p50 time-to-first-quote at 7 min against a 4h20 manual baseline, and quote-to-win ratio moved from 21% to 34% once nocturnal coverage and automated follow-up on open quotes shipped. Off-hours quote volume settled at 28% of the monthly inbound, i.e. work that used to wait until the next business day.
+
+Architecture, TAO integrations and 5-week rollout: https://zeniapartners.com/blog/agente-ia-para-empresas-de-traduccion.html
+
+#B2B #LanguageServices #WhatsAppBusinessAPI #systemsdesign #AIagents
+
+---

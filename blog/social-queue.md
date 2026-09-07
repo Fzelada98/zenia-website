@@ -5712,6 +5712,8 @@ Architecture, DAC7 posture and 5-week rollout: https://zeniapartners.com/blog/ag
 ---
 ## 2026-09-07 - Agente IA para gimnasios de CrossFit (ES vertical, EN post)
 
+<!-- PUBLISHED:make-webhook at 2026-09-07T18:56:30Z -->
+
 Shipped the WhatsApp agent that runs the front desk of a CrossFit box on the same phone number the head coach already uses.
 
 Reference stack: Meta WhatsApp Business API through a Meta BSP (360dialog or Twilio), a frontier LLM with typed tool functions bound to search_wod / reserve_class / release_class / walk_waitlist / open_onboarding / retry_charge / flag_at_risk, gym-software bridge over REST to PushPress, Wodify, Resasports, Wappfit and TrainingCafe, payment layer on Stripe or GoCardless with SEPA retry policy, and a per-class mutex on Postgres (one row per WOD slot, atomic reservation with 24-hour TTL, released on cancel webhook or timeout). State machine over Meta's 24-hour service window auto-promotes to approved utility HSM for the T-24h and T-2h reminder cascade with one-tap confirm.

@@ -5783,3 +5783,18 @@ Architecture, TAO integrations and 5-week rollout: https://zeniapartners.com/blo
 #B2B #LanguageServices #WhatsAppBusinessAPI #systemsdesign #AIagents
 
 ---
+## 2026-09-08 - Agente IA para agencias de comunicación (ES vertical, EN post)
+
+Shipped a WhatsApp + CRM agent for a 15-person communications agency where roughly 48% of the team's billed hours were being lost to coordination, briefings arriving out of hours and the Friday reporting slog.
+
+Reference stack: Meta WhatsApp Business API through a Meta BSP, a frontier LLM with typed tool functions bound to onboard_account / intake_briefing / transcribe_voice / assemble_report / chase_invoice / route_press_inquiry / escalate_crisis, a CRM data model (HubSpot / Pipedrive / Salesforce / Attio, whichever the agency already owns) as the canonical state for account, campaign, media list and invoice, and REST + webhook bridges into Meta Ads, LinkedIn Campaign Manager, GA4 and clipping providers so the weekly performance section of every deliverable is compiled deterministically before the account manager writes the strategic read. Voice briefings hit a streaming ASR (Deepgram / Whisper-tier) and land as a structured brief object in the CRM, not a chat message.
+
+The non-obvious engineering is escalation, not automation. Press inquiries route to the on-call director inside a 90-second SLA because a missed embargo is a much worse failure than a slow quote. Reputational crisis triggers are a deterministic hard-branch classifier ahead of the LLM, not a prompt heuristic. DSO chasing has a tone ladder with idempotency keyed on invoice_id plus stage_hash so a retried nudge never sends two identical messages to the same finance contact. Account confidentiality is enforced as row-level policy on the CRM side, not inside the model.
+
+Two production numbers from a 90-day cohort: p50 time-to-first-response on client WhatsApp at 12 s against a 1h20 manual baseline, and the billable-to-total-hours ratio moved from 52% to 71% once the reporting and onboarding pipelines shipped, equivalent to about 2.8 FTE of capacity recovered per year without touching headcount. DSO landed at 38 days from 62.
+
+Architecture, CRM integrations and 4-week rollout: https://zeniapartners.com/blog/agente-ia-para-agencias-de-comunicacion.html
+
+#B2B #PRTech #CommunicationsAgency #WhatsAppBusinessAPI #systemsdesign #AIagents
+
+---

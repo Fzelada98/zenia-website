@@ -5800,3 +5800,18 @@ Architecture, CRM integrations and 4-week rollout: https://zeniapartners.com/blo
 #B2B #PRTech #CommunicationsAgency #WhatsAppBusinessAPI #systemsdesign #AIagents
 
 ---
+
+---
+## 2026-09-08 - WhatsApp Automation for Restaurants (EN)
+
+Shipped a WhatsApp automation stack for a 90-seat restaurant concept where the phone was rejecting ~74 calls a week and reservation no-shows sat at 11.2%.
+
+Reference stack: Meta WhatsApp Business API through a Meta BSP, a frontier LLM with typed tool functions bound to check_availability / hold_slot / confirm_reservation / modify_reservation / take_order / route_to_manager, direct read/write against OpenTable/Resy/SevenRooms as the canonical reservation state, POS bridges into Toast/Square/Clover so takeout tickets print to the kitchen without a human relay, and a per-guest CRM row that unifies phone, OpenTable, WhatsApp and POS spend against a single identity.
+
+The interesting engineering is not the reply, it is the write path. Reservation double-booking is prevented by an optimistic lock keyed on (venue_id, service_window, table_pool) plus a rollback-on-webhook-failure pattern, not by prompt discipline. Confirm/reminder templates are idempotent on (reservation_id, stage) so a Meta webhook retry never double-messages a guest. Missed-call fallback runs off the PBX SIP hook, not the LLM. Handoff to the host is a deterministic classifier ahead of the model with a 15-second SLA on VIP tags.
+
+Two production numbers from a 90-day cohort: p50 answer time on inbound WhatsApp at 3.8 s against an 8-minute phone baseline, and no-shows landed at 4.9% (from 11.2%) after the two-hour reminder with one-tap confirm/cancel shipped. Net weekly uplift measured at ~$10,451 per location on a 90-seat, two-turn concept.
+
+Architecture, POS integrations and 14-day rollout: https://zeniapartners.com/blog/whatsapp-automation-for-restaurants.html
+
+#B2B #RestaurantTech #WhatsAppBusinessAPI #systemsdesign #AIagents

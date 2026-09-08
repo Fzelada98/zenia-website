@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-09-07T12:00:00Z",
+  "lastRun": "2026-09-08T12:00:00Z",
   "market": "US/UK small business",
   "posts": [
     {
@@ -40,7 +40,7 @@
     { "slug": "ai-agent-for-veterinary-clinics", "keyword": "ai agent for veterinary clinics", "tier": 1, "cluster": "healthcare", "status": "published", "date": "2026-09-06" },
     { "slug": "ai-agent-for-hvac-companies", "keyword": "ai agent for hvac companies", "tier": 1, "cluster": "trades", "status": "published", "date": "2026-09-07" },
     { "slug": "ai-agent-for-plumbers", "keyword": "ai agent for plumbers", "tier": 1, "cluster": "trades", "status": "published", "date": "2026-09-07" },
-    { "slug": "whatsapp-automation-for-restaurants", "keyword": "whatsapp automation for restaurants", "tier": 1, "cluster": "restaurants", "status": "pending" },
+    { "slug": "whatsapp-automation-for-restaurants", "keyword": "whatsapp automation for restaurants", "tier": 1, "cluster": "restaurants", "status": "published", "date": "2026-09-08" },
     { "slug": "whatsapp-automation-for-real-estate", "keyword": "whatsapp automation for real estate", "tier": 1, "cluster": "real-estate", "status": "pending" },
     { "slug": "whatsapp-automation-for-ecommerce", "keyword": "whatsapp automation for ecommerce", "tier": 1, "cluster": "ecommerce", "status": "pending" },
     { "slug": "whatsapp-automation-for-med-spas", "keyword": "whatsapp automation for med spas", "tier": 1, "cluster": "beauty", "status": "pending" },

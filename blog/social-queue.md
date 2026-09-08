@@ -5815,3 +5815,20 @@ Two production numbers from a 90-day cohort: p50 answer time on inbound WhatsApp
 Architecture, POS integrations and 14-day rollout: https://zeniapartners.com/blog/whatsapp-automation-for-restaurants.html
 
 #B2B #RestaurantTech #WhatsAppBusinessAPI #systemsdesign #AIagents
+
+
+---
+
+## 2026-09-08 - WhatsApp automation for real estate (EN)
+
+Stack note for teams building lead-response systems for U.S. real estate desks.
+
+We wired WhatsApp Business API + a stateful AI agent in front of Zillow, Realtor.com, IDX and Facebook Lead Ads, with hand-off rules into the agent CRM and calendar. p50 first-response time landed at 42 s against an industry median of 47 min (Tom Ferry 2025, n=28k agents), sustained 24/7 across a 60-day production window.
+
+Design notes: qualification templates pre-approved on Meta to keep the 24 h session boundary predictable; showing booking is a single tool call against the agents Google Calendar; hand-off triggers include offer intent, legal questions and negative-sentiment shifts. Message cost held at $0.03-0.08 per business-initiated conversation.
+
+On the pilot desk (solo agent, ~45 monthly leads), buyer-rep conversion moved 3.1% -> 7.8% and closed deals 1.4 -> 2.6 per month, no additional headcount.
+
+Architecture, integrations and hand-off rules: https://zeniapartners.com/blog/whatsapp-automation-for-real-estate.html
+
+#B2B #RealEstateTech #WhatsAppBusinessAPI #AIagents #systemsdesign

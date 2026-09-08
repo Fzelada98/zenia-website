@@ -5832,3 +5832,20 @@ On the pilot desk (solo agent, ~45 monthly leads), buyer-rep conversion moved 3.
 Architecture, integrations and hand-off rules: https://zeniapartners.com/blog/whatsapp-automation-for-real-estate.html
 
 #B2B #RealEstateTech #WhatsAppBusinessAPI #AIagents #systemsdesign
+
+
+---
+
+## 2026-09-08 - Agente IA para estudios de podcast (EN)
+
+Stack note for teams building booking and production coordination for creative studios.
+
+We shipped an AI agent for a two-room podcast studio: it quotes sessions, blocks the calendar and hands raw stems to the editor inside a single WhatsApp thread. Stack: WhatsApp Business API on ingress, a stateful conversation router with typed tool functions bound to quote_session / hold_room / confirm_booking / trigger_editor / send_invoice, Google Calendar and Cal.com as the source of truth for room capacity, and a Postgres CRM layer for tariffs, contracts and client history.
+
+Room double-booking is prevented by a row-level lock on (studio_id, room_id, timeslot) rather than by prompt discipline. Contract dispatch is idempotent on (client_id, session_id, stage) so a Meta webhook retry never fires a duplicate SignRequest. The editor hand-off is a deterministic post-session hook that pushes Riverside/Squadcast stems into a defined S3 prefix and emits a workflow event, not a model tool call.
+
+Two production numbers on a 90-day cohort: p50 first-response 9 s against a 2-6 h baseline, and 38% of confirmed bookings now land outside business hours. Cancellation rate moved 22% -> 7% after the 48 h reminder with a technical checklist shipped.
+
+Full write-up (Spanish): https://zeniapartners.com/blog/agente-ia-para-estudios-de-podcast.html
+
+#B2B #CreativeTech #WhatsAppBusinessAPI #AIagents #systemsdesign

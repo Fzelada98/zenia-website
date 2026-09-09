@@ -5882,3 +5882,19 @@ Full breakdown with per-vendor caps and the crossover math: https://zeniapartner
 #CRM #WhatsAppBusinessAPI #B2B #SaaS #systemsdesign
 
 ---
+
+## 2026-09-09 - WhatsApp Automation for Med Spas (Engineering breakdown)
+
+Deployment notes from a 3-injector med spa stack (Boulevard PMS, ~340 active patients, US HIPAA scope).
+
+Architecture: WhatsApp Business Cloud API through a Meta-approved BSP holding the BAA, an LLM tool-use loop with function calls into Boulevard's availability + appointment write endpoints, a treatment-window rebooking scheduler keyed on chart events (tox at 12-14 weeks, filler at product-specific intervals), and a template pipeline that enforces PHI-safe copy at generation time. Every conversation retained under the same 7-year policy as the chart.
+
+Two numbers held under 90-day load: p95 first-message latency 1.6s on WhatsApp Cloud API, and same-day cancel refill hitting 74% via parallel top-3 waitlist fan-out (vs 18% on FIFO human dialing). No-show + same-day cancel dropped 22% -> 6.4% on a 4-touch cascade (7d, 48h, 24h, 2h) with one-touch confirm at each step; 48h touch carries the largest delta.
+
+Compliance edges the reference architecture bakes in: BAA-scoped BSP, templated messages outside the 24h session window, TCPA-grade opt-in with audit trail, WhatsApp-native STOP keyword handling (Meta enforces suspension), template content redacted of clinical specifics ("your treatment on Tue 2:15pm" not "40u forehead tox").
+
+Full breakdown, PMS integration matrix (Boulevard, Mangomint, Pabau, AestheticsPro, PatientNow, Zenoti) and 14-day rollout: https://zeniapartners.com/blog/whatsapp-automation-for-med-spas.html
+
+#B2B #WhatsAppBusinessAPI #HIPAA #HealthTech #systemsdesign #AIagents
+
+---

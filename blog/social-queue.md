@@ -5849,3 +5849,20 @@ Two production numbers on a 90-day cohort: p50 first-response 9 s against a 2-6 
 Full write-up (Spanish): https://zeniapartners.com/blog/agente-ia-para-estudios-de-podcast.html
 
 #B2B #CreativeTech #WhatsAppBusinessAPI #AIagents #systemsdesign
+
+
+---
+
+## 2026-09-09 - WhatsApp Automation for Ecommerce (EN)
+
+Shipped a WhatsApp automation layer across three U.S. Shopify stores ($80k-$180k monthly revenue) where the email-only recovery ceiling was ~3% of abandoned carts and the phone was already saturated.
+
+Reference stack: Meta WhatsApp Business API through a Meta BSP (360dialog / Twilio / Gupshup / Meta Cloud API), a frontier LLM with typed tool functions bound to check_stock / recover_cart / lookup_order / issue_return / route_to_human, Shopify webhooks (checkout_abandoned, order_created, fulfillment_updated, refund_created) piped into the agent's event bus, the WhatsApp product catalog fed from the store's canonical Shopify product feed with inventory-aware gating, and a unified customer row joining shopify_customer_id, phone, email and event history.
+
+The interesting engineering is the session state machine, not the reply. Meta's 24 h user-initiated session window means every outbound outside the window has to fall back to a pre-approved template, so the agent runs a per-contact last_inbound_ts and switches between freeform and template modes deterministically; off-the-shelf tools silently drop those messages. Cart-recovery messages are idempotent on (cart_token, stage) so a Shopify webhook retry never double-fires the 45-minute nudge. Opt-out is honored inside a 60 s SLA against every future template and enforced at the send-gate, not just at the CRM layer, which matters for TCPA exposure on U.S. numbers. Template approvals are handled as a versioned library reviewed against Meta's marketing policy, not as ad copy.
+
+Two production numbers from a 90-day cohort: cart-recovery rate moved 3.2% -> 24.1% (Klaviyo baseline vs. WhatsApp) and support first-response p50 landed at 18 s against a 6-14 h email baseline. Blended ROAS on WhatsApp-attributed revenue sat at ~28x.
+
+Architecture, Shopify webhook layer and 14-day rollout: https://zeniapartners.com/blog/whatsapp-automation-for-ecommerce.html
+
+#B2B #Ecommerce #WhatsAppBusinessAPI #Shopify #systemsdesign #AIagents

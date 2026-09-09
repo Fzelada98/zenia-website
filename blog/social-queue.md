@@ -5898,3 +5898,17 @@ Full breakdown, PMS integration matrix (Boulevard, Mangomint, Pabau, AestheticsP
 #B2B #WhatsAppBusinessAPI #HIPAA #HealthTech #systemsdesign #AIagents
 
 ---
+## 2026-09-09 - Agente IA para Academias de Yoga (Engineering breakdown)
+
+Yoga studios in Spain run 100 to 150 active students at ~55€/month; a student who stays 24 months is worth 10x one who drops off at month 1, and today 76% churn before month 6.
+
+Built a WhatsApp Business Cloud API agent for that funnel. Tool-use loop bound to the class-management APIs of GesYoga, Virtuagym, Wodguru and Nubapp (read availability, write bookings, decrement bono counters), Stripe and Redsys for bono and matriculation payment, and the CRM for history and contraindications. ~6 tool calls per conversation, all persisted.
+
+Median first-response 11 seconds. P99 model latency 720ms; inbound webhook adds ~1.9s over Meta's queue. Waitlist promotion runs on a 10-minute confirmation TTL with automatic escalation to the next candidate. Mean fill time on late cancellations dropped from over 24h to under 8 minutes.
+
+No-shows moved from 20% to 7% over three months of production traffic. Full architecture and per-tool metrics: https://zeniapartners.com/blog/agente-ia-para-academias-de-yoga.html
+
+#WhatsAppBusinessAPI #AIagents #B2B #SaaS
+
+---
+

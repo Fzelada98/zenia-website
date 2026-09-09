@@ -5866,3 +5866,19 @@ Two production numbers from a 90-day cohort: cart-recovery rate moved 3.2% -> 24
 Architecture, Shopify webhook layer and 14-day rollout: https://zeniapartners.com/blog/whatsapp-automation-for-ecommerce.html
 
 #B2B #Ecommerce #WhatsAppBusinessAPI #Shopify #systemsdesign #AIagents
+
+---
+
+## 2026-09-09 - CRM Gratis vs de Pago (Engineering breakdown)
+
+Free-tier CRMs share one architectural gap: no server-side workflow runtime. Timers, SLA escalations, cross-object triggers and rate-limited fan-out all sit behind the paid plan because each one consumes a queue the free tier doesn't provision.
+
+We measured the cost of that gap on 12 SMB migrations off HubSpot Free / Zoho Free / Bitrix24 into a stack with WhatsApp Business Cloud API as the primary write path and Temporal-backed workflows against a normalized contact/deal model. Median event-to-action latency dropped from 4.1 h (human polling) to 1.6 s (webhook -> tool-use LLM -> API write). Duplicate write rate under 0.02% using idempotent doc IDs keyed on WA message_id.
+
+Vendor caps that force the move in 2026: HubSpot's 1,000-contact ceiling on new accounts since Sep 2024, Zoho's 3-user hard cap, Bitrix24's 5 GB shared quota across CRM + storage. Crossover to a paid stack lands between month 3 and month 6 for a 5-person shop generating 30 leads/month once you price in the middleware hours the free plan externalizes to humans.
+
+Full breakdown with per-vendor caps and the crossover math: https://zeniapartners.com/blog/crm-gratis-vs-de-pago.html
+
+#CRM #WhatsAppBusinessAPI #B2B #SaaS #systemsdesign
+
+---

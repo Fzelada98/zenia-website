@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-09-09T06:15:00+00:00",
+  "lastRun": "2026-09-09T14:20:02.914560+00:00",
   "posts": [
     {
       "slug": "agente-ia-para-academias-de-doblaje",
@@ -3288,6 +3288,15 @@
       "status": "published",
       "date": "2026-09-08",
       "source": "matrix"
+    },
+    {
+      "slug": "crm-gratis-vs-de-pago",
+      "keyword": "crm gratis vs de pago",
+      "tier": 3,
+      "cluster": "crm-pricing",
+      "status": "published",
+      "date": "2026-09-09",
+      "source": "matrix-expansion"
     }
   ]
 }

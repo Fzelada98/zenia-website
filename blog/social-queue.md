@@ -5928,3 +5928,19 @@ The full comparative teardown of the five CRM categories on sale in Seville, rea
 #WhatsAppBusinessAPI #CRM #B2B #SaaS
 
 ---
+
+## 2026-09-10 - WhatsApp Automation for Gyms (Engineering breakdown)
+
+US boutique gyms in 2026 run 300 to 1,200 active members at ~$149/month; annual retention on the HFA 2025 benchmark is 66.4% and up to 1 in 3 cancellations is now involuntary from a failed card charge nobody followed up on.
+
+Built a WhatsApp Business Cloud API stack for that funnel. Tool-use loop bound to the gym management APIs of Mindbody, PushPress, Wodify and Mariana Tek (read class availability, write bookings and cancels, freeze memberships, decrement pass counters), Stripe webhooks on invoice.payment_failed with one-tap update-card links, and Meta pre-approved Utility templates for reminders and payment recovery so the throughput does not rate-limit.
+
+Median first-response 9 seconds on the WhatsApp inbound side under 3x class-window peaks. Waitlist promotion runs on a 10-minute confirmation TTL with automatic escalation to the next candidate; mean fill time on late cancellations dropped from >6h to under 4 minutes. Failed-payment recovery moved from 41% to 78% across three production tenants over 90 days.
+
+The hardest part was not the model. It was collapsing Mindbody's booking API, Stripe dunning state, and the class-waitlist logic into one deterministic tool surface the agent could call without hallucinating a booking that a coach could not staff.
+
+Full architecture and per-automation metrics: https://zeniapartners.com/blog/whatsapp-automation-for-gyms.html
+
+#WhatsAppBusinessAPI #AIagents #B2B #SaaS
+
+---

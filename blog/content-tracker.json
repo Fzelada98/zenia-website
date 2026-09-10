@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-09-10T14:15:00+00:00",
+  "lastRun": "2026-09-10T22:10:00+00:00",
   "posts": [
+    {
+      "slug": "automatizacion-tiendas-automaticas",
+      "keyword": "automatización de tiendas automáticas",
+      "tier": 1,
+      "cluster": "retail-automatizado",
+      "status": "published",
+      "date": "2026-09-10",
+      "source": "striking"
+    },
     {
       "slug": "crm-para-empresas-en-madrid",
       "keyword": "crm para empresas en madrid",

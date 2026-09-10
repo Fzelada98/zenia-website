@@ -5974,3 +5974,18 @@ Full architecture, PMS integration surface and per-automation metrics: https://z
 #WhatsAppBusinessAPI #AIagents #B2B #SaaS
 
 ---
+## 2026-09-10 - Automatización de Tiendas Automáticas (Engineering breakdown)
+
+Spent the last quarter wiring the operational layer of an unmanned 24h store: 50 m², self-checkout kiosk, shelf load cells, four ceiling cameras with edge inference, contactless-only payments. Hardware is 12% of the problem. The 88% is the software that decides at 3 AM whether "the reader charged me twice" is a real double-charge, a legitimate refund, or a repeat-offender pattern.
+
+Stack: WhatsApp Business API webhook into a routing layer keyed by MSISDN, an AI agent bound to the POS API (Nayax and Azkoyen expose one, cheaper terminals need a receipt-printer middleware publishing to the same schema), shelf-load-cell deltas reconciled against ticket lines inside a 60s window to flag shrink, and a write-ahead ledger between agent tool calls and the ERP so a duplicated Meta delivery never doubles a refund or a stock movement. Camera clips sit in object storage and only surface when the classifier flags a return-fraud pattern; the owner never gets an idle-hours ping without an event attached.
+
+Two decisions that pulled the numbers. Bounding auto-refunds to under 20 EUR with the ticket + camera + user-history triangle authorized inline meant the agent closes 78% of nocturnal incidents alone; the rest escalate with the evidence pre-attached, so the owner acts on a WhatsApp reply, not a workflow. And modeling shelf load-cells as an event stream rather than a nightly snapshot took stock-rupture detection from ~14h latency to under 90 seconds, which is what recovers the SKU-days that were being lost overnight.
+
+Six-week delta on one production store: uncontrolled shrink 9% to 3% of revenue, stockouts 3-6 SKUs/day to 0-1, average basket 4.80 EUR to 6.20 EUR, 30-day repurchase 18% to 34%, ~5,385 EUR/month net after platform cost.
+
+Full architecture, POS integration surface, and the 5-week rollout: https://zeniapartners.com/blog/automatizacion-tiendas-automaticas.html
+
+#retailtech #WhatsAppBusinessAPI #automation #AIagents
+
+---

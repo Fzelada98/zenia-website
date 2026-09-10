@@ -5944,3 +5944,18 @@ Full architecture and per-automation metrics: https://zeniapartners.com/blog/wha
 #WhatsAppBusinessAPI #AIagents #B2B #SaaS
 
 ---
+## 2026-09-10 - CRM para Empresas en Madrid (Engineering breakdown)
+
+Rebuilt the inbound sales pipeline of a 26-person Madrid consultancy where the first-response SLA had drifted to 4h 8min across four channels (web form, LinkedIn Ads, referrals, WhatsApp corporate line) and 27% of leads never got answered inside 24h.
+
+Stack: WhatsApp Business API webhook fanning into a routing layer that dedupes across channels by phone hash and utm_id, a domain-scoped AI agent doing RAG over a 43-service catalog with per-customer pricing tables, deterministic CRM writes mirrored to HubSpot for the nurturing side, and a hard escalation to human under 90 seconds on deal size over 25k or on financing intent. VeriFactu bridge is idempotent on webhook retry, so a duplicated Meta delivery never doubles a lead or an invoice.
+
+Two things that pulled the numbers. Pre-indexing the catalog by tag and margin before touching embeddings kept the hot path under 900ms p95 during business hours. And a write-ahead ledger between the agent and the CRM meant that any tool call the model retried resolved to the same row, which killed the class of hallucinated duplicate opportunities that had blocked the previous stack.
+
+Five-month delta on production traffic: first response 4h 8min to 14 seconds, leads past 24h without a reply from 27% to 0%, close rate on qualified leads 8% to 19%, ~234k EUR incremental revenue attributed by CRM stage transitions.
+
+Full comparative teardown of the five CRM categories on sale in Madrid, real first-year costs and the seven selection criteria we run on any new engagement: https://zeniapartners.com/blog/crm-para-empresas-en-madrid.html
+
+#WhatsAppBusinessAPI #CRM #B2B #SaaS
+
+---

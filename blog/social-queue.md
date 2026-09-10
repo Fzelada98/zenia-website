@@ -5915,6 +5915,8 @@ No-shows moved from 20% to 7% over three months of production traffic. Full arch
 
 ## 2026-09-10 - Software CRM en Sevilla 2026: Comparativa
 
+<!-- PUBLISHED:make-webhook at 2026-09-10T07:40:58Z -->
+
 We architected a WhatsApp-first CRM for a Seville SMB workload where 84% of first commercial contacts arrive via WhatsApp Business API and the traffic swings 3x during Semana Santa and Feria de Abril.
 
 Stack: WhatsApp Business API on Cloud API tier, event-driven ingest into a Postgres CRM store, tool-augmented LLM agent for classification and reply, VeriFactu-compliant invoicing bridge (Holded/FacturaDirecta adapters), and a fallback human handoff queue with full conversation context.

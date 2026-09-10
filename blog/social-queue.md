@@ -5959,3 +5959,18 @@ Full comparative teardown of the five CRM categories on sale in Madrid, real fir
 #WhatsAppBusinessAPI #CRM #B2B #SaaS
 
 ---
+## 2026-09-10 - WhatsApp Automation for Dental Clinics (Engineering breakdown)
+
+US dental practices with two to four operatories carry 1,500 to 3,000 active patients; Planet DDS 2025 puts confirmed-appointment no-shows at 7.4% across 3,400 clinics, and MGMA/Dialog Health peer data has the typical practice at 15-20%. At $200-$375 of production per operative slot, that is a six-figure annual leak.
+
+Built a WhatsApp Business Cloud API stack for that funnel. Tool-use loop bound to Dentrix, Open Dental, Curve and Eaglesoft (read the appointment book and hygiene-due flags, write reschedules, mark ASAP-list conversions), Meta pre-approved Utility templates for confirmation and recall so throughput does not rate-limit, and a HIPAA-aware routing layer: only first name, appointment time, and clinician name transit WhatsApp because Meta will not sign a BAA, and anything clinical stays behind short-lived tokenized links against the PMS.
+
+Two things that carried the numbers. A write-ahead ledger between the agent's tool calls and the PMS meant a duplicated Meta webhook never doubled a booking or a cancellation. And routing pain, bleeding and post-op intent to a clinician queue via classifier confidence gates kept the marketing agent from ever answering a clinical question it should not.
+
+90-day delta on a two-doctor Austin practice: no-shows 17% to 7.2%, hygiene rebook 48% to 74%, ASAP-list fills 1.4 to 6.8 per week, front-desk reminder hours 14 to 2 per week, ~$146k annualized recovered production.
+
+Full architecture, PMS integration surface and per-automation metrics: https://zeniapartners.com/blog/whatsapp-automation-for-dental-clinics.html
+
+#WhatsAppBusinessAPI #AIagents #B2B #SaaS
+
+---

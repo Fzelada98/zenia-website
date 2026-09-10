@@ -5912,3 +5912,17 @@ No-shows moved from 20% to 7% over three months of production traffic. Full arch
 
 ---
 
+
+## 2026-09-10 - Software CRM en Sevilla 2026: Comparativa
+
+We architected a WhatsApp-first CRM for a Seville SMB workload where 84% of first commercial contacts arrive via WhatsApp Business API and the traffic swings 3x during Semana Santa and Feria de Abril.
+
+Stack: WhatsApp Business API on Cloud API tier, event-driven ingest into a Postgres CRM store, tool-augmented LLM agent for classification and reply, VeriFactu-compliant invoicing bridge (Holded/FacturaDirecta adapters), and a fallback human handoff queue with full conversation context.
+
+Two hard numbers from production traffic: median first-response 9 seconds under peak load, and CRM adoption at 71% weekly active users after 6 weeks vs the 42% baseline we measured on the previous stack. The system absorbed a 3.1x conversation spike during Feria week without degrading p95 latency past 1.4s.
+
+The full comparative teardown of the five CRM categories on sale in Seville, real first-year costs, and the 5-week implementation timeline: https://zeniapartners.com/blog/software-crm-en-sevilla.html
+
+#WhatsAppBusinessAPI #CRM #B2B #SaaS
+
+---

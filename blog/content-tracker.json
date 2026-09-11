@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-09-11T06:20:00+00:00",
+  "lastRun": "2026-09-11T14:15:00+00:00",
   "posts": [
+    {
+      "slug": "agente-ia-para-tiendas-de-ropa-infantil",
+      "keyword": "agente ia para tiendas de ropa infantil",
+      "tier": 1,
+      "cluster": "retail",
+      "status": "published",
+      "date": "2026-09-11",
+      "source": "matrix"
+    },
     {
       "slug": "automatizacion-tiendas-automaticas",
       "keyword": "automatización de tiendas automáticas",

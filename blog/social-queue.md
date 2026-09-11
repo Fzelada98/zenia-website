@@ -6006,3 +6006,18 @@ Full write-up on the architecture, the failure modes we tripped over, and the me
 #WhatsAppBusinessAPI #AIagents #B2B #SaaS
 
 ---
+## 2026-09-11 - WhatsApp Automation for Hotels (Engineering breakdown)
+
+Rebuilt the guest-messaging surface for an independent hotel this quarter on the Meta Cloud API, sitting behind a deterministic booking state machine.
+
+Stack: WhatsApp Business Platform for transport, a Claude-based agent for the natural-language surface, a booking FSM that owns availability check + rate quote + 15-minute hold + card capture + confirm, two-way sync into the property PMS over its Reservations API + reservation-modified webhook, and Stripe hosted-link for card entry so no PAN ever crosses the thread. Every commitment the agent makes to the guest lands as a PMS write in the same turn.
+
+Two numbers that mattered under real traffic: PMS write latency p95 at 380 ms on reservation modifications, and end-to-end rate-quote-with-live-inventory (webhook debounce + availability read + rate rules + LLM response) delivered inside 6.2 seconds. Inbound-inquiry conversion moved 11% -> 38% in 90 days once the availability surface was authoritative.
+
+The hard part was not the model. It was the escalation contract and the idempotency layer: reservations arriving from the OTA channel manager and reservations opened by the agent through the Distributor API collide on the same room-night slot, and a naive retry burns inventory. We landed on a slot-token pattern with a 900s TTL and pessimistic locking on the PMS write path.
+
+Full write-up on the architecture, the PMS integration patterns for Cloudbeds/Mews/OPERA, and TCPA/GDPR routing: https://zeniapartners.com/blog/whatsapp-automation-for-hotels.html
+
+#WhatsAppBusinessAPI #AIagents #Hospitality #DistributedSystems
+
+---

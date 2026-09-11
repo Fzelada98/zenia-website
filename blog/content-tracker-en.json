@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-09-10T09:00:00Z",
+  "lastRun": "2026-09-11T09:00:00Z",
   "market": "US/UK small business",
   "posts": [
     {
@@ -46,7 +46,7 @@
     { "slug": "whatsapp-automation-for-med-spas", "keyword": "whatsapp automation for med spas", "tier": 1, "cluster": "beauty", "status": "published", "date": "2026-09-09" },
     { "slug": "whatsapp-automation-for-gyms", "keyword": "whatsapp automation for gyms", "tier": 1, "cluster": "fitness", "status": "published", "date": "2026-09-10" },
     { "slug": "whatsapp-automation-for-dental-clinics", "keyword": "whatsapp automation for dental clinics", "tier": 1, "cluster": "healthcare", "status": "published", "date": "2026-09-10" },
-    { "slug": "whatsapp-automation-for-hotels", "keyword": "whatsapp automation for hotels", "tier": 1, "cluster": "hospitality", "status": "pending" },
+    { "slug": "whatsapp-automation-for-hotels", "keyword": "whatsapp automation for hotels", "tier": 1, "cluster": "hospitality", "status": "published", "date": "2026-09-11" },
     { "slug": "whatsapp-automation-for-law-firms", "keyword": "whatsapp automation for law firms", "tier": 2, "cluster": "professional", "status": "pending" },
     { "slug": "whatsapp-automation-for-salons", "keyword": "whatsapp automation for salons", "tier": 2, "cluster": "beauty", "status": "pending" },
     { "slug": "whatsapp-automation-for-cleaning-services", "keyword": "whatsapp automation for cleaning services", "tier": 2, "cluster": "services", "status": "pending" },

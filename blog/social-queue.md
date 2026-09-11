@@ -6036,3 +6036,18 @@ Full write-up on the architecture, the family-fiche schema, and the seasonality 
 #WhatsAppBusinessAPI #AIagents #RetailTech #DistributedSystems
 
 ---
+## 2026-09-11 - Restaurant CRM with AI (Engineering breakdown)
+
+Rebuilt the guest-data layer for a 90-seat independent US restaurant this quarter. The unlock was not the CRM UI; it was the identity-resolution and no-show-scoring pipeline underneath it.
+
+Stack: OpenTable + Toast POS + Google Reviews as sources, a deterministic entity-resolution service (phone-hash + email-hash + fuzzy-name blocking, HDBSCAN over pairwise scores) that merges records into a single guest_id, a Claude-based agent on top of Meta WhatsApp Cloud API for the conversational surface, and an XGBoost model scoring no-show probability on every reservation write from booking-channel + party-size + lead-time + prior-behavior + weather + phone-quality features.
+
+Two numbers that mattered under real traffic: no-show model precision at 0.83 on the top decile of risk (validated on a held-out 3-month window), and end-to-end from booking-created webhook to WhatsApp confirmation delivered at p95 of 2.1 seconds, so the guest sees the confirm before they close the tab.
+
+The hard part was not the model. It was the write path: OpenTable emits booking-modified events out of order under load, and a naive last-write-wins overwrote the manual overrides the host team was making on the podium. We landed on event-sourced booking state with a monotonic version vector per reservation_id and a reconciler that only applies remote mutations if version.remote > version.local, human overrides pinned.
+
+Full write-up on the architecture, the ER pipeline, and the no-show feature set: https://zeniapartners.com/blog/restaurant-crm-with-ai.html
+
+#WhatsAppBusinessAPI #AIagents #Hospitality #DistributedSystems
+
+---

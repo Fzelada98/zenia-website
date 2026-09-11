@@ -6021,3 +6021,18 @@ Full write-up on the architecture, the PMS integration patterns for Cloudbeds/Me
 #WhatsAppBusinessAPI #AIagents #Hospitality #DistributedSystems
 
 ---
+## 2026-09-11 - Agente IA para tiendas de ropa infantil (Engineering breakdown)
+
+Shipped a WhatsApp agent this quarter for a Spanish children's-wear multibrand: the interesting engineering was not conversation, it was sizing over time.
+
+Stack: Meta Cloud API for transport, a Claude-based agent as the NL surface, and a family-scoped CRM as source of truth (parent = principal, children = size-versioned dependents). TPV integration over the retailer's inventory API for stock by size + color in real time, and a cron that projects the next-size-up window per child from last purchase date and pediatric-growth priors, so the agent re-engages a family 4-5 months later with the specific size to try, not a generic promo.
+
+Numbers under real traffic: median first-response latency 12s against a 1-6h manual baseline, consultation-to-sale conversion moved from 18% to 34%, and pre-sale-season sell-through of new-collection stock went from 58% to 78% once seasonal cohorts were addressed by size + past-ceremony history instead of a mass blast.
+
+The hard parts were the minors'-data model under GDPR + Spain's LOPDGDD (consent lives on the parent, size and age of the child are context attributes, no biometric or health data), and the idempotency layer on top of TPV writes where a garment reserved by the agent and one sold in-store can collide on the same SKU + size within seconds. Same pattern as hotel-room inventory, different TTL.
+
+Full write-up on the architecture, the family-fiche schema, and the seasonality cron: https://zeniapartners.com/blog/agente-ia-para-tiendas-de-ropa-infantil.html
+
+#WhatsAppBusinessAPI #AIagents #RetailTech #DistributedSystems
+
+---

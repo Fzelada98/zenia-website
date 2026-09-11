@@ -5991,6 +5991,8 @@ Full architecture, POS integration surface, and the 5-week rollout: https://zeni
 ---
 ## 2026-09-11 - Automatizar Seguimiento de Leads con WhatsApp e IA (Engineering breakdown)
 
+<!-- PUBLISHED:make-webhook at 2026-09-11T08:33:00Z -->
+
 Rebuilt lead follow-up this quarter on WhatsApp Business API with an LLM orchestrator sitting in front of the SDR queue.
 
 Stack: Meta Cloud API for transport, a Claude-based agent behind a deterministic state machine that owns qualification, a Postgres-backed CRM as source of truth, and a lightweight event bus so every inbound message becomes a scored signal in real time. Templates go through the BSP with an approved catalog per vertical; we never send outside the 24-hour service window, so the account stays inside Meta quality tiers even at 40k msgs/day.

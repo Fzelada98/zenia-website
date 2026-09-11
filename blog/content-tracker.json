@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-09-10T22:10:00+00:00",
+  "lastRun": "2026-09-11T06:20:00+00:00",
   "posts": [
     {
       "slug": "automatizacion-tiendas-automaticas",
@@ -3332,6 +3332,15 @@
       "cluster": "crm-pricing",
       "status": "published",
       "date": "2026-09-09",
+      "source": "matrix-expansion"
+    },
+    {
+      "slug": "automatizar-seguimiento-leads-whatsapp-ia",
+      "keyword": "automatizar seguimiento de leads con whatsapp e ia",
+      "tier": 2,
+      "cluster": "lead-nurturing",
+      "status": "published",
+      "date": "2026-09-11",
       "source": "matrix-expansion"
     }
   ]

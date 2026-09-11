@@ -6051,3 +6051,18 @@ Full write-up on the architecture, the ER pipeline, and the no-show feature set:
 #WhatsAppBusinessAPI #AIagents #Hospitality #DistributedSystems
 
 ---
+## 2026-09-11 - Agente IA para agencias de diseño (Engineering breakdown)
+
+Shipped a WhatsApp agent this quarter for a 4-person design studio running 12 active accounts. The interesting engineering was not the conversation surface, it was turning unstructured chat into a project graph the delivery team could trust.
+
+Stack: Meta WhatsApp Cloud API for transport, a Claude-based agent as the NL surface, Notion as source of truth for briefs and project state, Stripe for anticipo + final invoicing on a webhook-driven state machine, Figma comment webhooks fanned into the same event bus, and a per-account reporting job that pulls GA4 + Meta Ads + Search Console into a versioned Notion database once a month.
+
+Two numbers that mattered under real traffic: brief-extraction accuracy at 0.91 on a 200-conversation eval set (structured field vs. gold-standard human transcription of the same chat), and inbound-lead-to-scheduled-call ratio moved from 18% to 34% once the qualifier ran inside the WhatsApp thread instead of on a web form.
+
+The hard part was feedback attribution. A client says "the logo is fine but the color is off" in WhatsApp while another designer is receiving a Figma comment on the same file. Two events, one intent, arriving 40 seconds apart on different transports. We landed on a project-scoped event log keyed by asset_id + author, deduped inside a 60s window with a similarity score over the embedding of the message body, and only then written into the Notion feedback table the designer opens.
+
+Full write-up on the architecture, the brief-extraction pipeline, and the retention scheduler: https://zeniapartners.com/blog/agente-ia-para-agencias-de-diseno.html
+
+#WhatsAppBusinessAPI #AIagents #DesignOps #DistributedSystems
+
+---

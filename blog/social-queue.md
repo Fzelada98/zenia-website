@@ -5989,3 +5989,18 @@ Full architecture, POS integration surface, and the 5-week rollout: https://zeni
 #retailtech #WhatsAppBusinessAPI #automation #AIagents
 
 ---
+## 2026-09-11 - Automatizar Seguimiento de Leads con WhatsApp e IA (Engineering breakdown)
+
+Rebuilt lead follow-up this quarter on WhatsApp Business API with an LLM orchestrator sitting in front of the SDR queue.
+
+Stack: Meta Cloud API for transport, a Claude-based agent behind a deterministic state machine that owns qualification, a Postgres-backed CRM as source of truth, and a lightweight event bus so every inbound message becomes a scored signal in real time. Templates go through the BSP with an approved catalog per vertical; we never send outside the 24-hour service window, so the account stays inside Meta quality tiers even at 40k msgs/day.
+
+Median first-response latency landed at 32 seconds against a 4-12h baseline on manual SDR ops. Open rate inside the 3-minute window sits around 90% because the sender number is stable and templates are personalized with first-name + source at render time, not at approval time.
+
+The hard part was not the model. It was the escalation contract: a signal quorum (declared budget, temporal urgency, explicit request-for-human) plus a per-vertical timeout to decide when the agent yields the conversation to a human. False positives saturate the sales queue; false negatives cook hot leads. We ended up with a 3-of-4 rule per vertical, tuned weekly against closed-won data.
+
+Full write-up on the architecture, the failure modes we tripped over, and the metrics: https://zeniapartners.com/blog/automatizar-seguimiento-leads-whatsapp-ia.html
+
+#WhatsAppBusinessAPI #AIagents #B2B #SaaS
+
+---

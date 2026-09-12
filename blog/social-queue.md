@@ -6112,3 +6112,19 @@ Full technical write-up on architecture, integrations and the seven failure mode
 #WhatsAppBusinessAPI #DistributedSystems #Engineering #B2B
 
 ---
+## 2026-09-12 - Med Spa CRM with AI: 2026 playbook
+
+Shipped a med spa CRM with AI for a two-location aesthetic practice on the US East Coast. The interesting engineering was not the AI agent, it was reconciling three data planes (booking, EMR, marketing) under HIPAA without landing PHI in the wrong bucket.
+
+Stack: Boulevard as the booking source of truth exposing its GraphQL Public API, a change-data-capture worker on appointment/service/client mutations at a 90-second poll cadence, Kafka as the event backbone with per-topic BAA scoping (PHI topics on a dedicated cluster with envelope encryption via AWS KMS, marketing topics on a separate cluster with tokenized identifiers only), a Claude-based agent on Twilio's HIPAA-eligible Programmable Messaging + WhatsApp Cloud API, and a Postgres feature store materializing patient_features every 10 minutes from the ledger. No-show model and recall scheduler run as separate services against the same features.
+
+Two numbers under real traffic: WhatsApp confirmation round-trip p95 at 720ms end-to-end (Meta webhook → Boulevard mutation → template response), and the no-show classifier at 0.81 precision / 0.68 recall on a 12-month hold-out of the practice's booked visits.
+
+The hard constraint was the write-back into Boulevard's calendar during a live two-way reschedule. Their API accepts appointment mutations but the room + provider + equipment triple-book detection lives server-side, so any conversational reschedule needs to hold the slot for the duration of the WhatsApp turn without blocking the front desk. We landed on soft holds in Redis keyed by (location_id, slot_start, provider_id) with a 120-second TTL, released on confirmation or timeout, only then committed via the Boulevard API. Photo consent and treatment-cycle recall rules live in a separate append-only Postgres table cross-referenced by client_id + treatment_code.
+
+Full write-up on the Boulevard integration, no-show model, and case study on a two-location practice: https://zeniapartners.com/blog/med-spa-crm-with-ai.html
+
+#WhatsAppBusinessAPI #HealthTech #MedSpa #DistributedSystems
+
+---
+

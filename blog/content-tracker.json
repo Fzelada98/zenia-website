@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-09-11T22:15:45+00:00",
+  "lastRun": "2026-09-12T06:15:00+00:00",
   "posts": [
+    {
+      "slug": "software-automatizacion-ecommerce",
+      "keyword": "software de automatización de ecommerce",
+      "tier": 1,
+      "cluster": "ecommerce-automatizacion",
+      "status": "published",
+      "date": "2026-09-12",
+      "source": "striking"
+    },
     {
       "slug": "agente-ia-para-agencias-de-diseno",
       "keyword": "agente ia para agencias de diseño",

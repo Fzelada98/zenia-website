@@ -6066,3 +6066,18 @@ Full write-up on the architecture, the brief-extraction pipeline, and the retent
 #WhatsAppBusinessAPI #AIagents #DesignOps #DistributedSystems
 
 ---
+## 2026-09-12 - Software de automatización de ecommerce (Engineering breakdown)
+
+Audited the automation stack for a 900K€/year Spanish DTC brand this quarter. The interesting engineering was not "which SaaS to buy", it was the seam between the six layers that already existed and never talked to each other.
+
+Stack we ended up shipping: Shopify Admin GraphQL as source of truth for orders + inventory, Klaviyo for lifecycle email with server-side events fed off webhook debounce, a Claude-based conversational agent on Meta WhatsApp Business Cloud API for presales + post-purchase, Linnworks as the multichannel inventory reconciler across Shopify + Amazon MCF + Instagram Shopping, Make (n8n on the roadmap) as the workflow fabric between apps that have webhooks but no native peers, and Nosto for on-site personalization scoped to logged-in sessions.
+
+Two numbers that mattered under real traffic: WhatsApp agent p95 latency at 870ms end-to-end (webhook receipt → order lookup against Shopify Admin GraphQL → LLM response), and presales close rate moved from 5% on the web form to 22% inside the WhatsApp thread on a 4-week hold-out. Cart-recovery flow converts 8-14% on a per-cohort basis.
+
+The hard part was not the agent. It was inventory reconciliation. Shopify emits inventory_levels/update, Amazon MCF emits fulfillment_shipment on a delayed cadence, and the retailer was overselling ~3-4 SKUs a week on the same-family variants that Nosto was recommending. We landed on an event-sourced inventory ledger keyed by (sku, location) with a monotonic sequence, and a reconciler that treats MCF as the authoritative decrementer for FBA-fulfilled sales while Shopify remains authoritative for D2C — reads served from a materialized view refreshed on the ledger's LISTEN/NOTIFY.
+
+Full write-up on the six categories, tooling per layer, framework for choosing stack, and ROI math on a 900K€/year P&L: https://zeniapartners.com/blog/software-automatizacion-ecommerce.html
+
+#Ecommerce #WhatsAppBusinessAPI #Shopify #DistributedSystems
+
+---

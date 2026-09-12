@@ -27,5 +27,5 @@ Consultas donde zeniapartners.com ya imprime en posición 4-30 (últimos 8 días
 | 8.5 | 8 | automatización de tiendas automáticas | /blog/automatizacion-retail-tiendas-ia.html |
 | 16.0 | 8 | desarrollo agente ai peluquería | /blog/agente-ia-para-peluquerias.html |
 | 18.6 | 8 | precios crm | /blog/cuanto-cuesta-un-crm-para-pymes.html |
-| 8.2 | 8 | software de automatización de ecommerce | /blog/automatizacion-ecommerce-ia.html |
+| 8.2 | 8 | software de automatización de ecommerce | /blog/automatizacion-ecommerce-ia.html → cubierto por [/blog/software-automatizacion-ecommerce.html](/blog/software-automatizacion-ecommerce.html) |
 | 21.0 | 8 | ¿cuánto cuesta un crm? | /blog/cuanto-cuesta-un-crm-para-pymes.html |

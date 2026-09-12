@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-09-11T09:00:00Z",
+  "lastRun": "2026-09-12T09:00:00Z",
   "market": "US/UK small business",
   "posts": [
     {
@@ -51,7 +51,7 @@
     { "slug": "whatsapp-automation-for-salons", "keyword": "whatsapp automation for salons", "tier": 2, "cluster": "beauty", "status": "pending" },
     { "slug": "whatsapp-automation-for-cleaning-services", "keyword": "whatsapp automation for cleaning services", "tier": 2, "cluster": "services", "status": "pending" },
     { "slug": "restaurant-crm-with-ai", "keyword": "restaurant crm with ai", "tier": 1, "cluster": "restaurants", "status": "published", "date": "2026-09-11" },
-    { "slug": "dental-clinic-crm-with-ai", "keyword": "dental clinic crm with ai", "tier": 1, "cluster": "healthcare", "status": "pending" },
+    { "slug": "dental-clinic-crm-with-ai", "keyword": "dental clinic crm with ai", "tier": 1, "cluster": "healthcare", "status": "published", "date": "2026-09-12" },
     { "slug": "med-spa-crm-with-ai", "keyword": "med spa crm with ai", "tier": 1, "cluster": "beauty", "status": "pending" },
     { "slug": "gym-crm-with-ai", "keyword": "gym crm with ai", "tier": 1, "cluster": "fitness", "status": "pending" },
     { "slug": "law-firm-crm-with-ai", "keyword": "law firm crm with ai", "tier": 1, "cluster": "professional", "status": "pending" },

@@ -6081,3 +6081,18 @@ Full write-up on the six categories, tooling per layer, framework for choosing s
 #Ecommerce #WhatsAppBusinessAPI #Shopify #DistributedSystems
 
 ---
+## 2026-09-12 - Dental Clinic CRM with AI (Engineering breakdown)
+
+Shipped a dental clinic CRM with AI this quarter for a three-chair general practice running Open Dental. The interesting engineering was not the WhatsApp agent, it was making a PMS built in 2003 behave like an event source without breaking HIPAA.
+
+Stack: Open Dental Service (SOAP endpoints + direct MySQL read replica) as the PMS surface, a change-data-capture worker polling appointment / treatplan / commlog tables on a 5-minute cadence with idempotency keys keyed by (patnum, event_hash), NATS JetStream as the event bus, a Claude-based agent on Meta WhatsApp Business Cloud API for confirmations and recall, and a signed BAA-compliant object store for message audit. Recall + no-show scoring runs as two separate services against the same feature store (patient_features materialized every 15 minutes from the ledger).
+
+Two numbers that mattered under real traffic: no-show classifier at 0.79 precision / 0.71 recall on a hold-out of the last 12 months of the practice's appointments, and WhatsApp confirmation round-trip p95 at 640ms end-to-end (Meta webhook → PMS write-back → template response). Reactivation cohorts convert at 15-22% inside 60 days on the overdue-hygiene sequence.
+
+The hard part was write-back into the PMS. Open Dental accepts appointment mutations via its Service API, but the schema uses composite locks on the Op table and any two-way rescheduling flow needs to hold the slot for the duration of the WhatsApp conversation without stepping on a front-desk drag-drop. We landed on soft holds in Redis keyed by (op_num, patient_id) with a 90-second TTL, released on either confirmation or timeout, and only then committed to the PMS via the Service API. HIPAA audit trail lives in a separate append-only Postgres table cross-referenced by message_id.
+
+Full write-up on the PMS integration, no-show model, and case study on a three-chair practice: https://zeniapartners.com/blog/dental-clinic-crm-with-ai.html
+
+#WhatsAppBusinessAPI #DentalTech #HealthTech #DistributedSystems
+
+---

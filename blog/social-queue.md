@@ -6128,3 +6128,18 @@ Full write-up on the Boulevard integration, no-show model, and case study on a t
 
 ---
 
+## 2026-09-12 - Click to WhatsApp Ads infrastructure notes
+
+Meta's Forrester study puts Click to WhatsApp Ads at +94% conversion and -92% CPL against a classic landing funnel. Making that hold up in production is less about the ad and more about what happens in the first 30 seconds after the tap.
+
+Stack we run for Zenia clients: WhatsApp Cloud API fronted by a BSP for template governance, a webhook consumer that extracts ctwa_clid from the first inbound message (Meta ships it as a referral field on the payload, not on the contact) and pins it to a lead row in Postgres, and a Conversion API pusher that mirrors the conversion event back to the pixel within 5 seconds so Advantage+ actually learns. State per contact lives in a Redis-backed 72-hour window machine with two scheduled reengagements (T+4h soft, T+48h utility). The reply layer is a Claude-based agent with tool-calls into the CRM (availability, pricing, calendar hand-off), and the system prompt is versioned per campaign so a creative refresh ships a new pre-briefed context without redeploying the agent.
+
+Two production numbers on Spain traffic last 30 days: p95 first-response latency 6.8 seconds end-to-end (Meta tap to WhatsApp-delivered reply through the agent), and ctwa_clid capture 99.4% on 12k conversations (the 0.6% loss traced to Meta occasionally dropping the referral on iOS deep-link resumes).
+
+Meta's tariff change on 1 October 2026 removes the free service tier inside the 72h window, so any CPL model that ignores per-conversation cost is about to be wrong by 15-40%.
+
+Full write-up (ES): https://zeniapartners.com/blog/click-to-whatsapp-ads-para-pymes.html
+
+#WhatsAppBusinessAPI #MetaAds #DistributedSystems #B2B
+
+---

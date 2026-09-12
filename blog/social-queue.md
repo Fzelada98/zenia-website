@@ -6096,3 +6096,19 @@ Full write-up on the PMS integration, no-show model, and case study on a three-c
 #WhatsAppBusinessAPI #DentalTech #HealthTech #DistributedSystems
 
 ---
+
+## 2026-09-12 - WhatsApp Business para restaurantes: guía completa 2026
+
+Notes on shipping WhatsApp Business API for a 60-seat restaurant.
+
+Stack: BSP (360dialog) → webhook fanout → NLU service (fine-tuned on ES/CA reservation intents) → reservation core with pessimistic locking against CoverManager, then a write-back to the CRM. Median p50 turn latency 1.9s, p95 4.4s including the CoverManager round-trip.
+
+Meta's 2026 template policy forced two structural changes: strict separation of utility vs marketing categories at the queue level, and pre-validated template linters in CI so nothing hits production without a warm approval. Cut template rejections from 34% to under 4%.
+
+The 24h session window is the real design constraint. We built a session ledger that reasons about window state per contact and picks the cheapest legal path (free-form vs utility template vs marketing template) at send time. Meta conversation cost dropped ~38% for the same message volume.
+
+Full technical write-up on architecture, integrations and the seven failure modes we hit in production: https://zeniapartners.com/blog/whatsapp-business-para-restaurantes-guia.html
+
+#WhatsAppBusinessAPI #DistributedSystems #Engineering #B2B
+
+---

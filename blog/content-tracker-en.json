@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-09-12T18:00:00Z",
+  "lastRun": "2026-09-13T18:00:00Z",
   "market": "US/UK small business",
   "posts": [
     {
@@ -53,7 +53,7 @@
     { "slug": "restaurant-crm-with-ai", "keyword": "restaurant crm with ai", "tier": 1, "cluster": "restaurants", "status": "published", "date": "2026-09-11" },
     { "slug": "dental-clinic-crm-with-ai", "keyword": "dental clinic crm with ai", "tier": 1, "cluster": "healthcare", "status": "published", "date": "2026-09-12" },
     { "slug": "med-spa-crm-with-ai", "keyword": "med spa crm with ai", "tier": 1, "cluster": "beauty", "status": "published", "date": "2026-09-12" },
-    { "slug": "gym-crm-with-ai", "keyword": "gym crm with ai", "tier": 1, "cluster": "fitness", "status": "pending" },
+    { "slug": "gym-crm-with-ai", "keyword": "gym crm with ai", "tier": 1, "cluster": "fitness", "status": "published", "date": "2026-09-13" },
     { "slug": "law-firm-crm-with-ai", "keyword": "law firm crm with ai", "tier": 1, "cluster": "professional", "status": "pending" },
     { "slug": "real-estate-crm-with-ai", "keyword": "real estate crm with ai", "tier": 1, "cluster": "real-estate", "status": "pending" },
     { "slug": "salon-crm-with-ai", "keyword": "salon crm with ai", "tier": 2, "cluster": "beauty", "status": "pending" },

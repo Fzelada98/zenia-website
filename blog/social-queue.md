@@ -6159,3 +6159,19 @@ Full write-up (ES): https://zeniapartners.com/blog/automatizacion-para-gimnasios
 
 ---
 
+
+## 2026-09-13 - Gym CRM with AI: retention infra notes (EN)
+
+US gym retention benchmarks land around 66% annual, and roughly half of new members cancel inside the first six months. Most gym management platforms (Mindbody, ABC Fitness, Glofox, Zen Planner, PushPress) are strong at billing and access control and weak at the member-relationship layer, which is where the P&L actually moves.
+
+Stack we run for Zenia gym/studio clients: WhatsApp Cloud API through a BSP with per-location template governance, a Claude-based agent calling gym-management APIs (booking, class capacity, PT calendar, dunning) over their REST endpoints, Postgres CRM as the omnichannel source of truth, and Kafka streaming member-lifecycle events (join, check-in, class attendance, invoice, cancel-request) into a feature store. A churn model refreshes every 6 hours against visit-frequency decay, class-attendance drift, PT utilization, and payment-lag features; precision on 30-day cancel prediction sits at 0.81 on a 12-month backtest.
+
+Cancellation-request save flow is a two-lock design: the online cancel form fires a WhatsApp thread that pauses the DB write for up to 15 minutes, offers a plan pause or downgrade with Stripe/Redsys links posted back into the same thread, and only commits the cancel if the member confirms after the offer. Redis holds the soft-lock; a Postgres advisory lock protects against duplicate saves.
+
+Two production numbers on 90-day windows: first-response p95 at 8.4s end-to-end from webhook to agent-delivered reply, and 18-22 percentage points of first-90-day churn recovered on cohorts where the intervention loop is fully staffed.
+
+Full write-up (EN): https://zeniapartners.com/blog/gym-crm-with-ai.html
+
+#WhatsAppBusinessAPI #FitnessTech #DistributedSystems #B2B
+
+---

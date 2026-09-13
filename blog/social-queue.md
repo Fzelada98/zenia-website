@@ -6189,3 +6189,19 @@ Full write-up (ES): https://zeniapartners.com/blog/automatizacion-para-gimnasios
 #WhatsAppBusinessAPI #FitnessTech #DistributedSystems #B2B
 
 ---
+
+## 2026-09-13 - Law Firm CRM with AI: intake infra notes (EN)
+
+US law firm intake benchmarks land at 14% average lead-to-signed conversion versus 40-50% at top firms, with 39% of firms taking more than 2 hours to respond to a new lead. The delta is not marketing spend, it is the intake stack — and legal practice management platforms (Clio, MyCase, Filevine, Smokeball, PracticePanther) are strong at post-signature matter workflow and weak at the pre-signature conversion layer.
+
+Stack we run for Zenia law firm clients: WhatsApp Cloud API and Twilio SMS through a BSP with per-practice-area template governance, a Claude-based agent doing conversational intake with narrative capture instead of form fields, calling Clio/MyCase/Filevine REST endpoints for conflict pre-check against the matter database, and Postgres CRM as the omnichannel source of truth. Kafka streams lead-lifecycle events (inbound, qualified, conflicted, routed, signed, nurture-tagged) into a feature store; PagerDuty-style rota with 60s escalation windows drives the sub-5-minute human callback SLO.
+
+Retainer flow is single-thread: DocuSign envelope and Stripe/LawPay link posted back into the same WhatsApp or SMS thread the lead came in on, with the signed PDF and payment receipt attached to the new matter in the practice management platform via API on webhook completion. No email hand-off gap.
+
+Two production numbers on 90-day windows: median first-response 3m 40s end-to-end from lead capture to human attorney contact (down from 4h 12m pre-rollout on the same firm), and retainer completion moving from 62% baseline to 88-94% inside the single-thread flow across a mid-single-digit sample of PI firms.
+
+Full write-up (EN): https://zeniapartners.com/blog/law-firm-crm-with-ai.html
+
+#WhatsAppBusinessAPI #LegalTech #DistributedSystems #B2B
+
+---

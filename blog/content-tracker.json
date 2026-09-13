@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-09-13T00:00:00+00:00",
+  "lastRun": "2026-09-13T14:13:47.195227+00:00",
   "posts": [
     {
       "slug": "automatizacion-para-gimnasios-en-madrid",
@@ -3396,6 +3396,14 @@
       "status": "published",
       "date": "2026-09-11",
       "source": "matrix-expansion"
+    },
+    {
+      "slug": "automatizacion-para-gimnasios-en-barcelona",
+      "keyword": "automatizacion para gimnasios en barcelona",
+      "tier": 4,
+      "cluster": "gimnasios",
+      "status": "published",
+      "date": "2026-09-13"
     }
   ]
 }

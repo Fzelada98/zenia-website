@@ -6175,3 +6175,17 @@ Full write-up (EN): https://zeniapartners.com/blog/gym-crm-with-ai.html
 #WhatsAppBusinessAPI #FitnessTech #DistributedSystems #B2B
 
 ---
+
+## 2026-09-13 - Automatización para gimnasios en Barcelona (EN)
+
+Barcelona ended 2025 with 949 gyms, 733k members and 42.3% population penetration — the highest in Spain and one of the highest in Europe — with a non-trivial fraction of members writing in Catalan, Spanish or English. Language detection is not a nice-to-have; the wrong locale on the first reply degrades reservation-to-show conversion measurably.
+
+Stack we run for Zenia gym clients in the Barcelona metro area: WhatsApp Cloud API through a BSP with per-locale template sets (ca-ES, es-ES, en-GB), a Claude-based agent that runs language ID on the first inbound token and pins the thread's locale in Postgres so subsequent tool-calls into the gym management API (Trainingym, Provis, Aimharder, Deporwin, Membrance) render capacity, tariffs and cancellation policies in the same language. Kafka streams member-lifecycle events into a feature store; Redis holds 120s soft-locks on boutique-class capacity so waitlist promotions do not race booking writes.
+
+Two production numbers on 90-day windows: first-reply p95 at 8.2s end-to-end (Meta webhook to agent to template response), and dunning recovering 71% of overdue fees inside 30 days versus a 32% phone/email baseline on the same clubs. Locale mismatch on inbound went from 14% to under 2% after language pinning shipped.
+
+Full write-up (ES): https://zeniapartners.com/blog/automatizacion-para-gimnasios-en-barcelona.html
+
+#WhatsAppBusinessAPI #FitnessTech #DistributedSystems #B2B
+
+---

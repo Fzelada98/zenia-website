@@ -6205,3 +6205,19 @@ Full write-up (EN): https://zeniapartners.com/blog/law-firm-crm-with-ai.html
 #WhatsAppBusinessAPI #LegalTech #DistributedSystems #B2B
 
 ---
+## 2026-09-13 - Restaurant AI on WhatsApp: infra notes (EN)
+
+Restaurant AI adoption in Iberoamerica is stabilizing around one dominant channel: WhatsApp Business API. Meta hit 1M+ weekly business-AI conversations in Philippines and Mexico by late 2025, and 40-60% of restaurant reservation traffic lands outside service hours. The infra question is not "should we build this," it is where the state machine lives.
+
+Stack we run for Zenia restaurant deployments: WhatsApp Cloud API through a BSP with per-locale template governance (Meta's July 2025 shift to per-message pricing killed 24h-window batching, so the queue is now event-driven), an LLM router doing function-calling into CoverManager, TheFork and Resy REST endpoints for real-time availability, Postgres CRM as omnichannel source of truth, and Redis for waitlist fan-out. Reminder templates fire on a Cron scheduled 24h pre-service; cancellations trigger a Kafka event that pops the next lead off the waitlist in the same thread.
+
+Two production numbers on 90-day windows: no-shows drop from a 12-18% sector baseline to 4-6% on the reminder flow alone (down to 4% in fine dining with deposit), and WhatsApp template campaigns convert at 45-60% versus 2-5% on email for the same audience.
+
+Failure modes we design against: BSP webhook retries creating duplicate reservations, opt-in decay after the 90-day marketing window, template rejection loops when a locale flags copy, and language drift when the local runs multilingual service.
+
+Full write-up (ES): https://zeniapartners.com/blog/inteligencia-artificial-para-restaurantes-whatsapp.html
+
+#WhatsAppBusinessAPI #RestaurantTech #DistributedSystems #B2B
+
+---
+

@@ -25,7 +25,7 @@ Consultas donde zeniapartners.com ya imprime en posición 4-30 (últimos 8 días
 | 14.5 | 10 | ia para tiendas deportivas | /blog/agente-ia-para-tiendas-de-deportes.html |
 | 26.7 | 10 | whatsapp business automation | /es/automatizacion-whatsapp-negocios.html |
 | 21.2 | 9 | agente ai clínicas de estética | /blog/agente-ia-para-clinicas-de-medicina-estetica.html |
-| 10.9 | 9 | inteligencia artificial restaunranre whatsapp | /blog/chatbot-whatsapp-restaurantes.html |
+| 10.9 | 9 | inteligencia artificial restaunranre whatsapp | /blog/chatbot-whatsapp-restaurantes.html → [nuevo attack post](/blog/inteligencia-artificial-para-restaurantes-whatsapp.html) |
 | 16.0 | 8 | agente ai peluquería | /blog/agente-ia-para-peluquerias.html |
 | 13.8 | 8 | crm online precio | /blog/cuanto-cuesta-un-crm-para-pymes.html |
 | 18.1 | 8 | precios crm | /blog/cuanto-cuesta-un-crm-para-pymes.html |

@@ -6143,3 +6143,19 @@ Full write-up (ES): https://zeniapartners.com/blog/click-to-whatsapp-ads-para-py
 #WhatsAppBusinessAPI #MetaAds #DistributedSystems #B2B
 
 ---
+## 2026-09-13 - Automation infrastructure for gyms in Madrid
+
+Madrid packs roughly 900 gyms into a metro area competing for the same 6.2M-member national base at 13% penetration. In dense districts like Chamberí and Salamanca a prospect gets outreach from 3-5 clubs a month, so the interesting engineering isn't the sales script, it's the plumbing that keeps a 22:00 Instagram tap from cooling off before someone answers.
+
+Stack we run for Zenia gym clients: WhatsApp Cloud API through a BSP with per-club template governance, a Claude-based agent whose tool-calls hit the gym management software (Trainingym, Provis, Aimharder, Deporwin, Membrance) over their published REST/GraphQL APIs, a Postgres CRM as the omnichannel source of truth, and Kafka streaming member-lifecycle events (join, checkin, invoice, dunning) into a feature store. A churn-risk model refreshes every 6 hours against 14-day inactivity, class-attendance decay and payment-lag features.
+
+Payments run through Stripe or Redsys links posted back into the same WhatsApp thread; Redis holds a 120s soft-lock on class capacity during a two-way reschedule so a full CrossFit box never double-books. The dunning workflow escalates from soft nudge to payment link to human takeover on a T+24h / T+72h / T+7d ladder, all keyed off the same event stream.
+
+Two production numbers on 90-day windows: WhatsApp lead-to-first-reply p95 at 8.1s end-to-end (Meta webhook to agent to template response), and dunning recovering 71% of overdue fees within 30 days versus a 32% baseline the same clubs had by phone and email.
+
+Full write-up (ES): https://zeniapartners.com/blog/automatizacion-para-gimnasios-en-madrid.html
+
+#WhatsAppBusinessAPI #FitnessTech #DistributedSystems #B2B
+
+---
+

@@ -6221,3 +6221,17 @@ Full write-up (ES): https://zeniapartners.com/blog/inteligencia-artificial-para-
 
 ---
 
+## 2026-09-14 - Agente IA para reformas integrales (residential construction lead capture, EN)
+
+Spain closed 1.9M residential renovations in 2025 and 59% of homeowners plan to renovate in 2026 (Estudio de Reformas España 2026). Average ticket for a full reforma integral sits at €32,000 with an 18% gross margin, and demand queries like "reformas integrales" hit 1,900 monthly searches in Madrid alone. Yet mid-sized construction firms convert leads at 6-9% because the site manager is also the WhatsApp responder, first-touch latency runs 2h 45min, and 34% of leads reach the estimator without basic qualification data.
+
+Stack we run for Zenia renovation deployments: WhatsApp Cloud API through a BSP as the customer surface, a frontier LLM with typed tool functions bound to qualify_lead / compute_price_range / book_technical_visit / schedule_followup / route_to_site_manager, a per-firm price-per-m2 table (typology x quality tier) as the deterministic source of truth for orientative quotes so the model never hallucinates numbers, Google Calendar / Outlook two-way sync into the site manager's real day with geographic clustering so the agent proposes slots that respect the day's travel graph, and Postgres CRM with lead-lifecycle events streamed onto an event bus (Kafka or NATS) so lead, visit, quote, project, and post-warranty stages land on one per-customer timeline.
+
+The non-obvious engineering is the write path. Slot booking is idempotent on (site_manager_id, calendar_id, request_id) and dual-signed with a short-lived JWT so a Meta webhook retry never books two visits. Price ranges include a safety band and are always framed as pre-visit orientation, never as a bindable quote — the signed budget always goes through the site manager after the on-site walkthrough. Portal integrations (Habitissimo, Houzz, Cronoshare) enter via BSP-agnostic webhook, and the agent responds under the portal's SLA to preserve ranking. Handoff to the site manager is a deterministic classifier ahead of the LLM triggered by high ticket, complex trades, or urgency keywords.
+
+Two production numbers on a 90-day cohort: p50 first-response time on inbound WhatsApp at 25s against a 2h 45min manual baseline, and lead-to-signed-project conversion moved from 6-9% to 11-14% on the same ad spend, mostly by capturing the 41% of qualified conversations that happen between 21:00 and 08:00 when the operator is off the phone.
+
+Full write-up (ES): https://zeniapartners.com/blog/agente-ia-para-reformas-integrales.html
+
+#WhatsAppBusinessAPI #ConstructionTech #B2B #systemsdesign #AIagents
+

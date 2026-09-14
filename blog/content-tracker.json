@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-09-14T06:00:00+00:00",
+  "lastRun": "2026-09-14T14:00:00+00:00",
   "posts": [
+    {
+      "slug": "crm-con-whatsapp-integrado",
+      "keyword": "crm con whatsapp integrado",
+      "tier": 1,
+      "cluster": "crm-whatsapp",
+      "status": "published",
+      "date": "2026-09-14",
+      "source": "generated"
+    },
     {
       "slug": "agente-ia-para-reformas-integrales",
       "keyword": "agente ia para reformas integrales",

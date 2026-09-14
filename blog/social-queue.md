@@ -6269,3 +6269,20 @@ Two production numbers on a 90-day cohort (US Shopify apparel brand, $840k trail
 Full write-up (EN): https://zeniapartners.com/blog/ecommerce-crm-with-ai.html
 
 #WhatsAppBusinessAPI #EcommerceTech #DistributedSystems #B2B
+
+
+---
+
+## 2026-09-14 - CRM with WhatsApp Integrated: architecture notes (EN)
+
+Numbers from the 2026 SMB CRM audit: 200M+ businesses on WhatsApp Business, ~5M on the Business API, a 98% open rate on delivered messages, and in Latin America 72% of SMB-to-consumer transactions passing through WhatsApp. Yet only 12% of those SMBs have WhatsApp wired into a system of record that logs, routes, and measures the conversation. That gap is where the P&L moves.
+
+Stack we run for Zenia mid-market clients: WhatsApp Cloud API fronted by a BSP for template approvals and per-country pricing, a Node.js middleware that fans webhooks into a Kafka topic (message.inbound), a Claude-based agent with typed tool-calls into the CRM (search_contact, upsert_lead, book_appointment, quote_service) and into vertical systems (POS for restaurants, PMS for hotels, DMS for automotive), and a Postgres CRM as the omnichannel source of truth. Bidirectional sync between middleware and CRM is idempotent on (waba_message_id) with exactly-once semantics on lead-creation, so a Meta webhook retry never duplicates a pipeline row.
+
+The compliance layer is not a checkbox. Meta's 2026 rules ban open-ended conversational agents without a defined business task, so each intent is scoped to a typed tool-call, and the router matches STOP/CANCEL/UNSUBSCRIBE keywords pre-LLM. Consent is captured on lead-creation with source + timestamp + language on the contact profile and evaluated per-outbound against a real-time read, not a nightly export. Template versions live in the same git repo as the middleware and ship through a review flow, not through a Meta Business Manager click.
+
+Two production numbers on a 60-day cohort (mid-size restaurant chain in Spain, 8 locations, 12,000 monthly conversations): median first-response 3.2s end-to-end from Cloud API webhook to WhatsApp reply delivered vs. a 14-minute manual baseline, and 68% of inbound messages resolved without human intervention (booking, hours, menu, cancellation) at 92% intent-match accuracy on a 2,400-conversation eval set.
+
+Full write-up (ES): https://zeniapartners.com/blog/crm-con-whatsapp-integrado.html
+
+#WhatsAppBusinessAPI #CRM #DistributedSystems #B2B

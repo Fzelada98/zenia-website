@@ -6223,6 +6223,8 @@ Full write-up (ES): https://zeniapartners.com/blog/inteligencia-artificial-para-
 
 ## 2026-09-14 - Agente IA para reformas integrales (residential construction lead capture, EN)
 
+<!-- PUBLISHED:make-webhook at 2026-09-14T08:32:12Z -->
+
 Spain closed 1.9M residential renovations in 2025 and 59% of homeowners plan to renovate in 2026 (Estudio de Reformas España 2026). Average ticket for a full reforma integral sits at €32,000 with an 18% gross margin, and demand queries like "reformas integrales" hit 1,900 monthly searches in Madrid alone. Yet mid-sized construction firms convert leads at 6-9% because the site manager is also the WhatsApp responder, first-touch latency runs 2h 45min, and 34% of leads reach the estimator without basic qualification data.
 
 Stack we run for Zenia renovation deployments: WhatsApp Cloud API through a BSP as the customer surface, a frontier LLM with typed tool functions bound to qualify_lead / compute_price_range / book_technical_visit / schedule_followup / route_to_site_manager, a per-firm price-per-m2 table (typology x quality tier) as the deterministic source of truth for orientative quotes so the model never hallucinates numbers, Google Calendar / Outlook two-way sync into the site manager's real day with geographic clustering so the agent proposes slots that respect the day's travel graph, and Postgres CRM with lead-lifecycle events streamed onto an event bus (Kafka or NATS) so lead, visit, quote, project, and post-warranty stages land on one per-customer timeline.

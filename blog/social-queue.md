@@ -6237,3 +6237,19 @@ Full write-up (ES): https://zeniapartners.com/blog/agente-ia-para-reformas-integ
 
 #WhatsAppBusinessAPI #ConstructionTech #B2B #systemsdesign #AIagents
 
+---
+
+## 2026-09-14 - Real Estate CRM with AI: intake infra notes (EN)
+
+US real estate benchmarks are unusually cruel to slow systems: median agent response to a new online lead sits at 917 minutes, yet contacting the same lead inside 5 minutes makes them 21x more likely to qualify. Portal leads (Zillow, Realtor.com, Redfin) convert at 0.4-1.2% on the average agent and 3-5% at the top decile on the identical sources. Real estate management platforms (Follow Up Boss, Lofty, BoldTrail/kvCORE) own the pipeline layer; the pre-appointment conversion layer is where the P&L moves.
+
+Stack we run for Zenia real estate deployments: WhatsApp Cloud API and Twilio SMS through a BSP with 10DLC brand + campaign registration and per-state DNC scrubbing, a Claude-based agent with typed tool-calls into MLS RETS/RESO feeds for live listing data (so it never hallucinates a price on a $1.2M listing), Google/Outlook calendar two-way sync into the buyer-agent's real day with ShowingTime/SentriLock instruction payloads posted back into the same thread, Postgres CRM as the omnichannel source of truth, and Kafka streaming lead-lifecycle events (inbound, qualified, appointment-set, showing-completed, offer, contract, closed, post-close-anniversary) into a feature store. A public-records watcher (deeds, refi and HELOC filings, MLS status changes on the client's zip) triggers past-client outreach on real signal, not calendar dates.
+
+Showing-booking write path is idempotent on (agent_id, calendar_id, buyer_lead_id) and dual-signed with a short-lived JWT so a Meta webhook retry never books two showings on the same 30-minute slot. The consent path is strict: 10DLC campaign brand-approved, express written consent captured at lead capture with an audit log, STOP/END/QUIT/UNSUBSCRIBE/CANCEL wired to the router pre-LLM, and per-MLS display + syndication policy enforced at the tool-call layer, not the prompt.
+
+Two production numbers on a 90-day cohort (Denver 3-agent team, 2,100 CRM contacts, $6.4k/mo lead spend): p50 first-response 52s end-to-end from Zillow webhook to WhatsApp/SMS delivered reply against a 4h 12min manual baseline, and signed listing/buyer agreements moving from 11 to 25/month on the same ad spend, most of the lift coming from lead-to-appointment (7.8% -> 21.4%) rather than more leads.
+
+Full write-up (EN): https://zeniapartners.com/blog/real-estate-crm-with-ai.html
+
+#WhatsAppBusinessAPI #RealEstateTech #DistributedSystems #B2B
+

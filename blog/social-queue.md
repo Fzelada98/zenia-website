@@ -6253,3 +6253,19 @@ Full write-up (EN): https://zeniapartners.com/blog/real-estate-crm-with-ai.html
 
 #WhatsAppBusinessAPI #RealEstateTech #DistributedSystems #B2B
 
+
+---
+
+## 2026-09-14 - Ecommerce CRM with AI: DTC retention infra notes (EN)
+
+US/UK DTC benchmarks stabilized in 2026 around numbers that reward good infra and punish bad: average store conversion 2-3%, repeat purchase rate 31% at the mean and 62% at the top decile, and the average newly-acquired customer is a $29 gross loss until the second order. Klaviyo and Shopify Sidekick own the marketing-automation and merchandising layers; the retention P&L moves at the WhatsApp + unified-profile layer that sits on top.
+
+Stack we run for Zenia ecommerce deployments: Shopify or WooCommerce as the transactional source of truth, Klaviyo kept where already in place for email and SMS, WhatsApp Cloud API through a BSP for the reactive channel, a frontier LLM with typed tool-calls bound to get_order_status / recover_cart / recommend_repurchase / issue_return_label / route_to_human, and a customer-graph service that stitches Shopify customer_id + email + phone + Meta CAPI event_id into one profile so cart-abandonment fires on the same identity across web, IG, and WhatsApp. Kafka streams commerce events (cart_created, cart_abandoned, order_placed, fulfilled, delivered, refunded, review_submitted) into a feature store; a nightly job rebuilds behavioral segments (60-day-quiet-with-recent-visit, VIP-by-CLV, at-risk-post-first-order) that Klaviyo and the WhatsApp agent both consume.
+
+The non-obvious engineering is opt-in and idempotency. Meta enforces explicit WhatsApp opt-in scored against complaint rate and TCPA governs SMS in the US, so opt-in state lives on the customer profile with source + timestamp + language and every outbound is checked against a real-time consent read, not a nightly export. Order-status tool-calls are idempotent on (order_id, event_type, hash) so a Shopify webhook retry never triple-sends a "your order shipped" template. Handoff to a human is a deterministic classifier ahead of the LLM triggered by refund keywords, high-CLV thresholds, or repeated tool-call failure.
+
+Two production numbers on a 90-day cohort (US Shopify apparel brand, $840k trailing-12, 4-person team): cart recovery from 9% email-only to 34% on a three-touch WhatsApp+email sequence, and WISMO ticket volume down 71% (340/mo to 98/mo) after the order-status agent went live, freeing the same headcount for product education. Store conversion moved from 1.9% to 2.7% and repeat purchase rate from 22% to 31% on the same ad spend.
+
+Full write-up (EN): https://zeniapartners.com/blog/ecommerce-crm-with-ai.html
+
+#WhatsAppBusinessAPI #EcommerceTech #DistributedSystems #B2B

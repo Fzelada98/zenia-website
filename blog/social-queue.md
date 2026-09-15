@@ -6241,6 +6241,8 @@ Full write-up (ES): https://zeniapartners.com/blog/agente-ia-para-reformas-integ
 
 ## 2026-09-14 - Real Estate CRM with AI: intake infra notes (EN)
 
+<!-- PUBLISHED:make-webhook at 2026-09-15T08:30:05Z -->
+
 US real estate benchmarks are unusually cruel to slow systems: median agent response to a new online lead sits at 917 minutes, yet contacting the same lead inside 5 minutes makes them 21x more likely to qualify. Portal leads (Zillow, Realtor.com, Redfin) convert at 0.4-1.2% on the average agent and 3-5% at the top decile on the identical sources. Real estate management platforms (Follow Up Boss, Lofty, BoldTrail/kvCORE) own the pipeline layer; the pre-appointment conversion layer is where the P&L moves.
 
 Stack we run for Zenia real estate deployments: WhatsApp Cloud API and Twilio SMS through a BSP with 10DLC brand + campaign registration and per-state DNC scrubbing, a Claude-based agent with typed tool-calls into MLS RETS/RESO feeds for live listing data (so it never hallucinates a price on a $1.2M listing), Google/Outlook calendar two-way sync into the buyer-agent's real day with ShowingTime/SentriLock instruction payloads posted back into the same thread, Postgres CRM as the omnichannel source of truth, and Kafka streaming lead-lifecycle events (inbound, qualified, appointment-set, showing-completed, offer, contract, closed, post-close-anniversary) into a feature store. A public-records watcher (deeds, refi and HELOC filings, MLS status changes on the client's zip) triggers past-client outreach on real signal, not calendar dates.

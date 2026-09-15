@@ -6337,3 +6337,21 @@ Two production numbers on a 90-day cohort (2-chair US salon, 1,800 active client
 Full write-up (EN): https://zeniapartners.com/blog/salon-crm-with-ai.html
 
 #SalonTech #WhatsAppBusinessAPI #DistributedSystems #B2B
+
+---
+
+## 2026-09-15 - WhatsApp Reservations for Restaurants: architecture notes (EN)
+
+Building WhatsApp reservations for a restaurant correctly in 2026 is a plumbing problem, not a UX problem. WhatsApp Business App on a single device dies past ~20 reservations/day; the production path is WhatsApp Cloud API via a verified BSP.
+
+Reference stack we run: Cloud API fronting a Node.js middleware that fans webhooks into a Kafka topic (resto.inbound), keyed by intent (book, modify, cancel, waitlist), with a Claude-based agent making typed tool-calls (get_availability, hold_slot, book_reservation, add_to_waitlist) into CoverManager, TheFork or Resy through a single adapter. Availability lookup returns under 400ms so the agent never confirms a slot that no longer exists. Dual-write to booking system and Postgres CRM inside a single transactional outbox, so the seat and the client record never diverge; a booking-system 5xx never leaves a phantom reservation in the CRM.
+
+Reminder cascade at 24h and 3h runs on pre-approved Meta templates with idempotency keyed on (reservation_id, template_version) to survive webhook duplicates. Waitlist auto-fill triggers on the cancellation webhook and races the top of the queue with a leader-elected worker, so a duplicate cancellation event does not text the same top-3 twice. Post-January-2026 Meta policy on generic consumer AI bots is respected by keeping the agent scoped to the business identity and templates.
+
+Production numbers on a 60-cover pilot (~1,300 monthly WhatsApp conversations): 8s median first-response from Cloud API webhook to reply delivered, 26.5% message-to-booking conversion, no-shows 14% to 5% on the reminder chain, and 34% of new bookings landing outside staffed hours.
+
+Full write-up (ES): https://zeniapartners.com/blog/reservas-por-whatsapp-restaurante.html
+
+#restauranttech #WhatsAppBusinessAPI #DistributedSystems #B2B
+
+---

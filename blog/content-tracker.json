@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-09-15T14:00:00+00:00",
+  "lastRun": "2026-09-15T22:00:00+00:00",
   "posts": [
+    {
+      "slug": "reservas-por-whatsapp-restaurante",
+      "keyword": "reservas por whatsapp restaurante",
+      "tier": 1,
+      "cluster": "restaurantes",
+      "status": "published",
+      "date": "2026-09-15",
+      "source": "striking"
+    },
     {
       "slug": "agente-ia-para-tiendas-de-ropa-deportiva",
       "keyword": "agente ia para tiendas de ropa deportiva",

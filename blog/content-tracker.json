@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-09-14T14:00:00+00:00",
+  "lastRun": "2026-09-15T06:00:00+00:00",
   "posts": [
+    {
+      "slug": "reactivar-clientes-inactivos-restaurante-whatsapp",
+      "keyword": "reactivar clientes inactivos restaurante whatsapp",
+      "tier": 2,
+      "cluster": "restaurantes",
+      "status": "published",
+      "date": "2026-09-15",
+      "source": "matrix-expansion"
+    },
     {
       "slug": "crm-con-whatsapp-integrado",
       "keyword": "crm con whatsapp integrado",

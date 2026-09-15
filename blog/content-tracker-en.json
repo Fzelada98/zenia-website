@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-09-14T17:15:00Z",
+  "lastRun": "2026-09-15T09:15:00Z",
   "market": "US/UK small business",
   "posts": [
     {
@@ -47,7 +47,7 @@
     { "slug": "whatsapp-automation-for-gyms", "keyword": "whatsapp automation for gyms", "tier": 1, "cluster": "fitness", "status": "published", "date": "2026-09-10" },
     { "slug": "whatsapp-automation-for-dental-clinics", "keyword": "whatsapp automation for dental clinics", "tier": 1, "cluster": "healthcare", "status": "published", "date": "2026-09-10" },
     { "slug": "whatsapp-automation-for-hotels", "keyword": "whatsapp automation for hotels", "tier": 1, "cluster": "hospitality", "status": "published", "date": "2026-09-11" },
-    { "slug": "whatsapp-automation-for-law-firms", "keyword": "whatsapp automation for law firms", "tier": 2, "cluster": "professional", "status": "pending" },
+    { "slug": "whatsapp-automation-for-law-firms", "keyword": "whatsapp automation for law firms", "tier": 2, "cluster": "professional", "status": "published", "date": "2026-09-15" },
     { "slug": "whatsapp-automation-for-salons", "keyword": "whatsapp automation for salons", "tier": 2, "cluster": "beauty", "status": "pending" },
     { "slug": "whatsapp-automation-for-cleaning-services", "keyword": "whatsapp automation for cleaning services", "tier": 2, "cluster": "services", "status": "pending" },
     { "slug": "restaurant-crm-with-ai", "keyword": "restaurant crm with ai", "tier": 1, "cluster": "restaurants", "status": "published", "date": "2026-09-11" },

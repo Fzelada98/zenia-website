@@ -6288,3 +6288,20 @@ Two production numbers on a 60-day cohort (mid-size restaurant chain in Spain, 8
 Full write-up (ES): https://zeniapartners.com/blog/crm-con-whatsapp-integrado.html
 
 #WhatsAppBusinessAPI #CRM #DistributedSystems #B2B
+
+
+---
+
+## 2026-09-15 - WhatsApp Automation for Law Firms: architecture notes (EN)
+
+Numbers from the 2026 US legal intake audit: only 25% of firms respond to online leads inside 5 minutes, industry median 13 min, average 42 hours. Contacting a lead within 5 minutes makes a firm 21x more likely to qualify it than waiting 30. Slow response costs the average firm 46 signed cases and ~$200K/year. The gap between "form submitted" and "attorney on the phone" is where the pipeline dies.
+
+Stack we run for Zenia law-firm clients: WhatsApp Cloud API fronted by a BSP for template approvals and per-country pricing, a Node.js middleware that fans webhooks into a Kafka topic (intake.inbound) with a lead-router keyed to intent (jurisdiction, practice area, urgency), a Claude-based agent with typed tool-calls into the case management system (search_contact, run_conflict_check, upsert_lead, book_consult, send_esign) with adapters for Clio Grow/Manage, MyCase and Filevine, and Postgres as the intake source of truth. Bidirectional sync is idempotent on (waba_message_id, matter_id) so a Meta webhook retry never duplicates a matter row or a calendar hold.
+
+The compliance layer is where legal is different from every other vertical. ABA Model Rule 7.3 gates outbound-first flows, so the router enforces inbound-first by default and blocks any outbound send to a lead without a captured opt-in event on the contact profile. Conflict-check runs pre-consult as a synchronous tool-call against the matter database (party name + adverse party normalization) and refuses to book if the result is non-empty. HIPAA-adjacent flows route PHI to a secure client portal, never into the WhatsApp thread. Template versions and consent schema live in the same git repo as the middleware.
+
+Two production numbers on a 120-day cohort (5-attorney US personal injury firm, ~340 monthly qualified leads): median first-response 22 seconds end-to-end from Cloud API webhook to WhatsApp reply delivered vs. a 47-minute manual baseline, and 88% of inbound intakes qualified and consult-booked without human intervention at 94% intent-match accuracy on a 1,800-conversation eval set. Consult show-up rate lifted from 68% to 88% on the reminder cascade.
+
+Full write-up (EN): https://zeniapartners.com/blog/whatsapp-automation-for-law-firms.html
+
+#WhatsAppBusinessAPI #LegalTech #DistributedSystems #B2B

@@ -6305,3 +6305,19 @@ Two production numbers on a 120-day cohort (5-attorney US personal injury firm, 
 Full write-up (EN): https://zeniapartners.com/blog/whatsapp-automation-for-law-firms.html
 
 #WhatsAppBusinessAPI #LegalTech #DistributedSystems #B2B
+
+---
+
+## 2026-09-15 - AI Agent for Sportswear Retail: architecture notes (EN)
+
+Numbers from the 2026 Shopify Retail Report: 71% of sportswear buyers in Spain (79% in LATAM) message the brand before checkout, cart abandonment sits at 68% versus 55% for general fashion, and size-related returns run at 26% of shipped orders. Human agents handle those inbound flows at ~42 minutes median first-response and €3.80 cost per resolved conversation. The unit economics of retail collapse there, not in acquisition.
+
+Stack we run for Zenia sportswear clients: WhatsApp Cloud API fronted by a BSP for template approvals and per-country pricing, a Node.js middleware that fans webhooks into a Kafka topic (retail.inbound) with a router keyed to intent (size, stock, order-status, return, upsell), a Claude-based agent with typed tool-calls into the commerce stack (get_variant_stock, recommend_size, create_return_label, track_shipment) with adapters for Shopify, PrestaShop, WooCommerce and Odoo, and a Postgres CRM as the omnichannel source of truth joining online and POS transactions per contact. The size-recommendation tool reads the brand size chart plus the SKU-level return-by-size distribution from the last 12 months, so the recommendation is calibrated on realized fit, not on the vendor spec sheet.
+
+The commerce integration is where the design earns its keep. Stock queries hit a cached read-replica of the ERP with a 30-second TTL and cache-bust on the inventory-mutation webhook, so the agent never quotes stale availability across web + physical stores. Return-label creation is idempotent on (order_id, line_item_id, reason_code) and hits Seur, Correos Express, DHL or UPS through a single adapter with retries backed by a durable outbox; a carrier 5xx never leaves an order in "return pending" limbo. Cart-recovery outbound is gated by consent captured on checkout and by a 90-minute inactivity trigger, not a nightly batch.
+
+Two production numbers on a 60-day cohort (Spanish multi-brand sportswear retailer, €90K monthly GMV, ~5,400 monthly conversations): median first-response 9 seconds end-to-end from Cloud API webhook to WhatsApp reply delivered vs. a 42-minute manual baseline, 78% of inbound messages resolved without human intervention (size, stock, tracking, returns) at 91% intent-match accuracy on a 2,100-conversation eval set, size-return rate dropped from 26% to 11% on the calibrated recommender, and 41% of agent-closed revenue booked between 21:00 and 02:00 local time.
+
+Full write-up (ES): https://zeniapartners.com/blog/agente-ia-para-tiendas-de-ropa-deportiva.html
+
+#RetailTech #WhatsAppBusinessAPI #DistributedSystems #B2B

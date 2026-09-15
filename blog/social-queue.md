@@ -6321,3 +6321,19 @@ Two production numbers on a 60-day cohort (Spanish multi-brand sportswear retail
 Full write-up (ES): https://zeniapartners.com/blog/agente-ia-para-tiendas-de-ropa-deportiva.html
 
 #RetailTech #WhatsAppBusinessAPI #DistributedSystems #B2B
+
+---
+
+## 2026-09-15 - Salon CRM with AI: architecture notes (EN)
+
+Numbers from the 2026 US salon operations audit: ~70% of first-time clients never return for a second appointment, industry retention around 45%, no-show rate 20-30% without automated reminders, and 46-50% of bookings land when the salon is closed. The revenue leak is not acquisition; it is the gap between first visit and second, and the after-hours channel that goes unanswered.
+
+Stack we run for Zenia salon clients: WhatsApp Cloud API and Twilio SMS fronted by a BSP for template approvals, a Node.js middleware fanning webhooks into a Kafka topic (salon.inbound) with a router keyed to intent (book, reschedule, price, waitlist, deposit, review), a Claude-based agent with typed tool-calls into the booking system (search_availability, book_appointment, hold_deposit, add_to_waitlist, upsert_client) with adapters for Vagaro, Booksy, Fresha, Square Appointments and GlossGenius, and a Postgres CRM as the client-graph source of truth stitching booking-system client_id + phone + email into one profile with per-service visit-interval features rebuilt nightly. Deposit collection runs through Stripe with a manual-capture PaymentIntent tied to the appointment lifecycle, so a no-show forfeits the hold without a chargeback exposure.
+
+The retention layer is where the model matters. Rebook-nudge timing is per-client, not per-salon: a gradient-boosted predictor on visit-interval, service type, stylist affinity and lapse probability picks the send window rather than a fixed day-7 blast. Waitlist auto-fill is idempotent on (appointment_id, cancellation_event_id) with a leader-elected worker so a duplicate cancellation webhook never texts the same top-3 twice. Consent is captured on booking with source + timestamp + language and evaluated per-outbound against a real-time consent read, TCPA-compliant with STOP/HELP handled pre-LLM.
+
+Two production numbers on a 90-day cohort (2-chair US salon, 1,800 active clients, ~1,100 monthly conversations): median first-response 6 seconds end-to-end from Cloud API webhook to reply delivered vs. a 3.4-hour manual baseline, 82% of after-hours inbound resolved without human intervention (booking, availability, price, cancellation) at 93% intent-match accuracy on a 1,600-conversation eval set. No-show rate 22% to 7% on two-way SMS confirmation + deposit-over-$85 rule, first-to-second retention 28% to 58% on the day-7 rebook nudge.
+
+Full write-up (EN): https://zeniapartners.com/blog/salon-crm-with-ai.html
+
+#SalonTech #WhatsAppBusinessAPI #DistributedSystems #B2B

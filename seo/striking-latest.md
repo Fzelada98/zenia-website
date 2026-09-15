@@ -6,7 +6,7 @@ Consultas donde zeniapartners.com ya imprime en posición 4-30 (últimos 8 días
 |---|---|---|---|
 | 7.0 | 39 | "lead web" abogados estudio juridico argentina | /blog/ |
 | 22.0 | 29 | chatbot para restaurantes | /blog/chatbot-whatsapp-restaurantes.html |
-| 20.4 | 24 | reservas por whatsapp restaurante | /blog/chatbot-whatsapp-restaurantes.html |
+| 20.4 | 24 | [reservas por whatsapp restaurante](/blog/reservas-por-whatsapp-restaurante.html) | /blog/chatbot-whatsapp-restaurantes.html |
 | 19.3 | 23 | content automation for retail | /blog/ai-automation-retail-stores.html |
 | 14.5 | 22 | chatbot whatsapp restaurantes | /blog/chatbot-whatsapp-restaurantes.html |
 | 23.5 | 21 | crm precio | /blog/cuanto-cuesta-un-crm-para-pymes.html |

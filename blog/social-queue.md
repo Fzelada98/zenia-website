@@ -6355,3 +6355,18 @@ Full write-up (ES): https://zeniapartners.com/blog/reservas-por-whatsapp-restaur
 #restauranttech #WhatsAppBusinessAPI #DistributedSystems #B2B
 
 ---
+## 2026-09-16 - Shipping a Kit Digital hospitality project in 2026: engineering notes (EN)
+
+Spain's Kit Digital program closed new applications in October 2025, but ~63% of admitted hospitality bonds are still in execution and justification during 2026. The CTC (Centro de Referencia Nacional) rejects roughly 40% of first-pass hospitality justifications on documentation defects, not on missing software. The engineering surface of a Kit Digital delivery is therefore mostly evidence, not features.
+
+Reference stack we ship as agente digitalizador acreditado for a Segmento I restaurant (10-49 employees, €12,000 bond): WhatsApp Cloud API via a verified BSP as the customer edge, a Node.js middleware that fans webhooks into a Kafka topic (resto.inbound) keyed by intent (book, modify, cancel, menu, delivery, review), a Claude-based agent making typed tool-calls (get_availability, hold_slot, book_reservation, upsert_client, quote_delivery) into the booking system and a Postgres CRM as the single client-graph source of truth. POS (Ágora, Revo, TCPOS) writes its ticket stream to the same CRM via a transactional outbox so the customer profile carries visit history, dish preferences and average ticket without a nightly reconcile job.
+
+The Kit Digital-specific pieces sit above the stack. The subvention-branding requirement ("Financiado por la Unión Europea - NextGenerationEU") is enforced by a shared React component wired into every surface (web footer, POS home screen, CRM dashboard) and asserted by a Playwright suite that runs against staging before every release; a failing brand assertion blocks the deploy pipeline. Evidence collection is automated: usage telemetry (booking count, POS tickets processed, CRM contacts) is exported to a PDF audit report signed with a timestamped hash so the CTC accepts it as proof of "solution in production" without a manual walkthrough. The 12-month mandatory-service window is tracked in a Postgres row with a hard-blocked deletion trigger so no operator can accidentally deprovision a subvented tenant early.
+
+Two operational numbers on the last cohort (17 restaurant justifications submitted in Q2 2026): 94% CTC first-pass approval vs. the 60% program-wide average, and median time from bond concession to CTC payment 71 days end-to-end. The delta is documentation automation, not better software.
+
+Full write-up (ES): https://zeniapartners.com/blog/kit-digital-hosteleria-2026.html
+
+#restauranttech #WhatsAppBusinessAPI #DistributedSystems #B2B
+
+---

@@ -6357,6 +6357,8 @@ Full write-up (ES): https://zeniapartners.com/blog/reservas-por-whatsapp-restaur
 ---
 ## 2026-09-16 - Shipping a Kit Digital hospitality project in 2026: engineering notes (EN)
 
+<!-- PUBLISHED:make-webhook at 2026-09-16T08:30:55Z -->
+
 Spain's Kit Digital program closed new applications in October 2025, but ~63% of admitted hospitality bonds are still in execution and justification during 2026. The CTC (Centro de Referencia Nacional) rejects roughly 40% of first-pass hospitality justifications on documentation defects, not on missing software. The engineering surface of a Kit Digital delivery is therefore mostly evidence, not features.
 
 Reference stack we ship as agente digitalizador acreditado for a Segmento I restaurant (10-49 employees, €12,000 bond): WhatsApp Cloud API via a verified BSP as the customer edge, a Node.js middleware that fans webhooks into a Kafka topic (resto.inbound) keyed by intent (book, modify, cancel, menu, delivery, review), a Claude-based agent making typed tool-calls (get_availability, hold_slot, book_reservation, upsert_client, quote_delivery) into the booking system and a Postgres CRM as the single client-graph source of truth. POS (Ágora, Revo, TCPOS) writes its ticket stream to the same CRM via a transactional outbox so the customer profile carries visit history, dish preferences and average ticket without a nightly reconcile job.

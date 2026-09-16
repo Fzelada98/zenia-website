@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-09-16T06:00:00+00:00",
+  "lastRun": "2026-09-16T14:15:00+00:00",
   "posts": [
     {
       "slug": "kit-digital-hosteleria-2026",
@@ -3467,6 +3467,15 @@
       "cluster": "gimnasios",
       "status": "published",
       "date": "2026-09-13"
+    },
+    {
+      "slug": "chatbot-para-restaurantes",
+      "keyword": "chatbot para restaurantes",
+      "tier": 1,
+      "cluster": "restaurantes",
+      "status": "published",
+      "source": "striking",
+      "date": "2026-09-16"
     }
   ]
 }

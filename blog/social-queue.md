@@ -6388,3 +6388,18 @@ Full write-up: https://zeniapartners.com/blog/whatsapp-automation-for-salons.htm
 #WhatsAppBusinessAPI #Automation #SystemsEngineering #B2B
 
 ---
+## 2026-09-16 - Chatbot para Restaurantes (ES post, EN LinkedIn)
+
+Restaurant "chatbot" as an engineering surface, not a marketing feature.
+
+A production deployment for a 60-cover restaurant runs on WhatsApp Cloud API (verified BSP) as the primary edge, plus a web widget and a voice channel wired through Twilio Voice + Deepgram STT. All four channels hit the same stateless intent router (Node.js on Fly.io, p50 latency 180ms) that hands typed tool-calls to a Claude-based agent: get_availability, hold_slot, book_reservation, upsert_guest, quote_delivery. Single client graph in Postgres (guest_id keyed) so the same customer arriving from IG DM inherits allergies and mesa favorita from prior WhatsApp reservations, no reconcile job.
+
+Booking system integration is the hard part: CoverManager and TheFork behave differently under contention. CoverManager REST is optimistic-lock friendly, so we hold slots for 90s via a per-table Redis mutex before commit. TheFork inventory API has stricter rate limits, so we fan reads through a 30s cache and only spend a write budget on confirmed intent (agent classifier confidence > 0.85). POS (Ágora, Revo, Miss Tipsi) writes tickets to the same CRM via a transactional outbox so LTV per guest is a query, not a nightly ETL.
+
+Two production numbers worth the write-up: end-to-end p95 latency from inbound message to confirmed slot is 4.2s (including LLM call + availability read + WhatsApp template dispatch), and no-show rate on the sample dropped from 14% to 5% after wiring T-24h and T-2h reminders with quick-reply confirm that round-trips back into CoverManager on the same webhook.
+
+Full write-up (ES): https://zeniapartners.com/blog/chatbot-para-restaurantes.html
+
+#restauranttech #WhatsAppBusinessAPI #DistributedSystems #B2B
+
+---

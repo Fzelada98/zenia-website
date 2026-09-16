@@ -6372,3 +6372,19 @@ Full write-up (ES): https://zeniapartners.com/blog/kit-digital-hosteleria-2026.h
 #restauranttech #WhatsAppBusinessAPI #DistributedSystems #B2B
 
 ---
+
+## 2026-09-16 - WhatsApp Automation for Salons (EN)
+
+Salon deployment notes from a 3-chair Nashville studio, 1,800 active clients.
+
+Stack: WhatsApp Business API (Cloud API, one number, seven approved templates) sitting on top of Vagaro. Bridge is a stateless middleware exposing four endpoints (search-slots, hold, book, reschedule); AI agent (intent classifier + retrieval over the client CRM) sends requests through it. Everything is idempotent by (client_id, appointment_id).
+
+Two numbers worth the write-up: end-to-end booking latency from inbound message to confirmed slot averages 3.4s p50 / 6.1s p95, and no-show rate dropped from 24% to 6.5% after wiring T-48h and T-24h reminders with quick-reply reschedule (which round-trips back into Vagaro on the same middleware, no human in the loop).
+
+Compliance layer is not optional: TCPA opt-in stored with timestamp + channel, Meta Utility vs Marketing template separation, and quiet-hours enforcement in client local time.
+
+Full write-up: https://zeniapartners.com/blog/whatsapp-automation-for-salons.html
+
+#WhatsAppBusinessAPI #Automation #SystemsEngineering #B2B
+
+---

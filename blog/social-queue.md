@@ -6403,3 +6403,16 @@ Full write-up (ES): https://zeniapartners.com/blog/chatbot-para-restaurantes.htm
 #restauranttech #WhatsAppBusinessAPI #DistributedSystems #B2B
 
 ---
+## 2026-09-16 - WhatsApp Automation for Cleaning Services (EN)
+
+Cleaning-company "WhatsApp automation" is a five-service pipeline, not a bot.
+
+Production deployment for a 4-crew Charlotte residential cleaner runs WhatsApp Cloud API (verified BSP, US phone number) as the primary edge, funneling every website form, Google LSA click, Yelp message and Facebook lead-ad into the same stateless intent router (Node.js on Fly.io, p50 156ms) that hands typed tool-calls to a Claude-based agent: quote_from_pricing_rules, hold_slot_by_zone, book_recurring, capture_lockbox_code, dispatch_pay_link. Live availability comes from Jobber's REST API cached at 30s TTL with a per-crew per-zone Redis mutex holding a slot for 120s before commit; job writes hit Jobber through an outbox pattern so a network blip never doubles-books a crew.
+
+Two production numbers worth the write-up: end-to-end p95 latency from inbound lead to confirmed booking with a live quote is 6.8s (LLM classify + geocode + pricing-rule eval + Jobber availability read + WhatsApp template dispatch), and same-day no-access dropped from 15% to 4.5% after wiring the T-24h template with a "not home, use lockbox" quick-reply that round-trips a keypad code into the customer record before the crew leaves the previous job. Stripe Pay-by-Link sent at job-complete lifted invoice collection inside 24h from 62% to 91%; same outbox, guest_id keyed CRM in Postgres.
+
+Full write-up: https://zeniapartners.com/blog/whatsapp-automation-for-cleaning-services.html
+
+#WhatsAppBusinessAPI #FieldServices #DistributedSystems #B2B
+
+---

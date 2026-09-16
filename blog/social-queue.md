@@ -6416,3 +6416,16 @@ Full write-up: https://zeniapartners.com/blog/whatsapp-automation-for-cleaning-s
 #WhatsAppBusinessAPI #FieldServices #DistributedSystems #B2B
 
 ---
+## 2026-09-16 - Asistente IA para Clínicas de Estética (ES post, EN LinkedIn)
+
+Aesthetic-clinic "AI assistant" is a routing plane over practice-management APIs, not a widget.
+
+Production deployment for a 3-gabinete clinic runs WhatsApp Cloud API (verified BSP, ES number) as the primary edge, funneling WhatsApp, Instagram Graph webhooks and the website form into the same stateless intent router (Node.js on Fly.io, p50 172ms) that emits typed tool-calls to a Claude-based agent: qualify_lead, get_slot_by_treatment, hold_slot, book_valoracion, trigger_prep_template, reactivate_dormant. Practice-management integration is the hard part: Flowww and Nubuk expose OAuth REST with per-tenant token rotation, Booksy only ships an outbound webhook, so slots are read at 30s TTL through a per-gabinete Redis mutex holding 90s before commit and writes fan through a transactional outbox to avoid double-booking a laser session on cache lag. Consent flag (RGPD art. 9, categoría especial) is a first-class field on the guest_id row; the router refuses to route a message to the LLM if it is unset.
+
+Two numbers worth the write-up: end-to-end p95 from inbound DM to confirmed valoración is 4.6s (classify + treatment lookup + slot read + WhatsApp template) and no-show rate on the 60-day sample dropped from 20% to 8% after wiring T-48h prep + T-24h confirm quick-reply that round-trips back into Flowww on the same webhook.
+
+Full write-up (ES): https://zeniapartners.com/blog/asistente-ia-para-clinicas-de-estetica.html
+
+#WhatsAppBusinessAPI #HealthTech #DistributedSystems #B2B
+
+---

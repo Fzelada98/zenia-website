@@ -6457,3 +6457,16 @@ Full write-up: https://zeniapartners.com/blog/hotel-crm-with-ai.html
 #WhatsAppBusinessAPI #HospitalityTech #DistributedSystems #B2B
 
 ---
+## 2026-09-17 - Agentes de IA en Málaga (ES post, EN LinkedIn)
+
+Málaga SMB "AI agent" is a routing plane pinned to EU infra, not a chatbot widget.
+
+Production deployment for a mid-size Málaga hospitality group (3 restaurants across Marbella, Estepona and Málaga capital) runs WhatsApp Cloud API (verified BSP, ES number) as the primary edge, funneling website form-fills, Google Ads clicks, Instagram Graph webhooks and inbound WhatsApp into the same stateless intent router (Node.js on Fly.io Frankfurt region, p50 168ms) that hands typed tool-calls to a Claude-based agent: classify_intent, get_slot_by_zone, hold_table, book_reservation, upsell_pairing, T24h_confirm, reactivate_dormant. POS/PMS integration is the hard part in this market: CoverManager and TheFork expose OAuth REST with per-venue token rotation, some independent kitchens still run a legacy MySQL box exposed via a 12kB webhook shim, so availability reads hit a 30s TTL cache behind a per-zone Redis mutex holding a slot for 90s before commit; every write fans through a transactional outbox to avoid double-booking the last terrace at 21:30 on cache lag. Data residency: model inference stays inside eu-central-1 with a signed DPA, guest_id row carries an RGPD consent flag and the router refuses promotional templates if unset.
+
+Two numbers worth the write-up: end-to-end p95 from inbound WhatsApp to a confirmed reservation with a Stripe deposit link is 5.3s (classify + zone routing + CoverManager availability read + Stripe link mint + WhatsApp template dispatch), and no-show rate on the 90-day sample dropped from 14% to 5% after wiring the T-24h confirm quick-reply that round-trips back into the reservation system on the same webhook (34% of confirmations now land outside 10:00 to 22:00 Europe/Madrid).
+
+Full write-up (ES): https://zeniapartners.com/blog/agentes-ia-malaga.html
+
+#WhatsAppBusinessAPI #HospitalityTech #DistributedSystems #B2B
+
+---

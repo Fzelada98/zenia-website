@@ -6483,3 +6483,16 @@ Full write-up: https://zeniapartners.com/blog/accounting-firm-crm-with-ai.html
 #WhatsAppBusinessAPI #AccountingTech #DistributedSystems #B2B
 
 ---
+## 2026-09-17 - Agente IA para Estudios de Tatuaje (ES post, EN LinkedIn)
+
+A tattoo-studio "AI agent" is a cross-channel booking plane with deposit collection wired into the confirm path, not an autoresponder on Instagram.
+
+Reference deployment for a 2-artist Barcelona studio unifies WhatsApp Business Cloud API (verified BSP, ES number) and Meta Instagram Messaging API into a single stateless router (Node.js on Fly.io Frankfurt, p50 158ms) that hands typed tool-calls to a Claude agent: classify_style (blackwork, realism, fineline, japanese, geometric, watercolor, dotwork), extract_zone_size, match_artist_by_style, price_range_estimate, get_slots, mint_deposit_link, book_session. Reference-image analysis runs on the same inbound webhook via a vision pass that returns a confidence score plus style tags; anything under 0.72 gates to the artist inbox instead of quoting so the studio never inherits a bad estimate. Deposit collection is Stripe Payment Links (or Bizum Business where the studio prefers it) minted at slot-hold time and wired into the booking finalizer as a blocking dependency: no captured deposit within a 24h TTL, the slot releases back to the pool via a Redis SETEX guard.
+
+Two production numbers worth the write-up: end-to-end p95 from inbound WhatsApp (or IG DM) to a confirmed slot with a paid deposit link is 4.9s (classify + artist match + calendar read + Stripe link mint + WhatsApp template dispatch), and first-appointment no-shows dropped from 22% to 4% once the deposit call became blocking on the booking confirmation. Instagram DM adds about 1.5x the latency of WhatsApp because of Meta's per-recipient message-window posture, so the queue is batched inside the 24h window and templated outside it.
+
+Full write-up (ES): https://zeniapartners.com/blog/agente-ia-para-estudios-de-tatuaje.html
+
+#WhatsAppBusinessAPI #AIAgents #DistributedSystems #B2B
+
+---

@@ -6431,6 +6431,8 @@ Full write-up (ES): https://zeniapartners.com/blog/asistente-ia-para-clinicas-de
 ---
 ## 2026-09-17 - Lead Web Abogados Estudio Jurídico Argentina (ES post, EN LinkedIn)
 
+<!-- PUBLISHED:make-webhook at 2026-09-17T08:30:03Z -->
+
 Argentine law-firm "web lead capture" is a jurisdiction-aware routing plane, not a WhatsApp widget.
 
 Production deployment for a mid-size Buenos Aires firm (fueros: laboral, familia, accidentes) runs WhatsApp Cloud API (verified BSP, AR number) as the primary edge, ingesting Google Ads landing form-fills, Meta lead-ads and direct WhatsApp clicks into the same stateless intent router (Node.js on Fly.io, p50 168ms) that hands typed tool-calls to a Claude-based agent: classify_by_fuero, check_territorial_competence, validate_viability, quote_honorarios_from_matrix, get_calendar_slot, book_reunion, escalate_to_matriculado. Calendar reads hit Google Calendar via a per-lawyer OAuth token rotated hourly, cached at 20s TTL through a Redis mutex holding a slot for 90s before commit; every write fans through a transactional outbox so a network blip never double-books a partner. Ethics constraint is enforced at the router level, not in prompt: agent refuses to emit a jurisprudential opinion on the concrete case, only informs plazos, fueros and honorarios matrix; violation of that rule short-circuits the tool-call and escalates to the matriculado.

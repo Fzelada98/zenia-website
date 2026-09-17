@@ -6470,3 +6470,16 @@ Full write-up (ES): https://zeniapartners.com/blog/agentes-ia-malaga.html
 #WhatsAppBusinessAPI #HospitalityTech #DistributedSystems #B2B
 
 ---
+## 2026-09-17 - Accounting Firm CRM with AI (EN LinkedIn)
+
+A CPA-firm "CRM with AI" is an engagement-aware data plane wired to the client's actual file, not a contact database with a chat widget bolted on.
+
+Reference deployment for a 4-partner, 320-client US firm consolidates QuickBooks Online / Xero, TaxDome and a homegrown Postgres engagement store into a single unified client record keyed by (client_id, engagement_id) covering monthly bookkeeping, 1120/1040, sales tax, payroll and advisory. Edge is WhatsApp Business Cloud API (US number, verified BSP) plus the practice-management portal; both hit the same stateless router (Fly.io us-east, p50 141ms) that hands typed tool-calls to a Claude agent: classify_intake, resolve_engagement, list_missing_items, draft_reply, schedule_prep_block, flag_at_risk. Document intake pipeline OCRs incoming 1099s, K-1s, W-2s and brokerage statements, auto-tags them against the engagement checklist and updates the missing-items DAG so the deadline reminder cascade (T-60d/T-30d/T-14d/T-5d) writes each nudge from the actual document state, not a generic template. Retrieval for reply drafting is a per-engagement pgvector namespace with row-level scoping and a signed audit log every read/write hits so 7216-compliant disclosure boundaries hold.
+
+Two production numbers worth the write-up: end-to-end p95 from inbound client WhatsApp question to a preparer-reviewable draft reply grounded in the client's own prior-year return is 3.8s (classify + engagement resolve + pgvector retrieve + Claude draft + preparer inbox render), and first-year client retention on the 4-month sample moved from 82% to 94% after wiring the missing-items chase and at-risk health-score digest into the partner Monday dashboard.
+
+Full write-up: https://zeniapartners.com/blog/accounting-firm-crm-with-ai.html
+
+#WhatsAppBusinessAPI #AccountingTech #DistributedSystems #B2B
+
+---

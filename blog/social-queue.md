@@ -6444,3 +6444,16 @@ Full write-up (ES): https://zeniapartners.com/blog/lead-web-abogados-estudio-jur
 #WhatsAppBusinessAPI #LegalTech #DistributedSystems #B2B
 
 ---
+## 2026-09-17 - Hotel CRM with AI (EN)
+
+Hotel "CRM with AI" is a routing plane over PMS, booking engine and WhatsApp, not a mailing list.
+
+Production deployment for a 48-room Charleston boutique runs WhatsApp Cloud API (verified BSP, US number) as the primary edge, funneling website form-fills, Google Ads clicks, Booking.com message-passthrough and direct WhatsApp inbound into the same stateless intent router (Node.js on Fly.io, p50 174ms) that emits typed tool-calls to a Claude-based agent: quote_from_rate_plan, hold_room_by_type, book_direct, capture_upsell (early check-in, breakfast, parking), pre_arrival_confirm, post_stay_review, reactivate_dormant. PMS integration is the hard part: Cloudbeds and Mews expose OAuth REST with per-property token rotation and idempotent booking writes, Opera Cloud goes through OHIP with stricter rate limits, so live availability reads hit a 30s TTL cache behind a per-room-type Redis mutex holding a slot for 90s before commit, and every write fans through a transactional outbox to avoid double-booking the last Deluxe King on cache lag. TCPA/PECR consent flags are first-class fields on the guest_id row; router refuses to route a promotional template if unset.
+
+Two production numbers worth the write-up: end-to-end p95 from inbound WhatsApp inquiry to a confirmed booking with payment link is 5.1s (LLM classify + rate-plan eval + Cloudbeds availability read + Stripe link mint + WhatsApp template dispatch), and cancellation rate on direct bookings dropped from 22% to 13% on the 6-month sample after wiring T-7d and T-48h confirm templates with a one-tap quick-reply that round-trips back into the PMS on the same webhook.
+
+Full write-up: https://zeniapartners.com/blog/hotel-crm-with-ai.html
+
+#WhatsAppBusinessAPI #HospitalityTech #DistributedSystems #B2B
+
+---

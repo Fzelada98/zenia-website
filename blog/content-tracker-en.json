@@ -57,7 +57,7 @@
     { "slug": "law-firm-crm-with-ai", "keyword": "law firm crm with ai", "tier": 1, "cluster": "professional", "status": "published", "date": "2026-09-13" },
     { "slug": "real-estate-crm-with-ai", "keyword": "real estate crm with ai", "tier": 1, "cluster": "real-estate", "status": "published", "date": "2026-09-14" },
     { "slug": "salon-crm-with-ai", "keyword": "salon crm with ai", "tier": 2, "cluster": "beauty", "status": "published", "date": "2026-09-15" },
-    { "slug": "hotel-crm-with-ai", "keyword": "hotel crm with ai", "tier": 2, "cluster": "hospitality", "status": "pending" },
+    { "slug": "hotel-crm-with-ai", "keyword": "hotel crm with ai", "tier": 2, "cluster": "hospitality", "status": "published", "date": "2026-09-17" },
     { "slug": "ecommerce-crm-with-ai", "keyword": "ecommerce crm with ai", "tier": 1, "cluster": "ecommerce", "status": "published", "date": "2026-09-14" },
     { "slug": "accounting-firm-crm-with-ai", "keyword": "accounting firm crm with ai", "tier": 2, "cluster": "professional", "status": "pending" },
     { "slug": "auto-repair-shop-crm-with-ai", "keyword": "auto repair shop crm with ai", "tier": 2, "cluster": "auto", "status": "pending" }

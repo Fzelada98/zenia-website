@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-09-17T22:00:00+00:00",
+  "lastRun": "2026-09-18T06:00:00+00:00",
   "posts": [
+    {
+      "slug": "kpis-atencion-cliente-whatsapp-business",
+      "keyword": "kpis atencion cliente whatsapp business",
+      "tier": 2,
+      "cluster": "atencion-cliente",
+      "status": "published",
+      "date": "2026-09-18",
+      "source": "generated"
+    },
     {
       "slug": "agente-ia-para-estudios-de-tatuaje",
       "keyword": "agente ia para estudios de tatuaje",

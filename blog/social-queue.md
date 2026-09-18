@@ -6535,3 +6535,16 @@ Full write-up (ES): https://zeniapartners.com/blog/precio-software-crm-2026.html
 #CRM #B2B #WhatsAppBusinessAPI #SoftwareEconomics
 
 ---
+## 2026-09-18 - Personal Trainer CRM with AI (EN)
+
+The "personal trainer CRM with AI" pattern is a three-plane stack for a single-operator business: a client/session/package record synced against the programming platform (Trainerize, TrueCoach, PT Distinction, Everfit) via their REST APIs, an AI agent on WhatsApp Business Cloud API sharing session state with the CRM through a Redis-backed conversation store, and a background rules engine that fires on time-based (reminder, renewal, at-risk, reactivation) and event-based (session_completed, package_low, payment_failed) triggers. Reference deployment for a US solo trainer at 34-41 active clients: stateless Node.js router on Fly.io, Claude tool-loop with typed function-calls (get_client, check_package_balance, get_calendar_availability, book_session, decrement_package, send_payment_link, flag_at_risk), Postgres append-only event log feeding materialized views for cohort retention and no-show rate.
+
+Two production numbers from the 4-month baseline: end-to-end p95 from an inbound WhatsApp "can we move Thursday?" to a confirmed reschedule with calendar mutation and client confirmation is 2.4s (intent parse + calendar read + slot lock in Redis + calendar write + template dispatch), and the at-risk detector (fewer sessions than the rolling 14-day expected, response latency doubled, no measurement update in 21 days) fires with a 78% precision against the ground truth of "client actually cancelled within 30 days," measured over 412 flagged clients.
+
+Architectural note: the trainer's programming tool stays the source of truth for workouts; the CRM is the coordination layer. Two-way sync is one-way in practice (programming to CRM for completed-session events, CRM to programming for new client provisioning), which avoids the merge-conflict headache full bidirectional sync introduces.
+
+Full write-up: https://zeniapartners.com/blog/personal-trainer-crm-with-ai.html
+
+#WhatsAppBusinessAPI #FitnessTech #DistributedSystems #B2B
+
+---

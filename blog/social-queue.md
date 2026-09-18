@@ -6522,3 +6522,16 @@ Full write-up: https://zeniapartners.com/blog/auto-repair-shop-crm-with-ai.html
 #WhatsAppBusinessAPI #AutomotiveTech #DistributedSystems #B2B
 
 ---
+## 2026-09-18 - CRM Software Precio 2026 (EN)
+
+A "CRM software price" number in a vendor's landing is a per-seat licence figure that ignores three cost buckets the operations team will discover after signature: implementation (setup + data migration + integrations), metered add-ons (WhatsApp Business Cloud API conversation fees, marketing sends, storage tiers), and internal maintenance labour. For a 10-seat SMB in Spain the licence line typically covers 22–34% of the effective year-1 total cost of ownership; the remainder is everything the pricing page does not surface.
+
+Reference model we run before every quote: TCO = (seats × plan × 12) + one-off setup + Σ(integrations × mo. maintenance × 12) + Σ(metered add-ons projected from a 90-day traffic sample) + internal FTE-hours × loaded rate. Two data points from side-by-side comparisons across 12 Spanish SMB deployments in 2026: HubSpot Starter + Marketing + WhatsApp add-on lands at ~€10.3k year-1, ZENIA (CRM + native WhatsApp Business API + AI agent, flat monthly) at ~€6.96k year-1 for the same 10-seat footprint and integration count — the delta is almost entirely metered add-ons and integration maintenance rather than the licence itself.
+
+Architectural implication for engineering teams: pricing a CRM is a capacity-planning exercise. Model the WhatsApp conversation volume, the number of ERP/POS webhooks, and the projected event-log growth first, then pick the tier. Doing it in the reverse order is why the 12-month CFO review of most SaaS CRMs looks nothing like the initial deck.
+
+Full write-up (ES): https://zeniapartners.com/blog/precio-software-crm-2026.html
+
+#CRM #B2B #WhatsAppBusinessAPI #SoftwareEconomics
+
+---

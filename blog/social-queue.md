@@ -6496,3 +6496,16 @@ Full write-up (ES): https://zeniapartners.com/blog/agente-ia-para-estudios-de-ta
 #WhatsAppBusinessAPI #AIAgents #DistributedSystems #B2B
 
 ---
+## 2026-09-18 - KPIs de Atención al Cliente en WhatsApp Business (ES post, EN LinkedIn)
+
+A WhatsApp Business dashboard that reports "we handled 4,200 messages this week" is instrumented wrong. The unit is the conversation, not the message, and every KPI worth reporting collapses to eight webhook-driven events emitted from WhatsApp Business Cloud API into the CRM: message_in, message_out (with author = human|ai), conversation_open, conversation_close (with reason), handoff (with reason), business_event (reservation/quote/order/appointment), csat_response, quality_signal (block/report/opt-out).
+
+Reference dashboard for a mid-volume operation (≈3,000 conversations/month across a restaurants + estética portfolio) runs a single append-only events table (Postgres, partitioned monthly), materialized views for FRT/ART/TTR percentiles refreshed every 60s via pg_cron, and a Redis-backed live counter for the 24h session-compliance guard so the ops team gets a hard alert before Meta charges for a re-open template. The AI agent is Claude on a stateless Node.js router (Fly.io Frankfurt, p50 165ms inbound-to-first-token), and every handoff carries a typed reason enum so the FCR breakdown is queryable, not a black box.
+
+Two production numbers from the last 42,000 closed conversations: p90 First Response Time is 38 seconds with the agent handling 68% of level-1 traffic (human-only baseline on the same funnel: p90 = 11m 20s), and Cost per Resolution dropped from €5.10 to €1.90 without changing headcount, driven mostly by the 24/7 answer-rate going from 6% to 84%.
+
+Full write-up (ES): https://zeniapartners.com/blog/kpis-atencion-cliente-whatsapp-business.html
+
+#WhatsAppBusinessAPI #Observability #DistributedSystems #B2B
+
+---

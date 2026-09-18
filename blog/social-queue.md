@@ -6511,3 +6511,14 @@ Full write-up (ES): https://zeniapartners.com/blog/kpis-atencion-cliente-whatsap
 #WhatsAppBusinessAPI #Observability #DistributedSystems #B2B
 
 ---
+## 2026-09-18 - Auto Repair Shop CRM with AI (EN)
+
+An "auto repair CRM with AI" that actually moves the RO count is a three-layer system: a unified customer/vehicle/RO record synced against the shop management system (Tekmetric, AutoLeap, Shopware, Mitchell 1) via native or documented REST APIs (not scraping), an AI agent on WhatsApp Business Cloud API + SMS fallback (Twilio) sharing the same session context, and a nightly rules engine that scans declined line items and mileage projections to enqueue outbound campaigns. Reference stack for a 3-bay US independent (1,840 active customers, Tekmetric): stateless Node.js router on Fly.io iad, Claude tool-loop with typed function-calls (get_vehicle, match_symptom_to_job_code, get_bay_availability, create_ro, push_dvi_bundle, capture_dvi_approval, requeue_declined), Redis-backed slot locks, Postgres append-only event log for KPI materialized views.
+
+Two production numbers from the 4-month baseline: end-to-end p95 from inbound WhatsApp to a written appointment in Tekmetric is 3.8s (symptom classify + calendar read + RO create + template dispatch), and the nightly declined-services scan converts at 11.4% on line items 45-180 days old, adding an average of $34 to the following month's average RO. DVI approvals with photos on WhatsApp collapse the estimate-to-authorization loop from hours to a p50 of 6.1 minutes.
+
+Full write-up: https://zeniapartners.com/blog/auto-repair-shop-crm-with-ai.html
+
+#WhatsAppBusinessAPI #AutomotiveTech #DistributedSystems #B2B
+
+---

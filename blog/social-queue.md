@@ -6548,3 +6548,16 @@ Full write-up: https://zeniapartners.com/blog/personal-trainer-crm-with-ai.html
 #WhatsAppBusinessAPI #FitnessTech #DistributedSystems #B2B
 
 ---
+## 2026-09-18 - Agente IA para Hamburgueserías Gourmet (EN)
+
+An AI agent for a gourmet burger chain is a small-footprint but latency-critical distributed problem: WhatsApp Business Cloud API on the inbound side, a per-item menu graph with allergen + modifier constraints encoded as a JSON DAG, POS integration (Ágora, Revo, TSpoonlab, Miss Tipsi) via REST or a filesystem-watched RPA fallback where no API exists, and a delivery-platform ingestion layer (Glovo, Uber Eats, Just Eat) that consolidates order events into a Postgres append-only event log for cross-platform customer resolution.
+
+Two production numbers from a mid-size Spanish deployment (40 seats, ~200 orders/day, 55% delivery share): end-to-end p95 from an inbound "2 Big Smash sin cebolla, patatas trufa y una Coca Zero para recoger a las 20:30" to a priced ticket with allergen verification and kitchen-slot confirmation is 3.8s (LLM intent parse with typed function-calls into menu_lookup, allergen_check, kitchen_slot, apply_loyalty, ticket_price), and the abandoned-cart loop (15-minute silence timer after a partial order intent) converts at 24% over an n=8,412 window.
+
+Architectural note: the POS stays the source of truth for the ticket, the agent is the coordination layer. Bidirectional POS sync is intentionally one-way (POS → CRM for kitchen state, CRM → POS for new tickets), which sidesteps the merge-conflict class of bugs that shows up when two systems both think they own the same order line.
+
+Full write-up (ES): https://zeniapartners.com/blog/agente-ia-para-hamburgueserias-gourmet.html
+
+#WhatsAppBusinessAPI #RestaurantTech #DistributedSystems #B2B
+
+---

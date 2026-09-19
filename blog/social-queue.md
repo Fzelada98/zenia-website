@@ -6561,3 +6561,16 @@ Full write-up (ES): https://zeniapartners.com/blog/agente-ia-para-hamburgueseria
 #WhatsAppBusinessAPI #RestaurantTech #DistributedSystems #B2B
 
 ---
+## 2026-09-19 - Precios Zoho CRM 2026 (EN)
+
+The "Zoho CRM is cheap" claim breaks at year 1 for any B2C team where WhatsApp is a primary channel: 8 users on Enterprise land at €16,125 all-in (licenses €3,840, partner setup €2,500, Zia Skills €720, PhoneBridge €1,680, Meta Business Platform pass-through ~€1,100, storage €1,150, partner retainer €1,440, IVA €2,795), which is €168/user/month effective versus the €40 landing figure. Year 2 amortizes setup and drops to €115/user/month. This is a per-user pricing curve applied to a per-conversation problem.
+
+Two architectural numbers from a comparable custom stack (CRM + WhatsApp Cloud API + typed-function agent, 8-user org, ~14k conversations/month): end-to-end p95 from an inbound intent to a written CRM record plus templated reply is 2.1s (Cloudflare Workers router into typed function-calls: upsert_contact, get_opportunity_state, log_interaction, send_template), and MRR is a fixed €297 to €497 regardless of headcount, so the licensing derivative flips from +€40/user to €0 past the seat cap.
+
+Architectural note: Zoho + Meta Business Platform via PhoneBridge inserts two brokers between WhatsApp and the CRM record. A direct WhatsApp Cloud API into a Postgres append-only event log with a CRM projection removes both hops and the coordination-bug class that comes with them.
+
+Full write-up (ES): https://zeniapartners.com/blog/precios-zoho-crm-2026.html
+
+#CRM #WhatsAppBusinessAPI #SoftwareEconomics #B2B
+
+---

@@ -6600,3 +6600,19 @@ Full write-up (ES): https://zeniapartners.com/blog/click-to-chat-ads-guia-meta-2
 #MetaAds #WhatsAppBusinessAPI #DistributedSystems #B2B
 
 ---
+
+## 2026-09-19 - Cleaning Service CRM With AI (EN)
+
+Field notes from a US residential cleaning stack (6 crews, ~180 recurring customers, 90-day window).
+
+Stack: WhatsApp Business API on Meta Cloud as primary channel with Twilio SMS fallback, an LLM tool-use loop wired to typed function-calls (price_matrix.quote, calendar.read_slots, route.score_slot, fsm.write_job, stripe.charge_hold, reviews.request), two-way sync with an existing FSM (Jobber-class) at the job level (not just contacts), and Google Maps Distance Matrix as the route scorer. Route-aware booking only exposes slots that add under 12 minutes of drive time to the day's live route.
+
+Two production numbers under load: end-to-end p95 from webhook receipt to sent WhatsApp reply is 1.4s, and a route-scored 3-slot quote (matrix lookup + calendar read + geo scoring + LLM response) delivers in under 8s. The cancelled-slot refill loop scores the waitlist against the day's live route rather than FIFO and lands at 62% refill vs the 8% baseline the owner hit manually.
+
+The hard part is not the model. It is collapsing the pricing spreadsheet, FSM calendar, route matrix, and payment surface into one deterministic tool contract the agent can call without booking a job a crew cannot reach.
+
+Full write-up: https://zeniapartners.com/blog/cleaning-service-crm-with-ai.html
+
+#WhatsAppBusinessAPI #FieldService #DistributedSystems #B2B
+
+---

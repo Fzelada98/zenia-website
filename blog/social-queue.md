@@ -6587,3 +6587,16 @@ Full write-up: https://zeniapartners.com/blog/photographer-crm-with-ai.html
 #WhatsAppBusinessAPI #CreativeTech #DistributedSystems #B2B
 
 ---
+## 2026-09-19 - Click to Chat Ads Meta 2026 (EN)
+
+Click to Chat Ads on Meta are three ad-object destinations (WhatsApp Cloud API, Messenger Platform, Instagram Graph API) collapsed into one placement where Meta's auction picks the channel per user. The infra work sits on what happens after the click, not the creative: a stateless router that terminates the platform-specific webhook, an LLM tool-loop with typed function-calls (parse_intent, upsert_contact, quote_offer, send_template), and a Conversions API server-side event pushing "Lead" or "Purchase" back to the Meta pixel for algorithm re-optimization.
+
+Two production numbers from a Spanish pyme baseline (n=1,847 conversations, 45 days): end-to-end p95 from webhook receipt to sent reply is 8.4s across the three platforms (Cloud API is fastest at 6.1s, IG DM slowest at 11.8s due to Graph API round-trip), and CAPI-attributed CPA drops 28% versus browser-pixel-only within 21 days as the algorithm sees the missing 30-40% of iOS conversions.
+
+Architectural note: the free 24-hour messaging window is only free if the first response fits inside it. Manual response teams miss that window in ~55% of after-hours conversations, which forces a switch to paid marketing templates (0.04-0.08 EUR/message in Spain). Automating the first response is a tariff decision, not a UX one.
+
+Full write-up (ES): https://zeniapartners.com/blog/click-to-chat-ads-guia-meta-2026.html
+
+#MetaAds #WhatsAppBusinessAPI #DistributedSystems #B2B
+
+---

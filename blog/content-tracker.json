@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-09-19T14:05:00+00:00",
+  "lastRun": "2026-09-19T22:23:58.795804+00:00",
   "posts": [
     {
       "slug": "click-to-chat-ads-guia-meta-2026",
@@ -3557,6 +3557,15 @@
       "status": "published",
       "source": "striking",
       "date": "2026-09-16"
+    },
+    {
+      "slug": "whatsapp-business-multiagente-equipos-comerciales",
+      "keyword": "whatsapp business multiagente para equipos comerciales",
+      "tier": 2,
+      "cluster": "whatsapp-ops",
+      "status": "published",
+      "date": "2026-09-19",
+      "source": "matrix-tier2-generated"
     }
   ]
 }

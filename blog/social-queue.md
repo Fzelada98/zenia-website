@@ -6616,3 +6616,18 @@ Full write-up: https://zeniapartners.com/blog/cleaning-service-crm-with-ai.html
 #WhatsAppBusinessAPI #FieldService #DistributedSystems #B2B
 
 ---
+## 2026-09-19 - WhatsApp Business Multi-Agent Architecture for Sales Teams (EN)
+
+WhatsApp Business App caps at 5 linked devices (10 with Meta Verified). Above 3 concurrent sellers on one number, the app has no routing primitive, no per-message authorship, and no CRM writeback. Any serious commercial deployment migrates to WhatsApp Business API and rebuilds the surface as five decoupled pieces.
+
+Reference stack we ship on Meta Cloud API: webhook terminator (sub-500ms ack), conversation router (rules over vertical / language / utm / weighted round-robin), role-scoped state store (SDR, closer, team lead, admin, per-action permissions), LLM tool-loop with typed functions (qualify_lead, upsert_contact, schedule_meeting, escalate_to_human, fetch_deal), and bi-directional CRM sync (HubSpot, Pipedrive, Salesforce via native APIs; custom CRMs via webhook).
+
+Two production numbers on a B2B pipeline (8 sellers, ~990 leads/month, 45-day window): end-to-end p95 from webhook receipt to first sent reply is 12.4s (LLM roundtrip 7.9s, CRM writeback 3.1s, router + state 1.4s); the LLM tool-loop closes 55-70% of conversations without human escalation, with 94% qualification field-fill rate at handoff.
+
+Architectural note: SLA is a queue property, not an agent property. The router assigns SLA at ingestion, the LLM measures against it per message, and reassignment on breach is a state transition, not a page reload. Treating response time as a per-seller KPI is what makes it drift; treating it as queue-level backpressure is what makes it hold.
+
+Full write-up (ES): https://zeniapartners.com/blog/whatsapp-business-multiagente-equipos-comerciales.html
+
+#WhatsAppBusinessAPI #DistributedSystems #SalesEngineering #B2B
+
+---

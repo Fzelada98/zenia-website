@@ -6574,3 +6574,16 @@ Full write-up (ES): https://zeniapartners.com/blog/precios-zoho-crm-2026.html
 #CRM #WhatsAppBusinessAPI #SoftwareEconomics #B2B
 
 ---
+## 2026-09-19 - Photographer CRM with AI (EN)
+
+The "photographer CRM with AI" pattern is an integration layer, not a replacement CRM: existing photography CRM (HoneyBook, Dubsado, Studio Ninja, Tave) stays the system of record for contracts and invoices, and a conversational plane sits on top via WhatsApp Business Cloud API. Reference topology for a US solo shooter at 42-68 shoots/year: stateless router on Fly.io, Claude tool-loop with typed function-calls (get_inquiry, query_calendar, quote_package, send_contract, create_invoice, post_gallery_ready, request_review), webhooks from Pic-Time/Pixieset/ShootProof for gallery_uploaded events, Postgres append-only event log projecting into HoneyBook records via the HoneyBook API. Voice cloning trained on 10 sample messages from the photographer, retrained monthly against edited-response deltas.
+
+Two production numbers from a 4-month baseline (n=164 inquiries): p95 first-response latency inbound-Instagram-DM to sent-WhatsApp-reply is 47 seconds (webhook fanout + LLM intent parse + calendar read + rate-card lookup + template dispatch), and inquiry-to-signed-contract conversion moved from 14.7% to 34.1% at unchanged inquiry volume, statistically significant at p<0.01 against the pre-rollout cohort.
+
+Architectural note: the merge-conflict class ("two systems own the same client record") is avoided by making HoneyBook the write-owner of contracts and invoices and the AI layer the write-owner of live conversation state. Gallery events flow one-way (delivery platform → AI layer → HoneyBook), which sidesteps the sync-loop bugs that show up when both sides try to reconcile the same status field.
+
+Full write-up: https://zeniapartners.com/blog/photographer-crm-with-ai.html
+
+#WhatsAppBusinessAPI #CreativeTech #DistributedSystems #B2B
+
+---

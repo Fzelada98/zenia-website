@@ -6646,3 +6646,19 @@ Full write-up (ES): https://zeniapartners.com/blog/software-para-restaurantes-20
 #RestaurantTech #WhatsAppBusinessAPI #DistributedSystems #B2B
 
 ---
+
+## 2026-09-20 - Contractor CRM with AI (EN)
+
+Contractor intake is a distributed-systems problem masquerading as a CRM problem. The truck is in a crawl space, the lead is calling three competitors, and the "system of record" is a whiteboard.
+
+The stack we run for US trades: WhatsApp Business API + a voice AI agent as the intake layer in front of the vertical CRM of record (ServiceTitan, JobNimbus, Housecall Pro). The AI qualifies the job against the shop's actual price book and either books directly on the dispatch calendar or hands off to a human estimator based on ticket size and margin risk.
+
+Two numbers from a live 8-truck HVAC deployment (90 days): missed-call rate 27% to 2.9%, and end-to-end p95 from inbound call ring to a booked slot in the dispatch calendar is 42s (voice STT + qualification + calendar write). The AI handles 100% of after-hours calls and books 44% of them to next-morning slots.
+
+The non-obvious constraint: the dispatch calendar has to be the source of truth, not the CRM. If the AI agent books against stale availability, you eat a cancellation and a 1-star review. That means every AI tool call flows through a real-time capacity check against the field-service platform, not a cached CRM view.
+
+Full write-up (EN): https://zeniapartners.com/blog/contractor-crm-with-ai.html
+
+#ContractorTech #WhatsAppBusinessAPI #VoiceAI #FieldService
+
+---

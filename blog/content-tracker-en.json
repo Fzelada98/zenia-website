@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-09-19T17:15:00Z",
+  "lastRun": "2026-09-20T09:15:00Z",
   "market": "US/UK small business",
   "posts": [
     {
@@ -64,7 +64,7 @@
     { "slug": "personal-trainer-crm-with-ai", "keyword": "personal trainer crm with ai", "tier": 2, "cluster": "fitness", "status": "published", "date": "2026-09-18" },
     { "slug": "photographer-crm-with-ai", "keyword": "photographer crm with ai", "tier": 2, "cluster": "creative", "status": "published", "date": "2026-09-19" },
     { "slug": "cleaning-service-crm-with-ai", "keyword": "cleaning service crm with ai", "tier": 2, "cluster": "services", "status": "published", "date": "2026-09-19" },
-    { "slug": "contractor-crm-with-ai", "keyword": "contractor crm with ai", "tier": 2, "cluster": "trades", "status": "pending" },
+    { "slug": "contractor-crm-with-ai", "keyword": "contractor crm with ai", "tier": 2, "cluster": "trades", "status": "published", "date": "2026-09-20" },
     { "slug": "hvac-crm-with-ai", "keyword": "hvac crm with ai", "tier": 2, "cluster": "trades", "status": "pending" },
     { "slug": "plumber-crm-with-ai", "keyword": "plumber crm with ai", "tier": 2, "cluster": "trades", "status": "pending" },
     { "slug": "chiropractor-crm-with-ai", "keyword": "chiropractor crm with ai", "tier": 2, "cluster": "healthcare", "status": "pending" },

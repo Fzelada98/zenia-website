@@ -6693,3 +6693,18 @@ Full write-up (EN): https://zeniapartners.com/blog/click-to-chat-ads.html
 #WhatsAppBusinessAPI #MetaAds #ConversionsAPI #DistributedSystems
 
 ---
+## 2026-09-20 - Integrating CRM with WhatsApp Business: the three-layer stack (EN)
+
+Integrating a CRM with WhatsApp Business API in 2026 is a three-layer problem, and skipping any of the three ends in a six-month rebuild. Meta Business Platform owns the number, the verified profile and the template lifecycle. The BSP (Cloud API direct, 360dialog, Twilio, or a full-product BSP like Wati / Respond.io) exposes the API, handles webhook fan-out and bills the conversation. The CRM owns pipeline, ownership, dedup and automation. Between the BSP and the CRM lives the piece nobody wants to build and everybody eventually needs: an orchestration layer.
+
+Reference stack we run for a mid-market B2B account (5-20 seat sales team): Meta Cloud API direct, a stateless middleware in front of the CRM (Node/Go worker), an AI agent inside a tool-use loop (contact.upsert, opportunity.stage_move, calendar.check, handoff.route) that pre-classifies inbound intent and answers within the 24h service window, and an event bus that fans webhook events out to CRM writes, analytics and reply pipelines in parallel.
+
+Two production numbers from a Q3 deployment: p95 from Meta inbound webhook to CRM contact upsert is 320ms including intent classification; monthly Meta bill dropped 62% after re-tagging outbound templates from marketing to utility where the semantics allowed (Meta prices those categories at 0.073 EUR vs 0.012 EUR per 24h conversation in Spain).
+
+The non-obvious constraint: the reasoning layer has to live outside the BSP. Visual builders inside Wati/Kommo/Respond.io handle deterministic flows fine, but break the moment the conversation needs multi-turn memory or a tool call against your own system. Keeping the agent in your own middleware also makes the number portable across BSPs, which matters the day quality rating drops or a BSP raises rates unilaterally.
+
+Full write-up (ES): https://zeniapartners.com/blog/integrar-crm-con-whatsapp-business.html
+
+#WhatsAppBusinessAPI #CRM #DistributedSystems #B2B
+
+---

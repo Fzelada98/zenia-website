@@ -6677,3 +6677,19 @@ Full write-up (ES): https://zeniapartners.com/blog/black-friday-whatsapp-ecommer
 #WhatsAppBusinessAPI #EcommerceInfrastructure #DistributedSystems #B2B
 
 ---
+
+## 2026-09-20 - Click to Chat Ads: engineering the reply layer (EN)
+
+A Meta Click-to-WhatsApp ad is cheap acquisition wrapped in a hard reply-layer problem. Forrester and Meta report -92% CPL and +94% conversion vs lead-form ads, but the numbers only hold if median first response stays under 30 seconds and every conversation is attributable back to the click. Everything else is a plumbing job.
+
+Stack we run for US/UK SMB accounts on CTWA: Meta Ads (Engagement objective, Advantage+ audience seeded from a customer list) as the acquisition layer, WhatsApp Cloud API on Meta directly (no BSP margin), an AI agent as first responder inside a tool-use loop (calendar.check_availability, calendar.write, catalog.query, contact.upsert, human.handoff), the CRM writing every message with the ctwa_clid captured on inbound webhook, and Conversions API firing two server-side events (qualified, booked) matched back to that click ID.
+
+Two production numbers from a services deployment (Q3, 30-day steady state): p95 from Meta ad-click webhook to sent WhatsApp reply is 780ms including an LLM call and a real-time calendar availability check; cost per booked appointment dropped 38% between month 1 and month 2 after CAPI booked events were wired end to end (Advantage+ re-optimized off the paid outcome, not the message-received signal).
+
+The non-obvious constraint: the ctwa_clid arrives on the first inbound message webhook, not on the ad click event, and it has a 7-day resolution window with Meta. If the CRM does not persist it on first contact and re-emit it on every downstream conversion event, the attribution graph breaks and Meta drifts optimization back to cheap clicks. That reshapes the write path as an attribution problem, not a CRM one.
+
+Full write-up (EN): https://zeniapartners.com/blog/click-to-chat-ads.html
+
+#WhatsAppBusinessAPI #MetaAds #ConversionsAPI #DistributedSystems
+
+---

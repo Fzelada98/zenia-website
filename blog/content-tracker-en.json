@@ -1,7 +1,16 @@
 {
-  "lastRun": "2026-09-20T09:15:00Z",
+  "lastRun": "2026-09-20T17:15:00Z",
   "market": "US/UK small business",
   "posts": [
+    {
+      "slug": "click-to-chat-ads",
+      "keyword": "click to chat ads",
+      "tier": 0,
+      "cluster": "whatsapp-ads",
+      "status": "published",
+      "date": "2026-09-20",
+      "note": "striking-loop hit: 18 impressions, pos 22.9. Was printing on Spanish /blog/click-to-whatsapp-ads-para-pymes.html; added cross-link there."
+    },
     {
       "slug": "whatsapp-business-automation",
       "keyword": "whatsapp business automation",

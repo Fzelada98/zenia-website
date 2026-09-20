@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-09-20T06:00:00.000000+00:00",
+  "lastRun": "2026-09-20T14:16:12.313335+00:00",
   "posts": [
     {
       "slug": "software-para-restaurantes-2026",
@@ -3575,6 +3575,15 @@
       "status": "published",
       "date": "2026-09-19",
       "source": "matrix-tier2-generated"
+    },
+    {
+      "slug": "black-friday-whatsapp-ecommerce-2026",
+      "keyword": "black friday whatsapp ecommerce 2026",
+      "tier": 2,
+      "cluster": "ecommerce",
+      "status": "published",
+      "date": "2026-09-20",
+      "source": "generated"
     }
   ]
 }

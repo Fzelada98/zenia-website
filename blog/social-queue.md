@@ -6662,3 +6662,18 @@ Full write-up (EN): https://zeniapartners.com/blog/contractor-crm-with-ai.html
 #ContractorTech #WhatsAppBusinessAPI #VoiceAI #FieldService
 
 ---
+## 2026-09-20 - Black Friday WhatsApp for Ecommerce (EN)
+
+Running Black Friday on WhatsApp Business API is a rate-limit and template-lifecycle problem more than a marketing problem. Meta throttles per-number quality tier, messaging capacity ramps only after quality history, and template approval takes 24-72h under normal load, longer in the week before BFCM.
+
+Stack for a mid-market Spanish ecommerce (10k opt-in): Meta Cloud API in front of a BSP (360dialog / Twilio), catalog sync from Shopify/WooCommerce every 5 min into the CRM, an AI agent as a tool-use loop (catalog.query, cart.recover, order.status, price_rules.apply) with deep-links that pre-load the checkout at the SKU/variant level, and a Meta Ads Click-to-WhatsApp opt-in loop upstream to build the list.
+
+Two production numbers from the pre-campaign build we ship: p95 from Meta webhook to sent reply is 1.4s including a real-time stock check against the ecommerce API; abandoned-cart recovery via a 3-step template sequence (2h, 24h, 72h) lands at 22% recovered orders vs the 4% email baseline on the same audience.
+
+The non-obvious constraint: template variables are the ranking signal. Meta downgrades quality tier on static templates, so the tool call has to inject per-recipient stock, price and code at send time. That reshapes template design as a schema contract between the CRM and the send layer, not a copywriting task.
+
+Full write-up (ES): https://zeniapartners.com/blog/black-friday-whatsapp-ecommerce-2026.html
+
+#WhatsAppBusinessAPI #EcommerceInfrastructure #DistributedSystems #B2B
+
+---

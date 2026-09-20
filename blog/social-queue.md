@@ -6631,3 +6631,18 @@ Full write-up (ES): https://zeniapartners.com/blog/whatsapp-business-multiagente
 #WhatsAppBusinessAPI #DistributedSystems #SalesEngineering #B2B
 
 ---
+## 2026-09-20 - Restaurant Software Stack in 2026 (EN)
+
+Field notes from a mid-market Spanish restaurant stack (60 covers, 2 services, ~90 daily WhatsApp inbounds).
+
+Stack: cloud POS as source of truth (RRSIF/Verifactu compliant with SHA-256 hash chain and per-ticket QR that resolves against AEAT sede electronica), KDS over the same POS event bus, delivery routing (Glovo/Uber Eats/Just Eat) collapsed into one KDS lane so kitchen sees a single queue, and a WhatsApp Business API layer sitting on top of the whole thing. The AI layer is a tool-use loop calling typed functions (reservations.read_availability, reservations.write, customer.upsert, waitlist.enqueue, waitlist.notify_next, order.write_takeaway) against the reservation system's API (CoverManager, TheFork, Resy) and the POS.
+
+Two production numbers under load: end-to-end p95 from Meta Cloud webhook to sent WhatsApp reply is 1.6s including a real-time availability check against the reservation API; the dynamic waitlist refill loop (cancellation triggers ordered notification against the same-day queue) lands at 71% same-slot refill vs the 9% baseline the manager hit manually.
+
+The non-obvious constraint: RRSIF requires the register to be immutable and append-only, so any AI-driven correction (comp, refund, item strike) has to be modeled as a reverse-entry with its own hash link, not an UPDATE. That reshapes how you design the tool contracts between the LLM and the POS.
+
+Full write-up (ES): https://zeniapartners.com/blog/software-para-restaurantes-2026.html
+
+#RestaurantTech #WhatsAppBusinessAPI #DistributedSystems #B2B
+
+---

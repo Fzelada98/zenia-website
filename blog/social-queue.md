@@ -6753,3 +6753,18 @@ Full write-up (ES): https://zeniapartners.com/blog/programacion-crm-sevilla.html
 #CRMEngineering #WhatsAppBusinessAPI #DistributedSystems #ERPIntegration
 
 ---
+## 2026-09-21 - Plumber CRM with AI: the intake layer that fixes the 27% miss rate (EN)
+
+Residential plumbing intake is a real-time queueing problem the industry solves by staffing more CSRs, which is why the median shop still misses 27-40% of calls and 82%+ after hours. 68% of emergencies arrive between 6pm and 7am on a stack designed for 9-to-5 pickup, and 80% of callers hitting voicemail never redial - they call the next number in the map pack within 90 seconds.
+
+Reference architecture we run for a 5-truck US shop: SIP DID terminates into an LLM voice agent (sub-3-ring pickup, streaming ASR + tool-use loop), WhatsApp Business API bound to the same number for text intake, unified queue writing into ServiceTitan or Housecall Pro via REST. Agent surface is deterministic: seven tool calls (triage.classify_emergency, geo.check_service_area, oncall.lookup_tech, price.band_from_book, calendar.check_slot, dispatch.book_job, handoff.page_oncall). No pricing string is LLM-generated; every quoted band comes from the shop's flat-rate book to keep chargebacks and 1-star reviews out of the loop.
+
+Two production numbers from a 90-day Austin rollout: p95 from voice-agent hangup to a dispatched job on the ServiceTitan board is 2.1s including on-call lookup and geo check; after-hours pickup went 16% -> 100% with 44% booked to next-morning and 18% dispatched same-night at emergency pricing. Estimate-to-close on repipes moved 29% -> 44% driven by a 3-touch WhatsApp follow-up bound to the specific quote line items.
+
+The non-obvious constraint is on-call rotation logic. A voice agent that books a Saturday 11pm sewer job without checking who is on call and which service area they cover produces cancellations, not revenue. The rotation state has to live in the CRM and be queried on every emergency booking; keeping it out of the LLM context (tool call, not prompt) is what makes 24/7 intake safe.
+
+Full write-up: https://zeniapartners.com/blog/plumber-crm-with-ai.html
+
+#FieldServiceEngineering #VoiceAI #WhatsAppBusinessAPI #DistributedSystems
+
+---

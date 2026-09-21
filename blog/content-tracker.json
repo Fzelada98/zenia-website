@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-09-20T22:15:42.958180+00:00",
+  "lastRun": "2026-09-21T06:11:06+00:00",
   "posts": [
+    {
+      "slug": "atencion-al-cliente-ecommerce-ia",
+      "keyword": "atencion al cliente ecommerce ia",
+      "tier": 2,
+      "cluster": "ecommerce",
+      "status": "published",
+      "date": "2026-09-21",
+      "source": "matrix"
+    },
     {
       "slug": "integrar-crm-con-whatsapp-business",
       "keyword": "integrar CRM con WhatsApp Business",

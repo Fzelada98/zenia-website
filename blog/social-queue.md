@@ -6738,3 +6738,18 @@ Full write-up: https://zeniapartners.com/blog/hvac-crm-with-ai.html
 #FieldServiceEngineering #VoiceAI #WhatsAppBusinessAPI #DistributedSystems
 
 ---
+## 2026-09-21 - Custom CRM in Seville: the integration layer that decides ROI (EN)
+
+Custom CRM projects for Spanish SMEs collapse at the integration layer, not the schema. Interviewing a Seville distributor with 30 employees and 8 field sales, the failure pattern is the same one seen in every stalled build: a well-modeled contact table, a slick pipeline UI, and no clean tool interface into Holded/Sage 200, VeriFactu (AEAT-verified invoicing, now mandatory for many entities in ES), WhatsApp Business API, or the shop-floor PDA. The build works in staging and dies in production because sales dictate on WhatsApp and finance reconciles in the ERP, and neither speaks the CRM.
+
+Reference stack we use on the Seville projects: Node/Postgres core with a rules engine (n8n for cheap orchestrations, Temporal when the workflow has retries and long timers), an LLM tool-use loop scoped to seven functions (crm.upsert_contact, deal.advance_stage, verifactu.emit_invoice, whatsapp.send_template, erp.sync_line, payments.charge_stripe, calendar.book_visit), and a PWA that renders offline for reps in campo. Everything the AI agent can do is a function call with a strict schema; freeform LLM output never touches the ERP.
+
+Two numbers worth citing. p95 latency from an inbound WhatsApp lead to a scored deal on the correct sales rep's board: 1.7s including a Meta webhook hop and a Postgres write. Adoption at 90 days across 8 reps: 94% daily active, versus a 41% baseline on the prior SaaS CRM with the exact same team - almost all of that delta comes from the mobile form fitting a rep's actual 20-second window between visits, not from any AI feature.
+
+Budget shape for a 15-22 week Sevilla project sits at 17-37.5K EUR build + 350-900 EUR/month maintenance, which starts to beat the SaaS+consulting bill around 25 seats. The non-obvious constraint: VeriFactu compliance has to live in the data layer from day one - retrofitting invoice hashing and chain integrity at month six roughly triples the cost.
+
+Full write-up (ES): https://zeniapartners.com/blog/programacion-crm-sevilla.html
+
+#CRMEngineering #WhatsAppBusinessAPI #DistributedSystems #ERPIntegration
+
+---

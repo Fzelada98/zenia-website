@@ -20,7 +20,7 @@ Consultas donde zeniapartners.com ya imprime en posición 4-30 (últimos 8 días
 | 14.8 | 13 | agencia crm barcelona | /es/crm-barcelona.html |
 | 9.3 | 13 | agente ia clínicas de fisioterapia | /blog/agente-ia-para-fisioterapia.html |
 | 19.6 | 13 | crm para fotógrafos | /es/crm-fotografos.html |
-| 10.7 | 12 | programación crm en sevilla | /blog/software-crm-en-sevilla.html |
+| 10.7 | 12 | programación crm en sevilla | /blog/software-crm-en-sevilla.html · nuevo: [programación crm en sevilla](/blog/programacion-crm-sevilla.html) |
 | 9.3 | 12 | reservas por whatsapp restaurante | /blog/automatizar-reservas-restaurante-whatsapp.html |
 | 6.9 | 11 | agente ia clínicas de estética | /blog/agente-ia-para-clinicas-de-medicina-estetica.html |
 | 27.7 | 11 | agentes ia malaga | /es/crm-malaga.html |

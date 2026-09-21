@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-09-21T14:00:00+00:00",
+  "lastRun": "2026-09-21T22:00:00+00:00",
   "posts": [
+    {
+      "slug": "automatizacion-para-gimnasios-en-valencia",
+      "keyword": "automatización para gimnasios en Valencia",
+      "tier": 4,
+      "cluster": "gimnasios-cities",
+      "status": "published",
+      "date": "2026-09-21",
+      "source": "matrix"
+    },
     {
       "slug": "programacion-crm-sevilla",
       "keyword": "programación crm en sevilla",

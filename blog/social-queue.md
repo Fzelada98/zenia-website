@@ -6768,3 +6768,18 @@ Full write-up: https://zeniapartners.com/blog/plumber-crm-with-ai.html
 #FieldServiceEngineering #VoiceAI #WhatsAppBusinessAPI #DistributedSystems
 
 ---
+## 2026-09-21 - Gym automation in Valencia: the integration layer between WhatsApp API and the management SaaS (EN)
+
+Spanish gyms almost never fail on the AI - they fail on the sync between the WhatsApp channel and whatever management SaaS holds the source of truth on quotas, access and billing (Trainingym, Provis, Aimharder, Deporwin, Membrance). The recurring pattern in Valencia clubs: three isolated systems (WhatsApp Business Cloud, gym management SaaS, Stripe/Redsys) where the LLM sees the message but not the member's real state, so it invents a plan or double-charges a cancelled quota.
+
+Reference stack we run on Valencia deployments: WhatsApp Business Cloud API (official Meta, not scraping) as the ingress, a stateless Node worker per conversation that hydrates member context from the SaaS via REST/webhook, a Postgres CRM as the write buffer for anything the SaaS API won't take in real-time, and a tool-use loop bound to eight functions (member.hydrate, quota.status, payment.retry, class.book, class.waitlist, churn.risk_score, upgrade.propose, handoff.human). Every write to the SaaS is idempotent by member_id + intent hash; retries never double-book a spin class or double-charge a monthly quota.
+
+Two production numbers worth citing. p95 from inbound WhatsApp to a scored, routed message on the correct sede's dashboard: 1.9s, including a Meta webhook hop, a SaaS API hydrate and the LLM tool-use loop. Reactivation flow on 14-day-inactive members runs at 4.0% weekly conversion to a check-in scan, which on a 1,300-member Valencia gym translates to 32 rescued members/month before the campaign has to be rewritten.
+
+The non-obvious constraint is the SaaS write path. Trainingym and Provis expose REST endpoints but neither guarantees write-after-read consistency within the same call, so any flow that reads a quota state and writes back a payment intent has to serialize through a per-member queue or accept dirty writes on 3-4% of concurrent conversations. Putting that queue in the CRM (not in the LLM prompt) is what makes the 24/7 automation safe under load.
+
+Full write-up (ES): https://zeniapartners.com/blog/automatizacion-para-gimnasios-en-valencia.html
+
+#WhatsAppBusinessAPI #SystemsIntegration #FitnessTech #DistributedSystems
+
+---

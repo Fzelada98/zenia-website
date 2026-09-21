@@ -6723,3 +6723,18 @@ Full write-up (ES): https://zeniapartners.com/blog/atencion-al-cliente-ecommerce
 #EcommerceEngineering #WhatsAppBusinessAPI #DistributedSystems #AI
 
 ---
+## 2026-09-21 - HVAC CRM with AI: intake architecture that survives a July heat wave (EN)
+
+HVAC intake is a queueing problem disguised as a CRM problem. Demand is bursty (a 72h heat wave triples inbound call volume), the human operator is unreachable (owner and lead tech spend 6-8h/day off the phone), and the SLA on first response is under 5 minutes before the caller redials the next number on the map. Any architecture that assumes a human at a desk drops 27% of daytime calls and 82%+ after hours.
+
+Reference stack we run for a 6-truck US HVAC shop: SIP trunk terminates into a Cloud API voice agent (Twilio + LLM tool loop, sub-3-ring pickup), WhatsApp Business API on the same DID for text intake, unified queue writing into ServiceTitan via its REST API, the AI agent scoped to five tool calls (calendar.check_slot, job.classify_from_transcript, price.band_lookup, dispatch.book, handoff.route_to_oncall). Everything above $5K ticket routes to a human comfort advisor; everything else books directly on the dispatch board.
+
+Two production numbers from a 90-day Phoenix rollout: p95 from voice-agent hangup to a dispatched job on the ServiceTitan board is 1.9s including price-book lookup; after-hours pickup went 15% -> 100% with 41% booking to a next-morning slot, and estimate-to-close on replacements moved 32% -> 46% driven entirely by a 3-touch WhatsApp follow-up cadence.
+
+The non-obvious constraint is the price-book coupling. Voice agents without a tool call against the shop's real flat-rate book quote numbers the owner never approved, which shows up as cancelled installs and 1-star reviews. Keeping the pricing tool deterministic (not LLM-generated) is what makes the intake layer safe to run 24/7.
+
+Full write-up: https://zeniapartners.com/blog/hvac-crm-with-ai.html
+
+#FieldServiceEngineering #VoiceAI #WhatsAppBusinessAPI #DistributedSystems
+
+---

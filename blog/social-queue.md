@@ -6710,6 +6710,8 @@ Full write-up (ES): https://zeniapartners.com/blog/integrar-crm-con-whatsapp-bus
 ---
 ## 2026-09-21 - Ecommerce customer service AI: shape of the reply stack (EN)
 
+<!-- PUBLISHED:make-webhook at 2026-09-21T08:31:14Z -->
+
 Ecommerce customer service AI in 2026 is not a chat widget on the home page. It is a five-layer stack, and every layer skipped shows up as a stalled deployment three months in. Channels (WhatsApp Cloud API, web chat, Instagram Direct, IMAP) fan into a single inbox. A CRM holds the unified profile keyed off customer_id, not channel handle. The agent runs an LLM tool-use loop with function calls against catalog.lookup, order.status (native connector to Shopify / WooCommerce / Prestashop / Magento), carrier.track (SEUR, MRW, GLS, Correos Express, DHL), returns.create and stripe.refund. A rules layer decides when to escalate (basket over threshold, VIP tier, low-confidence classification, anger signal). Analytics closes the loop with intent distribution and per-intent CSAT feeding weekly prompt tuning.
 
 Two numbers from a 2.000-orders/month fashion deployment: p95 order-status resolution (webhook in -> WhatsApp reply out, including a carrier API round trip) at 4.1s; autonomous resolution rate held at 47% steady state after four weeks, matching Klarna's public benchmark of 11min -> 2min average resolution once the tool surface stabilized.

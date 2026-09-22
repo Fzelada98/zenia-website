@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-09-21T22:00:00+00:00",
+  "lastRun": "2026-09-22T14:00:00+00:00",
   "posts": [
     {
       "slug": "automatizacion-para-gimnasios-en-valencia",
@@ -3619,6 +3619,15 @@
       "cluster": "ecommerce",
       "status": "published",
       "date": "2026-09-20",
+      "source": "generated"
+    },
+    {
+      "slug": "cuanto-cuesta-agente-ia-empresas",
+      "keyword": "cuanto cuesta un agente de ia para empresas",
+      "tier": 1,
+      "cluster": "agente-ia-pricing",
+      "status": "published",
+      "date": "2026-09-22",
       "source": "generated"
     }
   ]

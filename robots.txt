@@ -1,55 +1,173 @@
-# robots.txt for zeniapartners.com
-User-agent: *
+# zeniapartners.com — agencia de IA
+# Todos los buscadores y motores de respuesta son bienvenidos, incluidos los de IA.
+# Resumen legible por máquina: https://zeniapartners.com/llms.txt   https://zeniapartners.com/llms-full.txt
+
+User-agent: GPTBot
 Allow: /
-
-# Sitemap location
-Sitemap: https://zeniapartners.com/sitemap.xml
-
-# Block backend/API paths (served from different domain, but just in case)
 Disallow: /backend/
 Disallow: /reports/
 Disallow: /.claude/
 
-# Rastreadores de IA: permitidos a proposito. Para que ChatGPT, Claude,
-# Perplexity o Gemini puedan citar a Zenia hay que dejarles leer el sitio.
-User-agent: GPTBot
-Allow: /
-
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /backend/
+Disallow: /reports/
+Disallow: /.claude/
 
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /backend/
+Disallow: /reports/
+Disallow: /.claude/
 
 User-agent: ClaudeBot
 Allow: /
+Disallow: /backend/
+Disallow: /reports/
+Disallow: /.claude/
 
 User-agent: Claude-User
 Allow: /
+Disallow: /backend/
+Disallow: /reports/
+Disallow: /.claude/
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /backend/
+Disallow: /reports/
+Disallow: /.claude/
 
 User-agent: anthropic-ai
 Allow: /
+Disallow: /backend/
+Disallow: /reports/
+Disallow: /.claude/
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /backend/
+Disallow: /reports/
+Disallow: /.claude/
 
 User-agent: Perplexity-User
 Allow: /
+Disallow: /backend/
+Disallow: /reports/
+Disallow: /.claude/
 
 User-agent: Google-Extended
 Allow: /
+Disallow: /backend/
+Disallow: /reports/
+Disallow: /.claude/
+
+User-agent: Googlebot
+Allow: /
+Disallow: /backend/
+Disallow: /reports/
+Disallow: /.claude/
+
+User-agent: Applebot
+Allow: /
+Disallow: /backend/
+Disallow: /reports/
+Disallow: /.claude/
 
 User-agent: Applebot-Extended
 Allow: /
+Disallow: /backend/
+Disallow: /reports/
+Disallow: /.claude/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /backend/
+Disallow: /reports/
+Disallow: /.claude/
+
+User-agent: msnbot
+Allow: /
+Disallow: /backend/
+Disallow: /reports/
+Disallow: /.claude/
+
+User-agent: CCBot
+Allow: /
+Disallow: /backend/
+Disallow: /reports/
+Disallow: /.claude/
 
 User-agent: meta-externalagent
 Allow: /
+Disallow: /backend/
+Disallow: /reports/
+Disallow: /.claude/
 
-User-agent: Bytespider
+User-agent: FacebookBot
 Allow: /
+Disallow: /backend/
+Disallow: /reports/
+Disallow: /.claude/
+
+User-agent: Amazonbot
+Allow: /
+Disallow: /backend/
+Disallow: /reports/
+Disallow: /.claude/
 
 User-agent: cohere-ai
 Allow: /
+Disallow: /backend/
+Disallow: /reports/
+Disallow: /.claude/
 
-# Resumen del sitio para modelos de lenguaje
-# https://zeniapartners.com/llms.txt
+User-agent: YouBot
+Allow: /
+Disallow: /backend/
+Disallow: /reports/
+Disallow: /.claude/
+
+User-agent: DuckAssistBot
+Allow: /
+Disallow: /backend/
+Disallow: /reports/
+Disallow: /.claude/
+
+User-agent: Diffbot
+Allow: /
+Disallow: /backend/
+Disallow: /reports/
+Disallow: /.claude/
+
+User-agent: Timpibot
+Allow: /
+Disallow: /backend/
+Disallow: /reports/
+Disallow: /.claude/
+
+User-agent: MistralAI-User
+Allow: /
+Disallow: /backend/
+Disallow: /reports/
+Disallow: /.claude/
+
+User-agent: Bytespider
+Allow: /
+Disallow: /backend/
+Disallow: /reports/
+Disallow: /.claude/
+
+User-agent: PetalBot
+Allow: /
+Disallow: /backend/
+Disallow: /reports/
+Disallow: /.claude/
+
+User-agent: *
+Allow: /
+Disallow: /backend/
+Disallow: /reports/
+Disallow: /.claude/
+
+Sitemap: https://zeniapartners.com/sitemap.xml

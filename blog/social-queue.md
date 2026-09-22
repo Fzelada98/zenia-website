@@ -6813,3 +6813,16 @@ Full write-up: https://zeniapartners.com/blog/chiropractor-crm-with-ai.html
 #WhatsAppBusinessAPI #HealthcareAI #HIPAA #LLMOps #SystemsIntegration
 
 ---
+## 2026-09-22 - Carta digital QR restaurante: the identity capture surface most operators leave on the table (EN)
+
+A QR menu at a restaurant is usually a static PDF hosted on a subdomain. That is the least interesting thing you can build with it. Wired properly, the QR is an identity capture surface: first scan writes a device fingerprint plus WhatsApp handle into the CRM, every subsequent scan hits the same profile, and every downstream campaign (reactivation, upsell, allergen alerts) keys off that identity rather than a session cookie.
+
+Reference stack we run on Spanish hospitality deployments: static menu served from a CDN with sub 100ms TTFB, POS webhook (Agora, Revo, Miss Tipsi, Deliverect) enriches the profile with basket data at ticket close, WhatsApp Business Cloud API fires a post visit template at t+24h through the same tool use loop that handles reservations. Idempotency lives in the CRM by table_id + service_id hash so a Meta webhook retry never doubles the message.
+
+Two numbers from production. A 60 seat venue captures around 1,200 net new profiles per month once the identity write is enabled at scan time, versus effectively zero on a static PDF. Ticket medio moves 18 to 25 percent when the same QR routes upsell suggestions to the tool use layer instead of hardcoding them into the menu HTML. p95 render on the menu itself stays under 400ms including the CRM upsert, which matters because 3G still exists in half the terraces we deploy in.
+
+Full write up with the 5 integration points and the 3 error modes that break the flow under load: https://zeniapartners.com/blog/carta-digital-qr-restaurante.html
+
+#WhatsAppBusinessAPI #restauranttech #SystemsIntegration #CRM
+
+---

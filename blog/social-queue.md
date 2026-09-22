@@ -6798,3 +6798,18 @@ Full breakdown of the 4 architectural tiers we see in the wild and real per-vert
 #WhatsAppBusinessAPI #LLMOps #SystemsIntegration #DistributedSystems
 
 ---
+## 2026-09-22 - Chiropractor CRM with AI: the EHR write layer that decides if a healthcare AI agent is safe under load (EN)
+
+The interesting engineering problem in a chiropractic CRM + AI deployment is not the LLM. It is the write path back to the EHR (ChiroTouch, Jane, ChiroSpring, Noterro, PayDC, Zanda). Most of these expose an API but almost none guarantee write-after-read consistency inside a booking flow, so any agent that reads slot availability and writes back an appointment intent has to serialize per-provider or accept a 2-4% double-book rate under concurrent conversations.
+
+Reference stack we run on US chiropractic deployments: WhatsApp Business Cloud API + a Retell/Vapi voice number as the ingress, a stateless Node worker per conversation, a HIPAA-scoped Postgres CRM as the write buffer, and a tool-use loop bound to 8-12 functions (slot.find, appointment.book, appointment.reschedule, intake.start, intake.submit, insurance.verify, recall.trigger, handoff.human). Every EHR write is idempotent by patient_id + intent hash; retries never double-book an adjustment slot even when Meta or Twilio fires the same webhook twice.
+
+Two numbers worth citing from production. p95 first-response latency inbound WhatsApp to booked appointment confirmed in ChiroTouch: 2.6s, including a Meta webhook hop, EHR hydrate and a Sonnet tool-use loop. Recall cadence on 60/90/180-day dormant cohorts converts at 6-12% weekly to a rebook, which on a 900-patient panel is 54-108 recovered visits/month before the campaign has to be rewritten.
+
+The non-obvious constraint is HIPAA scope on the model. Anthropic Bedrock with a signed BAA, PHI never in system prompts, PII redacted at the CRM layer before it hits the LLM turn, and every tool call logged with a hash for audit. Getting that pipeline right is what makes 24/7 automation legally deployable in a US chiropractic office.
+
+Full write-up: https://zeniapartners.com/blog/chiropractor-crm-with-ai.html
+
+#WhatsAppBusinessAPI #HealthcareAI #HIPAA #LLMOps #SystemsIntegration
+
+---

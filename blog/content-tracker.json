@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-09-22T14:00:00+00:00",
+  "lastRun": "2026-09-22T22:00:00+00:00",
   "posts": [
+    {
+      "slug": "pedir-resenas-google-restaurante-automatico",
+      "keyword": "pedir reseñas google restaurante automatico",
+      "tier": 2,
+      "cluster": "restaurantes",
+      "status": "published",
+      "date": "2026-09-22",
+      "source": "long-tail-matrix"
+    },
     {
       "slug": "carta-digital-qr-restaurante",
       "keyword": "carta digital qr restaurante",

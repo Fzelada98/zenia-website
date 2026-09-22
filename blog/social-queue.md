@@ -6845,3 +6845,19 @@ If you run regulatory or public affairs for a company in a regulated sector in S
 #regtech #publicaffairs #AI #architecture #Spain #Italy
 
 ---
+
+## 2026-09-22 - Veterinary Clinic CRM with AI: idempotent PIMS writes are the whole ballgame (EN)
+
+The interesting engineering constraint in a US veterinary CRM + AI deployment is not the LLM. It is the write path back to the PIMS (Cornerstone, AVImark, ezyVet, Digitail, Provet Cloud, IDEXX Neo, Shepherd). Most of these expose an API, but almost none guarantee write-after-read consistency inside a booking flow, so any agent that reads slot availability and writes back an appointment intent has to serialize per-provider or accept a 2-4% double-book rate under concurrent Saturday-morning load.
+
+Reference stack we run on US small-animal deployments: WhatsApp Business Cloud API + a Retell voice number as ingress, a stateless Node worker per conversation, a Postgres CRM as the write buffer, and a tool-use loop bound to 10-14 typed functions (slot.find, appointment.book, appointment.reschedule, patient.lookup, vaccine.status, estimate.create, recall.trigger, review.request, handoff.human). Every PIMS write is idempotent by patient_id + intent hash; a Meta webhook retry never doubles a surgery slot. Cornerstone and AVImark on-prem sit behind a small local sync agent; ezyVet, Provet Cloud and Digitail sync direct.
+
+Two numbers from production. p95 first-response latency inbound WhatsApp to appointment confirmed in the PIMS: 2.8s, including a Meta webhook hop, PIMS hydrate and a Sonnet tool-use loop. Recall cadence on 90/180/365-day dormant cohorts converts at 4-9% weekly to a rebook, which on a 1,000-patient panel is 40-90 recovered visits/month.
+
+The non-obvious constraint is species-and-age-aware reminder cadence at scale. A senior cat's diabetes recheck is not a puppy's DHPP series, and hardcoding either in the prompt does not survive tenant #3. It has to live in the CRM as typed schedules the LLM reads at tool-call time.
+
+Full write-up: https://zeniapartners.com/blog/veterinary-clinic-crm-with-ai.html
+
+#WhatsAppBusinessAPI #VeterinaryTech #LLMOps #SystemsIntegration
+
+---

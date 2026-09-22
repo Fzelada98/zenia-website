@@ -77,7 +77,7 @@
     { "slug": "hvac-crm-with-ai", "keyword": "hvac crm with ai", "tier": 2, "cluster": "trades", "status": "published", "date": "2026-09-21" },
     { "slug": "plumber-crm-with-ai", "keyword": "plumber crm with ai", "tier": 2, "cluster": "trades", "status": "published", "date": "2026-09-21" },
     { "slug": "chiropractor-crm-with-ai", "keyword": "chiropractor crm with ai", "tier": 2, "cluster": "healthcare", "status": "published", "date": "2026-09-22" },
-    { "slug": "veterinary-clinic-crm-with-ai", "keyword": "veterinary clinic crm with ai", "tier": 2, "cluster": "healthcare", "status": "pending" },
+    { "slug": "veterinary-clinic-crm-with-ai", "keyword": "veterinary clinic crm with ai", "tier": 2, "cluster": "healthcare", "status": "published", "date": "2026-09-22" },
     { "slug": "physical-therapy-crm-with-ai", "keyword": "physical therapy crm with ai", "tier": 2, "cluster": "healthcare", "status": "pending" },
     { "slug": "ai-agent-for-tattoo-studios", "keyword": "ai agent for tattoo studios", "tier": 2, "cluster": "beauty", "status": "pending" },
     { "slug": "ai-agent-for-nail-salons", "keyword": "ai agent for nail salons", "tier": 2, "cluster": "beauty", "status": "pending" },

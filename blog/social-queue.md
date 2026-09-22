@@ -6826,3 +6826,22 @@ Full write up with the 5 integration points and the 3 error modes that break the
 #WhatsAppBusinessAPI #restauranttech #SystemsIntegration #CRM
 
 ---
+
+## 2026-09-23 - Regulatory intelligence pipeline: 70 sources, a second model as judge, a human review queue (EN)
+
+Most "regulatory monitoring" is a junior analyst reading official gazettes at 7am and pasting links into an email.
+
+We are now the growth partner for Cicero in Spain and Italy, and the interesting part is not the AI that reads. It is the architecture that makes the output trustworthy enough to put in front of a board:
+
+1. Ingestion layer: 70+ evidence sources (official gazettes, parliaments, regulators, public consultations, sector press) polled near real time, per sector and per client.
+2. Entity layer: 900+ actor profiles, each scored on power and interest per dossier. The stakeholder map is data, not someone's memory.
+3. Judge layer: a second model scores every document on grounding, accuracy, calibration and actionability before it ships. Below threshold, it goes to a human review queue.
+4. Delivery layer: one daily report per client with cited sources, role-based seats and a multi-client panel for consultancies who white-label it.
+
+The lesson for anyone building AI on top of public sources: the first model writes, the second model argues, a human signs. Skip step two and you ship hallucinations with a footer.
+
+If you run regulatory or public affairs for a company in a regulated sector in Spain or Italy, this is the page: https://zeniapartners.com/cicero/?src=li
+
+#regtech #publicaffairs #AI #architecture #Spain #Italy
+
+---

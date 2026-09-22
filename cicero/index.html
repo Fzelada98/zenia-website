@@ -11,6 +11,10 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://zeniapartners.com/cicero/">
 <meta name="robots" content="noindex,nofollow"><!-- TODO: index,follow cuando Cicero apruebe -->
+<!-- Google Analytics 4 (misma propiedad que zeniapartners.com) -->
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{analytics_storage:'denied'});</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HP0VQSEL68"></script>
+<script>gtag('js',new Date());gtag('config','G-HP0VQSEL68',{send_page_view:true,page_title:'Cicero landing ES'});</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -153,6 +157,32 @@
   footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   footer a{text-decoration:none;color:var(--ink-2)}
 
+
+  /* ---- animación del hero (sutil) ---- */
+  .hero .lbl,.hero .sub,.hero .cta{opacity:0;transform:translateY(10px);animation:up .9s cubic-bezier(.2,.7,.2,1) forwards}
+  .hero .lbl{animation-delay:.05s}.hero .sub{animation-delay:.55s}.hero .cta{animation-delay:.7s}
+  .hero h1 .w{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.08em;margin-bottom:-.08em}
+  .hero h1 .w > span{display:inline-block;transform:translateY(110%);animation:rise 1.1s cubic-bezier(.2,.7,.1,1) forwards}
+  .hero h1 i{background:linear-gradient(currentColor,currentColor) left 92%/0 1px no-repeat;animation:ul 1.2s ease 1.3s forwards}
+  @keyframes rise{to{transform:none}}
+  @keyframes up{to{opacity:1;transform:none}}
+  @keyframes ul{to{background-size:100% 1px}}
+  .hero .col{perspective:1400px}
+  .report{opacity:0;transform:translateY(26px) rotate(1.6deg);animation:card 1.4s cubic-bezier(.2,.7,.1,1) .35s forwards;will-change:transform}
+  @keyframes card{to{opacity:1;transform:translateY(0) rotate(.4deg)}}
+  .report.settled{opacity:1;animation:float 9s ease-in-out infinite;transition:transform .5s ease}
+  @keyframes float{0%,100%{transform:translateY(0) rotate(.4deg)}50%{transform:translateY(-4px) rotate(.4deg)}}
+  .report .scan{position:absolute;inset:0;pointer-events:none;background:linear-gradient(105deg,transparent 40%,rgba(138,90,43,.10) 50%,transparent 60%);transform:translateX(-120%);opacity:0}
+  .report.in .scan{animation:scan 1.6s ease 1.5s 1 forwards}
+  @keyframes scan{0%{opacity:1;transform:translateX(-120%)}100%{opacity:1;transform:translateX(120%)}}
+  .report .live{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--green);margin-right:7px;vertical-align:middle;box-shadow:0 0 0 0 rgba(63,110,79,.5);animation:pulse 2.4s ease-out 2.6s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(63,110,79,.45)}70%{box-shadow:0 0 0 7px rgba(63,110,79,0)}100%{box-shadow:0 0 0 0 rgba(63,110,79,0)}}
+  .ticker .track{animation-duration:70s}
+  @media (prefers-reduced-motion:reduce){
+    .hero .lbl,.hero .sub,.hero .cta,.hero h1 .w > span,.report{animation:none!important;opacity:1!important;transform:none!important}
+    .report.settled,.report .scan,.report .live,.ticker .track{animation:none!important}
+    .hero h1 i{background-size:100% 1px}
+  }
   .rv{opacity:0;transform:translateY(14px);transition:opacity .8s ease,transform .8s ease}
   .rv.in{opacity:1;transform:none}
 
@@ -186,7 +216,7 @@
 <header class="hero" id="top"><div class="wrap">
   <div>
     <span class="lbl">Inteligencia regulatoria · España e Italia</span>
-    <h1>Anticiparse a una ley dejó de ser <i>un privilegio de las grandes.</i></h1>
+    <h1><span class="w"><span style="animation-delay:0.15s">Anticiparse</span></span> <span class="w"><span style="animation-delay:0.21s">a</span></span> <span class="w"><span style="animation-delay:0.27s">una</span></span> <span class="w"><span style="animation-delay:0.33s">ley</span></span> <span class="w"><span style="animation-delay:0.39s">dejó</span></span> <span class="w"><span style="animation-delay:0.45s">de</span></span> <span class="w"><span style="animation-delay:0.51s">ser</span></span> <i><span class="w"><span style="animation-delay:0.57s">un</span></span> <span class="w"><span style="animation-delay:0.63s">privilegio</span></span> <span class="w"><span style="animation-delay:0.69s">de</span></span> <span class="w"><span style="animation-delay:0.75s">las</span></span> <span class="w"><span style="animation-delay:0.81s">grandes.</span></span></i></h1>
     <p class="sub">Cada mañana, antes de tu primer café, Cicero te deja el reporte regulatorio de tu sector: qué se ha movido, de qué fuente, quién está detrás y qué deberías hacer. Revisado por expertos en asuntos públicos.</p>
     <div class="cta">
       <a class="btn" href="#demo">Ver mi sector en una demo <span class="ar">→</span></a>
@@ -194,8 +224,8 @@
     </div>
   </div>
   <div class="col">
-    <div class="report" id="report">
-      <div class="rh"><b>Reporte regulatorio · Energía</b><span id="today">martes · 07:30</span></div>
+    <div class="report" id="report"><div class="scan"></div>
+      <div class="rh"><b>Reporte regulatorio · Energía</b><span><i class="live"></i><span id="today">martes · 07:30</span></span></div>
       <div class="row"><span class="tag c">Consulta</span><div><div class="t">El regulador abre consulta pública sobre la metodología de peajes de acceso para el próximo periodo.</div><div class="m"><u>Fuente citada</u><span>Plazo · 20 días</span><span>Fase · consulta</span></div></div></div>
       <div class="row"><span class="tag e">Enmienda</span><div><div class="t">Entra en el Senado una enmienda que modifica el régimen de autorización de instalaciones de almacenamiento.</div><div class="m"><u>Fuente citada</u><span>Actores · 3 identificados</span><span>Fase · tramitación</span></div></div></div>
       <div class="row"><span class="tag p">Posición</span><div><div class="t">La patronal del sector publica su posición sobre el anteproyecto: pide un periodo transitorio de 24 meses.</div><div class="m"><u>Fuente citada</u><span>Poder · alto</span><span>Interés · alto</span></div></div></div>
@@ -305,6 +335,20 @@
   src=(src||'web').replace(/[^a-z0-9_-]/gi,'').slice(0,24);
   var wa=document.querySelector('.js-wa'); if(wa){wa.href='https://wa.me/34677612799?text='+encodeURIComponent('Hola, quiero una demo de Cicero ('+src+')');}
   var m=document.querySelector('.js-mail'); if(m){m.href='mailto:fabrizzio.zelada@zeniapartners.com?subject='+encodeURIComponent('Demo de Cicero ('+src+')');}
+
+  // el reporte: tras entrar, flota suave y sigue al ratón en escritorio (muy leve)
+  var rep=document.getElementById('report');
+  if(rep){ setTimeout(function(){rep.classList.add('settled');},1900);
+    if(window.matchMedia&&window.matchMedia('(pointer:fine)').matches&&!reduce){
+      var col=rep.parentElement;
+      col.addEventListener('mousemove',function(e){var r=col.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;rep.style.transform='translateY(0) rotate(.4deg) rotateX('+(-y*2.2)+'deg) rotateY('+(x*2.6)+'deg)';rep.style.animation='none';});
+      col.addEventListener('mouseleave',function(){rep.style.transform='';rep.style.animation='';});
+    }
+  }
+  // medición: vista de página y clics de CTA hacia el sistema de leads de Zenia
+  function beacon(site){ try{ navigator.sendBeacon('https://gaia-relojes.onrender.com/gwb/lead', JSON.stringify({site:site,path:location.pathname+'?src='+src,ref:document.referrer||''})); }catch(e){} }
+  try{gtag('event','cicero_view',{src:src});}catch(e){}
+  document.addEventListener('click',function(e){var t=e.target,a=t.closest?t.closest('.js-wa,.js-mail'):null;if(a){beacon('cicero');try{gtag('event','cicero_cta_click',{src:src,cta:a.classList.contains('js-wa')?'whatsapp':'email'});}catch(e){}}},true);
 })();
 </script>
 </body>

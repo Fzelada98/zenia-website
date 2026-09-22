@@ -3,91 +3,169 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cicero · Intelligence regolatoria con IA per Italia e Spagna</title>
-<meta name="description" content="Cicero segue più di 70 fonti regolatorie quasi in tempo reale e ogni mattina ti consegna un report con le fonti citate, la mappa degli attori e una raccomandazione rivista da esperti di public affairs. Per aziende di settori regolati, società di consulenza e associazioni in Italia e Spagna.">
+<title>Cicero · Intelligence regolatoria per Italia e Spagna</title>
+<meta name="description" content="Cicero segue più di 70 fonti regolatorie quasi in tempo reale e ogni mattina ti consegna un report con le fonti citate, la mappa degli attori e una raccomandazione rivista da esperti di public affairs. Italia e Spagna.">
 <link rel="canonical" href="https://zeniapartners.com/cicero/it/">
 <meta property="og:title" content="Cicero · Anticipare una legge non è più un privilegio dei grandi">
-<meta property="og:description" content="Intelligence e strategia di public affairs con IA ed esperti. Report regolatorio giornaliero, mappa degli attori e decisione. Italia e Spagna.">
+<meta property="og:description" content="Intelligence e strategia di public affairs. Report regolatorio giornaliero, mappa degli attori e decisione. Italia e Spagna.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://zeniapartners.com/cicero/it/">
 <meta name="robots" content="noindex,nofollow"><!-- TODO: index,follow quando Cicero approva -->
+<!-- Google Analytics 4 (stessa proprietà di zeniapartners.com) -->
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{analytics_storage:'denied'});</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HP0VQSEL68"></script>
+<script>gtag('js',new Date());gtag('config','G-HP0VQSEL68',{send_page_view:true,page_title:'Cicero landing IT'});</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root{--bone:#F1EDE4;--bone-2:#E8E2D5;--ink:#141311;--ink-2:#3A3732;--muted:#6E6A62;--line:rgba(20,19,17,.14);--accent:#8A5A2B;--ok:#3F6E4F;}
+:root{--bone:#F1EDE4;--bone-2:#E9E3D6;--paper:#FBF9F4;--ink:#141311;--ink-2:#3A3732;--muted:#77726A;--line:rgba(20,19,17,.16);--ochre:#8A5A2B;--red:#A3412B;--green:#3F6E4F}
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{font-family:Inter,'Helvetica Neue',Arial,sans-serif;background:var(--bone);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
-  h1,h2,h3,.serif{font-family:Fraunces,Georgia,'Times New Roman',serif;font-weight:500;letter-spacing:-.01em;line-height:1.1}
+  body{font-family:Inter,'Helvetica Neue',Arial,sans-serif;background:var(--bone);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.35;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  .serif,h1,h2,h3{font-family:Fraunces,Georgia,'Times New Roman',serif;font-weight:400;letter-spacing:-.015em;line-height:1.05}
+  .mono{font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace}
   a{color:inherit}
-  .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
-  .nav{position:sticky;top:0;z-index:10;background:rgba(241,237,228,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-  .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
-  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-family:Fraunces,Georgia,serif;font-size:22px;letter-spacing:.02em}
-  .brand svg{width:34px;height:34px;color:var(--ink)}
-  .btn{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--bone);text-decoration:none;padding:13px 22px;border-radius:999px;font-weight:500;font-size:15px;border:1px solid var(--ink);transition:transform .15s ease,background .15s ease}
-  .btn:hover{background:#000;transform:translateY(-1px)}
+  .wrap{position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:0 28px}
+  .lbl{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .btn{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--bone);text-decoration:none;padding:15px 24px;border-radius:2px;font-weight:500;font-size:15px;border:1px solid var(--ink);transition:background .2s}
+  .btn:hover{background:#2a2825}
   .btn.ghost{background:transparent;color:var(--ink)}
   .btn.ghost:hover{background:rgba(20,19,17,.06)}
-  .nav .btn{padding:10px 18px;font-size:14px}
-  .hero{padding:96px 0 72px;border-bottom:1px solid var(--line)}
-  .kicker{display:inline-block;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:26px}
-  .hero h1{font-size:clamp(40px,6.2vw,74px);max-width:15ch;margin-bottom:26px}
-  .hero h1 em{font-style:italic;color:var(--accent)}
-  .hero p{font-size:clamp(18px,2vw,21px);color:var(--ink-2);max-width:60ch;margin-bottom:36px}
-  .cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
-  .cta-note{font-size:14px;color:var(--muted)}
-  .strip{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line)}
-  .strip div{padding:30px 24px;border-right:1px solid var(--line)}
-  .strip div:last-child{border-right:none}
-  .strip b{display:block;font-family:Fraunces,Georgia,serif;font-weight:500;font-size:44px;line-height:1;margin-bottom:8px}
-  .strip span{font-size:14px;color:var(--muted)}
-  section{padding:88px 0;border-bottom:1px solid var(--line)}
-  .sec-head{max-width:62ch;margin-bottom:48px}
-  .sec-head h2{font-size:clamp(30px,4vw,46px);margin-bottom:16px}
-  .sec-head p{font-size:18px;color:var(--ink-2)}
-  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
-  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-  .card{border-top:1px solid var(--ink);padding-top:22px}
-  .card .n{font-family:Fraunces,Georgia,serif;font-size:14px;letter-spacing:.18em;color:var(--muted);margin-bottom:14px}
-  .card h3{font-size:24px;margin-bottom:12px}
-  .card p{color:var(--ink-2);font-size:16px}
-  .compare{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:18px;overflow:hidden}
-  .compare > div{padding:36px}
-  .compare .old{background:var(--bone-2);color:var(--muted)}
-  .compare .new{background:var(--ink);color:var(--bone)}
-  .compare h3{font-size:13px;letter-spacing:.2em;text-transform:uppercase;font-family:Inter,sans-serif;font-weight:600;margin-bottom:22px}
-  .compare .new h3{color:#C9B48E}
-  .compare li{list-style:none;padding:14px 0;border-top:1px solid rgba(20,19,17,.12);font-size:17px}
-  .compare .new li{border-top-color:rgba(241,237,228,.14)}
-  .compare li:first-child{border-top:none;padding-top:0}
-  .compare .new li b{color:#9CCFA8;font-weight:600}
-  .tags{display:flex;flex-wrap:wrap;gap:10px}
-  .tag{border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-size:14px;color:var(--ink-2);background:rgba(255,255,255,.35)}
-  details{border-top:1px solid var(--line);padding:20px 0}
-  details:last-of-type{border-bottom:1px solid var(--line)}
-  summary{cursor:pointer;font-family:Fraunces,Georgia,serif;font-size:21px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px}
-  summary::-webkit-details-marker{display:none}
-  summary::after{content:'+';font-size:26px;color:var(--muted);flex-shrink:0}
-  details[open] summary::after{content:'–'}
-  details p{margin-top:14px;color:var(--ink-2);max-width:70ch}
-  .final{background:var(--ink);color:var(--bone);border-bottom:none}
-  .final h2{font-size:clamp(34px,5vw,60px);max-width:18ch;margin-bottom:22px}
-  .final p{color:rgba(241,237,228,.72);font-size:18px;max-width:58ch;margin-bottom:34px}
-  .final .btn{background:var(--bone);color:var(--ink);border-color:var(--bone)}
-  .final .btn:hover{background:#fff}
-  .final .btn.ghost{background:transparent;color:var(--bone);border-color:rgba(241,237,228,.4)}
-  footer{background:var(--ink);color:rgba(241,237,228,.55);padding:26px 0;font-size:13px}
+  .btn .ar{display:inline-block;transition:transform .2s}
+  .btn:hover .ar{transform:translateX(4px)}
+
+  /* nav */
+  .nav{position:sticky;top:0;z-index:20;background:rgba(241,237,228,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-family:Fraunces,Georgia,serif;font-size:23px}
+  .brand svg{width:32px;height:32px}
+  .nav .right{display:flex;align-items:center;gap:26px}
+  .nav .right a.lnk{font-size:14px;text-decoration:none;color:var(--ink-2)}
+  .nav .btn{padding:10px 16px;font-size:14px}
+
+  /* hero */
+  .hero{padding:72px 0 0;position:relative}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:start}
+  .hero h1{font-size:clamp(46px,6.4vw,88px);font-weight:300;line-height:.98;margin:26px 0 30px}
+  .hero h1 i{font-style:italic;font-weight:300;color:var(--ochre)}
+  .hero .sub{font-size:19px;color:var(--ink-2);max-width:48ch;margin-bottom:34px;line-height:1.55}
+  .hero .cta{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+  .hero .note{font-size:13.5px;color:var(--muted);max-width:26ch;line-height:1.45}
+  .hero .col{position:relative}
+  .hero .col::before{content:'';position:absolute;left:-40px;top:6px;width:1px;height:92%;background:var(--line)}
+
+  /* report mock */
+  .report{background:var(--paper);border:1px solid var(--line);box-shadow:0 30px 60px -30px rgba(20,19,17,.35),0 2px 0 rgba(255,255,255,.6) inset;padding:26px 28px 22px;position:relative;transform:rotate(.4deg)}
+  .report::after{content:'Ejemplo ilustrativo';position:absolute;right:16px;bottom:-30px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  .report .rh{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--ink);padding-bottom:12px;margin-bottom:6px}
+  .report .rh b{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:20px}
+  .report .rh span{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)}
+  .report .row{display:grid;grid-template-columns:70px 1fr;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+  .report .tag{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;padding-top:3px}
+  .report .tag.c{color:var(--red)}.report .tag.e{color:var(--ochre)}.report .tag.p{color:var(--green)}
+  .report .t{font-size:15px;line-height:1.35;color:var(--ink);margin-bottom:6px}
+  .report .m{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);display:flex;gap:14px;flex-wrap:wrap}
+  .report .m u{text-decoration:none;border-bottom:1px dotted var(--muted)}
+  .report .rec{margin-top:14px;padding:14px 16px;background:var(--bone);border-left:2px solid var(--ochre);font-size:13.5px;line-height:1.45}
+  .report .rec b{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ochre);display:block;margin-bottom:6px}
+
+  /* ticker */
+  .ticker{margin-top:74px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;position:relative;z-index:1;background:rgba(251,249,244,.5)}
+  .ticker .track{display:flex;flex-wrap:wrap;justify-content:center}
+  .ticker span{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:13px 18px;white-space:nowrap}
+  .ticker span+span::before{content:'·';margin-right:18px;color:var(--line)}
+
+  /* manifesto */
+  .manifesto{padding:110px 0 96px}
+  .manifesto .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+  .manifesto h2{font-size:clamp(36px,4.6vw,60px);font-weight:300;line-height:1.02}
+  .manifesto h2 i{font-style:italic;color:var(--ochre)}
+  .manifesto p{font-size:18px;color:var(--ink-2);line-height:1.6;margin-bottom:18px}
+  .manifesto p:first-of-type::first-letter{font-family:Fraunces,Georgia,serif;font-size:64px;float:left;line-height:.8;padding:6px 10px 0 0;color:var(--ink)}
+  .manifesto .num{display:flex;gap:40px;margin-top:34px;padding-top:26px;border-top:1px solid var(--ink)}
+  .manifesto .num div b{font-family:Fraunces,Georgia,serif;font-weight:400;font-size:40px;display:block;line-height:1}
+  .manifesto .num div span{font-size:12.5px;color:var(--muted)}
+
+  /* timeline */
+  .tl{padding:90px 0 100px;background:var(--ink);color:var(--bone)}
+  .tl .lbl{color:rgba(241,237,228,.55)}
+  .tl h2{font-size:clamp(32px,4vw,52px);font-weight:300;max-width:22ch;margin:16px 0 56px}
+  .tl h2 i{color:#C9B48E}
+  .line{position:relative;height:2px;background:rgba(241,237,228,.22);margin:70px 0 0}
+  .line .fill{position:absolute;left:0;top:0;height:2px;width:100%;background:#C9B48E}
+  .stages{display:grid;grid-template-columns:repeat(5,1fr);margin-top:-9px;position:relative}
+  .stage{position:relative;padding:22px 14px 0 0}
+  .stage::before{content:'';position:absolute;left:0;top:0;width:16px;height:16px;border-radius:50%;background:var(--ink);border:2px solid rgba(241,237,228,.35)}
+  .stage.on::before{background:#C9B48E;border-color:#C9B48E;box-shadow:0 0 0 6px rgba(201,180,142,.18)}
+  .stage.late::before{background:var(--red);border-color:var(--red)}
+  .stage .n{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(241,237,228,.55);margin-bottom:8px}
+  .stage .s{font-family:Fraunces,Georgia,serif;font-size:20px;margin-bottom:8px}
+  .stage p{font-size:13.5px;color:rgba(241,237,228,.66);line-height:1.45;max-width:22ch}
+  .callout{position:absolute;top:-58px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.06em;white-space:nowrap}
+  .callout::after{content:'';position:absolute;left:0;top:22px;width:1px;height:28px;background:currentColor;opacity:.6}
+  .callout.c1{left:0;color:#C9B48E}
+  .callout.c2{left:80%;color:#E3A08A}
+  @media (max-width:860px){.callout{display:none}}
+
+  /* receive */
+  .rec-sec{padding:110px 0 90px}
+  .rec-sec .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px}
+  .rec-sec h2{font-size:clamp(34px,4.2vw,56px);font-weight:300;max-width:14ch;position:sticky;top:110px}
+  .rec-sec h2 i{color:var(--ochre)}
+  .item{display:grid;grid-template-columns:64px 1fr;gap:20px;padding:30px 0;border-top:1px solid var(--ink)}
+  .item:last-child{border-bottom:1px solid var(--ink)}
+  .item .k{font-family:Fraunces,Georgia,serif;font-size:34px;font-weight:300;color:var(--ochre);line-height:1}
+  .item h3{font-size:25px;margin-bottom:10px;font-weight:400}
+  .item p{font-size:16px;color:var(--ink-2);max-width:52ch}
+  .quad{margin-top:18px;width:100%;max-width:300px;aspect-ratio:1;border:1px solid var(--line);position:relative;background:linear-gradient(var(--line),var(--line)) center/1px 100% no-repeat,linear-gradient(var(--line),var(--line)) center/100% 1px no-repeat}
+  .quad i{position:absolute;width:10px;height:10px;border-radius:50%;background:var(--ink);transform:translate(-50%,-50%)}
+  .quad i.o{background:var(--ochre);width:14px;height:14px}
+  .quad i.g{background:var(--green)}
+  .quad em{position:absolute;font-family:'IBM Plex Mono',monospace;font-style:normal;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+
+  /* who */
+  .who{padding:90px 0;border-top:1px solid var(--line)}
+  .who .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;margin-top:44px}
+  .who h2{font-size:clamp(30px,3.6vw,46px);font-weight:300}
+  .who .g h3{font-size:22px;margin-bottom:12px}
+  .who .g p{font-size:15.5px;color:var(--ink-2)}
+  .who .g p b{color:var(--ink);font-weight:500}
+
+  /* q */
+  .q{padding:90px 0;border-top:1px solid var(--line)}
+  .q .wrap{display:grid;grid-template-columns:.7fr 1.3fr;gap:60px}
+  .q h2{font-size:clamp(30px,3.6vw,46px);font-weight:300}
+  .qa{padding:26px 0;border-top:1px solid var(--line)}
+  .qa:last-child{border-bottom:1px solid var(--line)}
+  .qa h3{font-size:22px;font-style:italic;font-weight:300;margin-bottom:10px}
+  .qa p{font-size:16px;color:var(--ink-2);max-width:62ch}
+
+  /* final */
+  .final{padding:120px 0;background:var(--paper);border-top:1px solid var(--ink)}
+  .final .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:end}
+  .final h2{font-size:clamp(40px,6vw,84px);font-weight:300;line-height:.98}
+  .final h2 i{color:var(--ochre)}
+  .final p{font-size:17px;color:var(--ink-2);margin-bottom:26px;max-width:40ch}
+  .final .cta{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+  .final small{display:block;margin-top:10px;font-size:13px;color:var(--muted)}
+  footer{padding:26px 0;font-size:13px;color:var(--muted);border-top:1px solid var(--line)}
   footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-  footer a{color:rgba(241,237,228,.8);text-decoration:none}
-  @media (max-width:860px){
-    .strip{grid-template-columns:1fr 1fr}
-    .strip div:nth-child(2){border-right:none}
-    .strip div:nth-child(1),.strip div:nth-child(2){border-bottom:1px solid var(--line)}
-    .grid3,.grid2,.compare{grid-template-columns:1fr}
-    .hero{padding:64px 0 56px}
-    section{padding:64px 0}
+  footer a{text-decoration:none;color:var(--ink-2)}
+
+
+  .report{transform:none}
+
+  @media (max-width:960px){
+    .hero .wrap,.manifesto .wrap,.rec-sec .wrap,.q .wrap,.final .wrap{grid-template-columns:1fr;gap:40px}
+    .hero{padding-top:48px}.hero .col::before{display:none}
+    .report{transform:none;margin-top:8px}
+    .stages{grid-template-columns:1fr;gap:8px;margin-top:20px}.line{display:none}
+    .stage{padding:14px 0 14px 30px}.stage::before{top:18px}
+    .rec-sec h2{position:static}
+    .who .grid{grid-template-columns:1fr;gap:30px}
+    .nav .right a.lnk{display:none}
   }
 </style>
 </head>
@@ -95,105 +173,112 @@
 
 <nav class="nav"><div class="wrap">
   <a class="brand" href="#top" aria-label="Cicero">
-    <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-linecap="butt" aria-hidden="true"><rect x="2" y="2" width="40" height="40" rx="1" stroke-width="1.6"/><line x1="6" y1="10" x2="38" y2="10" stroke-width="1.8"/><line x1="9" y1="13.5" x2="35" y2="13.5" stroke-width="1.6"/><line x1="11" y1="17" x2="33" y2="17" stroke-width="1.6"/><line x1="12" y1="21" x2="12" y2="35" stroke-width="1.6"/><line x1="16.5" y1="21" x2="16.5" y2="35" stroke-width="1.6"/><line x1="22" y1="21" x2="22" y2="36.5" stroke-width="1.6"/><line x1="27.5" y1="21" x2="27.5" y2="35" stroke-width="1.6"/><line x1="32" y1="21" x2="32" y2="35" stroke-width="1.6"/></svg>
+    <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" aria-hidden="true"><rect x="2" y="2" width="40" height="40" rx="1" stroke-width="1.6"/><line x1="6" y1="10" x2="38" y2="10" stroke-width="1.8"/><line x1="9" y1="13.5" x2="35" y2="13.5" stroke-width="1.6"/><line x1="11" y1="17" x2="33" y2="17" stroke-width="1.6"/><line x1="12" y1="21" x2="12" y2="35" stroke-width="1.6"/><line x1="16.5" y1="21" x2="16.5" y2="35" stroke-width="1.6"/><line x1="22" y1="21" x2="22" y2="36.5" stroke-width="1.6"/><line x1="27.5" y1="21" x2="27.5" y2="35" stroke-width="1.6"/><line x1="32" y1="21" x2="32" y2="35" stroke-width="1.6"/></svg>
     Cicero
   </a>
-  <a class="btn" href="#demo">Prenota una demo</a>
+  <div class="right">
+    <a class="lnk" href="#come">Come funziona</a>
+    <a class="lnk" href="#perchi">Per chi</a>
+    <a class="lnk" href="https://zeniapartners.com/cicero/">ES</a>
+    <a class="btn" href="#demo">Prenota una demo</a>
+  </div>
 </div></nav>
 
 <header class="hero" id="top"><div class="wrap">
-  <span class="kicker">Intelligence e strategia di public affairs · Italia e Spagna</span>
-  <h1>Anticipare una legge non è più <em>un privilegio dei grandi.</em></h1>
-  <p>Cicero segue più di 70 fonti regolatorie quasi in tempo reale e ogni mattina ti consegna un report del tuo settore con le fonti citate, la mappa di chi sta dietro a ogni iniziativa e una raccomandazione rivista da esperti di public affairs.</p>
-  <div class="cta-row">
-    <a class="btn" href="#demo">Prenota una demo di 20 minuti</a>
-    <span class="cta-note">Con il tuo settore sullo schermo, non con le slide.</span>
+  <div>
+    <span class="lbl">Intelligence regolatoria · Italia e Spagna</span>
+    <h1>Anticipare una legge non è più <i>un privilegio dei grandi.</i></h1>
+    <p class="sub">Ogni mattina, prima del primo caffè, Cicero ti consegna il report regolatorio del tuo settore: cosa si è mosso, da quale fonte, chi c'è dietro e cosa dovresti fare. Rivisto da esperti di public affairs.</p>
+    <div class="cta">
+      <a class="btn" href="#demo">Vedere il mio settore in una demo <span class="ar">→</span></a>
+      <span class="note">Venti minuti. Il tuo settore sullo schermo, non le slide.</span>
+    </div>
   </div>
-</div></header>
-
-<div class="strip wrap" style="padding:0">
-  <div><b>70+</b><span>fonti di evidenza seguite quasi in tempo reale</span></div>
-  <div><b>900+</b><span>profili di attori mappati per potere e interesse</span></div>
-  <div><b>12</b><span>settori regolatori coperti</span></div>
-  <div><b>Ogni giorno</b><span>report regolatorio con fonti citate e il tuo marchio</span></div>
+  <div class="col">
+    <div class="report" id="report">
+      <div class="rh"><b>Report regolatorio · Energia</b><span id="today">martedì · 07:30</span></div>
+      <div class="row"><span class="tag c">Consultaz.</span><div><div class="t">L'autorità apre una consultazione pubblica sulla metodologia tariffaria per il prossimo periodo regolatorio.</div><div class="m"><u>Fonte citata</u><span>Scadenza · 20 giorni</span><span>Fase · consultazione</span></div></div></div>
+      <div class="row"><span class="tag e">Emendam.</span><div><div class="t">Entra in Senato un emendamento che modifica il regime autorizzativo degli impianti di accumulo.</div><div class="m"><u>Fonte citata</u><span>Attori · 3 identificati</span><span>Fase · iter</span></div></div></div>
+      <div class="row"><span class="tag p">Posizione</span><div><div class="t">L'associazione di categoria pubblica la sua posizione sullo schema di decreto: chiede un periodo transitorio di 24 mesi.</div><div class="m"><u>Fonte citata</u><span>Potere · alto</span><span>Interesse · alto</span></div></div></div>
+      <div class="rec"><b>Raccomandazione del team</b>Presentare osservazioni alla consultazione prima della scadenza, allineate alla posizione dell'associazione sul punto transitorio, e chiedere un incontro con la direzione energia dell'autorità.</div>
+    </div>
+  </div>
 </div>
+<div class="ticker" aria-hidden="true"><div class="track">
+  <span>Gazzetta Ufficiale</span><span>Camera dei Deputati</span><span>Senato della Repubblica</span><span>ARERA</span><span>AGCM</span><span>AGCOM</span><span>Bollettini regionali</span><span>Parlamento Europeo</span><span>Gazzetta ufficiale dell'UE</span><span>BOE</span><span>Congreso de los Diputados</span><span>CNMC</span><span>Consultazioni pubbliche</span><span>Stampa di settore</span><span>Registri per la trasparenza</span>
+</div></div>
+</header>
 
-<section id="problema"><div class="wrap">
-  <div class="sec-head">
-    <h2>Ogni azienda vive sotto regole che non ha scritto.</h2>
-    <p>Cambia un regolamento, viene presentata una proposta, un'autorità apre una consultazione. E il conto lo paga la tua azienda, che fosse o meno a quel tavolo. Fino a oggi, anticipare era cosa di chi poteva permettersi un team interno e uno studio.</p>
-  </div>
-  <div class="compare">
-    <div class="old">
-      <h3>Fino a oggi</h3>
-      <ul>
-        <li>Vieni a sapere della norma quando è già pubblicata.</li>
-        <li>Report su richiesta, ogni diverse settimane.</li>
-        <li>La mappa degli attori vive nella testa di una persona.</li>
-        <li>Se lo può permettere solo chi ha il budget di una grande azienda.</li>
-      </ul>
-    </div>
-    <div class="new">
-      <h3>Con Cicero</h3>
-      <ul>
-        <li>Monitoraggio di <b>70+ fonti</b> quasi in tempo reale.</li>
-        <li>Un report <b>ogni mattina</b>, con le fonti citate.</li>
-        <li><b>900+ profili</b> di attori mappati per potere e interesse.</li>
-        <li>Alla portata di <b>qualsiasi azienda</b> di un settore regolato.</li>
-      </ul>
+<section class="manifesto"><div class="wrap">
+  <h2>Ogni azienda vive sotto regole <i>che non ha scritto.</i></h2>
+  <div>
+    <p>Cambia un regolamento, viene presentata una proposta, un'autorità apre una consultazione. E il conto lo paga la tua azienda, che fosse o meno a quel tavolo. Per decenni, saperlo in tempo è stato un privilegio di chi poteva permettersi team interno, studio e ore.</p>
+    <p>Cicero mette quel lavoro alla portata di qualsiasi azienda di un settore regolato: un motore che vigila, un secondo modello che verifica e un team di esperti che trasforma l'informazione in una decisione.</p>
+    <div class="num">
+      <div><b>70+</b><span>fonti seguite quasi in tempo reale</span></div>
+      <div><b>900+</b><span>attori mappati per potere e interesse</span></div>
+      <div><b>12</b><span>settori regolatori</span></div>
     </div>
   </div>
 </div></section>
 
-<section id="come"><div class="wrap">
-  <div class="sec-head">
-    <h2>Come funziona</h2>
-    <p>Non è un motore di ricerca di gazzette. È IA che vigila, un secondo modello che verifica ed esperti che interpretano. Tu ricevi una decisione, non una pila di link.</p>
-  </div>
-  <div class="grid3">
-    <div class="card"><div class="n">01</div><h3>Il motore vigila</h3><p>Gazzette ufficiali, Parlamento, autorità indipendenti, consultazioni pubbliche e stampa di settore del tuo Paese e dell'Unione Europea, filtrati per il tuo settore e i tuoi dossier.</p></div>
-    <div class="card"><div class="n">02</div><h3>Un secondo modello verifica</h3><p>Ogni documento è valutato per fondatezza, accuratezza, calibrazione e azionabilità prima di uscire. Ogni affermazione ha la sua fonte. Ciò che non supera la soglia passa alla revisione umana.</p></div>
-    <div class="card"><div class="n">03</div><h3>Gli esperti decidono</h3><p>Un team di public affairs trasforma l'informazione in strategia: quale posizione prendere, come argomentarla e a chi presentarla.</p></div>
-  </div>
-</div></section>
-
-<section id="ricevi"><div class="wrap">
-  <div class="sec-head"><h2>Cosa ricevi ogni mattina</h2></div>
-  <div class="grid2">
-    <div class="card"><h3>Il report regolatorio del tuo settore</h3><p>Cosa si è mosso, da quale fonte, in che fase è e quale scadenza apre. Con il tuo marchio se sei una società di consulenza o un'associazione.</p></div>
-    <div class="card"><h3>La mappa degli attori di ogni dossier</h3><p>Chi spinge, chi frena e con quale potere e interesse. Ciò che di solito vive nella testa di qualcuno, scritto e aggiornato.</p></div>
-    <div class="card"><h3>Alert quando qualcosa cambia fase</h3><p>Una consultazione che si apre, un emendamento che entra, una scadenza che arriva. Prima che te lo racconti un concorrente.</p></div>
-    <div class="card"><h3>Una raccomandazione, non solo informazione</h3><p>Posizione, argomento e a chi presentarlo, rivisti da esperti. Perché la prossima volta che ti chiedono "cosa arriva", tu abbia la risposta con le fonti.</p></div>
+<section class="tl" id="come"><div class="wrap">
+  <span class="lbl">La vita di una norma</span>
+  <h2>Ci sono cinque momenti per saperlo. <i>La maggior parte lo scopre all'ultimo.</i></h2>
+  <div style="position:relative">
+    <span class="callout c1">↓ Qui ti avvisa Cicero</span>
+    <span class="callout c2">↓ Qui lo scopri oggi</span>
+    <div class="line"><div class="fill"></div></div>
+    <div class="stages">
+      <div class="stage on"><div class="n">01</div><div class="s">Segnale</div><p>Un attore muove: una posizione, un rapporto, una dichiarazione.</p></div>
+      <div class="stage on"><div class="n">02</div><div class="s">Consultazione</div><p>L'autorità apre il fascicolo. È quando si può ancora incidere.</p></div>
+      <div class="stage on"><div class="n">03</div><div class="s">Iter</div><p>Emendamenti, audizioni, pareri. La mappa degli attori cambia ogni settimana.</p></div>
+      <div class="stage on"><div class="n">04</div><div class="s">Approvazione</div><p>Si vota. Ciò che non è cambiato prima, non cambia più.</p></div>
+      <div class="stage late"><div class="n">05</div><div class="s">Pubblicazione</div><p>Esce in Gazzetta. Qui inizia a pagare l'azienda che non ha visto arrivare nulla.</p></div>
+    </div>
   </div>
 </div></section>
 
-<section id="perchi"><div class="wrap">
-  <div class="sec-head"><h2>Per chi</h2></div>
-  <div class="grid3">
-    <div class="card"><div class="n">Aziende</div><h3>Settori regolati</h3><p>Energia, finanza, salute, telecomunicazioni, consumo, trasporti, gioco e altri. Con una o più persone responsabili di regulatory o relazioni istituzionali che oggi vengono a saperlo tardi.</p></div>
-    <div class="card"><div class="n">Consulenza</div><h3>Public affairs e studi legali</h3><p>Il monitoraggio giornaliero con il vostro marchio, pannello multicliente e coda di revisione. Il vostro team passa dal raccogliere all'interpretare e potete seguire più clienti senza assumere.</p></div>
-    <div class="card"><div class="n">Associazioni</div><h3>Di categoria e confederazioni</h3><p>Vigilanza regolatoria giornaliera per i vostri associati, con il marchio dell'associazione, e sessioni formative sull'anticipazione regolatoria con l'IA.</p></div>
-  </div>
-  <div style="margin-top:40px" class="tags">
-    <span class="tag">Energia e rinnovabili</span><span class="tag">Finanza e fintech</span><span class="tag">Salute e farma</span><span class="tag">Telecomunicazioni e digitale</span><span class="tag">Consumo e alimentare</span><span class="tag">Trasporti e mobilità</span><span class="tag">Gioco</span><span class="tag">Tabacco e alcol</span><span class="tag">Acqua e rifiuti</span><span class="tag">Infrastrutture</span><span class="tag">Assicurazioni</span><span class="tag">Istruzione privata</span>
+<section class="rec-sec" id="ricevi"><div class="wrap">
+  <h2>Cosa arriva ogni mattina <i>nella tua casella.</i></h2>
+  <div>
+    <div class="item"><div class="k">01</div><div><h3>Il report del tuo settore, con le fonti.</h3><p>Cosa si è mosso, da quale fonte, in che fase è e quale scadenza apre. Ogni affermazione rimanda al documento originale. Con il tuo marchio, se sei una società di consulenza o un'associazione.</p></div></div>
+    <div class="item"><div class="k">02</div><div><h3>La mappa di chi c'è dietro.</h3><p>Per ogni dossier, gli attori che spingono e quelli che frenano, collocati per potere e interesse. Ciò che di solito vive nella testa di qualcuno, scritto e aggiornato.</p>
+      <div class="quad" aria-hidden="true"><em style="left:8px;top:8px">tenere soddisfatti</em><em style="right:8px;top:8px">gestire da vicino</em><em style="left:8px;bottom:8px">monitorare</em><em style="right:8px;bottom:8px">tenere informati</em><i style="left:78%;top:22%" class="o"></i><i style="left:64%;top:36%"></i><i style="left:30%;top:30%"></i><i style="left:22%;top:70%" class="g"></i><i style="left:70%;top:74%"></i><i style="left:48%;top:58%" class="g"></i></div></div></div>
+    <div class="item"><div class="k">03</div><div><h3>Un alert quando qualcosa cambia fase.</h3><p>Una consultazione che si apre, un emendamento che entra, una scadenza che arriva. Prima che te lo racconti un concorrente o un titolo di giornale.</p></div></div>
+    <div class="item"><div class="k">04</div><div><h3>Una raccomandazione, non una pila di link.</h3><p>Posizione, argomento e a chi presentarlo, rivisti da esperti di public affairs. Perché la prossima volta che ti chiedono "cosa arriva", tu abbia la risposta con le fonti.</p></div></div>
   </div>
 </div></section>
 
-<section id="faq"><div class="wrap">
-  <div class="sec-head"><h2>Domande frequenti</h2></div>
-  <details><summary>Sostituisce il nostro studio di public affairs?</summary><p>No. Lo studio vi rappresenta e vi consiglia; Cicero dice allo studio e a voi cosa sta succedendo stamattina, con le fonti. La maggior parte degli studi non fa monitoraggio giornaliero perché si fattura male. Con Cicero il vostro studio lavora su informazioni migliori e voi decidete cosa affidargli.</p></details>
-  <details><summary>L'IA inventa le cose?</summary><p>Ogni affermazione del report ha la sua fonte citata e un secondo modello valuta ogni documento per fondatezza, accuratezza, calibrazione e azionabilità prima che esca. Ciò che non supera la soglia va in una coda di revisione umana. Nella demo puoi cliccare su qualsiasi frase e vedere da dove viene.</p></details>
-  <details><summary>Quanto tempo richiede l'attivazione?</summary><p>Nessuna implementazione. Si configurano i tuoi settori e dossier nella chiamata di avvio e il giorno dopo hai il primo report in casella.</p></details>
-  <details><summary>È un aggregatore di notizie?</summary><p>Un aggregatore ti dice che è uscito qualcosa. Cicero ti dice cos'è, in che fase è, chi lo spinge, quando scade e cosa dovresti fare, e un esperto lo rivede prima che ti arrivi. È la differenza tra un titolo e un rapporto.</p></details>
-  <details><summary>Chi c'è dietro?</summary><p>Cicero è una piattaforma di intelligence e strategia di public affairs fondata da Javier Hernández, con un prodotto operativo e un team di esperti. In Italia e Spagna l'operatività commerciale e il supporto sono gestiti da Zenia Partners, in orario europeo.</p></details>
+<section class="who" id="perchi"><div class="wrap">
+  <span class="lbl">Per chi</span>
+  <h2 style="margin-top:14px">Tre modi di usare Cicero.</h2>
+  <div class="grid">
+    <div class="g"><h3>L'azienda regolata</h3><p><b>Una o due persone seguono il regolatorio oltre ad altre tre cose.</b> Cicero dà loro ciò che ha un intero dipartimento: vigilanza giornaliera, mappa degli attori e una raccomandazione con cui entrare in comitato. Energia, finanza, salute, telecomunicazioni, consumo, trasporti, gioco.</p></div>
+    <div class="g"><h3>La società di public affairs</h3><p><b>Il monitoraggio è il lavoro che consuma più ore e si fattura peggio.</b> Con Cicero esce ogni mattina con il marchio della società, da un pannello multicliente con coda di revisione. Il team passa dal raccogliere all'interpretare e segue più clienti senza assumere.</p></div>
+    <div class="g"><h3>L'associazione di categoria</h3><p><b>Gli associati si aspettano una cosa: sapere cosa arriva.</b> Cicero produce il report giornaliero del settore con il marchio dell'associazione e apre la porta a sessioni per gli associati su come anticipare la regolazione.</p></div>
+  </div>
+</div></section>
+
+<section class="q"><div class="wrap">
+  <h2>Le domande <i>scomode.</i></h2>
+  <div>
+    <div class="qa"><h3>Sostituisce il nostro studio?</h3><p>No. Lo studio vi rappresenta e vi consiglia. Cicero dice allo studio, e a voi, cosa sta succedendo stamattina, con le fonti. La maggior parte degli studi non fa monitoraggio giornaliero perché si fattura male. Con Cicero il vostro studio lavora su informazioni migliori e voi decidete cosa affidargli.</p></div>
+    <div class="qa"><h3>L'IA inventa le cose?</h3><p>Ogni frase del report rimanda alla sua fonte. Un secondo modello valuta ogni documento per fondatezza, accuratezza, calibrazione e azionabilità prima che esca; ciò che non supera la soglia va in revisione umana. Nella demo clicchi su qualsiasi affermazione e vedi da dove viene.</p></div>
+    <div class="qa"><h3>Quanto tempo richiede l'attivazione?</h3><p>Nessuna implementazione. Si configurano i tuoi settori e dossier nella chiamata di avvio e il giorno dopo hai il primo report in casella. Se non lo apri, non ti è costato nulla. Se lo apri, hai risparmiato la prima ora della giornata.</p></div>
+    <div class="qa"><h3>Chi c'è dietro?</h3><p>Cicero è una piattaforma di intelligence e strategia di public affairs fondata da Javier Hernández, con un prodotto operativo e un team di esperti. In Italia e Spagna l'operatività e il supporto sono gestiti da Zenia Partners, in orario europeo.</p></div>
+  </div>
 </div></section>
 
 <section class="final" id="demo"><div class="wrap">
-  <h2>Parliamone prima che la norma vi sorprenda.</h2>
-  <p>Una demo di 20 minuti con il vostro settore sullo schermo: il report di stamattina, un dossier che vi riguarda e la mappa di chi c'è dietro. Senza impegno e senza implementazione.</p>
-  <div class="cta-row">
-    <a class="btn js-wa" href="https://wa.me/34677612799?text=Buongiorno%2C%20vorrei%20una%20demo%20di%20Cicero" target="_blank" rel="noopener">Prenota su WhatsApp</a>
-    <a class="btn ghost js-mail" href="mailto:fabrizzio.zelada@zeniapartners.com?subject=Demo%20di%20Cicero">Scrivi via email</a>
+  <h2>Parliamone prima che la norma <i>vi sorprenda.</i></h2>
+  <div>
+    <p>Una demo di venti minuti con il vostro settore sullo schermo: il report di stamattina, un dossier che vi riguarda e la mappa di chi c'è dietro.</p>
+    <div class="cta">
+      <a class="btn js-wa" href="https://wa.me/34677612799?text=Buongiorno%2C%20vorrei%20una%20demo%20di%20Cicero" target="_blank" rel="noopener">Prenota su WhatsApp <span class="ar">→</span></a>
+      <a class="btn ghost js-mail" href="mailto:fabrizzio.zelada@zeniapartners.com?subject=Demo%20di%20Cicero">Scrivi via email</a>
+      <small>Senza impegno e senza implementazione. Il primo report, il giorno dopo.</small>
+    </div>
   </div>
 </div></section>
 
@@ -204,15 +289,19 @@
 
 <script>
 (function(){
+  try{
+    var d=new Date(), g=['domenica','lunedì','martedì','mercoledì','giovedì','venerdì','sabato'], m=['gen','feb','mar','apr','mag','giu','lug','ago','set','ott','nov','dic'];
+    document.getElementById('today').textContent=g[d.getDay()]+' '+d.getDate()+' '+m[d.getMonth()]+' · 07:30';
+  }catch(e){}
   var p=new URLSearchParams(location.search),src=p.get('src');
   try{ if(src){localStorage.setItem('cicero_src',src);} else {src=localStorage.getItem('cicero_src');} }catch(e){}
   src=(src||'web-it').replace(/[^a-z0-9_-]/gi,'').slice(0,24);
-  var wa=document.querySelector('.js-wa');
-  if(wa){ wa.href='https://wa.me/34677612799?text='+encodeURIComponent('Buongiorno, vorrei una demo di Cicero ('+src+')'); }
-  var m=document.querySelector('.js-mail');
-  if(m){ m.href='mailto:fabrizzio.zelada@zeniapartners.com?subject='+encodeURIComponent('Demo di Cicero ('+src+')'); }
+  var wa=document.querySelector('.js-wa'); if(wa){wa.href='https://wa.me/34677612799?text='+encodeURIComponent('Buongiorno, vorrei una demo di Cicero ('+src+')');}
+  var ml=document.querySelector('.js-mail'); if(ml){ml.href='mailto:fabrizzio.zelada@zeniapartners.com?subject='+encodeURIComponent('Demo di Cicero ('+src+')');}
+  function beacon(site){ try{ navigator.sendBeacon('https://gaia-relojes.onrender.com/gwb/lead', JSON.stringify({site:site,path:location.pathname+'?src='+src,ref:document.referrer||''})); }catch(e){} }
+  try{gtag('event','cicero_view',{src:src,lang:'it'});}catch(e){}
+  document.addEventListener('click',function(e){var t=e.target,a=t.closest?t.closest('.js-wa,.js-mail'):null;if(a){beacon('cicero');try{gtag('event','cicero_cta_click',{src:src,lang:'it',cta:a.classList.contains('js-wa')?'whatsapp':'email'});}catch(e){}}},true);
 })();
 </script>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "67e4803d7cd443a49b12c7d8a99365bf"}'></script>
 </body>
 </html>

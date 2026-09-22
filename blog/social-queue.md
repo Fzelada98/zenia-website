@@ -6785,6 +6785,8 @@ Full write-up (ES): https://zeniapartners.com/blog/automatizacion-para-gimnasios
 ---
 ## 2026-09-22 - Pricing an AI agent for a business: the 3-layer cost stack (EN)
 
+<!-- PUBLISHED:make-webhook at 2026-09-22T08:30:01Z -->
+
 Every founder who asks "what does an AI agent cost" gets a single number and walks away with the wrong mental model. In production the cost is a 3-layer stack. Layer 1: platform (WhatsApp Business API session + CRM + model orchestration + retry queues), 297-997 EUR/month on our reference deployments. Layer 2: Meta per-conversation billing, 0.0116 EUR utility to 0.051 EUR marketing per session, and the free-window loophole closes Oct 1, 2026 which shifts a 15-30% delta onto anyone with high service volume. Layer 3: model tokens, 0.005-0.08 EUR per turn depending on whether the routing layer sends it to Haiku, Sonnet or Opus.
 
 Reference architecture we run for a mid-market client: WhatsApp Business Cloud API as ingress, a stateless Node worker per conversation, Postgres CRM as write buffer, tool-use loop over 8-12 functions bound to the vertical (reservation, quota, payment, handoff). p95 first-response latency 2.4s including a Meta webhook hop and a CRM hydrate on Claude Sonnet. 99.85% uptime over the last 90 days across 12 tenants, and the incident post-mortems are almost always Meta-side (template rejection, rate limit, session expiry) not model-side.

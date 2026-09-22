@@ -6861,3 +6861,19 @@ Full write-up: https://zeniapartners.com/blog/veterinary-clinic-crm-with-ai.html
 #WhatsAppBusinessAPI #VeterinaryTech #LLMOps #SystemsIntegration
 
 ---
+
+## 2026-09-22 - Pedir reseñas de Google en restaurantes: NPS bifurcation as an anti-review-gating pattern (EN)
+
+The engineering problem behind "automate Google reviews for a restaurant" is not the mail merge. It is the bifurcation: you want promoters to hit Google Business Profile and detractors to hit an internal escalation queue, without falling into explicit review gating that Google penalizes.
+
+Our reference implementation runs on WhatsApp Business Cloud API as ingress, a Meta template message with a single-integer NPS reply sent 30 to 120 minutes after the reservation is marked "completed" in the reservation system (CoverManager, TheFork, Resy or a proprietary POS via webhook), and a stateless routing worker that scores each inbound reply and picks the next tool call: review.request for score ≥ 9, feedback.log for 7-8, incident.escalate for ≤ 6 with a manager SLA of 24h.
+
+The Place ID link is generated per venue with a UTM-tagged https://search.google.com/local/writereview?placeid= payload so we can attribute inbound reviews to the WhatsApp channel in Google Business Profile Performance without touching the review text.
+
+Two production numbers on a 120-cover restaurant with 4.1 baseline: NPS reply rate 52% (p50 latency reply-to-route 1.4s), promoter-to-review conversion 27%, ~110 net new reviews/month, +0.4 stars in 90 days.
+
+Full write-up: https://zeniapartners.com/blog/pedir-resenas-google-restaurante-automatico.html
+
+#WhatsAppBusinessAPI #RestaurantTech #LLMOps #SystemsIntegration
+
+---

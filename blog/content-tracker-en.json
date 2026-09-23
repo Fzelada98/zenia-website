@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-09-23T09:15:00Z",
+  "lastRun": "2026-09-23T14:00:00Z",
   "market": "US/UK small business",
   "posts": [
     {
@@ -79,7 +79,7 @@
     { "slug": "chiropractor-crm-with-ai", "keyword": "chiropractor crm with ai", "tier": 2, "cluster": "healthcare", "status": "published", "date": "2026-09-22" },
     { "slug": "veterinary-clinic-crm-with-ai", "keyword": "veterinary clinic crm with ai", "tier": 2, "cluster": "healthcare", "status": "published", "date": "2026-09-22" },
     { "slug": "physical-therapy-crm-with-ai", "keyword": "physical therapy crm with ai", "tier": 2, "cluster": "healthcare", "status": "published", "date": "2026-09-23" },
-    { "slug": "ai-agent-for-tattoo-studios", "keyword": "ai agent for tattoo studios", "tier": 2, "cluster": "beauty", "status": "pending" },
+    { "slug": "ai-agent-for-tattoo-studios", "keyword": "ai agent for tattoo studios", "tier": 2, "cluster": "beauty", "status": "published", "date": "2026-09-23" },
     { "slug": "ai-agent-for-nail-salons", "keyword": "ai agent for nail salons", "tier": 2, "cluster": "beauty", "status": "pending" },
     { "slug": "ai-agent-for-barbershops", "keyword": "ai agent for barbershops", "tier": 2, "cluster": "beauty", "status": "pending" }
   ]

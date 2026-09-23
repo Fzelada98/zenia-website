@@ -6923,3 +6923,18 @@ Full write-up with the six-week rollout and the errors that cost us weeks: https
 #HealthTech #SystemsIntegration #WhatsAppBusinessAPI #EnterpriseArchitecture
 
 ---
+
+
+## 2026-09-23 - AI agent for tattoo studios: the deposit-locked booking primitive (EN)
+
+The engineering problem in a tattoo studio front-desk is not the LLM. It is atomic booking: a slot must not appear "available" between the moment the artist approves the consult brief and the moment the deposit clears on Stripe.
+
+Our reference stack: WhatsApp Business Cloud API and Instagram Graph API as ingress, an orchestrator that pins a slot with a Redis TTL lock (5 minutes) the instant the artist taps approve, a Stripe PaymentIntent tied to the same idempotency key as the calendar write, and a two-way sync to Tattoogenda, Square Appointments or Google Calendar keyed on client_id + slot_hash so a webhook retry never double-books an artist. Instagram-to-WhatsApp handoff preserves conversation state via a graph_user_id to phone_number lookup written on first identity share.
+
+Two production numbers on a 4-artist Austin custom shop at day 90: DM-to-consult first-response p95 at 88 seconds across 220 weekly DMs, no-show rate 19% to 4% once deposit-locking was enforced on 98% of bookings.
+
+Full write-up with the six-automation rollout and integration reality: https://zeniapartners.com/blog/ai-agent-for-tattoo-studios.html
+
+#SystemsIntegration #WhatsAppBusinessAPI #InstagramAPI #AIAgents
+
+---

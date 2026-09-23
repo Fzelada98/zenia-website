@@ -6829,6 +6829,8 @@ Full write up with the 5 integration points and the 3 error modes that break the
 
 ## 2026-09-23 - Regulatory intelligence pipeline: 70 sources, a second model as judge, a human review queue (EN)
 
+<!-- PUBLISHED:make-webhook at 2026-09-23T08:31:30Z -->
+
 Most "regulatory monitoring" is a junior analyst reading official gazettes at 7am and pasting links into an email.
 
 We are now the growth partner for Cicero in Spain and Italy, and the interesting part is not the AI that reads. It is the architecture that makes the output trustworthy enough to put in front of a board:

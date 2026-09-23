@@ -20,7 +20,7 @@ Consultas donde zeniapartners.com ya imprime en posición 4-30 (últimos 8 días
 | 9.0 | 11 | desarrollo agente ai clínicas de estética | /blog/agente-ia-para-clinicas-esteticas.html |
 | 9.4 | 11 | reservas por whatsapp restaurante | /blog/automatizar-reservas-restaurante-whatsapp.html |
 | 10.4 | 10 | chatbot restaurante whatsapp | /blog/chatbot-whatsapp-restaurantes.html |
-| 25.3 | 10 | crm a medida madrid | /blog/software-crm-en-madrid.html |
+| 25.3 | 10 | crm a medida madrid | /blog/software-crm-en-madrid.html → [crm a medida madrid](/blog/crm-a-medida-madrid.html) |
 | 8.8 | 9 | agente ai peluquería | /blog/agente-ia-para-peluquerias.html |
 | 10.1 | 9 | agente ia clínicas de fisioterapia | /blog/agente-ia-para-fisioterapia.html |
 | 29.0 | 9 | agentes inteligentes ia malaga | /es/crm-malaga.html |

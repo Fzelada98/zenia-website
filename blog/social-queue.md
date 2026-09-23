@@ -6877,3 +6877,17 @@ Full write-up: https://zeniapartners.com/blog/pedir-resenas-google-restaurante-a
 #WhatsAppBusinessAPI #RestaurantTech #LLMOps #SystemsIntegration
 
 ---
+## 2026-09-23 - CRM a medida in Madrid: the honest architecture decision (EN)
+
+Most "custom CRM in Madrid" RFPs we audit fall into three brackets that vendors intentionally blur: SaaS parameterization (3-12K), low-code build on Odoo or EspoCRM (8-25K, month 6-14 to production), and full green-field development on a modern framework (25-60K+, month 4-8 to production plus 1-2.5K/month evolution).
+
+The engineering call is rarely a technology preference. It is six variables: internal user count above 15, business rules that exceed 40 lines of conditional logic, legacy systems without stable APIs, data residency under RGPD or PSD2, workflow uniqueness that IS the moat, and horizon above 5 years. Three or more true, custom wins on TCO. Fewer, a well-parameterized SaaS plus a WhatsApp Business Cloud API agent for lead ingress dominates on time-to-value.
+
+Reference stack we ship for the second bracket: EspoCRM or Odoo core, custom entities for sector-specific objects (expediente for law firms, commission ladders for distributors, activo for real-estate patrimony), WhatsApp Business Cloud API as conversational front-door with sub-10s inbound-to-first-reply p95, ERP integration via idempotent webhooks with dedup keys, code ownership contractually assigned to the client from commit #1.
+
+Full write-up with pricing bands and vendor-selection checklist: https://zeniapartners.com/blog/crm-a-medida-madrid.html
+
+#CRM #SystemsIntegration #WhatsAppBusinessAPI #EnterpriseArchitecture
+
+---
+

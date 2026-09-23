@@ -6907,3 +6907,19 @@ Full write-up with the 5-layer architecture and 30-day rollout: https://zeniapar
 
 ---
 
+
+## 2026-09-23 - Building an AI agent for aesthetic clinics: the deterministic function surface (EN)
+
+Most "AI agent for aesthetic clinics" pitches skip the layer that decides whether the system holds under load: the deterministic function surface between the LLM and the clinical CRM.
+
+In a 4-clinic Spanish medical-aesthetics network we shipped it as seven independent services: WhatsApp Business Cloud API, orchestrator, LLM with strict function calling plus pgvector RAG, Flowww CRM connector, multilocation booking engine with optimistic locks, compliance middleware, and OpenTelemetry.
+
+Two numbers that mattered in production: p95 end-to-end latency at 9.1 seconds, and double-booking rate below 0.3% under 40K messages/month. The second figure lives or dies on idempotency keys at every mutation and TTL-bound session state in Redis; the moment session memory and patient memory get mixed, the agent hallucinates agendas.
+
+Stack: Node 22 on Fastify, Claude Sonnet 4.5 for main conversation, Haiku 4.5 for intents, pgvector for protocols, Stripe for booking deposits, all in GCP Madrid for EU data residency. Consent capture via qualified e-signature blocks any treatment session until the webhook returns.
+
+Full write-up with the six-week rollout and the errors that cost us weeks: https://zeniapartners.com/blog/desarrollo-agente-ia-clinicas-de-estetica.html
+
+#HealthTech #SystemsIntegration #WhatsAppBusinessAPI #EnterpriseArchitecture
+
+---

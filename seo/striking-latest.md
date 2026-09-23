@@ -17,7 +17,7 @@ Consultas donde zeniapartners.com ya imprime en posición 4-30 (últimos 8 días
 | 22.7 | 15 | precios de crm | /blog/cuanto-cuesta-un-crm-para-pymes.html |
 | 10.3 | 15 | programación crm en sevilla | /blog/software-crm-en-sevilla.html |
 | 6.6 | 12 | agente ia clínicas de estética | /blog/agente-ia-para-clinicas-de-medicina-estetica.html |
-| 9.0 | 11 | desarrollo agente ai clínicas de estética | /blog/agente-ia-para-clinicas-esteticas.html |
+| 9.0 | 11 | desarrollo agente ai clínicas de estética | /blog/agente-ia-para-clinicas-esteticas.html → [desarrollo agente ia clínicas de estética](/blog/desarrollo-agente-ia-clinicas-de-estetica.html) |
 | 9.4 | 11 | reservas por whatsapp restaurante | /blog/automatizar-reservas-restaurante-whatsapp.html |
 | 10.4 | 10 | chatbot restaurante whatsapp | /blog/chatbot-whatsapp-restaurantes.html |
 | 25.3 | 10 | crm a medida madrid | /blog/software-crm-en-madrid.html → [crm a medida madrid](/blog/crm-a-medida-madrid.html) |

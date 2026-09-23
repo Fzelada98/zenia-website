@@ -6893,3 +6893,17 @@ Full write-up with pricing bands and vendor-selection checklist: https://zeniapa
 
 ---
 
+## 2026-09-23 - Physical therapy CRM with AI: the PHI routing layer nobody demos (EN)
+
+The interesting engineering problem in a US outpatient PT CRM is not the LLM. It is the message-envelope classifier that decides which channel each outbound rides on, because Meta will not sign a BAA for WhatsApp Business Cloud API and the OCR schedule for HIPAA violations in 2026 runs $145 to $73,011 per event.
+
+Our reference stack: BAA-covered SMS via Twilio HIPAA for anything PHI-bearing (reminders that reference diagnosis, plan-of-care nudges, HEP delivery), WhatsApp Cloud API reserved for non-PHI utility flows (generic slot confirmations, review capture, intake before patient status), and a stateless routing worker that tags every outbound with a PHI boolean before the channel is selected. WebPT and Prompt sync runs over idempotent Postgres writes keyed on patient_id + intent hash so a webhook retry never double-books a 60-minute evaluation slot.
+
+Two production numbers on a single-location PT clinic at day 90: plan-of-care completion 22% to 58% (p50 reminder-to-tap latency 1.7s over BAA SMS), inbound conversation resolution without human 76%, monthly collected revenue $74K to $112K.
+
+Full write-up with the 5-layer architecture and 30-day rollout: https://zeniapartners.com/blog/physical-therapy-crm-with-ai.html
+
+#HealthTech #HIPAA #WhatsAppBusinessAPI #SystemsIntegration
+
+---
+

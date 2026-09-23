@@ -6938,3 +6938,19 @@ Full write-up with the six-automation rollout and integration reality: https://z
 #SystemsIntegration #WhatsAppBusinessAPI #InstagramAPI #AIAgents
 
 ---
+
+## 2026-09-23 - Intelligent AI agents for Málaga SMBs: the 7-layer architecture that actually holds (EN)
+
+"Intelligent AI agent" gets pitched to Málaga SMBs as a smarter chatbot. In production it is a seven-layer system where the LLM is one component, not the product.
+
+The reference stack we run on the ground: WhatsApp Business Cloud API (BSP-verified numbers, not the consumer app), a reasoning layer on Claude Sonnet 4.5 with strict function calling and Haiku 4.5 for intent classification, a pgvector knowledge base scoped per tenant to kill cross-account leakage, a tools layer that writes to Google Calendar, CoverManager, Holded and Stripe with idempotency keys, an operational CRM as the single source of truth, a guardrails middleware for RGPD and clinical-consent gating, and OpenTelemetry across the whole path.
+
+Two production numbers on a 4-clinic Málaga aesthetics network at day 60: p95 end-to-end latency 1.9 seconds per turn, autonomous resolution rate 81% at 12K conversations/month with a hard escalation SLA of 90 seconds when the confidence threshold on any function call drops below 0.72.
+
+The failure mode that cost us the most weeks was treating session memory and patient memory as one Redis namespace; TTL-bound session state solved it.
+
+Full write-up with the vertical playbooks and the 5-week rollout: https://zeniapartners.com/blog/agentes-inteligentes-ia-malaga.html
+
+#AIAgents #SystemsIntegration #WhatsAppBusinessAPI #EnterpriseArchitecture
+
+---

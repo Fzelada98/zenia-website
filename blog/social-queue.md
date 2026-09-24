@@ -7016,3 +7016,18 @@ Full write-up with the integration matrix and the 2-week rollout: https://zeniap
 
 ---
 
+## 2026-09-24 - Developing an AI agent for a hair salon: the four layers that decide whether Saturday afternoon survives (EN)
+
+Every "AI booking bot for salons" tutorial ends at prompt-plus-webhook. That works for a demo. It falls apart the moment two clients text the same 15-second window on a Saturday.
+
+Reference stack we ship for a 4-chair Spanish salon: WhatsApp Business Cloud API as ingress with HMAC-verified webhooks and dedup by message_id; a two-model orchestrator (Haiku 4.5 for intent routing, Sonnet 4.5 only on the turn that needs tool-use, cutting per-message LLM spend around 70% versus single-model designs); typed tools over Postgres with a UNIQUE(professional_id, slot_start) constraint plus Redis Streams as the queue so retries do not double-book; and OpenTelemetry+Langfuse traces so any conversation can be reconstructed post-hoc for compliance and debugging.
+
+Two production numbers on the reference salon at day 90: p95 end-to-end response latency 4.5 seconds across ~2,500 monthly conversations, and hard concurrency correctness of zero double-bookings across 3,700 written slots even during peak Saturday hours.
+
+The failure mode that cost us the most iteration was Meta's 20-second webhook retry: a slow LLM call inside the receiver produced duplicate reservations 4% of the time. Moving the LLM behind the queue and responding 200 to the webhook in under 200 ms with idempotency keyed on message_id took that duplicate rate to zero.
+
+Full breakdown with stack, latency budget by stage and build-vs-buy numbers: https://zeniapartners.com/blog/desarrollo-agente-ai-peluqueria.html
+
+#SystemsIntegration #WhatsAppBusinessAPI #AIAgents #EnterpriseArchitecture
+
+---

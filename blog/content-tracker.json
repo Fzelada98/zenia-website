@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-09-24T14:00:00+00:00",
+  "lastRun": "2026-09-24T22:00:00+00:00",
   "posts": [
+    {
+      "slug": "desarrollo-agente-ai-peluqueria",
+      "keyword": "desarrollo agente ai peluquería",
+      "tier": 2,
+      "cluster": "belleza-tecnico",
+      "status": "published",
+      "date": "2026-09-24",
+      "source": "striking"
+    },
     {
       "slug": "reducir-no-shows-peluqueria-whatsapp",
       "keyword": "reducir no shows peluquería whatsapp",

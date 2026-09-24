@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-09-23T22:00:00+00:00",
+  "lastRun": "2026-09-24T06:00:00+00:00",
   "posts": [
+    {
+      "slug": "automatizacion-para-restaurantes-en-madrid",
+      "keyword": "automatización para restaurantes en Madrid",
+      "tier": 4,
+      "cluster": "restaurantes-cities",
+      "status": "published",
+      "date": "2026-09-24",
+      "source": "matrix"
+    },
     {
       "slug": "agentes-inteligentes-ia-malaga",
       "keyword": "agentes inteligentes ia málaga",

@@ -6967,4 +6967,19 @@ Full write-up with the ROI math and the 5-week rollout: https://zeniapartners.co
 #SystemsIntegration #WhatsAppBusinessAPI #AIAgents #EnterpriseArchitecture
 
 ---
+## 2026-09-24 - AI agents for US nail salons: the write-back layer that turns messaging into revenue (EN)
+
+Every "AI receptionist for nail salons" pitch collapses at the same seam: read-only calendar access. The client asks "6pm Thursday with Kim," the agent proposes it, then hands off a booking link and hopes. That is not an agent, that is a smarter contact form.
+
+Reference stack we ship for a US single-location shop: SMS on a 10DLC-registered brand and WhatsApp on the Business Cloud API (BSP-verified, not the consumer app) as ingress; an orchestrator with idempotent write access to Vagaro, Booksy, Square Appointments, Fresha or GlossGenius over their REST APIs; a Postgres advisory lock on (location_id, tech_id, slot_start) so parallel inbound threads cannot double-book the same chair; a Stripe-linked deposit gate for services over $75 that only releases the calendar write on paid intent; and a voice tier on a low-latency STT/TTS pipeline for the missed-call recovery loop.
+
+Two production numbers on a two-tech Austin salon at day 90: p95 booking-write latency 1.4 seconds end-to-end across 1,900 monthly turns, no-show rate 6.2% to 2.1% once the T-24h and T-2h confirm loop was tied to the deposit gate and waitlist advisory-lock release.
+
+The failure mode that cost us the most weeks was Booksy's rate-limit budget: bursting reminder templates during the 6pm cancellation window blew the per-minute quota and silently dropped confirms; a token-bucket ahead of the API client fixed it.
+
+Full write-up with the integration matrix and the 2-week rollout: https://zeniapartners.com/blog/ai-agent-for-nail-salons.html
+
+#SystemsIntegration #WhatsAppBusinessAPI #AIAgents #EnterpriseArchitecture
+
+---
 

@@ -6956,6 +6956,8 @@ Full write-up with the vertical playbooks and the 5-week rollout: https://zeniap
 ---
 ## 2026-09-24 - Automating restaurant reservations at Madrid density: the concurrency layer nobody ships (EN)
 
+<!-- PUBLISHED:make-webhook at 2026-09-24T13:40:36Z -->
+
 Reservation automation for a Madrid restaurant is not "a WhatsApp bot on top of CoverManager." At Malasaña or Chamberí density on a Saturday night, the interesting problem is concurrency: 40 to 60 parallel WhatsApp threads hitting the same seven-table capacity window between 20:30 and 22:30, plus TheFork and Google Reserve holding parallel locks on the same slots.
 
 Reference stack we run: WhatsApp Business Cloud API (BSP-verified number, no consumer app) as ingress, an orchestrator that acquires a Postgres row-level advisory lock on (restaurant_id, service_id, slot_start) before any user-facing "checking availability" turn, a bidirectional sync to CoverManager and TheFork keyed on an idempotency hash so a webhook retry never double-books a two-top, and a Meta-compliant per-tenant agent (personalized business scope, not the generic-AI class Meta restricted in January 2026).

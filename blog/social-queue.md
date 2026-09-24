@@ -6985,3 +6985,18 @@ Full write-up with the integration matrix and the 2-week rollout: https://zeniap
 
 ---
 
+## 2026-09-24 - Reducir no shows en peluquería: la orquestación de cuatro momentos que mueve la tasa del 19% al 6% (EN)
+
+Every "WhatsApp reminder" pitch for salons ships the same primitive: a single T-24h template blast. It moves no-show rate from ~19% to ~13% and everyone declares victory. The 13% is where the real engineering starts.
+
+The reference stack we ship for a Spanish 4-chair salon: WhatsApp Business Cloud API (BSP-verified, not the consumer client) as ingress; an orchestrator with idempotent read/write against Koibox, Fresha and Booksy over their REST endpoints; a Postgres advisory lock on (location_id, stylist_id, slot_start) so a T-72h confirm reply and a waitlist offer cannot both claim the same window; a Stripe-linked deposit gate that only releases the calendar write on paid intent for services over 45 minutes or first-visit clients; and a segmentation job that scores each customer profile on prior-no-show frequency, feeding the deposit policy per booking rather than as a blanket rule.
+
+Two production numbers at day 90 on the reference salon: no-show rate 19% to 6% across ~260 monthly appointments, waitlist fill on <12h cancellations 15% to 62% with p95 slot-refill latency under 4 minutes end-to-end.
+
+The failure mode that cost us the most iteration was WhatsApp template quality-rating throttling: T-72h and T-24h reminders share the same template category, so any bulk send that hit the pacing limit degraded the account's messaging tier for 24 hours. A per-BSP-template token bucket plus splitting confirms and reminders into distinct message templates fixed it.
+
+Full write-up with the integration matrix and the 4-week rollout: https://zeniapartners.com/blog/reducir-no-shows-peluqueria-whatsapp.html
+
+#SystemsIntegration #WhatsAppBusinessAPI #AIAgents #EnterpriseArchitecture
+
+---

@@ -7000,3 +7000,19 @@ Full write-up with the integration matrix and the 4-week rollout: https://zeniap
 #SystemsIntegration #WhatsAppBusinessAPI #AIAgents #EnterpriseArchitecture
 
 ---
+## 2026-09-24 - AI Agent for Barbershops: the per-barber availability contract that decides whether the whole thing works (EN)
+
+Every "AI receptionist for barbershops" pitch collapses at the same seam: shop-level availability instead of per-barber availability. The client asks for "Marco Saturday 11:30," the agent sees an open shop slot and books it against Marco even though he blocked out that hour for a beard trim already in progress. Two clients arrive at the same chair. That is not an agent, that is a booking-shaped random number generator.
+
+Reference stack we ship for a US 1-4 chair shop: WhatsApp Business Cloud API (BSP-verified, not the consumer app) as ingress; a voice tier on a low-latency STT/TTS pipeline behind a 4-ring failover for missed-call recovery; an orchestrator with idempotent read/write access to Booksy, Squire, GlossGenius, Vagaro or a raw Google Calendar over their REST APIs, keyed on (shop_id, barber_id, slot_start) rather than shop_id alone; a Postgres advisory lock on that same tuple so parallel WhatsApp threads and inbound voice calls cannot claim the same chair-minute; a Stripe-linked $10 deposit gate for first-time clients that only releases the calendar write on paid intent; and a waitlist reallocator that, on any cancel event, replays the queue against the freed slot inside 5 minutes.
+
+Two production numbers on a 3-chair reference shop at day 120: missed-call to booked conversion 5% to 32% across ~140 recovered calls per month, no-show rate 18% to 6% once the T-24h and T-2h confirm loop was tied to the deposit gate and the waitlist advisory-lock release.
+
+The failure mode that cost us the most weeks was Booksy per-resource rate limits on the availability endpoint: any hot moment on Saturdays with 6+ concurrent inbound threads exceeded the per-minute quota and forced fallback to cached availability, which drifted 30-90 seconds behind ground truth and produced ghost slots. A per-barber token bucket in front of the API client plus a 5-second cache TTL bounded on write-through fixed it.
+
+Full write-up with the integration matrix and the 2-week rollout: https://zeniapartners.com/blog/ai-agent-for-barbershops.html
+
+#SystemsIntegration #WhatsAppBusinessAPI #AIAgents #EnterpriseArchitecture
+
+---
+

@@ -116,6 +116,17 @@ function submitBookingForm(e) {
     body: JSON.stringify(data)
   }).then(function() {}).catch(function() {});
 
+  // Copia al registro de leads (25-sep-2026): el backend de arriba es una caja
+  // negra y estas respuestas nunca llegaban al aviso de leads.
+  try {
+    navigator.sendBeacon('https://gaia-relojes.onrender.com/gwb/lead', JSON.stringify({
+      site: 'zenia', path: location.pathname, ref: document.referrer || '', kind: 'booking',
+      name: data.company, condition: data.size, model: data.area,
+      papers: data.onlinePresence.slice(0, 40),
+      year: data.callScheduled ? 'Llamada ' + data.callScheduled.slice(0, 16).replace('T', ' ') : ''
+    }));
+  } catch (err) {}
+
   showStep(3);
 }
 

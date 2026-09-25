@@ -10,7 +10,7 @@ const translations = {
     "hero.title": 'Don\'t Just Add AI.<br><span class="text-gradient">Redesign Your Business Around It.</span>',
     "hero.subtitle": "Most companies bolt AI onto broken processes and wonder why nothing changes. We go inside your operations, understand how your business actually works, and build custom AI that transforms it from within.",
     "hero.cta_primary": "Book a Free Strategy Call",
-    "hero.cta_secondary": "See How It Works",
+    "hero.cta_secondary": "Message Us on WhatsApp",
     "hero.micro": "From first call to deployed AI in under 8 weeks",
     "hero.industries_label": "Built for",
     "founder.quote": "Every company is adding AI tools. Almost none are becoming AI companies. We don't give you a chatbot — we redesign your business from within, with custom technology that becomes your competitive edge.",
@@ -159,7 +159,7 @@ const translations = {
     "hero.title": 'No Agregues IA.<br><span class="text-gradient">Rediseña Tu Empresa Alrededor de Ella.</span>',
     "hero.subtitle": "La mayoría de empresas añaden herramientas de IA a procesos que no funcionan y se preguntan por qué nada cambia. Nosotros entramos en tus operaciones, entendemos cómo funciona tu negocio realmente, y construimos la IA que lo transforma desde adentro.",
     "hero.cta_primary": "Agenda una Llamada Gratis",
-    "hero.cta_secondary": "Ver Cómo Funciona",
+    "hero.cta_secondary": "Escríbenos por WhatsApp",
     "hero.micro": "De la primera llamada a IA desplegada en menos de 8 semanas",
     "hero.industries_label": "Hecho para",
     "founder.quote": "Todas las empresas están agregando herramientas de IA. Casi ninguna se está convirtiendo en una empresa de IA. Nosotros no te damos un chatbot — rediseñamos tu negocio desde adentro, con tecnología propia que se convierte en tu ventaja competitiva.",
@@ -337,7 +337,7 @@ function showLangModal() {
 }
 
 // Expose for inline onclick handlers
-window.setLang = setLang;
+window.setLang = applyTranslations;  // setLang nunca existió: el error cortaba el script aquí
 window.pickLang = pickLang;
 window.showLangModal = showLangModal;
 window.getCurrentLang = function() { return currentLang; };

@@ -78,7 +78,10 @@ var detectedLang = detectLanguage();
 if (detectedLang) {
   applyTranslations(detectedLang);
 } else {
-  // No preference saved — default to English while modal shows
-  applyTranslations('en');
-  showLangModal();
+  // Sin preferencia guardada: idioma del navegador. Hasta el 25-sep-2026 se
+  // mostraba un modal "Choose your language" a pantalla completa en la primera
+  // visita de la home, un muro más antes de ver nada. Quien quiera la otra
+  // versión tiene /es/ o ?lang=en|es.
+  var navLang = (navigator.languages && navigator.languages[0]) || navigator.language || 'en';
+  applyTranslations(/^es/i.test(navLang) ? 'es' : 'en');
 }

@@ -7081,3 +7081,19 @@ Full architecture by capa, KPI table (containment, latency, tool-call success, h
 
 ---
 
+## 2026-09-25 - AI Agent for Electricians: the on-call rotation and the EV cross-sell gate a voice IVR will not catch (EN)
+
+Voice IVR in front of a residential electrical shop misses the two things that decide the P&L: which caller is standing next to an actively arcing panel, and which "how much for a Level 2 charger" call is really a $9,000 to $12,000 panel-plus-EV bundle sitting behind the intake.
+
+Reference stack we ship for a US 4 to 12-truck residential electrical shop: an AI voice tier on Deepgram Nova-3 STT with sub-200ms first-token TTS and barge-in enabled, SIP trunk sized for 40+ concurrent calls; a safety-tier classifier fine-tuned on ~6,000 emergency transcripts that routes active-arc, burning-smell and panel-warm scenarios to a 90-second on-call page (PagerDuty webhook keyed on the current rotation table in ServiceTitan, not a static Twilio SMS list); WhatsApp Business Cloud API and 10DLC-registered SMS as parallel ingress with photo intake on the panel; an orchestrator with idempotent writes into ServiceTitan, Housecall Pro or Jobber over REST, keyed on (property_id, tech_id, slot_start) with a Postgres advisory lock to prevent parallel double-bookings on the same evening slot; and an EV/panel qualification schema (panel amperage, run distance, vehicle model, load-management preference, meter location) that lands in the CRM as structured fields so the estimator walks in with the bundle pre-quoted.
+
+Two production numbers on a 6-truck Denver reference shop at day 60: p95 booking-write latency 1.4 seconds end-to-end across ~1,020 monthly calls, and EV inquiry qualification rate at 92% with 66% booking conversion versus 34% baseline. Emergency page latency: median 71 seconds from call start to on-call electrician's phone ringing.
+
+The failure mode that cost us the most iteration was ServiceTitan's on-call rotation living outside the schedule endpoint. Reading it from the tech-management API on every call added 800ms and drifted stale when dispatch rotated a tech mid-shift. A 30-second TTL cache with invalidation on the tech-management webhook fixed both the latency and the staleness, and pushed emergency page P95 back under 90 seconds.
+
+Full write-up with the integration matrix, the six intake scenarios and the 30-day rollout: https://zeniapartners.com/blog/ai-agent-for-electricians.html
+
+#SystemsIntegration #WhatsAppBusinessAPI #AIAgents #EnterpriseArchitecture
+
+---
+

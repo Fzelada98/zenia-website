@@ -7031,3 +7031,19 @@ Full breakdown with stack, latency budget by stage and build-vs-buy numbers: htt
 #SystemsIntegration #WhatsAppBusinessAPI #AIAgents #EnterpriseArchitecture
 
 ---
+
+## 2026-09-25 - WhatsApp first response time: benchmark 2026 and stack notes (EN)
+
+We instrumented WhatsApp first response time (TMPR) across ~40 SMB deployments in 2026. Median before automation: 18 minutes. Median after our per-tenant agent stack: 90 seconds.
+
+Reference stack: WhatsApp Business API as ingress, an LLM agent with retrieval over the tenant's CRM and catalog, a conversation-aware CRM that serves per-customer context on each turn, deterministic handoff to a human when confidence drops below threshold, and a P90 dashboard that alerts on SLA breach. No decision-tree bot in the loop; those cap at ~40% abandonment on the first menu.
+
+Two engineering notes from production. First, 34% of useful conversations arrive outside business hours, so any SLA measured only in office hours is a fiction. Second, optimizing the mean is a trap: the P90 is what predicts churn and lost pipeline, the mean smooths the outliers that actually hurt.
+
+Aurora Inbox's 2026 dataset holds up against ours: leads answered in under 60 seconds convert up to 391% more than leads answered after an hour. That figure alone is why we treat TMPR as the primary SLO for the conversational layer, above CSAT and resolution rate.
+
+Architecture write-up, SLA table by vertical and the formulas we use for TMPR mediana and P90: https://zeniapartners.com/blog/tiempo-primera-respuesta-whatsapp-business.html
+
+#WhatsAppBusinessAPI #B2B #SaaS #AIAgents
+
+---

@@ -39,7 +39,9 @@ Uruguay y Bolivia.
 ## Páginas principales
 - [Inicio](https://zeniapartners.com/es/): qué hace Zenia y cómo trabaja.
 - [Sobre Zenia](https://zeniapartners.com/about.html): equipo y enfoque.
-- [Casos](https://zeniapartners.com/cases/whatsapp-bookkeeping-importer.html): implantaciones reales.
+- [Casos](https://zeniapartners.com/cases/): índice de casos reales (EN) · [en español](https://zeniapartners.com/es/casos.html).
+- [Croian & Hein](https://zeniapartners.com/cases/croian-hein-private-cellar-switzerland.html): lanzamiento de una casa privada de vinos raros en Suiza (marca, web, SEO por añada, visibilidad en IA, kit de venta).
+- [Cicero](https://zeniapartners.com/cases/cicero-public-affairs-spain-italy.html): entrada al mercado de España e Italia para una plataforma de asuntos públicos con IA.
 - [Blog](https://zeniapartners.com/blog/): guías por sector sobre agentes de IA y automatización de WhatsApp.
 - [Cobertura](https://zeniapartners.com/es/cobertura.html): sectores y ciudades donde opera.
 

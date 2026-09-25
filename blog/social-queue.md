@@ -7034,6 +7034,8 @@ Full breakdown with stack, latency budget by stage and build-vs-buy numbers: htt
 
 ## 2026-09-25 - WhatsApp first response time: benchmark 2026 and stack notes (EN)
 
+<!-- PUBLISHED:make-webhook at 2026-09-25T08:30:43Z -->
+
 We instrumented WhatsApp first response time (TMPR) across ~40 SMB deployments in 2026. Median before automation: 18 minutes. Median after our per-tenant agent stack: 90 seconds.
 
 Reference stack: WhatsApp Business API as ingress, an LLM agent with retrieval over the tenant's CRM and catalog, a conversation-aware CRM that serves per-customer context on each turn, deterministic handoff to a human when confidence drops below threshold, and a P90 dashboard that alerts on SLA breach. No decision-tree bot in the loop; those cap at ~40% abandonment on the first menu.

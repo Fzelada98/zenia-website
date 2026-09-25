@@ -7065,3 +7065,19 @@ Full write-up with the integration matrix, the 5-layer stack and the 30-day roll
 #SystemsIntegration #WhatsAppBusinessAPI #AIAgents #EnterpriseArchitecture
 
 ---
+## 2026-09-25 - AI Agent for Call Center: the 280ms latency floor and the CRM webhook that becomes the real bottleneck
+
+Median end-to-end latency on voice-agent contact center deployments dropped from 450ms in 2025 to 280ms in Q1 2026. Below 300ms conversations stop reading as "bot turn, then response" and start reading as dialog. That threshold is what made voice AI viable in production queues this year, not the model quality.
+
+Reference stack we ship for a 10k-100k contacts/month operation: Deepgram Nova-3 for ASR (150ms transcription budget), an LLM agent (Claude Sonnet 4.5 or GPT-5) driving tool calls typed as JSON Schema against CRM, ERP and DMS through an API gateway with per-tool circuit breakers and cache TTLs, LiveKit turn-taking for barge-in and interrupt handling, ElevenLabs v3 streaming TTS emitting first phonemes before the LLM has finished generating, WhatsApp Business API as a parallel non-voice channel via a BSP with HSM templates, and OpenTelemetry traces per capa so p95 latency is attributable, not guessable.
+
+Two production numbers on 2026 deployments: 41.2% median tier-1 containment (top quartile 58.7%) and 0.62 USD average cost per resolution versus 7.40 USD for a human agent, per McKinsey's 2026 CX dataset. Those numbers only hold when tool-call SLA sits above 98.5% success; the LLM almost never is the bottleneck, the CRM webhook usually is.
+
+The failure mode that cost us the most weeks: unversioned system prompts changed directly in production. A single-word swap tripled token cost on a Tuesday and no eval caught it because no eval existed. We now gate every prompt change behind 200-500 synthetic conversations per intent with regression comparison against the previous release, committed as artifacts in the CI pipeline.
+
+Full architecture by capa, KPI table (containment, latency, tool-call success, handoff quality, hallucination rate), 6-week deployment roadmap and the 7 errors that kill these projects: https://zeniapartners.com/blog/agente-ia-para-call-center.html
+
+#ContactCenterAI #AIAgents #SystemsIntegration #WhatsAppBusinessAPI
+
+---
+

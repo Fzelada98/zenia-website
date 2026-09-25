@@ -7049,3 +7049,19 @@ Architecture write-up, SLA table by vertical and the formulas we use for TMPR me
 #WhatsAppBusinessAPI #B2B #SaaS #AIAgents
 
 ---
+
+## 2026-09-25 - AI Agent for Roofing Companies: the storm-surge intake tier that a CRM alone will not fix (EN)
+
+Every "AI receptionist for roofing" pitch collapses at the same seam: single-line voice IVR in front of a static CRM. A 72-hour hail event drives 8x to 20x inbound volume and the shop's phone queue serializes at 1. That is not an agent, that is a busy signal with better copy.
+
+Reference stack we ship for a US 2 to 15-crew roofing operation: an AI voice tier on a low-latency STT/TTS pipeline (barge-in enabled, sub-800ms first-token) fronted by a SIP trunk that scales to 100+ concurrent calls; WhatsApp Business Cloud API (BSP-verified, not the consumer app) and 10DLC-registered SMS as parallel ingress; an orchestrator with idempotent writes into JobNimbus, AccuLynx, Roofr, Leap or SumoQuote over their REST APIs keyed on (property_id, inspection_slot); a Postgres advisory lock on (crew_id, slot_start) so parallel storm calls cannot double-book the same inspection window; a NOAA hail/wind webhook that flips the agent into surge mode on served ZIPs, pre-reserves inspection blocks and opens a broadcast list of past customers in the polygon; and an insurance intake schema (carrier, policy, date of loss, deductible, prior claim history) that lands in the CRM as structured fields, not free-text notes.
+
+Two production numbers on a 4-crew DFW reference shop at day 90: p95 booking-write latency 1.6 seconds end-to-end across ~2,300 monthly turns, and concurrent-call capacity from 1 in-queue to 60+ parallel with zero double-bookings across 4,100 written slots during a May hail event.
+
+The failure mode that cost us the most weeks was JobNimbus rate-limit budgets on the appointments endpoint: surge bursts during the 6-7 PM post-storm window blew the per-minute quota and forced fallback to cached availability, drifting 60-120 seconds behind ground truth and generating ghost slots. A per-crew token bucket in front of the API client plus a 5-second cache TTL bounded on write-through fixed it.
+
+Full write-up with the integration matrix, the 5-layer stack and the 30-day rollout: https://zeniapartners.com/blog/ai-agent-for-roofing-companies.html
+
+#SystemsIntegration #WhatsAppBusinessAPI #AIAgents #EnterpriseArchitecture
+
+---

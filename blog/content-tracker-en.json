@@ -1,10 +1,10 @@
 {
-  "lastRun": "2026-09-25T16:00:00Z",
+  "lastRun": "2026-09-26T00:00:00Z",
   "market": "US/UK small business",
   "posts": [
     { "slug": "ai-agent-for-roofing-companies", "keyword": "ai agent for roofing companies", "tier": 1, "cluster": "trades", "status": "published", "date": "2026-09-25" },
     { "slug": "ai-agent-for-electricians", "keyword": "ai agent for electricians", "tier": 1, "cluster": "trades", "status": "published", "date": "2026-09-25" },
-    { "slug": "ai-agent-for-landscaping-companies", "keyword": "ai agent for landscaping companies", "tier": 1, "cluster": "trades", "status": "pending" },
+    { "slug": "ai-agent-for-landscaping-companies", "keyword": "ai agent for landscaping companies", "tier": 1, "cluster": "trades", "status": "published", "date": "2026-09-26" },
     { "slug": "ai-agent-for-pest-control-companies", "keyword": "ai agent for pest control companies", "tier": 1, "cluster": "trades", "status": "pending" },
     { "slug": "ai-agent-for-moving-companies", "keyword": "ai agent for moving companies", "tier": 1, "cluster": "services", "status": "pending" },
     { "slug": "ai-agent-for-optometrists", "keyword": "ai agent for optometrists", "tier": 1, "cluster": "healthcare", "status": "pending" },

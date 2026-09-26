@@ -7129,3 +7129,19 @@ Full write-up with the 5 CRM modules, ROI model, and integration diagram: https:
 #SystemsIntegration #WhatsAppBusinessAPI #AIAgents #FiscalTech
 
 ---
+
+## 2026-09-26 - AI Agent for Landscaping Companies: engineering notes on peak-season intake (EN)
+
+US landscaping shops miss 70-80% of inbound calls in April and October (NALP 2024 Industry Survey; Cira 2026 home-services benchmarks), the two quarters where 60-70% of annual leads land. On a median $14,682 lifetime customer value (Aspire 2025 industry data) and a 46% phone-to-close conversion when the phone actually gets answered, one dropped first contact is a signed $2,600-4,000 recurring maintenance contract given to the competitor next door.
+
+Reference stack we ship on landscaping intake migrations: a low-latency ASR (Deepgram Nova-3 or Whisper-v3 fine-tuned on service-scope vocabulary: aeration, overseed, mulch, hardscape, retaining wall, drainage), an LLM planner (Claude Sonnet 5 or GPT-4.1) with a tool-use loop over price_book.lookup, route.hold_slot, and crm.write_appointment, sub-1s TTS (ElevenLabs Turbo v2), and a WhatsApp Business Cloud API layer behind a BSP with HSM templates versioned in git and preflight-validated against Meta's category machine so per-conversation cost stays between $0.014 and $0.06 by design. The idempotency key on crm.write_appointment is (property_id, service_code, visit_date) so retries during the 24-hour customer-care window never double-book a Thursday route. Bidirectional sync into Aspire, LMN, Jobber, Service Autopilot or Yardbook over REST with an outbox pattern to survive their rate limits (Aspire 60 req/min, Jobber 100 req/min on the developer tier).
+
+Two production numbers from a 5-crew Charlotte deployment (Aspire + WhatsApp API + AI voice): concurrent inbound-call handling capacity moved from 2 to 40, and p95 pickup latency stayed under 1.8s under a peak-week load of 780 calls/week. Missed-call rate dropped from 75% to 8%, signed recurring value moved from $48K to $169K/month.
+
+Failure mode that cost us most iteration: teams treating the AI as an autopilot on design-build quoting. A $22,000 patio-plus-drainage build cannot be priced from a call transcript, and letting the model try it produced 9% false-positive bookings the estimator had to unwind. Fix is a hard rule in the planner: anything over $6,000 or involving grading, irrigation, masonry or drainage routes to a designer visit, never quotes on the call.
+
+Full write-up with the 5-layer stack, 30-day rollout, pricing bands and CRM-integration notes: https://zeniapartners.com/blog/ai-agent-for-landscaping-companies.html
+
+#SystemsIntegration #WhatsAppBusinessAPI #AIAgents #FieldService
+
+---

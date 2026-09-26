@@ -958,8 +958,7 @@ a:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; border
     top: 72px;
     left: 0;
     right: 0;
-    background: rgba(10, 15, 28, 0.98);
-    backdrop-filter: blur(24px);
+    background: #0A0F1C;
     padding: 16px 24px 8px;
     gap: 4px;
     border-top: 1px solid var(--border);
@@ -975,11 +974,10 @@ a:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; border
   .nav-right.nav-open {
     display: flex;
     position: absolute;
-    top: calc(72px + 240px);
+    top: calc(72px + 380px); /* respaldo: main.js lo coloca bajo el último enlace */
     left: 0;
     right: 0;
-    background: rgba(10, 15, 28, 0.98);
-    backdrop-filter: blur(24px);
+    background: #0A0F1C;
     padding: 12px 24px 16px;
     justify-content: space-between;
     align-items: center;

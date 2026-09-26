@@ -66,6 +66,9 @@ if (navToggle) {
     navRight.classList.toggle('nav-open');
     document.body.classList.toggle('nav-menu-open', isOpen);
     navToggle.setAttribute('aria-expanded', String(isOpen));
+    // El botón va justo debajo del último enlace, midiendo la lista real:
+    // con una altura fija en el CSS, al añadir enlaces el botón los tapaba.
+    navRight.style.top = isOpen ? (navLinks.offsetTop + navLinks.offsetHeight) + 'px' : '';
   });
   // Close menu when a nav link is clicked
   navLinks.querySelectorAll('a').forEach(function(link) {

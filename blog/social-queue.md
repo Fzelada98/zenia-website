@@ -7161,3 +7161,19 @@ Full engineering breakdown with the CoverManager/TheFork integration surface, la
 #WhatsAppBusinessAPI #AIAgents #SystemDesign #RestaurantTech
 
 ---
+
+## 2026-09-26 - AI Agent for Pest Control Companies: engineering notes on route-aware intake (EN)
+
+US pest control is a $29.9B market with 34,076 companies (IBISWorld 2026), 81.4% of them running one or two locations. Intake is the bottleneck: 62% of inbound home-service calls go unanswered (CallJolt 2026 home-services report) and each missed call is worth $53.50 on average, or up to $1,200 when the call would have signed a quarterly plan. Response-time curve is unforgiving: 1-minute pickup converts at parity with 5-minute; past 5 minutes conversion drops 80%; past 30 minutes 90% of leads have booked with a competitor (InsideSales/Xant 55M-activity study, reconfirmed by Invoca 2026 home-services benchmarks).
+
+Reference stack we ship on pest control intake migrations: Deepgram Nova-3 ASR fine-tuned on pest and species vocabulary (German cockroach, Norway rat, Formosan termite, Aedes aegypti, bed bug, IPM, FIFRA) to hold WER under 6% on field-side terms; Claude Sonnet 5 planner with a tool-use loop over pricebook.lookup, route.hold_slot_by_zip, crm.write_appointment and compliance.log_chemical; ElevenLabs Turbo v2 TTS under 320ms; WhatsApp Business Cloud API behind a BSP with HSM templates versioned in git and preflight-validated against Meta's category machine so per-conversation cost stays $0.014-$0.06 by design. The idempotency key on crm.write_appointment is (property_id, service_code, visit_date) so retries inside Meta's 24-hour customer-care window never double-book a Tuesday route. Bidirectional sync into PestPac, FieldRoutes, GorillaDesk, PestRoutes and Briostack over REST with an outbox pattern to absorb their rate limits (FieldRoutes 120 req/min, GorillaDesk 60 req/min on the standard tier). Recurring-jobs generation happens CRM-side; the AI only writes the first visit and lets PestPac/FieldRoutes fan out the quarterly cadence, which keeps chemical-log and IPM records single-sourced.
+
+Two production numbers from a 6-truck Tampa deployment (PestPac + WhatsApp API + AI voice): concurrent inbound-call capacity moved from 2 to 40, p95 pickup latency stayed under 1.9s under a peak-week load of 720 calls, missed-call rate dropped from 62% to 5%, and quarterly-plan conversion on the first call moved from 58% to 82% by scripting the dual-quote (one-time vs plan) as a single planner state rather than a follow-up branch. Automated SMS reminder sequence brought no-show on residential quarterly visits from 17% to 4.6%, which is truck-hour recovery, not marketing spend.
+
+Failure mode that cost the most iteration: letting the planner freelance on commercial and termite pricing. A 12,000 sq ft food-service account or a termite bait install cannot be priced from a call transcript, and the model attempting it produced 8% false-positive bookings the licensed inspector had to unwind. Hard rule now lives in the planner: anything commercial over 3,000 sq ft, anything termite, anything wildlife or bed bug routes to an inspector visit and never quotes on the call.
+
+Full write-up with the 5-layer stack, PestPac/FieldRoutes/GorillaDesk integration surface, 30-day rollout, and pricing bands: https://zeniapartners.com/blog/ai-agent-for-pest-control-companies.html
+
+#SystemsIntegration #WhatsAppBusinessAPI #AIAgents #FieldService
+
+---

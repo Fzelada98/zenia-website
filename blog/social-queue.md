@@ -7113,3 +7113,19 @@ Full breakdown by sector (restauración, gimnasios, belleza, retail, salud, B2B,
 #SystemsIntegration #WhatsAppBusinessAPI #AIAgents #EnterpriseArchitecture
 
 ---
+
+## 2026-09-26 - CRM para gestorías: engineering notes on retention infra for Spanish tax practices (EN)
+
+Spain has around 70,000 gestorías (INE) and roughly 10% run any real online service (Channel Partner). The interesting engineering problem is not another CRM UI, it is wiring an ERP-fiscal system (a3ASESOR, Sage, Contasol, Anfix) to a WhatsApp Business Cloud API layer and a reminder scheduler that never misses Modelo 303, 130, 190 or Renta deadlines across 17 regional calendars plus the Basque and Navarrese forales.
+
+Reference stack we ship: WhatsApp Business Cloud API through a BSP with HSM templates versioned in git and preflight-validated against Meta category rules, a fiscal-calendar service pre-loaded with AEAT plus foralorio deadlines, and an orchestrator writing idempotently into the client CRM keyed on (client_nif, model_code, period) so retries during the 24h customer-care window never double-send. Conector to the fiscal ERP over REST/SOAP so client IAE, IBAN and issued invoices stay one source of truth. OCR + validation on the client portal so IBAN and NIF errors caught before they hit the model.
+
+Two numbers from a 250-client practice on the reference deployment: churn dropped from 15% annual to 6% (worth ~18k EUR recurring), and gestor time on fiscal reminders fell from 28-35 hours per quarter to under 4 hours (measured, not surveyed).
+
+Failure mode we hit most often: teams treating the AI agent as a chatbot with FAQ replies. It has to escalate to the human asesor with full context (client history, open modelos, last invoice) or the practice churns worse than before. Escalation policy is the design decision, not the LLM choice.
+
+Full write-up with the 5 CRM modules, ROI model, and integration diagram: https://zeniapartners.com/blog/crm-para-gestorias.html
+
+#SystemsIntegration #WhatsAppBusinessAPI #AIAgents #FiscalTech
+
+---

@@ -7177,3 +7177,21 @@ Full write-up with the 5-layer stack, PestPac/FieldRoutes/GorillaDesk integratio
 #SystemsIntegration #WhatsAppBusinessAPI #AIAgents #FieldService
 
 ---
+## 2026-09-26 - Reactivar Clientas de Peluquería por WhatsApp: engineering notes on retention-triggered outbound (ES post)
+
+Salon and beauty CRMs sit on the largest addressable list a service SMB owns: 35-45% of the base is dormant, defined as >90 days since last visit. Reactivation on WhatsApp beats email masivo by a factor we consistently measure in production: 20-28% booked-appointment rate vs 2-4%, at €2-5 per recovered client vs €18-26 (Meta Business benchmarks Q1 2026 for hair/beauty vertical, cross-checked against our own 40-salon dataset).
+
+Reference stack we run on a salon reactivation deployment: WhatsApp Business Cloud API behind a BSP with HSM templates versioned in git and preflight-validated against Meta's category machine (transactional vs marketing) so per-conversation cost stays €0.019-€0.038 in the ES market band; Claude Sonnet 5 as the planner with tool-use over agenda.check_slots, agenda.hold, agenda.book against Booksy, Timify, Fresha or Phorest; a segmentation job in Postgres that partitions the client table by days_since_last_visit into 45-60 / 61-90 / 91-180 / >180 buckets nightly and enqueues eligible rows into a rate-limited outbox at 100-150 messages/day per salon to stay under Meta's quality-rating throttles. Idempotency key on agenda.book is (client_phone, service_code, slot_ts) so a retry inside Meta's 24-hour customer-care window never double-books a Marta at 17:30 el jueves.
+
+Handoff is a first-class state, not an error branch: planner emits handoff.request with the transcript and the ficha (last_service, professional, ticket_avg, notes), the salon receptionist picks it up in a supervisor UI in under 400ms, and the resume path preserves the conversation cursor so the client never repeats. Escalation rate stabilised at 8.4% of sessions in production, almost entirely price negotiation or complaint routing.
+
+Two numbers from a 6-chair Madrid deployment (Timify + WhatsApp API + Zenia agent) on a 1.400-ficha base: 115 appointments booked in the first 14-day sweep across the four dormancy segments, and 62% of those recovered clients returned to the active retention cycle in the following 90 days, adding ~€30K/year in recurring revenue against a stack cost of €297-€497/month. The mechanical driver is the send-time distribution: 61% of dormant clients respond between 21:00 and 00:30 CET, which is exactly when the salon front desk is closed.
+
+Failure mode that cost most iteration: treating the LLM as a copywriter that generates the outbound. Meta rejects unversioned HSM templates on marketing category and quality-rating tanks fast once a phone-number-ID accumulates blocks. Fix is a strict template-first design: the planner selects from N pre-approved templates per segment, personalises only the placeholder slots (name, last service, professional, two concrete slots), and never composes free-form outbound.
+
+Full write-up with the 4-segment playbook, ROI model on a 6-chair salon, integration surface for Booksy/Timify/Fresha/Phorest, and the Meta quality-rating notes: https://zeniapartners.com/blog/reactivar-clientas-peluqueria-whatsapp.html
+
+#WhatsAppBusinessAPI #AIAgents #SystemDesign #CRM
+
+---
+

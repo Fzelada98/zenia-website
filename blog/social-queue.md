@@ -7253,3 +7253,18 @@ Full write-up: https://zeniapartners.com/blog/ai-agent-for-optometrists.html
 
 ---
 
+## 2026-09-27 - Precios WhatsApp Business API 2026 (ES post)
+
+Field notes on WhatsApp Business API cost engineering after Meta's July 2025 shift to per-message billing and the Oct 1, 2026 removal of the free service window.
+
+Stack: WhatsApp Business Cloud API through 360dialog (0% markup) or Twilio for high-volume tenants, a Postgres-backed template registry with automated category classification (marketing / utility / authentication / service), a plantilla-router that re-evaluates each outbound message against Meta's current tariff snapshot per country before send, and a segmentation pass on top of the CRM that trims marketing send volume 40-60% without hurting reply rate.
+
+Two production numbers across ~30 SMB tenants in Spain and LATAM: median cost per outbound conversation dropped from 0.042€ to 0.019€ once utility templates were re-approved out of marketing and the send-window was aligned to the free service quota. Meta bill variance shrank from +/-35% month-over-month to under +/-8% once template classification and country-aware rate tables were centralized instead of leaving categorization to the BSP dashboard.
+
+The non-obvious part: after Oct 1, 2026 the free service window disappears and any operator still leaning on that quota will see an 8-12% cost jump overnight. The mitigation is architectural, not commercial: batching, template consolidation, and shifting away from post-window follow-ups.
+
+Full write-up with per-country tariffs, BSP markup comparison and three worked cost scenarios (peluquería, restaurante, gimnasio): https://zeniapartners.com/blog/precios-whatsapp-business-api-2026.html
+
+#WhatsAppBusinessAPI #SystemDesign #InfraCost #B2B
+
+---

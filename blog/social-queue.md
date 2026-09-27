@@ -7208,3 +7208,19 @@ Full breakdown of the three deal ranges we see on 2026 SMB deployments (DIY no-c
 #AIAgents #WhatsAppBusinessAPI #LLMOps #Infrastructure
 
 ---
+## 2026-09-27 - AI agent for moving companies: speed-to-lead as system design (EN post)
+
+Ran the numbers on the moving vertical in the US market. Public benchmarks are unambiguous: only 38% of movers respond to a new lead inside 5 minutes, 78% of customers book with whoever calls back first, and a lead reached in under 60 seconds converts 391% higher than one reached at 30 minutes. The whole business is a speed-to-lead game, and it collapses onto three engineering primitives: pickup latency, price computation from a rules engine, and idempotent job push into a system of record.
+
+Reference stack we deploy on a mover account: an LLM voice agent on Twilio Media Streams (target end-to-end latency 380-520ms first token, 820-1100ms first spoken word) sits in front of the Google Business Profile phone number as a forwarded fallback after 3 rings; WhatsApp Business Cloud API and the web chat write into the same conversational state machine so the intake script has one implementation and three transports; the quoting layer is a deterministic price-book rules engine (hourly local, travel, packing, long-distance cwt or cuft, valuation, specialty surcharges, walk-away threshold) that the LLM calls as a tool, never a token-sampled number. Jobs push into SmartMoving, MoverBase, Elromco or MoversTech through a REST wrapper with an idempotency key of (origin_zip, destination_zip, move_date, phone_last4) so a Twilio callback retry inside the 5-second window never double-books a Tuesday 8am slot.
+
+Handoff to a human estimator is a first-class state, not an exception. Anything above the walk-away threshold, plus specialty logistics (piano, gun safe, storage-in-transit over 30 days, office moves with server racks) emits handoff.request with the intake transcript and the qualified job record; the estimator picks it up in a supervisor UI and the calendar booking survives the transition. Escalation rate stabilised at 11-14% of sessions on the moving vertical, most of it long-distance and commercial.
+
+Two production numbers from a 30-day pilot on a 3-truck local mover: missed-call rate dropped from 41% to 3.8% and median response time on web forms and WhatsApp dropped from 3h 12m to 22 seconds. On the same 168-lead monthly base, booked jobs went from 40 to 62 and Google reviews collected went from 8 to 46 in the same window. Operating cost of the stack ran $420/month all-in.
+
+Full write-up with the intake field list, the 5-touch follow-up sequence spec, the CRM integration surface, and the 4-week rollout: https://zeniapartners.com/blog/ai-agent-for-moving-companies.html
+
+#VoiceAgents #WhatsAppBusinessAPI #SystemDesign #Latency
+
+---
+

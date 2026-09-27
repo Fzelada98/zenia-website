@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-09-27T06:00:00+00:00",
+  "lastRun": "2026-09-27T14:00:00+00:00",
   "posts": [
+    {
+      "slug": "automatizacion-para-restaurantes-en-valencia",
+      "keyword": "automatización para restaurantes en Valencia",
+      "tier": 4,
+      "cluster": "restaurantes-cities",
+      "status": "published",
+      "date": "2026-09-27",
+      "source": "matrix"
+    },
     {
       "slug": "cuanto-cuesta-un-agente-de-ia-para-negocios",
       "keyword": "cuanto cuesta un agente de ia para negocios",

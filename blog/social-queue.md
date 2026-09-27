@@ -7224,3 +7224,16 @@ Full write-up with the intake field list, the 5-touch follow-up sequence spec, t
 
 ---
 
+## 2026-09-27 - Automatización para restaurantes en Valencia: multilingual intake as system design (ES post)
+
+Field notes from a Valencia restaurant deployment (60 covers, 2 services, historic-center location). The interesting engineering constraint is not the reservation flow; it is language detection at ingress and route-aware capacity on the way out.
+
+Stack: WhatsApp Business Cloud API as the primary transport, a single conversational state machine that also accepts Instagram DM and web chat, an LLM tool-use loop with function calls into the reservation system (CoverManager REST wrapper with an idempotency key of phone_e164 + service_date + party_size), and language auto-detection at the first token to route between ES/CA/EN/FR/IT prompt variants. Capacity is not a static table: floor plan is modeled as a graph with zone constraints (terrace, salon, bar, reservados) and rebalanced on every write so the agent never quotes a slot the FSM cannot serve.
+
+Two production numbers: first-message p95 latency on WhatsApp 1.3s and end-to-end reservation confirmation (language detect + availability lookup + alternative slots + write to CoverManager) at 6-9s. No-show rate dropped from 14% to 5% once the 24h reminder used one-tap quick replies instead of free-text confirmation. 34% of confirmed reservations arrived outside human staffing hours.
+
+Full write-up with the zone-based capacity model, the multilingual prompt routing and the 5-week rollout: https://zeniapartners.com/blog/automatizacion-para-restaurantes-en-valencia.html
+
+#RestaurantTech #WhatsAppBusinessAPI #SystemDesign #Latency
+
+---

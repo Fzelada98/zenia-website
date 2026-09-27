@@ -7195,3 +7195,16 @@ Full write-up with the 4-segment playbook, ROI model on a 6-chair salon, integra
 
 ---
 
+## 2026-09-27 - Cuánto cuesta un agente de IA para negocios: cost model breakdown (ES post)
+
+Priced out an AI agent stack for a European SMB last week: WhatsApp Business Cloud API + LLM + orchestration + memory + integrations. The math per resolved conversation lands at €0.15 to €0.60. Breakdown: Meta service conversation €0.04-€0.08, LLM tokens €0.01-€0.05 on a Haiku/Gemini Flash tier or €0.10-€0.25 on Opus/GPT-5, platform and DB prorated €0.05-€0.20. Human receptionist equivalent: €0.60-€2 per conversation, and only during opening hours.
+
+Meta Business Agent added a separate cost line since June 2026: 2 USD per million tokens flat, roughly €0.16-€0.50 per 8-message thread; consistent with Meta's own consumption tables. On multi-turn agents without conversation summarization, unbounded token budgets are the failure mode we see most often in post-mortems: a 40-turn support session on a premium model can push a single conversation past €3 before it resolves. Fix is a hard cap on rolling context window plus a summarizer prompt at every N turns.
+
+Contract structure that survives production: fixed cuota with disclosed marginal price on overflow, tokens absorbed to a documented ceiling, Meta cost either bundled or refactured at cost (both fine if transparent), integrations enumerated at signature, and mantenimiento inside the cuota. What breaks under load: "unlimited" tiers, integrations "in phases", and setups quoted at €200 that skip prompt engineering and guardrails.
+
+Full breakdown of the three deal ranges we see on 2026 SMB deployments (DIY no-code, managed platform with WhatsApp Business API, custom build), the per-conversation math, and the five contract clauses that decide if you get billed twice: https://zeniapartners.com/blog/cuanto-cuesta-un-agente-de-ia-para-negocios.html
+
+#AIAgents #WhatsAppBusinessAPI #LLMOps #Infrastructure
+
+---

@@ -7237,3 +7237,19 @@ Full write-up with the zone-based capacity model, the multilingual prompt routin
 #RestaurantTech #WhatsAppBusinessAPI #SystemDesign #Latency
 
 ---
+## 2026-09-27 - AI Agent for Optometrists (EN)
+
+Field notes from a US optometry deployment (2 doctors, chair-and-a-half, ~6,200 active patients, RevolutionEHR as system of record).
+
+Stack: LLM tool-use loop on top of Twilio Voice + WhatsApp Cloud API, RevolutionEHR REST integration (RevIntegrator) for appointment write and nightly recall list read, VSP Eyefinity Connect and EyeMed eligibility APIs called synchronously during booking, ABB Optical order drop for contact lens reorders, Stripe for card-on-file. Every conversation is idempotency-keyed on phone_e164 + benefit_year to prevent double-scheduling when the same patient re-enters the funnel across voice and WhatsApp.
+
+Two numbers under load. First-message p95 on WhatsApp 1.4s, and the full "reorder my contacts" round-trip (Rx-in-date check + allowance lookup + Stripe link + ABB order write) at 7-11s end-to-end. The benefit-reset recall loop runs from a nightly Postgres job that hashes each patient against their carrier's reset date; on a two-doctor practice that pushed return-on-time from 62% to 79% in 60 days, with no additional front-desk headcount.
+
+The non-trivial part was the clinical guardrail: a red-flag classifier on every inbound turn (sudden vision loss, flashes/floaters, chemical, foreign body) that hard-interrupts the booking flow and pages on-call by SMS. It has to fire before the LLM ever proposes a slot.
+
+Full write-up: https://zeniapartners.com/blog/ai-agent-for-optometrists.html
+
+#HealthTech #VoiceAgents #WhatsAppBusinessAPI #SystemDesign
+
+---
+

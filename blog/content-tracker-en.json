@@ -3,6 +3,15 @@
   "market": "US/UK small business",
   "posts": [
     {
+      "slug": "spa-crm-with-ai",
+      "keyword": "spa crm",
+      "tier": 0,
+      "cluster": "beauty",
+      "status": "published",
+      "date": "2026-09-28",
+      "note": "striking-loop hit: 11 impressions, pos 20.6. Was printing on Spanish /es/crm-wellness.html; added cross-link there."
+    },
+    {
       "slug": "dental-practice-crm-with-ai",
       "keyword": "dental practice crm",
       "tier": 0,

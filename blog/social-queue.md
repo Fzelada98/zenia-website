@@ -7324,3 +7324,25 @@ Two constraints shaped the design more than the model choice: keeping RGPD artic
 Write-up: https://zeniapartners.com/blog/desarrollo-agente-ia-clinicas-de-fisioterapia.html
 
 #HealthcareEngineering #WhatsAppBusinessAPI #AIagents #RGPD #Observability
+
+
+---
+
+
+## 2026-09-28 - Spa CRM with AI (EN)
+
+Notes from wiring an AI-powered CRM on top of a Vagaro-based day spa (3 therapists, ~1,800 active clients, no prior CRM layer).
+
+Architecture: WhatsApp Business API webhook → orchestrator on Cloud Run → intent router (e5-small, ~35 ms) → Claude Sonnet with typed tool calls against Vagaro API v2 → memory split between Redis (session, 24h TTL) and pgvector (protocol RAG, treatment aftercare). Rebooking, no-show, and reactivation sequences run as Temporal workflows so a client message during a step can pause and mutate the flow without race conditions. Two-way sync writes appointments back to Vagaro through the merchant API with idempotency keys keyed on (client_id, therapist_id, slot_start).
+
+Production numbers at day 90:
+- p95 end-to-end WhatsApp reply latency 2.7s, p99 5.9s
+- 83% conversation containment without human handoff
+- First-visit-to-second-visit conversion 44% → 68%
+- No-shows 12.4% → 4.8%, 90-day inactive reactivation 4% → 15%
+
+The hard part was not the model. It was slot arbitration: two parallel WhatsApp threads asking for the same 6:15 PM Thursday slot resolved by a short-lived Postgres advisory lock plus a 90-second soft hold before Vagaro sees the write. Also worth noting: template messages for the 72h and 24h reminders needed to be pre-approved with variable-safe wording so a therapist rename does not break policy compliance.
+
+Write-up: https://zeniapartners.com/blog/spa-crm-with-ai.html
+
+#WellnessTech #WhatsAppBusinessAPI #CRM #AIagents #Observability

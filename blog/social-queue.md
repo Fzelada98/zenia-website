@@ -7286,3 +7286,21 @@ Full breakdown with latency budgets, per-country SMS routing table and the LGPD/
 
 ---
 
+
+## 2026-09-28 - Dental Practice CRM with AI (EN)
+
+Field-notes from wrapping an AI-powered CRM around a US dental practice running Dentrix G7 on a local SQL Server.
+
+Stack: middleware agent on the office LAN reads Dentrix tables and writes appointments back through the Dentrix API. WhatsApp Business API for the Spanish-speaking segment (~18% of the book), Twilio SMS for everyone else, LLM-drafted first replies grounded on procedures/providers/insurance list, front desk approves in one click from a unified inbox.
+
+Hard numbers at day 90 on a two-doctor, three-chair practice (2,180 active patients):
+- Speed of first response to new-patient inquiry: 6h 22m → 1m 40s (AI first reply, human confirm)
+- Recall capture in 30 days: 71% → 89%
+- No-shows: 14.8% → 6.1%
+- +$148k incremental production over the window, of which $71k from unscheduled treatment closure
+
+The interesting engineering constraint is TCPA + HIPAA: per-patient, per-channel, per-timestamp consent log, quiet-hours enforcement (8AM-9PM local), and no PHI in the message body. The CRM never becomes a second source of truth; PMS remains the record.
+
+Write-up: https://zeniapartners.com/blog/dental-practice-crm-with-ai.html
+
+#DentalTech #WhatsAppBusinessAPI #CRM #HealthcareEngineering #TCPA

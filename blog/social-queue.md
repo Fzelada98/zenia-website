@@ -7346,3 +7346,20 @@ The hard part was not the model. It was slot arbitration: two parallel WhatsApp 
 Write-up: https://zeniapartners.com/blog/spa-crm-with-ai.html
 
 #WellnessTech #WhatsAppBusinessAPI #CRM #AIagents #Observability
+
+
+---
+
+## 2026-09-28 - WhatsApp Cloud API vs Business App (EN)
+
+Notes on the architecture line that separates WhatsApp Business App from Cloud API for anyone building a serious conversational channel.
+
+Business App is a mobile client: single primary device, up to 4 companion sessions sharing state, no public API, no shared inbox. Cloud API is Meta-hosted infrastructure: HTTPS webhook for inbound, REST for outbound, template approval flow, per-message billing by country and category. In practice, that shifts the entire stack: bandeja compartida with per-agent SLAs, CRM writes on each message, per-conversation observability, and a webhook endpoint that fronts the LLM instead of a phone.
+
+A typical production topology we deploy: Cloud API webhook → FastAPI dispatcher on Cloud Run (median 42 ms handoff) → intent router → typed tool calls into HubSpot/Odoo/DMS → Redis for 24h session state → Postgres for message audit. Template pre-approval takes 2-48h, phone number quality rating drives daily send tier, and the July 2025 shift to per-message pricing plus the Oct 1 2026 change to charge service-window utility messages after the first 1,000 per number/month reshapes the cost model materially: a 3k-template/month op moves from ~30-60 EUR to ~80-150 EUR before BSP markup.
+
+The real reason to move off Business App is not features. It is that the number stops being tied to a physical device: multi-agent, CRM audit, template governance, and IA-driven flows only exist when the number lives inside infrastructure you actually operate.
+
+Write-up: https://zeniapartners.com/blog/whatsapp-cloud-api-vs-whatsapp-business-app.html
+
+#WhatsAppCloudAPI #WhatsAppBusinessAPI #ConversationalAI #Infrastructure #BackendEngineering

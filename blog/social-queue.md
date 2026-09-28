@@ -7304,3 +7304,23 @@ The interesting engineering constraint is TCPA + HIPAA: per-patient, per-channel
 Write-up: https://zeniapartners.com/blog/dental-practice-crm-with-ai.html
 
 #DentalTech #WhatsAppBusinessAPI #CRM #HealthcareEngineering #TCPA
+
+---
+
+
+## 2026-09-28 - Desarrollo agente IA clínicas de fisioterapia (EN)
+
+Notes from shipping an AI agent for a physiotherapy clinic in Madrid with three physios and a legacy ClinicCloud install.
+
+Architecture in six layers: WhatsApp Business API webhook → orchestrator on Cloud Run (Node) → intent router (e5-small, ~40 ms) → Claude Sonnet with typed tool calls → memory split between Redis (short) and pgvector (RAG over protocols and FAQ) → OpenTelemetry traces into Grafana Tempo. Clinical guardrails live as assertions in code, not prompt instructions. Integration is bidirectional against ClinicCloud REST for read and write on the appointment book; anything touching clinical history is read-only.
+
+Production data at day 90 across six clinics:
+- p95 end-to-end latency 3.1s, p99 6.4s
+- 87% conversation containment without human handoff
+- No-shows 18% → 7%, 9.2 hours/week freed at reception
+
+Two constraints shaped the design more than the model choice: keeping RGPD article 9 clean (DPA with training opt-out, AES-256 at rest, 12-month retention) and building the intent router in front of the LLM to cut per-conversation LLM cost by 62-78%.
+
+Write-up: https://zeniapartners.com/blog/desarrollo-agente-ia-clinicas-de-fisioterapia.html
+
+#HealthcareEngineering #WhatsAppBusinessAPI #AIagents #RGPD #Observability

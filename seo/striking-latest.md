@@ -28,4 +28,4 @@ Consultas donde zeniapartners.com ya imprime en posición 4-30 (últimos 8 días
 | 19.6 | 10 | crm para fotógrafos | /es/crm-fotografos.html |
 | 19.9 | 9 | agente ia clínicas de estética | /blog/agente-ia-para-centros-de-estetica.html |
 | 26.6 | 9 | chatbot para restaurantes | /blog/chatbot-whatsapp-restaurantes.html |
-| 5.8 | 9 | desarrollo agente ia clínicas de fisioterapia | /blog/agente-ia-para-fisioterapia.html |
+| 5.8 | 9 | desarrollo agente ia clínicas de fisioterapia | /blog/agente-ia-para-fisioterapia.html &rarr; [desarrollo agente ia clínicas de fisioterapia](/blog/desarrollo-agente-ia-clinicas-de-fisioterapia.html) |

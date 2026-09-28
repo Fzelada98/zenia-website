@@ -7270,6 +7270,8 @@ Full write-up with per-country tariffs, BSP markup comparison and three worked c
 ---
 ## 2026-09-28 - SMS marketing for abandoned carts on Tiendanube
 
+<!-- PUBLISHED:make-webhook at 2026-09-28T08:30:02Z -->
+
 Recovery on abandoned carts with phone captured: 12% steady-state on Tiendanube stores. Stock email flows on the same tenants max out at 4%.
 
 Stack: Tiendanube order/abandoned webhook into a Postgres event log, SMS via alfanumérico registered sender (Twilio for AR/ES, Zenvia for BR, MessageBird for MX/CO), then WhatsApp Business API utility templates through 360dialog, all fronted by a personalized AI agent that owns conversation state across both channels. Provider selection is table-driven per country_iso, so LATAM/ES routing swaps without touching the flow.

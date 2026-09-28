@@ -7268,3 +7268,19 @@ Full write-up with per-country tariffs, BSP markup comparison and three worked c
 #WhatsAppBusinessAPI #SystemDesign #InfraCost #B2B
 
 ---
+## 2026-09-28 - SMS marketing for abandoned carts on Tiendanube
+
+Recovery on abandoned carts with phone captured: 12% steady-state on Tiendanube stores. Stock email flows on the same tenants max out at 4%.
+
+Stack: Tiendanube order/abandoned webhook into a Postgres event log, SMS via alfanumérico registered sender (Twilio for AR/ES, Zenvia for BR, MessageBird for MX/CO), then WhatsApp Business API utility templates through 360dialog, all fronted by a personalized AI agent that owns conversation state across both channels. Provider selection is table-driven per country_iso, so LATAM/ES routing swaps without touching the flow.
+
+Two numbers under load. First-SMS p95 at 3.1 min from webhook fire (Tiendanube batches webhooks up to 2 min in high-volume tenants, so we buffer and de-dup). Idempotent kill on order/paid firing sub-500ms end-to-end via a Redis SETNX on cart_id + tenant_id, which matters because the customer paying while the second-impact SMS is queued generates a support ticket every time otherwise.
+
+The counterintuitive finding: cupón-less recoveries carry a 23% higher ticket than cupón-driven ones. The agent closes on objection resolution (size chart, shipping window, Mercado Pago cuotas, PSE availability) rather than discount, and margin holds.
+
+Full breakdown with latency budgets, per-country SMS routing table and the LGPD/LSSI consent capture pattern in the Tiendanube checkout: https://zeniapartners.com/blog/sms-marketing-carritos-abandonados-tiendanube.html
+
+#B2B #SystemDesign #WhatsAppBusinessAPI #Ecommerce
+
+---
+

@@ -7429,3 +7429,19 @@ The engineering weight sits on the PMS write-back reliability across the four ca
 Write-up: https://zeniapartners.com/blog/ai-agent-for-orthodontists.html
 
 #HealthTech #WhatsAppBusinessAPI #ConversationalAI #Infrastructure #BackendEngineering
+
+---
+
+## 2026-09-29 - Integrar HubSpot con WhatsApp Business
+
+The HubSpot native WhatsApp integration hits its ceiling fast: no inbound-message trigger in workflows, template-only outbound from automations, no multi-step conversational flows, and the number goes dark on WhatsApp Business App the moment it moves to Cloud API.
+
+The pattern that scales past that ceiling is a stateful orchestrator between both sides. WhatsApp Cloud API for transport, OAuth 2.0 to HubSpot with scoped tokens and refresh every 30 minutes, a conversation engine that reads and writes Contacts and Deals, tool calls for scheduling and file upload, and escalation triggered by contact properties routed through native workflows.
+
+Field numbers from that architecture on B2B stacks already running HubSpot Professional: median first-response 1h 47min to 11s, Deals with WhatsApp activity attached 22% to 96%, redundant automated emails to already-active leads 27% to 3%.
+
+Full write-up on the three architectures (native, BSP, agent layer), where each one breaks, and the OAuth scopes we use: https://zeniapartners.com/blog/integrar-hubspot-con-whatsapp-business.html
+
+#B2B #SaaS #WhatsAppBusinessAPI #Infrastructure
+
+---

@@ -7413,3 +7413,19 @@ The engineering weight is not on the model. It is on the availability reconcilia
 Write-up: https://zeniapartners.com/blog/reservas-cena-empresa-restaurante-whatsapp.html
 
 #RestaurantTech #WhatsAppBusinessAPI #ConversationalAI #Infrastructure #BackendEngineering
+
+---
+
+## 2026-09-29 - AI Agent for Orthodontists (EN)
+
+Field notes from a US orthodontic deployment layered on top of Ortho2 Edge Cloud (two-doctor practice, Dallas metro, 4,200 active patients).
+
+Stack: Twilio Voice + WhatsApp Business API on Meta Cloud fanned into a single LLM tool-use loop, function calls into the Ortho2 partner API for appointment book, patient demographics and secure messaging log, real-time eligibility checks against Delta Dental, MetLife, Cigna, Aetna and United Concordia (277CA/271) with a 48h caching layer for the ortho-specific fields (lifetime max, age limit, waiting period), Postgres for the consult and did-not-start ledger (treatment discussed, quote presented, financing scenario, cadence state), Redis for per-conversation intent-and-slot state.
+
+Two numbers under 6 months of load: p95 first-response 2.4s on inbound voice and WhatsApp with a booked consult, TCPA-timestamped consent and a plan estimate delivered before the confirmation template goes out, and a 22% did-not-start recovery rate on a 210-case aged list run on a four-touch WhatsApp/SMS/voice cadence. Missed-call rate collapsed from 34% to under 3%, consult show rate 63% -> 81%.
+
+The engineering weight sits on the PMS write-back reliability across the four calendars a multi-doctor ortho practice runs (records, doctor-consult, scan, adjustment), the eligibility cache under real-time load without breaking BAA scope, and keeping the WhatsApp template health rating clean under a 40-message-per-day per-active-case cadence.
+
+Write-up: https://zeniapartners.com/blog/ai-agent-for-orthodontists.html
+
+#HealthTech #WhatsAppBusinessAPI #ConversationalAI #Infrastructure #BackendEngineering

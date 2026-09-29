@@ -7397,3 +7397,19 @@ The hardest engineering was not the model. It was collapsing the booking calenda
 Full write-up: https://zeniapartners.com/blog/salon-crm-system.html
 
 #SalonTech #WhatsAppBusinessAPI #ConversationalAI #Infrastructure #BackendEngineering
+
+---
+
+## 2026-09-29 - Reservas de cenas de empresa restaurante WhatsApp
+
+Field notes from the Q4 group-reservation pipeline we operate for Spanish hospitality clients, sized for the December load window.
+
+Stack: WhatsApp Business API on Meta Cloud as inbound, LLM tool-use loop with function calls into a menu catalog, an availability graph fused across CoverManager and in-house PMS, Stripe PaymentIntents and Bizum-empresa for deposits, Postgres for the group ledger (menu tier, cover count, allergen matrix, deposit state, fiscal metadata), Redis for the 15-40 message negotiation state per group. Pre-approved WhatsApp templates for T-7d, T-48h, T-2h touchpoints, template health rating monitored per number.
+
+Two numbers under load across last December: p95 first-response on a group inquiry at 24s with a full priced proposal (three menu tiers, deposit link, allergen intake form) attached inline, and deposit capture at 82% of confirmed groups vs 12% baseline on manual PDF flow. Group-level cancellation inside T-72h collapsed from 22% to 5% once the deposit was tied to the confirmation template.
+
+The engineering weight is not on the model. It is on the availability reconciliation across booking sources, the deterministic menu-priced-quote generator with allergen and dietary constraint propagation, and keeping the WhatsApp template pipeline pre-approved ahead of the demand curve so nothing falls to freeform text under load.
+
+Write-up: https://zeniapartners.com/blog/reservas-cena-empresa-restaurante-whatsapp.html
+
+#RestaurantTech #WhatsAppBusinessAPI #ConversationalAI #Infrastructure #BackendEngineering

@@ -7368,6 +7368,8 @@ Write-up: https://zeniapartners.com/blog/whatsapp-cloud-api-vs-whatsapp-business
 
 ## 2026-09-29 - Automatización para Restaurantes en Sevilla (EN)
 
+<!-- PUBLISHED:make-webhook at 2026-09-29T08:35:38Z -->
+
 Field notes from a Sevilla deployment covering three restaurants in the casco antiguo across normal weeks and the Feria de Abril peak.
 
 Stack: WhatsApp Business API on Meta Cloud as the primary inbound channel, LLM tool-use loop (function calls into a reservation graph, availability matrix over CoverManager/TheFork, and a bilingual PT/ES/EN/FR/DE/IT policy layer), Postgres for conversation audit and CRM writes, Redis for 24h session state, Stripe + Bizum for group deposits. Every request tagged with locale detected from country prefix; per-conversation intent, resolution and revenue attribution logged.

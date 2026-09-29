@@ -7363,3 +7363,19 @@ The real reason to move off Business App is not features. It is that the number 
 Write-up: https://zeniapartners.com/blog/whatsapp-cloud-api-vs-whatsapp-business-app.html
 
 #WhatsAppCloudAPI #WhatsAppBusinessAPI #ConversationalAI #Infrastructure #BackendEngineering
+
+---
+
+## 2026-09-29 - Automatización para Restaurantes en Sevilla (EN)
+
+Field notes from a Sevilla deployment covering three restaurants in the casco antiguo across normal weeks and the Feria de Abril peak.
+
+Stack: WhatsApp Business API on Meta Cloud as the primary inbound channel, LLM tool-use loop (function calls into a reservation graph, availability matrix over CoverManager/TheFork, and a bilingual PT/ES/EN/FR/DE/IT policy layer), Postgres for conversation audit and CRM writes, Redis for 24h session state, Stripe + Bizum for group deposits. Every request tagged with locale detected from country prefix; per-conversation intent, resolution and revenue attribution logged.
+
+Two numbers that stood out under Feria load: p95 first-message latency on WhatsApp at 1.6s with the number quality rating held at HIGH through the peak, and quote-with-alternatives (availability query + zone assignment + deposit link) delivered end-to-end in under 7s across salón/patio/barra. Same-week no-show on groups of 8+ moved from 24% to 6% by attaching a Bizum deposit to the confirmation template; overall reservation-fill rate went from 58% to 76% annualized, with 38% of new reservations arriving outside human coverage hours.
+
+The takeaway for anyone building this class of agent: the hard part is not the LLM, it is the availability graph, the multi-source calendar reconciliation with TheFork/CoverManager, and keeping the template pre-approval pipeline ahead of the seasonal demand curve. The LLM is 12% of the deploy time.
+
+Write-up: https://zeniapartners.com/blog/automatizacion-para-restaurantes-en-sevilla.html
+
+#RestaurantTech #WhatsAppBusinessAPI #ConversationalAI #Infrastructure #BackendEngineering

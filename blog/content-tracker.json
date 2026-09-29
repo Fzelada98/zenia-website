@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-09-28T22:00:00+00:00",
+  "lastRun": "2026-09-29T06:00:00+00:00",
   "posts": [
+    {
+      "slug": "automatizacion-para-restaurantes-en-sevilla",
+      "keyword": "automatización para restaurantes en Sevilla",
+      "tier": 4,
+      "cluster": "restaurantes-cities",
+      "status": "published",
+      "date": "2026-09-29",
+      "source": "matrix"
+    },
     {
       "slug": "whatsapp-cloud-api-vs-whatsapp-business-app",
       "keyword": "whatsapp cloud api vs whatsapp business app",

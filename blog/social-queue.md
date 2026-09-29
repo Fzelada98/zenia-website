@@ -7381,3 +7381,19 @@ The takeaway for anyone building this class of agent: the hard part is not the L
 Write-up: https://zeniapartners.com/blog/automatizacion-para-restaurantes-en-sevilla.html
 
 #RestaurantTech #WhatsAppBusinessAPI #ConversationalAI #Infrastructure #BackendEngineering
+
+---
+
+## 2026-09-29 - Salon CRM System (EN)
+
+Field notes from a US salon deployment layered on top of a Vagaro-based 4-chair independent (Austin, TX).
+
+Stack: Vagaro webhooks fan out to a WhatsApp Business API endpoint (Meta Cloud) with Twilio SMS fallback, an LLM tool-use loop with function calls into the appointment index and a stylist-availability graph, cohort retention writer that recomputes 90-day return-rate per first-visit month per stylist, deposit-linked no-show cadence tied to Stripe holds. Every message tagged with segment, stylist, service and revenue attribution written back to a client 360 row.
+
+Two numbers that stood out under 90 days of load: reactivation-cadence conversion at 14.2% on a stylist-voice write path (vs 1.3% baseline on the previous group-blast MailChimp flow), and no-show rate collapsed from 11.2% to 3.8% by adding a T-2h WhatsApp touch on top of the T-24h SMS the platform already sent. Rebook rate moved 43% -> 69%, 90-day retention 58% -> 81%.
+
+The hardest engineering was not the model. It was collapsing the booking calendar, POS commission, stylist personal WhatsApp voice and the reactivation logic into one deterministic tool surface the agent could call without booking a slot a stylist did not actually have open.
+
+Full write-up: https://zeniapartners.com/blog/salon-crm-system.html
+
+#SalonTech #WhatsAppBusinessAPI #ConversationalAI #Infrastructure #BackendEngineering

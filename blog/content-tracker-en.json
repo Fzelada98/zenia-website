@@ -1,7 +1,16 @@
 {
-  "lastRun": "2026-09-28T00:00:00.000000+00:00",
+  "lastRun": "2026-09-29T00:00:00.000000+00:00",
   "market": "US/UK small business",
   "posts": [
+    {
+      "slug": "salon-crm-system",
+      "keyword": "salon crm system",
+      "tier": 0,
+      "cluster": "beauty",
+      "status": "published",
+      "date": "2026-09-29",
+      "note": "striking-loop hit: 10 impressions, pos 9.1. Was printing on /blog/salon-crm-with-ai.html; added cross-link there."
+    },
     {
       "slug": "spa-crm-with-ai",
       "keyword": "spa crm",

@@ -7445,3 +7445,17 @@ Full write-up on the three architectures (native, BSP, agent layer), where each 
 #B2B #SaaS #WhatsAppBusinessAPI #Infrastructure
 
 ---
+
+## 2026-09-30 - Comparativa plataformas IA conversacional CRM y WhatsApp
+
+Most "best conversational AI platform" lists mix three layers that shouldn't be compared as one: the LLM orchestrator, the WhatsApp Business API layer (Meta Cloud API or BSP), and the CRM system of record.
+
+The layer that decides real cost isn't the monthly fee. It's cost per conversation: Meta's 24h window pricing multiplied by the platform's per-resolution or per-MAU markup. In three real deployments we ran last quarter, same volume, the total ran from EUR 380 to EUR 1,900/month depending only on the pricing model.
+
+Latency ends up mattering more than features. End-to-end (customer → Meta → BSP → orchestrator → LLM → CRM lookup → response) sits at 1.8-4s on a clean stack; on proxied layers we've measured 12-18s, which reads as "broken" to the user.
+
+Full breakdown of the criteria, a comparison table across Kore.ai, Yellow.ai, Respond.io, WATI, Kommo, HubSpot, Zoho and a custom Meta Cloud API stack, plus when the crossover to a bespoke agent actually pays off: https://zeniapartners.com/blog/comparativa-plataformas-ia-conversacional-crm-whatsapp.html
+
+#B2B #SaaS #WhatsAppBusinessAPI #ConversationalAI
+
+---

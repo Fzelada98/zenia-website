@@ -7503,3 +7503,17 @@ Full playbook, integration notes (ServiceTitan MCP, native APIs, campaign-source
 
 ---
 
+## 2026-09-30 - Cyber Monday WhatsApp Ecommerce 2026 (ES)
+
+The engineering problem behind a WhatsApp-driven Cyber Monday is not the chat: it is orchestrating five concurrent flows against a spiky demand curve without tripping Meta's quality rating.
+
+Our reference stack: WhatsApp Business API on Meta Cloud, an LLM orchestrator with intent routing across five parallel flows (VIP pre-launch, catalog broadcast, cart-recovery on 30-min abandonment window, post-purchase upsell, 24/7 pre-sale support), a queue layer sized for 5-8x baseline throughput, native connectors to Shopify / WooCommerce / Tiendanube / VTEX for real-time catalog + order webhooks, and a session identifier passed from the WhatsApp thread to the checkout so cross-channel attribution actually resolves. Template pre-approval with Meta 48h ahead, tier-scaled sending to keep quality-rating "high", and a hot fallback if a category triggers rate limits.
+
+Numbers from twelve deployments in 2024-2025 peak week: p50 response 11s at 5x baseline load, cart-recovery conversion 22-30% (vs 8-12% off-peak), ticket average +30% via post-purchase upsell, and a 39% reduction in returns because pre-sale sizing/logistics questions resolve before the order lands. WhatsApp share of Cyber Monday revenue moves from 3-5% to 38-52% with no ad spend change.
+
+Full architecture, flow definitions, ROI math for an 800k EUR/yr shop and the 4-week setup window still on the calendar: https://zeniapartners.com/blog/cyber-monday-whatsapp-ecommerce-2026.html
+
+#Infrastructure #WhatsAppBusinessAPI #Ecommerce #B2B
+
+---
+

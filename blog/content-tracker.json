@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-09-30T14:00:00+00:00",
+  "lastRun": "2026-09-30T22:00:00+00:00",
   "posts": [
     {
       "slug": "cambiar-software-de-gimnasio",
@@ -3853,6 +3853,15 @@
       "cluster": "agente-ia-pricing",
       "status": "published",
       "date": "2026-09-22",
+      "source": "generated"
+    },
+    {
+      "slug": "cyber-monday-whatsapp-ecommerce-2026",
+      "keyword": "cyber monday whatsapp ecommerce 2026",
+      "tier": 2,
+      "cluster": "ecommerce-seasonal",
+      "status": "published",
+      "date": "2026-09-30",
       "source": "generated"
     }
   ]

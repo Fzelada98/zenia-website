@@ -7489,3 +7489,17 @@ Full checklist, integration surface (access-control APIs: Salto, Digicon, Zkteco
 
 ---
 
+## 2026-09-30 - AI to Manage Inbound Calls for HVAC Companies (EN)
+
+The interesting engineering problem in HVAC voice AI is not the transcription. It's the sub-2s pickup + concurrency at peak (30+ parallel calls during a heat wave) + write-back into a dispatch system of record that was not designed for a non-human writer.
+
+The stack we run in US home-services deployments: Twilio or Vonage as the SIP carrier, a real-time TTS/STT layer (Deepgram Nova-3 for STT, ElevenLabs turbo for TTS, sub-300ms round-trip on the audio path), an LLM router with HVAC intent classifiers trained on ~40k transcribed contractor calls (no-cool, no-heat, gas leak, refrigerant, thermostat, freon), and a ServiceTitan / Housecall Pro / Jobber write layer via native API or MCP. Escalation to a human CSR is a warm SIP transfer with the transcript pre-loaded, not a hang-up-and-callback.
+
+Two numbers from a 15-truck Florida shop, 60 days: after-hours booking rate 22% (answering service) to 79% (AI voice agent), overall new-customer booking rate 58% to 71%. Answered-call rate went from 76% to 100% with no CSR added.
+
+Full playbook, integration notes (ServiceTitan MCP, native APIs, campaign-source tagging so you can A/B against your human CSRs), pricing math and the 2-week rollout: https://zeniapartners.com/blog/ai-inbound-calls-hvac-companies.html
+
+#Infrastructure #VoiceAI #WhatsAppBusinessAPI #HomeServices
+
+---
+

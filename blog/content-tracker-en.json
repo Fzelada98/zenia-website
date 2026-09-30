@@ -1,7 +1,16 @@
 {
-  "lastRun": "2026-09-30T12:00:00.000000+00:00",
+  "lastRun": "2026-09-30T18:00:00.000000+00:00",
   "market": "US/UK small business",
   "posts": [
+    {
+      "slug": "ai-inbound-calls-hvac-companies",
+      "keyword": "ai to manage inbound calls for hvac companies",
+      "tier": 0,
+      "cluster": "trades",
+      "status": "published",
+      "date": "2026-09-30",
+      "note": "striking-loop hit: 8 impressions, pos 11.0. Was printing on /blog/hvac-crm-with-ai.html; added cross-link there with query as anchor text."
+    },
     {
       "slug": "medical-spa-crm",
       "keyword": "medical spa crm",

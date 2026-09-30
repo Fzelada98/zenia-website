@@ -7461,3 +7461,17 @@ Full breakdown of the criteria, a comparison table across Kore.ai, Yellow.ai, Re
 #B2B #SaaS #WhatsAppBusinessAPI #ConversationalAI
 
 ---
+
+## 2026-09-30 - Medical Spa CRM (EN)
+
+Aesthetic vertical has a specific integration surface most horizontal CRMs miss: photo module with per-tag marketing release consent, injectable batch/lot on the chart, and treatment-cycle recall rules keyed to biological cadence (Botox week 12, filler month 6, laser week 4-6), not a monthly newsletter.
+
+The stack we now default to for US practices: WhatsApp Business API through a BSP that signs a BAA, an AI agent grounded on the practice's treatment menu and provider bios, a unified inbox that pulls from Instagram, Google Business Messages, SMS and site chat into one queue, and a thin sync layer that writes booked appointments back to the practice PMS (PatientNow, Boulevard, Mangomint or Pabau) so it stays the system of record.
+
+Two numbers from a Phoenix deployment (single location, 470 active patients, 90 days): median first-response 5h 12m to 48s, lead-to-booking 10.4% to 26.1%, no-show rate 19.7% to 6.4%. Ad spend held flat at $7.4k/mo, so the lift is pure conversion, not more paid leads.
+
+Full architecture, the HIPAA gotchas around consumer WhatsApp vs Business API + BAA, per-vendor integration notes and the 2-week rollout: https://zeniapartners.com/blog/medical-spa-crm.html
+
+#Healthcare #WhatsAppBusinessAPI #Infrastructure #ConversationalAI
+
+---

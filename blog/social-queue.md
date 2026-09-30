@@ -7448,6 +7448,8 @@ Full write-up on the three architectures (native, BSP, agent layer), where each 
 
 ## 2026-09-30 - Comparativa plataformas IA conversacional CRM y WhatsApp
 
+<!-- PUBLISHED:make-webhook at 2026-09-30T08:31:43Z -->
+
 Most "best conversational AI platform" lists mix three layers that shouldn't be compared as one: the LLM orchestrator, the WhatsApp Business API layer (Meta Cloud API or BSP), and the CRM system of record.
 
 The layer that decides real cost isn't the monthly fee. It's cost per conversation: Meta's 24h window pricing multiplied by the platform's per-resolution or per-MAU markup. In three real deployments we ran last quarter, same volume, the total ran from EUR 380 to EUR 1,900/month depending only on the pricing model.

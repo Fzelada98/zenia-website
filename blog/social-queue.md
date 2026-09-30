@@ -7475,3 +7475,17 @@ Full architecture, the HIPAA gotchas around consumer WhatsApp vs Business API + 
 #Healthcare #WhatsAppBusinessAPI #Infrastructure #ConversationalAI
 
 ---
+## 2026-09-30 - Cambiar software de gimnasio (ES)
+
+Gym software migrations we've handled this year: the failure mode is never the CRM choice, it's the data layer. Duplicate members with different email casings, SEPA mandates orphaned from contact records, access-control biometric IDs the source vendor won't export in a portable format.
+
+Our default rollout for a 1.5k-member club runs on WhatsApp Business API with number portability, a mid-latency LLM orchestrator (1.9-3.2s p50 end-to-end through Meta Cloud API), and a batch migration in three lots: dormant members, active monthly cuotas, then annual + prepaid balances on cut-day. Two systems in read-write / read-only overlap for 7-14 days, cross-validated on member count and expected monthly revenue with a <2% tolerance.
+
+Numbers from six migrations Q1-Q3 2026 (Spain, 500-4,000 members each): median project 5 weeks, first-cycle SEPA failure rate 2.4% vs 18-22% on unassisted migrations, member-reported incidents <3% of base. The delta is 90% process, 10% platform.
+
+Full checklist, integration surface (access-control APIs: Salto, Digicon, Zkteco, Suprema), and cost breakdown for a 1.5k-member club: https://zeniapartners.com/blog/cambiar-software-de-gimnasio.html
+
+#Infrastructure #WhatsAppBusinessAPI #DataMigration #B2B
+
+---
+

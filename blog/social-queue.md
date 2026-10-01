@@ -7577,3 +7577,22 @@ Full architecture, EHR integration matrix, HIPAA notes and 3-week rollout: https
 
 ---
 
+## 2026-10-01 - Automatizar Reservas de Hotel por WhatsApp (ES)
+
+Shipped a new reference on the WhatsApp-to-PMS reservation stack for independent hotels in 2026.
+
+Engineering problem: Cloudbeds, Mews, Apaleo, Opera Cloud and Little Hotelier run the folio beautifully and never pick up the phone. 35-55% of inbound booking inquiries arrive between 20:00 and 10:00, when the front desk is closed, so Booking.com and Expedia keep the reservation at a 15-25% commission.
+
+Reference architecture, four layers:
+- Messaging on Meta Cloud API (WhatsApp Business Platform), multi-agent inbox, HSM templates provisioned on day one because Meta still takes 24-48h to approve them.
+- An LLM router pre-classified on hospitality intents (rate-by-dates, cancellation policy, pets, parking, early check-in, groups). Each intent fires a deterministic flow against the PMS; no generative pricing, ever.
+- PMS/channel-manager layer via REST or OHIP (Cloudbeds, Mews, Apaleo, Opera Cloud) or through SiteMinder, SynXis or D-Edge when the PMS is private. Availability + rate round-trip under 600ms.
+- Payment capture in-chat (Stripe/Redsys in EU, Mercado Pago/Culqi/Niubiz in LATAM) with a one-off hold link; booking is only confirmed after the webhook lands.
+
+Numbers from a 28-room EU boutique, 180-day cohort: inquiry-to-booking 22% to 85%, OTA share 60% to 36%, p50 first response 2h 40min to under 10 seconds, cancellation rate 14% to 7%, pre-arrival upsell conversion 18-25% on WhatsApp vs 8-12% on email, Meta utility conversation cost 0.0315 EUR.
+
+Full writeup (ES, PMS integration matrix, 5-week rollout): https://zeniapartners.com/blog/automatizar-reservas-hotel-whatsapp.html
+
+#Infrastructure #WhatsAppBusinessAPI #HotelTech #B2B
+
+---

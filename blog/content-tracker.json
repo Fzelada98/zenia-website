@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-10-01T14:00:00+00:00",
+  "lastRun": "2026-10-01T22:14:36.453530+00:00",
   "posts": [
     {
       "slug": "integrar-odoo-con-whatsapp-business",
@@ -3881,6 +3881,14 @@
       "status": "published",
       "date": "2026-09-30",
       "source": "generated"
+    },
+    {
+      "slug": "automatizar-reservas-hotel-whatsapp",
+      "keyword": "automatizar reservas hotel whatsapp",
+      "tier": 1,
+      "cluster": "hoteles",
+      "status": "published",
+      "date": "2026-10-01"
     }
   ]
 }

@@ -7563,3 +7563,17 @@ Full writeup (ES): https://zeniapartners.com/blog/integrar-odoo-con-whatsapp-bus
 #OdooERP #WhatsAppBusinessAPI #Infrastructure #B2B
 
 ---
+## 2026-10-01 - AI Agent for Dermatology Clinics (EN)
+
+Shipped a new reference on the AI agent layer for US dermatology practices. The engineering problem is not the EHR. It is that ModMed EMA, Nextech, AdvancedMD, EZDERM and Modernizing Medicine run the chart beautifully and never pick up the phone, so 20-35% of inbound calls and 100% of after-hours volume walk to the practice that answered.
+
+Reference architecture: an LLM router pre-classified on dermatology intents (medical derm, Mohs, aesthetic, laser, biologic refill, iPLEDGE, retail skincare), inbound on the main line via a telephony provider plus web chat plus a secure messaging layer with a signed BAA (Klara / Spruce / OhMD) for anything carrying PHI, a non-covered WhatsApp Business API channel for public intake only (Meta does not sign a BAA on Cloud API), real-time eligibility hooks against the top five payors, and EHR write-back for appointments, forms and chart notes via each vendor's REST or FHIR surface. Visit-type triage picks the right template (20-min screening vs. 30-min Mohs consult vs. 45-min aesthetic) and books the correct room and provider.
+
+Numbers from a Phoenix four-provider deployment, 180-day cohort: no-show 28% to 11.4%, cosmetic consult show rate 62% to 84%, medical-to-cosmetic conversion 1.8% to 9.1% at 6 months, claim denial 13.5% to 7.2%, p50 web-form response time 4.5h to 48s, after-hours missed-call rate 100% to 0%. Combined uplift ~$118k/mo in net production.
+
+Full architecture, EHR integration matrix, HIPAA notes and 3-week rollout: https://zeniapartners.com/blog/ai-agent-for-dermatology-clinics.html
+
+#Infrastructure #WhatsAppBusinessAPI #HealthTech #B2B
+
+---
+

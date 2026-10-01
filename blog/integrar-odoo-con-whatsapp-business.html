@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HP0VQSEL68"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-HP0VQSEL68');
+</script>
+
+<title>Integrar Odoo con WhatsApp Business: Guía 2026 | ZENIA</title>
+<meta name="description" content="Integra Odoo con WhatsApp Business API en 2026. Enterprise nativo vs OCA Community, plantillas, webhooks y CRM conectado. Guía técnica paso a paso.">
+<link rel="canonical" href="https://zeniapartners.com/blog/integrar-odoo-con-whatsapp-business.html">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+
+<!-- Hreflang -->
+<link rel="alternate" hreflang="es" href="https://zeniapartners.com/blog/integrar-odoo-con-whatsapp-business.html">
+<link rel="alternate" hreflang="x-default" href="https://zeniapartners.com/blog/integrar-odoo-con-whatsapp-business.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Integrar Odoo con WhatsApp Business: guía técnica 2026">
+<meta property="og:description" content="Comparativa Enterprise nativo vs OCA Community, configuración de Phone Number ID, plantillas homologadas y automatizaciones de CRM.">
+<meta property="og:url" content="https://zeniapartners.com/blog/integrar-odoo-con-whatsapp-business.html">
+<meta property="og:site_name" content="ZENIA">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="https://zeniapartners.com/assets/images/og-image.png">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Integrar Odoo con WhatsApp Business: guía 2026">
+<meta name="twitter:description" content="Enterprise nativo vs OCA Community, Phone Number ID, plantillas homologadas y CRM conectado. Guía técnica paso a paso.">
+<meta name="twitter:image" content="https://zeniapartners.com/assets/images/og-image.png">
+
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="author" content="Fabrizzio Zelada">
+<meta name="theme-color" content="#0A0F1C">
+
+<!-- JSON-LD Article -->
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Integrar Odoo con WhatsApp Business: guía técnica 2026", "description": "Guía 2026 para integrar Odoo con WhatsApp Business API: Enterprise nativo vs OCA Community, configuración, plantillas y automatizaciones de CRM.", "author": {"@type": "Person", "name": "Fabrizzio Zelada", "jobTitle": "Founder", "worksFor": {"@type": "Organization", "name": "ZENIA"}}, "publisher": {"@type": "Organization", "name": "ZENIA", "url": "https://zeniapartners.com", "logo": {"@type": "ImageObject", "url": "https://zeniapartners.com/assets/images/og-image.png", "width": 600, "height": 60}}, "datePublished": "2026-10-01", "dateModified": "2026-10-01", "mainEntityOfPage": "https://zeniapartners.com/blog/integrar-odoo-con-whatsapp-business.html", "inLanguage": "es", "keywords": ["integrar odoo con whatsapp business", "odoo whatsapp api", "odoo 18 whatsapp", "modulo whatsapp odoo oca", "whatsapp business api odoo", "crm odoo whatsapp"], "image": "https://zeniapartners.com/assets/images/og-image.png"}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #3B82F6;
+    --accent-violet: #6366F1;
+    --bg-dark: #0A0F1C;
+    --bg-card: rgba(17, 24, 39, 0.6);
+    --text-primary: #F1F5F9;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+    --border: rgba(148, 163, 184, 0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; background: var(--bg-dark); color: var(--text-primary); line-height: 1.8; }
+  .blog-nav { padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 60px; position: sticky; top: 0; background: rgba(10, 15, 28, 0.85); backdrop-filter: blur(12px); z-index: 100; }
+  .blog-nav .container { max-width: 1200px; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+  .blog-nav .nav-logo-link { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-primary); font-weight: 700; font-size: 1.1rem; }
+  .blog-nav .nav-main-links { display: flex; list-style: none; gap: 28px; margin: 0; padding: 0; }
+  .blog-nav .nav-main-links li { margin: 0; }
+  .blog-nav .nav-main-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
+  .blog-nav .nav-main-links a:hover { color: var(--text-primary); }
+  .blog-nav .nav-main-links a.active { color: var(--primary); }
+  .blog-nav .nav-cta-btn { background: var(--primary); color: #fff; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: filter 0.2s; white-space: nowrap; }
+  .blog-nav .nav-cta-btn:hover { filter: brightness(1.1); }
+  @media (max-width: 860px) {
+    .blog-nav .nav-main-links { display: none; }
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+  .blog-header { margin-bottom: 48px; }
+  .blog-meta { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px; }
+  .blog-header h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); line-height: 1.3; margin-bottom: 16px; }
+  .blog-header p.lead { font-size: 1.1rem; color: var(--text-secondary); line-height: 1.7; }
+  .blog-content h2 { font-size: 1.4rem; margin: 48px 0 16px; color: var(--text-primary); }
+  .blog-content h3 { font-size: 1.15rem; margin: 32px 0 12px; color: var(--text-primary); }
+  .blog-content p { color: var(--text-secondary); margin-bottom: 20px; }
+  .blog-content ul, .blog-content ol { color: var(--text-secondary); margin-bottom: 20px; padding-left: 24px; }
+  .blog-content li { margin-bottom: 8px; }
+  .blog-content strong { color: var(--text-primary); }
+  .blog-content a { color: var(--primary); text-decoration: underline; }
+  .blog-content a:hover { color: var(--accent-violet); }
+  .blog-content blockquote { border-left: 3px solid var(--primary); padding-left: 20px; margin: 24px 0; font-style: italic; color: var(--text-secondary); }
+  .blog-content table { width: 100%; border-collapse: collapse; margin: 24px 0; }
+  .blog-content th, .blog-content td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); font-size: 0.95rem; }
+  .blog-content th { color: var(--text-primary); font-weight: 600; background: var(--bg-card); }
+  .blog-cta { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 40px; text-align: center; margin: 60px 0; }
+  .blog-cta h3 { margin-bottom: 12px; }
+  .blog-cta p { color: var(--text-secondary); margin-bottom: 20px; }
+  .blog-cta a { display: inline-block; padding: 12px 28px; background: var(--primary); color: white; border-radius: 8px; text-decoration: none; font-weight: 600; }
+  .blog-cta a:hover { background: var(--accent-violet); }
+  .blog-related { margin: 60px 0 0; }
+  .blog-related h3 { margin-bottom: 20px; }
+  .blog-related a { display: block; padding: 16px 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 12px; text-decoration: none; color: var(--text-primary); font-weight: 600; transition: border-color 0.3s; }
+  .blog-related a:hover { border-color: var(--primary); }
+  .blog-related a span { display: block; font-size: 0.85rem; color: var(--text-muted); font-weight: 400; margin-top: 4px; }
+  .blog-footer { padding: 40px 0; border-top: 1px solid var(--border); margin-top: 60px; text-align: center; color: var(--text-muted); font-size: 0.85rem; }
+  .blog-footer a { color: var(--primary); text-decoration: none; }
+  .text-gradient { background: linear-gradient(135deg, var(--primary), var(--accent-violet)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+</style>
+</head>
+<body>
+
+<nav class="blog-nav">
+  <div class="container">
+    <a href="/es/" class="nav-logo-link">
+      <svg class="zenia-mark" viewBox="0 0 140 140" fill="none" width="32" height="32">
+        <defs>
+          <linearGradient id="zg-b" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#2563EB"/>
+            <stop offset="100%" stop-color="#3B82F6"/>
+          </linearGradient>
+          <linearGradient id="zg-v" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#6366F1"/>
+            <stop offset="100%" stop-color="#7C3AED"/>
+          </linearGradient>
+        </defs>
+        <rect width="140" height="140" rx="28" fill="#0F172A"/>
+        <path d="M 70 18 Q 18 18 18 38 L 18 57 Q 18 63 24 63 L 88 63 Z" fill="url(#zg-b)"/>
+        <path d="M 70 122 Q 122 122 122 102 L 122 83 Q 122 77 116 77 L 52 77 Z" fill="url(#zg-v)"/>
+      </svg>
+      <span>ZENIA</span>
+    </a>
+    <ul class="nav-main-links">
+      <li><a href="/es/#opportunities">Oportunidades IA</a></li>
+      <li><a href="/es/#services">Servicios</a></li>
+      <li><a href="/es/#process">Proceso</a></li>
+      <li><a href="/es/#impact">Impacto</a></li>
+      <li><a href="/blog/" class="active">Blog</a></li>
+    </ul>
+    <a href="/es/#cta" class="nav-cta-btn">Empezar</a>
+  </div>
+</nav>
+
+<article class="container">
+  <header class="blog-header">
+    <div class="blog-meta">1 de octubre, 2026 &middot; Fabrizzio Zelada &middot; 11 min de lectura</div>
+    <h1><span class="text-gradient">Integrar Odoo con WhatsApp Business:</span> guía técnica para 2026</h1>
+    <p class="lead">Desde Odoo 17 la integración con WhatsApp Business API dejó de ser un conector de terceros y pasó a ser módulo nativo. En Odoo 18 es aún más sólida y, con la release 19 de enero de 2026, cubre CRM, Ventas, Helpdesk y Appointments sin addons externos. Esta guía explica cuándo tiene sentido el módulo Enterprise, cuándo irse por OCA Community y cómo configurarlo sin romper el chatter.</p>
+  </header>
+
+  <div class="blog-content">
+
+    <p class="pillar-callout"><strong>Lee también:</strong> si vienes de otro CRM, revisa primero nuestra guía para <a href="/blog/integrar-hubspot-con-whatsapp-business.html">integrar HubSpot con WhatsApp Business</a> y la <a href="/blog/comparativa-plataformas-ia-conversacional-crm-whatsapp.html">comparativa de plataformas de IA conversacional con CRM y WhatsApp</a>.</p>
+
+
+    <h2>Por qué integrar Odoo con WhatsApp Business cambia la operación</h2>
+
+    <p>El dato que empuja esta integración es simple: los mensajes de WhatsApp tienen una tasa de apertura del 98% frente al 20-30% del email, los tiempos de respuesta del equipo bajan un 60% cuando el canal principal es WhatsApp y la conversión de leads se multiplica entre 3 y 5 veces si el seguimiento llega en la primera hora. En un ERP como Odoo, donde ya viven el CRM, Ventas, Facturación y Helpdesk, poner WhatsApp al lado de cada registro cambia el ritmo del equipo comercial.</p>
+
+    <p>El problema histórico era otro: la integración se hacía con módulos de terceros, cada uno con su propio token, su propia tabla de plantillas y su propio webhook. Dos cambios recientes resolvieron eso.</p>
+
+    <ul>
+      <li>Desde Odoo 17 el módulo <code>whatsapp</code> es nativo y usa directamente la Cloud API de Meta.</li>
+      <li>Desde Odoo 18 el módulo centraliza plantillas homologadas, soporta varios números bajo la misma Business Account y respeta los permisos de usuario/departamento.</li>
+      <li>En Odoo 19 (release del 13 de enero de 2026) el módulo cubre Appointments y Helpdesk sin addons extra, y acepta el chat de WhatsApp dentro del propio <em>Discuss</em>.</li>
+    </ul>
+
+    <p>Para Community la historia es distinta: el módulo nativo solo está en Enterprise. La vía oficial son los módulos de la Odoo Community Association (OCA, licencia LGPL-3.0) o un conector del Odoo Apps Store. Lo veremos en detalle más abajo.</p>
+
+    <p>Lo que casi nadie documenta y es importante: integrar Odoo con WhatsApp bien hecho no se trata solo de "enviar mensajes desde una ficha". Se trata de que un <a href="/blog/agente-ia-personalizado-vs-chatbot-generico.html">agente de IA personalizado</a> lea el estado del lead, consulte stock, abra una nota en Helpdesk y actualice la oportunidad sin que un comercial toque nada. Ese es el verdadero valor del CRM conectado.</p>
+
+    <h2>Enterprise nativo vs OCA Community: cuál elegir en 2026</h2>
+
+    <p>La decisión depende de tres variables: edición de Odoo que ya tienes, volumen de mensajes mensual y si el equipo tiene recursos para mantener addons de la OCA.</p>
+
+    <h3>Módulo nativo de Odoo Enterprise (16, 17, 18, 19)</h3>
+
+    <p>Es la opción recomendada si pagas Enterprise. Viene con:</p>
+
+    <ul>
+      <li>Creación y envío de plantillas homologadas (HSM) directamente desde el módulo <em>Marketing</em>.</li>
+      <li>Compatibilidad con varios números dentro de la misma WhatsApp Business Account.</li>
+      <li>Mensajes entrantes recogidos por webhook, enrutados por responsable del contacto o del lead.</li>
+      <li>Integración directa con CRM, Sales, Purchase, Helpdesk y Appointments (en 19).</li>
+      <li>Soporte oficial de Odoo S.A. en los upgrades mayores.</li>
+    </ul>
+
+    <p>La contra es el coste. Enterprise ya no es barato, y cada usuario que necesite el canal se cuenta en la licencia. Para un equipo de 15 personas, hablamos de 2.500-3.000 euros al año solo en licencias Odoo, al margen de lo que facture Meta por conversaciones.</p>
+
+    <h3>OCA Community: módulo <code>whatsapp_connector</code></h3>
+
+    <p>La Odoo Community Association mantiene varios módulos. El más utilizado es <code>whatsapp_connector</code>, con licencia LGPL-3.0, disponible para Odoo 16, 17 y 18. Incluye:</p>
+
+    <ul>
+      <li>Mensajería de WhatsApp dentro del chatter del contacto, lead y oportunidad.</li>
+      <li>Soporte de plantillas HSM con variables dinámicas.</li>
+      <li>Webhook para mensajes entrantes con auto-asignación por regla.</li>
+      <li>Compatible con la Cloud API de Meta y, en algunas forks, con proveedores BSP como 360dialog o Twilio.</li>
+    </ul>
+
+    <p>Es gratis, pero mantiene el equipo que tú tengas detrás. Si no cuentas con un técnico Odoo o un partner, los upgrades entre versiones pueden romper el módulo. En proyectos reales, dedicar 2-4 horas por release al mantenimiento es normal.</p>
+
+    <h3>Conectores del Odoo Apps Store</h3>
+
+    <p>Alternativas como <em>All-in-One WhatsApp Connector</em>, <em>Sales CRM WhatsApp Integration</em> o <em>Odoo WhatsApp CRM in Discuss</em> cubren huecos cuando el módulo nativo no llega. Precios típicos: 100-300 euros una vez, con mantenimiento aparte. Útiles para funciones muy concretas (p. ej. integrar WhatsApp dentro del canal de <em>Discuss</em>), pero sumar varios addons que tocan el mismo flujo suele acabar en conflictos de dependencias.</p>
+
+    <p>Regla práctica que aplicamos cuando asesoramos a una pyme con <a href="/blog/crm-con-whatsapp-integrado.html">CRM con WhatsApp integrado</a>: si estás en Enterprise, usa el nativo; si estás en Community y tu volumen es inferior a 5.000 conversaciones al mes, OCA es suficiente; si pasas de ahí o necesitas automatizaciones avanzadas, pasa a Enterprise o monta un conector propio por API.</p>
+
+    <h2>Configurar la integración paso a paso (Odoo 18)</h2>
+
+    <p>El flujo oficial, con el módulo nativo activo, tarda entre 90 minutos y 3 horas en un entorno limpio. La parte lenta no es Odoo sino la verificación de Meta.</p>
+
+    <h3>1. Preparar la cuenta de Meta</h3>
+
+    <ul>
+      <li>Crea o selecciona un <em>Business Account</em> verificado en <code>business.facebook.com</code>.</li>
+      <li>Dentro de <em>WhatsApp Manager</em>, añade un <em>phone number</em> y verifícalo (SMS o llamada).</li>
+      <li>Crea una <em>Meta App</em> de tipo <em>Business</em> y añade el producto <em>WhatsApp</em>.</li>
+      <li>Anota tres valores: <strong>Phone Number ID</strong>, <strong>WhatsApp Business Account ID</strong> y <strong>Permanent Access Token</strong> (los tokens temporales expiran en 24 horas, no sirven para producción).</li>
+    </ul>
+
+    <h3>2. Configurar Odoo</h3>
+
+    <p>En Odoo 18 el camino es: <em>Ajustes &rarr; Discutir &rarr; WhatsApp &rarr; Añadir cuenta</em>. Pega el Phone Number ID, el Business Account ID y el token de acceso. Si en tu release el menú está en <em>Marketing / WhatsApp</em>, es equivalente.</p>
+
+    <p>Odoo genera una URL de webhook y un verify token. Vuelve al panel de la Meta App, en el producto WhatsApp, y pégalos en <em>Webhook</em>. Suscríbete al menos a los eventos <code>messages</code> y <code>message_status</code>.</p>
+
+    <h3>3. Dar de alta plantillas HSM</h3>
+
+    <p>Las plantillas que inician conversación fuera de la ventana de 24h se declaran en Meta y en Odoo. En Odoo 18 el formulario de plantillas acepta variables <code>{{1}}</code>, <code>{{2}}</code>, media header y botones de respuesta rápida. Un consejo que ahorra días: haz la primera plantilla lo más neutra posible (confirmación de pedido o cita) para pasar la revisión de Meta en 24-48 horas, y añade después las de marketing.</p>
+
+    <h3>4. Enlazar con CRM, Ventas y Helpdesk</h3>
+
+    <p>Con la cuenta activa, cada ficha de contacto, lead, oportunidad, pedido, factura o ticket muestra el botón <em>Enviar por WhatsApp</em>. El chatter guarda el intercambio como mensajes nativos (quedan buscables, filtrables y referenciados a la actividad).</p>
+
+    <p>Para automatizar, usa <em>Automated Actions</em>: cuando una oportunidad llega a la etapa "Qualified", disparar la plantilla de agendamiento con los datos del lead. Lo mismo con <em>Appointments</em> en Odoo 19 para recordatorios de citas.</p>
+
+    <h3>5. Mensajes entrantes y escalado</h3>
+
+    <p>El webhook recibe los mensajes del cliente, los enruta al responsable del contacto o, si no hay responsable, al equipo configurado en el canal. Si usas un <a href="/blog/agente-ia-para-call-center.html">agente de IA para call center</a> delante, el webhook debe enviarse primero al agente (que puede resolver el 60-80% de las consultas) y escalar a Odoo solo cuando haga falta intervención humana. Este patrón es el que recomendamos en implantaciones medianas y grandes.</p>
+
+    <h2>Automatizaciones típicas que vale la pena montar</h2>
+
+    <p>Tener Odoo conectado a WhatsApp no es un fin, es la plataforma para automatizaciones de ingreso. Estas son las que más ROI dan en los clientes que acompañamos.</p>
+
+    <h3>Follow-up de lead en los primeros 60 minutos</h3>
+
+    <p>La estadística que repiten los equipos de ventas: contactar un lead en los primeros 60 minutos multiplica por 3 a 5 la conversión. Automated Action en Odoo: cuando un lead cae en el pipeline, dispara una plantilla con el nombre del comercial, hora propuesta y botón para confirmar. Si el cliente responde, el chat continúa de forma humana. Si no, 24h después se dispara una segunda plantilla distinta.</p>
+
+    <h3>Confirmación de pedido y seguimiento de envío</h3>
+
+    <p>En <em>Sales</em>, cuando una orden pasa a estado <em>Confirmed</em>, se envía un mensaje con el número de pedido, importe y fecha estimada. Al generarse el picking y marcarse como <em>Done</em>, se dispara una segunda plantilla con tracking. Para ecommerce con Odoo, esto baja los tickets de "¿dónde está mi pedido?" alrededor de un 40%.</p>
+
+    <h3>Recuperación de facturas vencidas</h3>
+
+    <p>Para gestoría y servicios profesionales, Odoo marca facturas en estado <em>Overdue</em> a los X días. Un flow sencillo dispara un recordatorio por WhatsApp con el enlace al PDF y un botón de pago. Clientes nuestros con <a href="/blog/crm-para-gestorias.html">CRM para gestorías</a> han pasado del 68% de cobro a 30 días al 89% con solo este flujo.</p>
+
+    <h3>Tickets de Helpdesk desde el chat</h3>
+
+    <p>Cuando el agente de IA detecta una queja o incidencia, abre un ticket en Helpdesk con la transcripción pegada, el contacto enlazado y la prioridad calculada. El equipo humano abre Odoo y entra ya con contexto. Antes, el ticket se escribía a mano o se perdía.</p>
+
+    <h3>Reagendamiento de citas en Appointments</h3>
+
+    <p>En Odoo 19, el módulo Appointments ya envía WhatsApp al confirmar y al recordar la cita. El valor diferencial es que el cliente puede responder "sí", "cancelar" o "cambiar al jueves" y el agente de IA actualiza el calendario sin que nadie entre en el ERP. Aplicable a <a href="/blog/agente-ia-para-clinicas-de-fisioterapia.html">clínicas de fisioterapia</a>, dentistas, consultorías y academias.</p>
+
+    <h2>Costes reales de una integración Odoo + WhatsApp en 2026</h2>
+
+    <p>Tres bloques de coste: licencias Odoo, plantillas y conversaciones de Meta, trabajo de implantación. Los números a continuación son medias de proyectos reales de 10 a 40 usuarios.</p>
+
+    <h3>Licencias Odoo</h3>
+
+    <ul>
+      <li><strong>Odoo Enterprise:</strong> alrededor de 24,90 euros/usuario/mes en 2026 (Standard), más apps que uses. El módulo WhatsApp va incluido.</li>
+      <li><strong>Odoo Community:</strong> 0 euros de licencia. Hosting en VPS: 25-80 euros/mes según carga. Módulos OCA: gratis. Horas de un partner Odoo si no tienes técnico: 60-90 euros/hora, con mantenimiento típico de 4-8 horas al mes.</li>
+    </ul>
+
+    <h3>WhatsApp Business API: lo que cobra Meta</h3>
+
+    <p>Desde la reforma de precios de 2025, Meta cobra por conversación. En España, julio 2025 a diciembre 2026, los tramos relevantes son: utility (confirmación de pedido, recordatorio) alrededor de 0,0315 EUR por conversación, authentication 0,0589 EUR, marketing 0,0618 EUR. Para una pyme de servicios con 2.000 conversaciones/mes mezcladas, hablamos de 70-130 euros/mes solo en Meta.</p>
+
+    <p>Si prefieres pasar por un BSP (360dialog, Twilio, MessageBird), suma 0,004-0,015 EUR por mensaje además de la conversación de Meta. La ventaja es la facturación consolidada y el soporte. Puedes ver el detalle en nuestra guía de <a href="/blog/precios-whatsapp-business-api-2026.html">precios WhatsApp Business API 2026</a>.</p>
+
+    <h3>Implantación</h3>
+
+    <p>Una integración limpia Odoo-WhatsApp con 5-6 automatizaciones básicas lleva entre 25 y 50 horas de trabajo. A tarifa de partner Odoo (60-90 EUR/h en Europa, 25-45 USD/h en LATAM), hablamos de 1.500-4.500 EUR de setup. En ZENIA el proyecto estándar ronda las 35 horas con un alcance definido: conexión, plantillas iniciales, 4 automatizaciones y formación. Suele cerrarse en una tarifa plana de 1.997 EUR + mantenimiento mensual.</p>
+
+    <h3>Cuándo tiene sentido y cuándo no</h3>
+
+    <p>No tiene sentido si:</p>
+
+    <ul>
+      <li>Facturas menos de 50 pedidos/mes y los clientes rara vez usan WhatsApp.</li>
+      <li>Usas Odoo Community sin ningún técnico y no quieres contratar partner.</li>
+      <li>Tu base de datos de contactos está sin consentimiento documentado para WhatsApp (ojo con el RGPD).</li>
+    </ul>
+
+    <p>Tiene sentido si:</p>
+
+    <ul>
+      <li>Tu equipo comercial o de soporte invierte más de 2 horas al día en WhatsApp manual.</li>
+      <li>Tienes al menos 500 contactos activos y procesos repetitivos (confirmaciones, recordatorios, follow-up).</li>
+      <li>Odoo ya es tu fuente de verdad y los comerciales se quejan de que "WhatsApp está desconectado del CRM".</li>
+    </ul>
+
+    <h2>Errores comunes y cómo evitarlos</h2>
+
+    <p>En auditorías a implantaciones Odoo + WhatsApp, estos son los fallos que aparecen una y otra vez.</p>
+
+    <h3>Lanzar sin plantillas aprobadas</h3>
+
+    <p>Meta tarda 24-48 horas en revisar una plantilla y rechaza las que suenan a marketing agresivo o incluyen datos no permitidos. Prepara al menos dos plantillas (utility y marketing) antes de salir a producción. Si lanzas sin plantilla, solo podrás responder dentro de la ventana de 24h, y la mitad de los casos de uso se caen.</p>
+
+    <h3>Usar un número personal</h3>
+
+    <p>Si pasas tu número de WhatsApp personal a Business API, pierdes el acceso desde la app móvil durante 7 días (política de Meta). Reserva un número nuevo o un fijo portado desde el principio.</p>
+
+    <h3>No separar entornos</h3>
+
+    <p>Si usas el mismo Phone Number ID en pruebas y producción, los mensajes de pruebas llegan a clientes reales. Meta permite 2 números gratuitos por Business Account: usa uno de staging. Alternativamente, hay partners que ofrecen números sandbox.</p>
+
+    <h3>Confiar en el chatter sin reglas de enrutado</h3>
+
+    <p>Por defecto, los mensajes entrantes llegan al <em>Discuss</em> del canal. Si no configuras reglas de asignación (por tag, por lead, por responsable), el equipo se pisa y las conversaciones se contestan tarde. Define reglas antes del día uno.</p>
+
+    <h3>Olvidar el consentimiento RGPD</h3>
+
+    <p>WhatsApp requiere opt-in explícito antes de enviar plantillas de marketing. Si tu lista viene de un formulario web, añade el checkbox específico y guarda la prueba (timestamp + IP). Para listas antiguas, haz un reenganche por otro canal (email, SMS) antes de usarlas en WhatsApp. Multas de la AEPD por mala praxis empiezan en 900 euros y suben rápido.</p>
+
+    <h3>Importar plantillas con variables mal ordenadas</h3>
+
+    <p>Si la plantilla aprobada tiene <code>{{1}}</code> = nombre y <code>{{2}}</code> = fecha, y en el flow pones fecha primero, los mensajes salen con los campos cambiados. Hay reportes de reservas enviadas al número equivocado por este tipo de error. Testea cada plantilla con un número interno antes de activarla a masivos.</p>
+
+    <h2>Preguntas frecuentes</h2>
+
+    <h3>¿Puedo usar varios números con la misma cuenta de Odoo?</h3>
+
+    <p>Sí. Desde Odoo 18 la Business Account de Meta puede llevar hasta 25 números y Odoo los enruta a canales distintos. Útil para separar comercial, soporte y marketing, o para operar varios países.</p>
+
+    <h3>¿Hace falta un servidor extra?</h3>
+
+    <p>No para el módulo nativo. Odoo recibe los webhooks directamente. Si tu instancia es cloud de Odoo, el webhook ya es público. Si es on-premise, asegúrate de que la URL es accesible desde Internet por HTTPS.</p>
+
+    <h3>¿Soporta mensajes de voz, imágenes y PDF?</h3>
+
+    <p>Sí. El módulo nativo acepta todos los tipos de media que soporta la Cloud API. Los adjuntos se guardan en el chatter como archivos.</p>
+
+    <h3>¿Funciona en Odoo.sh?</h3>
+
+    <p>Sí. Odoo.sh (Enterprise cloud) incluye el módulo nativo por defecto. En Odoo online SaaS también está, aunque algunos flujos avanzados de Automated Actions requieren el plan Standard.</p>
+
+    <h3>¿Qué pasa si cambio de BSP?</h3>
+
+    <p>El Phone Number ID se puede migrar entre proveedores (self-serve de Meta o BSP). La operación tarda 24-72 horas y no implica cambiar el número ante los clientes. Lo que sí hay que reconfigurar son las plantillas y el webhook.</p>
+
+    <h2>En resumen</h2>
+
+    <p>Odoo 18 y Odoo 19 bajan muchísimo la barrera para integrar WhatsApp Business con el CRM: cero conectores externos, mensajes dentro del chatter, plantillas gestionadas desde el ERP y automatizaciones nativas. La parte complicada ya no es técnica, es operativa: elegir qué flujos aportan ingreso, aprobar las plantillas con tiempo, respetar el RGPD y poner al agente de IA en el lugar adecuado del flujo.</p>
+
+    <p>Si quieres acelerar la decisión entre Enterprise, Community o Apps Store, o si prefieres directamente que lo implantemos nosotros con los flujos listos, hablamos.</p>
+
+    <div class="blog-cta">
+      <h3>¿Integras Odoo con WhatsApp o lo delegamos?</h3>
+      <p>En ZENIA montamos la integración completa Odoo + WhatsApp Business en 3-4 semanas: conexión con Meta, plantillas aprobadas, automatizaciones de CRM y agente de IA personalizado para responder y escalar. Tarifa plana desde 1.997 EUR + mantenimiento.</p>
+<p data-zenia-oportunidad="1">Todo esto parte de lo mismo: <a href="/es/automatizacion-whatsapp-negocios.html">automatizar WhatsApp con IA</a> para que ningún mensaje se quede sin responder.</p>
+
+      <a href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20sobre%20integrar%20Odoo%20con%20WhatsApp%20Business%20y%20quiero%20hacerlo%20en%20mi%20empresa" target="_blank" rel="noopener">Hablar por WhatsApp ahora</a> <a style="background:transparent;border:1px solid var(--border);color:var(--text-secondary);margin-left:10px" href="https://calendly.com/zeladauriartef/30min">Agendar llamada gratuita</a>
+    </div>
+<div class="blog-related" data-zenia-money-links="1">
+  <h3>Ponlo en marcha en tu negocio</h3>
+  <a href="/es/crm-restaurantes.html">CRM con IA para Restaurantes<span>Agente de IA por WhatsApp 24/7 + CRM. Implementación completa, desde €297/mes.</span></a>
+  <a href="/es/crm-restaurantes-madrid.html">CRM con IA para Restaurantes en Madrid<span>Implementación local para restaurantes en Madrid. Demo gratuita por WhatsApp.</span></a>
+  <a href="/es/crm-restaurantes-barcelona.html">CRM con IA para Restaurantes en Barcelona<span>Implementación local para restaurantes en Barcelona. Demo gratuita por WhatsApp.</span></a>
+</div>
+
+
+    <div class="blog-related">
+      <h3>Artículos relacionados</h3>
+      <a href="/blog/integrar-hubspot-con-whatsapp-business.html">Integrar HubSpot con WhatsApp Business: Guía Completa<span>Workflows, plantillas y automatizaciones nativas para conectar HubSpot con WhatsApp Business API.</span></a>
+      <a href="/blog/crm-con-whatsapp-integrado.html">CRM con WhatsApp integrado: qué buscar en 2026<span>Checklist técnico para elegir un CRM que hable WhatsApp sin addons rotos.</span></a>
+      <a href="/blog/precios-whatsapp-business-api-2026.html">Precios WhatsApp Business API 2026<span>Tramos de Meta, costes por conversación y margen de los BSP.</span></a>
+      </div>
+
+  </div>
+
+<div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 24px; margin: 40px 0;" data-zenia-internal-links="landings">
+  <h3 style="color: #F1F5F9; margin-bottom: 12px; font-size: 1.05rem;">¿Qué CRM usas hoy?</h3>
+  <p style="color: #94A3B8; margin-bottom: 16px; font-size: 0.95rem;">Si no tienes Odoo o buscas alternativas con WhatsApp integrado, estas guías pueden ayudar:</p>
+  <div>
+      <a href="/blog/integrar-hubspot-con-whatsapp-business.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Integrar HubSpot con WhatsApp →</a>
+      <a href="/blog/crm-con-whatsapp-integrado.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">CRM con WhatsApp integrado →</a>
+      <a href="/blog/precios-zoho-crm-2026.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Precios Zoho CRM 2026 →</a>
+      <a href="/blog/comparativa-plataformas-ia-conversacional-crm-whatsapp.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Comparativa plataformas IA conversacional →</a>
+  </div>
+</div>
+
+</article>
+
+<footer class="blog-footer">
+  <div class="container">
+    <p>&copy; 2026 ZENIA. Todos los derechos reservados. | <a href="/">Inicio</a> | <a href="/blog/">Blog</a></p>
+  </div>
+</footer>
+
+<div style="text-align:center; padding:16px 24px; background:#0A0F1C; color:#64748B; font-size:0.85rem; border-top:1px solid rgba(255,255,255,0.04);"><a href="/es/cobertura.html" style="color:#94A3B8; text-decoration:none;">Ver cobertura completa</a></div>
+<a href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20sobre%20integrar%20Odoo%20con%20WhatsApp%20Business%20y%20quiero%20hacerlo%20en%20mi%20empresa" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp" data-directo style="position:fixed;bottom:24px;right:24px;z-index:9998;background:#25D366;color:white;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(37,211,102,0.4);transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 20px rgba(37,211,102,0.5)'" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 16px rgba(37,211,102,0.4)'">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<script>document.addEventListener("click",function(e){var t=e.target,a=t.closest?t.closest('a[href*="wa.me"]'):null;if(!a)return;try{navigator.sendBeacon("https://gaia-relojes.onrender.com/gwb/lead",JSON.stringify({site:"zenia",path:location.pathname+location.search,ref:document.referrer||""}))}catch(r){}},true);</script>
+<script src="/assets/qualify.js?v=4" defer></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "67e4803d7cd443a49b12c7d8a99365bf"}'></script>
+</body>
+</html>

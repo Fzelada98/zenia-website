@@ -7533,3 +7533,17 @@ Full architecture, DMS integration surface, scoring model and the 6-week rollout
 
 ---
 
+
+## 2026-10-01 - Hair Salon CRM: The 2026 US Buyer's Guide (EN)
+
+The engineering problem in a hair salon stack is not the booking app. It is making a 2k-client book searchable, actionable and reachable on the same channel the client already uses, without ever losing the color formula on the way.
+
+Our reference deployment on top of Vagaro / Boulevard / Mindbody / Fresha: WhatsApp Business API (Meta Cloud) + SMS via Twilio as the inbound layer, an LLM router pre-classified on salon intents (price-check, availability, service-length, cancel, rebook, retail), native booking-system integration via REST for live calendar + deposit holds (no CSV sync), a structured client-record service with color-formula fields the agent writes on behalf of the stylist, and an orchestrator that fires rebook / lapsed / waitlist flows against the client's actual visit interval, not a global schedule. Deposit capture on services > $90 is a Stripe hold released at check-in.
+
+Numbers from a 3-chair Charlotte deployment, 90-day cohort: no-show rate 19% to 4%, first-to-second retention 26% to 54%, rebook-at-checkout 11% to 46%, after-hours booking capture 0 to ~18/mo via the AI agent (79% end-to-end, 21% warm-handed to the stylist on duty), p50 inbound response 9s at 3x after-hours load.
+
+Full architecture, benchmark table, buyer's checklist and 2-week rollout: https://zeniapartners.com/blog/hair-salon-crm-with-ai.html
+
+#Infrastructure #WhatsAppBusinessAPI #SalonTech #B2B
+
+---

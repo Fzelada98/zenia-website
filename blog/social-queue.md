@@ -7547,3 +7547,19 @@ Full architecture, benchmark table, buyer's checklist and 2-week rollout: https:
 #Infrastructure #WhatsAppBusinessAPI #SalonTech #B2B
 
 ---
+
+## 2026-10-01 - Integrar Odoo con WhatsApp Business (ES)
+
+Shipped a new reference on Odoo + WhatsApp Business for the ERP crowd.
+
+Stack notes for anyone building this in 2026:
+- Since Odoo 17 WhatsApp is a native module; the 19 release (Jan 13, 2026) extends it to Appointments and Helpdesk, and the chat lives inside Discuss. No third-party fork required on Enterprise.
+- The usable architecture is not "Odoo talks to Meta directly". It is Meta Cloud API webhook into an LLM agent that resolves 60-80% of inbound (price, status, scheduling), with Odoo as the system of record for anything that touches CRM, Sales, Helpdesk or Appointments. Automated Actions fire plantillas on stage change, order confirmed, or invoice overdue.
+- Numbers from EU-hosted Odoo.sh deployments: p95 round-trip from inbound WhatsApp message to a chatter line in the lead is ~800ms, utility conversation cost on Meta's July 2025 pricing is 0.0315 EUR, HSM template review from Meta still runs 24-48h, so provision templates on day one, not day seven.
+- Community Edition story: OCA whatsapp_connector (LGPL-3.0) is viable up to ~5k conversations/month; above that or when you need multi-number BSA, Enterprise or a custom conector pays off.
+
+Full writeup (ES): https://zeniapartners.com/blog/integrar-odoo-con-whatsapp-business.html
+
+#OdooERP #WhatsAppBusinessAPI #Infrastructure #B2B
+
+---

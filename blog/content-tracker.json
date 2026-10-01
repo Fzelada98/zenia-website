@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-09-30T22:00:00+00:00",
+  "lastRun": "2026-10-01T06:00:00+00:00",
   "posts": [
+    {
+      "slug": "crm-para-concesionarios-de-coches",
+      "keyword": "crm para concesionarios de coches",
+      "tier": 2,
+      "cluster": "concesionarios",
+      "status": "published",
+      "date": "2026-10-01",
+      "source": "generated"
+    },
     {
       "slug": "cambiar-software-de-gimnasio",
       "keyword": "cambiar software de gimnasio",

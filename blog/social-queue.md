@@ -7519,6 +7519,8 @@ Full architecture, flow definitions, ROI math for an 800k EUR/yr shop and the 4-
 
 ## 2026-10-01 - CRM para Concesionarios de Coches (ES)
 
+<!-- PUBLISHED:make-webhook at 2026-10-01T08:30:51Z -->
+
 The hard problem in a dealership CRM is not the UI. It is closing the lead-response gap: the Clearline 2026 mystery shop of 53 dealerships measured a 9.01h mean and 11.5h median first response. The 32% close-rate advantage goes to whoever hits the first 5 minutes.
 
 Our deployment architecture for a 300-800 leads/mo dealership: WhatsApp Business API (Meta Cloud) as the inbound layer, an LLM router pre-classified on auto-vertical intents (test-drive, stock-check, financing, trade-in), and a real-time DMS integration (DealerLink / X-OEM / Icosnet via native API, not CSV sync) so the agent reads stock, pricing and VIN availability at the ms scale. Portal webhooks from Coches.net / Autoscout24 / Motor.es land in the same queue, de-duplicated by phone and email at ingest. SLA alerts fire at 300s with auto-reassignment.

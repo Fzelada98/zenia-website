@@ -7517,3 +7517,17 @@ Full architecture, flow definitions, ROI math for an 800k EUR/yr shop and the 4-
 
 ---
 
+## 2026-10-01 - CRM para Concesionarios de Coches (ES)
+
+The hard problem in a dealership CRM is not the UI. It is closing the lead-response gap: the Clearline 2026 mystery shop of 53 dealerships measured a 9.01h mean and 11.5h median first response. The 32% close-rate advantage goes to whoever hits the first 5 minutes.
+
+Our deployment architecture for a 300-800 leads/mo dealership: WhatsApp Business API (Meta Cloud) as the inbound layer, an LLM router pre-classified on auto-vertical intents (test-drive, stock-check, financing, trade-in), and a real-time DMS integration (DealerLink / X-OEM / Icosnet via native API, not CSV sync) so the agent reads stock, pricing and VIN availability at the ms scale. Portal webhooks from Coches.net / Autoscout24 / Motor.es land in the same queue, de-duplicated by phone and email at ingest. SLA alerts fire at 300s with auto-reassignment.
+
+Numbers from six multi-brand dealerships in Spain + LATAM, 90-day cohort: p50 first response 12s at 5x inbound spike, leads reaching CRM 85% to 99%+, lead-to-sale conversion 7.2% to 11.4%, test-drive show rate 62% to 81%.
+
+Full architecture, DMS integration surface, scoring model and the 6-week rollout: https://zeniapartners.com/blog/crm-para-concesionarios-de-coches.html
+
+#Infrastructure #WhatsAppBusinessAPI #Automotive #B2B
+
+---
+

@@ -7598,6 +7598,8 @@ Full writeup (ES, PMS integration matrix, 5-week rollout): https://zeniapartners
 ---
 ## 2026-10-02 - Desarrollo Agente IA para Clínicas Dentales (ES)
 
+<!-- PUBLISHED:make-webhook at 2026-10-02T08:30:03Z -->
+
 Shipped a new reference on the AI-agent layer for dental clinics in Spain and LATAM.
 
 Engineering problem: Gesden, Dentalink, Odontonet, Klinikare and Dentrix run the chart and the odontogram beautifully, but recepción drops 30-50% of inbound WhatsApp traffic and no-shows sit at 18-22% (the highest absenteeism of any private healthcare specialty in Spain). Static flows do not survive a patient who mixes rescheduling a hygiene with a question on implant financing in the same thread.

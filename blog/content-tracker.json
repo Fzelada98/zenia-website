@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-10-02T06:00:00+00:00",
+  "lastRun": "2026-10-02T14:08:00+00:00",
   "posts": [
+    {
+      "slug": "whatsapp-flows-para-pymes",
+      "keyword": "whatsapp flows para pymes",
+      "tier": 2,
+      "cluster": "whatsapp-technical",
+      "status": "published",
+      "date": "2026-10-02",
+      "source": "generated"
+    },
     {
       "slug": "desarrollo-agente-ia-clinicas-dentales",
       "keyword": "desarrollo agente ia clínicas dentales",

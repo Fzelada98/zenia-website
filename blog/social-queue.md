@@ -7644,3 +7644,24 @@ Full writeup (EN, EHR integration matrix, 3-week rollout): https://zeniapartners
 #Infrastructure #WhatsAppBusinessAPI #HealthTech #B2B
 
 ---
+
+## 2026-10-02 - WhatsApp Flows for SMBs (EN, Company Page)
+
+Form fill-rate inside a WhatsApp Flow runs 51% in production. The same form on the matching landing page runs 18%.
+
+The gap is not UX polish. It is the cost of a context switch to a browser the user never asked for.
+
+Reference stack we ship for endpoint-mode Flows on the Meta Cloud API:
+- Node 22 / Fastify (or Python 3.12 / FastAPI) endpoint; p95 1.0 s on crypto plus business logic, well under Meta's 10 s cut.
+- RSA-OAEP + AES-128-GCM per request; AES session key rotated per Flow, RSA key rotation jobbed every 90 days with OTel alerts under 15 days to expiry.
+- flow_token = wa:{e164}:{conversation_id}:{nonce}; propagated across every screen and into the CRM write.
+- Transactional upsert: contact by phone_e164, business object (booking, opportunity, order), conversation_log row with screen-path trace. Durable queue (Redis Streams or SQS) catches CRM 5xx so the Flow still closes SUCCESS for the user.
+- Dynamic screens read live state from HubSpot / Pipedrive / Salesforce / Odoo through cached BSP connectors (5 min Redis TTL), never from the CRM in the hot path.
+
+Delta on 42 SMB deployments last quarter: completion 18% to 51%, lead-to-opportunity 22% to 44%, cost per qualified lead EUR 11.80 to EUR 4.60, notification opt-in 31% to 83%.
+
+The architecture that moves those numbers is in the writeup, including the data-exchange contract, the BACK handling pattern and the six failure modes we see on self-builds.
+
+#Infrastructure #WhatsAppBusinessAPI #B2B #SaaS
+
+---

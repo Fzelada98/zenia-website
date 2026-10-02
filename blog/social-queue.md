@@ -7665,3 +7665,22 @@ The architecture that moves those numbers is in the writeup, including the data-
 #Infrastructure #WhatsAppBusinessAPI #B2B #SaaS
 
 ---
+
+## 2026-10-02 - AI Agent for Mental Health Clinics (EN, Company Page)
+
+HIPAA is the architectural constraint that most "WhatsApp for therapists" vendors wave away. The honest reading: Meta will not sign a BAA for consumer WhatsApp or for the Cloud API. SMS and generic email aren't covered either.
+
+The shape that actually ships for US mental health practices:
+- Entry channel on WhatsApp Business Cloud API / web chat / SMS, non-PHI by design (name, phone, state, insurance type, preferred modality, scheduling only). No symptom detail, no assessment answers, no diagnosis in the thread.
+- Secure intake form link posted into the chat; form endpoint and storage inside a BAA-covered perimeter (HIPAA-ready Postgres + object store, audit log on every read).
+- Parallel CRM owns intake, waitlist and reminder state because SimplePractice and TherapyNotes ship no meaningful public API. Calendar read via iCal; writes via partner API where it exists (Osmind, Valant), via staged daily sync otherwise.
+- Reminder cadence 48h / 24h-with-confirm / 2h, double-cadence for prior no-show patterns. Crisis routing to 988 is a hard-coded path, not an LLM decision.
+- OTel traces per conversation, PHI-free; separate audit stream for the BAA-covered backend.
+
+Production delta on a 4-clinician Austin group, 90-day cohort: no-shows 24% to 11%; intake-to-first-session 41% to 73%; waitlist fills 4/mo to 19/mo; +$8.4k/mo recovered revenue; admin hours on scheduling 14/wk to 3/wk.
+
+Full writeup (EN, EHR matrix, 3-week rollout): https://zeniapartners.com/blog/ai-agent-for-mental-health-clinics.html
+
+#Infrastructure #WhatsAppBusinessAPI #HealthTech #HIPAA
+
+---

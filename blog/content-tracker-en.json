@@ -56,48 +56,310 @@
       "date": "2026-09-28",
       "note": "striking-loop hit: 11 impressions, pos 11.0. Was printing on /blog/dental-clinic-crm-with-ai.html; added cross-link there."
     },
-    { "slug": "ai-agent-for-roofing-companies", "keyword": "ai agent for roofing companies", "tier": 1, "cluster": "trades", "status": "published", "date": "2026-09-25" },
-    { "slug": "ai-agent-for-electricians", "keyword": "ai agent for electricians", "tier": 1, "cluster": "trades", "status": "published", "date": "2026-09-25" },
-    { "slug": "ai-agent-for-landscaping-companies", "keyword": "ai agent for landscaping companies", "tier": 1, "cluster": "trades", "status": "published", "date": "2026-09-26" },
-    { "slug": "ai-agent-for-pest-control-companies", "keyword": "ai agent for pest control companies", "tier": 1, "cluster": "trades", "status": "published", "date": "2026-09-26" },
-    { "slug": "ai-agent-for-moving-companies", "keyword": "ai agent for moving companies", "tier": 1, "cluster": "services", "status": "published", "date": "2026-09-27" },
-    { "slug": "ai-agent-for-optometrists", "keyword": "ai agent for optometrists", "tier": 1, "cluster": "healthcare", "status": "published", "date": "2026-09-27" },
-    { "slug": "ai-agent-for-orthodontists", "keyword": "ai agent for orthodontists", "tier": 1, "cluster": "healthcare", "status": "published", "date": "2026-09-29" },
-    { "slug": "ai-agent-for-dermatology-clinics", "keyword": "ai agent for dermatology clinics", "tier": 1, "cluster": "healthcare", "status": "published", "date": "2026-10-01" },
-    { "slug": "ai-agent-for-pediatric-clinics", "keyword": "ai agent for pediatric clinics", "tier": 1, "cluster": "healthcare", "status": "published", "date": "2026-10-02" },
-    { "slug": "ai-agent-for-mental-health-clinics", "keyword": "ai agent for mental health clinics", "tier": 1, "cluster": "healthcare", "status": "pending" },
-    { "slug": "ai-agent-for-insurance-agencies", "keyword": "ai agent for insurance agencies", "tier": 1, "cluster": "professional", "status": "pending" },
-    { "slug": "ai-agent-for-financial-advisors", "keyword": "ai agent for financial advisors", "tier": 1, "cluster": "professional", "status": "pending" },
-    { "slug": "ai-agent-for-immigration-lawyers", "keyword": "ai agent for immigration lawyers", "tier": 1, "cluster": "professional", "status": "pending" },
-    { "slug": "ai-agent-for-driving-schools", "keyword": "ai agent for driving schools", "tier": 2, "cluster": "education", "status": "pending" },
-    { "slug": "ai-agent-for-yoga-studios", "keyword": "ai agent for yoga studios", "tier": 2, "cluster": "fitness", "status": "pending" },
-    { "slug": "ai-agent-for-pilates-studios", "keyword": "ai agent for pilates studios", "tier": 2, "cluster": "fitness", "status": "pending" },
-    { "slug": "ai-agent-for-dance-studios", "keyword": "ai agent for dance studios", "tier": 2, "cluster": "education", "status": "pending" },
-    { "slug": "ai-agent-for-martial-arts-schools", "keyword": "ai agent for martial arts schools", "tier": 2, "cluster": "education", "status": "pending" },
-    { "slug": "ai-agent-for-music-schools", "keyword": "ai agent for music schools", "tier": 2, "cluster": "education", "status": "pending" },
-    { "slug": "ai-agent-for-tutoring-centers", "keyword": "ai agent for tutoring centers", "tier": 2, "cluster": "education", "status": "pending" },
-    { "slug": "ai-agent-for-daycare-centers", "keyword": "ai agent for daycare centers", "tier": 2, "cluster": "education", "status": "pending" },
-    { "slug": "ai-agent-for-caterers", "keyword": "ai agent for caterers", "tier": 2, "cluster": "food", "status": "pending" },
-    { "slug": "ai-agent-for-bakeries", "keyword": "ai agent for bakeries", "tier": 2, "cluster": "food", "status": "pending" },
-    { "slug": "ai-agent-for-coffee-shops", "keyword": "ai agent for coffee shops", "tier": 2, "cluster": "food", "status": "pending" },
-    { "slug": "ai-agent-for-florists", "keyword": "ai agent for florists", "tier": 2, "cluster": "retail", "status": "pending" },
-    { "slug": "ai-agent-for-pet-groomers", "keyword": "ai agent for pet groomers", "tier": 2, "cluster": "services", "status": "pending" },
-    { "slug": "ai-agent-for-dog-walkers", "keyword": "ai agent for dog walkers", "tier": 2, "cluster": "services", "status": "pending" },
-    { "slug": "ai-agent-for-car-washes", "keyword": "ai agent for car washes", "tier": 2, "cluster": "auto", "status": "pending" },
-    { "slug": "ai-agent-for-towing-companies", "keyword": "ai agent for towing companies", "tier": 2, "cluster": "auto", "status": "pending" },
-    { "slug": "ai-agent-for-solar-installers", "keyword": "ai agent for solar installers", "tier": 1, "cluster": "trades", "status": "pending" },
-    { "slug": "ai-agent-for-pool-service-companies", "keyword": "ai agent for pool service companies", "tier": 2, "cluster": "services", "status": "pending" },
-    { "slug": "ai-agent-for-appliance-repair", "keyword": "ai agent for appliance repair", "tier": 2, "cluster": "trades", "status": "pending" },
-    { "slug": "ai-agent-for-locksmiths", "keyword": "ai agent for locksmiths", "tier": 2, "cluster": "services", "status": "pending" },
-    { "slug": "ai-agent-for-painters", "keyword": "ai agent for painters", "tier": 2, "cluster": "trades", "status": "pending" },
-    { "slug": "ai-agent-for-audiologists", "keyword": "ai agent for audiologists", "tier": 2, "cluster": "healthcare", "status": "pending" },
-    { "slug": "ai-agent-for-podiatrists", "keyword": "ai agent for podiatrists", "tier": 2, "cluster": "healthcare", "status": "pending" },
-    { "slug": "electrician-crm-with-ai", "keyword": "electrician crm with ai", "tier": 1, "cluster": "trades", "status": "pending" },
-    { "slug": "roofing-crm-with-ai", "keyword": "roofing crm with ai", "tier": 1, "cluster": "trades", "status": "pending" },
-    { "slug": "landscaping-crm-with-ai", "keyword": "landscaping crm with ai", "tier": 1, "cluster": "trades", "status": "pending" },
-    { "slug": "pest-control-crm-with-ai", "keyword": "pest control crm with ai", "tier": 1, "cluster": "trades", "status": "pending" },
-    { "slug": "moving-company-crm-with-ai", "keyword": "moving company crm with ai", "tier": 1, "cluster": "services", "status": "pending" },
-    { "slug": "optometrist-crm-with-ai", "keyword": "optometrist crm with ai", "tier": 1, "cluster": "healthcare", "status": "pending" },
+    {
+      "slug": "ai-agent-for-roofing-companies",
+      "keyword": "ai agent for roofing companies",
+      "tier": 1,
+      "cluster": "trades",
+      "status": "published",
+      "date": "2026-09-25"
+    },
+    {
+      "slug": "ai-agent-for-electricians",
+      "keyword": "ai agent for electricians",
+      "tier": 1,
+      "cluster": "trades",
+      "status": "published",
+      "date": "2026-09-25"
+    },
+    {
+      "slug": "ai-agent-for-landscaping-companies",
+      "keyword": "ai agent for landscaping companies",
+      "tier": 1,
+      "cluster": "trades",
+      "status": "published",
+      "date": "2026-09-26"
+    },
+    {
+      "slug": "ai-agent-for-pest-control-companies",
+      "keyword": "ai agent for pest control companies",
+      "tier": 1,
+      "cluster": "trades",
+      "status": "published",
+      "date": "2026-09-26"
+    },
+    {
+      "slug": "ai-agent-for-moving-companies",
+      "keyword": "ai agent for moving companies",
+      "tier": 1,
+      "cluster": "services",
+      "status": "published",
+      "date": "2026-09-27"
+    },
+    {
+      "slug": "ai-agent-for-optometrists",
+      "keyword": "ai agent for optometrists",
+      "tier": 1,
+      "cluster": "healthcare",
+      "status": "published",
+      "date": "2026-09-27"
+    },
+    {
+      "slug": "ai-agent-for-orthodontists",
+      "keyword": "ai agent for orthodontists",
+      "tier": 1,
+      "cluster": "healthcare",
+      "status": "published",
+      "date": "2026-09-29"
+    },
+    {
+      "slug": "ai-agent-for-dermatology-clinics",
+      "keyword": "ai agent for dermatology clinics",
+      "tier": 1,
+      "cluster": "healthcare",
+      "status": "published",
+      "date": "2026-10-01"
+    },
+    {
+      "slug": "ai-agent-for-pediatric-clinics",
+      "keyword": "ai agent for pediatric clinics",
+      "tier": 1,
+      "cluster": "healthcare",
+      "status": "published",
+      "date": "2026-10-02"
+    },
+    {
+      "slug": "ai-agent-for-mental-health-clinics",
+      "keyword": "ai agent for mental health clinics",
+      "tier": 1,
+      "cluster": "healthcare",
+      "status": "published",
+      "date": "2026-10-02"
+    },
+    {
+      "slug": "ai-agent-for-insurance-agencies",
+      "keyword": "ai agent for insurance agencies",
+      "tier": 1,
+      "cluster": "professional",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-financial-advisors",
+      "keyword": "ai agent for financial advisors",
+      "tier": 1,
+      "cluster": "professional",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-immigration-lawyers",
+      "keyword": "ai agent for immigration lawyers",
+      "tier": 1,
+      "cluster": "professional",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-driving-schools",
+      "keyword": "ai agent for driving schools",
+      "tier": 2,
+      "cluster": "education",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-yoga-studios",
+      "keyword": "ai agent for yoga studios",
+      "tier": 2,
+      "cluster": "fitness",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-pilates-studios",
+      "keyword": "ai agent for pilates studios",
+      "tier": 2,
+      "cluster": "fitness",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-dance-studios",
+      "keyword": "ai agent for dance studios",
+      "tier": 2,
+      "cluster": "education",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-martial-arts-schools",
+      "keyword": "ai agent for martial arts schools",
+      "tier": 2,
+      "cluster": "education",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-music-schools",
+      "keyword": "ai agent for music schools",
+      "tier": 2,
+      "cluster": "education",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-tutoring-centers",
+      "keyword": "ai agent for tutoring centers",
+      "tier": 2,
+      "cluster": "education",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-daycare-centers",
+      "keyword": "ai agent for daycare centers",
+      "tier": 2,
+      "cluster": "education",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-caterers",
+      "keyword": "ai agent for caterers",
+      "tier": 2,
+      "cluster": "food",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-bakeries",
+      "keyword": "ai agent for bakeries",
+      "tier": 2,
+      "cluster": "food",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-coffee-shops",
+      "keyword": "ai agent for coffee shops",
+      "tier": 2,
+      "cluster": "food",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-florists",
+      "keyword": "ai agent for florists",
+      "tier": 2,
+      "cluster": "retail",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-pet-groomers",
+      "keyword": "ai agent for pet groomers",
+      "tier": 2,
+      "cluster": "services",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-dog-walkers",
+      "keyword": "ai agent for dog walkers",
+      "tier": 2,
+      "cluster": "services",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-car-washes",
+      "keyword": "ai agent for car washes",
+      "tier": 2,
+      "cluster": "auto",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-towing-companies",
+      "keyword": "ai agent for towing companies",
+      "tier": 2,
+      "cluster": "auto",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-solar-installers",
+      "keyword": "ai agent for solar installers",
+      "tier": 1,
+      "cluster": "trades",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-pool-service-companies",
+      "keyword": "ai agent for pool service companies",
+      "tier": 2,
+      "cluster": "services",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-appliance-repair",
+      "keyword": "ai agent for appliance repair",
+      "tier": 2,
+      "cluster": "trades",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-locksmiths",
+      "keyword": "ai agent for locksmiths",
+      "tier": 2,
+      "cluster": "services",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-painters",
+      "keyword": "ai agent for painters",
+      "tier": 2,
+      "cluster": "trades",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-audiologists",
+      "keyword": "ai agent for audiologists",
+      "tier": 2,
+      "cluster": "healthcare",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-podiatrists",
+      "keyword": "ai agent for podiatrists",
+      "tier": 2,
+      "cluster": "healthcare",
+      "status": "pending"
+    },
+    {
+      "slug": "electrician-crm-with-ai",
+      "keyword": "electrician crm with ai",
+      "tier": 1,
+      "cluster": "trades",
+      "status": "pending"
+    },
+    {
+      "slug": "roofing-crm-with-ai",
+      "keyword": "roofing crm with ai",
+      "tier": 1,
+      "cluster": "trades",
+      "status": "pending"
+    },
+    {
+      "slug": "landscaping-crm-with-ai",
+      "keyword": "landscaping crm with ai",
+      "tier": 1,
+      "cluster": "trades",
+      "status": "pending"
+    },
+    {
+      "slug": "pest-control-crm-with-ai",
+      "keyword": "pest control crm with ai",
+      "tier": 1,
+      "cluster": "trades",
+      "status": "pending"
+    },
+    {
+      "slug": "moving-company-crm-with-ai",
+      "keyword": "moving company crm with ai",
+      "tier": 1,
+      "cluster": "services",
+      "status": "pending"
+    },
+    {
+      "slug": "optometrist-crm-with-ai",
+      "keyword": "optometrist crm with ai",
+      "tier": 1,
+      "cluster": "healthcare",
+      "status": "pending"
+    },
     {
       "slug": "click-to-chat-ads",
       "keyword": "click to chat ads",
@@ -125,58 +387,429 @@
       "date": "2026-08-28",
       "note": "striking-loop hit: 39 impressions, pos 22.2"
     },
-    { "slug": "ai-agent-for-restaurants", "keyword": "ai agent for restaurants", "tier": 1, "cluster": "restaurants", "status": "published", "date": "2026-08-28" },
-    { "slug": "ai-agent-for-dental-clinics", "keyword": "ai agent for dental clinics", "tier": 1, "cluster": "healthcare", "status": "published", "date": "2026-08-29" },
-    { "slug": "ai-agent-for-med-spas", "keyword": "ai agent for med spas", "tier": 1, "cluster": "beauty", "status": "published", "date": "2026-08-29" },
-    { "slug": "ai-agent-for-gyms", "keyword": "ai agent for gyms", "tier": 1, "cluster": "fitness", "status": "published", "date": "2026-08-30" },
-    { "slug": "ai-agent-for-law-firms", "keyword": "ai agent for law firms", "tier": 1, "cluster": "professional", "status": "published", "date": "2026-08-30" },
-    { "slug": "ai-agent-for-real-estate", "keyword": "ai agent for real estate", "tier": 1, "cluster": "real-estate", "status": "published", "date": "2026-08-31" },
-    { "slug": "ai-agent-for-hair-salons", "keyword": "ai agent for hair salons", "tier": 1, "cluster": "beauty", "status": "published", "date": "2026-08-31" },
-    { "slug": "ai-agent-for-hotels", "keyword": "ai agent for hotels", "tier": 1, "cluster": "hospitality", "status": "published", "date": "2026-09-01" },
-    { "slug": "ai-agent-for-ecommerce", "keyword": "ai agent for ecommerce", "tier": 1, "cluster": "ecommerce", "status": "published", "date": "2026-09-01" },
-    { "slug": "ai-agent-for-accounting-firms", "keyword": "ai agent for accounting firms", "tier": 1, "cluster": "professional", "status": "published", "date": "2026-09-02" },
-    { "slug": "ai-agent-for-contractors", "keyword": "ai agent for contractors", "tier": 1, "cluster": "trades", "status": "published", "date": "2026-09-02" },
-    { "slug": "ai-agent-for-cleaning-services", "keyword": "ai agent for cleaning services", "tier": 1, "cluster": "services", "status": "published", "date": "2026-09-03" },
-    { "slug": "ai-agent-for-auto-repair-shops", "keyword": "ai agent for auto repair shops", "tier": 1, "cluster": "auto", "status": "published", "date": "2026-09-03" },
-    { "slug": "ai-agent-for-personal-trainers", "keyword": "ai agent for personal trainers", "tier": 1, "cluster": "fitness", "status": "published", "date": "2026-09-04" },
-    { "slug": "ai-agent-for-photographers", "keyword": "ai agent for photographers", "tier": 1, "cluster": "creative", "status": "published", "date": "2026-09-04" },
-    { "slug": "ai-agent-for-chiropractors", "keyword": "ai agent for chiropractors", "tier": 1, "cluster": "healthcare", "status": "published", "date": "2026-09-05" },
-    { "slug": "ai-agent-for-physical-therapy-clinics", "keyword": "ai agent for physical therapy clinics", "tier": 1, "cluster": "healthcare", "status": "published", "date": "2026-09-06" },
-    { "slug": "ai-agent-for-veterinary-clinics", "keyword": "ai agent for veterinary clinics", "tier": 1, "cluster": "healthcare", "status": "published", "date": "2026-09-06" },
-    { "slug": "ai-agent-for-hvac-companies", "keyword": "ai agent for hvac companies", "tier": 1, "cluster": "trades", "status": "published", "date": "2026-09-07" },
-    { "slug": "ai-agent-for-plumbers", "keyword": "ai agent for plumbers", "tier": 1, "cluster": "trades", "status": "published", "date": "2026-09-07" },
-    { "slug": "whatsapp-automation-for-restaurants", "keyword": "whatsapp automation for restaurants", "tier": 1, "cluster": "restaurants", "status": "published", "date": "2026-09-08" },
-    { "slug": "whatsapp-automation-for-real-estate", "keyword": "whatsapp automation for real estate", "tier": 1, "cluster": "real-estate", "status": "published", "date": "2026-09-08" },
-    { "slug": "whatsapp-automation-for-ecommerce", "keyword": "whatsapp automation for ecommerce", "tier": 1, "cluster": "ecommerce", "status": "published", "date": "2026-09-09" },
-    { "slug": "whatsapp-automation-for-med-spas", "keyword": "whatsapp automation for med spas", "tier": 1, "cluster": "beauty", "status": "published", "date": "2026-09-09" },
-    { "slug": "whatsapp-automation-for-gyms", "keyword": "whatsapp automation for gyms", "tier": 1, "cluster": "fitness", "status": "published", "date": "2026-09-10" },
-    { "slug": "whatsapp-automation-for-dental-clinics", "keyword": "whatsapp automation for dental clinics", "tier": 1, "cluster": "healthcare", "status": "published", "date": "2026-09-10" },
-    { "slug": "whatsapp-automation-for-hotels", "keyword": "whatsapp automation for hotels", "tier": 1, "cluster": "hospitality", "status": "published", "date": "2026-09-11" },
-    { "slug": "whatsapp-automation-for-law-firms", "keyword": "whatsapp automation for law firms", "tier": 2, "cluster": "professional", "status": "published", "date": "2026-09-15" },
-    { "slug": "whatsapp-automation-for-salons", "keyword": "whatsapp automation for salons", "tier": 2, "cluster": "beauty", "status": "published", "date": "2026-09-16" },
-    { "slug": "whatsapp-automation-for-cleaning-services", "keyword": "whatsapp automation for cleaning services", "tier": 2, "cluster": "services", "status": "published", "date": "2026-09-16" },
-    { "slug": "restaurant-crm-with-ai", "keyword": "restaurant crm with ai", "tier": 1, "cluster": "restaurants", "status": "published", "date": "2026-09-11" },
-    { "slug": "dental-clinic-crm-with-ai", "keyword": "dental clinic crm with ai", "tier": 1, "cluster": "healthcare", "status": "published", "date": "2026-09-12" },
-    { "slug": "med-spa-crm-with-ai", "keyword": "med spa crm with ai", "tier": 1, "cluster": "beauty", "status": "published", "date": "2026-09-12" },
-    { "slug": "gym-crm-with-ai", "keyword": "gym crm with ai", "tier": 1, "cluster": "fitness", "status": "published", "date": "2026-09-13" },
-    { "slug": "law-firm-crm-with-ai", "keyword": "law firm crm with ai", "tier": 1, "cluster": "professional", "status": "published", "date": "2026-09-13" },
-    { "slug": "real-estate-crm-with-ai", "keyword": "real estate crm with ai", "tier": 1, "cluster": "real-estate", "status": "published", "date": "2026-09-14" },
-    { "slug": "salon-crm-with-ai", "keyword": "salon crm with ai", "tier": 2, "cluster": "beauty", "status": "published", "date": "2026-09-15" },
-    { "slug": "hotel-crm-with-ai", "keyword": "hotel crm with ai", "tier": 2, "cluster": "hospitality", "status": "published", "date": "2026-09-17" },
-    { "slug": "ecommerce-crm-with-ai", "keyword": "ecommerce crm with ai", "tier": 1, "cluster": "ecommerce", "status": "published", "date": "2026-09-14" },
-    { "slug": "accounting-firm-crm-with-ai", "keyword": "accounting firm crm with ai", "tier": 2, "cluster": "professional", "status": "published", "date": "2026-09-17" },
-    { "slug": "auto-repair-shop-crm-with-ai", "keyword": "auto repair shop crm with ai", "tier": 2, "cluster": "auto", "status": "published", "date": "2026-09-18" },
-    { "slug": "personal-trainer-crm-with-ai", "keyword": "personal trainer crm with ai", "tier": 2, "cluster": "fitness", "status": "published", "date": "2026-09-18" },
-    { "slug": "photographer-crm-with-ai", "keyword": "photographer crm with ai", "tier": 2, "cluster": "creative", "status": "published", "date": "2026-09-19" },
-    { "slug": "cleaning-service-crm-with-ai", "keyword": "cleaning service crm with ai", "tier": 2, "cluster": "services", "status": "published", "date": "2026-09-19" },
-    { "slug": "contractor-crm-with-ai", "keyword": "contractor crm with ai", "tier": 2, "cluster": "trades", "status": "published", "date": "2026-09-20" },
-    { "slug": "hvac-crm-with-ai", "keyword": "hvac crm with ai", "tier": 2, "cluster": "trades", "status": "published", "date": "2026-09-21" },
-    { "slug": "plumber-crm-with-ai", "keyword": "plumber crm with ai", "tier": 2, "cluster": "trades", "status": "published", "date": "2026-09-21" },
-    { "slug": "chiropractor-crm-with-ai", "keyword": "chiropractor crm with ai", "tier": 2, "cluster": "healthcare", "status": "published", "date": "2026-09-22" },
-    { "slug": "veterinary-clinic-crm-with-ai", "keyword": "veterinary clinic crm with ai", "tier": 2, "cluster": "healthcare", "status": "published", "date": "2026-09-22" },
-    { "slug": "physical-therapy-crm-with-ai", "keyword": "physical therapy crm with ai", "tier": 2, "cluster": "healthcare", "status": "published", "date": "2026-09-23" },
-    { "slug": "ai-agent-for-tattoo-studios", "keyword": "ai agent for tattoo studios", "tier": 2, "cluster": "beauty", "status": "published", "date": "2026-09-23" },
-    { "slug": "ai-agent-for-nail-salons", "keyword": "ai agent for nail salons", "tier": 2, "cluster": "beauty", "status": "published", "date": "2026-09-24" },
-    { "slug": "ai-agent-for-barbershops", "keyword": "ai agent for barbershops", "tier": 2, "cluster": "beauty", "status": "published", "date": "2026-09-24" }
+    {
+      "slug": "ai-agent-for-restaurants",
+      "keyword": "ai agent for restaurants",
+      "tier": 1,
+      "cluster": "restaurants",
+      "status": "published",
+      "date": "2026-08-28"
+    },
+    {
+      "slug": "ai-agent-for-dental-clinics",
+      "keyword": "ai agent for dental clinics",
+      "tier": 1,
+      "cluster": "healthcare",
+      "status": "published",
+      "date": "2026-08-29"
+    },
+    {
+      "slug": "ai-agent-for-med-spas",
+      "keyword": "ai agent for med spas",
+      "tier": 1,
+      "cluster": "beauty",
+      "status": "published",
+      "date": "2026-08-29"
+    },
+    {
+      "slug": "ai-agent-for-gyms",
+      "keyword": "ai agent for gyms",
+      "tier": 1,
+      "cluster": "fitness",
+      "status": "published",
+      "date": "2026-08-30"
+    },
+    {
+      "slug": "ai-agent-for-law-firms",
+      "keyword": "ai agent for law firms",
+      "tier": 1,
+      "cluster": "professional",
+      "status": "published",
+      "date": "2026-08-30"
+    },
+    {
+      "slug": "ai-agent-for-real-estate",
+      "keyword": "ai agent for real estate",
+      "tier": 1,
+      "cluster": "real-estate",
+      "status": "published",
+      "date": "2026-08-31"
+    },
+    {
+      "slug": "ai-agent-for-hair-salons",
+      "keyword": "ai agent for hair salons",
+      "tier": 1,
+      "cluster": "beauty",
+      "status": "published",
+      "date": "2026-08-31"
+    },
+    {
+      "slug": "ai-agent-for-hotels",
+      "keyword": "ai agent for hotels",
+      "tier": 1,
+      "cluster": "hospitality",
+      "status": "published",
+      "date": "2026-09-01"
+    },
+    {
+      "slug": "ai-agent-for-ecommerce",
+      "keyword": "ai agent for ecommerce",
+      "tier": 1,
+      "cluster": "ecommerce",
+      "status": "published",
+      "date": "2026-09-01"
+    },
+    {
+      "slug": "ai-agent-for-accounting-firms",
+      "keyword": "ai agent for accounting firms",
+      "tier": 1,
+      "cluster": "professional",
+      "status": "published",
+      "date": "2026-09-02"
+    },
+    {
+      "slug": "ai-agent-for-contractors",
+      "keyword": "ai agent for contractors",
+      "tier": 1,
+      "cluster": "trades",
+      "status": "published",
+      "date": "2026-09-02"
+    },
+    {
+      "slug": "ai-agent-for-cleaning-services",
+      "keyword": "ai agent for cleaning services",
+      "tier": 1,
+      "cluster": "services",
+      "status": "published",
+      "date": "2026-09-03"
+    },
+    {
+      "slug": "ai-agent-for-auto-repair-shops",
+      "keyword": "ai agent for auto repair shops",
+      "tier": 1,
+      "cluster": "auto",
+      "status": "published",
+      "date": "2026-09-03"
+    },
+    {
+      "slug": "ai-agent-for-personal-trainers",
+      "keyword": "ai agent for personal trainers",
+      "tier": 1,
+      "cluster": "fitness",
+      "status": "published",
+      "date": "2026-09-04"
+    },
+    {
+      "slug": "ai-agent-for-photographers",
+      "keyword": "ai agent for photographers",
+      "tier": 1,
+      "cluster": "creative",
+      "status": "published",
+      "date": "2026-09-04"
+    },
+    {
+      "slug": "ai-agent-for-chiropractors",
+      "keyword": "ai agent for chiropractors",
+      "tier": 1,
+      "cluster": "healthcare",
+      "status": "published",
+      "date": "2026-09-05"
+    },
+    {
+      "slug": "ai-agent-for-physical-therapy-clinics",
+      "keyword": "ai agent for physical therapy clinics",
+      "tier": 1,
+      "cluster": "healthcare",
+      "status": "published",
+      "date": "2026-09-06"
+    },
+    {
+      "slug": "ai-agent-for-veterinary-clinics",
+      "keyword": "ai agent for veterinary clinics",
+      "tier": 1,
+      "cluster": "healthcare",
+      "status": "published",
+      "date": "2026-09-06"
+    },
+    {
+      "slug": "ai-agent-for-hvac-companies",
+      "keyword": "ai agent for hvac companies",
+      "tier": 1,
+      "cluster": "trades",
+      "status": "published",
+      "date": "2026-09-07"
+    },
+    {
+      "slug": "ai-agent-for-plumbers",
+      "keyword": "ai agent for plumbers",
+      "tier": 1,
+      "cluster": "trades",
+      "status": "published",
+      "date": "2026-09-07"
+    },
+    {
+      "slug": "whatsapp-automation-for-restaurants",
+      "keyword": "whatsapp automation for restaurants",
+      "tier": 1,
+      "cluster": "restaurants",
+      "status": "published",
+      "date": "2026-09-08"
+    },
+    {
+      "slug": "whatsapp-automation-for-real-estate",
+      "keyword": "whatsapp automation for real estate",
+      "tier": 1,
+      "cluster": "real-estate",
+      "status": "published",
+      "date": "2026-09-08"
+    },
+    {
+      "slug": "whatsapp-automation-for-ecommerce",
+      "keyword": "whatsapp automation for ecommerce",
+      "tier": 1,
+      "cluster": "ecommerce",
+      "status": "published",
+      "date": "2026-09-09"
+    },
+    {
+      "slug": "whatsapp-automation-for-med-spas",
+      "keyword": "whatsapp automation for med spas",
+      "tier": 1,
+      "cluster": "beauty",
+      "status": "published",
+      "date": "2026-09-09"
+    },
+    {
+      "slug": "whatsapp-automation-for-gyms",
+      "keyword": "whatsapp automation for gyms",
+      "tier": 1,
+      "cluster": "fitness",
+      "status": "published",
+      "date": "2026-09-10"
+    },
+    {
+      "slug": "whatsapp-automation-for-dental-clinics",
+      "keyword": "whatsapp automation for dental clinics",
+      "tier": 1,
+      "cluster": "healthcare",
+      "status": "published",
+      "date": "2026-09-10"
+    },
+    {
+      "slug": "whatsapp-automation-for-hotels",
+      "keyword": "whatsapp automation for hotels",
+      "tier": 1,
+      "cluster": "hospitality",
+      "status": "published",
+      "date": "2026-09-11"
+    },
+    {
+      "slug": "whatsapp-automation-for-law-firms",
+      "keyword": "whatsapp automation for law firms",
+      "tier": 2,
+      "cluster": "professional",
+      "status": "published",
+      "date": "2026-09-15"
+    },
+    {
+      "slug": "whatsapp-automation-for-salons",
+      "keyword": "whatsapp automation for salons",
+      "tier": 2,
+      "cluster": "beauty",
+      "status": "published",
+      "date": "2026-09-16"
+    },
+    {
+      "slug": "whatsapp-automation-for-cleaning-services",
+      "keyword": "whatsapp automation for cleaning services",
+      "tier": 2,
+      "cluster": "services",
+      "status": "published",
+      "date": "2026-09-16"
+    },
+    {
+      "slug": "restaurant-crm-with-ai",
+      "keyword": "restaurant crm with ai",
+      "tier": 1,
+      "cluster": "restaurants",
+      "status": "published",
+      "date": "2026-09-11"
+    },
+    {
+      "slug": "dental-clinic-crm-with-ai",
+      "keyword": "dental clinic crm with ai",
+      "tier": 1,
+      "cluster": "healthcare",
+      "status": "published",
+      "date": "2026-09-12"
+    },
+    {
+      "slug": "med-spa-crm-with-ai",
+      "keyword": "med spa crm with ai",
+      "tier": 1,
+      "cluster": "beauty",
+      "status": "published",
+      "date": "2026-09-12"
+    },
+    {
+      "slug": "gym-crm-with-ai",
+      "keyword": "gym crm with ai",
+      "tier": 1,
+      "cluster": "fitness",
+      "status": "published",
+      "date": "2026-09-13"
+    },
+    {
+      "slug": "law-firm-crm-with-ai",
+      "keyword": "law firm crm with ai",
+      "tier": 1,
+      "cluster": "professional",
+      "status": "published",
+      "date": "2026-09-13"
+    },
+    {
+      "slug": "real-estate-crm-with-ai",
+      "keyword": "real estate crm with ai",
+      "tier": 1,
+      "cluster": "real-estate",
+      "status": "published",
+      "date": "2026-09-14"
+    },
+    {
+      "slug": "salon-crm-with-ai",
+      "keyword": "salon crm with ai",
+      "tier": 2,
+      "cluster": "beauty",
+      "status": "published",
+      "date": "2026-09-15"
+    },
+    {
+      "slug": "hotel-crm-with-ai",
+      "keyword": "hotel crm with ai",
+      "tier": 2,
+      "cluster": "hospitality",
+      "status": "published",
+      "date": "2026-09-17"
+    },
+    {
+      "slug": "ecommerce-crm-with-ai",
+      "keyword": "ecommerce crm with ai",
+      "tier": 1,
+      "cluster": "ecommerce",
+      "status": "published",
+      "date": "2026-09-14"
+    },
+    {
+      "slug": "accounting-firm-crm-with-ai",
+      "keyword": "accounting firm crm with ai",
+      "tier": 2,
+      "cluster": "professional",
+      "status": "published",
+      "date": "2026-09-17"
+    },
+    {
+      "slug": "auto-repair-shop-crm-with-ai",
+      "keyword": "auto repair shop crm with ai",
+      "tier": 2,
+      "cluster": "auto",
+      "status": "published",
+      "date": "2026-09-18"
+    },
+    {
+      "slug": "personal-trainer-crm-with-ai",
+      "keyword": "personal trainer crm with ai",
+      "tier": 2,
+      "cluster": "fitness",
+      "status": "published",
+      "date": "2026-09-18"
+    },
+    {
+      "slug": "photographer-crm-with-ai",
+      "keyword": "photographer crm with ai",
+      "tier": 2,
+      "cluster": "creative",
+      "status": "published",
+      "date": "2026-09-19"
+    },
+    {
+      "slug": "cleaning-service-crm-with-ai",
+      "keyword": "cleaning service crm with ai",
+      "tier": 2,
+      "cluster": "services",
+      "status": "published",
+      "date": "2026-09-19"
+    },
+    {
+      "slug": "contractor-crm-with-ai",
+      "keyword": "contractor crm with ai",
+      "tier": 2,
+      "cluster": "trades",
+      "status": "published",
+      "date": "2026-09-20"
+    },
+    {
+      "slug": "hvac-crm-with-ai",
+      "keyword": "hvac crm with ai",
+      "tier": 2,
+      "cluster": "trades",
+      "status": "published",
+      "date": "2026-09-21"
+    },
+    {
+      "slug": "plumber-crm-with-ai",
+      "keyword": "plumber crm with ai",
+      "tier": 2,
+      "cluster": "trades",
+      "status": "published",
+      "date": "2026-09-21"
+    },
+    {
+      "slug": "chiropractor-crm-with-ai",
+      "keyword": "chiropractor crm with ai",
+      "tier": 2,
+      "cluster": "healthcare",
+      "status": "published",
+      "date": "2026-09-22"
+    },
+    {
+      "slug": "veterinary-clinic-crm-with-ai",
+      "keyword": "veterinary clinic crm with ai",
+      "tier": 2,
+      "cluster": "healthcare",
+      "status": "published",
+      "date": "2026-09-22"
+    },
+    {
+      "slug": "physical-therapy-crm-with-ai",
+      "keyword": "physical therapy crm with ai",
+      "tier": 2,
+      "cluster": "healthcare",
+      "status": "published",
+      "date": "2026-09-23"
+    },
+    {
+      "slug": "ai-agent-for-tattoo-studios",
+      "keyword": "ai agent for tattoo studios",
+      "tier": 2,
+      "cluster": "beauty",
+      "status": "published",
+      "date": "2026-09-23"
+    },
+    {
+      "slug": "ai-agent-for-nail-salons",
+      "keyword": "ai agent for nail salons",
+      "tier": 2,
+      "cluster": "beauty",
+      "status": "published",
+      "date": "2026-09-24"
+    },
+    {
+      "slug": "ai-agent-for-barbershops",
+      "keyword": "ai agent for barbershops",
+      "tier": 2,
+      "cluster": "beauty",
+      "status": "published",
+      "date": "2026-09-24"
+    }
   ]
 }

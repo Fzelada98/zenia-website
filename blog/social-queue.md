@@ -7596,3 +7596,26 @@ Full writeup (ES, PMS integration matrix, 5-week rollout): https://zeniapartners
 #Infrastructure #WhatsAppBusinessAPI #HotelTech #B2B
 
 ---
+## 2026-10-02 - Desarrollo Agente IA para Clínicas Dentales (ES)
+
+Shipped a new reference on the AI-agent layer for dental clinics in Spain and LATAM.
+
+Engineering problem: Gesden, Dentalink, Odontonet, Klinikare and Dentrix run the chart and the odontogram beautifully, but recepción drops 30-50% of inbound WhatsApp traffic and no-shows sit at 18-22% (the highest absenteeism of any private healthcare specialty in Spain). Static flows do not survive a patient who mixes rescheduling a hygiene with a question on implant financing in the same thread.
+
+Reference architecture, seven layers:
+- Meta WhatsApp Cloud API with HSM templates provisioned on day one; webhook p95 under 250ms.
+- Conversation orchestrator (Node 22 / Fastify or Python 3.12 / FastAPI) with per-patient idempotency keys and dedup.
+- LLM router with strict function calling (Claude Sonnet 4.5 for conversation, Haiku 4.5 for intent classification and urgency detection); no generative slots or quotes.
+- PMS integration via REST where available (Gesden, Dentalink) or a read-only DB connector with a reviewed write queue when the PMS has no productive API.
+- Multi-doctor booking engine with per-treatment duration rules, specialty validation and optimistic locks; double-book rate under 0.3%.
+- GDPR health-data middleware blocking diagnosis, prescription and promise-of-result; Signaturit / Validated ID for informed consent before invasive acts.
+- OpenTelemetry traces per conversation; alerts when human-handoff crosses 30% in a 2-hour window.
+
+Numbers from a 3-clinic Spanish deployment, 180-day cohort: median end-to-end latency 4.0s, p95 8.8s; no-shows 19% to 6.5%; first-visit no-shows 26% to 9%; budget acceptance 38% to 61%; agent auto-resolves 74% of conversations; cost per qualified lead 28.40 EUR to 9.70 EUR.
+
+Full writeup (ES, PMS integration matrix, 6-week rollout): https://zeniapartners.com/blog/desarrollo-agente-ia-clinicas-dentales.html
+
+#Infrastructure #WhatsAppBusinessAPI #HealthTech #B2B
+
+---
+

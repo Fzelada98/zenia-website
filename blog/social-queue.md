@@ -7684,3 +7684,20 @@ Full writeup (EN, EHR matrix, 3-week rollout): https://zeniapartners.com/blog/ai
 #Infrastructure #WhatsAppBusinessAPI #HealthTech #HIPAA
 
 ---
+
+## 2026-10-02 - Fidelizar Clientes WhatsApp (EN, Company Page)
+
+Running loyalty flows over WhatsApp at SMB scale is less a CRM problem than a message-queue problem: Cloud API outbound caps, per-locale template registry, 24h session windows and Meta's quality rating all throttle you before any segmentation logic kicks in.
+
+The shape that holds up in production:
+- Agent runtime on Cloud API with template registry versioned per locale (ES-ES, ES-MX, ES-PE). Event bus on Redis Streams decouples CRM state changes from delivery, so a missed 48h reactivation retries at 72h without recomputing segment membership.
+- Segment store on Postgres with 15-min materialized views (recency, frequency, monetary, lifecycle, preference). 6-10 flows per account, each with an opt-out hook that writes back to the CRM in a single transaction.
+- Rate shaping enforced at the queue: max 2 marketing templates per contact per month. Without it, opt-out climbs past 5% in week 3 and Meta quality rating degrades to yellow by week 5.
+
+Measured on 42 SMB deployments on this stack: 98% open rate, 45% response, 82% loyalty participation (vs 24% on email), opt-out held under 2%/mo.
+
+Full writeup (ES, segmentation + metrics): https://zeniapartners.com/blog/fidelizar-clientes-whatsapp.html
+
+#Infrastructure #WhatsAppBusinessAPI #CRM #Messaging
+
+---

@@ -7621,3 +7621,26 @@ Full writeup (ES, PMS integration matrix, 6-week rollout): https://zeniapartners
 
 ---
 
+
+## 2026-10-02 - AI Agent for Pediatric Clinics (EN, Company Page)
+
+Pediatrics is a volume problem the EHR cannot solve on its own.
+
+US pediatric practices run 20-25% no-shows (MGMA target: 5-8%), drop 15-25% of inbound calls to lunch and the 2:45-3:45 PM school-dismissal spike, and leave a third of eligible Bright Futures and vaccine recalls on a spreadsheet. PCC, Office Practicum, athenaOne and eClinicalWorks run growth charts and the state immunization registry, and they do not answer phones or run multi-channel recall.
+
+Reference architecture, seven layers:
+- Twilio Voice + Meta WhatsApp Cloud API (non-PHI only) + secure portal / Klara-Spruce-TigerConnect (BAA signed) for PHI; webhook p95 under 300 ms.
+- Conversation orchestrator (Node 22 / Fastify or Python 3.12 / FastAPI) with per-chart idempotency and dedup across channels.
+- LLM router with strict function calling (Claude Sonnet 4.5 for conversation, Haiku 4.5 for intent and urgency classification); no generative dosing, no generative clinical advice.
+- EHR integration: PCC Pro REST, athenaOne Marketplace (FHIR R4 + proprietary), eCW APIs, Epic App Orchard; Office Practicum via partner integration + reviewed write queue.
+- Visit-type triage engine with per-template duration rules (well-child by age, sick, procedure, telehealth) and optimistic locking; double-book rate under 0.3%.
+- COPPA/HIPAA middleware blocking child-identifiable collection outside the chart, plus a state-aware adolescent-confidentiality channel that fences reproductive, mental-health and substance-use messaging off the parent's portal view.
+- OpenTelemetry traces per conversation; alerts on human-handoff rate crossing 30% in a 2-hour window and on eligibility-API 5xx bursts.
+
+Numbers from a 3-pediatrician Raleigh deployment, 180-day cohort: median end-to-end latency 3.8 s, p95 8.4 s; no-shows 22% to 8.9%; 24-month well-child adherence 71% to 86%; HPV series completion by 13 from 38% to 59%; agent auto-resolves 71% of conversations.
+
+Full writeup (EN, EHR integration matrix, 3-week rollout): https://zeniapartners.com/blog/ai-agent-for-pediatric-clinics.html
+
+#Infrastructure #WhatsAppBusinessAPI #HealthTech #B2B
+
+---

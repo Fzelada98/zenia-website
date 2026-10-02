@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-10-01T12:00:00.000000+00:00",
+  "lastRun": "2026-10-02T12:00:00.000000+00:00",
   "market": "US/UK small business",
   "posts": [
     {
@@ -64,7 +64,7 @@
     { "slug": "ai-agent-for-optometrists", "keyword": "ai agent for optometrists", "tier": 1, "cluster": "healthcare", "status": "published", "date": "2026-09-27" },
     { "slug": "ai-agent-for-orthodontists", "keyword": "ai agent for orthodontists", "tier": 1, "cluster": "healthcare", "status": "published", "date": "2026-09-29" },
     { "slug": "ai-agent-for-dermatology-clinics", "keyword": "ai agent for dermatology clinics", "tier": 1, "cluster": "healthcare", "status": "published", "date": "2026-10-01" },
-    { "slug": "ai-agent-for-pediatric-clinics", "keyword": "ai agent for pediatric clinics", "tier": 1, "cluster": "healthcare", "status": "pending" },
+    { "slug": "ai-agent-for-pediatric-clinics", "keyword": "ai agent for pediatric clinics", "tier": 1, "cluster": "healthcare", "status": "published", "date": "2026-10-02" },
     { "slug": "ai-agent-for-mental-health-clinics", "keyword": "ai agent for mental health clinics", "tier": 1, "cluster": "healthcare", "status": "pending" },
     { "slug": "ai-agent-for-insurance-agencies", "keyword": "ai agent for insurance agencies", "tier": 1, "cluster": "professional", "status": "pending" },
     { "slug": "ai-agent-for-financial-advisors", "keyword": "ai agent for financial advisors", "tier": 1, "cluster": "professional", "status": "pending" },

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HP0VQSEL68"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-HP0VQSEL68');
+</script>
+
+<title>Integrar Salesforce con WhatsApp Business | ZENIA</title>
+<meta name="description" content="Guía 2026 para integrar Salesforce con WhatsApp Business API: arquitectura, costes, Flows, Service Cloud y errores comunes al conectar CRM y mensajería.">
+<link rel="canonical" href="https://zeniapartners.com/blog/integrar-salesforce-con-whatsapp-business.html">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+
+<!-- Hreflang -->
+<link rel="alternate" hreflang="es" href="https://zeniapartners.com/blog/integrar-salesforce-con-whatsapp-business.html">
+<link rel="alternate" hreflang="x-default" href="https://zeniapartners.com/blog/integrar-salesforce-con-whatsapp-business.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Integrar Salesforce con WhatsApp Business: guía técnica 2026">
+<meta property="og:description" content="Arquitectura, costes y proceso real para conectar Salesforce con WhatsApp Business API en 2026, con Flows, Service Cloud y agentes de IA personalizados.">
+<meta property="og:url" content="https://zeniapartners.com/blog/integrar-salesforce-con-whatsapp-business.html">
+<meta property="og:site_name" content="ZENIA">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="https://zeniapartners.com/assets/images/og-image.png">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Integrar Salesforce con WhatsApp Business: guía técnica 2026">
+<meta name="twitter:description" content="Arquitectura, costes y proceso real para conectar Salesforce con WhatsApp Business API en 2026, con Flows y agentes de IA personalizados.">
+<meta name="twitter:image" content="https://zeniapartners.com/assets/images/og-image.png">
+
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="author" content="Fabrizzio Zelada">
+<meta name="theme-color" content="#0A0F1C">
+
+<!-- JSON-LD Article -->
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Integrar Salesforce con WhatsApp Business: guía técnica 2026", "description": "Cómo conectar Salesforce con WhatsApp Business API en 2026: arquitectura, costes reales por mensaje, Flows de Service Cloud, errores comunes y cuándo elegir un BSP vs un agente de IA personalizado.", "author": {"@type": "Person", "name": "Fabrizzio Zelada", "jobTitle": "Founder", "worksFor": {"@type": "Organization", "name": "ZENIA"}}, "publisher": {"@type": "Organization", "name": "ZENIA", "url": "https://zeniapartners.com", "logo": {"@type": "ImageObject", "url": "https://zeniapartners.com/assets/images/og-image.png", "width": 600, "height": 60}}, "datePublished": "2026-10-03", "dateModified": "2026-10-03", "mainEntityOfPage": "https://zeniapartners.com/blog/integrar-salesforce-con-whatsapp-business.html", "inLanguage": "es", "keywords": ["integrar salesforce con whatsapp business", "salesforce whatsapp integration", "salesforce whatsapp api", "service cloud whatsapp", "crm whatsapp integracion", "agente de ia personalizado salesforce"], "image": "https://zeniapartners.com/assets/images/og-image.png"}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #3B82F6;
+    --accent-violet: #6366F1;
+    --bg-dark: #0A0F1C;
+    --bg-card: rgba(17, 24, 39, 0.6);
+    --text-primary: #F1F5F9;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+    --border: rgba(148, 163, 184, 0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; background: var(--bg-dark); color: var(--text-primary); line-height: 1.8; }
+  .blog-nav { padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 60px; position: sticky; top: 0; background: rgba(10, 15, 28, 0.85); backdrop-filter: blur(12px); z-index: 100; }
+  .blog-nav .container { max-width: 1200px; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+  .blog-nav .nav-logo-link { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-primary); font-weight: 700; font-size: 1.1rem; }
+  .blog-nav .nav-main-links { display: flex; list-style: none; gap: 28px; margin: 0; padding: 0; }
+  .blog-nav .nav-main-links li { margin: 0; }
+  .blog-nav .nav-main-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
+  .blog-nav .nav-main-links a:hover { color: var(--text-primary); }
+  .blog-nav .nav-main-links a.active { color: var(--primary); }
+  .blog-nav .nav-cta-btn { background: var(--primary); color: #fff; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: filter 0.2s; white-space: nowrap; }
+  .blog-nav .nav-cta-btn:hover { filter: brightness(1.1); }
+  @media (max-width: 860px) {
+    .blog-nav .nav-main-links { display: none; }
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+  .blog-header { margin-bottom: 48px; }
+  .blog-meta { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px; }
+  .blog-header h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); line-height: 1.3; margin-bottom: 16px; }
+  .blog-header p.lead { font-size: 1.1rem; color: var(--text-secondary); line-height: 1.7; }
+  .blog-content h2 { font-size: 1.4rem; margin: 48px 0 16px; color: var(--text-primary); }
+  .blog-content h3 { font-size: 1.15rem; margin: 32px 0 12px; color: var(--text-primary); }
+  .blog-content p { color: var(--text-secondary); margin-bottom: 20px; }
+  .blog-content ul, .blog-content ol { color: var(--text-secondary); margin-bottom: 20px; padding-left: 24px; }
+  .blog-content li { margin-bottom: 8px; }
+  .blog-content strong { color: var(--text-primary); }
+  .blog-content a { color: var(--primary); text-decoration: underline; }
+  .blog-content a:hover { color: var(--accent-violet); }
+  .blog-content blockquote { border-left: 3px solid var(--primary); padding-left: 20px; margin: 24px 0; font-style: italic; color: var(--text-secondary); }
+  .blog-content table { width: 100%; border-collapse: collapse; margin: 24px 0; }
+  .blog-content th, .blog-content td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); font-size: 0.95rem; }
+  .blog-content th { color: var(--text-primary); font-weight: 600; background: var(--bg-card); }
+  .blog-cta { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 40px; text-align: center; margin: 60px 0; }
+  .blog-cta h3 { margin-bottom: 12px; }
+  .blog-cta p { color: var(--text-secondary); margin-bottom: 20px; }
+  .blog-cta a { display: inline-block; padding: 12px 28px; background: var(--primary); color: white; border-radius: 8px; text-decoration: none; font-weight: 600; }
+  .blog-cta a:hover { background: var(--accent-violet); }
+  .blog-related { margin: 60px 0 0; }
+  .blog-related h3 { margin-bottom: 20px; }
+  .blog-related a { display: block; padding: 16px 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 12px; text-decoration: none; color: var(--text-primary); font-weight: 600; transition: border-color 0.3s; }
+  .blog-related a:hover { border-color: var(--primary); }
+  .blog-related a span { display: block; font-size: 0.85rem; color: var(--text-muted); font-weight: 400; margin-top: 4px; }
+  .blog-footer { padding: 40px 0; border-top: 1px solid var(--border); margin-top: 60px; text-align: center; color: var(--text-muted); font-size: 0.85rem; }
+  .blog-footer a { color: var(--primary); text-decoration: none; }
+  .text-gradient { background: linear-gradient(135deg, var(--primary), var(--accent-violet)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+</style>
+</head>
+<body>
+
+<nav class="blog-nav">
+  <div class="container">
+    <a href="/es/" class="nav-logo-link">
+      <svg class="zenia-mark" viewBox="0 0 140 140" fill="none" width="32" height="32">
+        <defs>
+          <linearGradient id="zg-b" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#2563EB"/>
+            <stop offset="100%" stop-color="#3B82F6"/>
+          </linearGradient>
+          <linearGradient id="zg-v" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#6366F1"/>
+            <stop offset="100%" stop-color="#7C3AED"/>
+          </linearGradient>
+        </defs>
+        <rect width="140" height="140" rx="28" fill="#0F172A"/>
+        <path d="M 70 18 Q 18 18 18 38 L 18 57 Q 18 63 24 63 L 88 63 Z" fill="url(#zg-b)"/>
+        <path d="M 70 122 Q 122 122 122 102 L 122 83 Q 122 77 116 77 L 52 77 Z" fill="url(#zg-v)"/>
+      </svg>
+      <span>ZENIA</span>
+    </a>
+    <ul class="nav-main-links">
+      <li><a href="/es/#opportunities">Oportunidades IA</a></li>
+      <li><a href="/es/#services">Servicios</a></li>
+      <li><a href="/es/#process">Proceso</a></li>
+      <li><a href="/es/#impact">Impacto</a></li>
+      <li><a href="/blog/" class="active">Blog</a></li>
+    </ul>
+    <a href="/es/#cta" class="nav-cta-btn">Empezar</a>
+  </div>
+</nav>
+
+<article class="container">
+  <header class="blog-header">
+    <div class="blog-meta">3 de octubre, 2026 &middot; Fabrizzio Zelada &middot; 11 min de lectura</div>
+    <h1><span class="text-gradient">Integrar Salesforce con WhatsApp Business:</span> arquitectura, costes y errores comunes en 2026</h1>
+    <p class="lead">Conectar Salesforce con WhatsApp Business parece un check de licencia, pero rara vez lo es. La parte compleja no está en abrir el canal: está en decidir qué objeto de Salesforce guarda cada conversación, cómo se disparan los Flows, qué templates usas dentro y fuera de la ventana de 24 horas y quién paga cada mensaje. Esta guía resume lo que vale la pena saber antes de contratar un BSP o construir la integración in-house.</p>
+  </header>
+
+  <div class="blog-content">
+
+    <p class="pillar-callout"><strong>Lee también:</strong> para una visión completa del canal, revisa nuestra guía de <a href="/blog/crm-con-whatsapp-integrado.html">CRM con WhatsApp integrado</a> y la <a href="/blog/comparativa-plataformas-ia-conversacional-crm-whatsapp.html">comparativa de plataformas de IA conversacional con integración a CRM y WhatsApp</a>.</p>
+
+
+    <h2>Qué significa integrar Salesforce con WhatsApp Business en 2026</h2>
+
+    <p>Integrar Salesforce con WhatsApp Business implica conectar tres piezas: la cuenta de WhatsApp Business (un número comercial verificado por Meta), la WhatsApp Business Platform API (antes llamada Cloud API) y la plataforma Salesforce (Service Cloud, Sales Cloud o Marketing Cloud, dependiendo del caso de uso). Entre ellas se sitúa un BSP (Business Solution Provider) o una integración directa vía Meta Cloud API, que es la ruta oficial sin reseller.</p>
+
+    <p>El objetivo del proyecto no es solo "poder mandar mensajes de WhatsApp desde Salesforce". El objetivo real suele ser uno de estos tres:</p>
+
+    <ul>
+      <li>Que cada mensaje entrante cree o actualice un registro en Service Cloud (Case, Contact, Lead) y mantenga el hilo completo asociado a la cuenta correcta.</li>
+      <li>Que los eventos de Salesforce (cambio de estado de una oportunidad, factura emitida, cita programada) disparen un mensaje saliente por WhatsApp con una plantilla aprobada por Meta.</li>
+      <li>Que el agente de atención, humano o IA, trabaje desde un inbox donde WhatsApp aparece junto a email, teléfono y chat web, sin cambiar de pestaña.</li>
+    </ul>
+
+    <p>Confundir estos tres objetivos cuesta tiempo y dinero. El primero es un trabajo de ingeniería de eventos entrantes. El segundo es un trabajo de automatización saliente (Flows, Apex, Process Builder). El tercero es un trabajo de UX y modelado de datos. Antes de pedir presupuestos, decide cuál de los tres es el que mueve tu negocio este trimestre.</p>
+
+    <p>WhatsApp es el canal preferente de contacto en España, LATAM y buena parte de EMEA. Si tu empresa ya usa Salesforce para registrar oportunidades y casos pero gestiona WhatsApp por fuera (un móvil en caja, un número personal, un BSP suelto), toda esa actividad se pierde cuando el comercial se va o el cliente escribe de noche. La integración ordena el canal, pero solo si está pensada desde el modelo de datos, no desde la interfaz.</p>
+
+    <h2>Arquitectura: tres piezas y una pieza extra que casi todos olvidan</h2>
+
+    <p>La arquitectura canónica de una integración entre Salesforce y WhatsApp Business tiene cuatro capas, no tres. La capa que suele olvidarse es la que marca la diferencia entre un piloto funcional y un sistema que soporta volumen real.</p>
+
+    <h3>1. WhatsApp Business Platform (Meta Cloud API)</h3>
+
+    <p>Es la capa oficial de Meta. Permite enviar y recibir mensajes, gestionar plantillas, administrar perfiles de negocio y configurar webhooks. Desde que Meta liberó la Cloud API, no es imprescindible pasar por un BSP para arrancar. El número verificado, la WhatsApp Business Account (WABA) y el Business Manager son los tres artefactos que debes configurar primero, en ese orden.</p>
+
+    <h3>2. BSP o conector directo</h3>
+
+    <p>Salesforce tiene un conector nativo (WhatsApp Channel en Messaging Settings) que crea un webhook y un token con los que la cuenta de WhatsApp manda y recibe mensajes. Es la ruta más corta, pero asume que todo el ruteo pasa por Salesforce desde el minuto uno. Si usas un BSP (360 SMS, Twilio, MessageBird, Chattigo, Infobip, Gupshup), ese BSP se interpone entre Meta y Salesforce, añade cola, retries, auditoría y, muchas veces, UI de agente propia. La elección depende del volumen, de si quieres un inbox fuera de Salesforce y del coste por mensaje.</p>
+
+    <h3>3. Modelo de datos en Salesforce</h3>
+
+    <p>Esta es la decisión arquitectónica más importante. ¿Dónde se guarda cada conversación? Las opciones habituales son: Enhanced Messaging Session (objeto nativo de Service Cloud), Case (si cada hilo cierra como un ticket), Lead/Contact + custom object MessageLog, o un objeto externo del BSP. Mezclar criterios en el mismo org es el error que vemos cada semana: dos equipos crean dos objetos distintos para la misma conversación y los reportes dejan de cuadrar.</p>
+
+    <h3>4. La capa olvidada: el agente de IA personalizado</h3>
+
+    <p>Un conector nativo entrega el mensaje a Salesforce y lanza un Flow. Pero el Flow por sí solo no entiende el mensaje. Si no hay una capa de comprensión (clasificación de intención, extracción de entidades, resumen de hilo largo, routing por tono), lo que ocurre es que el agente humano abre Service Cloud y el hilo le llega tan en bruto como estaba en el teléfono. Un <a href="/blog/automatizacion-whatsapp-negocios.html">agente de IA personalizado</a> encaja aquí: lee el mensaje, decide si crea Case, Lead o nada, extrae campos y, cuando aplica, responde con una plantilla aprobada antes de que el humano llegue a verlo.</p>
+
+    <p>Esta capa es la que convierte el proyecto de "integración" en "automatización". Y es la única parte del stack que no te viene empaquetada: la tienes que modelar tú o encargarla.</p>
+
+    <h2>Costes reales por mensaje: la aritmética que casi nadie explica bien</h2>
+
+    <p>Desde el 1 de julio de 2025, Meta cobra por mensaje entregado y no por conversación. El cambio modificó la lógica económica de la integración: antes compensaba abrir una conversación larga, ahora conviene medir qué mensajes son estrictamente necesarios. En 2026, el coste total que tu factura verá se compone así:</p>
+
+    <table>
+      <tr><th>Concepto</th><th>Rango 2026</th><th>Quién lo cobra</th></tr>
+      <tr><td>Mensaje Utility (dentro de ventana 24h)</td><td>Gratis hasta 30 sep. 2026, luego ~0,0034 USD</td><td>Meta</td></tr>
+      <tr><td>Mensaje Marketing</td><td>0,025 USD en EEUU, 0,0631 USD en España</td><td>Meta</td></tr>
+      <tr><td>Mensaje Authentication</td><td>~0,0034 USD</td><td>Meta</td></tr>
+      <tr><td>Mensaje Service (dentro de ventana 24h)</td><td>Gratis hasta 30 sep. 2026</td><td>Meta</td></tr>
+      <tr><td>Markup BSP</td><td>0,003 - 0,010 USD por mensaje</td><td>BSP</td></tr>
+      <tr><td>Licencia conector Salesforce (ej. 360 SMS)</td><td>Desde 50 USD/mes + 0,009 USD por mensaje</td><td>Partner</td></tr>
+      <tr><td>Agente de IA personalizado (procesamiento + memoria)</td><td>Variable según volumen</td><td>Proveedor IA</td></tr>
+    </table>
+
+    <p>Dos aprendizajes operativos que casi nadie te dice:</p>
+
+    <ul>
+      <li><strong>La ventana de 24 horas es la palanca económica.</strong> Mientras el cliente escriba y tú respondas dentro de 24 horas, los mensajes Service y Utility siguen gratuitos hasta el 30 de septiembre de 2026. Si tu agente responde en 8 segundos, el flujo entero suele costarte cero en el lado de Meta. Si respondes en 36 horas, cada reapertura cuesta.</li>
+      <li><strong>El markup del BSP no es el total.</strong> Al coste por mensaje hay que sumarle licencias de conector, licencias de Service Cloud por agente y, muchas veces, un setup inicial. Un piloto de 2.000 mensajes al mes puede costarte 90 euros en el lado de Meta y 1.400 euros en el lado de las licencias si no revisas el stack.</li>
+    </ul>
+
+    <p>Antes de firmar presupuesto, pide un desglose por línea de los seis puntos de la tabla, con el volumen esperado del primer trimestre. Si el proveedor no es capaz de hacer esa cuenta frente a ti, el proyecto no empieza bien.</p>
+
+    <h2>Flows, Apex y el truco de las plantillas aprobadas</h2>
+
+    <p>La parte visible de la integración es un Flow de Salesforce que, ante un evento, dispara una Action que publica un mensaje de WhatsApp. La parte invisible, la que decide si el proyecto escala, está en tres decisiones de ingeniería que casi nunca aparecen en la demo del partner.</p>
+
+    <h3>Dónde vive la lógica saliente</h3>
+
+    <p>Las opciones son Flow Builder, Process Builder (en declive), Apex, Platform Events y External Services. En proyectos pequeños, un Flow conectado a una Messaging Session cubre el 80% de los casos. En proyectos con alto volumen o lógica no trivial (ventanas horarias por país, idiomas, segmentación por histórico), Apex con Platform Events escala mejor y es más fácil de testear. Mezclar los dos sin un criterio claro genera deuda: dos equipos tocan el mismo evento desde Flow y desde Apex y nadie sabe cuál manda.</p>
+
+    <h3>Gestión de plantillas aprobadas</h3>
+
+    <p>Fuera de la ventana de 24 horas solo se puede enviar un mensaje si usa una plantilla previamente aprobada por Meta. La aprobación tarda entre 10 minutos y 48 horas, y Meta rechaza plantillas con lenguaje promocional confuso, con enlaces acortados y con variables mal formateadas. Dos buenas prácticas:</p>
+
+    <ul>
+      <li>Mantener un objeto <code>WhatsApp_Template__c</code> en Salesforce con nombre, idioma, estado, variables y versión. El Flow referencia por nombre y versión, no por string duplicada.</li>
+      <li>Tener plantillas separadas por idioma desde el inicio. Reutilizar la misma plantilla con <code>es_ES</code> y <code>es_419</code> ahorra un dolor de cabeza cuando entras a LATAM.</li>
+    </ul>
+
+    <h3>Idempotencia y reintentos</h3>
+
+    <p>Los webhooks de Meta reenvían el mismo mensaje si tu endpoint tarda más de 20 segundos o devuelve un 5xx. Si tu Flow no es idempotente, acabas creando dos Cases para el mismo mensaje. La solución es guardar el <code>message_id</code> de Meta como external ID en el objeto y rechazar la segunda entrega. Es una línea de Apex que ahorra incidencias el día que Meta tiene latencia.</p>
+
+    <h2>Errores comunes al conectar Salesforce con WhatsApp Business</h2>
+
+    <p>Son los que vemos repetidos en proyectos de equipos que intentan la integración sin acompañamiento:</p>
+
+    <ul>
+      <li><strong>Elegir BSP antes de modelar los datos.</strong> El BSP te vende su objeto propio. Si tu reporting ya depende de Case y Opportunity, forzar un objeto externo rompe los dashboards. Decide primero dónde vive la conversación.</li>
+      <li><strong>Un solo número para marketing y soporte.</strong> Meta puede suspender el número si recibe demasiadas quejas por mensajes de marketing. Dos números separados aíslan el riesgo y permiten métricas distintas.</li>
+      <li><strong>No prever la ventana de 24 horas.</strong> El equipo de marketing envía campañas Marketing a las 10 de la noche y marca como spam al día siguiente. El agente responde fuera de ventana sin plantilla y el mensaje falla silenciosamente.</li>
+      <li><strong>Ignorar el idioma del contacto.</strong> Salesforce tiene un campo <code>LanguageLocaleKey</code> infrautilizado. Si lo rellenas y lo referencias en el Flow, la plantilla sale en el idioma correcto automáticamente.</li>
+      <li><strong>No definir SLA del agente humano para el escalado.</strong> El agente de IA personalizado puede resolver un 70-85% de los mensajes. El resto escala a humano. Sin un SLA (por ejemplo, 5 minutos en horario de atención), el escalado se convierte en un cuello de botella y el cliente se va a otro canal.</li>
+      <li><strong>Testear solo en sandbox con un número de prueba.</strong> Los límites de rate limit, las plantillas aprobadas y los costes reales solo aparecen con un número productivo con tráfico. Reserva una semana de piloto cerrado con 50-100 contactos reales antes del lanzamiento masivo.</li>
+    </ul>
+
+    <h2>Decisión clave: conector nativo, BSP o agente de IA personalizado</h2>
+
+    <p>Las tres rutas no son excluyentes, pero cada una tiene un perfil de empresa que la aprovecha mejor.</p>
+
+    <h3>Conector nativo de Salesforce (WhatsApp Channel)</h3>
+
+    <p>Rápido de arrancar si ya pagas Service Cloud y Messaging. Soporta Flows, Enhanced Messaging Sessions y Omni-Channel para routing. Limitaciones: sin inbox fuera de Salesforce, sin lógica avanzada de clasificación. Perfil ideal: equipo B2C medio, hasta 20.000 mensajes/mes, con stack ya centrado en Service Cloud.</p>
+
+    <h3>BSP con conector a Salesforce</h3>
+
+    <p>Añade inbox propio, campañas masivas, APIs más ricas, dashboards de WhatsApp con métricas que Salesforce no da nativamente. Útil cuando el equipo de marketing opera fuera de Salesforce o cuando mandas más de 50.000 mensajes/mes. Perfil ideal: empresa con equipos separados de marketing y servicio, o con operación multi-país.</p>
+
+    <h3>Agente de IA personalizado por encima</h3>
+
+    <p>No reemplaza a ninguna de las dos anteriores: se sitúa delante. El agente lee cada mensaje entrante, decide si hay que crear Case, Lead u Opportunity, cuál es la intención, qué plantilla responder y en qué idioma. Lo que llega a Service Cloud es contexto estructurado, no texto plano. Perfil ideal: empresa que ya tiene volumen y quiere reducir handle time del agente humano un 40-60% sin despedir a nadie, reasignando capacidad a casos complejos.</p>
+
+    <p>En ZENIA montamos la tercera capa y la conectamos a cualquiera de las dos opciones de abajo. Esa es la pregunta real que vale la pena hacerse antes de un piloto: no "¿qué BSP uso?", sino "¿quién lee el mensaje antes de que llegue a mi agente humano?".</p>
+
+    <h2>Preguntas frecuentes sobre integrar Salesforce con WhatsApp Business</h2>
+
+    <h3>¿Puedo usar mi número actual de WhatsApp personal con Salesforce?</h3>
+
+    <p>No. WhatsApp Business API requiere un número comercial dedicado que ya no pueda tener WhatsApp Business ni WhatsApp personal instalado en un móvil. Si quieres mantener el número actual, hay que migrarlo y asumir que la app del móvil deja de funcionar con ese número a partir de la migración.</p>
+
+    <h3>¿Necesito Service Cloud o me vale con Sales Cloud?</h3>
+
+    <p>Service Cloud trae Enhanced Messaging, Omni-Channel y el conector de WhatsApp Channel listos. Sales Cloud puede recibir mensajes vía API o vía Marketing Cloud, pero requiere más trabajo custom. Si el caso de uso principal es atención al cliente, Service Cloud es la ruta corta.</p>
+
+    <h3>¿Cuánto tarda la aprobación de una plantilla por Meta?</h3>
+
+    <p>Entre 10 minutos y 48 horas. En nuestra experiencia, el 70% se aprueba en menos de 2 horas si el copy es claro, no abusa de mayúsculas y las variables están bien formateadas con <code>{{1}}</code>, <code>{{2}}</code>, etc. Rechazos típicos: incluir URL acortadas de bit.ly, lenguaje agresivo de descuentos o emojis excesivos.</p>
+
+    <h3>¿Qué pasa si el cliente responde a un número al que no mandé mensaje?</h3>
+
+    <p>Se abre una ventana de 24 horas de servicio. Dentro de esa ventana puedes contestar con cualquier mensaje libre, sin plantilla. Fuera, solo plantillas Utility o Marketing aprobadas.</p>
+
+    <h3>¿El agente de IA puede responder sin plantilla aprobada?</h3>
+
+    <p>Sí, siempre que la respuesta llegue dentro de la ventana de 24 horas desde el último mensaje del cliente. Esa es exactamente la razón por la que la latencia del agente importa tanto: cada hora que tarda en responder consume ventana.</p>
+
+    <h3>¿Puedo integrar WhatsApp con Salesforce sin un BSP, directamente contra la Cloud API de Meta?</h3>
+
+    <p>Sí, es técnicamente viable y suele ser más barato por mensaje. Lo pagas en trabajo de ingeniería: autenticación OAuth con Meta, gestión de webhooks firmados, cola de reintentos, logging de errores y mantenimiento cuando Meta cambia la API (ocurre al menos dos veces al año). Para empresas pequeñas no suele compensar; para equipos con DevOps maduro, sí.</p>
+
+    <h2>Cómo lo abordamos en ZENIA</h2>
+
+    <p>En <a href="/es/index.html">ZENIA</a> no vendemos licencias de Salesforce ni somos BSP. Lo que montamos es la capa de agente de IA personalizado que se conecta a tu Salesforce (sea con el conector nativo, con un BSP existente o directamente con la Cloud API de Meta) y automatiza la gestión del mensaje entrante y saliente. El trabajo típico es:</p>
+
+    <ul>
+      <li>Diagnóstico del modelo de datos actual en Salesforce y propuesta de dónde debe vivir la conversación.</li>
+      <li>Diseño de intenciones y flujos conversacionales en castellano neutro, catalán, portugués o inglés.</li>
+      <li>Configuración de plantillas aprobadas, variables y versionado dentro de Salesforce.</li>
+      <li>Despliegue de Flows y Apex necesarios para que el Case se cree y actualice con contexto completo.</li>
+      <li>Pruebas con tráfico real limitado durante 7-14 días y hand-off operativo al equipo interno.</li>
+    </ul>
+
+    <p>Si quieres entender si tu caso encaja mejor con conector nativo, BSP o <a href="/blog/automatizacion-whatsapp-negocios.html">automatización de WhatsApp con un agente de IA personalizado</a>, podemos revisar tu stack en una llamada de 30 minutos y darte una ruta con costes aproximados por mes.</p>
+
+    <div class="blog-cta">
+      <h3>¿Vas a conectar Salesforce con WhatsApp Business?</h3>
+      <p>Revisamos tu stack actual (Service Cloud, BSP, plantillas, modelo de datos) y te damos un plan concreto para integrar un agente de IA personalizado por encima. 30 minutos, sin compromiso.</p>
+      <p data-zenia-oportunidad="1">El trabajo real empieza en la capa de inteligencia: <a href="/es/automatizacion-whatsapp-negocios.html">automatizar WhatsApp con un agente de IA personalizado</a>.</p>
+
+      <a href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20sobre%20integrar%20Salesforce%20con%20WhatsApp%20Business%20y%20quiero%20revisarlo%20para%20mi%20empresa" target="_blank" rel="noopener">Hablar por WhatsApp ahora</a> <a style="background:transparent;border:1px solid var(--border);color:var(--text-secondary);margin-left:10px" href="https://calendly.com/zeladauriartef/30min">Agendar llamada gratuita</a>
+    </div>
+<div class="blog-related" data-zenia-money-links="1">
+  <h3>Siguiente paso para tu stack</h3>
+  <a href="/es/automatizacion-whatsapp-negocios.html">Automatización WhatsApp con agente de IA<span>La capa de inteligencia por encima de tu CRM. Desde EUR 297/mes.</span></a>
+  <a href="/blog/crm-con-whatsapp-integrado.html">CRM con WhatsApp integrado: guía 2026<span>Qué buscar en un CRM que ya trae WhatsApp conectado de fábrica.</span></a>
+  <a href="/blog/comparativa-plataformas-ia-conversacional-crm-whatsapp.html">Comparativa de plataformas IA + CRM + WhatsApp<span>Las plataformas que compiten con una integración directa Salesforce + WhatsApp.</span></a>
+</div>
+
+
+    <div class="blog-related">
+      <h3>Artículos relacionados</h3>
+      <a href="/blog/integrar-hubspot-con-whatsapp-business.html">Integrar HubSpot con WhatsApp Business: alternativa al stack Salesforce<span>Cómo funciona la misma arquitectura sobre HubSpot y cuándo compensa frente a Salesforce.</span></a>
+      <a href="/blog/integrar-odoo-con-whatsapp-business.html">Integrar Odoo con WhatsApp Business<span>El equivalente para pymes con ERP open-source: ventajas, limitaciones y costes.</span></a>
+      <a href="/blog/crm-conversacional-whatsapp-2026.html">CRM conversacional con WhatsApp en 2026<span>Qué significa realmente que un CRM sea "conversacional" y qué pedirle al proveedor.</span></a>
+      </div>
+
+  </div>
+
+<div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 24px; margin: 40px 0;" data-zenia-internal-links="landings">
+  <h3 style="color: #F1F5F9; margin-bottom: 12px; font-size: 1.05rem;">Explora el stack conversacional</h3>
+  <p style="color: #94A3B8; margin-bottom: 16px; font-size: 0.95rem;">Si vienes de buscar cómo integrar Salesforce con WhatsApp, estos recursos profundizan en las piezas vecinas del stack:</p>
+  <div>
+      <a href="/blog/integrar-hubspot-con-whatsapp-business.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Integrar HubSpot con WhatsApp Business →</a>
+      <a href="/blog/integrar-odoo-con-whatsapp-business.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Integrar Odoo con WhatsApp Business →</a>
+      <a href="/blog/crm-con-whatsapp-integrado.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">CRM con WhatsApp integrado 2026 →</a>
+      <a href="/es/automatizacion-whatsapp-negocios.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Automatizar WhatsApp con agente de IA →</a>
+  </div>
+</div>
+
+</article>
+
+<footer class="blog-footer">
+  <div class="container">
+    <p>&copy; 2026 ZENIA. Todos los derechos reservados. | <a href="/">Inicio</a> | <a href="/blog/">Blog</a></p>
+  </div>
+</footer>
+
+<div style="text-align:center; padding:16px 24px; background:#0A0F1C; color:#64748B; font-size:0.85rem; border-top:1px solid rgba(255,255,255,0.04);"><a href="/es/cobertura.html" style="color:#94A3B8; text-decoration:none;">Ver cobertura completa</a></div>
+<a href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20sobre%20integrar%20Salesforce%20con%20WhatsApp%20Business%20y%20quiero%20revisarlo%20para%20mi%20empresa" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp" data-directo style="position:fixed;bottom:24px;right:24px;z-index:9998;background:#25D366;color:white;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(37,211,102,0.4);transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 20px rgba(37,211,102,0.5)'" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 16px rgba(37,211,102,0.4)'">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<script>document.addEventListener("click",function(e){var t=e.target,a=t.closest?t.closest('a[href*="wa.me"]'):null;if(!a)return;try{navigator.sendBeacon("https://gaia-relojes.onrender.com/gwb/lead",JSON.stringify({site:"zenia",path:location.pathname+location.search,ref:document.referrer||""}))}catch(r){}},true);</script>
+<script src="/assets/qualify.js?v=4" defer></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "67e4803d7cd443a49b12c7d8a99365bf"}'></script>
+</body>
+</html>

@@ -7766,3 +7766,20 @@ Writeup: https://zeniapartners.com/blog/ai-agent-for-insurance-agencies.html
 #VoiceAI #InsurTech #AMS #WhatsAppBusinessAPI #AgentArchitecture
 
 ---
+## 2026-10-03 - Integrar Salesforce con WhatsApp Business
+
+Wiring Salesforce to WhatsApp Business cleanly is not a toggle in Messaging Settings, it is four decisions you take before the first Flow. Where does the conversation live (Enhanced Messaging Session, Case, Lead + custom MessageLog, or a BSP-owned external object)? Who signs the webhook from Meta Cloud API (direct, or a BSP in the middle)? What drives the outbound side (Flow Builder, Apex + Platform Events, or Marketing Cloud Journeys)? And who reads the inbound text before an agent does (nobody, a classifier, or a personalized AI agent with memory)?
+
+Non-obvious bits from production:
+- Idempotency: Meta re-sends webhooks on >20s latency or 5xx; without message_id as external_id you double-create Cases on every spike.
+- Templates are versioned content; store them in a WhatsApp_Template__c object with locale + status, reference by name+version, never inline strings.
+- Session window (24h) is the real cost knob. Service + utility inside the window stay free through Sep 30 2026, then flip to ~$0.0034. Latency < 60s turns the window into free throughput.
+- LanguageLocaleKey on Contact is underused; pipe it into the Flow and template rendering becomes trivial multi-market.
+
+Measured on a mid-size Service Cloud rollout: p95 inbound-to-Case 1.4s, template approval first-pass 88%, agent handle time -42% after moving classification + extraction into the AI layer, zero duplicate Cases over 60 days.
+
+Writeup (ES): https://zeniapartners.com/blog/integrar-salesforce-con-whatsapp-business.html
+
+#Salesforce #ServiceCloud #WhatsAppBusinessAPI #Infrastructure
+
+---

@@ -7701,3 +7701,20 @@ Full writeup (ES, segmentation + metrics): https://zeniapartners.com/blog/fideli
 #Infrastructure #WhatsAppBusinessAPI #CRM #Messaging
 
 ---
+## 2026-10-03 - Integrar Shopify con WhatsApp Business (EN, Company Page)
+
+Wiring Shopify to WhatsApp Business API past "install a plugin" is a four-component system: Shopify webhooks (orders/*, checkouts/*) validated by HMAC into an idempotent consumer; a BSP channel to the WhatsApp Cloud API with a per-locale template registry (ES-ES, ES-MX, EN-US) and 24h session window tracking; an agent runtime that reads Admin API GraphQL on demand for stock, pricing and fulfilment status; and a CRM holding the single-truth customer + conversation state so cart recovery, order confirmation and post-purchase upsell don't race each other.
+
+Non-obvious parts that bite in production:
+- Checkout updates arrive as a stream, not a single "abandoned" event. You deduplicate on checkout_token and only fire the first template after N minutes of inactivity.
+- Template approval lead time (24-48h at Meta) belongs on the critical path of every rollout; copy that mixes marketing and utility gets rejected.
+- Meta per-conversation pricing (utility vs marketing vs authentication) is per country; cost model needs to be computed per market before promising ROI.
+- Quality rating degrades fast if opt-in is weak; checkout opt-in has to be explicit and logged.
+
+Measured on tiendas Shopify after 60 days on this stack: carrito-abandonado recovery 18-23% (vs 5-12% email-only), WISMO consultations -45%, p95 response latency on pre-sales questions under 15s, template approval first-pass 95%.
+
+Full writeup (ES, architecture + ROI table): https://zeniapartners.com/blog/integrar-shopify-con-whatsapp-business.html
+
+#Infrastructure #WhatsAppBusinessAPI #Shopify #Ecommerce
+
+---

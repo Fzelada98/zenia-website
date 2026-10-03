@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-10-03T14:06:00+00:00",
+  "lastRun": "2026-10-03T22:00:00+00:00",
   "posts": [
+    {
+      "slug": "integrar-salesforce-con-whatsapp-business",
+      "keyword": "integrar salesforce con whatsapp business",
+      "tier": 2,
+      "cluster": "crm-integraciones",
+      "status": "published",
+      "date": "2026-10-03",
+      "source": "generated"
+    },
     {
       "slug": "integrar-woocommerce-con-whatsapp-business",
       "keyword": "integrar woocommerce con whatsapp business",

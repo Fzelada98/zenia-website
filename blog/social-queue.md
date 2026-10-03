@@ -7749,3 +7749,20 @@ Full writeup (ES, architecture + ROI): https://zeniapartners.com/blog/integrar-w
 #Infrastructure #WhatsAppBusinessAPI #WooCommerce #Ecommerce
 
 ---
+## 2026-10-03 - AI Agent for Insurance Agencies (EN)
+
+Shipping an AI voice/WhatsApp agent on top of a US independent agency stack is not a bot in front of a form. It is a six-piece system: a SIP/voice ingress (Twilio or Telnyx) with sub-800ms turn-taking; a streaming ASR + LLM orchestration layer with strict intent routing between quote intake, FNOL, policy service and warm-transfer; AMS write-back (Applied Epic / AMS360 / EZLynx / HawkSoft) via official APIs where available and headless automation where not; carrier portal read-only integrations for billing, policy and claims status on the top five carriers in the book; a WhatsApp Business API channel with per-template compliance (TCPA + state-level consent capture); and a reconciliation queue that holds anything the agent is not >95% confident on for a licensed producer.
+
+Non-trivial parts from production:
+- EZLynx and AMS360 do not expose equivalent write surfaces; prospect/suspect activity creation has to be modeled per vendor, not abstracted.
+- FNOL has to attach photo/video evidence inside the carrier claim file, not next to it; S3 + presigned carrier upload beats email.
+- Rater integration (EZLynx Rating, PL Rating) wants deterministic intake payloads; the LLM output goes through a strict JSON schema validator before the rater call, or you eat garbage quotes.
+- After-hours routing is 47% of the volume and 100% of the hiring argument.
+
+Numbers from a 2-producer P&C deployment, week 6: call answer rate 61% → 97%, after-hours 4% → 96%, median new-lead response 4h 12m → 42s, quote-to-bind +9 pts on ~90 quotes/mo.
+
+Writeup: https://zeniapartners.com/blog/ai-agent-for-insurance-agencies.html
+
+#VoiceAI #InsurTech #AMS #WhatsAppBusinessAPI #AgentArchitecture
+
+---

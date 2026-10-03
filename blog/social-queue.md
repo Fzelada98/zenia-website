@@ -7718,3 +7718,17 @@ Full writeup (ES, architecture + ROI table): https://zeniapartners.com/blog/inte
 #Infrastructure #WhatsAppBusinessAPI #Shopify #Ecommerce
 
 ---
+
+## 2026-10-03 - AI Booking Agent for Plumbing (EN)
+
+Plumbing is a phone business. CallRail's 2026 benchmark puts the plumbing missed-call rate at 28% and 62% of plumbing calls land outside standard business hours.
+
+Architecture we're shipping for US plumbing shops: Twilio Elastic SIP in front of the business number, OpenAI Realtime for the voice loop with Deepgram as fallback transcriber, a classifier head for emergency vs. standard triage, and a ServiceTitan / Housecall Pro / Jobber writer that pulls live capacity (truck, zone, skill, membership) every 60s and writes the job back inside two minutes.
+
+Field numbers from a Dallas 4-truck shop at day 90: missed-call rate 29% to 3%, after-hours bookings 11/wk to 48/wk, call-to-truck-rolling 24 min to 9 min, p95 pickup under 2.5s under burst load (cold snap, 10+ concurrent calls).
+
+Full technical writeup: https://zeniapartners.com/blog/ai-booking-agent-for-plumbing.html
+
+#VoiceAI #Twilio #ServiceTitan #WhatsAppBusinessAPI #FieldService
+
+---

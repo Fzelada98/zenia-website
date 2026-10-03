@@ -1,7 +1,16 @@
 {
-  "lastRun": "2026-10-02T12:00:00.000000+00:00",
+  "lastRun": "2026-10-03T09:13:58.000000+00:00",
   "market": "US/UK small business",
   "posts": [
+    {
+      "slug": "ai-booking-agent-for-plumbing",
+      "keyword": "ai booking agent for plumbing",
+      "tier": 0,
+      "cluster": "home-services",
+      "status": "published",
+      "date": "2026-10-03",
+      "note": "striking-loop hit: 7 impressions, pos 16.6. Was printing on /blog/ai-agent-for-plumbers.html; added cross-link there with 'ai booking agent for plumbing' anchor."
+    },
     {
       "slug": "hair-salon-crm-with-ai",
       "keyword": "crm for hair salon",

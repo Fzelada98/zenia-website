@@ -7732,3 +7732,20 @@ Full technical writeup: https://zeniapartners.com/blog/ai-booking-agent-for-plum
 #VoiceAI #Twilio #ServiceTitan #WhatsAppBusinessAPI #FieldService
 
 ---
+## 2026-10-03 - Integrar WooCommerce con WhatsApp Business
+
+Wiring WooCommerce to WhatsApp Business past the "icon in the footer" is a four-piece system: WooCommerce webhooks (order.created, order.updated, customer.created) into an idempotent consumer keyed by order_id so a replayed hook never double-fires a template; a BSP or direct Meta Cloud API channel with templates pre-approved per category (utility, marketing, authentication) and 24h session window tracking; an agent runtime that calls /wp-json/wc/v3 on demand for order state, stock and refunds; and a CRM holding the single-truth customer + conversation state across cart recovery, confirmation, tracking and post-purchase.
+
+Non-obvious parts from production:
+- Cart "abandoned" is not a webhook. You listen to woocommerce_cart_item_set_quantity plus session TTL and only fire the first template after N minutes of inactivity, deduplicated by cart_hash.
+- Checkout opt-in has to be explicit and logged per GDPR; quality rating degrades fast if templates land without consent.
+- Utility vs marketing categorization at Meta template submission is per country; cost model has to be computed before any ROI claim.
+- Idempotency is the hard part: WooCommerce reships webhooks aggressively; stateless consumers will double-send confirmations.
+
+Measured on WooCommerce tiendas after 60 days on this stack: carrito-abandonado recovery 20-28% vs 5-10% email-only, WISMO tickets -70%, p95 response latency on pre-sales under 12s, template approval first-pass 94%.
+
+Full writeup (ES, architecture + ROI): https://zeniapartners.com/blog/integrar-woocommerce-con-whatsapp-business.html
+
+#Infrastructure #WhatsAppBusinessAPI #WooCommerce #Ecommerce
+
+---

@@ -7800,3 +7800,20 @@ Writeup (ES, 3 methods + architecture + ROI): https://zeniapartners.com/blog/int
 #Pipedrive #WhatsAppBusinessAPI #SalesEngineering #n8n #Infrastructure
 
 ---
+## 2026-10-04 - AI Agent for Financial Advisors (EN)
+
+Independent RIAs are the latest vertical where the data finally justifies real agent infrastructure, not another Copilot. The constraint set is specific: the agent sits between a CRM of record (Redtail, Wealthbox, Salesforce Financial Services Cloud, Practifi), a performance system (Orion, Black Diamond, Addepar), a custodian (Schwab, Fidelity, Altruist, Pershing), and a WORM archive (Smarsh, Global Relay, Jatheon) because every inbound and outbound message, plus every prompt and tool-call pair, has to be retrievable under SEC Rule 17a-4 and FINRA Rule 4511 for 3-6 years.
+
+Architecture notes from production:
+- The agent is a thin orchestration layer, not a data store. CRM stays the system of record; performance stays in Orion/Black Diamond; the AI coordinates handoffs and writes the notes humans would otherwise write.
+- Prompt + tool-call logging is a first-class record; the SEC clarified in 2025 that prompts leading to a recommendation fall under books-and-records. S3 Object Lock or a vendor WORM is non-negotiable.
+- WhatsApp Business API via a BSP with versioned approved templates and 24h session tracking; anything near a recommendation stays in supervisor-hold queue.
+- Idempotency on webhook delivery (wa_message_id + custodian ACAT status callbacks) is where most PoCs quietly double-write; external_id keys and a dedupe window prevent duplicate Cases on retries.
+
+Measured on a 3-advisor $385M AUM RIA, 90 days post-deploy: onboarding elapsed 11 days to 3, partner time per onboarding 9h to 1.4h, 42% of inbound service tickets auto-resolved, p95 response under 2 min, review coverage 61% to 88%, zero off-channel exposure after Smarsh integration.
+
+Writeup: https://zeniapartners.com/blog/ai-agent-for-financial-advisors.html
+
+#WealthTech #RIA #AgentArchitecture #WhatsAppBusinessAPI #Compliance
+
+---

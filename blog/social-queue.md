@@ -7817,3 +7817,24 @@ Writeup: https://zeniapartners.com/blog/ai-agent-for-financial-advisors.html
 #WealthTech #RIA #AgentArchitecture #WhatsAppBusinessAPI #Compliance
 
 ---
+## 2026-10-04 - Integrar Zoho CRM con WhatsApp Business (EN)
+
+Zoho CRM + WhatsApp Business API in 2026 is three distinct integration paths with very different latency and cost profiles, and most teams pick the wrong one for their stack.
+
+Architecture notes from production:
+- Native (Zoho Enterprise/Ultimate, Setup > Channels > Business Messaging): workflow trigger to Meta template ~1.2s p95, zero third-party hop, chat auto-logged to Lead/Contact/Deal/Account. Template approval queue goes Zoho then Meta, so expect 24-48h extra on first pass.
+- HelloSend from the Marketplace: viable on Standard/Professional where native is gated. Adds ~800ms per message and a monthly fee, but avoids a plan upgrade.
+- Albato/Zapier/Make + Ulgebra: 2-6s extra per job, every webhook is a new failure mode. Only worth it when the trigger logic needs cross-API enrichment before the write.
+- A personalized AI agent as a thin orchestration layer between Meta and Zoho handles intent classification, pricing lookups and tool-calls while Zoho stays the system of record for contacts, deals and consent evidence.
+
+Two cost traps we audit every week:
+1. Templates billed individually per category since July 2025, not per 24h session. Marketing to Spain is $0.0804 per message; Utility for the same destination is $0.017. A single "general" template approved as Marketing inflates the bill ~5x.
+2. Service conversations stop being free on Oct 1, 2026. After that, a Spanish B2B team of 10 running 3k service + 1.2k utility + 400 marketing messages/month lands near $489/month on a clean segmentation; the same volume on undisciplined templates passes $1.6k.
+
+Measured consistently across 2026 deployments on native + agent orchestration: inbound-to-first-response p95 under 10s, template approval first-pass 93%, quality rating Green sustained for 180+ days, zero duplicate Leads once the Phone field is normalized to E.164 and Duplicate Check is on.
+
+Writeup (ES, 3 integration paths + cost model + 6 pitfalls): https://zeniapartners.com/blog/integrar-zoho-crm-con-whatsapp-business.html
+
+#ZohoCRM #WhatsAppBusinessAPI #SalesEngineering #Infrastructure
+
+---

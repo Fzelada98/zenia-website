@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HP0VQSEL68"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-HP0VQSEL68');
+</script>
+
+<title>Integrar monday.com con WhatsApp Business | ZENIA</title>
+<meta name="description" content="Guía 2026 para integrar monday.com con WhatsApp Business API: nativa, TimelinesAI, Whatsable, Albato. Costes, flujos y pitfalls en producción.">
+<link rel="canonical" href="https://zeniapartners.com/blog/integrar-monday-com-con-whatsapp-business.html">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+
+<!-- Hreflang -->
+<link rel="alternate" hreflang="es" href="https://zeniapartners.com/blog/integrar-monday-com-con-whatsapp-business.html">
+<link rel="alternate" hreflang="x-default" href="https://zeniapartners.com/blog/integrar-monday-com-con-whatsapp-business.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Integrar monday.com con WhatsApp Business API 2026">
+<meta property="og:description" content="Guía 2026 para integrar monday.com con WhatsApp Business API: nativa, TimelinesAI, Whatsable, Albato. Costes, flujos y pitfalls reales.">
+<meta property="og:url" content="https://zeniapartners.com/blog/integrar-monday-com-con-whatsapp-business.html">
+<meta property="og:site_name" content="ZENIA">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="https://zeniapartners.com/assets/images/og-image.png">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Integrar monday.com con WhatsApp Business API 2026">
+<meta name="twitter:description" content="Guía 2026 para integrar monday.com con WhatsApp Business API: nativa, TimelinesAI, Whatsable, Albato. Costes y pasos reales.">
+<meta name="twitter:image" content="https://zeniapartners.com/assets/images/og-image.png">
+
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="author" content="Fabrizzio Zelada">
+<meta name="theme-color" content="#0A0F1C">
+
+<!-- JSON-LD Article -->
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Integrar monday.com con WhatsApp Business API: Guía Técnica 2026", "description": "Guía técnica para conectar monday.com con la WhatsApp Business API: integración nativa, TimelinesAI, Whatsable, Albato y n8n, costes 2026, flujos de automatización y pitfalls reales.", "author": {"@type": "Person", "name": "Fabrizzio Zelada", "jobTitle": "Founder", "worksFor": {"@type": "Organization", "name": "ZENIA"}}, "publisher": {"@type": "Organization", "name": "ZENIA", "url": "https://zeniapartners.com", "logo": {"@type": "ImageObject", "url": "https://zeniapartners.com/assets/images/og-image.png", "width": 600, "height": 60}}, "datePublished": "2026-10-04", "dateModified": "2026-10-04", "mainEntityOfPage": "https://zeniapartners.com/blog/integrar-monday-com-con-whatsapp-business.html", "inLanguage": "es", "keywords": ["integrar monday.com con whatsapp business", "monday crm whatsapp api", "monday whatsapp integracion", "whatsapp business api monday", "timelinesai monday", "whatsable monday"], "image": "https://zeniapartners.com/assets/images/og-image.png"}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #3B82F6;
+    --accent-violet: #6366F1;
+    --bg-dark: #0A0F1C;
+    --bg-card: rgba(17, 24, 39, 0.6);
+    --text-primary: #F1F5F9;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+    --border: rgba(148, 163, 184, 0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; background: var(--bg-dark); color: var(--text-primary); line-height: 1.8; }
+  .blog-nav { padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 60px; position: sticky; top: 0; background: rgba(10, 15, 28, 0.85); backdrop-filter: blur(12px); z-index: 100; }
+  .blog-nav .container { max-width: 1200px; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+  .blog-nav .nav-logo-link { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-primary); font-weight: 700; font-size: 1.1rem; }
+  .blog-nav .nav-main-links { display: flex; list-style: none; gap: 28px; margin: 0; padding: 0; }
+  .blog-nav .nav-main-links li { margin: 0; }
+  .blog-nav .nav-main-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
+  .blog-nav .nav-main-links a:hover { color: var(--text-primary); }
+  .blog-nav .nav-main-links a.active { color: var(--primary); }
+  .blog-nav .nav-cta-btn { background: var(--primary); color: #fff; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: filter 0.2s; white-space: nowrap; }
+  .blog-nav .nav-cta-btn:hover { filter: brightness(1.1); }
+  @media (max-width: 860px) {
+    .blog-nav .nav-main-links { display: none; }
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+  .blog-header { margin-bottom: 48px; }
+  .blog-meta { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px; }
+  .blog-header h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); line-height: 1.3; margin-bottom: 16px; }
+  .blog-header p.lead { font-size: 1.1rem; color: var(--text-secondary); line-height: 1.7; }
+  .blog-content h2 { font-size: 1.4rem; margin: 48px 0 16px; color: var(--text-primary); }
+  .blog-content h3 { font-size: 1.15rem; margin: 32px 0 12px; color: var(--text-primary); }
+  .blog-content p { color: var(--text-secondary); margin-bottom: 20px; }
+  .blog-content ul, .blog-content ol { color: var(--text-secondary); margin-bottom: 20px; padding-left: 24px; }
+  .blog-content li { margin-bottom: 8px; }
+  .blog-content strong { color: var(--text-primary); }
+  .blog-content a { color: var(--primary); text-decoration: underline; }
+  .blog-content a:hover { color: var(--accent-violet); }
+  .blog-content blockquote { border-left: 3px solid var(--primary); padding-left: 20px; margin: 24px 0; font-style: italic; color: var(--text-secondary); }
+  .blog-content table { width: 100%; border-collapse: collapse; margin: 24px 0; }
+  .blog-content th, .blog-content td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); font-size: 0.95rem; }
+  .blog-content th { color: var(--text-primary); font-weight: 600; background: var(--bg-card); }
+  .blog-cta { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 40px; text-align: center; margin: 60px 0; }
+  .blog-cta h3 { margin-bottom: 12px; }
+  .blog-cta p { color: var(--text-secondary); margin-bottom: 20px; }
+  .blog-cta a { display: inline-block; padding: 12px 28px; background: var(--primary); color: white; border-radius: 8px; text-decoration: none; font-weight: 600; }
+  .blog-cta a:hover { background: var(--accent-violet); }
+  .blog-related { margin: 60px 0 0; }
+  .blog-related h3 { margin-bottom: 20px; }
+  .blog-related a { display: block; padding: 16px 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 12px; text-decoration: none; color: var(--text-primary); font-weight: 600; transition: border-color 0.3s; }
+  .blog-related a:hover { border-color: var(--primary); }
+  .blog-related a span { display: block; font-size: 0.85rem; color: var(--text-muted); font-weight: 400; margin-top: 4px; }
+  .blog-footer { padding: 40px 0; border-top: 1px solid var(--border); margin-top: 60px; text-align: center; color: var(--text-muted); font-size: 0.85rem; }
+  .blog-footer a { color: var(--primary); text-decoration: none; }
+  .text-gradient { background: linear-gradient(135deg, var(--primary), var(--accent-violet)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+</style>
+</head>
+<body>
+
+<nav class="blog-nav">
+  <div class="container">
+    <a href="/es/" class="nav-logo-link">
+      <svg class="zenia-mark" viewBox="0 0 140 140" fill="none" width="32" height="32">
+        <defs>
+          <linearGradient id="zg-b" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#2563EB"/>
+            <stop offset="100%" stop-color="#3B82F6"/>
+          </linearGradient>
+          <linearGradient id="zg-v" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#6366F1"/>
+            <stop offset="100%" stop-color="#7C3AED"/>
+          </linearGradient>
+        </defs>
+        <rect width="140" height="140" rx="28" fill="#0F172A"/>
+        <path d="M 70 18 Q 18 18 18 38 L 18 57 Q 18 63 24 63 L 88 63 Z" fill="url(#zg-b)"/>
+        <path d="M 70 122 Q 122 122 122 102 L 122 83 Q 122 77 116 77 L 52 77 Z" fill="url(#zg-v)"/>
+      </svg>
+      <span>ZENIA</span>
+    </a>
+    <ul class="nav-main-links">
+      <li><a href="/es/#opportunities">Oportunidades IA</a></li>
+      <li><a href="/es/#services">Servicios</a></li>
+      <li><a href="/es/#process">Proceso</a></li>
+      <li><a href="/es/#impact">Impacto</a></li>
+      <li><a href="/blog/" class="active">Blog</a></li>
+    </ul>
+    <a href="/es/#cta" class="nav-cta-btn">Empezar</a>
+  </div>
+</nav>
+
+<article class="container">
+  <header class="blog-header">
+    <div class="blog-meta">4 de octubre, 2026 &middot; Fabrizzio Zelada &middot; 11 min de lectura</div>
+    <h1><span class="text-gradient">Integrar monday.com con WhatsApp Business:</span> Guía Técnica 2026 (API Oficial, Costes y Pitfalls)</h1>
+    <p class="lead">Integrar monday.com con WhatsApp Business API parece un asunto de conectar dos APIs hasta que lo pones en producción con 12 comerciales, 6.000 contactos y plantillas en 3 categorías de pricing distintas. Esta guía recorre las vías reales de integración (nativa, TimelinesAI, Whatsable, Albato más n8n), los costes 2026 con los cambios de Meta de octubre, los flujos que mueven el pipeline y los errores que explotan al segundo mes de uso real.</p>
+  </header>
+
+  <div class="blog-content">
+
+    <p class="pillar-callout"><strong>Lee también:</strong> Si todavía estás eligiendo stack, compara con nuestra <a href="/blog/comparativa-plataformas-ia-conversacional-crm-whatsapp.html">comparativa de plataformas de IA conversacional con CRM y WhatsApp</a> y la <a href="/blog/crm-con-whatsapp-integrado.html">guía CRM con WhatsApp integrado</a>.</p>
+
+
+    <h2>Por qué integrar monday.com con WhatsApp Business en 2026</h2>
+
+    <p>monday.com dejó de ser solo un gestor de proyectos hace tiempo: el producto monday CRM es, en 2026, uno de los sistemas más usados en pymes de España y LATAM que arrancan sin un CRM histórico y buscan algo que mezcle tableros Kanban, pipeline comercial y automatizaciones sin tocar código. El pricing por sede sigue siendo competitivo: aproximadamente 12 USD por asiento en Basic, 17 en Standard, 28 en Pro y precio custom en Enterprise, con un mínimo de 3 asientos.</p>
+
+    <p>El problema aparece cuando el equipo quiere pasar de "mandar mensajes sueltos desde el móvil" a usar WhatsApp como el canal principal del pipeline. Ahí hay que decidir tres cosas: qué método de integración usar entre nativa, TimelinesAI, Whatsable o un conector no-code; cómo gestionar el coste real de los mensajes con el modelo per-template de Meta; y qué parte del flujo delegar en un agente de IA personalizado para que los comerciales no respondan FAQs 8 horas al día.</p>
+
+    <p>Esta guía se centra en lo que falla en producción, no en la demo del vendedor. Son los mismos errores que vemos cada semana en implementaciones heredadas: items duplicados en el board, plantillas rechazadas por Meta, logs incompletos cuando un comercial responde desde el móvil, costes reales 3x por encima del presupuesto inicial.</p>
+
+    <p><strong>Cuatro números base para contextualizar:</strong></p>
+
+    <ul>
+      <li>Cada cuenta de WhatsApp Business recibe <strong>1.000 conversaciones de servicio gratis al mes</strong> por asignación de Meta (no de monday).</li>
+      <li>Los conectores de terceros (TimelinesAI, Whatsable, Albato) suman <strong>29 a 99 USD/mes por workspace</strong>, encima del coste Meta.</li>
+      <li>Desde julio 2025 cada <strong>plantilla se cobra individualmente por categoría</strong> (Marketing, Utility, Authentication, Service), ya no por ventana de 24h.</li>
+      <li>Las conversaciones de <strong>Service dejan de ser gratis el 1 de octubre de 2026</strong>: después de esa fecha todo mensaje service entra en facturación directa.</li>
+    </ul>
+
+    <p>Si no planificas el flujo contemplando estos cuatro puntos, la factura de WhatsApp del mes 3 duplica a la del mes 1 sin que el pipeline haya mejorado. El resto de la guía explica cómo evitarlo.</p>
+
+    <h2>Las 4 vías para integrar monday.com con WhatsApp Business API</h2>
+
+    <p>No existe una única manera correcta de integrar monday.com con WhatsApp. Hay cuatro opciones distintas en producción en 2026, con pros y contras claros según el plan de monday que tengas, el volumen de mensajes previsto y la madurez técnica del equipo.</p>
+
+    <h3>Opción 1: Integración nativa de monday.com (WhatsApp Business app)</h3>
+
+    <p>monday.com lanzó una integración nativa con WhatsApp Business disponible desde el marketplace de monday Apps. Crea items automáticamente para cada chat entrante, con los contactos de WhatsApp sincronizando directo al board elegido como entry point. Se configura desde el panel Integrations del propio tablero.</p>
+
+    <p>Qué necesitas antes de empezar: cuenta Facebook Business Manager, negocio verificado por Meta (puede tardar entre 2 y 7 días hábiles), WhatsApp Business Account creada en Meta Business Suite y un número de teléfono que no esté en uso en la app de WhatsApp. Si el número ya está dado de alta en WhatsApp Business o la app estándar, debes migrarlo a la API antes de conectarlo a monday.</p>
+
+    <p><strong>Pros:</strong> items creados automáticamente para cada nuevo chat, mapeo directo de columnas Phone, Status, Owner y campos custom. Automations nativas de monday pueden disparar envíos (ejemplo: cambio de columna Status a "Demo agendada" lanza plantilla Utility). Sin dependencia de vendor adicional.</p>
+
+    <p><strong>Contras:</strong> la vista de chat dentro de monday es correcta pero no al nivel de un inbox dedicado; conversaciones muy largas se vuelven incómodas en el panel lateral. Las automations tienen límite mensual según plan (250 acciones en Basic, 25k en Pro) y los disparos a WhatsApp cuentan contra ese cupo.</p>
+
+    <h3>Opción 2: TimelinesAI</h3>
+
+    <p>TimelinesAI es, en 2026, la aplicación con mejor rating en el marketplace de monday para integración WhatsApp Business API. Vincula el número actual escaneando un código QR y sincroniza bidireccionalmente: cada mensaje entrante crea item o update en monday, cada envío queda logueado en el item correspondiente. Pricing arranca en 25 USD/mes por usuario.</p>
+
+    <p><strong>Pros:</strong> setup en 10 minutos sin migrar número a la API si no quieres, soporte multi-número, buena vista unificada de todos los chats, mapea tags de WhatsApp a columnas de monday y permite enviar broadcasts segmentados por fase de pipeline.</p>
+
+    <p><strong>Contras:</strong> si vinculas por QR (modo "Business app" en vez de API oficial), no accedes a plantillas pre-aprobadas por Meta y pierdes tarifas Utility bajas; para el modo API oficial, el precio sube a 69-99 USD/mes por workspace. La IA conversacional incluida es básica frente a un <a href="/blog/automatizacion-whatsapp-negocios.html">agente de IA personalizado</a> entrenado sobre tu base de conocimiento.</p>
+
+    <h3>Opción 3: Whatsable</h3>
+
+    <p>Whatsable se posiciona como alternativa a TimelinesAI con enfoque bidireccional estricto: cada mensaje enviado o recibido queda registrado en el item correspondiente y las nuevas conversaciones generan items automáticos. Instalación vía monday Marketplace, credenciales WhatsApp Business API y plantillas pre-cargadas para onboarding, recordatorios y confirmaciones.</p>
+
+    <p><strong>Pros:</strong> precios desde 29 USD/mes, soporta multimedia, broadcasts con segmentación por columna de monday, bot builder visual, deduplicación nativa por número normalizado.</p>
+
+    <p><strong>Contras:</strong> cobertura funcional más estrecha que TimelinesAI en reports agregados, su bot builder no sustituye a un agente de IA con acceso a tu base de conocimiento, catalog y agenda en tiempo real.</p>
+
+    <h3>Opción 4: Automatización no-code (n8n, Albato, Make, Zapier)</h3>
+
+    <p>Para equipos con control fino de los triggers o que combinan WhatsApp con otras APIs (Stripe, Calendly, Google Sheets, ERP) hay 4 orquestadores con conectores para monday y WhatsApp Business Cloud: n8n (open-source, autoalojable), Albato (SaaS, trigger a tiempo real), Make y Zapier. Albato conecta monday + WhatsApp Business API en 5 minutos; n8n permite llamar al Cloud API directamente con autenticación OAuth del WABA.</p>
+
+    <p><strong>Pros:</strong> máxima flexibilidad en los triggers, buen fit cuando el stack ya usa Make o n8n, útil para enriquecer el payload antes de insertarlo en monday y encaja perfectamente con un agente de IA que atienda el canal.</p>
+
+    <p><strong>Contras:</strong> cada paso adicional añade latencia (típico: 2-6 segundos extra por job), más puntos de fallo, el pricing por tarea en Zapier escala rápido con 10.000+ conversaciones/mes y n8n exige infra propia.</p>
+
+    <h3>¿Qué opción elegir?</h3>
+
+    <p>La decisión depende de tres variables: plan de monday actual, volumen mensual de conversaciones y nivel de personalización del agente que vas a desplegar.</p>
+
+    <ul>
+      <li><strong>&lt; 500 conversaciones/mes y plan Basic o Standard:</strong> Whatsable o TimelinesAI por rapidez de puesta en marcha.</li>
+      <li><strong>&gt; 500 conversaciones/mes, plan Pro y automations existentes:</strong> integración nativa de monday + Business Messaging.</li>
+      <li><strong>Necesitas un agente de IA que entienda lenguaje natural, acceda a stock, agenda y precios dinámicos:</strong> capa n8n o Albato hacia un agente propio, dejando monday como fuente de verdad de contactos y deals.</li>
+    </ul>
+
+    <h2>Costes 2026: lo que realmente paga un equipo con 10 comerciales</h2>
+
+    <p>Esta es la parte que casi nadie calcula bien antes de firmar el contrato. En 2026 WhatsApp Business API cobra por plantilla individual (cambio de julio 2025) y por categoría. El coste varía por país destino y por tipo de mensaje. Un equipo que no segmente plantillas por categoría acaba pagando Marketing cuando debería pagar Utility.</p>
+
+    <p>Precios Meta de referencia (país destino, octubre 2026):</p>
+
+    <table>
+      <tr><th>País destino</th><th>Marketing / mensaje</th><th>Utility / mensaje</th><th>Authentication / mensaje</th></tr>
+      <tr><td>India</td><td>~0,010 USD</td><td>~0,003 USD</td><td>~0,002 USD</td></tr>
+      <tr><td>Brasil</td><td>~0,0625 USD</td><td>~0,040 USD</td><td>~0,030 USD</td></tr>
+      <tr><td>México</td><td>~0,0436 USD</td><td>~0,0238 USD</td><td>~0,0238 USD</td></tr>
+      <tr><td>España</td><td>~0,0804 USD</td><td>~0,0170 USD</td><td>~0,0095 USD</td></tr>
+      <tr><td>Alemania</td><td>&gt;0,120 USD</td><td>~0,055 USD</td><td>~0,030 USD</td></tr>
+    </table>
+
+    <p>Esos valores los cobra Meta directo al método de pago asociado al WABA, no monday. monday no añade markup en la mensajería: pagas Meta por un lado y monday por el otro. Si usas TimelinesAI o Whatsable, el fee de la app (25-99 USD/mes) se suma por encima pero sin tocar el coste por mensaje.</p>
+
+    <p><strong>Simulación realista (equipo B2B España, 10 comerciales):</strong></p>
+
+    <ul>
+      <li>3.000 conversaciones de servicio al mes (consultas, soporte, follow-up): 1.000 gratis + 2.000 facturadas desde octubre 2026. A 0,017 USD = <strong>34 USD</strong>.</li>
+      <li>1.200 plantillas Utility al mes (recordatorios, confirmaciones, status pedido): 1.200 x 0,017 = <strong>20,40 USD</strong>.</li>
+      <li>400 campañas Marketing al mes (lanzamientos, promociones): 400 x 0,0804 = <strong>32,16 USD</strong>.</li>
+      <li>monday CRM Pro 10 asientos: <strong>280 USD/mes</strong>.</li>
+      <li>Conector (TimelinesAI o Whatsable, plan Starter): <strong>49 USD/mes</strong>.</li>
+    </ul>
+
+    <p><strong>Total: aproximadamente 415 USD/mes</strong> para el equipo B2B tipo. Si pasas a plan Enterprise de monday o un conector con IA conversacional incluida, suma 100-180 USD/mes extra.</p>
+
+    <p>El escalado peligroso llega con Marketing masivo mal segmentado: 10.000 mensajes Marketing a España son 804 USD/mes solo en Meta. Si esos mismos clientes contestan y mantienes conversación en ventana de servicio, no pagas extra por los replies dentro de las 24h, pero cada nueva plantilla Marketing enviada vuelve a cobrarse.</p>
+
+    <h2>Flujos que mueven el pipeline: 5 automatizaciones que valen la pena</h2>
+
+    <p>Una vez conectado monday.com con WhatsApp Business, estos son los flujos con mejor ratio esfuerzo/retorno. Cada uno se dispara desde automations nativas de monday (plan Pro con cupo suficiente) o desde TimelinesAI, Whatsable o un workflow de n8n/Albato.</p>
+
+    <h3>Flujo 1: Captura y calificación de leads en tiempo real</h3>
+
+    <p>Trigger: nuevo item en el board "Leads" (desde formulario web, Facebook Lead Ads o Google Ads vía integración oficial). Acción: el agente de IA personalizado envía plantilla Utility de bienvenida con 3 preguntas calificadoras (tamaño empresa, uso principal, timeline). Las respuestas se mapean a columnas custom del item y actualizan el status. Resultado típico: calificación en 2 minutos vs 2 días, lead scoring vivo desde la primera conversación.</p>
+
+    <h3>Flujo 2: Recordatorio de demo o reunión</h3>
+
+    <p>Trigger: item con status "Demo agendada" + columna fecha a 24h. Acción: plantilla Utility con botón de confirmación y botón de reagendar. Si pulsa reagendar, el agente abre slots de Calendly directamente en el chat y actualiza la columna Date en monday. Reduce no-shows de demo en 40-55% y evita el ping-pong de emails.</p>
+
+    <h3>Flujo 3: Follow-up automático post-propuesta</h3>
+
+    <p>Trigger: item en status "Propuesta enviada" + columna last activity &gt; 3 días. Acción: plantilla Utility de seguimiento con 2 opciones (resolver duda, agendar nueva llamada). El agente intercepta objeciones comunes y las responde con el pricing exacto del Deal leído de la columna Numbers. Cuando no puede resolver, escala al owner del item con el contexto completo del hilo.</p>
+
+    <h3>Flujo 4: Reactivación de cliente inactivo</h3>
+
+    <p>Trigger: item en board "Clientes" sin actividad en 90 días con status "Cliente activo". Acción: plantilla Marketing (segmentada, solo cuentas con columna Consentimiento Marketing en SI) con una oferta clara o novedad. Importante: separar en columna status el consentimiento Marketing vs Utility para evitar enviar Marketing a quien solo opt-in a notificaciones de servicio.</p>
+
+    <h3>Flujo 5: Gestión de incidencias desde WhatsApp a monday Service</h3>
+
+    <p>Trigger: mensaje entrante clasificado como queja o incidencia por el agente de IA. Acción: crea item en el board "Tickets" (o directamente en monday Service si lo tienes contratado) con prioridad asignada por sentiment, columna Owner asignada por carga de trabajo y agente humano retoma con todo el contexto del chat. Reduce tiempo de primera respuesta de soporte de 4h a 90 segundos.</p>
+
+    <h2>Pitfalls reales que vemos cada semana en implementaciones de monday + WhatsApp</h2>
+
+    <p>Estos son los errores que detectamos en auditorías a cuentas que ya tenían monday.com integrado con WhatsApp Business y no sacaban retorno. Si estás pensando en integrarlo, repasarlos antes de desplegar ahorra mucho dinero.</p>
+
+    <h3>Pitfall 1: enviar todo como Marketing por "comodidad"</h3>
+
+    <p>Muchos equipos crean una plantilla "general" que se usa para todo y la aprueban como Marketing. Resultado: pagan Marketing (0,0804 USD en España) cuando el 70% de esos mensajes son Utility (0,017 USD, casi 5x más barato). Fix: separar plantillas por categoría estricta y mapear automations a la plantilla correcta. Impacto típico: -60% en factura WhatsApp.</p>
+
+    <h3>Pitfall 2: no usar la ventana de 24 horas de servicio</h3>
+
+    <p>Dentro de las 24h posteriores a un mensaje entrante del cliente, puedes responder con texto libre sin cobro de plantilla (hasta octubre 2026 gratis, después se cobra como Service). Equipos sin agente de IA personalizado no gestionan esta ventana porque el comercial responde horas después. Un agente que responda en segundos aprovecha la ventana entera y evita cobros duplicados.</p>
+
+    <h3>Pitfall 3: dejar el consentimiento Marketing en una columna booleana única</h3>
+
+    <p>Meta exige evidencia de opt-in para Marketing. Una única columna "opt-in SI/NO" no basta: monday debería guardar fecha, canal (web, chat, formulario), texto exacto del consentimiento y versión en columnas Text/Date/Status separadas. Sin esto, un reporte de spam puede llevar al número directamente a quality rating bajo y, en reincidencias, suspensión temporal.</p>
+
+    <h3>Pitfall 4: mezclar el mismo número para servicio y marketing agresivo</h3>
+
+    <p>Mandar campañas Marketing frecuentes desde el mismo número usado para soporte deteriora el quality rating. Meta lo baja de "Verde" a "Amarillo" o "Rojo" tras reportes de usuarios, lo que limita el throughput diario y, en el peor caso, bloquea plantillas Marketing hasta recuperar el rating. Separar números por caso de uso es más barato que recuperar un rating en Rojo.</p>
+
+    <h3>Pitfall 5: integración sin dedup rules → items duplicados</h3>
+
+    <p>Con integración nativa de monday, TimelinesAI y Whatsable activos al mismo tiempo (o mal migrados) se crean 2-3 copias del mismo item cuando el cliente escribe por primera vez. monday no deduplica por WhatsApp phone number por defecto, hay que configurar la automation "When item is created, if column Phone matches existing item then merge" y normalizar al formato E.164 (+34612345678) en la columna Phone.</p>
+
+    <h3>Pitfall 6: saturar el cupo de automations de monday</h3>
+
+    <p>Cada envío de plantilla desde una automation nativa cuenta contra el cupo mensual del plan (250 en Basic, 25.000 en Pro, 250.000 en Enterprise). Equipos con 5.000 conversaciones/mes y automations encadenadas en Basic ven cómo los disparos se cortan hacia la segunda semana. Dos salidas: subir plan, o mover la orquestación a n8n/Albato y disparar WhatsApp fuera del cupo de monday.</p>
+
+    <h2>Setup paso a paso: integración nativa monday + WhatsApp (plan Pro)</h2>
+
+    <p>Este es el camino más limpio en 2026 si ya tienes monday.com Pro con cupo suficiente de automations. Tiempo total aproximado: 2-5 días dependiendo de la verificación de Meta.</p>
+
+    <h3>1. Prepara los activos en Meta</h3>
+
+    <p>Crea Facebook Business Manager. Verifica el negocio (sube documento legal, factura reciente, dominio). Crea WhatsApp Business Account dentro de Business Manager. Consigue un número de teléfono libre y verificable por SMS o llamada.</p>
+
+    <h3>2. Conecta monday con WhatsApp Business</h3>
+
+    <p>Abre el board donde quieres que caigan los chats entrantes y entra en Integrations &gt; WhatsApp Business. Loguea con la cuenta de Facebook Business, selecciona el WABA y el número. Elige el board destino, mapea la columna Phone y confirma el pin de 6 dígitos que te envía Meta por SMS. Una vez conectado, los mensajes entrantes crean items automáticamente.</p>
+
+    <h3>3. Aprueba plantillas por categoría</h3>
+
+    <p>Desde el panel de WhatsApp Business dentro de monday crea las plantillas iniciales mínimas: 1 welcome (Utility), 1 recordatorio (Utility), 1 confirmación de operación (Utility), 1 promocional (Marketing), 1 autenticación OTP (Authentication, si aplica). Cada plantilla pasa por aprobación de Meta: típicamente 1-24h, hasta 72h en rechazos.</p>
+
+    <h3>4. Define automations y columnas</h3>
+
+    <p>Crea las automations desde el centro de automations del board: "When status changes to Demo agendada, send WhatsApp template demo_reminder". Añade columnas Status para consentimiento Marketing (SI/NO), columna Date para fecha de consentimiento y columna Text para canal de captación. Normaliza la columna Phone al formato E.164 (+34612345678) antes de permitir envío.</p>
+
+    <h3>5. Activa el agente de IA personalizado encima</h3>
+
+    <p>La integración nativa de monday responde a reglas pero no entiende lenguaje natural complejo. Para calificar leads, resolver objeciones de pricing, consultar stock o agenda en tiempo real, conecta un agente de IA por webhook saliente de monday hacia tu endpoint y por webhook entrante al Cloud API de WhatsApp. El agente procesa el intent, consulta monday vía monday API v2 (GraphQL) y responde en la ventana de servicio. Esto convierte monday de "buzón organizado" a canal con conversión real.</p>
+
+    <h3>6. Monitoriza desde el día 1</h3>
+
+    <p>Configura 3 dashboards en monday: mensajes enviados por categoría/día (columna Status o Numbers alimentada por la automation), consumo del cupo de automations del plan y quality rating del número (lectura manual semanal desde Meta Business Suite). Si el rating baja de Verde, para campañas Marketing hasta recuperar.</p>
+
+    <h2>Cuándo monday.com no es la mejor opción para WhatsApp</h2>
+
+    <p>monday.com encaja muy bien en equipos que viven en tableros Kanban y pipelines visuales con poca carga de datos relacionales. Pero hay casos donde la integración WhatsApp funciona mejor con un stack distinto o con una capa de automatización encima:</p>
+
+    <ul>
+      <li><strong>Si tu negocio no gestiona pipeline de deals</strong> (restaurantes, peluquerías, clínicas que solo gestionan citas y conversaciones), un <a href="/blog/crm-con-whatsapp-integrado.html">CRM con WhatsApp integrado nativo y vertical</a> ahorra licencias y configuración.</li>
+      <li><strong>Si necesitas IA conversacional profunda</strong> (clasificar intent, responder en 7 idiomas, acceder a inventario dinámico), monday nativo se queda corto: usa monday como almacén de contactos y pon un agente de IA personalizado delante.</li>
+      <li><strong>Si envías &gt;50.000 mensajes Marketing/mes</strong>, evalúa plataformas BSP dedicadas (360dialog, Infobip, Twilio) por mejores precios Enterprise y SLA. monday sigue valiendo como CRM, pero la mensajería sale de monday.</li>
+      <li><strong>Si tu stack ya vive en HubSpot, Pipedrive, Zoho o Salesforce</strong>, mantener dos CRMs en paralelo introduce más coste que valor. Revisa nuestras guías de <a href="/blog/integrar-pipedrive-con-whatsapp-business.html">integrar Pipedrive con WhatsApp Business</a>, <a href="/blog/integrar-zoho-crm-con-whatsapp-business.html">integrar Zoho CRM con WhatsApp Business</a> y <a href="/blog/integrar-salesforce-con-whatsapp-business.html">integrar Salesforce con WhatsApp Business</a>.</li>
+    </ul>
+
+    <h2>Preguntas frecuentes</h2>
+
+    <h3>¿Puedo integrar monday.com con la app de WhatsApp Business (no la API)?</h3>
+
+    <p>Parcialmente. TimelinesAI permite vincular por QR el número de la app Business sin pasar por la API, pero pierdes plantillas pre-aprobadas, Marketing a gran escala y la tarifa Utility baja. Para producción B2B seria, el camino es WABA con integración nativa de monday o Whatsable sobre API oficial.</p>
+
+    <h3>¿Puedo usar el mismo número de WhatsApp Business API en monday y en otra app?</h3>
+
+    <p>Depende. La API permite un único "entry point" principal por número para producción. Si quieres compartir vista entre monday y otro CRM, hazlo vía webhooks replicados o usa una capa BSP que distribuya mensajes a ambos sistemas.</p>
+
+    <h3>¿Qué pasa con las conversaciones de servicio tras el 1 de octubre de 2026?</h3>
+
+    <p>Pasan a facturarse por mensaje, saliendo del "free tier" de 1.000 conversaciones. Los primeros 1.000 service messages del mes siguen gratis (asignación Meta por WABA), después se cobran al precio de la categoría Service por país destino. Impacto en pymes españolas: típicamente +15 a +60 USD/mes según volumen.</p>
+
+    <h3>¿monday Basic o Standard valen para integración WhatsApp?</h3>
+
+    <p>Técnicamente sí, pero el cupo bajo de automations (250 en Basic, 1.000 en Standard) se agota rápido en un negocio con volumen real. Para equipos con &gt;500 conversaciones/mes compensa pasar a Pro o mover la orquestación a n8n/Albato antes que subir todo el workspace de plan.</p>
+
+    <h3>¿Necesito un agente de IA si uso las automations de monday?</h3>
+
+    <p>Las automations de monday disparan plantillas pero no mantienen conversaciones. Si tus clientes contestan con preguntas abiertas y nadie puede responder en segundos, el agente de IA personalizado es lo que convierte un "buzón" en un canal operativo 24/7.</p>
+
+    <h2>Resumen operativo</h2>
+
+    <p>Integrar monday.com con WhatsApp Business API en 2026 es una decisión de 3 variables: tu plan actual de monday (Basic/Standard vs Pro/Enterprise), tu volumen de mensajes mensual y el nivel de inteligencia que necesitas sobre las conversaciones. La integración nativa es la vía más limpia a partir de Pro. TimelinesAI y Whatsable cubren bien planes inferiores y setups con prisa. Un agente de IA personalizado encima convierte monday de buzón ordenado en canal que genera pipeline real.</p>
+
+    <p>Lo que marca la diferencia entre una integración rentable y una factura inflada es la segmentación estricta de plantillas por categoría, el uso disciplinado de la ventana de servicio y la monitorización diaria del quality rating. Sin eso, el stack técnico puede estar perfecto y aun así el equipo acaba desactivando WhatsApp a los 90 días.</p>
+
+    <div class="blog-cta">
+      <h3>¿Quieres integrar monday.com con WhatsApp sin pisar los pitfalls?</h3>
+      <p>En ZENIA montamos la integración completa monday.com + WhatsApp Business API con agente de IA personalizado encima, plantillas segmentadas por categoría y monitorización de quality rating. Sistema operativo en 3-5 semanas con auditoría de costes mensual.</p>
+<p data-zenia-oportunidad="1">Todo esto parte de lo mismo: <a href="/es/automatizacion-whatsapp-negocios.html">automatizar WhatsApp con IA</a> para que ningún mensaje se quede sin responder.</p>
+
+      <a href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20%C2%ABIntegrar%20monday.com%20con%20WhatsApp%20Business%C2%BB%20y%20quiero%20ver%20c%C3%B3mo%20aplicarlo%20en%20mi%20equipo" target="_blank" rel="noopener">Hablar por WhatsApp ahora</a> <a style="background:transparent;border:1px solid var(--border);color:var(--text-secondary);margin-left:10px" href="https://calendly.com/zeladauriartef/30min">Agendar llamada gratuita</a>
+    </div>
+<div class="blog-related" data-zenia-money-links="1">
+  <h3>Ponlo en marcha en tu empresa</h3>
+  <a href="/es/automatizacion-whatsapp-negocios.html">Automatización WhatsApp para negocios<span>Agente de IA personalizado por WhatsApp + CRM. Implementación completa, desde €297/mes.</span></a>
+  <a href="/blog/crm-con-whatsapp-integrado.html">CRM con WhatsApp integrado: guía<span>Comparativa de CRMs con WhatsApp nativo para pymes España y LATAM.</span></a>
+  <a href="/blog/comparativa-plataformas-ia-conversacional-crm-whatsapp.html">Comparativa plataformas IA conversacional + CRM + WhatsApp<span>Qué stack elegir según volumen, verticales y madurez técnica.</span></a>
+</div>
+
+
+    <div class="blog-related">
+      <h3>Artículos relacionados</h3>
+      <a href="/blog/integrar-zoho-crm-con-whatsapp-business.html">Integrar Zoho CRM con WhatsApp Business<span>Guía técnica para pymes que usan Zoho CRM Standard, Professional o Enterprise.</span></a>
+      <a href="/blog/integrar-pipedrive-con-whatsapp-business.html">Integrar Pipedrive con WhatsApp Business<span>Guía técnica para equipos de ventas B2B que trabajan con Pipedrive.</span></a>
+      <a href="/blog/integrar-hubspot-con-whatsapp-business.html">Integrar HubSpot con WhatsApp Business<span>Cómo conectar HubSpot con WhatsApp Business API sin perder trazabilidad.</span></a>
+      </div>
+
+  </div>
+
+<div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 24px; margin: 40px 0;" data-zenia-internal-links="landings">
+  <h3 style="color: #F1F5F9; margin-bottom: 12px; font-size: 1.05rem;">Otras integraciones de WhatsApp Business API</h3>
+  <p style="color: #94A3B8; margin-bottom: 16px; font-size: 0.95rem;">Guías técnicas para conectar WhatsApp Business API con los CRMs y stacks más usados en 2026:</p>
+  <div>
+      <a href="/blog/integrar-zoho-crm-con-whatsapp-business.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Zoho CRM + WhatsApp →</a>
+      <a href="/blog/integrar-pipedrive-con-whatsapp-business.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Pipedrive + WhatsApp →</a>
+      <a href="/blog/integrar-salesforce-con-whatsapp-business.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Salesforce + WhatsApp →</a>
+      <a href="/blog/integrar-hubspot-con-whatsapp-business.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">HubSpot + WhatsApp →</a>
+      <a href="/blog/integrar-odoo-con-whatsapp-business.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Odoo + WhatsApp →</a>
+      <a href="/blog/integrar-shopify-con-whatsapp-business.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Shopify + WhatsApp →</a>
+      <a href="/blog/integrar-woocommerce-con-whatsapp-business.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">WooCommerce + WhatsApp →</a>
+  </div>
+</div>
+
+</article>
+
+<footer class="blog-footer">
+  <div class="container">
+    <p>&copy; 2026 ZENIA. Todos los derechos reservados. | <a href="/">Inicio</a> | <a href="/blog/">Blog</a></p>
+  </div>
+</footer>
+
+<div style="text-align:center; padding:16px 24px; background:#0A0F1C; color:#64748B; font-size:0.85rem; border-top:1px solid rgba(255,255,255,0.04);"><a href="/es/cobertura.html" style="color:#94A3B8; text-decoration:none;">Ver cobertura completa</a></div>
+<a href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20%C2%ABIntegrar%20monday.com%20con%20WhatsApp%20Business%C2%BB%20y%20quiero%20ver%20c%C3%B3mo%20aplicarlo%20en%20mi%20equipo" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp" data-directo style="position:fixed;bottom:24px;right:24px;z-index:9998;background:#25D366;color:white;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(37,211,102,0.4);transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 20px rgba(37,211,102,0.5)'" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 16px rgba(37,211,102,0.4)'">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<script>document.addEventListener("click",function(e){var t=e.target,a=t.closest?t.closest('a[href*="wa.me"]'):null;if(!a)return;try{navigator.sendBeacon("https://gaia-relojes.onrender.com/gwb/lead",JSON.stringify({site:"zenia",path:location.pathname+location.search,ref:document.referrer||""}))}catch(r){}},true);</script>
+<script src="/assets/qualify.js?v=4" defer></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "67e4803d7cd443a49b12c7d8a99365bf"}'></script>
+</body>
+</html>

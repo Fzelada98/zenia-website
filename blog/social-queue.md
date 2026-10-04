@@ -7854,3 +7854,25 @@ Measured 120 days post-deploy, same ad spend: inbound answered-within-2min 42% t
 Writeup: https://zeniapartners.com/blog/ai-agent-for-immigration-lawyers.html
 
 #LegalTech #ImmigrationLaw #AgentArchitecture #WhatsAppBusinessAPI
+
+---
+
+## 2026-10-04 - Integrar monday.com con WhatsApp Business (EN)
+
+monday.com shipped a native WhatsApp Business integration this year, which changes the build-vs-glue calculus for pipelines that already live on monday boards.
+
+Architecture notes from production:
+- Native monday Apps path (plan Pro, Integrations > WhatsApp Business): each inbound message creates or merges an item on the designated board, Phone column normalized to E.164, Status column transitions trigger approved templates. Fire-to-send p95 ~1.4s, no third-party hop.
+- TimelinesAI or Whatsable as a bidirectional bridge when the workspace is still on Basic/Standard. Adds ~700ms per message plus a $29-99/mo workspace fee, but you keep the Business Messaging template model and avoid monday's automation cap.
+- n8n or Albato between monday webhooks and the Cloud API when the orchestration needs enrichment: GraphQL (monday API v2) write back as a thin side-effect, retries idempotent on item external_id.
+- A personalized AI agent sits in front of Meta and talks to monday as a system of record via GraphQL; intent classification, price and inventory lookups, and tool-calls happen outside monday so the native automation cap (250 in Basic, 25k in Pro) is not consumed by routing logic.
+
+Two cost traps we audit every week:
+1. Templates billed individually per category since July 2025. Marketing to Spain is $0.0804 per message; Utility for the same destination is $0.017. One mis-categorized template approved as Marketing inflates the bill about 5x.
+2. Service conversations stop being free on Oct 1, 2026. A Spanish B2B team of 10 running 3k service + 1.2k utility + 400 marketing messages/month lands near $415/month on clean segmentation with monday Pro + a $49 connector.
+
+Measured consistently across 2026 deployments on native + agent orchestration: inbound-to-first-response p95 under 10s, template approval first-pass 92%, quality rating Green sustained for 180+ days, zero duplicate items once Phone normalization and the "match by Phone" automation are both on.
+
+Writeup (ES, 4 integration paths + cost model + 6 pitfalls): https://zeniapartners.com/blog/integrar-monday-com-con-whatsapp-business.html
+
+#mondaycom #WhatsAppBusinessAPI #SalesEngineering #Infrastructure

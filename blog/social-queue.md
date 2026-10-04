@@ -7783,3 +7783,20 @@ Writeup (ES): https://zeniapartners.com/blog/integrar-salesforce-con-whatsapp-bu
 #Salesforce #ServiceCloud #WhatsAppBusinessAPI #Infrastructure
 
 ---
+## 2026-10-04 - Integrar Pipedrive con WhatsApp Business
+
+Pipedrive killed its native WhatsApp integration in Aug 2023 and deprecated the Channels API in Feb 2026. There is no toggle anymore, so building this today is an architecture call: Pipedrive REST API + WhatsApp Cloud API + an orchestrator in the middle. Three defensible paths depending on volume: marketplace apps (TimelinesAI, Wati, Chatarmin) for teams under ~5k msg/mo, n8n + Cloud API for anything serious, Zapier/Make only for prototypes.
+
+Non-obvious parts from production:
+- Webhook idempotency on wa_message_id is non-negotiable; Meta retries on >20s or 5xx and you duplicate persons/deals on every spike without an external_id key.
+- Pipedrive rate limits are 20 req/s on Essential, 80 req/s on Advanced+; batching with POST /persons/collection and conditional GETs with If-Modified-Since are the escape hatch for backfills.
+- The 24h session window is the actual cost lever. Inside it, free session messages; outside, only approved templates. Tagging last_customer_message_at on the person makes the condition trivial in a Flow.
+- Putting a personalized AI agent between Meta and Pipedrive for lead qualification (BANT extraction, routing decision) drops the handoff set to roughly the top 20% of inbound and shortens the sales cycle meaningfully.
+
+Measured on a mid-size B2B pipeline running n8n self-hosted on Hetzner: p95 inbound-to-Pipedrive 820ms, template approval first-pass 91%, >99.5% delivery over 60 days, zero duplicate deals.
+
+Writeup (ES, 3 methods + architecture + ROI): https://zeniapartners.com/blog/integrar-pipedrive-con-whatsapp-business.html
+
+#Pipedrive #WhatsAppBusinessAPI #SalesEngineering #n8n #Infrastructure
+
+---

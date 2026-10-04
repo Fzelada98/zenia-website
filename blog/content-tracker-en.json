@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-10-04T12:00:00.000000+00:00",
+  "lastRun": "2026-10-04T17:30:00.000000+00:00",
   "market": "US/UK small business",
   "posts": [
     {
@@ -166,7 +166,8 @@
       "keyword": "ai agent for immigration lawyers",
       "tier": 1,
       "cluster": "professional",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-10-04"
     },
     {
       "slug": "ai-agent-for-driving-schools",

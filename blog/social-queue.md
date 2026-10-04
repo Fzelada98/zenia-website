@@ -7838,3 +7838,19 @@ Writeup (ES, 3 integration paths + cost model + 6 pitfalls): https://zeniapartne
 #ZohoCRM #WhatsAppBusinessAPI #SalesEngineering #Infrastructure
 
 ---
+
+## 2026-10-04 - AI Agent for Immigration Lawyers (EN)
+
+US immigration is the vertical where the macro backlog (USCIS pending inventory crossed 12M in FY2026 Q2, 86 completions per 100 receipts for 11 straight quarters) finally justifies agent infrastructure on top of a case management system rather than another chat widget.
+
+Architecture notes from production on a 4-attorney Houston firm:
+- The agent is a thin orchestration layer; Docketwise (or INSZoom/Clio/MyCase) stays the system of record. All matter writes go through the CMS SDK with external_id keys for idempotency; retries on 5xx never double-create a Contact or a Matter.
+- Front-door is three channels into one state machine: WhatsApp Business API (via BSP, approved templates versioned per language), inbound voice (OpenPhone/RingCentral webhook with Whisper transcription into the matter), and website chat. Spanish/English detection on first token, routed before any LLM call.
+- USCIS case status is a cron pull per matter by receipt number, with a hash-diff on structured status + narrative, pushing a WhatsApp templated nudge only on actual delta. Keeps the 24h session rule clean and avoids billed templates on no-change polls.
+- Attorney approval queue (Rule 5.3/5.5) is enforced server-side: any tool_call tagged advice=true or performance=true blocks on supervisor sign-off before the agent is allowed to render to the client channel.
+
+Measured 120 days post-deploy, same ad spend: inbound answered-within-2min 42% to 97%, after-hours capture 0 to 31% of weekly volume, consult no-show 35% to 13%, retainer conversion 11% to 18%, 66% of status questions resolved without a human touch, document turnaround on open files 24 days to 6.
+
+Writeup: https://zeniapartners.com/blog/ai-agent-for-immigration-lawyers.html
+
+#LegalTech #ImmigrationLaw #AgentArchitecture #WhatsAppBusinessAPI

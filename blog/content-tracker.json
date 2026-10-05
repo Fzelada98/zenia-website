@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-10-04T22:13:50+00:00",
+  "lastRun": "2026-10-05T06:10:00+00:00",
   "posts": [
+    {
+      "slug": "agente-ia-despachos-abogados-gestion-expedientes",
+      "keyword": "agente ia despachos abogados gestion expedientes",
+      "tier": 2,
+      "cluster": "abogados-tecnico",
+      "status": "published",
+      "date": "2026-10-05",
+      "source": "striking"
+    },
     {
       "slug": "integrar-monday-com-con-whatsapp-business",
       "keyword": "integrar monday.com con whatsapp business",

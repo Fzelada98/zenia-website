@@ -7933,3 +7933,22 @@ Writeup: https://zeniapartners.com/blog/electrician-crm-with-ai.html
 #FieldServiceAI #ElectricalContractors #WhatsAppBusinessAPI #VoiceAI #Infrastructure
 
 ---
+## 2026-10-05 - Integrating PrestaShop with WhatsApp Business (EN)
+
+PrestaShop runs ~176,000 live stores in 2026, with Spain and France holding 55% of the base, yet the platform's native cart-recovery stack is still three scheduled emails: ~50% open rate, 3-8% recovery. For a store doing 1,200 orders/month at a 70% abandonment rate, that gap leaves ~22k EUR/month on the table without anyone touching the code.
+
+Architecture notes from production on PrestaShop 1.7.x to 9.x stores:
+- Native hooks (actionValidateOrder, actionCartSave, actionOrderStatusPostUpdate, actionCustomerAccountAdd) wired to a BSP (360dialog, Twilio or WhatsApp Cloud API) via a thin middleware. No core modification; the module layer is replaceable without data loss.
+- Catalog, stock and order lookups served from PrestaShop /api endpoints with a Redis-backed cache (TTL 60s for stock, 300s for product metadata), p50 agent response 1.6s end-to-end, p95 2.9s.
+- Template governance: minimum 4 Meta-approved utility templates (confirm, cart, shipping, welcome) on the service DID; marketing templates isolated on a separate number to protect quality rating under seasonal pushes.
+- Opt-in captured at checkout with timestamp + IP, stored in a dedicated ps_whatsapp_optin table joined to ps_customer; DSAR-ready, revocable per channel, auditable.
+- Conversational state and LTV live in the CRM, not inside the module. The module is a transport layer. Swapping it does not lose history.
+
+Measured at 90 days on a 1,200 orders/month PrestaShop store (ticket 48 EUR, abandonment 71%): abandoned-cart recovery 4.8% to 20.3%, pre-sales WhatsApp inquiries converting 2.4% to 31%, support tickets routed to a human down 40%, incremental revenue +27.9k EUR/month at a stack cost under 700 EUR/month.
+
+Writeup: https://zeniapartners.com/blog/integrar-prestashop-con-whatsapp-business.html
+
+#Ecommerce #PrestaShop #WhatsAppBusinessAPI #Infrastructure #ConversationalCommerce
+
+---
+

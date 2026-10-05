@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HP0VQSEL68"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-HP0VQSEL68');
+</script>
+
+<title>Integrar PrestaShop con WhatsApp Business 2026 | ZENIA</title>
+<meta name="description" content="Guía técnica para integrar PrestaShop con WhatsApp Business API en 2026: módulos, flujos de pedidos, carritos abandonados y ROI con cifras reales.">
+<link rel="canonical" href="https://zeniapartners.com/blog/integrar-prestashop-con-whatsapp-business.html">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+
+<!-- Hreflang -->
+<link rel="alternate" hreflang="es" href="https://zeniapartners.com/blog/integrar-prestashop-con-whatsapp-business.html">
+<link rel="alternate" hreflang="x-default" href="https://zeniapartners.com/blog/integrar-prestashop-con-whatsapp-business.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Integrar PrestaShop con WhatsApp Business: Guía 2026">
+<meta property="og:description" content="Guía técnica para integrar PrestaShop con WhatsApp Business API en 2026: módulos, flujos de pedidos, carritos abandonados y ROI con cifras reales.">
+<meta property="og:url" content="https://zeniapartners.com/blog/integrar-prestashop-con-whatsapp-business.html">
+<meta property="og:site_name" content="ZENIA">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="https://zeniapartners.com/assets/images/og-image.png">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Integrar PrestaShop con WhatsApp Business: Guía 2026">
+<meta name="twitter:description" content="Módulos, flujos de pedidos, recuperación de carritos abandonados y ROI real al integrar PrestaShop con WhatsApp Business API.">
+<meta name="twitter:image" content="https://zeniapartners.com/assets/images/og-image.png">
+
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="author" content="Fabrizzio Zelada">
+<meta name="theme-color" content="#0A0F1C">
+
+<!-- JSON-LD Article -->
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Integrar PrestaShop con WhatsApp Business: Guía Técnica 2026", "description": "Guía técnica para conectar PrestaShop con WhatsApp Business API: módulos, flujos de pedidos, recuperación de carritos abandonados y arquitectura de integración.", "author": {"@type": "Person", "name": "Fabrizzio Zelada", "jobTitle": "Founder", "worksFor": {"@type": "Organization", "name": "ZENIA"}}, "publisher": {"@type": "Organization", "name": "ZENIA", "url": "https://zeniapartners.com", "logo": {"@type": "ImageObject", "url": "https://zeniapartners.com/assets/images/og-image.png", "width": 600, "height": 60}}, "datePublished": "2026-10-05", "dateModified": "2026-10-05", "mainEntityOfPage": "https://zeniapartners.com/blog/integrar-prestashop-con-whatsapp-business.html", "inLanguage": "es", "keywords": ["integrar prestashop con whatsapp business", "prestashop whatsapp api", "modulos whatsapp prestashop", "carritos abandonados prestashop whatsapp", "agente ia ecommerce"], "image": "https://zeniapartners.com/assets/images/og-image.png"}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #3B82F6;
+    --accent-violet: #6366F1;
+    --bg-dark: #0A0F1C;
+    --bg-card: rgba(17, 24, 39, 0.6);
+    --text-primary: #F1F5F9;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+    --border: rgba(148, 163, 184, 0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; background: var(--bg-dark); color: var(--text-primary); line-height: 1.8; }
+  .blog-nav { padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 60px; position: sticky; top: 0; background: rgba(10, 15, 28, 0.85); backdrop-filter: blur(12px); z-index: 100; }
+  .blog-nav .container { max-width: 1200px; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+  .blog-nav .nav-logo-link { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-primary); font-weight: 700; font-size: 1.1rem; }
+  .blog-nav .nav-main-links { display: flex; list-style: none; gap: 28px; margin: 0; padding: 0; }
+  .blog-nav .nav-main-links li { margin: 0; }
+  .blog-nav .nav-main-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
+  .blog-nav .nav-main-links a:hover { color: var(--text-primary); }
+  .blog-nav .nav-main-links a.active { color: var(--primary); }
+  .blog-nav .nav-cta-btn { background: var(--primary); color: #fff; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: filter 0.2s; white-space: nowrap; }
+  .blog-nav .nav-cta-btn:hover { filter: brightness(1.1); }
+  @media (max-width: 860px) {
+    .blog-nav .nav-main-links { display: none; }
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+  .blog-header { margin-bottom: 48px; }
+  .blog-meta { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px; }
+  .blog-header h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); line-height: 1.3; margin-bottom: 16px; }
+  .blog-header p.lead { font-size: 1.1rem; color: var(--text-secondary); line-height: 1.7; }
+  .blog-content h2 { font-size: 1.4rem; margin: 48px 0 16px; color: var(--text-primary); }
+  .blog-content h3 { font-size: 1.15rem; margin: 32px 0 12px; color: var(--text-primary); }
+  .blog-content p { color: var(--text-secondary); margin-bottom: 20px; }
+  .blog-content ul, .blog-content ol { color: var(--text-secondary); margin-bottom: 20px; padding-left: 24px; }
+  .blog-content li { margin-bottom: 8px; }
+  .blog-content strong { color: var(--text-primary); }
+  .blog-content a { color: var(--primary); text-decoration: underline; }
+  .blog-content a:hover { color: var(--accent-violet); }
+  .blog-content blockquote { border-left: 3px solid var(--primary); padding-left: 20px; margin: 24px 0; font-style: italic; color: var(--text-secondary); }
+  .blog-content table { width: 100%; border-collapse: collapse; margin: 24px 0; }
+  .blog-content th, .blog-content td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); font-size: 0.95rem; }
+  .blog-content th { color: var(--text-primary); font-weight: 600; background: var(--bg-card); }
+  .blog-cta { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 40px; text-align: center; margin: 60px 0; }
+  .blog-cta h3 { margin-bottom: 12px; }
+  .blog-cta p { color: var(--text-secondary); margin-bottom: 20px; }
+  .blog-cta a { display: inline-block; padding: 12px 28px; background: var(--primary); color: white; border-radius: 8px; text-decoration: none; font-weight: 600; }
+  .blog-cta a:hover { background: var(--accent-violet); }
+  .blog-related { margin: 60px 0 0; }
+  .blog-related h3 { margin-bottom: 20px; }
+  .blog-related a { display: block; padding: 16px 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 12px; text-decoration: none; color: var(--text-primary); font-weight: 600; transition: border-color 0.3s; }
+  .blog-related a:hover { border-color: var(--primary); }
+  .blog-related a span { display: block; font-size: 0.85rem; color: var(--text-muted); font-weight: 400; margin-top: 4px; }
+  .blog-footer { padding: 40px 0; border-top: 1px solid var(--border); margin-top: 60px; text-align: center; color: var(--text-muted); font-size: 0.85rem; }
+  .blog-footer a { color: var(--primary); text-decoration: none; }
+  .text-gradient { background: linear-gradient(135deg, var(--primary), var(--accent-violet)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+</style>
+</head>
+<body>
+
+<nav class="blog-nav">
+  <div class="container">
+    <a href="/es/" class="nav-logo-link">
+      <svg class="zenia-mark" viewBox="0 0 140 140" fill="none" width="32" height="32">
+        <defs>
+          <linearGradient id="zg-b" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#2563EB"/>
+            <stop offset="100%" stop-color="#3B82F6"/>
+          </linearGradient>
+          <linearGradient id="zg-v" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#6366F1"/>
+            <stop offset="100%" stop-color="#7C3AED"/>
+          </linearGradient>
+        </defs>
+        <rect width="140" height="140" rx="28" fill="#0F172A"/>
+        <path d="M 70 18 Q 18 18 18 38 L 18 57 Q 18 63 24 63 L 88 63 Z" fill="url(#zg-b)"/>
+        <path d="M 70 122 Q 122 122 122 102 L 122 83 Q 122 77 116 77 L 52 77 Z" fill="url(#zg-v)"/>
+      </svg>
+      <span>ZENIA</span>
+    </a>
+    <ul class="nav-main-links">
+      <li><a href="/es/#opportunities">Oportunidades IA</a></li>
+      <li><a href="/es/#services">Servicios</a></li>
+      <li><a href="/es/#process">Proceso</a></li>
+      <li><a href="/es/#impact">Impacto</a></li>
+      <li><a href="/blog/" class="active">Blog</a></li>
+    </ul>
+    <a href="/es/#cta" class="nav-cta-btn">Empezar</a>
+  </div>
+</nav>
+
+<article class="container">
+  <header class="blog-header">
+    <div class="blog-meta">5 de octubre, 2026 &middot; Fabrizzio Zelada &middot; 11 min de lectura</div>
+    <h1><span class="text-gradient">Integrar PrestaShop con WhatsApp Business:</span> Guía Técnica 2026</h1>
+    <p class="lead">PrestaShop concentra el 16% de las tiendas online en España y es la segunda plataforma de ecommerce con mayor base en Europa. Sin embargo, su recuperación de carritos sigue dependiendo del email, un canal que convierte entre el 3% y el 8%. Integrar PrestaShop con WhatsApp Business cambia la ecuación: tasas de apertura del 90%, carritos recuperados entre el 18% y el 23% y confirmaciones de pedido en segundos.</p>
+  </header>
+
+  <div class="blog-content">
+
+    <p class="pillar-callout"><strong>Lee también:</strong> Esta guía forma parte del cluster técnico de integraciones. Si usas otra plataforma, mira cómo <a href="/blog/integrar-woocommerce-con-whatsapp-business.html">integrar WooCommerce con WhatsApp Business</a> o <a href="/blog/integrar-shopify-con-whatsapp-business.html">integrar Shopify con WhatsApp Business</a>.</p>
+
+
+    <h2>Por qué integrar PrestaShop con WhatsApp Business en 2026</h2>
+
+    <p>PrestaShop es la columna vertebral silenciosa del ecommerce europeo. Según Store Leads, mantiene más de 176.000 tiendas vivas en 2026, con Francia (31,5% de la base) y España (23,7%) concentrando más de la mitad del parque. En el mercado español, PrestaShop sigue siendo la segunda plataforma más instalada por detrás de WooCommerce, con una cuota entre el 8% y el 18% según la fuente que se consulte.</p>
+
+    <p>El punto débil estructural de PrestaShop es la comunicación con el cliente. El módulo oficial de carritos abandonados envía hasta tres emails programados y punto. No hay canal de mensajería incluido, ni confirmación de pedido por un medio distinto del correo, ni avisos de envío fuera del transaccional estándar. Toda la operativa descansa sobre un canal, el email, cuya tasa de apertura ronda el 20-25% y cuya tasa de conversión en recuperación de carritos oscila entre el 3,3% (benchmark Klaviyo 2024) y el 8% en los mejores casos.</p>
+
+    <p>Integrar PrestaShop con <a href="/blog/precios-whatsapp-business-api-2026.html">WhatsApp Business API</a> mueve esas conversaciones a un canal con otra física:</p>
+
+    <ul>
+      <li>Tasa de apertura entre el 90% y el 98% para mensajes opt-in</li>
+      <li>Tasa de recuperación de carritos entre el 18% y el 23% en setups optimizados</li>
+      <li>Tiempo medio de respuesta por debajo de 10 segundos con un <a href="/blog/crm-con-whatsapp-integrado.html">CRM con WhatsApp integrado</a></li>
+      <li>Confirmaciones de pedido, estados de envío y post-venta en el mismo hilo que la decisión de compra</li>
+    </ul>
+
+    <p>Para una tienda PrestaShop con 1.000 pedidos al mes y una tasa de abandono del 70%, hablamos de 2.333 carritos abandonados mensuales. Recuperar un 20% a un ticket medio de 48 euros son <strong>22.400 euros al mes</strong> adicionales por un solo flujo. Antes de hablar de módulos, esta es la razón por la que la integración entra en la hoja de ruta de 2026.</p>
+
+    <h2>Las tres rutas de integración entre PrestaShop y WhatsApp</h2>
+
+    <p>Antes de elegir módulo o proveedor, hay que entender que no todas las integraciones ofrecen lo mismo. Las agrupamos en tres rutas, cada una con su alcance y su límite técnico.</p>
+
+    <h3>Ruta 1: Botón click-to-chat (la más superficial)</h3>
+
+    <p>Un script o módulo gratuito inyecta en el frontend de PrestaShop un botón flotante que abre WhatsApp Web con un mensaje predefinido. Es el patrón que usan módulos gratuitos como el de Prestahero o Smart Modules. No hay API, no hay automatización, no hay registro en PrestaShop. Sirve para tiendas con menos de 50 pedidos al mes que quieren ofrecer un canal de atención, nada más. Si el objetivo son flujos automatizados, descartada.</p>
+
+    <h3>Ruta 2: Módulo con WhatsApp Business API (la operativa real)</h3>
+
+    <p>Módulos como Knowband WhatsApp CRM o idnovate conectan la tienda con un número oficial de WhatsApp Business API, normalmente a través de un BSP (Business Solution Provider) como 360dialog, Twilio o la Cloud API de Meta. Esta ruta soporta:</p>
+
+    <ul>
+      <li>Plantillas aprobadas por Meta para notificaciones transaccionales</li>
+      <li>Confirmaciones de pedido disparadas desde los hooks de PrestaShop</li>
+      <li>Mensajes de carrito abandonado automáticos</li>
+      <li>Chat bidireccional desde el back office</li>
+      <li>Métricas de entrega y lectura</li>
+    </ul>
+
+    <p>Es la base técnica mínima para un ecommerce que trata WhatsApp como canal de ingresos, no como widget decorativo.</p>
+
+    <h3>Ruta 3: Integración CRM + agente de IA personalizado (la que escala)</h3>
+
+    <p>La ruta 2 resuelve el envío de mensajes, pero no la conversación. Cuando el cliente responde "¿me cabe talla M?" o "¿cuándo me llega?", el módulo lo convierte en una cola más de atención manual. La tercera ruta conecta PrestaShop con un <a href="/blog/crm-conversacional-whatsapp-2026.html">CRM conversacional</a> y un agente de IA personalizado que:</p>
+
+    <ul>
+      <li>Lee stock, pedidos y clientes directamente de la base de datos de PrestaShop por API</li>
+      <li>Responde preguntas de producto, envíos, devoluciones y disponibilidad sin intervención humana</li>
+      <li>Dispara el flujo de recuperación de carritos con contexto real: nombre, producto, descuento</li>
+      <li>Escala a un humano con todo el historial cuando no puede resolver</li>
+    </ul>
+
+    <p>Es la única ruta que entrega los números de conversión que justifican la inversión. Las dos primeras son infraestructura, pero no mueven la aguja de la facturación.</p>
+
+    <h2>Arquitectura técnica: qué conecta con qué</h2>
+
+    <p>Una integración seria entre PrestaShop y WhatsApp Business tiene cinco componentes identificables. Si uno falta, la integración se cae en producción o deja de escalar al segundo mes.</p>
+
+    <h3>1. PrestaShop (versión 1.7.x a 9.x)</h3>
+
+    <p>Los módulos actuales de referencia (Knowband, idnovate, FME Modules) son compatibles con PrestaShop 1.7.x hasta 9.x.x. Si estás en una versión anterior, la actualización es prerrequisito, no opción. La integración se apoya en hooks nativos de PrestaShop:</p>
+
+    <ul>
+      <li><code>actionValidateOrder</code>: dispara la confirmación de pedido</li>
+      <li><code>actionOrderStatusPostUpdate</code>: dispara los avisos de estado (enviado, entregado, cancelado)</li>
+      <li><code>actionCartSave</code>: alimenta el flujo de carritos abandonados</li>
+      <li><code>actionCustomerAccountAdd</code>: dispara el mensaje de bienvenida</li>
+    </ul>
+
+    <h3>2. BSP (Business Solution Provider) de WhatsApp</h3>
+
+    <p>Meta no vende la Cloud API en producto final: hay que pasar por un BSP acreditado o montar la Cloud API directamente. Para una tienda PrestaShop media, las opciones son 360dialog, Twilio, MessageBird o la propia WhatsApp Cloud API de Meta. El BSP se encarga de la verificación del número, la gestión de plantillas y el enrutamiento de mensajes. Es la pieza más crítica desde el punto de vista regulatorio.</p>
+
+    <h3>3. CRM o motor de conversación</h3>
+
+    <p>El módulo PrestaShop no almacena conversaciones a largo plazo. Si quieres medir, segmentar y automatizar, necesitas un CRM detrás que consolide los datos del cliente de PrestaShop (pedidos, LTV, categorías compradas) con los de WhatsApp (último mensaje, intención, estado del flujo).</p>
+
+    <h3>4. Agente de IA personalizado</h3>
+
+    <p>El agente consulta el CRM y los endpoints de PrestaShop vía webservice (<code>/api/orders</code>, <code>/api/products</code>, <code>/api/stock_availables</code>) para responder con datos reales. La latencia típica, con un modelo moderno y caché de catálogo, está entre 1,5 y 3 segundos end-to-end.</p>
+
+    <h3>5. Plantillas aprobadas por Meta</h3>
+
+    <p>Todo mensaje saliente iniciado por la tienda (confirmación, carrito abandonado, aviso de envío) tiene que ir sobre una plantilla aprobada en Meta Business Manager. La aprobación tarda entre 24 y 72 horas y rechaza plantillas con copy agresivo, URLs sospechosas o parámetros ambiguos. Un error común es diseñar flujos sin tener las plantillas aprobadas: la integración queda bloqueada al día siguiente del lanzamiento.</p>
+
+    <h2>Los cuatro flujos que mueven el ROI</h2>
+
+    <p>De todos los flujos posibles, estos cuatro concentran el 80% del retorno de una integración entre PrestaShop y WhatsApp Business bien montada.</p>
+
+    <h3>Flujo 1: Recuperación de carritos abandonados</h3>
+
+    <p>Se dispara 30 minutos, 24 horas y 72 horas después de un carrito sin cerrar. Primer mensaje recordatorio con el producto, segundo con prueba social o cross-sell, tercero con descuento condicionado. Datos de referencia: tasas de recuperación entre 18% y 23% frente al 3,3% medio del email.</p>
+
+    <h3>Flujo 2: Confirmación de pedido y post-venta</h3>
+
+    <p>Al validar el pedido, PrestaShop dispara una plantilla con número, importe y tracking cuando aplica. En el mismo hilo, el agente queda disponible para preguntas sobre entrega, cambio de dirección o factura. Reduce entre un 35% y un 50% los tickets a soporte comparado con depender solo de email.</p>
+
+    <h3>Flujo 3: Reactivación de clientes dormidos</h3>
+
+    <p>Segmentación en el CRM por última compra (90, 180, 360 días) y envío de campaña con plantilla personalizada. En PrestaShop este flujo es prácticamente imposible por email con tasas útiles: por WhatsApp, con un buen gancho, convierte entre el 6% y el 11%.</p>
+
+    <h3>Flujo 4: Consulta de producto antes de comprar</h3>
+
+    <p>El cliente duda sobre talla, compatibilidad o plazo de entrega. El agente consulta el catálogo PrestaShop por API y responde con stock real. Según nuestros propios despliegues, este flujo convierte entre el 24% y el 38% de las conversaciones iniciadas en pedido, muy por encima del 2-3% medio de la navegación anónima.</p>
+
+    <h2>Comparativa de módulos y proveedores</h2>
+
+    <p>Estas son las opciones realistas para integrar PrestaShop con WhatsApp Business en 2026, ordenadas por alcance operativo real:</p>
+
+    <table>
+      <tr><th>Opción</th><th>Tipo</th><th>Automatización</th><th>Precio típico</th></tr>
+      <tr><td>Módulo click-to-chat gratuito (Prestahero, Smart Modules)</td><td>Widget</td><td>Nula</td><td>0 &euro;</td></tr>
+      <tr><td>Módulo WhatsApp Business (idnovate, FME Modules)</td><td>Módulo + chat</td><td>Baja (manual)</td><td>60-120 &euro; licencia</td></tr>
+      <tr><td>Knowband WhatsApp CRM</td><td>Módulo + API</td><td>Media</td><td>99-179 &euro; + API</td></tr>
+      <tr><td>Integración vía BSP directo (360dialog, Twilio)</td><td>API</td><td>Alta (requiere desarrollo)</td><td>49-199 &euro;/mes + mensajes</td></tr>
+      <tr><td>CRM conversacional + agente IA (ZENIA)</td><td>Plataforma completa</td><td>Total</td><td>297-497 &euro;/mes</td></tr>
+    </table>
+
+    <p>Los módulos gratuitos resuelven un botón en el frontend y poco más. Los módulos de pago con API funcionan si tu equipo ya domina plantillas de WhatsApp, segmentación y mantenimiento de flujos: no es el caso del 85% de ecommerce PrestaShop con menos de 2 personas en marketing. La opción CRM + agente IA tiene mayor coste de suscripción pero sustituye tres contrataciones: desarrollador que mantiene el módulo, especialista de WhatsApp y persona de atención al cliente fuera de horario.</p>
+
+    <h2>Caso práctico: tienda PrestaShop de 1.200 pedidos al mes</h2>
+
+    <p>Tomemos un ecommerce PrestaShop con estos parámetros, cerca del promedio que vemos en nuestros despliegues:</p>
+
+    <ul>
+      <li>1.200 pedidos/mes, ticket medio 48 euros</li>
+      <li>Facturación mensual: 57.600 euros</li>
+      <li>Tasa de abandono de carrito: 71%</li>
+      <li>Tickets de soporte por email: 320/mes</li>
+      <li>Base de clientes con compra en los últimos 12 meses: 8.400</li>
+    </ul>
+
+    <h3>Impacto de la integración</h3>
+
+    <p><strong>Recuperación de carritos:</strong> 2.940 carritos abandonados/mes. Con un 20% de recuperación por WhatsApp (vs. 5% del email actual), son 441 pedidos adicionales a 48 euros = <strong>+21.168 euros/mes</strong>.</p>
+
+    <p><strong>Reactivación de clientes dormidos:</strong> campaña trimestral a 2.100 clientes inactivos a 180 días. Con un 8% de conversión y ticket medio de 48 euros = 168 pedidos extra por campaña, <strong>+2.688 euros/mes</strong> prorrateados.</p>
+
+    <p><strong>Reducción de tickets de soporte:</strong> 40% de los 320 tickets/mes se resuelven por el agente IA en WhatsApp sin pasar al equipo humano. Ahorro de 128 tickets x 12 minutos x 15 euros/hora = <strong>+384 euros/mes</strong>.</p>
+
+    <p><strong>Consultas pre-venta convertidas:</strong> 300 conversaciones iniciadas/mes vía botón de WhatsApp en producto. Con un 30% de conversión a pedido = 90 pedidos extra x 48 euros = <strong>+4.320 euros/mes</strong>.</p>
+
+    <h3>Resumen del ROI</h3>
+
+    <table>
+      <tr><th>Concepto</th><th>Impacto mensual</th></tr>
+      <tr><td>Carritos recuperados</td><td>+21.168 &euro;</td></tr>
+      <tr><td>Reactivación de clientes dormidos</td><td>+2.688 &euro;</td></tr>
+      <tr><td>Consultas pre-venta convertidas</td><td>+4.320 &euro;</td></tr>
+      <tr><td>Reducción de soporte</td><td>+384 &euro;</td></tr>
+      <tr><td><strong>Total impacto bruto</strong></td><td><strong>+28.560 &euro;/mes</strong></td></tr>
+      <tr><td>Coste de la integración (CRM + IA + WhatsApp API)</td><td>-297 a -497 &euro;/mes</td></tr>
+      <tr><td>Coste variable de mensajes WhatsApp (promedio)</td><td>-120 a -180 &euro;/mes</td></tr>
+      <tr><td><strong>ROI neto</strong></td><td><strong>+27.900 &euro; aproximado</strong></td></tr>
+    </table>
+
+    <p>Incluso aplicando un recorte del 50% sobre todas las hipótesis, el retorno queda por encima de los 13.500 euros al mes contra una inversión total inferior a 700 euros. El punto de equilibrio es el mes uno.</p>
+
+    <h2>Implementación paso a paso en 4 semanas</h2>
+
+    <p>En <a href="/es/index.html">ZENIA</a> integramos PrestaShop con WhatsApp Business sin tocar el core de la tienda y sin dependencia de un único módulo. Este es el calendario estándar.</p>
+
+    <h3>Semana 1: Auditoría y preparación</h3>
+
+    <ul>
+      <li>Verificación de versión PrestaShop, módulos activos y hooks disponibles</li>
+      <li>Mapeo de datos: pedidos, carritos, clientes, categorías con mayor abandono</li>
+      <li>Elección de BSP (360dialog, Twilio o Cloud API según volumen)</li>
+      <li>Alta del número en Meta Business Manager y verificación</li>
+    </ul>
+
+    <h3>Semana 2: Conexión técnica</h3>
+
+    <ul>
+      <li>Instalación del conector PrestaShop (webservice habilitado con claves por scope)</li>
+      <li>Sincronización inicial del catálogo y la base de clientes al CRM</li>
+      <li>Diseño y envío a aprobación de las plantillas WhatsApp (confirmación, carrito, envío, bienvenida)</li>
+      <li>Pruebas de hooks con pedidos de staging</li>
+    </ul>
+
+    <h3>Semana 3: Agente de IA y flujos</h3>
+
+    <ul>
+      <li>Configuración del <a href="/blog/automatizacion-whatsapp-negocios.html">agente de IA personalizado</a> con el catálogo, FAQ, políticas de envío y devolución</li>
+      <li>Despliegue del flujo de carritos abandonados (3 pasos)</li>
+      <li>Despliegue del flujo transaccional (pedido, envío, incidencias)</li>
+      <li>Flujo de reactivación segmentado por LTV y categoría</li>
+      <li>Reglas de escalado a humano y SLA</li>
+    </ul>
+
+    <h3>Semana 4: Pruebas finales y arranque</h3>
+
+    <ul>
+      <li>Pruebas end-to-end con usuarios reales en lote reducido</li>
+      <li>Formación del equipo de atención en el back office del CRM</li>
+      <li>Activación progresiva: 20% del tráfico el primer día, 100% al tercero</li>
+      <li>Monitoreo diario de métricas: entrega, apertura, respuesta, conversión</li>
+    </ul>
+
+    <p><strong>A las 4 semanas la integración está en producción.</strong> El mes dos se dedica a optimización: ajuste de plantillas rechazadas, nuevas plantillas por categoría, afinado del modelo del agente con las conversaciones reales.</p>
+
+    <h2>Errores habituales al integrar PrestaShop con WhatsApp Business</h2>
+
+    <p>Estos son los fallos que vemos con más frecuencia cuando un ecommerce intenta montar la integración por su cuenta o con un módulo plug-and-play. Cada uno corta el ROI por la mitad.</p>
+
+    <ul>
+      <li><strong>Diseñar flujos antes de aprobar plantillas.</strong> Meta puede rechazar la plantilla por copy agresivo o parámetros ambiguos. Resultado: flujo paralizado el día del lanzamiento.</li>
+      <li><strong>No pedir opt-in explícito.</strong> Sin opt-in registrado, los mensajes salientes se consideran spam y Meta puede suspender el número. El checkbox tiene que estar en el checkout de PrestaShop con registro timestamp.</li>
+      <li><strong>Usar un número personal en lugar de uno dedicado.</strong> El número que entra en WhatsApp Business API no puede estar activo en la app normal de WhatsApp. Hay que decidir antes de empezar.</li>
+      <li><strong>Guardar las conversaciones solo en PrestaShop.</strong> Un módulo tipo chat las almacena en una tabla propia, no en el CRM. Pierdes segmentación, LTV y campañas futuras.</li>
+      <li><strong>Dejar sin configurar el escalado a humano.</strong> El agente IA responde el 70-80% de las conversaciones, pero el 20-30% restante necesita una persona. Sin alertas y SLA, esos tickets se enfrían y se pierden ventas.</li>
+      <li><strong>Enviar carritos abandonados sin segmentar.</strong> El cliente VIP no quiere el mismo descuento que el usuario nuevo. Usar la misma plantilla para todos degrada márgenes.</li>
+    </ul>
+
+    <h2>Checklist técnico antes de ir a producción</h2>
+
+    <p>Si vas a lanzar la integración, revisa estos puntos antes de abrir el grifo de tráfico:</p>
+
+    <ul>
+      <li>PrestaShop en versión 1.7.8+ con webservice habilitado y claves por scope</li>
+      <li>Número verificado en Meta Business Manager y asignado al BSP</li>
+      <li>Mínimo 4 plantillas aprobadas: confirmación, carrito, envío, bienvenida</li>
+      <li>Opt-in registrado con timestamp en la tabla de clientes de PrestaShop</li>
+      <li>Hooks <code>actionValidateOrder</code> y <code>actionCartSave</code> conectados al CRM</li>
+      <li>Modo prueba con 10 clientes internos antes del rollout general</li>
+      <li>Alertas de SLA de escalado configuradas (respuesta humana &lt; 15 minutos)</li>
+      <li>Dashboard de métricas: entrega, apertura, respuesta, conversión por flujo</li>
+      <li>Política de datos actualizada mencionando WhatsApp y Meta como procesadores</li>
+    </ul>
+
+    <p>Marcar los nueve puntos reduce el riesgo de bloqueo por Meta y asegura que el primer mes genere datos accionables.</p>
+
+    <div class="blog-cta">
+      <h3>¿Quieres integrar PrestaShop con WhatsApp sin romper tu tienda?</h3>
+      <p>En ZENIA integramos PrestaShop con WhatsApp Business API y añadimos un agente de IA personalizado que conversa, consulta stock, recupera carritos y escala a tu equipo. Integración completa en 4 semanas. Agenda una llamada técnica de 30 minutos.</p>
+<p data-zenia-oportunidad="1">Si prefieres empezar por un diagnóstico, hablamos primero por <a href="/es/automatizacion-whatsapp-negocios.html">WhatsApp con IA</a> y vemos si tu tienda tiene el volumen para que la integración rente desde el mes uno.</p>
+
+      <a href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20%C2%ABIntegrar%20PrestaShop%20con%20WhatsApp%20Business%C2%BB%20y%20quiero%20ver%20c%C3%B3mo%20aplicarlo%20en%20mi%20tienda" target="_blank" rel="noopener">Hablar por WhatsApp ahora</a> <a style="background:transparent;border:1px solid var(--border);color:var(--text-secondary);margin-left:10px" href="https://calendly.com/zeladauriartef/30min">Agendar llamada gratuita</a>
+    </div>
+<div class="blog-related" data-zenia-money-links="1">
+  <h3>Ponlo en marcha en tu ecommerce</h3>
+  <a href="/es/crm-ecommerce.html">CRM con IA para Ecommerce<span>Agente de IA por WhatsApp 24/7 + CRM. Integración completa con PrestaShop, desde €297/mes.</span></a>
+  <a href="/es/crm-retail.html">CRM con IA para Retail<span>Automatiza pedidos, carritos y post-venta desde PrestaShop con WhatsApp Business.</span></a>
+  <a href="/es/automatizacion-whatsapp-negocios.html">Automatización WhatsApp para Negocios<span>Agentes de IA personalizados en WhatsApp Business API. Setup en 4 semanas.</span></a>
+</div>
+
+
+    <div class="blog-related">
+      <h3>Artículos relacionados</h3>
+      <a href="/blog/integrar-woocommerce-con-whatsapp-business.html">Integrar WooCommerce con WhatsApp Business<span>Guía técnica para WooCommerce con la misma arquitectura: hooks, plantillas y agente de IA.</span></a>
+      <a href="/blog/integrar-shopify-con-whatsapp-business.html">Integrar Shopify con WhatsApp Business<span>Comparativa de módulos, flujos y métricas reales para Shopify sobre la WhatsApp Business API.</span></a>
+      <a href="/blog/recuperar-carritos-abandonados-whatsapp.html">Recuperar Carritos Abandonados por WhatsApp<span>Playbook de 3 mensajes para subir la recuperación del 5% del email al 20% de WhatsApp.</span></a>
+      </div>
+
+  </div>
+
+<div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 24px; margin: 40px 0;" data-zenia-internal-links="landings">
+  <h3 style="color: #F1F5F9; margin-bottom: 12px; font-size: 1.05rem;">Otras integraciones de ecommerce con WhatsApp</h3>
+  <p style="color: #94A3B8; margin-bottom: 16px; font-size: 0.95rem;">Si no usas PrestaShop, puedes ver cómo montar la misma arquitectura con otras plataformas:</p>
+  <div>
+      <a href="/blog/integrar-woocommerce-con-whatsapp-business.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">WooCommerce + WhatsApp →</a>
+      <a href="/blog/integrar-shopify-con-whatsapp-business.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Shopify + WhatsApp →</a>
+      <a href="/blog/integrar-odoo-con-whatsapp-business.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Odoo + WhatsApp →</a>
+      <a href="/es/crm-ecommerce.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">CRM con IA para Ecommerce →</a>
+  </div>
+</div>
+
+</article>
+
+<footer class="blog-footer">
+  <div class="container">
+    <p>&copy; 2026 ZENIA. Todos los derechos reservados. | <a href="/">Inicio</a> | <a href="/blog/">Blog</a></p>
+  </div>
+</footer>
+
+<div style="text-align:center; padding:16px 24px; background:#0A0F1C; color:#64748B; font-size:0.85rem; border-top:1px solid rgba(255,255,255,0.04);"><a href="/es/cobertura.html" style="color:#94A3B8; text-decoration:none;">Ver cobertura completa</a></div>
+<a href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20%C2%ABIntegrar%20PrestaShop%20con%20WhatsApp%20Business%C2%BB%20y%20quiero%20ver%20c%C3%B3mo%20aplicarlo%20en%20mi%20tienda" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp" data-directo style="position:fixed;bottom:24px;right:24px;z-index:9998;background:#25D366;color:white;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(37,211,102,0.4);transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 20px rgba(37,211,102,0.5)'" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 16px rgba(37,211,102,0.4)'">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<script>document.addEventListener("click",function(e){var t=e.target,a=t.closest?t.closest('a[href*="wa.me"]'):null;if(!a)return;try{navigator.sendBeacon("https://gaia-relojes.onrender.com/gwb/lead",JSON.stringify({site:"zenia",path:location.pathname+location.search,ref:document.referrer||""}))}catch(r){}},true);</script>
+<script src="/assets/qualify.js?v=4" defer></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "67e4803d7cd443a49b12c7d8a99365bf"}'></script>
+</body>
+</html>

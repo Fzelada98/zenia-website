@@ -7876,3 +7876,22 @@ Measured consistently across 2026 deployments on native + agent orchestration: i
 Writeup (ES, 4 integration paths + cost model + 6 pitfalls): https://zeniapartners.com/blog/integrar-monday-com-con-whatsapp-business.html
 
 #mondaycom #WhatsAppBusinessAPI #SalesEngineering #Infrastructure
+
+## 2026-10-05 - Agente IA para despachos de abogados: gestión de expedientes (EN)
+
+Spanish legal sector enters 2026 with 65% of law firms (CGAE) running without a digital plan, average attorney utilization at 38% (3 billable hours per 8-hour day), and 15 hours per attorney per month lost to manual invoicing. The infrastructure problem is upstream: the matter lives in five systems and none of them talk.
+
+Architecture notes from production on Spanish law firms (6-20 attorneys):
+- The AI agent is a thin orchestration layer over the existing matter management system (Tirant Gestor, Lex-On, SuDespacho, Lextools, Clio). All writes go through the vendor API or, where none exists, through an IMAP/SMB connector against a filename convention. External_id idempotency on Matter and Contact so 5xx retries never double-create.
+- WhatsApp Business API via BSP as the single front door, EU residency, approved utility templates for status, deadline, and document-request flows. Marketing templates stay off this account to protect the 24h session rule and quality rating.
+- Reasoning layer runs with prompt retention at 0 days and audit log at 30 or 90 days per matter risk tier. No training on client content, DPA signed with the firm as data controller.
+- Permission map inherits per-attorney and per-matter from the case management system. "Secret reinforced" matters are excluded from the agent RAG index at ingest time, not at query time, so the LLM has no path to them.
+- AI Act Annex III classification (justice administration) enforced server-side: every tool_call tagged advice=true or deadline=true blocks on human sign-off in the matter before any client-side render.
+
+Measured at 90 days post-deploy, same headcount: client-side response p50 from 4h12m to 12s, billable hours per attorney per month 96 to 115, documentation on-time 54% to 86%, lead-to-matter conversion 22% to 38%, after-hours capture 41% of weekly interaction volume (zero before).
+
+Writeup (ES): https://zeniapartners.com/blog/agente-ia-despachos-abogados-gestion-expedientes.html
+
+#LegalTech #AgentArchitecture #WhatsAppBusinessAPI #AIAct
+
+---

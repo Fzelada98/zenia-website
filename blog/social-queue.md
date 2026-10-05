@@ -7914,3 +7914,22 @@ Writeup: https://zeniapartners.com/blog/ai-agent-for-solar-installers.html
 #SolarTech #SalesEngineering #VoiceAI #WhatsAppBusinessAPI #Infrastructure
 
 ---
+
+## 2026-10-05 - Electrician CRM with AI (EN)
+
+US residential electrical shops enter 2026 missing 28-55% of inbound calls, with lead response averaging 42-47 minutes against a sector benchmark where 5-minute reply converts 21x better. The infrastructure problem is upstream: inbound voice, LSA webhooks, web forms, and WhatsApp all land in different queues, and the CRM is only reached by whichever one the office manager gets to first.
+
+Architecture notes from production on US residential electrical shops (3-15 trucks):
+- Voice front door: conversational pipeline over SIP/TwiML (ASR + LLM reasoning + low-latency TTS), p50 call-to-first-word under 900ms, p95 under 1.6s. Rings in parallel with the office DID; whichever answers first wins the call, the other hangs up on connect-event.
+- Dispatch brain solves a weighted assignment on every booking: live GPS, drive-time at the appointment timestamp (not booking timestamp), skill tags (service, residential new, commercial, panel, EV, generator), license tier for permit pull, and a return-visit penalty on the route graph. Reshuffles mid-day when a 1-hour service call turns into a 2-hour panel diagnostic.
+- CRM writes (FieldPulse, Housecall Pro, ServiceTitan) go through native APIs with external_id idempotency keyed on the lead-source UUID. Retries from 5xx never double-book a slot or duplicate a contact.
+- WhatsApp Business API via BSP for text leads, utility templates only (appointment confirm, estimate approval, review request) on the service DID; marketing templates isolated on a separate number to protect quality rating. SMS fallback on 10DLC-registered gateway with STOP/HELP and delivery receipts flowing back as structured events.
+- Missed-call text-back fires from the same number the customer dialed; cross-number sends collapse response rate by half.
+
+Measured at 90 days post-deploy on a 4-truck Dallas-Fort Worth shop, flat ad spend, same headcount: answer rate 61% office-hours and 11% after-hours both to 97%+, speed-to-first-contact on web leads 38 min to 52 sec, lead-to-booked 24% to 41%, panel-upgrade close 31% to 44%, jobs per truck per week 17 to 22, Google reviews per month 6 to 19, office-manager phone time 22 to 7 hrs/wk.
+
+Writeup: https://zeniapartners.com/blog/electrician-crm-with-ai.html
+
+#FieldServiceAI #ElectricalContractors #WhatsAppBusinessAPI #VoiceAI #Infrastructure
+
+---

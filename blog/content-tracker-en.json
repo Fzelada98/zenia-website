@@ -336,7 +336,8 @@
       "keyword": "electrician crm with ai",
       "tier": 1,
       "cluster": "trades",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-10-05"
     },
     {
       "slug": "roofing-crm-with-ai",

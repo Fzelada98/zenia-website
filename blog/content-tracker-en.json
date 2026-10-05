@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-10-04T17:30:00.000000+00:00",
+  "lastRun": "2026-10-05T00:00:00.000000+00:00",
   "market": "US/UK small business",
   "posts": [
     {
@@ -286,7 +286,8 @@
       "keyword": "ai agent for solar installers",
       "tier": 1,
       "cluster": "trades",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-10-05"
     },
     {
       "slug": "ai-agent-for-pool-service-companies",

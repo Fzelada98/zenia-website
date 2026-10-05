@@ -7895,3 +7895,22 @@ Writeup (ES): https://zeniapartners.com/blog/agente-ia-despachos-abogados-gestio
 #LegalTech #AgentArchitecture #WhatsAppBusinessAPI #AIAct
 
 ---
+
+## 2026-10-05 - AI Agent for Solar Installers (EN)
+
+Residential solar lives or dies on speed-to-lead. A homeowner who hits a form at 9:47 PM has filled out three more by 9:52 PM. Industry data: contact within 5 minutes converts ~8x more often than at 30 minutes, and the next shop is already dialing.
+
+Architecture notes from production (US residential installers, 20-150 crews):
+- AI voice agent fronts every inbound: TwiML/SIP ingress to a conversational pipeline (ASR + LLM reasoning + ElevenLabs/Cartesia TTS), p50 call-to-first-word under 900ms, p95 under 1.6s. Outbound callback fires within 60s of a form POST via webhook from Unbounce, LSA, or aggregator feeds.
+- Parallel SMS fires through a 10DLC-registered gateway (Twilio, Telnyx) with STOP/HELP compliance, delivery receipts flowing back as structured events so the orchestrator stops escalating once the lead replies on any channel.
+- Qualification is a 7-field schema (ownership, bill $, roof age, shade, timeline, financing, decision maker) written straight to the installer CRM (HubSpot, Enerflo, Solo) via native API with external_id idempotency keyed on the lead source UUID. No intermediate Zapier hop; every tool_call is logged for TCPA defensibility.
+- Calendar booking is capacity-aware: the scheduler reads crew drive zones, blackout days, and permit-pending counties from a Postgres view updated hourly from the install calendar. Site-survey slots are held with a 15-minute soft lock during the conversation.
+- Compliance layer: SHAKEN/STIR voice attestation, written consent captured at form level with timestamp + IP + user agent, DNC scrubbing on every outbound dial, state-specific telemarketing time windows enforced in the dialer.
+
+Measured at 90 days across a 50-crew Southeast installer at ~1,800 leads/month: speed-to-first-contact p50 from 47 minutes to 47 seconds across all hours, contact rate 61% to 88%, appointment set rate 29% to 44%, lead-to-contract 8.4% to 13.9%, CAC $1,690 to $993. No headcount added on the sales side.
+
+Writeup: https://zeniapartners.com/blog/ai-agent-for-solar-installers.html
+
+#SolarTech #SalesEngineering #VoiceAI #WhatsAppBusinessAPI #Infrastructure
+
+---

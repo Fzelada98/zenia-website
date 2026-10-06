@@ -7954,6 +7954,8 @@ Writeup: https://zeniapartners.com/blog/integrar-prestashop-con-whatsapp-busines
 
 ## 2026-10-06 - CRM for Spanish tax advisories (EN)
 
+<!-- PUBLISHED:make-webhook at 2026-10-06T07:40:03Z -->
+
 Shipped a CRM backbone for a Spanish tax advisory this quarter. Stack: Node + Postgres on managed infra, WhatsApp Business API through a Meta BSP (360dialog), bi-directional sync into a3ASESOR (Wolters Kluwer) over its REST layer with idempotent upserts keyed by NIF, and a routed LLM pipeline where every intent handler ships with hard SLAs and a deterministic fallback.
 
 Numbers from the first 60 days on 180 clients:

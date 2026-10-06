@@ -8020,3 +8020,19 @@ Full writeup, including the pre/after breakdown, feature checklist and 2-week ro
 #B2B #SaaS #AI #WhatsAppBusinessAPI #FieldOps
 
 ---
+## 2026-10-06 - Integrar Google Calendar con WhatsApp Business
+
+Shipped a Google Calendar <> WhatsApp Business bridge for an aesthetic clinic group in Madrid this quarter. Stack: Node worker on managed infra, Google Calendar watch channels for push events, Postgres queue keyed on (event_id, send_at, template), WhatsApp Cloud API v21.0 through 360dialog as BSP, and a routed LLM pipeline that patches events.patch when a client replies "move it to Thursday 11".
+
+Numbers from the first 60 days across 4 locations, ~5.400 reminder sends/month:
+- Median end-to-end latency from events.update to WhatsApp delivery: 1.4s, p95 2.1s (vs 1-5 min on the Zapier polling PoC we rolled back)
+- 5 Meta-approved HSM templates (cita_confirmada, 24h, 2h, cambiada, cancelada), all UTILITY category to stay inside the paid service-conversation window
+- No-show rate on booked appointments down from 14% to 4.8% after the 24h + 2h cadence, worth ~2.3k EUR/month per location in recovered chair-time
+
+The interesting constraint was timezone drift on all-day events: Google returns start.date (no offset) for them, so the worker was firing reminders at 00:00 UTC. We now coerce missing offsets to the calendar's primary timezone before enqueueing, which also fixed DST handoff bugs.
+
+Full writeup with the Zapier vs Make vs native-API comparison, the HSM templates and the 7-error checklist: https://zeniapartners.com/blog/integrar-google-calendar-con-whatsapp-business.html
+
+#B2B #SaaS #AI #WhatsAppBusinessAPI #Scheduling
+
+---

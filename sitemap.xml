@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://zeniapartners.com/blog/crm-para-asesorias.html</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zeniapartners.com/blog/crm-para-asesorias.html"/>
+  </url>
+  <url>
     <loc>https://zeniapartners.com/blog/integrar-prestashop-con-whatsapp-business.html</loc>
     <lastmod>2026-10-05</lastmod>
     <changefreq>monthly</changefreq>

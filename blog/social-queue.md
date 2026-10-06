@@ -7952,3 +7952,20 @@ Writeup: https://zeniapartners.com/blog/integrar-prestashop-con-whatsapp-busines
 
 ---
 
+## 2026-10-06 - CRM for Spanish tax advisories (EN)
+
+Shipped a CRM backbone for a Spanish tax advisory this quarter. Stack: Node + Postgres on managed infra, WhatsApp Business API through a Meta BSP (360dialog), bi-directional sync into a3ASESOR (Wolters Kluwer) over its REST layer with idempotent upserts keyed by NIF, and a routed LLM pipeline where every intent handler ships with hard SLAs and a deterministic fallback.
+
+Numbers from the first 60 days on 180 clients:
+- 78% of inbound WhatsApp resolved without human handoff
+- Median first-token latency 820ms, p95 1.4s end-to-end
+- Zero duplicate client records once NIF became the surrogate key
+- Document ingestion (PDFs, images) OCR'd and attached to the right expediente in under 7s p95
+
+Interesting constraint was VeriFactu, Spain's new verifiable invoicing standard. Every invoice emitted or consumed had to land in an append-only ledger with a chained hash. Pulled that off the request path onto a worker on a priority queue so the agent UI stays snappy under spikes at quarter-end (modelo 303).
+
+Full writeup, including the comparison against a3ASESOR Smart CRM, Sage Despachos Connected and Holded: https://zeniapartners.com/blog/crm-para-asesorias.html
+
+#B2B #SaaS #AI #automation #WhatsAppBusinessAPI
+
+---

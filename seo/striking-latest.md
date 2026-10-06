@@ -12,7 +12,7 @@ Consultas donde zeniapartners.com ya imprime en posición 4-30 (últimos 8 días
 | 17.6 | 10 | agente ia despachos abogados gestion expedientes | /blog/agente-ia-para-abogados.html |
 | 13.2 | 10 | crm a medida madrid | /blog/crm-a-medida-madrid.html |
 | 12.8 | 10 | crm en valencia | /blog/crm-para-empresas-en-valencia.html |
-| 14.4 | 10 | crm para asesorias | /blog/crm-para-gestorias.html |
+| 14.4 | 10 | [crm para asesorias](/blog/crm-para-asesorias.html) | /blog/crm-para-gestorias.html |
 | 15.0 | 10 | desarrollo agente ai clínicas de estética | /blog/agente-ia-para-clinicas-esteticas.html |
 | 4.3 | 9 | agente ai peluquería | /blog/desarrollo-agente-ai-peluqueria.html |
 | 9.6 | 9 | crm barcelona | /es/crm-spas-barcelona.html |

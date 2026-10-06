@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-10-05T14:00:00+00:00",
+  "lastRun": "2026-10-06T06:00:00+00:00",
   "posts": [
+    {
+      "slug": "crm-para-asesorias",
+      "keyword": "crm para asesorías",
+      "tier": 2,
+      "cluster": "asesorias-despachos",
+      "status": "published",
+      "date": "2026-10-06",
+      "source": "striking"
+    },
     {
       "slug": "integrar-prestashop-con-whatsapp-business",
       "keyword": "integrar prestashop con whatsapp business",

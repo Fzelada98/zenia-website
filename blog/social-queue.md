@@ -7971,3 +7971,20 @@ Full writeup, including the comparison against a3ASESOR Smart CRM, Sage Despacho
 #B2B #SaaS #AI #automation #WhatsAppBusinessAPI
 
 ---
+
+## 2026-10-06 - Roofing CRM with AI (EN)
+
+Shipped a roofing-vertical CRM backbone for a US contractor this quarter. Stack: Node + Postgres on managed infra, Twilio for US SMS, WhatsApp Business API through 360dialog for the bilingual service areas (TX/FL), bi-directional sync into AccuLynx over its REST layer with idempotent upserts keyed on job_id + address_hash, and a routed LLM pipeline where every intent (storm qualify, retail estimate, insurance follow-up) has hard SLAs and a deterministic fallback to a human handoff queue.
+
+Numbers from the first 45 days on 100 inbound leads/month:
+- Median speed-to-lead 38s from form submission to first qualified reply, p95 2.1s end-to-end token latency
+- 71% of after-hours leads qualified (age, damage, insurance vs cash) without human handoff
+- Zero duplicate job records once address_hash became the surrogate key against the AccuLynx mirror
+
+Interesting constraint was Xactimate scope drafting. Pulled the measurement ingestion (EagleView webhook) off the request path onto a worker queue so the AI could stream the scope narrative while the measurement PDF was still rendering, instead of blocking the salesperson for 20-40s per job.
+
+Full writeup, including a comparison against AccuLynx, JobNimbus, Zuper, ServiceTitan and QuoteIQ: https://zeniapartners.com/blog/roofing-crm-with-ai.html
+
+#B2B #SaaS #AI #WhatsAppBusinessAPI #FieldOps
+
+---

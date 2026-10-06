@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-10-05T00:00:00.000000+00:00",
+  "lastRun": "2026-10-06T00:00:00.000000+00:00",
   "market": "US/UK small business",
   "posts": [
     {
@@ -344,7 +344,8 @@
       "keyword": "roofing crm with ai",
       "tier": 1,
       "cluster": "trades",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-10-06"
     },
     {
       "slug": "landscaping-crm-with-ai",

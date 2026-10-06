@@ -8004,3 +8004,19 @@ Full writeup, including the comparison against CoverManager, TheFork, Spoonity a
 #B2B #SaaS #AI #WhatsAppBusinessAPI #Restaurants
 
 ---
+## 2026-10-06 - Landscaping CRM with AI (EN)
+
+Shipped a landscaping-vertical CRM backbone for a US residential operator (3 crews, Charlotte metro) this quarter. Stack: Node + Postgres on managed infra, Twilio for US SMS as the primary channel, WhatsApp Business API through 360dialog for the bilingual service areas, OR-Tools solving a daily vehicle-routing problem on the booked estimates and recurring routes, and a routed LLM pipeline where each intent (new mow quote, estimate booking, reschedule, seasonal upsell, complaint) has an SLA and a deterministic fallback to a human handoff queue.
+
+Numbers from the first 90 days on ~180 inbound leads/month:
+- Median first-reply time 47s end-to-end from form submission to channel-matched reply, p95 1.9s on the LLM token path
+- 98% of after-hours leads qualified (service area, lot size band, fence/dogs, service type) and booked without human handoff
+- Jobs per crew per day up from 7.2 to 8.4 after swapping fixed day blocks for a nightly OR-Tools re-solve keyed on parcel geometry and crew skill tags
+
+Interesting constraint was property-level service history. A single contact can own several parcels, and routes are driven by parcels, not people, so we moved the schema off a contact-primary model to a parcel-primary one with contacts as a many-to-many edge. That let the booking agent reason over service_history_at_address instead of per-person, and cut duplicate-record incidents to zero against the field tool mirror.
+
+Full writeup, including the pre/after breakdown, feature checklist and 2-week rollout: https://zeniapartners.com/blog/landscaping-crm-with-ai.html
+
+#B2B #SaaS #AI #WhatsAppBusinessAPI #FieldOps
+
+---

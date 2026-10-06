@@ -7988,3 +7988,19 @@ Full writeup, including a comparison against AccuLynx, JobNimbus, Zuper, Service
 #B2B #SaaS #AI #WhatsAppBusinessAPI #FieldOps
 
 ---
+## 2026-10-06 - Restaurant CRM with WhatsApp (EN)
+
+Shipped a restaurant CRM backbone for a Spanish hospitality group this quarter. Stack: Node + Postgres on managed infra, WhatsApp Business API through 360dialog, bi-directional sync into CoverManager and the local POS (Agora) over REST and polled exports where no webhook exists, and a routed LLM pipeline where each intent (new booking, modify, cancel, waitlist release, post-visit NPS) ships with a hard SLA and a deterministic handoff queue.
+
+Numbers from the first 45 days across 3 locations, ~2.100 WhatsApp conversations/mo:
+- Median first-token latency 740ms, p95 1.3s; availability check against the agenda p95 2.9s
+- No-show rate down from 17% to 5.4% with the 24h reminder + Meta-approved template retention flow
+- 34% of cancelled slots refilled from the waitlist in under 15 minutes, fully automatic
+
+Interesting constraint was Meta's new paid service-conversation window (effective 1 Oct 2026): every post-booking message now has a line-item cost of EUR 0.004-0.015. We moved reminders into a batched job that respects the 24h customer-initiated session and only falls back to templates when the session is closed, cutting Meta spend ~38% versus a naive "send immediately" flow.
+
+Full writeup, including the comparison against CoverManager, TheFork, Spoonity and Como, with pricing and the 7-point checklist we use before signing a BSP: https://zeniapartners.com/blog/crm-para-restaurantes-con-whatsapp.html
+
+#B2B #SaaS #AI #WhatsAppBusinessAPI #Restaurants
+
+---

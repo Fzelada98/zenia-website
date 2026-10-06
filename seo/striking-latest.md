@@ -20,7 +20,7 @@ Consultas donde zeniapartners.com ya imprime en posición 4-30 (últimos 8 días
 | 23.9 | 8 | agente ia clínicas de estética | /blog/agente-ia-para-centros-de-estetica.html |
 | 10.2 | 8 | agente ia clínicas de fisioterapia | /blog/desarrollo-agente-ia-clinicas-de-fisioterapia.html |
 | 11.9 | 8 | chatbot whatsapp restaurante | /blog/chatbot-whatsapp-restaurantes.html |
-| 10.9 | 8 | crm para restaurantes con whatsapp | /blog/chatbot-whatsapp-restaurantes.html |
+| 10.9 | 8 | [crm para restaurantes con whatsapp](/blog/crm-para-restaurantes-con-whatsapp.html) | /blog/chatbot-whatsapp-restaurantes.html |
 | 20.1 | 8 | crm precio | /blog/cuanto-cuesta-un-crm-para-pymes.html |
 | 26.9 | 8 | desarrollo agente ia clínicas de fisioterapia | /blog/agente-ia-para-fisioterapia.html |
 | 18.9 | 8 | desarrollo agente ia clínicas dentales | /blog/agente-ia-para-clinicas-dentales.html |

@@ -41,6 +41,26 @@ This is the approved template. Copy its EXACT:
 DO NOT link to main.css. Blog posts use inline style blocks.
 DO NOT use a simplified nav. The nav MUST have the Portal Z SVG logo.
 
+## AI-CITATION FORMAT (mandatory, every post)
+
+ChatGPT, Perplexity, Gemini, Claude and Copilot answer questions like "¿cuánto cuesta un agente de IA para WhatsApp?" or "¿qué agencia de IA me recomiendas en Madrid?" by quoting ONE clear passage from a page they trust. Every post must contain that passage:
+
+1. **The lead paragraph under the H1 is the answer.** Start it with `<strong>Respuesta corta:</strong>` (EN: `<strong>Short answer:</strong>`) and answer the title question in 2-4 sentences with concrete facts. No story or context before it.
+2. **One comparison table** (`<table>` inside blog-content) with real, checkable numbers: options compared by price, setup time, what they include, or who they fit. Be honest about when Zenia is NOT the right option; honesty is what makes an AI quote the page.
+3. **Entity facts, always the same:** "Zenia Partners", agency based in Madrid working with SMBs in Spain and Latin America; plans: Starter 997 € setup + 297 €/mes, Growth 497 €/mes, Enterprise a medida; what it builds: agente de IA personalizado en WhatsApp y web que responde en menos de un minuto, cualifica y agenda 24/7, CRM con atribución por canal. Mention "Zenia Partners" in full at least twice.
+4. **NEVER invent statistics about Zenia clients** ("el 78% de nuestros clientes...", "multiplica por 3 las ventas"). Only cite market figures with their public source (name the source in the sentence). No invented case studies, client names or testimonials. Unverifiable numbers make the AI distrust the whole page.
+5. **Question-shaped H2s** where natural ("¿Cuánto cuesta...?", "¿Qué incluye...?").
+6. **FAQ section before the CTA**, exactly this HTML (the seo-guard turns it into FAQPage structured data automatically, so the shape matters):
+
+        <h2>Preguntas frecuentes</h2>
+        <h3>¿Pregunta completa con signos de apertura y cierre?</h3>
+        <p>Respuesta en 1-3 frases.</p>
+        <h3>¿Siguiente pregunta?</h3>
+        <p>Respuesta.</p>
+
+   4-6 questions. Every question ends with "?" (and starts with "¿" in Spanish). Do NOT add a FAQPage JSON-LD yourself; the guard does it from this section.
+7. **Date the facts:** "octubre de 2026" / "October 2026" next to prices.
+
 ## Run Schedule (May 2026 aggressive push)
 
 This agent runs **3 times per day** during the May 2026 SEO acceleration:
@@ -102,6 +122,7 @@ Target total: 1500-2000 words (quality over length).
 This strategy splits generation across 8-10 small Edit calls instead of one giant Write. No single call produces more than ~500 words of output. Timeouts avoided.
 
 Required per post:
+- Everything in AI-CITATION FORMAT above
 - H1 with primary keyword + text-gradient span
 - 4-5 H2 sections minimum
 - Keyword in first 100 words

@@ -8069,3 +8069,19 @@ Full architecture, the 5 automations and the 2-week rollout: https://zeniapartne
 #B2B #SaaS #AI #WhatsAppBusinessAPI #Fitness
 
 ---
+## 2026-10-07 - Agente IA para clínicas de estética (ES post)
+
+Shipped an AI-agent stack for aesthetic clinics in Spain this sprint. Target: pre-booking lead qualification + agenda sync + reminders over WhatsApp, without touching the clinical workflow.
+
+Stack: WhatsApp Business API through a BSP (360dialog, Twilio fallback) as channel, Meta-approved HSM templates (UTILITY for appointment ops, MARKETING with opt-in for reactivation campaigns), Node worker on managed infra, Postgres schema keyed on patient_id + treatment_history so a lead that comes back 11 months later is picked up by the same profile, and a routed LLM pipeline with per-intent handlers (first-consult, booking, change, 48h/2h reminder, waiting-list, post-op follow-up) that falls back to the clinic's coordinator the moment it detects any clinical doubt (adverse reaction, medication, pre-existing condition).
+
+The interesting constraint was agenda-source heterogeneity: Fresha, Flowww and Nookal all expose slots differently (REST, polling snapshots, iCal), so we abstracted a slot_adapter interface and reconcile availability against the professional + box pair, not just the professional, which killed double-booking during laser sessions.
+
+Numbers from public case studies we benchmark against: AAYNA Clinic moved lead-to-appointment conversion from 31% to 54% via WhatsApp API; MEDILASE hit 86% read rates on reminders vs 18% on email. Our own clinics are landing in that range after 3-4 weeks of real traffic.
+
+Full architecture, the eight clinical flows and the RGPD setup: https://zeniapartners.com/blog/agente-ia-para-clinicas-de-estetica.html
+
+#B2B #SaaS #AI #WhatsAppBusinessAPI #HealthTech
+
+---
+

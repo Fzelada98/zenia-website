@@ -1,7 +1,16 @@
 {
-  "lastRun": "2026-10-06T00:00:00.000000+00:00",
+  "lastRun": "2026-10-07T00:00:00.000000+00:00",
   "market": "US/UK small business",
   "posts": [
+    {
+      "slug": "ai-powered-member-retention-for-gyms",
+      "keyword": "ai-powered member retention for gyms",
+      "tier": 0,
+      "cluster": "fitness",
+      "status": "published",
+      "date": "2026-10-07",
+      "note": "striking-loop hit: 9 impressions, pos 26.0. Was printing on /blog/customer-retention-gym-ai.html; added cross-link there with 'ai-powered member retention for gyms' anchor."
+    },
     {
       "slug": "ai-booking-agent-for-plumbing",
       "keyword": "ai booking agent for plumbing",

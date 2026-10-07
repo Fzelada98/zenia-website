@@ -8053,3 +8053,19 @@ Full architecture, the six postventa flows and the DMS integration map: https://
 #B2B #SaaS #AI #WhatsAppBusinessAPI #Automotive
 
 ---
+
+## 2026-10-07 - AI-Powered Member Retention for Gyms (EN)
+
+Shipped an AI-powered retention stack for a 3-location US gym operator (~2,400 members) this quarter. Stack: Node worker on managed infra, Postgres warehouse unifying ClubReady billing events, turnstile check-ins and class bookings into a single member_profile keyed on member_id + external_system, WhatsApp Business API via 360dialog as BSP (Twilio fallback for US SMS), Meta-approved UTILITY HSM templates for payment-fail and win-back, and a nightly job that scores risk 0-100 per member using the 21-day attendance delta against each member's own baseline plus payment health and lifecycle events.
+
+Numbers from the first 6 months on ~2,400 members across 3 clubs:
+- Annual churn 28% to 17% (-11 pts), driven mostly by cutting failed-payment-to-cancellation conversion from 31% to 11% via a WhatsApp card-update link fired on the Stripe payment_failed webhook, median 42s from webhook to delivered message
+- Member lifetime 14 to 22 months (+57%), monthly ad spend $7,200 to $5,100 (-29%) at flat volume
+
+The interesting constraint was baseline drift. A fixed "no visit for 10 days" rule misclassifies seasonal members and shift workers. We moved to per-member rolling baselines (median visit cadence over trailing 60 days, Poisson confidence interval on the gap) so the engine fires only when the current silence is statistically unusual for that specific member, which cut false-positive outreach by ~60% and lifted response rate on the true-positive messages from 22% to 41%.
+
+Full architecture, the 5 automations and the 2-week rollout: https://zeniapartners.com/blog/ai-powered-member-retention-for-gyms.html
+
+#B2B #SaaS #AI #WhatsAppBusinessAPI #Fitness
+
+---

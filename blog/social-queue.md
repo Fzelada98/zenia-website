@@ -8085,3 +8085,18 @@ Full architecture, the eight clinical flows and the RGPD setup: https://zeniapar
 
 ---
 
+## 2026-10-07 - Pest Control CRM with AI (EN)
+
+Shipped a pest control CRM + AI agent stack for a 3-truck US operator (Charlotte, NC) this quarter. Target: close the gap between inbound lead and route-aware booking without ripping out GorillaDesk or QuickBooks Online as the system of record.
+
+Stack: GorillaDesk as system of record (unchanged), WhatsApp Business API via 360dialog as BSP with Twilio SMS fallback, Node worker on managed infra, Postgres warehouse keyed on account_id + service_history so a lead that was quoted 14 months ago matches on the inbound WhatsApp number, LLM-backed agent (Claude Sonnet) with a retrieval index over the service menu, ZIP-level pricing, cancellation policy and warranty terms, and a route_adapter interface that reads the day's technician load before offering slots. Google Business Profile messages, website form and WhatsApp converge on the same agent through a thin event bus so state stays consistent.
+
+Numbers from 90 days of real traffic on ~74 inbound leads/month: median lead response 6h 20m to 52s (webhook to first delivered message), lead-to-booked 19% to 37%, payment-fail recovery 41% to 81% via a Stripe payment_failed webhook that fires a one-tap WhatsApp card-update link within 10 minutes, jobs per truck per day 8.4 to 10.9. MRR 38.4K to 61.7K USD at flat ad spend.
+
+The interesting constraint was atomic state across five systems (CRM, QBO, routing, Stripe, messaging) when a customer reschedules at 10 PM. We moved to an outbox pattern on the Postgres side so the agent commits intent locally, then a reconciler fans out to each downstream with exponential backoff; cut dropped-write incidents from ~2 per week to zero in 60 days.
+
+Full architecture, the 5 workflows and the 2-week rollout: https://zeniapartners.com/blog/pest-control-crm-with-ai.html
+
+#B2B #SaaS #AI #WhatsAppBusinessAPI #FieldService
+
+---

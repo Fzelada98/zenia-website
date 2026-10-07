@@ -8100,3 +8100,19 @@ Full architecture, the 5 workflows and the 2-week rollout: https://zeniapartners
 #B2B #SaaS #AI #WhatsAppBusinessAPI #FieldService
 
 ---
+
+## 2026-10-07 - Agente IA para despachos contables
+
+Reference deployment for a 6-person accounting firm in Spain: an AI agent sitting on WhatsApp Business API and a web widget, backed by a stateful planner over a shared vector store of fiscal docs and firm templates.
+
+Stack: WhatsApp Cloud API, FastAPI gateway, LangGraph planner with tool-use (schedule, document ingest, firm ERP), Postgres + pgvector for firm memory, Signaturit for signed deliverables, read-through adapter to A3 Asesor and Sage Despachos. Hard escalation on keywords (inspection, requerimiento, sanción) with full conversation handoff.
+
+Measured in the first 90 days of pilot: median first-response under 20s across 1,400 inbound threads, 83% of recurring queries closed without human intervention, 218 min/day returned to the partner and the admin.
+
+Compliance surface: data never leaves EU, scoped per-client vectors, DPA signed with Meta, deletion by client-ID in under 2 hours.
+
+Full breakdown of the architecture, the integrations and the KPIs: https://zeniapartners.com/blog/agente-ia-para-despachos-contables.html
+
+#WhatsAppBusinessAPI #LangGraph #AIEngineering #B2B
+
+---

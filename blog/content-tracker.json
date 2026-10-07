@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-10-07T14:00:00+00:00",
+  "lastRun": "2026-10-07T22:08:00+00:00",
   "posts": [
+    {
+      "slug": "agente-ia-para-despachos-contables",
+      "keyword": "agente ia para despachos contables",
+      "tier": 2,
+      "cluster": "asesores",
+      "status": "published",
+      "date": "2026-10-07",
+      "source": "generated"
+    },
     {
       "slug": "agente-ia-para-clinicas-de-estetica",
       "keyword": "agente ia clínicas de estética",

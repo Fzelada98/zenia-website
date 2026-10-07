@@ -8038,6 +8038,8 @@ Full writeup with the Zapier vs Make vs native-API comparison, the HSM templates
 ---
 ## 2026-10-07 - Agente IA Talleres Automoción Postventa
 
+<!-- PUBLISHED:make-webhook at 2026-10-07T08:33:15Z -->
+
 Ship notes: Wired an aftersales agent for independent and franchised auto-service shops in Spain on top of their existing DMS (TallerGP, WinMotor Cloud, GestFuturo, Reixmor, Audatex).
 
 Stack: WhatsApp Business API through a BSP (360dialog or Twilio) as the channel, Meta-approved HSM templates (UTILITY for operational, MARKETING with opt-in for preventive campaigns), Node worker on managed infra, Postgres schema keyed on license plate (not contact) so the vehicle history survives ownership changes, and a routed LLM pipeline with per-intent SLAs (booking, estimate, extension approval, ITV reminder, pickup, follow-up) with a deterministic fallback to a human service advisor when confidence drops.

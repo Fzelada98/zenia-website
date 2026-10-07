@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-10-07T06:00:00+00:00",
+  "lastRun": "2026-10-07T14:00:00+00:00",
   "posts": [
+    {
+      "slug": "agente-ia-para-clinicas-de-estetica",
+      "keyword": "agente ia clínicas de estética",
+      "tier": 1,
+      "cluster": "estetica-agente-ia",
+      "status": "published",
+      "date": "2026-10-07",
+      "source": "striking"
+    },
     {
       "slug": "agente-ia-talleres-automocion-postventa",
       "keyword": "agente ia talleres automocion postventa",

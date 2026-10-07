@@ -8036,3 +8036,18 @@ Full writeup with the Zapier vs Make vs native-API comparison, the HSM templates
 #B2B #SaaS #AI #WhatsAppBusinessAPI #Scheduling
 
 ---
+## 2026-10-07 - Agente IA Talleres Automoción Postventa
+
+Ship notes: Wired an aftersales agent for independent and franchised auto-service shops in Spain on top of their existing DMS (TallerGP, WinMotor Cloud, GestFuturo, Reixmor, Audatex).
+
+Stack: WhatsApp Business API through a BSP (360dialog or Twilio) as the channel, Meta-approved HSM templates (UTILITY for operational, MARKETING with opt-in for preventive campaigns), Node worker on managed infra, Postgres schema keyed on license plate (not contact) so the vehicle history survives ownership changes, and a routed LLM pipeline with per-intent SLAs (booking, estimate, extension approval, ITV reminder, pickup, follow-up) with a deterministic fallback to a human service advisor when confidence drops.
+
+The interesting constraint was mid-service authorizations: the shop detects worn brake pads during the repair and needs a signed OK before the lift unblocks. Replacing phone callbacks with a WhatsApp button cuts the median authorization wait from 45-180 min to under 15 and keeps the bay turning.
+
+Market context from public panel data (GiPA via Motor16): average Spanish aftersales ticket was 684 EUR in H1 2026, up 9% YoY, with electrical and electronic faults already 16.4% of entries. The aftersales absorption ratio in the franchised network hit 62.5% in Q1 2026, 4.5 points higher than a year earlier.
+
+Full architecture, the six postventa flows and the DMS integration map: https://zeniapartners.com/blog/agente-ia-talleres-automocion-postventa.html
+
+#B2B #SaaS #AI #WhatsAppBusinessAPI #Automotive
+
+---

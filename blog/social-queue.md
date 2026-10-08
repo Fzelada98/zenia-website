@@ -8135,3 +8135,19 @@ Full teardown of agency types, pricing bands and architecture choices in the Mad
 #WhatsAppBusinessAPI #B2B #AIEngineering #CRM
 
 ---
+
+## 2026-10-08 - Moving Company CRM with AI (EN)
+
+Reference deployment for a 4-truck US residential mover: an AI agent on WhatsApp Business API + SMS fallback, backed by a vision-based virtual survey pipeline and a dispatch layer that writes back into the CRM of record.
+
+Stack: WhatsApp Cloud API via BSP, FastAPI gateway, LangGraph planner with tool-use (quote, schedule, deposit retry, dispatch), computer-vision model for room-by-room inventory extraction over 30-90s video, Postgres + pgvector for per-tenant rate cards and policy memory, Stripe webhooks on declined-card retries, two-way sync to Google Calendar and QuickBooks Online, fleet telematics ingest from Samsara for live ETAs.
+
+Measured over 90 days of pilot: median first-response at 42s across 540 inbound threads, virtual-survey cost at $15/completion vs. $110 in-home, close rate from 35% to 51%, deposit-fail recovery from 22% to 71%, jobs/truck/day up 19% on local lanes.
+
+Compliance surface: FMCSA Bill of Lading templates and 110% rule disclosures injected per origin/destination state, Meta DPA signed, PII scoped per tenant, deletion by customer-ID in under 2 hours.
+
+Full architecture, the 5 workflows and the 2-week rollout: https://zeniapartners.com/blog/moving-company-crm-with-ai.html
+
+#WhatsAppBusinessAPI #AIEngineering #ComputerVision #B2B
+
+---

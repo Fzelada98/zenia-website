@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-10-07T22:08:00+00:00",
+  "lastRun": "2026-10-08T06:30:00+00:00",
   "posts": [
+    {
+      "slug": "agencia-crm-madrid",
+      "keyword": "agencia crm madrid",
+      "tier": 4,
+      "cluster": "crm-ciudades",
+      "status": "published",
+      "date": "2026-10-08",
+      "source": "striking"
+    },
     {
       "slug": "agente-ia-para-despachos-contables",
       "keyword": "agente ia para despachos contables",

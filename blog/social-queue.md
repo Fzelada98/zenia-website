@@ -8116,3 +8116,20 @@ Full breakdown of the architecture, the integrations and the KPIs: https://zenia
 #WhatsAppBusinessAPI #LangGraph #AIEngineering #B2B
 
 ---
+
+## 2026-10-08 - Agencia CRM Madrid
+
+Building a CRM for an SMB in Madrid in 2026 means wiring WhatsApp Business API in from day one, not as a plugin on top.
+
+The stack we run for new deployments:
+- WhatsApp Business API via a BSP, HSM templates pre-approved before go-live
+- Intent routing with retrieval over the client's catalogue and explicit confidence thresholds for human handoff
+- Idempotent webhooks into HubSpot, Zoho or Pipedrive, with cross-channel identity resolution so a lead from Google Ads and a reply on WhatsApp resolve to the same record
+
+Median first-response latency across the current cohort: under 60 seconds end-to-end. Time from signed RFP to production: 2 to 5 weeks, versus 4 to 9 months for enterprise rollouts.
+
+Full teardown of agency types, pricing bands and architecture choices in the Madrid market: https://zeniapartners.com/blog/agencia-crm-madrid.html
+
+#WhatsAppBusinessAPI #B2B #AIEngineering #CRM
+
+---

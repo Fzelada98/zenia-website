@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-10-08T14:00:00+00:00",
+  "lastRun": "2026-10-08T22:00:00+00:00",
   "posts": [
+    {
+      "slug": "agente-ia-clinicas-gestion-citas-telefonicas",
+      "keyword": "agente ia clinicas gestion citas telefonicas",
+      "tier": 2,
+      "cluster": "clinicas",
+      "status": "published",
+      "date": "2026-10-08",
+      "source": "striking"
+    },
     {
       "slug": "agente-ia-hoteles-turismo-reservas",
       "keyword": "agente ia hoteles turismo reservas",

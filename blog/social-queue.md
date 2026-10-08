@@ -8182,3 +8182,17 @@ Full architecture, the four workflows and the two-week rollout: https://zeniapar
 #WhatsAppBusinessAPI #AIEngineering #HealthTech #HIPAA
 
 ---
+
+## 2026-10-08 - Agente IA clínicas: gestión de citas telefónicas (EN)
+
+Reference build for a Spanish primary-care clinic group: an AI agent that owns phone and WhatsApp intake end to end, with the practice-management system (Doctoralia / Clinic Cloud / Nubimed) as the source of truth and no screen-scraping.
+
+Stack: Twilio Voice SIP trunk feeding an ElevenLabs streaming TTS and OpenAI Realtime ASR pipeline over a WebRTC bridge, LangGraph planner with tool-use (slot search, book, reschedule, cancel, triage escalation), WhatsApp Business API as the parallel async channel with pre-approved reminder templates, FastAPI service brokered through a per-tenant JWT boundary, Postgres with row-level security per clinic and pgvector for patient-context memory, bidirectional connectors to the clinical software REST APIs plus a reconciliation worker that reads back every booking the agent wrote. Triage keywords hard-interrupt the planner and transfer the SIP leg to the on-call doctor with an auto-generated handoff summary.
+
+Measured in production: 92nd-percentile answer latency 1.4s on the voice leg, agent handles 68% of inbound call volume without human handoff, missed-call rate on the main line down from 34% to under 2%, no-show rate down from 17% to 7% after the 48h+24h reminder pair was wired in. Compliance surface: GDPR DPAs with every subprocessor, PHI encrypted at rest with per-tenant KMS keys, EU-only inference endpoints, deletion-by-patient-ID under 2 hours.
+
+Full architecture, software-clinico integrations and the four-week rollout: https://zeniapartners.com/blog/agente-ia-clinicas-gestion-citas-telefonicas.html
+
+#AIEngineering #WhatsAppBusinessAPI #HealthTech #VoiceAI
+
+---

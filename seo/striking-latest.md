@@ -23,7 +23,7 @@ Consultas donde zeniapartners.com ya imprime en posición 4-30 (últimos 8 días
 | 8.0 | 10 | agente ia talleres automocion postventa | /blog/agente-ia-para-talleres-mecanicos.html |
 | 29.1 | 10 | agentes ia malaga | /blog/agentes-inteligentes-ia-malaga.html |
 | 14.2 | 10 | desarrollo agente ai clínicas de estética | /blog/agente-ia-para-clinicas-esteticas.html |
-| 15.2 | 9 | agente ia hoteles turismo reservas | /blog/agente-ia-para-hoteles.html |
+| 15.2 | 9 | agente ia hoteles turismo reservas | /blog/agente-ia-para-hoteles.html &rarr; refuerzo: [agente ia hoteles turismo reservas](/blog/agente-ia-hoteles-turismo-reservas.html) |
 | 17.9 | 9 | agente ia talleres automocion postventa | /blog/agente-ia-para-talleres-de-coches.html |
 | 29.4 | 9 | desarrollo agente ai clínicas de estética | /blog/agente-ia-para-clinicas-de-medicina-estetica.html |
 | 20.6 | 8 | agencia crm madrid | /es/crm-madrid.html |

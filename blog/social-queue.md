@@ -8151,3 +8151,19 @@ Full architecture, the 5 workflows and the 2-week rollout: https://zeniapartners
 #WhatsAppBusinessAPI #AIEngineering #ComputerVision #B2B
 
 ---
+## 2026-10-08 - Agente IA Hoteles: Turismo y Reservas
+
+Reference deployment for a 50-key independent hotel chain across Spain: a conversational agent on WhatsApp Business API that reads inventory from the PMS, writes new bookings back and generates a payment link, all before the guest returns to the OTA.
+
+Stack: WhatsApp Cloud API via BSP (HSM templates pre-approved for pre-stay and post-stay journeys), FastAPI gateway, LangGraph planner with tool-use (quote, book, modify, upsell, review), bidirectional connectors to Mews, Cloudbeds, Opera and Tesipro over native APIs plus a 60-second CSV/SQL fallback for legacy properties, SiteMinder as channel manager of record, Stripe and Redsys for payment links signed server-side, per-tenant policy memory in Postgres with pgvector for room descriptions and rate rules, Twilio and Vonage as voice fallback for high-margin bookings.
+
+Measured over 60 days of pilot: median first-response at 38s across inbound threads in 11 languages, PMS write-back latency under 900ms p95, OTA-to-direct shift of ~16 points on repeat guests, cancellation rate on direct bookings at 10.6% vs. 21.8% on OTA (consistent with Cloudbeds, 2026).
+
+Compliance surface: PCI-DSS handled at the gateway (card data never crosses WhatsApp), GDPR data subject access requests resolved by phone number in under 2 hours, Meta DPA signed, PII scoped per property.
+
+Full teardown of the architecture, the integration map and the KPIs: https://zeniapartners.com/blog/agente-ia-hoteles-turismo-reservas.html
+
+#WhatsAppBusinessAPI #AIEngineering #HospitalityTech #B2B
+
+---
+

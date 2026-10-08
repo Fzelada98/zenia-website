@@ -8119,6 +8119,8 @@ Full breakdown of the architecture, the integrations and the KPIs: https://zenia
 
 ## 2026-10-08 - Agencia CRM Madrid
 
+<!-- PUBLISHED:make-webhook at 2026-10-08T08:30:02Z -->
+
 Building a CRM for an SMB in Madrid in 2026 means wiring WhatsApp Business API in from day one, not as a plugin on top.
 
 The stack we run for new deployments:

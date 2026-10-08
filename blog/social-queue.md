@@ -8167,3 +8167,18 @@ Full teardown of the architecture, the integration map and the KPIs: https://zen
 
 ---
 
+## 2026-10-08 - Optometrist CRM with AI (EN)
+
+Reference deployment for a 2-doctor US optometry practice: an AI layer on top of the practice-management system that owns the recall list, the no-show recovery loop and the contact-lens reorder cadence, without touching the EHR of record.
+
+Stack: WhatsApp Business API + 10DLC SMS as primary channels, FastAPI gateway behind a BAA-signed proxy, LangGraph planner with tool-use (recall booking, insurance-benefit snapshot, CL reorder, no-show reschedule), bidirectional connectors to RevolutionEHR and Eyefinity via vendor APIs plus a nightly reconciliation job for Crystal PM and Compulink, VSP and EyeMed verification over SOAP wrappers, Postgres with row-level security per practice and pgvector for per-patient policy memory, PHI-scoped LLM calls routed to an in-VPC inference endpoint instead of a shared provider, write-ahead audit log for every agent-sent message.
+
+Measured over 6 months of pilot: annual exam compliance from 48% to 67%, no-show rate from 22% to 8%, contact-lens annual-supply attach from 31% to 52%, median first-response at 44s across 1,100 active patients, front-desk inbound call volume down 60%.
+
+Compliance surface: HIPAA BAA executed with every subprocessor, PHI encrypted at rest with per-tenant KMS keys, 10DLC campaign registered for medical-recall traffic, deletion by patient ID in under 2 hours.
+
+Full architecture, the four workflows and the two-week rollout: https://zeniapartners.com/blog/optometrist-crm-with-ai.html
+
+#WhatsAppBusinessAPI #AIEngineering #HealthTech #HIPAA
+
+---

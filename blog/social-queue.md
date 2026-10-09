@@ -8199,6 +8199,8 @@ Full architecture, software-clinico integrations and the four-week rollout: http
 
 ## 2026-10-09 - Agencia CRM Vigo: engineering view (EN)
 
+<!-- PUBLISHED:make-webhook at 2026-10-09T08:39:19Z -->
+
 Field notes from standing up WhatsApp AI agents for SMBs across Galicia in 2026.
 
 Stack we ship against legacy ERPs in the Vigo industrial belt: Meta Cloud API webhook into a Fastify ingress, idempotency keys on every message, FastAPI planner with tool-use over the CRM REST API, Postgres with row-level security per tenant and pgvector for business-context memory, dual LLM routing (one provider for intent + retrieval, another for voice-of-brand replies) behind an EU-only inference boundary, bidirectional connectors to Zoho / Dynamics 365 Business Central / HubSpot, nightly reconciliation worker that reads back every record the agent wrote, and a write-ahead audit log that satisfies Verifactu traceability.

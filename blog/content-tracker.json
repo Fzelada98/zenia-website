@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-10-08T22:00:00+00:00",
+  "lastRun": "2026-10-09T06:00:00+00:00",
   "posts": [
+    {
+      "slug": "agencia-crm-vigo",
+      "keyword": "agencia crm vigo",
+      "tier": 4,
+      "cluster": "crm-ciudades",
+      "status": "published",
+      "date": "2026-10-09",
+      "source": "striking"
+    },
     {
       "slug": "agente-ia-clinicas-gestion-citas-telefonicas",
       "keyword": "agente ia clinicas gestion citas telefonicas",

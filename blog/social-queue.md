@@ -8256,3 +8256,18 @@ Full architecture, buy-vs-build comparison and 2-week rollout: https://zeniapart
 #WhatsAppBusinessAPI #AIEngineering #B2B #Infrastructure
 
 ---
+## 2026-10-09 - Automation for gyms in Barcelona (EN)
+
+Field notes from shipping WhatsApp AI agents into gym operations in Barcelona in 2026.
+
+Stack: WhatsApp Business API via a 360dialog BSP against the club's existing number as the primary channel, Instagram Direct and Click-to-WhatsApp Ads webhooks funneled into the same Fastify ingress with idempotency keys, LangGraph planner with tool-use (class availability read, waitlist join, drop-in booking, direct-debit retry, inactivity reactivation), bidirectional connectors to Virtuagym / Bsport / Trainingym / Aimharder / Resasports for schedule and member state (each PMS exposes a different "member paused" semantic, which the connector layer normalises), SEPA reconciliation worker on top of Stripe or Redsys that reads back every retried charge, Postgres with row-level security per club and pgvector for member-context memory (injury flags, class affinity, pause history), tri-lingual intent routing in es-ES / ca-ES / en-GB with a deterministic fallback to reception on anything that touches contracts or price negotiation.
+
+Measured against the 2026 Spanish fitness context (DBK via Emprendedores: ~4,600 clubs active, +3.5% YoY, revenue forecast +7-8%, Catalonia one of the three regions carrying ~60% of the stock): P95 first-reply 1.9s on WhatsApp against a 30s SLA, direct-debit recovery rate landing between 50% and 70% within 7 days of the first bounce depending on the acquiring bank's retry policy, and 68% of first-contact lead threads closed to a trial booking without human handoff.
+
+The hard part was not the LLM. It was the catalan-vs-castilian code-switch mid-thread and the GDPR/LOPDGDD evidence trail: every outbound template needs its own consent base recorded, and the data subject access path has to reconcile WhatsApp history with the PMS record so the member sees one timeline, not two.
+
+Architecture, PMS integration matrix and the five-week rollout: https://zeniapartners.com/blog/automatizacion-para-gimnasios-barcelona.html
+
+#WhatsAppBusinessAPI #AIEngineering #FitTech #Infrastructure
+
+---

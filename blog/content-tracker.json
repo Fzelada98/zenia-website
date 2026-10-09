@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-10-09T14:00:00+00:00",
+  "lastRun": "2026-10-09T22:00:00+00:00",
   "posts": [
+    {
+      "slug": "automatizacion-para-gimnasios-barcelona",
+      "keyword": "automatizacion para gimnasios en barcelona",
+      "tier": 4,
+      "cluster": "gimnasios-geo",
+      "source": "generated",
+      "status": "published",
+      "date": "2026-10-09"
+    },
     {
       "slug": "automatizacion-para-restaurantes-en-lima",
       "keyword": "automatizacion para restaurantes en lima",

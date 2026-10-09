@@ -8196,3 +8196,17 @@ Full architecture, software-clinico integrations and the four-week rollout: http
 #AIEngineering #WhatsAppBusinessAPI #HealthTech #VoiceAI
 
 ---
+
+## 2026-10-09 - Agencia CRM Vigo: engineering view (EN)
+
+Field notes from standing up WhatsApp AI agents for SMBs across Galicia in 2026.
+
+Stack we ship against legacy ERPs in the Vigo industrial belt: Meta Cloud API webhook into a Fastify ingress, idempotency keys on every message, FastAPI planner with tool-use over the CRM REST API, Postgres with row-level security per tenant and pgvector for business-context memory, dual LLM routing (one provider for intent + retrieval, another for voice-of-brand replies) behind an EU-only inference boundary, bidirectional connectors to Zoho / Dynamics 365 Business Central / HubSpot, nightly reconciliation worker that reads back every record the agent wrote, and a write-ahead audit log that satisfies Verifactu traceability.
+
+Measured in production: P50 first-reply at 11s, P95 at 38s against a 60s SLA, 68% of inbound WhatsApp threads closed without human handoff, Meta Business Verification clearing in 4-19 days (the real critical path for any Vigo rollout, not the LLM).
+
+Full architecture, the three-tier agency landscape (HubSpot/Salesforce partners vs. Zoho consultancies vs. AI-first stacks) and how IG300C/Ticket Innova co-finance the setup: https://zeniapartners.com/blog/agencia-crm-vigo.html
+
+#WhatsAppBusinessAPI #AIEngineering #B2B #Infrastructure
+
+---

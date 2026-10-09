@@ -8228,3 +8228,16 @@ Full architecture, integrations and 2-week rollout: https://zeniapartners.com/bl
 #WhatsAppBusinessAPI #AIEngineering #B2B #Infrastructure
 
 ---
+## 2026-10-09 - Automation for restaurants in Lima (EN)
+
+Field notes from shipping WhatsApp AI agents into Lima's restaurant stack in 2026.
+
+The hard part is not the agent, it is the integration surface. In Peru that means Bsale, Defontana, Manager Software or Mozopro for the POS; Yape and Plin for same-chat payments on direct delivery; and a Meta Business Verification queue that still runs 48 to 72 hours even for well-formed submissions. We ship a Fastify ingress on the Meta Cloud API with idempotency keys, a planner over tool-use that writes bookings into the reservation system and reads them back on a reconciliation worker, Postgres with row-level security per tenant and pgvector for comensal context (preferred table, allergens, last-visit tags), dual LLM routing (one for intent + retrieval, one for voice-of-brand in es-PE / en-US / pt-BR), and a deterministic escalation path on sentiment or on anything matching a corporate-event pattern.
+
+Measured in production on a Miraflores two-service restaurant: P50 first-reply at 7s on WhatsApp, P95 at 24s against a 60s SLA, no-show rate from 14% to 5% after the 24h+2h confirmation pair was wired to the POS, and about 34% of captured delivery orders landing outside the owner's old attention window.
+
+Full architecture, POS integrations and the five-week rollout: https://zeniapartners.com/blog/automatizacion-para-restaurantes-en-lima.html
+
+#WhatsAppBusinessAPI #AIEngineering #RestaurantTech #Infrastructure
+
+---

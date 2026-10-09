@@ -8241,3 +8241,18 @@ Full architecture, POS integrations and the five-week rollout: https://zeniapart
 #WhatsAppBusinessAPI #AIEngineering #RestaurantTech #Infrastructure
 
 ---
+## 2026-10-09 - AI Agent for Yoga Studios (EN)
+
+Field notes from standing up WhatsApp AI agents on top of Mindbody for US boutique yoga studios.
+
+Stack: WhatsApp Business API via 360dialog BSP as the primary channel, Instagram Direct and Google Business messages into the same Fastify ingress with idempotency keys, LangGraph planner with tool-use (schedule read, book, waitlist join, pack purchase, failed-card recovery), bidirectional connector to Mindbody Public API v6 for availability + client lookup falling back to the legacy SOAP endpoint for class signup where v6 is not exposed, webhook listeners for bookings / cancellations / waitlist movement / card failures, Stripe Checkout links delivered inside the WhatsApp thread for intro packs and dunning, Postgres with row-level security per studio and pgvector for member-context memory (injury flags, teacher affinities, style preferences), Twilio SMS fallback for the roughly 15-20% of members who have not opted into WhatsApp, and a reconciliation worker that reads back every booking the agent wrote against the Mindbody schedule.
+
+Measured in production over 90 days on a 2-location, 280-member boutique: P95 first-reply 1.8s on WhatsApp against a 30s SLA, 73% of first-contact threads closed end-to-end without human handoff, no-shows from 21% to 9% after the 3-touch reminder loop (T-24h, T-2h, 15-min waitlist auto-fill) landed, failed-card recovery from 28% to 68% within 7 days.
+
+The hard part was not the LLM. It was Mindbody's SOAP class-signup edge cases, the deterministic refusal path when the agent is unsure of a member's injury history, and the Meta template approval queue for the reminder flows.
+
+Full architecture, buy-vs-build comparison and 2-week rollout: https://zeniapartners.com/blog/ai-agent-for-yoga-studios.html
+
+#WhatsAppBusinessAPI #AIEngineering #B2B #Infrastructure
+
+---

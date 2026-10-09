@@ -8212,3 +8212,19 @@ Full architecture, the three-tier agency landscape (HubSpot/Salesforce partners 
 #WhatsAppBusinessAPI #AIEngineering #B2B #Infrastructure
 
 ---
+
+## 2026-10-09 - AI Agent for Driving Schools (EN)
+
+Field notes from a US driving-school deployment (2 instructors, 2 training cars, teen + adult packages).
+
+Stack: WhatsApp Business API through a 360dialog BSP as the primary channel, Twilio 10DLC SMS as fallback for the 25-35% of parents who refuse WhatsApp, Google Business Profile messages and Instagram DM webhooks funneled into the same Fastify ingress with idempotency keys, LangGraph planner with tool-use (slot search, book, reschedule, deposit charge, hour-tracker update), bidirectional connector to the scheduling tool of record (DrivingSchoolCloud or Google Calendar) with a reconciliation worker that reads back every booking the agent wrote, state-rule config loaded per tenant (TX 7h+7h observation, FL 50h parent-supervised log, CA 6h+50h) so the planner refuses to book a road-test prep before the DMV minimum, Stripe for the $25 repeat-no-show deposit flow, Postgres with row-level security per school and pgvector for student-context memory.
+
+Measured in production over 90 days: P95 first-reply 1.6s on WhatsApp, enrollment rate from 22% to 31% (+41% relative), no-show rate from 19% to 8% after the 48h+24h+morning-of reminder stack landed, bundle completion from 61% to 78% once the 14-day hour-tracker nudge was wired to the state-minimum calculator, front-desk inbound workload down from 22 h/week to 6.
+
+The hard part was not the LLM. It was the state-rule layer: fifty DMV rulebooks, hour-logging that reconciles instructor-side mobile input with student-side WhatsApp confirmation, and a deterministic refusal path when a booking would violate the state minimum.
+
+Full architecture, integrations and 2-week rollout: https://zeniapartners.com/blog/ai-agent-for-driving-schools.html
+
+#WhatsAppBusinessAPI #AIEngineering #B2B #Infrastructure
+
+---

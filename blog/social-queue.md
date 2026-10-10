@@ -8316,3 +8316,18 @@ Architecture, portal webhook contracts and the 4-6 week rollout: https://zeniapa
 #WhatsAppBusinessAPI #AIEngineering #ConstructionTech #Infrastructure
 
 ---
+## 2026-10-10 - AI agent for pilates studios (EN)
+
+Field notes from shipping a WhatsApp AI agent into US boutique pilates studios in 2026.
+
+Stack: WhatsApp Business API via a Meta Cloud BSP as the primary channel, Instagram DM and Google Business Profile messages normalised into the same ingress with per-contact threading, LangGraph planner with tool-use (reformer-vs-mat capacity read against Mindbody / Mariana Tek / Walla / Momence / Vagaro / Vibefam / Punchpass / Fitune APIs, reservation-then-commit slot writes to avoid double-booking a 6-seat reformer class, Stripe Checkout links for intro packs and failed-card dunning, Google Reviews API for the T+24h post-class ask), Postgres with row-level security per studio and pgvector for lifecycle state (intro-pack vs 2-visits-done vs new-member at D30 so the agent nudges the right next step rather than one generic sequence), deterministic escalation on injury disclosures and anything the owner flagged as human-review.
+
+The hard part was not the LLM. It was the booking-platform heterogeneity: each vendor exposes different cap semantics for reformer vs mat vs tower, different waitlist primitives, and some (Mindbody) require OAuth with per-site tokens while others (Vibefam) are shop-scoped. We abstract a 6-capability contract (read_classes, read_capacity, write_booking, write_waitlist, cancel_booking, read_member) and only certify studios we can fully fulfil against; partial adapters do not ship.
+
+Measured on a 2-location Denver studio over 90 days: P95 first-reply 2.3s on WhatsApp and Instagram, 74% of inbound messages resolved by the agent without human touch, reformer no-show rate from 11.8% to 5.1% once the T-24h + T-2h cadence with 10-minute waitlist auto-hold landed, failed-card recovery 29% to 66% on WhatsApp vs the email baseline.
+
+Architecture, booking-platform adapter contract and the 2-week rollout: https://zeniapartners.com/blog/ai-agent-for-pilates-studios.html
+
+#WhatsAppBusinessAPI #AIEngineering #FitnessTech #Infrastructure
+
+---

@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-10-09T17:00:00.000000+00:00",
+  "lastRun": "2026-10-10T09:00:00.000000+00:00",
   "market": "US/UK small business",
   "posts": [
     {
@@ -312,7 +312,8 @@
       "keyword": "ai agent for appliance repair",
       "tier": 2,
       "cluster": "trades",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-10-10"
     },
     {
       "slug": "ai-agent-for-locksmiths",

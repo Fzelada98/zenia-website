@@ -8286,3 +8286,18 @@ Full pricing comparison (HubSpot, Salesforce, Zoho, Pipedrive, Freshsales and a 
 #WhatsAppBusinessAPI #AIEngineering #CRM #Infrastructure
 
 ---
+## 2026-10-10 - AI agent for appliance repair (EN)
+
+Field notes from shipping a WhatsApp AI agent into US appliance repair shops in 2026.
+
+Stack: WhatsApp Business API via a Twilio BSP as the primary conversational channel, voice fallback through a Twilio SIP trunk that routes to the agent after 3 unanswered rings with real-time Whisper transcription merged into the same thread, LangGraph planner with tool-use (job triage, Housecall Pro / Jobber slot write, Marcone and Reliable Parts lookup, Stripe deposit link, warranty check against OEM windows), drive-time-aware scheduler that reads tech GPS and ZIP distance before offering slots so dispatcher-less booking does not blow up the day's route, Postgres with row-level security per shop and pgvector for prior-visit memory (brand, model, serial, past faults), deterministic escalation on multi-appliance remodels, insurance claims and tickets over $2,000.
+
+Measured on a 2-truck Phoenix shop over 90 days: P95 first-reply 18s across WhatsApp and voice-forwarded calls, 74% contact-to-booked rate on agent-handled threads, no-shows from 11.5% to 4.2% after the night-before + T-45min cadence landed, 41 new Google reviews from the post-visit template at a 32% response rate.
+
+The hard part was not the LLM. It was the parts-API latency budget (Marcone and Encompass can take 2 to 6 seconds per lookup, so we parallelise against a local SKU cache) and the field-platform write path on Housecall Pro: idempotent slot writes with a reservation-then-commit pattern are the only way to avoid double-booking when two leads land in the same 90-second window.
+
+Architecture, integration stack and 2-week rollout: https://zeniapartners.com/blog/ai-agent-for-appliance-repair.html
+
+#WhatsAppBusinessAPI #AIEngineering #FieldService #Infrastructure
+
+---

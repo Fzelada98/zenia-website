@@ -8271,3 +8271,18 @@ Architecture, PMS integration matrix and the five-week rollout: https://zeniapar
 #WhatsAppBusinessAPI #AIEngineering #FitTech #Infrastructure
 
 ---
+## 2026-10-10 - How much does a CRM cost (EN)
+
+Field notes from engineering a WhatsApp-first CRM that charges flat per company instead of per seat.
+
+Stack: WhatsApp Business API via a 360dialog BSP as the primary channel, Instagram Direct and web chat funneled into the same Fastify ingress with idempotency keys, LangGraph planner with tool-use (lead capture, pipeline mutation, booking write, follow-up queue), bidirectional connectors to the client's existing CRM when they already run HubSpot or Salesforce (we sit on top, we do not replace), Postgres with row-level security per tenant and pgvector for conversation + customer context, a reconciliation worker that writes every agent-side pipeline change back to the system of record and reads it back on the next tick, deterministic escalation on sentiment, price negotiation and anything matching a legal pattern.
+
+The reason the pricing model is flat per company and not per user: cost scales with WhatsApp conversation volume, LLM tokens and tool-use invocations, not with how many humans log into a dashboard. Per-seat pricing on a CRM is a 2010 accounting artefact that penalises teams for growing. Pricing on infrastructure cost is honest.
+
+Measured in production: P95 first-reply 2.1s on WhatsApp against a 60s SLA, 71% of first-contact threads closed to a qualified lead without human handoff, and a 30% total-cost-of-ownership gap vs HubSpot Professional at 8 seats once onboarding and addons land on the invoice.
+
+Full pricing comparison (HubSpot, Salesforce, Zoho, Pipedrive, Freshsales and a custom build) with the hidden costs that inflate the first-year bill ~30%: https://zeniapartners.com/blog/cuanto-cuesta-un-crm.html
+
+#WhatsAppBusinessAPI #AIEngineering #CRM #Infrastructure
+
+---

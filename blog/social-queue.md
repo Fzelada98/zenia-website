@@ -8301,3 +8301,18 @@ Architecture, integration stack and 2-week rollout: https://zeniapartners.com/bl
 #WhatsAppBusinessAPI #AIEngineering #FieldService #Infrastructure
 
 ---
+## 2026-10-10 - AI agent for construction and renovation firms (EN)
+
+Field notes from shipping a WhatsApp AI agent into Spanish construction and renovation firms in 2026.
+
+Stack: WhatsApp Business API via a 360dialog BSP as the primary channel, Habitissimo and Houzz portal webhooks normalised into the same ingress with per-lead attribution, LangGraph planner with tool-use (6-question technical qualification by job type, ZIP-based service-area filter against site-manager calendars in Google Workspace or Microsoft 365, PDF budget generation from Presto / Arquimedes / CYPE exports, Signaturit for electronic signature, Google Business Profile review-request at T+48h), Postgres with row-level security per tenant and pgvector for job-type context (new build vs integral vs partial vs maintenance so the agent does not run one script across four very different sales cycles), deterministic escalation on structural scope and anything over the firm's internal ticket threshold.
+
+The hard part was not the LLM. It was channel attribution: a firm pays 60 EUR per lead on Habitissimo and 220 EUR on Google Ads but closes different ticket sizes on each, so the pipeline writes `source` on first contact and the margin dashboard back-propagates the won-contract value to the acquiring channel. Without that, growth decisions are blind.
+
+Measured against the 2026 Spanish renovation market (Andimac: 1.9M residential interventions, 32,000 EUR average integral-renovation ticket, 4% sector growth per elEconomista): P95 first-reply under 60s on WhatsApp against a 5-minute SLA (the HBR-documented cliff where contact probability drops 21x), contact-to-qualified-lead landing at 87% vs the 42% MIT Lead Response baseline, and non-qualified technical visits down from 35-45% to 8-12% after the pre-visit filter was tightened on ZIP and budget range.
+
+Architecture, portal webhook contracts and the 4-6 week rollout: https://zeniapartners.com/blog/agente-ia-empresas-construccion-reformas.html
+
+#WhatsAppBusinessAPI #AIEngineering #ConstructionTech #Infrastructure
+
+---

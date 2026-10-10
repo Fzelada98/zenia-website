@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-10-10T14:00:00+00:00",
+  "lastRun": "2026-10-10T22:12:26+00:00",
   "posts": [
     {
       "slug": "agente-ia-empresas-construccion-reformas",
@@ -4113,6 +4113,14 @@
       "cluster": "whatsapp-retention",
       "status": "published",
       "date": "2026-10-02"
+    },
+    {
+      "slug": "lead-scoring-automatico-con-ia",
+      "keyword": "lead scoring automatico con ia",
+      "tier": 2,
+      "cluster": "ventas-ia",
+      "status": "published",
+      "date": "2026-10-10"
     }
   ]
 }

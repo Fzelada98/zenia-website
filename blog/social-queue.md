@@ -8331,3 +8331,18 @@ Architecture, booking-platform adapter contract and the 2-week rollout: https://
 #WhatsAppBusinessAPI #AIEngineering #FitnessTech #Infrastructure
 
 ---
+## 2026-10-10 - Lead scoring with AI, the architecture (EN)
+
+Real-time lead scoring, not nightly batches.
+
+Pipeline: capture (WhatsApp Business API + web forms land as one CRM contact), enrichment (Clearbit / Apollo, async with idempotent retries), scoring (gradient boosting on 12-24 months of won and lost deals, writes a probability back to the CRM), routing (hot bucket pages a human in under 60s, warm goes to automated nurture, cold to quarterly reactivation).
+
+Design choice that matters: the AI agent never blocks the conversation waiting for the model. Default policy is "warm" until the score lands, usually ~400 ms including a Clearbit roundtrip. Retrain cadence every 90 days, else drift wins.
+
+Forrester puts the lift at +35% SQL acceptance vs rules-based. The architecture that gets you there is the unglamorous part: queues, retries, drift monitors, feedback loops from the sales team back into the training set.
+
+Full writeup (ES): https://zeniapartners.com/blog/lead-scoring-automatico-con-ia.html
+
+#B2B #LeadScoring #MLOps #RevOps
+
+---

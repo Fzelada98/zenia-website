@@ -8346,3 +8346,16 @@ Full writeup (ES): https://zeniapartners.com/blog/lead-scoring-automatico-con-ia
 #B2B #LeadScoring #MLOps #RevOps
 
 ---
+## 2026-10-11 - CRM vs ERP for SMBs, the engineering view (EN)
+
+Picking between CRM and ERP for an SMB is a systems-design decision, not a procurement one. The two systems answer different questions, hold different source-of-truth records, and fail in different ways.
+
+Field notes: the integration contract is where this breaks. Mapping a single contact across two schemas (CRM contact.id vs ERP partner.vat) and deciding who owns which fields (CRM owns stage, source, next-action; ERP owns balance, invoice, stock) has to be defined before either system is populated. Skip it and year 2 is spent reconciling 40k duplicate records.
+
+Measured operating envelope on the CRM leg: WhatsApp Business API on top of a Postgres CRM with pgvector for conversation state, P95 first-reply <60s, deterministic escalation to humans on anything billing-related (the ERP's territory). On the ERP leg: Nucleus Research puts the average SMB ERP project at 2.5x the initial estimate; the risk is scope creep, not technology.
+
+Full breakdown of the five minimum CRM-ERP sync points and when each system earns its cost: https://zeniapartners.com/blog/diferencia-entre-crm-y-erp-pymes.html
+
+#CRM #ERP #AIEngineering #Infrastructure
+
+---

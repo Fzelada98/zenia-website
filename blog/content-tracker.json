@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-10-10T22:12:26+00:00",
+  "lastRun": "2026-10-11T06:14:17.589793+00:00",
   "posts": [
     {
       "slug": "agente-ia-empresas-construccion-reformas",
@@ -4121,6 +4121,15 @@
       "cluster": "ventas-ia",
       "status": "published",
       "date": "2026-10-10"
+    },
+    {
+      "slug": "diferencia-entre-crm-y-erp-pymes",
+      "keyword": "diferencia entre CRM y ERP para pymes",
+      "tier": 3,
+      "cluster": "educacion-crm",
+      "status": "published",
+      "date": "2026-10-11",
+      "source": "matrix"
     }
   ]
 }

@@ -8359,3 +8359,16 @@ Full breakdown of the five minimum CRM-ERP sync points and when each system earn
 #CRM #ERP #AIEngineering #Infrastructure
 
 ---
+## 2026-10-11 - AI agent for dance studios (EN)
+
+Field notes from shipping a WhatsApp AI agent into US dance studios in 2026.
+
+Stack: WhatsApp Business API via a Meta Cloud BSP as the primary channel, Instagram DM and Google Business Profile messages normalised into the same ingress with per-family threading (one parent, N dancers, sibling links), LangGraph planner with tool-use (class-cap read against Jackrabbit Dance / DanceStudio-Pro / The Studio Director / iClassPro / Akada / Mindbody APIs, reservation-then-commit writes so a full Primary Ballet does not get overbooked, Stripe or Square for tuition and costume installments and failed-card dunning, Google Reviews API at T+24h after a positive trial), Postgres with row-level security per studio and pgvector for dancer-state (trial / enrolled / 2-consecutive-absences / costume-ordered / recital-registered so the agent fires the right sequence), deterministic escalation on anything injury-related or outside the studio's published policies.
+
+The hard part was not the LLM. It was the two-absence rule: a dance season leaks quietly between weeks 4 and 10, and the signal that catches it is attendance, not messaging. We query the studio software's attendance endpoint on a cron, write an `absence_streak` counter per dancer, and fire the check-in message to the paying parent (not the dancer) when the counter hits 2. The whole retention lift comes from treating attendance as the primary event stream, with WhatsApp as the output channel.
+
+Measured on a 2-location Charlotte studio over 90 days: P95 first-reply 2.1s on WhatsApp and Instagram, 78% of inbound messages resolved by the agent without human touch, weekly-class no-show rate from 14.6% to 5.4% once the T-24h + T-2h cadence with waitlist auto-hold landed, failed-card recovery 28% to 71% on WhatsApp vs the email baseline.
+
+Architecture, studio-software adapter contract and the 2-week rollout: https://zeniapartners.com/blog/ai-agent-for-dance-studios.html
+
+#WhatsAppBusinessAPI #AIEngineering #EdTech #Infrastructure

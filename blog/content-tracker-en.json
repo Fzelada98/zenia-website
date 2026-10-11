@@ -215,7 +215,8 @@
       "keyword": "ai agent for martial arts schools",
       "tier": 2,
       "cluster": "education",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-10-11"
     },
     {
       "slug": "ai-agent-for-music-schools",

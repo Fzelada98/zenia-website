@@ -8372,3 +8372,18 @@ Measured on a 2-location Charlotte studio over 90 days: P95 first-reply 2.1s on 
 Architecture, studio-software adapter contract and the 2-week rollout: https://zeniapartners.com/blog/ai-agent-for-dance-studios.html
 
 #WhatsAppBusinessAPI #AIEngineering #EdTech #Infrastructure
+
+---
+## 2026-10-11 - AI agent for martial arts schools (EN)
+
+Field notes from shipping a WhatsApp AI agent into US martial arts schools (karate, BJJ, taekwondo, muay thai, mixed youth programs) in 2026.
+
+Stack: WhatsApp Business API via a Meta Cloud BSP as the primary channel, Instagram DM and Google Business Profile messages normalised into the same ingress with per-family threading (one paying parent, N students, sibling links, belt rank per student), LangGraph planner with tool-use against Zen Planner / Rainmaker Hub / Jibasoft / MyStudio / Spark Membership / Dojo Manager via REST (reservation-then-commit writes so an at-cap Little Dragons trial does not get overbooked, Stripe or Square for autopay plus promotion fees and intro-pack purchases, Google Reviews API at T+24h after a positive trial or belt promotion), Postgres with row-level security per school and pgvector for student-state (trial-booked / trial-attended / enrolled / 2-consecutive-absences / belt-test-scheduled / promotion-day) so the agent fires the right sequence.
+
+The hard part was not the LLM. It was the yellow-belt-wall signal: dojos leak quietly between weeks 4 and 12, and the thing that catches it is attendance deltas, not inbound volume. We poll the dojo software's attendance endpoint, write an `absence_streak` counter per student, and fire the check-in to the paying parent (not the student) when the counter hits 2. The retention lift comes from treating attendance as the primary event stream and WhatsApp as the output.
+
+Measured on a 2-location Dallas-Fort Worth school over 90 days: P95 first-reply 2.0s on WhatsApp and Instagram, 81% of inbound messages resolved by the agent without human touch, weekly-class no-show rate from 15.2% to 5.9% once the T-24h / T-2h / T+90min cadence landed, autopay failed-card recovery 29% to 74% on WhatsApp vs the email baseline.
+
+Architecture, dojo-software adapter contract and the 2-week rollout: https://zeniapartners.com/blog/ai-agent-for-martial-arts-schools.html
+
+#WhatsAppBusinessAPI #AIEngineering #MartialArts #Infrastructure

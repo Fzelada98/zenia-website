@@ -8387,3 +8387,19 @@ Measured on a 2-location Dallas-Fort Worth school over 90 days: P95 first-reply 
 Architecture, dojo-software adapter contract and the 2-week rollout: https://zeniapartners.com/blog/ai-agent-for-martial-arts-schools.html
 
 #WhatsAppBusinessAPI #AIEngineering #MartialArts #Infrastructure
+
+---
+## 2026-10-11 - GDPR-compliant WhatsApp Business AI agent (EN)
+
+Field notes from shipping a WhatsApp Business AI agent into Spanish SMBs with the GDPR layer wired into the data model from day one.
+
+Stack: WhatsApp Business Platform via a Meta Cloud BSP that signs the WhatsApp Business Addendum (approximating Article 28 GDPR obligations), LangGraph planner with per-contact base-legal tags written into Postgres (contract / consent / legitimate-interest, enforced at the write path, not the UI), opt-in capture at ingress (web form, QR, in-store terminal) persisted with the exact accepted text, timestamp and source so a DPO can produce evidence in minutes, pgvector for conversation state with PII masked before anything enters a training corpus, a "BAJA" keyword as a first-class webhook that halts automations, writes to the CRM and propagates to the email provider and the agent memory in one transactional sweep, SCCs for US-hosted LLM endpoints and all logs retained in EU-region buckets.
+
+The hard part was not the LLM. It was the right-to-be-forgotten pipeline. Article 17 gives a data subject one month and the deletion has to reach every system: BSP message store, CRM, vector DB, backups, model cache. We model it as an idempotent erasure job keyed by `contact_id`, triggered on request and run quarterly against inactive contacts, with a signed receipt the DPO can hand to the AEPD if a complaint lands.
+
+Precedent you cannot ignore: AEPD resolution PS/00260/2021 fined a sports club 4.000 € for adding a former member to a WhatsApp group without consent, with the resolution calling out excessive retention and insufficient security measures. Exactly the trace a well-built pipeline deletes.
+
+Architecture, the six documents the AEPD looks for in an inspection and the full configuration: https://zeniapartners.com/blog/cumplimiento-rgpd-whatsapp-business-pymes.html
+
+#WhatsAppBusinessAPI #AIEngineering #GDPR #Infrastructure
+

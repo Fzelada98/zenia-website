@@ -8465,3 +8465,19 @@ Hardest part was not the model. It was the handoff logic for IEP accommodations 
 Full write-up: https://zeniapartners.com/blog/ai-agent-for-tutoring-centers.html
 
 #EdTech #CustomerRetention #WhatsAppBusinessAPI #AgenticAI
+
+---
+
+## 2026-10-12 - Licencias Zoho con Tarjeta de Debito (ES)
+
+Recurring card charges to SaaS vendors across SEPA borders fail more often than most billing stacks model for. Case study on Zoho CRM debit-card payments across 90+ EU/LATAM accounts in Q3 2026.
+
+Stack: Zoho Corporation B.V. (Netherlands entity for EU) checkout -> Visa/Mastercard rails -> issuer SCA callback via 3DS. First-charge acceptance for a properly-configured EU debit sits around 95%. Recurring monthly acceptance drops to 70-75% on traditional-bank debit, holds at 92-95% on neobank business cards (Qonto, Revolut Business, N26) because of push-based 2FA plus the MIT exemption cleanly applied.
+
+Failure concentrates in Merchant Initiated Transactions where the PSD2 SCA exemption falls back to a full challenge the user never sees. Per the EBA 2024 PSD2 report, roughly 8% of SEPA MITs fall through. Zoho reruns 3 times in a week; three failed cycles downgrade the whole organization to Free tier until support manually restores it.
+
+What actually survives at scale: SEPA Direct Debit mandate for annual contracts (bypasses the card rails entirely), virtual single-merchant cards with a 20-30% saldo buffer over expected charge, or an authorized partner invoicing locally in EUR / MXN / PEN / ARS and absorbing the cross-border risk off your runtime.
+
+Full write-up with the 7-method comparison table: https://zeniapartners.com/blog/licencias-zoho-tarjeta-debito.html
+
+#B2BSaaS #PaymentInfrastructure #PSD2 #ZohoCRM

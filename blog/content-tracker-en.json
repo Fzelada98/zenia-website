@@ -231,7 +231,8 @@
       "keyword": "ai agent for tutoring centers",
       "tier": 2,
       "cluster": "education",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-10-12"
     },
     {
       "slug": "ai-agent-for-daycare-centers",

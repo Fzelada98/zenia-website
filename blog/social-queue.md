@@ -8449,3 +8449,19 @@ Full breakdown of the five rejection patterns, the five routes that actually cle
 
 #ZohoCRM #PaymentInfrastructure #LATAM #B2BSaaS
 
+
+---
+
+## 2026-10-12 - AI Agent for Tutoring Centers (EN)
+
+Field notes from a US tutoring-center deployment (2 locations in Houston, ~220 active students at start, running on Teachworks and Stripe).
+
+Stack: WhatsApp Business API (Meta Cloud) as primary channel with Twilio SMS fallback, Instagram DM routed into the same inbox via Meta Business Suite, LLM tool-use loop with function calls into the Teachworks REST API for calendar reads/writes and the Stripe API for failed-card recovery, CRM as system of record for student state, grade, subject and family links. Every outbound message carries intent + resolution + revenue attribution.
+
+Two numbers that mattered under load: first-reply p95 on WhatsApp at 1.4s against a baseline median of 9h 40min, and the two-consecutive-absence check-in firing at the 72h mark with a one-tap re-book deep link that recovered 29% of silent dropouts before they hit the cancellation form. Failed-card recovery moved from 34% to 72% by swapping the Stripe failure webhook from a nightly email to an inline WhatsApp message inside 15 minutes with a hosted update-card link.
+
+Hardest part was not the model. It was the handoff logic for IEP accommodations and scholarship requests, where overconfidence costs real trust with a parent. We ended up with a dual-threshold router: high-confidence on scheduling and pricing, forced human handoff on anything that touches a learning plan.
+
+Full write-up: https://zeniapartners.com/blog/ai-agent-for-tutoring-centers.html
+
+#EdTech #CustomerRetention #WhatsAppBusinessAPI #AgenticAI

@@ -8407,6 +8407,8 @@ Architecture, the six documents the AEPD looks for in an inspection and the full
 ---
 ## 2026-10-12 - Zoho licensing by bank transfer (EN)
 
+<!-- PUBLISHED:make-webhook at 2026-10-12T08:38:30Z -->
+
 Field notes from reselling Zoho CRM, Zoho One and Zoho Workplace licenses as a Zoho Authorized Partner to Spanish and LATAM SMBs that cannot pay via credit card.
 
 Zoho's self-serve portal is card-and-PayPal only, with a recurring-charge model that assumes a US-style billing stack. In Spain and most of LATAM the finance function is wired for SEPA, Bizum empresa and 30-day confirming, so dropping a corporate Visa into a USD-billed subscription on the Irish entity is a non-starter for medium-sized companies. The three real paths are: proforma invoice from Zoho sales (SEPA or SWIFT to their corporate IBAN, 3-7 business days to reconcile and activate), partner reseller with a local invoice (24-72 hours end-to-end, VeriFactu-ready since the January 2026 Spanish B2B real-time reporting mandate kicked in), or a license-plus-implementation bundle through a partner that absorbs the reseller margin.

@@ -8403,3 +8403,20 @@ Architecture, the six documents the AEPD looks for in an inspection and the full
 
 #WhatsAppBusinessAPI #AIEngineering #GDPR #Infrastructure
 
+
+---
+## 2026-10-12 - Zoho licensing by bank transfer (EN)
+
+Field notes from reselling Zoho CRM, Zoho One and Zoho Workplace licenses as a Zoho Authorized Partner to Spanish and LATAM SMBs that cannot pay via credit card.
+
+Zoho's self-serve portal is card-and-PayPal only, with a recurring-charge model that assumes a US-style billing stack. In Spain and most of LATAM the finance function is wired for SEPA, Bizum empresa and 30-day confirming, so dropping a corporate Visa into a USD-billed subscription on the Irish entity is a non-starter for medium-sized companies. The three real paths are: proforma invoice from Zoho sales (SEPA or SWIFT to their corporate IBAN, 3-7 business days to reconcile and activate), partner reseller with a local invoice (24-72 hours end-to-end, VeriFactu-ready since the January 2026 Spanish B2B real-time reporting mandate kicked in), or a license-plus-implementation bundle through a partner that absorbs the reseller margin.
+
+The engineering piece that matters: Zoho's provisioning API lets a partner spin up the licenses under the client's primary org id as soon as the transfer clears, which is why the partner path converges on 24-72 hours vs. a week-plus for direct proforma. We also wire a renewal cron into our ops because Zoho does not auto-renew wire-paid subscriptions and that is how companies lose panel access mid-quarter.
+
+Priced in October 2026 for 10 users of Zoho CRM Enterprise: list is 40 USD/user/month billed annually (4.800 USD/yr) and partner-brokered lands between 4.400 and 5.000 EUR/yr with a Spanish invoice and VAT deductible day one.
+
+Full comparison of the three paths, SEPA/SWIFT playbook and VeriFactu invoicing notes: https://zeniapartners.com/blog/licencias-zoho-por-transferencia.html
+
+#ZohoCRM #Infrastructure #B2BSaaS #SEPA
+
+---

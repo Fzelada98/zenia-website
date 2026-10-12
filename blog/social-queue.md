@@ -8422,3 +8422,16 @@ Full comparison of the three paths, SEPA/SWIFT playbook and VeriFactu invoicing 
 #ZohoCRM #Infrastructure #B2BSaaS #SEPA
 
 ---
+## 2026-10-12 - WhatsApp AI agent for US music schools (EN)
+
+Field notes from shipping the Zenia agent on top of My Music Staff for a 3-location piano/guitar/voice academy running weekly 30-minute private lessons.
+
+Stack: WhatsApp Business API via Meta Cloud BSP, Instagram DM and Google Business messages fanned into one inbox, LangGraph planner with per-student state (instrument, teacher, lesson length, make-up balance, recital piece), My Music Staff REST API for the schedule read/write path with optimistic locking on slot creation, Stripe link generation for failed-card recovery, pgvector keyed by `student_id` for conversation memory, Twilio SMS fallback for the ~18% of parents who never opted into WhatsApp.
+
+The hard part was not the trial-booking path. It was the two-consecutive-absence trigger. A naive implementation reads the attendance table on cron and spams every family on a sick week. We instead stream My Music Staff attendance webhooks into a per-student state machine with a 10-day cooldown and a per-teacher calendar override (illness weeks, teacher travel), and only then does the agent fire the parent check-in with a one-tap make-up slot already pre-reserved.
+
+Measured on 3 locations over 90 days: P95 first-reply 1.8s on WhatsApp and Instagram, 83% of inbound front-desk volume resolved by the agent without human touch, weekly-lesson no-show rate from 13.4% to 5.1% once the T-24h / T-2h / T+90min cadence landed, autopay failed-card recovery 31% to 76% on WhatsApp vs the email baseline, fall-semester renewal rate from 71% to 87%.
+
+Architecture, music-school software adapter contract and the 2-week rollout: https://zeniapartners.com/blog/ai-agent-for-music-schools.html
+
+#WhatsAppBusinessAPI #AIEngineering #MusicSchools #Infrastructure

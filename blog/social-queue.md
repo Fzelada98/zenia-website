@@ -8435,3 +8435,17 @@ Measured on 3 locations over 90 days: P95 first-reply 1.8s on WhatsApp and Insta
 Architecture, music-school software adapter contract and the 2-week rollout: https://zeniapartners.com/blog/ai-agent-for-music-schools.html
 
 #WhatsAppBusinessAPI #AIEngineering #MusicSchools #Infrastructure
+
+---
+## 2026-10-12 - Zoho licensing with LATAM payment cards (EN)
+
+Zoho's self-serve billing stack does not accept Mercado Pago as a wallet, and the Mercado Libre MasterCard behaves at checkout like a plain Mastercard: fine for a one-off, but recurring charges from LATAM BINs fail roughly 40% of the time in Argentina and about 15% in Mexico and Chile across the cohort we track.
+
+Three failure modes stack. 3-D Secure drops on prepaid issuers because the step-up challenge never fires. Mastercard risk engines flag cross-border recurring from LATAM prepaid BINs. AFIP Resolucion 5617/2024 keeps adding a FX percepcion the card balance did not predict, which looks indistinguishable from insufficient funds on Zoho's end and triggers a dunning cycle that degrades the plan to Free after three retries in a week.
+
+The pattern most engineering teams land on is a partner-as-FX-abstraction: local invoicing entity in MXN/PEN/ARS/COP/CLP, one annual USD outflow to Zoho, FX risk booked at the partner. The provisioning API binds the licenses to the client org id, so the client never leaves the Zoho control plane; what changes is the billing edge. CRM licenses become local-currency opex with deductible VAT. No 3DS roulette, no suspended orgs mid-sprint, no mid-quarter panel access loss.
+
+Full breakdown of the five rejection patterns, the five routes that actually clear, and the pricing math for 2026: https://zeniapartners.com/blog/licencias-zoho-tarjeta-mercado-libre.html
+
+#ZohoCRM #PaymentInfrastructure #LATAM #B2BSaaS
+

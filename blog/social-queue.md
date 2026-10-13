@@ -8499,3 +8499,19 @@ Hardest piece was not the agent. It was reconciling the ledger when a POS void a
 Breakdown of the 4 program architectures (points, tiers, perks, referrals), the comparison vs email/app, and the 8-step implementation: https://zeniapartners.com/blog/programa-de-fidelizacion-whatsapp.html
 
 #WhatsAppBusinessAPI #CustomerRetention #B2BSaaS #AgenticAI
+
+---
+
+## 2026-10-13 - AI Agent for Daycare Centers (EN)
+
+Infrastructure notes from deploying AI agents on WhatsApp Business API for daycare centers in the US market, integrated against Procare, Brightwheel and LineLeader.
+
+Stack: Meta Cloud API as transport, LLM tool-use loop with function calls into the childcare-management API for live room-level availability (invalidated on every enrollment write), bilingual EN/ES handling behind a single number with per-conversation locale state, booking confirmations written back as events the center's calendar subscribes to, and an idempotent waitlist-match worker that joins the daily attendance stream against the ordered waitlist to text spot-fill offers with a 2-hour accept window.
+
+Two numbers under load: p95 reply latency on inquiry turns stayed at 1.8s with the childcare-API round trip in path, and tour-booking conversion from first inquiry message moved from a baseline of ~33% (business-hours email) to ~71% once the agent was answering 24/7 inside the WhatsApp session window.
+
+Hardest piece was absence detection for spot-fill: parent "out sick" messages arrive as free text in three languages at 6-7 AM, so we route them through an intent classifier before writing an absence event, with a confirmation turn when confidence is low to avoid false opens on the waitlist.
+
+Full breakdown of the 4 agent jobs, the 90-day funnel across 3 client centers, and the 2-week rollout: https://zeniapartners.com/blog/ai-agent-for-daycare-centers.html
+
+#WhatsAppBusinessAPI #AgenticAI #ChildcareTech #B2BSaaS

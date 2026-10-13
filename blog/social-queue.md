@@ -8481,3 +8481,19 @@ What actually survives at scale: SEPA Direct Debit mandate for annual contracts 
 Full write-up with the 7-method comparison table: https://zeniapartners.com/blog/licencias-zoho-tarjeta-debito.html
 
 #B2BSaaS #PaymentInfrastructure #PSD2 #ZohoCRM
+
+---
+
+## 2026-10-13 - Programa de Fidelización por WhatsApp (ES)
+
+Field notes from a WhatsApp loyalty-program deployment across 40+ SMB clients in ES/LATAM running on WhatsApp Business API (Meta Cloud) with a CRM-backed balance ledger.
+
+Stack: Meta Cloud API as transport, LLM tool-use loop with function calls into the CRM for balance reads/writes, idempotent reward ledger (one row per earn/burn event, FK to WABA message id so replays never double-credit), POS/ecommerce webhooks (Shopify, WooCommerce, Odoo, Lightspeed) as the single source of truth for "earn" events, template-category routing on outbound (utility for balance updates at 0.029 EUR/session, marketing kept at &lt;=4/month per contact to keep the number at High quality in Business Manager).
+
+Two numbers that mattered under load: user-initiated conversations (free, 24h service window) stayed above 70% of total message volume, which caps variable cost per active member around 0.08-0.12 EUR/month; and block rate held under 1% once consent capture moved from implicit opt-in on checkout to explicit "escribe ALTA" with timestamped RGPD proof in the CRM.
+
+Hardest piece was not the agent. It was reconciling the ledger when a POS void arrived days after the "earn" message had already been read. We ended up with a soft-reversal pattern: the agent posts a utility-category correction with a human-readable diff and the member can dispute inside the thread.
+
+Breakdown of the 4 program architectures (points, tiers, perks, referrals), the comparison vs email/app, and the 8-step implementation: https://zeniapartners.com/blog/programa-de-fidelizacion-whatsapp.html
+
+#WhatsAppBusinessAPI #CustomerRetention #B2BSaaS #AgenticAI

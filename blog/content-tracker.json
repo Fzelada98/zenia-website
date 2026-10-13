@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-10-13T14:07:00+00:00",
+  "lastRun": "2026-10-13T22:00:00+00:00",
   "posts": [
     {
       "slug": "automatizacion-para-gimnasios-en-sevilla",
@@ -4182,6 +4182,15 @@
       "cluster": "educacion-crm",
       "status": "published",
       "date": "2026-10-11",
+      "source": "matrix"
+    },
+    {
+      "slug": "automatizacion-para-gimnasios-en-malaga",
+      "keyword": "automatizacion para gimnasios en malaga",
+      "tier": 4,
+      "cluster": "gimnasios-geo",
+      "status": "published",
+      "date": "2026-10-13",
       "source": "matrix"
     }
   ]

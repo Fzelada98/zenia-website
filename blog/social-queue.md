@@ -8550,3 +8550,18 @@ Full breakdown of PMS integration paths, the 5 automations, pricing bands, and t
 
 ---
 
+## 2026-10-13 - Gym Automation Rollout in Malaga (EN)
+
+Architecture notes from a Malaga rollout this week across two independent gyms (centro + Teatinos).
+
+Stack: WhatsApp Business API as the single customer ingress, a personalized AI agent as the policy layer with per-site tool scopes (reservations vs billing vs access control), Redsys as the primary SEPA/card pipe with a Stripe fallback for ex-pat members on non-ES IBANs, and a custom CRM that bridges Trainingym's REST API with the turnstile vendor's raw TCP feed over a tiny Go bridge.
+
+Numbers from the first 10 days in production: median first-reply latency 9s, SEPA retry recovery lifted from 31% to 58% once the three-touch WhatsApp cadence replaced the manual email + call combo, and the inactivity signal (14-day no-swipe) now surfaces ~2.7% of the active base weekly as churn-risk before the renewal date.
+
+The brittle piece was the turnstile integration: no HTTPS endpoint, only a local LAN TCP broadcast of swipe events. We shipped a lightweight on-prem collector (Go, ~200 LOC) that forwards batched events to the CRM webhook with HMAC. Keeps the SLA on reads independent of the vendor's cadence.
+
+Full breakdown with the comparative pricing table, integration map, and 5-week delivery plan: https://zeniapartners.com/blog/automatizacion-para-gimnasios-en-malaga.html
+
+#WhatsAppBusinessAPI #SystemsIntegration #AgenticAI #B2BSaaS
+
+---

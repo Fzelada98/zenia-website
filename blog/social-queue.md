@@ -8515,3 +8515,22 @@ Hardest piece was absence detection for spot-fill: parent "out sick" messages ar
 Full breakdown of the 4 agent jobs, the 90-day funnel across 3 client centers, and the 2-week rollout: https://zeniapartners.com/blog/ai-agent-for-daycare-centers.html
 
 #WhatsAppBusinessAPI #AgenticAI #ChildcareTech #B2BSaaS
+
+
+---
+
+## 2026-10-13 - Automatización para gimnasios en Sevilla
+
+Architecture note from a gym rollout this week in Seville.
+
+Stack: WhatsApp Business API as the ingress, personalized AI agent as the policy layer, two sync paths to the gym software (Aimharder + Virtuagym depending on the site), SEPA mandate recovery via Stripe Billing with a card-fallback webhook, and a CRM that tags every lead with origin (click-to-chat vs organic vs IG referral).
+
+Hard numbers after the first full billing cycle: median first-reply latency 11s, SEPA bounce recovery jumped from 28% to 54% in 7 days, and the attendance-decay job (14/30/37 days) now surfaces ~3% of the active base weekly as churn-risk, nominal list.
+
+The non-obvious part is the ERP integration: when the gym software exposes no real API, we run a scheduled export + idempotent diff loader instead of forcing a vendor swap. Keeps the migration risk at zero.
+
+Full write-up with the comparative table, pricing, and the 5-week delivery plan: https://zeniapartners.com/blog/automatizacion-para-gimnasios-en-sevilla.html
+
+#AgenticAI #WhatsAppBusinessAPI #SystemsIntegration #B2BSaaS
+
+---

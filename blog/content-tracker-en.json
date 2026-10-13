@@ -1,7 +1,16 @@
 {
-  "lastRun": "2026-10-13T12:00:00.000000+00:00",
+  "lastRun": "2026-10-13T17:15:00.000000+00:00",
   "market": "US/UK small business",
   "posts": [
+    {
+      "slug": "dental-crm",
+      "keyword": "dental crm",
+      "tier": 0,
+      "cluster": "healthcare",
+      "status": "published",
+      "date": "2026-10-13",
+      "note": "striking-loop hit: 16 impressions, pos 19.1. Was printing on /blog/dental-practice-crm-with-ai.html; added cross-link there with 'dental crm 2026 US buyer's guide' anchor."
+    },
     {
       "slug": "ai-powered-member-retention-for-gyms",
       "keyword": "ai-powered member retention for gyms",

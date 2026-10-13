@@ -8534,3 +8534,19 @@ Full write-up with the comparative table, pricing, and the 5-week delivery plan:
 #AgenticAI #WhatsAppBusinessAPI #SystemsIntegration #B2BSaaS
 
 ---
+## 2026-10-13 - Dental CRM: The 2026 US Buyer's Guide (EN)
+
+Engineering notes from building a dental CRM layer that sits next to the PMS (not on top of it) for US practices on Dentrix, Eaglesoft, Open Dental, Curve and Denticon.
+
+Integration surface differs hard per PMS: Dentrix via DDP API + a local sync agent reading the SQL Server backing it on a 1-5 min poll; Eaglesoft via ODBC with scheduled queries on patient/appointment/procedure tables; Open Dental via FHIR R4 + its own Web API on push webhooks (the only one that is near-real-time out of the box); Curve and Denticon via REST + partner-program webhooks. Read-write parity is only clean on Open Dental and the two cloud PMSes; Dentrix write-back goes through the official API tier, Eaglesoft stays mostly read + human-reviewed queue.
+
+Two numbers from a 1,500-chart deployment: inquiry-to-booked rate on after-hours leads moved from a 19% voicemail baseline to 52% once the WhatsApp agent handled first-touch inside the 24h session window; no-show rate dropped from 17% to 7.4% in 60 days with a three-touch confirmation + automated ASAP-list refill matching cancelled slots against the next 5 opt-in patients by appointment type.
+
+Non-trivial bit was TCPA + HIPAA together: TCPA one-to-one consent on the lead side (opt-in captured at the exact field that generates the record), BAA-covered storage on the clinical side, and an explicit audit log on every chart view by non-clinical staff.
+
+Full breakdown of PMS integration paths, the 5 automations, pricing bands, and the 2-week rollout: https://zeniapartners.com/blog/dental-crm.html
+
+#WhatsAppBusinessAPI #HealthcareIntegrations #HIPAA #AgenticAI
+
+---
+

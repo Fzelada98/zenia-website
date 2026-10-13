@@ -8486,6 +8486,8 @@ Full write-up with the 7-method comparison table: https://zeniapartners.com/blog
 
 ## 2026-10-13 - Programa de Fidelización por WhatsApp (ES)
 
+<!-- PUBLISHED:make-webhook at 2026-10-13T08:30:07Z -->
+
 Field notes from a WhatsApp loyalty-program deployment across 40+ SMB clients in ES/LATAM running on WhatsApp Business API (Meta Cloud) with a CRM-backed balance ledger.
 
 Stack: Meta Cloud API as transport, LLM tool-use loop with function calls into the CRM for balance reads/writes, idempotent reward ledger (one row per earn/burn event, FK to WABA message id so replays never double-credit), POS/ecommerce webhooks (Shopify, WooCommerce, Odoo, Lightspeed) as the single source of truth for "earn" events, template-category routing on outbound (utility for balance updates at 0.029 EUR/session, marketing kept at &lt;=4/month per contact to keep the number at High quality in Business Manager).

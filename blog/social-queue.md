@@ -8638,3 +8638,20 @@ Full writeup with the 2-week rollout, integrations, and pricing bands: https://z
 #AIAgents #WhatsAppBusinessAPI #SystemsEngineering #SmallBusinessTech
 
 ---
+
+## 2026-10-14 — Integrating Holded ERP with WhatsApp Business API (EN)
+
+**Audience:** CTOs / engineering leads / tech founders at Spanish SMB SaaS and multi-site operators running Holded.
+**Target URL:** https://zeniapartners.com/blog/integrar-holded-con-whatsapp-business.html
+
+Holded has 900k+ users (per the vendor's 10-year retrospective) and no native WhatsApp Business API connector. Once a client clears ~500 conversations/month a vanilla iPaaS flow starts dropping on the floor: no deduplication, no retries, no utility-template logic.
+
+Architecture we ship: Meta WABA inbound → NodeJS middleware with a BullMQ queue → Holded REST (contacts, invoices, pipelines), E.164 phone as primary dedup key. Holded's webhooks emit invoice.emitted and deal.won back into the middleware; the queue absorbs the rate-limit 429s we see on invoice.updated bursts and reruns with exponential backoff. Utility templates fire inside Meta's free 24h service window; marketing templates run on a separate scheduler so cost tracking is attribute-level.
+
+Measured in production on a mid-size Spanish SMB: first-response p95 under 60s on inbound text, contact-dedup error below 0.4%, 99.3% invoice-notification delivery on the free utility path. Non-obvious piece: a custom "consentimiento_lopd" field (plus timestamp) is written on every Holded contact before any proactive send fires, so RGPD defense is per-record, not per-folder.
+
+Full technical writeup (ES) with the comparative cost table for iPaaS vs. BSP vs. no-code and the 5-week rollout: https://zeniapartners.com/blog/integrar-holded-con-whatsapp-business.html
+
+#WhatsAppBusinessAPI #ERPIntegration #AIAgents #SMBtech
+
+---

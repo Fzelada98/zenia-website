@@ -8583,3 +8583,20 @@ Full breakdown of chains, wallets, invoicing and risk mitigations: https://zenia
 
 ---
 
+
+## 2026-10-14 — AI Agent for Caterers (EN)
+
+**Audience:** CTOs / engineering leads / tech founders at hospitality SaaS and multi-location operators.
+**Target URL:** https://zeniapartners.com/blog/ai-agent-for-caterers.html
+
+Catering sales desks lose bookings to latency, not pricing. We shipped an agent stack for a 2-location US caterer that cut median first-response from 7.5 hours to 48 seconds across WhatsApp Business API, SMS, website chat, and a shared email inbox.
+
+Architecture: an LLM policy layer (intent + slot filling for event_date, headcount, venue, dietary_flags, budget_band) runs behind a per-channel adapter. State lives in the CRM; the calendar check happens before any pricing emits, so the agent never quotes a date it cannot staff. Proposal drafting pulls from a structured menu/pricing library and emits a human-review draft (allergens stay human-in-the-loop by policy, non-negotiable).
+
+Latency budget end-to-end: p50 1.9s, p95 4.1s on inbound inquiries. Reliability: 99.95% monthly across the proxy, policy layer, and WhatsApp BSP. Qualification rate moved from 48% to 76%; proposal-to-book from 22% to 29%. Coordinator time on intake and quoting dropped from 24h/week to 7h/week.
+
+Writeup, data, and the 3-week rollout: https://zeniapartners.com/blog/ai-agent-for-caterers.html
+
+#AIAgents #WhatsAppBusinessAPI #Hospitality #SystemsEngineering
+
+---

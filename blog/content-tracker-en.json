@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-10-13T17:15:00.000000+00:00",
+  "lastRun": "2026-10-14T00:00:00+00:00",
   "market": "US/UK small business",
   "posts": [
     {
@@ -256,7 +256,8 @@
       "keyword": "ai agent for caterers",
       "tier": 2,
       "cluster": "food",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-10-14"
     },
     {
       "slug": "ai-agent-for-bakeries",

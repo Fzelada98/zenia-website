@@ -8619,3 +8619,22 @@ Full stack writeup with the comparative pricing table against Virtuagym/Training
 
 ---
 
+
+## 2026-10-14 — AI Agent for Bakeries (EN)
+
+**Audience:** CTOs / engineering leads / tech founders at hospitality / small-business SaaS and multi-location bakery operators.
+**Target URL:** https://zeniapartners.com/blog/ai-agent-for-bakeries.html
+
+Independent US bakeries lose orders to latency on Instagram DMs and the morning phone line, not to pricing. We shipped an agent stack for a 2-location US bakery (≈$1.4M combined ARR, Square for Restaurants + Stripe + Meta WABA + IG inbox).
+
+Architecture: a channel adapter layer (Meta Cloud API for WhatsApp, Instagram DM via Meta Graph, Twilio SMS, website chat) feeds an LLM policy layer that does intent + slot filling (product, qty, pickup_window, dietary_flags, event_date) over a strict JSON schema. Pricing and menu live in a single source of truth that writes to the agent's RAG at merge time; custom-cake quoting is a hard-coded refuse path with structured brief handoff to Slack, not a free-form generation. Deposits fire as Stripe payment links scoped by order_id; a Square `orders.updated` webhook closes the loop.
+
+Latency budget end-to-end: p50 1.6s, p95 3.9s on inbound text; 99.95% monthly on the policy + proxy + BSP path. Observed numbers at 90 days: median first-response 7h 20m to 38s, standard-order inquiry-to-booked 34% to 61%, complete custom-cake briefs 22% to 78%, pre-paid no-show rate 8.1% to 1.6%.
+
+Non-obvious piece: the allergen escalation. Any turn whose embedding is within a tuned threshold of the "severe allergy" cluster bypasses generation entirely and emits the house cross-contact disclaimer plus a baker-ping, because a plausible-sounding wrong answer here is a liability event, not a UX issue.
+
+Full writeup with the 2-week rollout, integrations, and pricing bands: https://zeniapartners.com/blog/ai-agent-for-bakeries.html
+
+#AIAgents #WhatsAppBusinessAPI #SystemsEngineering #SmallBusinessTech
+
+---

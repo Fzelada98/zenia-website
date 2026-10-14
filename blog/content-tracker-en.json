@@ -264,7 +264,8 @@
       "keyword": "ai agent for bakeries",
       "tier": 2,
       "cluster": "food",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-10-14"
     },
     {
       "slug": "ai-agent-for-coffee-shops",

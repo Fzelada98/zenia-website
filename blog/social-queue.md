@@ -8567,6 +8567,8 @@ Full breakdown with the comparative pricing table, integration map, and 5-week d
 ---
 ## 2026-10-14 - Paying Zoho licences with crypto, from the partner side (EN)
 
+<!-- PUBLISHED:make-webhook at 2026-10-14T08:36:42Z -->
+
 Engineering notes from running Zoho license sales where the client pays in USDT, USDC, BTC or ETH and we settle the invoice with Zoho in EUR.
 
 The native stack ends at tarjeta + PayPal + SEPA; Zoho has no crypto rails in Oct 2026. The partner contract is what makes crypto work: we quote EUR + crypto equivalent, lock a 15–60 min window on the crypto side, and emit the IVA invoice in EUR with the tx hash as proof of payment, so accounting can trace the operation like a SEPA with reference.

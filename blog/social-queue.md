@@ -8565,3 +8565,19 @@ Full breakdown with the comparative pricing table, integration map, and 5-week d
 #WhatsAppBusinessAPI #SystemsIntegration #AgenticAI #B2BSaaS
 
 ---
+## 2026-10-14 - Paying Zoho licences with crypto, from the partner side (EN)
+
+Engineering notes from running Zoho license sales where the client pays in USDT, USDC, BTC or ETH and we settle the invoice with Zoho in EUR.
+
+The native stack ends at tarjeta + PayPal + SEPA; Zoho has no crypto rails in Oct 2026. The partner contract is what makes crypto work: we quote EUR + crypto equivalent, lock a 15–60 min window on the crypto side, and emit the IVA invoice in EUR with the tx hash as proof of payment, so accounting can trace the operation like a SEPA with reference.
+
+Operational numbers across the last cycle: median end-to-end activation 31 min for USDC on Base vs 71 min for USDT TRC20 (confirmation count dominates, not gas), 1.5% fee on stables, 2.5% on BTC/ETH to absorb spot volatility, zero misrouted transactions on 100% of flows after we moved from pasting addresses in chat to a signed address page + last-6-char confirmation callback on WhatsApp.
+
+Non-obvious piece: refund path. We write the refund policy in the proforma (FX of the refund day, not of the payment), because the usual template silently exposes the partner to delta risk on multi-week disputes.
+
+Full breakdown of chains, wallets, invoicing and risk mitigations: https://zeniapartners.com/blog/licencias-zoho-con-criptomonedas.html
+
+#SystemsIntegration #CryptoPayments #Stablecoins #B2BSaaS
+
+---
+

@@ -8600,3 +8600,22 @@ Writeup, data, and the 3-week rollout: https://zeniapartners.com/blog/ai-agent-f
 #AIAgents #WhatsAppBusinessAPI #Hospitality #SystemsEngineering
 
 ---
+## 2026-10-14 — Gym automation stack in Bilbao (EN)
+
+**Audience:** CTOs / engineering leads / tech founders at fitness SaaS and multi-site gym operators.
+**Target URL:** https://zeniapartners.com/blog/automatizacion-para-gimnasios-en-bilbao.html
+
+Shipping the automation stack for a Bilbao gym (≈800 active members, Virtuagym + Stripe SEPA + WhatsApp Business API).
+
+Architecture: Meta WABA inbound hits per-channel adapters, an LLM policy layer (intent + slot filling: event_type, class_id, membership_status, mandate_state) sits on top of the gym ERP's REST endpoints with state in the CRM. SEPA retry orchestration runs out of band: when a mandate bounces it fires a Meta "utility" template carrying a tokenized card-fallback link; a Stripe `payment_intent.succeeded` webhook auto-stops the sequence so no one gets a reminder for a paid cuota. A turnstile-attendance webhook feeds a 14/30-day inactivity watcher that triggers the win-back flow with full session history injected into the prompt.
+
+Operational numbers after 60 days: median first-response 42s across Instagram click-to-chat, site WABA and inbound SMS; 99.94% monthly on the policy + proxy + BSP path (BSP is the ceiling, not us); impago recovery 54% without a phone call, mid-band on the 40-60% range the Wati 2026 guide publishes; win-back reactivation 14-18% on 14-day silent members.
+
+Non-obvious piece: euskera. The policy layer runs a per-turn language detector before intent routing, because members switch mid-conversation and a monolingual router returns fallbacks that look like a dead bot. Default stays Spanish, swap happens per message, no state bleed.
+
+Full stack writeup with the comparative pricing table against Virtuagym/Trainingym and the ROI math: https://zeniapartners.com/blog/automatizacion-para-gimnasios-en-bilbao.html
+
+#WhatsAppBusinessAPI #SystemsIntegration #AgenticAI #FitnessTech
+
+---
+

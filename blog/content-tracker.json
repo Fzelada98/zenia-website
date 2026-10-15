@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-10-14T14:30:00+00:00",
+  "lastRun": "2026-10-15T06:13:54+00:00",
   "posts": [
     {
       "slug": "integrar-holded-con-whatsapp-business",
@@ -4219,6 +4219,14 @@
       "status": "published",
       "date": "2026-10-13",
       "source": "matrix"
+    },
+    {
+      "slug": "automatizacion-para-gimnasios-en-bogota",
+      "keyword": "automatizacion para gimnasios en bogota",
+      "tier": 4,
+      "cluster": "city-vertical-gym",
+      "status": "published",
+      "date": "2026-10-15"
     }
   ]
 }

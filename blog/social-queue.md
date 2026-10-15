@@ -8655,3 +8655,19 @@ Full technical writeup (ES) with the comparative cost table for iPaaS vs. BSP vs
 #WhatsAppBusinessAPI #ERPIntegration #AIAgents #SMBtech
 
 ---
+## 2026-10-15 — Automating Bogotá gyms: WhatsApp + CRM + payments stack (EN)
+
+**Audience:** CTOs / engineering leads / tech founders at LATAM wellness and SMB SaaS running on WhatsApp Business API.
+**Target URL:** https://zeniapartners.com/blog/automatizacion-para-gimnasios-en-bogota.html
+
+Independent Bogotá gyms sit on 300–700 members, Smart Fit's 225 Colombian locations as the market pressure (Portafolio, Oct 2025). The ops layer runs Instagram DMs, WhatsApp and a legacy scheduling SaaS, with no shared contact graph and no payment retry loop — monthly silent churn in the 5–7% band, mostly from failed renewals nobody chased.
+
+Architecture we ship: Meta WABA inbound + Instagram Graph DM into a FastAPI middleware with a Redis-backed job queue. LLM policy layer does intent + slot filling (class_type, slot_id, member_id, dues_status) against a strict JSON schema; the member record is the write-authority on the CRM side, the scheduling SaaS integrates via its REST (webhooks absent, so we poll every 90s with ETag). Payments route to local gateways (Wompi, PayU, Bold) via a thin adapter; failed charges fire a three-step retry on days 2/5/10 inside Meta's free utility template window.
+
+Observed on 90 days across pilot gyms: inbound p95 first-response under 60s, dues recovery rate 65–78% (from a 22–30% manual baseline), monthly churn 5.7% → 2.9%, allergen/injury disclaimers routed to on-staff coach via a cosine-similarity threshold rather than generation. Ley 1581 compliance stays per-record: explicit opt-in field written before any proactive send.
+
+Writeup with the comparative table (gringo SaaS vs. plantillas vs. bespoke), ROI math in COP and the 5-week rollout: https://zeniapartners.com/blog/automatizacion-para-gimnasios-en-bogota.html
+
+#WhatsAppBusinessAPI #AIAgents #SystemsEngineering #LATAMtech
+
+---

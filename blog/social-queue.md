@@ -8690,3 +8690,20 @@ Full writeup with vendor landscape, pricing bands and the 2-week rollout: https:
 #WhatsAppBusinessAPI #AIAgents #FieldService #SystemsEngineering
 
 ---
+## 2026-10-15 — WhatsApp Business templates: dispatch, categorization and the 24h window (EN)
+
+**Audience:** CTOs / engineering leads / tech founders building on WhatsApp Business API.
+**Target URL:** https://zeniapartners.com/blog/plantillas-whatsapp-business-ejemplos-2026.html
+
+Template is the only outbound primitive outside the 24h customer-service window. Meta switched to per-message billing on 1 July 2025, so categorization is now a cost knob, not a compliance checkbox: marketing templates run roughly 5x the utility rate in ES/LATAM corridors, and misclassified text gets reclassified at send time (Meta pricing docs, revised March 2026).
+
+Architecture we ship: Meta Graph `message_templates` registered per language and category, triggered off CRM events (reserva.created, cita.T-24h, pedido.shipped, cliente.inactive>30d) via a FastAPI dispatcher with Redis-backed retry on 131026 pacing errors. The policy layer runs intent + slot extraction against a strict JSON schema (template_id, locale, variables), and a lint pass rejects any body where regex finds promo tokens inside a utility payload before Meta sees it — the fastest path to a stable Quality Rating.
+
+Observed across 40+ SMB tenants in 2026: first-review approval 71% → 94% after the pre-send lint, p50 approval latency 8h for utility and 22h for marketing, template-blended cost down 38% vs. the "everything is marketing" baseline, Quality Rating held at HIGH for 11 months. Non-obvious piece: variable example values are stored in the CRM template record (not the dispatcher), so apology/appeal payloads for Meta rejections ship from a single source of truth.
+
+Full writeup with 14 sector-specific approved examples, the pricing table (ES/MX, Oct 2026) and the top-5 rejection reasons with fixes: https://zeniapartners.com/blog/plantillas-whatsapp-business-ejemplos-2026.html
+
+#WhatsAppBusinessAPI #AIAgents #SystemsEngineering #APIDesign
+
+---
+

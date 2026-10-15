@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-10-15T06:13:54+00:00",
+  "lastRun": "2026-10-15T14:08:00+00:00",
   "posts": [
     {
       "slug": "integrar-holded-con-whatsapp-business",
@@ -4225,6 +4225,14 @@
       "keyword": "automatizacion para gimnasios en bogota",
       "tier": 4,
       "cluster": "city-vertical-gym",
+      "status": "published",
+      "date": "2026-10-15"
+    },
+    {
+      "slug": "plantillas-whatsapp-business-ejemplos-2026",
+      "keyword": "plantillas whatsapp business",
+      "tier": 2,
+      "cluster": "whatsapp-api-foundational",
       "status": "published",
       "date": "2026-10-15"
     }

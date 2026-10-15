@@ -8673,3 +8673,20 @@ Writeup with the comparative table (gringo SaaS vs. plantillas vs. bespoke), ROI
 #WhatsAppBusinessAPI #AIAgents #SystemsEngineering #LATAMtech
 
 ---
+
+## 2026-10-15 — AI-enabled CRM for pest control: route density + renewal recovery stack (EN)
+
+**Audience:** CTOs / engineering leads / tech founders at US field-service SaaS and multi-truck trades operators.
+**Target URL:** https://zeniapartners.com/blog/ai-enabled-crm-for-pest-control.html
+
+NPMA puts the US pest control market at ~$13.4B and ~109k technicians, with 81.4% of firms running 1–2 locations. The existing CRM layer (PestPac, FieldRoutes, GorillaDesk, Jobber) is strong on scheduling but shallow on language and poor on recurring-calendar optimization: Zapier-grade reply flows drop ~0.5–1% of events on 429 bursts, and single-day route solvers ignore the quarterly/bi-monthly/monthly plan structure.
+
+Architecture we ship: Meta WhatsApp Business API + Twilio 10DLC SMS inbound → Node.js middleware with a BullMQ/Redis queue (E.164 as primary dedup key) → LLM intent + slot extraction against a strict JSON schema (pest_type, severity, service_type, requested_window, access_notes), confidence threshold routes below-0.72 turns to a human. Routing is OR-Tools CP-SAT solving a VRP with time windows over a rolling 14-day horizon, re-solved nightly and on exception. QuickBooks Online via Intuit API with webhook consumption; card tokens stay at Stripe/Square.
+
+Measured on a 2-truck Phoenix operator over 90 days: first-reply p95 48s (from 3h 40m), stops/tech/day 9.2 → 11.6, residential annual retention 81% → 89%, CSR hours spent on confirmations 22 → 6/week. Non-obvious piece: the routing model is calibrated against the last 90 days of actual stops before go-live, with a hard requirement that it matches historical reality within 5% — this is what stops the "optimizer makes routes worse week 1" failure mode most operators hit.
+
+Full writeup with vendor landscape, pricing bands and the 2-week rollout: https://zeniapartners.com/blog/ai-enabled-crm-for-pest-control.html
+
+#WhatsAppBusinessAPI #AIAgents #FieldService #SystemsEngineering
+
+---

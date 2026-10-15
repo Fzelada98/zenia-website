@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-10-14T00:00:00+00:00",
+  "lastRun": "2026-10-15T00:00:00+00:00",
   "market": "US/UK small business",
   "posts": [
     {
@@ -272,7 +272,8 @@
       "keyword": "ai agent for coffee shops",
       "tier": 2,
       "cluster": "food",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-10-15"
     },
     {
       "slug": "ai-agent-for-florists",

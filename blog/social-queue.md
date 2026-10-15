@@ -8707,3 +8707,19 @@ Full writeup with 14 sector-specific approved examples, the pricing table (ES/MX
 
 ---
 
+## 2026-10-15 — AI agent for coffee shops: WhatsApp order-ahead vs. branded apps (EN)
+
+**Audience:** CTOs / engineering leads / tech founders at food & beverage SaaS, POS integrators, and multi-location hospitality operators.
+**Target URL:** https://zeniapartners.com/blog/ai-agent-for-coffee-shops.html
+
+Branded coffee apps (Pepper, Odeko, Toast at $199-$499/location/month or 6% of order volume) hit the same wall: ~90% post-install drop-off and no event back-channel into the POS beyond basic order push. The engineering gap is on the inbound side, where Instagram DM, WhatsApp and web chat land in three disconnected inboxes and the LLM policy layer is usually a scripted flow against a flat menu.
+
+Architecture we ship for 1-3 location independents: Meta WhatsApp Business API + Instagram Graph API inbound → Node.js middleware with a BullMQ/Redis queue (E.164 as primary dedup key) → LLM intent + slot extraction against a strict JSON schema (intent, menu_item, modifiers[], pickup_window, sentiment), confidence below 0.72 routes to the owner. POS writes via Square or Toast order push APIs with webhook consumption for order.completed. Loyalty state in a Postgres (no per-contact pricing), scheduler fires review request at order.completed + 30min and lapsed-regular detection at silence_days >= 21 against the prior 90-day cohort.
+
+Measured on a 2-location Brooklyn roaster over 90 days: median first-reply across all channels 4h 12m → 41s, WhatsApp order-ahead 0 → 487 orders/week, review count 183 → 429 at 4.4 → 4.7 stars, 30-day repeat rate 34% → 51%. Non-obvious piece: review requests gate on sentiment class from the completion message — anything below 4 stars routes to the owner inbox instead of Google, which is what keeps the Google rating moving up instead of exposing noise.
+
+Full writeup with the vendor pricing table, failure modes and the 2-week rollout: https://zeniapartners.com/blog/ai-agent-for-coffee-shops.html
+
+#WhatsAppBusinessAPI #AIAgents #FoodTech #SystemsEngineering
+
+---

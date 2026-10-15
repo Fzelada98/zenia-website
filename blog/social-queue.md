@@ -8504,6 +8504,8 @@ Breakdown of the 4 program architectures (points, tiers, perks, referrals), the 
 
 ## 2026-10-13 - AI Agent for Daycare Centers (EN)
 
+<!-- PUBLISHED:make-webhook at 2026-10-15T08:39:49Z -->
+
 Infrastructure notes from deploying AI agents on WhatsApp Business API for daycare centers in the US market, integrated against Procare, Brightwheel and LineLeader.
 
 Stack: Meta Cloud API as transport, LLM tool-use loop with function calls into the childcare-management API for live room-level availability (invalidated on every enrollment write), bilingual EN/ES handling behind a single number with per-conversation locale state, booking confirmations written back as events the center's calendar subscribes to, and an idempotent waitlist-match worker that joins the daily attendance stream against the ordered waitlist to text spot-fill offers with a 2-hour accept window.

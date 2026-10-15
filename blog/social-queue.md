@@ -8723,3 +8723,19 @@ Full writeup with the vendor pricing table, failure modes and the 2-week rollout
 #WhatsAppBusinessAPI #AIAgents #FoodTech #SystemsEngineering
 
 ---
+
+## 2026-10-15 - Integrar Sage con WhatsApp Business
+
+Sage covers roughly 55% of Spanish SMBs running an ERP, but there is no first-party connector to WhatsApp Business API in 2026.
+
+So the integration is a middleware problem, not a product-pick problem. The reference architecture we ship: Meta Cloud API or 360dialog as the BSP, a Node service that owns webhook ingestion, idempotency keys and retry backoff, and typed clients against Sage 200 Web API, Sage 50 ODBC or Sage CRM Web Services depending on the module.
+
+End-to-end latency on a stock lookup round trip (WhatsApp inbound to WhatsApp outbound, including an LLM call) lands at 6-9 seconds p50 on Sage 200 Advanced over VPN. Writes (new orders, CRM notes) run async with reconciliation jobs to keep the ERP as the source of truth.
+
+Two things that bite teams building this in-house: Meta's new per-message pricing (July 2025) and Spain's own rate card from July 2026 both change the unit economics, and HSM template approval still takes 24-72h, so it belongs on the critical path.
+
+Full writeup with the arch diagram, vendor table and compliance checklist: https://zeniapartners.com/blog/integrar-sage-con-whatsapp-business.html
+
+#SystemsEngineering #WhatsAppBusinessAPI #ERPIntegration #AIAgents
+
+---

@@ -8756,3 +8756,19 @@ Full writeup with the pricing table, PAC integration notes and the 5-week rollou
 #SystemsEngineering #WhatsAppBusinessAPI #AIAgents #FitnessTech
 
 ---
+## 2026-10-16 - AI Agent for Florists (EN)
+
+Independent US florists have a phone problem that reads as a revenue problem. SAF reports roughly 1 in 4 inbound calls go unanswered during business hours, and two-thirds of voicemailed callers hang up and dial the next shop. On a shop missing 6 calls/day at $85 avg, that is ~$150K/year gone, concentrated in two week-long peaks (Valentine's, Mother's Day) where volume lands on the same two staff who run a normal Tuesday.
+
+Stack we deploy for US flower shops: Meta WhatsApp Business API fronting a Node orchestrator with a Redis queue → LLM intent router (order, status, wedding consult, sympathy, complaint) against a strict JSON schema, confidence <0.8 or sympathy/complaint intents hand off to a human within one turn → florist-vertical CRM with recipient-first schema (sender linked to N recipients, each with its own address, occasion ledger, allergy flags) → delivery-zone cutoff service that validates same-day feasibility against zip + current clock before any confirmation → wire-service adapter (FTD/Teleflora/BloomNet) for inbound order codes mapped onto the same customer record → POS webhook for photo-of-delivery template message.
+
+Composite US cohort medians (2-location shops, 6-month window): missed calls 10/day → 1/day, first response on IG DM and web forms 6-9h → <90s, after-hours order capture 0 → ~14% of volume, Valentine's week orders turned away 60 (2025) → 8 (2026 with agent).
+
+Non-obvious design call: sympathy orders bypass the agent entirely on keyword match, because a grieving customer who dialed in should never be answered by a bot, however good the flow is. The agent apologizes once and routes.
+
+Full writeup with the 14-day peak-season playbook and the florist CRM field list: https://zeniapartners.com/blog/ai-agent-for-florists.html
+
+#SystemsEngineering #WhatsAppBusinessAPI #AIAgents #RetailTech
+
+---
+

@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-10-15T00:00:00+00:00",
+  "lastRun": "2026-10-16T00:00:00+00:00",
   "market": "US/UK small business",
   "posts": [
     {
@@ -280,7 +280,8 @@
       "keyword": "ai agent for florists",
       "tier": 2,
       "cluster": "retail",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-10-16"
     },
     {
       "slug": "ai-agent-for-pet-groomers",

@@ -8772,3 +8772,18 @@ Full writeup with the 14-day peak-season playbook and the florist CRM field list
 
 ---
 
+## 2026-10-16 - Automatización para Restaurantes en Málaga
+
+Málaga is now the European Capital of Gastronomic Culture 2026/2027 and hosted the Michelin Guide Spain 2026 gala, so a mid-size restaurant in the center or on the Costa del Sol handles 40-120 inbound WhatsApp reservation requests/day across es/en/fr/de — concentrated outside service hours and routinely dropped by a manual phone-and-notebook flow.
+
+Stack we ship for Málaga restaurants: Meta WhatsApp Business API as the single inbound → Node orchestrator with a Redis-backed BullMQ queue (phone + locale as composite dedup key) → LLM intent router against a strict JSON schema (reserve, modify, cancel, group, allergy) with confidence <0.8 escalating to room staff within one turn → reservation-system adapter (CoverManager / TheFork / Resy / Fourvenues) that checks table availability at the exact slot before any confirmation, falling back to a direct DB connector where there is no public API → waitlist worker that fires the first eligible contact on the queue when a cancellation lands, within seconds, so the released cover does not go to a neighbor restaurant.
+
+Measured medians across our ES restaurant cohort: first-reply 20-45m → <10s, no-shows 12-18% → 5-7%, after-hours reservations captured 0 → ~30% of weekly volume, p95 for the reserve→confirm roundtrip at 2.3s against CoverManager and 3.1s on a custom-DB connector.
+
+Non-obvious design call: multilingual is handled on the first inbound message (language-id on the first user turn), not after a menu prompt — because a tourist who writes in French and gets a Spanish menu is already lost to the next shop two doors down.
+
+Full writeup with the pricing table and the 5-week rollout: https://zeniapartners.com/blog/automatizacion-para-restaurantes-en-malaga.html
+
+#SystemsEngineering #WhatsAppBusinessAPI #AIAgents #RestaurantTech
+
+---

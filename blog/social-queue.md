@@ -8739,3 +8739,18 @@ Full writeup with the arch diagram, vendor table and compliance checklist: https
 #SystemsEngineering #WhatsAppBusinessAPI #ERPIntegration #AIAgents
 
 ---
+## 2026-10-16 - Automatización para Gimnasios en CDMX
+
+Running a 300-member boutique gym in CDMX has an infrastructure gap most SaaS vendors ignore: CFDI 4.0 timbrado at the moment of charge, into a WhatsApp thread, with the SAT metadata (uso CFDI, régimen fiscal del receptor, método de pago) captured once and reused.
+
+Architecture we ship for mid-size gyms in Roma, Condesa and Polanco: Meta WhatsApp Business API as inbound and billing channel → Node middleware with a BullMQ queue (RFC + E.164 as composite dedup key) → LLM intent extraction against a strict JSON schema (intent, class_slot, plan_tier, invoice_request) with confidence <0.75 routed to recepción → Conekta/Stripe MX/Mercado Pago for charge, PAC webhook for timbrado, PDF+XML returned into the same chat thread within one message. Attendance signal from the turnstile goes to Postgres and feeds a silence_days >= 10 cohort trigger for the churn flow.
+
+Measured medians across our MX gym cohort: first-reply across channels 15-30m → <60s, failed-charge recovery 40-50% → 75-85%, admin hours on billing 12-16/week → 2-3, median p95 for the end-to-end CFDI roundtrip (charge event to PDF delivered) at 11s on Conekta + a mid-tier PAC.
+
+The non-obvious piece: IHRSA 2023 pins 40-60% of January signups canceling by March, but almost none of them say why. The signal that actually predicts the cancellation is turnstile silence at day 10, not NPS or a cancellation form.
+
+Full writeup with the pricing table, PAC integration notes and the 5-week rollout: https://zeniapartners.com/blog/automatizacion-para-gimnasios-en-cdmx.html
+
+#SystemsEngineering #WhatsAppBusinessAPI #AIAgents #FitnessTech
+
+---

@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-10-15T22:15:04+00:00",
+  "lastRun": "2026-10-16T06:00:00+00:00",
   "posts": [
+    {
+      "slug": "automatizacion-para-gimnasios-en-cdmx",
+      "keyword": "automatizacion para gimnasios en cdmx",
+      "tier": 4,
+      "cluster": "gimnasios-geo",
+      "status": "published",
+      "date": "2026-10-16",
+      "source": "generated"
+    },
     {
       "slug": "integrar-sage-con-whatsapp-business",
       "keyword": "integrar sage con whatsapp business",

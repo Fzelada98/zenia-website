@@ -8787,3 +8787,19 @@ Full writeup with the pricing table and the 5-week rollout: https://zeniapartner
 #SystemsEngineering #WhatsAppBusinessAPI #AIAgents #RestaurantTech
 
 ---
+## 2026-10-16 - AI Agent for Pet Groomers (EN)
+
+US pet grooming is a sold-by-appointment business where the chair is either full or losing money. The structural issue is intake: single-threaded, phone-dominant, and lumpy (Mondays and the first dry day after rain carry 40-60% of weekly inbound). Industry sources put the no-show rate at 15-18% and most independent shops answer under 45% of inbound calls during hours and 0% after hours. On a 20-appointment Saturday at a $70 ticket, that is $210-$252/day the dog never comes in, before counting the lost LTV ($350/year at 5 visits/year per dog).
+
+Stack we deploy for US groomers: Twilio or Vapi for voice fronting a Node orchestrator with Redis queue → LLM intent router (new client, rebook, waitlist, mat-shave, cancellation) against a strict JSON schema, confidence <0.8 or behavioral/medical flags hand off to a human within one turn → price-matrix service that resolves breed group x coat condition x add-ons against the shop's actual price book (not a generic breed table) → deposit flow via Stripe or Square (slot held in Redis for 15 minutes pending payment success, then released) → grooming CRM adapter (MoeGo, Gingr or Groomer.io) writing the appointment with full breed/coat/behavior/health field set → waitlist worker that fires a filtered breed-size-day blast on cancellation events, first-yes-wins with slot-level optimistic locking.
+
+Composite medians across our US grooming cohort (2-location shops, 6-month window): inbound pickup 42% → 99%, after-hours bookings 0 → 23% of new intake, no-shows 16.4% → 5.1%, pre-booked rebook at pickup 19% → 71%, same-day gap fill 22% → 68%, p95 for the quote→deposit→writeback roundtrip at 2.8s on MoeGo and 3.4s on Gingr.
+
+Non-obvious design call: mat-shave welfare calls and dog-reactive bookings bypass the agent entirely on intake-flag match. A groomer bite incident is cheaper to prevent at the intake layer than at the insurance layer, however good the LLM confidence score is.
+
+Full writeup with the breed-aware CRM field list and the 90-day Austin case: https://zeniapartners.com/blog/ai-agent-for-pet-groomers.html
+
+#SystemsEngineering #WhatsAppBusinessAPI #AIAgents #PetTech
+
+---
+

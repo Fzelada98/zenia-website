@@ -8803,3 +8803,18 @@ Full writeup with the breed-aware CRM field list and the 90-day Austin case: htt
 
 ---
 
+## 2026-10-16 - Automatizar Postventa Concesionario de Coches
+
+Dealership aftersales is 40-60% of a dealer's gross profit and still runs on inbound phone calls. The engineering problem is not "add an LLM to WhatsApp". It is this: join VIN against service history, open taller slots and opt-in base inside a DMS that may or may not expose a decent API (Tecnom, Nextlane, Pentana, manufacturer-locked DMS), under a DPA signed with the brand.
+
+Stack we ship: Meta WhatsApp Business API via BSP as the single customer surface, then a Node orchestrator with a Redis BullMQ queue (phone+VIN as composite dedup key), then an LLM intent router against a strict JSON schema (schedule-service, approve-estimate, recall-ack, next-maintenance, satisfaction-survey) with confidence under 0.8 escalating to a service advisor within one turn, then a DMS adapter per vendor (REST API where exposed, webhook+connector where not) that writes the work order into the DMS directly, never into a shadow spreadsheet, and a proactive worker on the 10-14 month post-visit window firing pre-approved HSM templates filtered by VIN with an explicit opt-out token in every message.
+
+Measured in production for single-brand dealers: p95 for the schedule→confirm roundtrip 1.9s against an API-DMS and 3.4s on the connector path; show-up rate on taller citas 65-75% baseline moving to 85%+; retention of postventa visits inside the 14-month ciclo +8 to +12 points over baseline. Toyota's own WhatsApp Business case (Toyota Zento, 12-month window) reports a 9.5x open rate vs email, which matches what we see on HSM delivery.
+
+Non-obvious design call: the vehicle sales conversation is routed out of the agent on first intent match. Bonus structures for sales vs service make it the wrong seam to automate; the agent only owns the postventa surface, and that discipline is what keeps CSI and conversion both pointing up.
+
+Full writeup with the DMS integration matrix, the GDPR notes and the 90-day KPI baseline: https://zeniapartners.com/blog/automatizar-postventa-concesionario-coches.html
+
+#SystemsEngineering #WhatsAppBusinessAPI #AIAgents #AutomotiveRetail
+
+---

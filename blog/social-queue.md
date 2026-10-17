@@ -8833,3 +8833,18 @@ Full writeup with the integration matrix, the Peru compliance notes and the 90-d
 #SystemsEngineering #WhatsAppBusinessAPI #AIAgents #FitnessTech
 
 ---
+## 2026-10-17 - AI Agent for Dog Walkers
+
+US dog walking is 35,349 businesses, $1.4B in 2026 revenue (IBISWorld), fragmented and almost unsoftwared. The engineering problem is not "put a bot on SMS". It is this: run a text-first booking surface against a recurring-schedule engine (skip, pause, move, blackout), a multi-walker dispatcher with route optimization, a Stripe/Square card-on-file auto-charge loop that enforces a cancellation policy, and a GPS-backed walk-report pipeline where the walker's input budget is a 20-second tap form.
+
+Stack we ship: 10DLC-registered SMS as the primary channel (iMessage parity for Apple users via business messaging where available), a Node orchestrator with a Redis BullMQ queue (phone + pet-id as composite dedup key), an LLM intent router against a strict JSON schema (book, reschedule, cancel, intake, pay, report, incident) with confidence under 0.8 escalating to the owner in one turn, a pet-ops adapter per vendor (Time To Pet, Doggy Logs, Jobber, Fieldd via REST where exposed; webhook+connector where not), a routing worker running an OR-Tools VRP over per-walker base, client lat/long, and time windows, and a proactive cancellation-enforcement worker on the <24h window that applies the policy automatically and writes the fee back as a Stripe charge.
+
+Measured on a 3-walker, 42-client composite over 90 days: median inbound-to-booked latency 2.5h to 45s, p95 at 3.1s on the API path; same-day booking fulfillment 61% to 88%; AR average age 11d to under 2d with a 1.2% failed-charge rate; windshield time per walker -15% to -25% after routing.
+
+Non-obvious design call: the agent is never allowed to confirm a walk without a valid key or lockbox record in the pet profile. Access state is the hard gate; LLM confidence is not. Separating access-control data from conversational state is what keeps 7 AM "I'm standing outside your door" calls off the owner's phone.
+
+Full writeup with the walker-app form, the SMS vs push comparison and the 10-day rollout: https://zeniapartners.com/blog/ai-agent-for-dog-walkers.html
+
+#SystemsEngineering #SMSAutomation #AIAgents #PetTech
+
+---

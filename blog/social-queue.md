@@ -8818,3 +8818,18 @@ Full writeup with the DMS integration matrix, the GDPR notes and the 90-day KPI 
 #SystemsEngineering #WhatsAppBusinessAPI #AIAgents #AutomotiveRetail
 
 ---
+## 2026-10-17 - Automatizacion para Gimnasios en Lima
+
+Peru gyms run cobros, class booking and retention on WhatsApp as the primary channel. The engineering problem is not "put a bot on WhatsApp". It is this: reconcile Yape, Plin, Culqi, Niubiz and Mercado Pago webhooks against membership state in Virtuagym/AgendaPro/Trainingym, then let an LLM write back to the gym's source of truth under Indecopi's cobranza timing rules and Ley 29733 consent.
+
+Stack we ship: Meta WhatsApp Business API via BSP, a Node orchestrator with a BullMQ queue (phone+document-id as composite dedup key), an intent router against a strict JSON schema (overdue-payment, class-reserve, pause-request, class-cancel, membership-upgrade) with confidence under 0.8 escalating to the human admin in one turn, a gym-SW adapter per vendor (Virtuagym and AgendaPro REST, Trainingym webhook+connector), and a proactive cobros worker on a -72h/day-D/+7d schedule firing pre-approved HSM templates with pay links from the active gateway.
+
+Measured in production on Lima gyms with 800-2000 socios: p95 for the inbound-to-reply roundtrip 1.4s against an API-first gym stack and 2.9s on the connector path; recovered overdue dues 22% to 38-47% at 90 days; bajas converted to pausa 18-28% from a 0-3% baseline; admin WhatsApp hours 22/week to 5-7/week.
+
+Non-obvious design call: the agent never blocks facility access on a failed charge-back. That lives in the gym-SW layer with its own retry schedule; the agent only owns the conversation and the CRM write-back. Separating control plane from data plane is what keeps door hardware predictable and the LLM out of safety paths.
+
+Full writeup with the integration matrix, the Peru compliance notes and the 90-day KPI baseline: https://zeniapartners.com/blog/automatizacion-para-gimnasios-en-lima.html
+
+#SystemsEngineering #WhatsAppBusinessAPI #AIAgents #FitnessTech
+
+---

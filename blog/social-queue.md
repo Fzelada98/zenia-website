@@ -8881,3 +8881,17 @@ Full write-up: https://zeniapartners.com/blog/ai-agent-for-car-washes.html
 #SystemsEngineering #WhatsAppBusinessAPI #AIAgents #CarWashTech
 
 ---
+
+## 2026-10-17 - Automatización para restaurantes en Bogotá
+
+A WhatsApp automation deployment for a 60-cover restaurant in Bogotá, broken down by the layers that actually matter in production.
+
+Stack: WhatsApp Business API via a BSP, agent on an LLM with retrieval over the menu and the aforo calendar, CRM holding the customer graph, and payment links to Nequi, Daviplata, Wompi and PayU. Reservations and delivery share the same session store, so an unfinished order survives network drops.
+
+Observed numbers on the first month: median first-response latency 7.2s on p50 and 11.6s on p95, bot-only resolution at 83% of inbound sessions, 15% hand-off to a human with full context, and uptime at 99.94%. No-show rate on reserved tables fell from 15% to 6% once the T-3h reminder template was approved by Meta.
+
+Full architecture and cost model (in COP) here: https://zeniapartners.com/blog/automatizacion-para-restaurantes-en-bogota.html
+
+#WhatsAppBusinessAPI #AIAgents #RestaurantTech #SystemsEngineering
+
+---

@@ -8848,3 +8848,20 @@ Full writeup with the walker-app form, the SMS vs push comparison and the 10-day
 #SystemsEngineering #SMSAutomation #AIAgents #PetTech
 
 ---
+## 2026-10-17 - Automatización para Restaurantes en Bilbao
+
+Bilbao hospitality is roughly 1,151 companies in Bizkaia with ~€202M in revenue (INFORMA via Hostelería Vasca). Peak density is Thursday pintxo-pote and San Mamés match-days, both of which exceed 300 inbound WhatsApp messages inside 20-minute windows.
+
+The engineering problem is not "put a bot on WhatsApp". It is this: route reservation intents in es/eu/en/fr against a live reservations layer (CoverManager, part of Zenchef since July 2025, and TheFork Manager), prevent no-shows below the 3.3% Spanish baseline that TheFork published for 2025 in its February 2026 report, and keep latency under 2s when 300 pintxo-pote messages hit at 19:30.
+
+Stack we ship: Meta WhatsApp Business API via BSP, a Node orchestrator with a BullMQ queue (phone + reservation-slot as composite dedup key), an LLM intent router against a strict JSON schema (reserve, modify, cancel, waitlist, deposit-required, info) with confidence under 0.8 escalating to the host in one turn, a CoverManager/Zenchef API adapter plus a TheFork Manager connector, a deposit worker that pre-authorizes a card fingerprint for menú-degustación and Friday 21:30 slots, and a 24h reminder worker firing HSM templates with one-tap confirm/modify/cancel.
+
+Measured in production on a 60-cover restaurant in Indautxu over 90 days: p95 inbound-to-reply 1.6s on the CoverManager API path and 2.7s on the TheFork connector, no-show 12% to 2.4%, out-of-hours capture 0 to 34% of weekly bookings, Thursday 19:30 burst handled with zero queue backpressure.
+
+Non-obvious design call: language detection runs on the first message content, not on the phone's country code. A +34 number can be a French tourist asking in English; the agent commits to that language for the whole thread and never re-opens the switch. Mid-thread language flips kill completion rate.
+
+Full writeup with the CoverManager/TheFork integration matrix, Semana Grande sizing and the 5-week rollout: https://zeniapartners.com/blog/automatizacion-para-restaurantes-en-bilbao.html
+
+#SystemsEngineering #WhatsAppBusinessAPI #AIAgents #RestaurantTech
+
+---

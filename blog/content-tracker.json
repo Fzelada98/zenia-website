@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-10-17T06:05:00+00:00",
+  "lastRun": "2026-10-17T14:11:48+00:00",
   "posts": [
+    {
+      "slug": "automatizacion-para-restaurantes-en-bilbao",
+      "keyword": "automatizacion para restaurantes en bilbao",
+      "tier": 4,
+      "cluster": "restaurantes/bilbao",
+      "status": "published",
+      "date": "2026-10-17",
+      "source": "matrix"
+    },
     {
       "slug": "automatizacion-para-gimnasios-en-lima",
       "keyword": "automatizacion para gimnasios en lima",

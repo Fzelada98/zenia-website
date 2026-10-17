@@ -8865,3 +8865,19 @@ Full writeup with the CoverManager/TheFork integration matrix, Semana Grande siz
 #SystemsEngineering #WhatsAppBusinessAPI #AIAgents #RestaurantTech
 
 ---
+
+## 2026-10-17 - AI Agent for Car Washes (EN)
+
+Field notes from a US car wash deployment (single-tunnel express, ~2,850 unlimited members at launch).
+
+Stack: WhatsApp Business API (Meta Cloud) + Twilio SMS as the dual-channel surface, LLM tool-use loop with function calls into DRB Patheon (read-only on member/plate/visit) and Stripe (hosted card-update links for involuntary churn). A2P 10DLC registered for the financial-messaging category. Plate recognition events are the webhook that triggers both the post-wash review request and the retail-to-member upsell at the 3rd paid retail wash in 60 days.
+
+Two numbers worth sharing under load: failed-payment rescue hit 47% within 48h on a 30m/24h/72h SMS sequence (vs the baseline 11% at 7d on the POS's default email dunning), and inbound first-touch p95 latency on WhatsApp held at 1.6s across 141 msg/week. Net members 2,850 to 3,363 in 90 days.
+
+The non-obvious engineering lift was not the agent. It was collapsing the POS membership state, Stripe retry state and the escalation inbox into one event bus so a cancel-intent message and a card-decline webhook could compete for the same save flow without racing.
+
+Full write-up: https://zeniapartners.com/blog/ai-agent-for-car-washes.html
+
+#SystemsEngineering #WhatsAppBusinessAPI #AIAgents #CarWashTech
+
+---

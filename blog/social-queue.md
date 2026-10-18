@@ -8895,3 +8895,16 @@ Full architecture and cost model (in COP) here: https://zeniapartners.com/blog/a
 #WhatsAppBusinessAPI #AIAgents #RestaurantTech #SystemsEngineering
 
 ---
+## 2026-10-18 - AI Agent for Towing Companies (EN)
+
+Field notes from deploying an AI agent across 7 US towing operators (4 to 11 trucks each) running Towbook or TOPS as the TMS. Dispatch is still mostly a human on a phone, and the three timers that run the business (cash-call pickup, motor club acceptance, stranded-driver ETA) are where the money leaks.
+
+Stack: WhatsApp Business API (Meta Cloud) and SMS (Twilio long-code with STOP compliance) as the inbound front door; LLM tool-use loop over function calls into the TMS (Towbook/TOPS REST) for create_dispatch, assign_truck, set_eta, close_ticket; motor club integration via Agero and SwoopDispatchHQ APIs where available, headless-browser automation on the older provider portals; Stripe for pay-before-release on non-consensual tows with state-rate caps enforced server-side (Texas Chapter 2308, California CVC 22658, Florida F.S. 715.07).
+
+Two numbers that mattered under load: motor club acceptance time p95 at 11.3s against a 60-180s cutoff window (acceptance rate 71% to 94% over 90 days on a four-truck Georgia operator), and inbound call deflection to WhatsApp holding 73% of volume once the Google Business profile was switched, which capped voice fallback at under 100 calls/day per dispatcher.
+
+Hardest piece was not the LLM. It was the state-compliance rate table: non-consensual pricing is capped differently by every state and sometimes by county, and the audit trail has to survive two years. We ended up with a versioned rate catalog (effective_at, state, county, service_class) and an append-only release ledger keyed by (ticket_id, action, timestamp) with hash chaining, so a chargeback dispute can be reconstructed from Postgres alone without touching the TMS.
+
+Full write-up with the 90-day case, TMS integration map, and compliance checklist: https://zeniapartners.com/blog/ai-agent-for-towing-companies.html
+
+#B2BSaaS #WhatsAppBusinessAPI #AgenticAI #FleetTech

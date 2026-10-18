@@ -30,7 +30,8 @@ REPO = Path(__file__).resolve().parent.parent
 
 INTERNAL_HREF_RE = re.compile(r'href=["\'](/[^"\']*\.html)["\']', re.IGNORECASE)
 TITLE_RE = re.compile(r'<title>(.*?)</title>', re.DOTALL)
-META_DESC_RE = re.compile(r'<meta\s+name=["\']description["\']\s+content=["\']([^"\']*)["\']', re.IGNORECASE)
+# Incluye el cierre de la etiqueta (">" o "/>"): al reescribirla se sustituye entera. Sin él, quedaba '">>' (bug del 28-sep-2026).
+META_DESC_RE = re.compile(r'<meta\s+name=["\']description["\']\s+content=["\']([^"\']*)["\']\s*/?>', re.IGNORECASE)
 
 
 def get_all_html_files():

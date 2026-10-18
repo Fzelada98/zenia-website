@@ -97,6 +97,12 @@ h1,h2,h3{font-family:'Space Grotesk','Inter',sans-serif;font-weight:700;letter-s
 .flow em{font-style:normal;font-family:'Space Grotesk',sans-serif;color:var(--a1);font-size:13px}
 .flow b{display:block;font-family:'Space Grotesk',sans-serif;font-size:1.05rem;margin:10px 0 8px;letter-spacing:-.01em}
 .flow span{font-size:13px;line-height:1.55;color:var(--mute);display:block}
+.reels{display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:780px;margin:0 auto;position:relative}
+.reel video{display:block;width:100%;height:auto;aspect-ratio:9/16;object-fit:cover;border-radius:22px;border:1px solid rgba(255,255,255,.12);background:#000;box-shadow:0 50px 100px -30px rgba(0,0,0,.85)}
+.reel figcaption{margin-top:16px;font-size:14px;line-height:1.55;color:var(--ink2)}.reel figcaption b{display:block;color:var(--ink);font-weight:600;margin-bottom:4px}
+.reels-cta{text-align:center;margin-top:48px;position:relative}
+.cards a.feat{grid-column:1/-1}
+@media(max-width:760px){.reels{grid-template-columns:1fr;max-width:400px;gap:48px}}
 .qs{display:flex;flex-wrap:wrap;gap:10px;margin:8px 0 24px}
 .qs span{font-family:'SFMono-Regular',ui-monospace,Menlo,monospace;font-size:14px;padding:9px 16px;border-radius:999px;border:1px solid var(--line);color:var(--ink)}
 .qs span:before{content:'⌕ ';color:var(--a1)}
@@ -237,6 +243,15 @@ def stage(c):
 <figure class="browser"><div class="bar"><i></i><i></i><i></i><span>{s['domain']}</span></div><img src="{s['desk']}" alt="{e(s['alt'])}" width="1600" height="1000" fetchpriority="high"></figure>
 <figure class="phone"><img src="{s['mob']}" alt="{e(s['alt_mob'])}" width="640" height="1385" loading="lazy"></figure>
 </div></div></section>"""
+    if c["stage"]["type"] == "videos":
+        s = c["stage"]
+        figs = "".join(
+            f'<figure class="reel"><video controls playsinline preload="metadata" poster="{v["poster"]}" width="720" height="1280">'
+            f'<source src="{v["src"]}" type="video/mp4"></video><figcaption><b>{v["label"]}</b>{v["note"]}</figcaption></figure>'
+            for v in s["videos"])
+        cta = (f'<div class="reels-cta"><a class="btn btn-p" href="{wa(s["cta_wa"])}" target="_blank" rel="noopener">{s["cta_btn"]}</a></div>'
+               if s.get("cta_wa") else "")
+        return f'<section class="stage"><div class="wrap"><div class="reels">{figs}</div>{cta}</div></section>'
     imgs = "".join(f'<img src="{i}" alt="{e(a)}" width="1080" height="1350" loading="lazy">' for i, a in c["stage"]["imgs"])
     return f'<section class="stage"><div class="wrap"><div class="posters">{imgs}</div></div></section>'
 
@@ -276,6 +291,12 @@ def page(c, lang):
           "publisher": {"@type": "Organization", "name": "ZENIA", "url": SITE,
                         "logo": {"@type": "ImageObject", "url": SITE + "/assets/icons/favicon.svg"}},
           "about": {"@type": "Organization", "name": c["client"], "url": c["client_url"]}}
+    if c["stage"]["type"] == "videos":
+        st = c["stage"] | t.get("stage_txt", {})
+        ld["video"] = [{"@type": "VideoObject", "name": v["name"], "description": v["desc"],
+                        "thumbnailUrl": SITE + v["poster"], "contentUrl": SITE + v["src"],
+                        "uploadDate": v["date"], "duration": v["dur"], "inLanguage": v.get("lang", lang)}
+                       for v in st["videos"]]
     out = [head(lang, t["title"], t["desc"], c["url"][lang], c["og"], other, c["url"][other], ld)]
     out.append(f'<body style="--a1:{c["a1"]};--a2:{c["a2"]};--glow:{c["glow"]}">')
     out.append(nav(lang))
@@ -466,7 +487,7 @@ CICERO = {
     "client": "Cicero", "client_url": "https://thecicero.ai",
     "a1": "#E2C99A", "a2": "#C9A76B", "glow": "rgba(201,167,107,.13)",
     "logo": "/cases/img/cicero-mark.svg", "logo_w": 54, "logo_name": True,
-    "og": "/cases/img/cicero-og.jpg", "next": "croian",
+    "og": "/cases/img/cicero-og.jpg", "next": "gwb",
     "url": {"en": "/cases/cicero-public-affairs-spain-italy.html", "es": "/es/caso-cicero.html"},
     "stage": {"type": "posters", "imgs": []},
     "card_img": "/cases/img/cicero-slide-1.webp",
@@ -580,7 +601,132 @@ CICERO = {
     },
 }
 
-CASES = {"croian": CROIAN, "cicero": CICERO}
+VIDEO1 = {'src': '/cases/video/gwb-agente-247am.mp4', 'poster': '/cases/img/gwb-agente-poster.webp', 'date': '2026-09-04', 'dur': 'PT47S', 'lang': 'es'}
+VIDEO2 = {'src': '/cases/video/gwb-network.mp4', 'poster': '/cases/img/gwb-network-poster.webp', 'date': '2026-09-26', 'dur': 'PT62S', 'lang': 'en'}
+
+GWB = {
+    "client": "Global Watch Buyers", "client_url": "https://globalwatchbuyers.com",
+    "a1": "#EAD6A6", "a2": "#C4A15E", "glow": "rgba(196,161,94,.14)",
+    "logo": "/cases/img/gwb-mark.svg", "logo_w": 54, "logo_name": True,
+    "og": "/cases/img/gwb-og.jpg", "next": "croian",
+    "url": {"en": "/cases/global-watch-buyers-ai-acquisition.html", "es": "/es/caso-global-watch-buyers.html"},
+    "stage": {"type": "videos"},
+    "card_img": "/cases/img/gwb-card.webp",
+    "en": {
+        "title": "Global Watch Buyers: luxury watch sellers from 33 countries, captured with AI | ZENIA case",
+        "desc": "How ZENIA built the acquisition engine of Global Watch Buyers: sell pages by brand and city in 13 languages, WhatsApp with qualification, a lead panel by tier, ads that only bring sellers, ChatGPT visibility and GWB Network. With the videos of the case.",
+        "kicker": ["Luxury watches", "33 countries", "Video"],
+        "h1": 'Watch sellers from 33 countries. <span class="acc">Answered even at 2:47 a.m.</span>',
+        "lede": "Global Watch Buyers buys luxury watches from private owners across Latin America, Europe and the United States. ZENIA built the whole system that brings those sellers in and sorts them: sell pages by brand and city, a direct line into WhatsApp with the watch already described, a panel that separates premium pieces from the rest and a private network to move watches by hand. Here are the videos and the numbers.",
+        "facts": [("client", "Global Watch Buyers"), ("sector", "Luxury watch buying"),
+                  ("market", "Latin America, Europe, US"), ("scope", "Website, WhatsApp acquisition, lead panel, Google Ads, AI visibility, GWB Network"),
+                  ("status", 'Live at <a href="https://globalwatchbuyers.com" target="_blank" rel="noopener">globalwatchbuyers.com</a>')],
+        "stage_txt": {"videos": [
+            dict(VIDEO1, label="The flow, recreated: from a 2:47 a.m. message to a booked call",
+                 note="The chat is a recreation (in Spanish). The figures at the end were the real ones on 4 September; today they are higher.",
+                 name="2:47 a.m.: a watch seller answered while the team sleeps",
+                 desc="Recreation of the WhatsApp acquisition flow ZENIA builds: a seller in London writes at 2:47 a.m., the piece is qualified and a call is booked."),
+            dict(VIDEO2, label="Launch film of GWB Network, the private hand-carry network",
+                 note="Membership by vouch, verified identity, a handover code on every run.",
+                 name="GWB Network: know who is carrying your watch",
+                 desc="Launch film of GWB Network, the private and verified hand-carry network for the watch trade built by ZENIA for Global Watch Buyers.")],
+            "cta_wa": "Hi, I watched the Global Watch Buyers videos and want something like this for my business",
+            "cta_btn": "I want this for my business"},
+        "nums_cap": "In numbers (3 July to 18 October 2026)",
+        "nums": [("831", "WhatsApp conversations started by sellers"), ("33", "countries they write from"),
+                 ("10 of 12", "contacts from ads bring a premium watch"), ("$1.1", "per premium seller coming from ads")],
+        "brief_lab": "The challenge",
+        "brief_h": "The watches existed. The sellers did not know who to write to.",
+        "brief": ["Someone who wants to sell a Rolex in Bogotá or a Cartier in Santiago is not looking for a brand. They want someone trustworthy who pays today, and they write when they can, often at night.",
+                  "Global Watch Buyers needed to show up in exactly that search, in every city and in the seller's language, and turn each visit into a conversation with the piece already described, without wasting time on buyers or replicas."],
+        "rules": ["We only buy: no ad may attract people who want to buy.", "Every contact measured end to end, from the search to the conversation.",
+                  "The seller writes in their language, on the channel they already use: WhatsApp."],
+        "built_lab": "What we built",
+        "built_h": "A complete acquisition engine, not a website.",
+        "built_p": "Six pieces that work together.",
+        "chapters": [
+            {"h": "Sell pages by brand and city", "p": "More than 2,900 pages in 13 languages: selling a Rolex in Bogotá, a Patek in Madrid or a Cartier in Lima, each with real market prices and a direct way into WhatsApp."},
+            {"h": "WhatsApp with the watch already described", "p": "A direct button and a short form (model, year, condition, box and papers) that opens WhatsApp with the message already written. The buyer receives a qualified seller, not a bare &laquo;hi, info&raquo;."},
+            {"h": "A lead panel by tier", "p": "Every conversation lands in a panel that separates premium watches (tier A) from the rest, alerts in real time and measures the ads: cost per seller, conversion and return."},
+            {"h": "Ads that only bring sellers", "p": "Google Ads by premium brand in Bogotá, Santiago, Lima and Guayaquil, with an exclusion list that keeps out buyers and replica hunters. Result: 10 out of 12 contacts from ads bring a premium watch, at about $1.1 each."},
+            {"h": "Visible in ChatGPT", "p": "Direct-answer guides, structured data and Bing indexing so AI search engines cite Global Watch Buyers. ChatGPT already sends visits every week and has brought real sellers."},
+            {"h": "GWB Network", "p": "The trade's private network to move watches by hand: membership by vouch, verified identity, a handover code on every run and a permanent track record. We launched it with the film on this page."},
+        ],
+        "nums2_cap": "Reach",
+        "nums2": [("2,900+", "sell pages and guides published"), ("13", "languages"), ("~20", "weekly visits coming from ChatGPT"), ("1,700+", "views of the GWB Network launch film")],
+        "sig_lab": "What it means for you",
+        "sig_h": "The same engine works for any business that lives on WhatsApp.",
+        "signals": ["Workshops, clinics, real estate agencies or luxury stores: the problem is the same. The customer writes when they can and stays with whoever answers first.",
+                    "On top of this engine we can add an AI agent that answers in seconds, qualifies and books, like in the recreated video. We design it for your business and connect it to the software you already use."],
+        "deliverables": ["Website in 13 languages", "Pages by brand and city", "Qualification form", "WhatsApp with a written message", "Lead panel",
+                         "Real-time alerts", "Google Ads", "Ad metrics", "AI visibility", "GWB Network", "Launch film", "Instagram content"],
+        "cta_h": "Do your customers write at night? Make sure no one is left unanswered.",
+        "cta_p": "In 30 minutes we show you what this engine would look like in your business, with your numbers.",
+        "cta_wa": "Hi, I saw the Global Watch Buyers case and want something like this for my business",
+        "card_h": "Global Watch Buyers: luxury watch sellers from 33 countries, captured with AI",
+        "card_p": "831 WhatsApp conversations in three and a half months, pages in 13 languages, ads that only bring premium watches and GWB Network. With the videos of the case.",
+        "card_meta": "Luxury watches &middot; 33 countries &middot; Video",
+        "alt_txt": "Also in", "alt_link": "Spanish",
+    },
+    "es": {
+        "title": "Global Watch Buyers: vendedores de relojes de lujo de 33 países, captados con IA | Caso ZENIA",
+        "desc": "Cómo ZENIA construyó el motor de captación de Global Watch Buyers: páginas de venta por marca y ciudad en 13 idiomas, WhatsApp con cualificación, panel de leads por niveles, anuncios que solo traen vendedores, visibilidad en ChatGPT y GWB Network. Con los vídeos del caso.",
+        "kicker": ["Relojes de lujo", "33 países", "Vídeo"],
+        "h1": 'Vendedores de relojes de 33 países. <span class="acc">Atendidos aunque sean las 2:47 de la madrugada.</span>',
+        "lede": "Global Watch Buyers compra relojes de lujo a particulares de Latinoamérica, Europa y Estados Unidos. ZENIA construyó todo el sistema que los trae y los ordena: páginas de venta por marca y ciudad, entrada directa a WhatsApp con el reloj ya descrito, un panel que separa las piezas premium del resto y una red privada para mover relojes en mano. Estos son los vídeos y las cifras.",
+        "facts": [("client", "Global Watch Buyers"), ("sector", "Compra de relojes de lujo"),
+                  ("market", "Latinoamérica, Europa y EE. UU."), ("scope", "Web, captación por WhatsApp, panel de leads, Google Ads, visibilidad en IA, GWB Network"),
+                  ("status", 'En vivo en <a href="https://globalwatchbuyers.com" target="_blank" rel="noopener">globalwatchbuyers.com</a>')],
+        "stage_txt": {"videos": [
+            dict(VIDEO1, label="El flujo, recreado: de un mensaje a las 2:47 a la llamada agendada",
+                 note="El chat es una recreación. Las cifras del final eran las reales del 4 de septiembre; hoy son más.",
+                 name="Las 2:47 de la madrugada: un vendedor de relojes atendido mientras el equipo duerme",
+                 desc="Recreación del flujo de captación por WhatsApp que construye ZENIA: un vendedor en Londres escribe a las 2:47, se cualifica la pieza y queda agendada la llamada."),
+            dict(VIDEO2, label="Vídeo de lanzamiento de GWB Network, la red privada de transporte en mano",
+                 note="Miembros por aval, identidad verificada y un código de entrega en cada transporte. En inglés.",
+                 name="GWB Network: sabe quién lleva tu reloj",
+                 desc="Vídeo de lanzamiento de GWB Network, la red privada y verificada de transporte en mano para el gremio de relojes, construida por ZENIA para Global Watch Buyers.")],
+            "cta_wa": "Hola, he visto los vídeos de Global Watch Buyers y quiero algo así para mi negocio",
+            "cta_btn": "Quiero esto para mi negocio"},
+        "nums_cap": "En cifras (3 de julio a 18 de octubre de 2026)",
+        "nums": [("831", "conversaciones de WhatsApp iniciadas por vendedores"), ("33", "países desde los que escriben"),
+                 ("10 de 12", "contactos que llegan por anuncios traen un reloj premium"), ("1,1 $", "por cada vendedor premium que llega por anuncios")],
+        "brief_lab": "El reto",
+        "brief_h": "Los relojes existían. Los vendedores no sabían a quién escribir.",
+        "brief": ["Quien quiere vender un Rolex en Bogotá o un Cartier en Santiago no busca una marca: busca a alguien de confianza que le pague hoy. Y escribe cuando puede, muchas veces de noche.",
+                  "Global Watch Buyers necesitaba aparecer justo en esa búsqueda, en cada ciudad y en el idioma del vendedor, y convertir cada visita en una conversación con la pieza ya descrita, sin perder tiempo con compradores ni con réplicas."],
+        "rules": ["Solo compramos: ningún anuncio puede atraer a quien quiere comprar.", "Cada contacto, medido de principio a fin: de la búsqueda a la conversación.",
+                  "El vendedor escribe en su idioma y en el canal que ya usa: WhatsApp."],
+        "built_lab": "Lo que construimos",
+        "built_h": "Un motor de captación completo, no una web.",
+        "built_p": "Seis piezas que trabajan juntas.",
+        "chapters": [
+            {"h": "Páginas de venta por marca y ciudad", "p": "Más de 2.900 páginas en 13 idiomas: vender un Rolex en Bogotá, un Patek en Madrid o un Cartier en Lima, cada una con precios de mercado reales y una salida directa a WhatsApp."},
+            {"h": "WhatsApp con el reloj ya descrito", "p": "Un botón directo y un formulario corto (modelo, año, estado, caja y papeles) que abre WhatsApp con el mensaje ya escrito. Quien compra recibe al vendedor cualificado, no un &laquo;hola, info&raquo;."},
+            {"h": "Panel de leads por niveles", "p": "Cada conversación entra en un panel que separa los relojes premium (Nivel A) del resto, avisa al momento y mide los anuncios: coste por vendedor, conversión y retorno."},
+            {"h": "Anuncios que solo traen vendedores", "p": "Google Ads por marca premium en Bogotá, Santiago, Lima y Guayaquil, con una lista de exclusiones que deja fuera a quien busca comprar o réplicas. Resultado: 10 de cada 12 contactos de anuncios traen un reloj premium, a unos 1,1 $ cada uno."},
+            {"h": "Visible en ChatGPT", "p": "Guías de respuesta directa, datos estructurados e indexación en Bing para que los buscadores de IA citen a Global Watch Buyers. ChatGPT ya envía visitas cada semana y ha traído vendedores reales."},
+            {"h": "GWB Network", "p": "La red privada del gremio para mover relojes en mano: miembros por aval, identidad verificada, un código de entrega en cada transporte e historial permanente. La lanzamos con el vídeo de esta página."},
+        ],
+        "nums2_cap": "Alcance",
+        "nums2": [("2.900+", "páginas de venta y guías publicadas"), ("13", "idiomas"), ("~20", "visitas a la semana que llegan desde ChatGPT"), ("1.700+", "reproducciones del vídeo de lanzamiento de GWB Network")],
+        "sig_lab": "Qué significa para ti",
+        "sig_h": "El mismo motor sirve para cualquier negocio que vive de WhatsApp.",
+        "signals": ["Talleres, clínicas, inmobiliarias o tiendas de lujo: el problema es el mismo. El cliente escribe cuando puede y se queda con quien contesta primero.",
+                    "Encima de este motor podemos poner un agente de IA que conteste en segundos, cualifique y agende, como en la recreación del vídeo. Lo diseñamos a la medida de tu negocio y lo conectamos al programa que ya usas."],
+        "deliverables": ["Web en 13 idiomas", "Páginas por marca y ciudad", "Formulario de cualificación", "WhatsApp con mensaje redactado", "Panel de leads",
+                         "Avisos en tiempo real", "Google Ads", "Métricas de anuncios", "Visibilidad en IA", "GWB Network", "Vídeo de lanzamiento", "Contenido para Instagram"],
+        "cta_h": "¿Tus clientes escriben de noche? Que nadie se quede sin respuesta.",
+        "cta_p": "En 30 minutos te enseñamos cómo quedaría este motor en tu negocio, con tus números.",
+        "cta_wa": "Hola, he visto el caso de Global Watch Buyers y quiero algo así para mi negocio",
+        "card_h": "Global Watch Buyers: vendedores de relojes de lujo de 33 países, captados con IA",
+        "card_p": "831 conversaciones de WhatsApp en tres meses y medio, páginas en 13 idiomas, anuncios que solo traen relojes premium y GWB Network. Con los vídeos del caso.",
+        "card_meta": "Relojes de lujo &middot; 33 países &middot; Vídeo",
+        "alt_txt": "También en", "alt_link": "inglés",
+    },
+}
+
+CASES = {"croian": CROIAN, "cicero": CICERO, "gwb": GWB}
 
 # Casos anteriores que se listan en los índices (solo los verificados).
 OLDER = {
@@ -618,10 +764,11 @@ def hub(lang):
     out.append('<body style="--a1:#8FB4FF;--a2:#8B5CF6;--glow:rgba(59,130,246,.10)">')
     out.append(nav(lang))
     cards = ""
-    for k in ("croian", "cicero"):
+    for k in ("gwb", "croian", "cicero"):
         c = CASES[k]
         t = c[lang]
-        cards += (f'<a href="{c["url"][lang]}"><div class="card-img"><img src="{c["card_img"]}" alt="{e(c["client"])}" loading="lazy"></div>'
+        feat = ' class="feat"' if k == "gwb" else ""
+        cards += (f'<a href="{c["url"][lang]}"{feat}><div class="card-img"><img src="{c["card_img"]}" alt="{e(c["client"])}" loading="lazy"></div>'
                   f'<div class="meta">{t["card_meta"]}</div><h3>{t["card_h"]}</h3><p>{t["card_p"]}</p>'
                   f'<span class="go" style="color:{c["a1"]}">{"Read the case" if lang == "en" else "Leer el caso"} &rarr;</span></a>')
     rows = "".join(f'<a href="{href}"><small>{meta}</small><strong>{title}</strong><em>&rarr;</em></a>' for href, meta, title in OLDER[lang])

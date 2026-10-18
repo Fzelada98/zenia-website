@@ -608,7 +608,7 @@ GWB = {
     "client": "Global Watch Buyers", "client_url": "https://globalwatchbuyers.com",
     "a1": "#EAD6A6", "a2": "#C4A15E", "glow": "rgba(196,161,94,.14)",
     "logo": "/cases/img/gwb-mark.svg", "logo_w": 54, "logo_name": True,
-    "og": "/cases/img/gwb-og.jpg", "next": "croian",
+    "og": "/cases/img/gwb-og.jpg", "next": "ts",
     "url": {"en": "/cases/global-watch-buyers-ai-acquisition.html", "es": "/es/caso-global-watch-buyers.html"},
     "stage": {"type": "videos"},
     "card_img": "/cases/img/gwb-card.webp",
@@ -726,7 +726,110 @@ GWB = {
     },
 }
 
-CASES = {"croian": CROIAN, "cicero": CICERO, "gwb": GWB}
+STEPS_ES = [('01', 'Referencia', 'El equipo la manda por WhatsApp'), ('02', 'Ficha', 'Variante, material y tamaño verificados'), ('03', 'Fotos', '8 fotos revisadas por visión artificial'), ('04', 'Precio', 'Calculado con las reglas de la casa'), ('05', 'Preview', 'Se corrige todo por chat'), ('06', 'eBay', 'Publicado tras el «sí» del equipo')]
+STEPS_EN = [('01', 'Reference', 'The team sends it on WhatsApp'), ('02', 'Specs', 'Variant, material and size verified'), ('03', 'Photos', '8 photos checked by computer vision'), ('04', 'Price', 'Set by the house rules'), ('05', 'Preview', 'Everything fixed by chat'), ('06', 'eBay', 'Live after the team says yes')]
+
+TS = {
+    "client": "Throwin' Salt", "client_url": "https://throwinsalt.com",
+    "a1": "#E8D9B5", "a2": "#BFA06A", "glow": "rgba(191,160,106,.13)",
+    "logo": "/cases/img/ts-mark.png", "logo_w": 71, "logo_name": True,
+    "og": "/cases/img/ts-og.jpg", "next": "croian",
+    "url": {"en": "/cases/throwin-salt-gaia-ebay-whatsapp.html", "es": "/es/caso-throwin-salt-gaia.html"},
+    "stage": {"type": "posters", "imgs": []},
+    "card_img": "/cases/img/ts-card.webp",
+    "en": {
+        "title": "Throwin' Salt: 54 luxury watches listed on eBay from WhatsApp | ZENIA case",
+        "desc": "Phase 1 of Gaia, the AI agent of Throwin' Salt: it replaced InkFrog and lists luxury watches on eBay from WhatsApp, with photos checked by computer vision, verified specs and a daily batch ready to approve.",
+        "kicker": ["Luxury watches", "eBay", "Phase 1"],
+        "h1": 'From a WhatsApp message to a live eBay listing. <span class="acc">Without opening a single dashboard.</span>',
+        "lede": "Throwin' Salt sells high-end watches on eBay. Until August 2026 every listing was built by hand in InkFrog, a tool that was also shutting down. ZENIA built Gaia, an AI agent that lives in the team's WhatsApp: it prepares each listing with title, specs, photos and price, enforces the house rules and publishes on eBay when the team says &laquo;publish&raquo;. This is phase 1.",
+        "facts": [("client", "Throwin' Salt"), ("sector", "Luxury watch retail"), ("market", "United States &middot; eBay"),
+                  ("scope", "WhatsApp AI agent, eBay publishing, computer-vision photo checks, daily batch"),
+                  ("status", "Phase 1 in production since August 2026")],
+        "stage_txt": {"imgs": [("/cases/img/ts-gaia-chat.webp", "Recreation of the team's WhatsApp chat with Gaia"),
+                               ("/cases/img/ts-gaia-lote.webp", "The daily batch: Full Set watches with 8 checked photos")]},
+        "nums_cap": "Phase 1 in numbers (20 August to 17 September 2026)",
+        "nums": [("54", "luxury watches listed on eBay from the chat"), ("23", "watches listed in a single day"),
+                 ("$2M", "of inventory listed, about $38,000 on average"), ("8", "photos per listing, each one checked by computer vision")],
+        "brief_lab": "The challenge",
+        "brief_h": "Listing a $40,000 watch cannot depend on filling in forms by hand.",
+        "brief": ["Every fine-watch listing needs the same things: the exact reference with its variant, the right material and size, eight photos in the house order and a price that is not off by a zero. Doing it by hand in InkFrog took hours, and a wrong spec meant deleting the listing.",
+                  "On top of that, InkFrog was shutting down. Throwin' Salt needed a faster way to list, with fewer mistakes, without changing how the team already works: on WhatsApp."],
+        "rules": ["Never a wrong reference: same variant, correct material and size.", "No hands or wrists in the photos, and always the brand's official box on Full Set listings.",
+                  "Never list a reference twice.", "Nothing goes live without the team's yes."],
+        "built_lab": "What we built",
+        "built_h": "An agent that works inside the team's WhatsApp.",
+        "built_p": "Five pieces, one conversation.",
+        "chapters": [
+            {"h": "Gaia, the WhatsApp agent", "p": "The team writes to it like a colleague: sends references or photos, asks for a price change or says &laquo;publish&raquo;. Gaia answers in seconds, shows a preview of each listing and fixes it by chat. It speaks Spanish and understands voice notes."},
+            {"h": "From the chat to eBay, without InkFrog", "p": "Gaia builds each listing with an optimised title, full specs, condition, eight photos in the house order and a price, and publishes it on eBay. It also edits or ends live listings, from the same chat.",
+             "v": {"type": "flow", "cap": "From the reference to the live listing, in one conversation.", "steps": STEPS_EN}},
+            {"h": "Photos checked by computer vision", "p": "Every photo goes through a vision model before it reaches the listing: no hands or wrists, no boxes that are not the brand's, and Full Set confirmed by looking at the photos themselves. The team stopped hunting mistakes by eye."},
+            {"h": "A daily batch ready to approve", "p": "Every morning Gaia proposes a batch of new watches, all Full Set, with the exact reference, eight photos and a calculated price, never repeating anything already listed. The team removes, corrects and publishes from the chat."},
+            {"h": "Control of what is listed", "p": "A record of every listing (who asked for it, when, at what price) and a private panel of everything listed, to follow the business and the accounts."},
+        ],
+        "sig_lab": "Next phase",
+        "sig_h": "Phase 1 solved listing. Phase 2 is about selling more.",
+        "signals": ["With listing solved, the focus moves to a wider catalogue of available references, tiered pricing and taking the same agent to Instagram and Facebook.",
+                    "The same pattern works for any business with a catalogue: an agent in the team's WhatsApp that turns messages into live listings, without touching a dashboard."],
+        "deliverables": ["WhatsApp AI agent", "eBay publishing", "Edit and end by chat", "Preview of every listing", "Computer-vision photo checks",
+                         "Automated house rules", "Daily batch", "Listing record", "Private panel", "Team manual"],
+        "cta_h": "Is your team still listing by hand? Let an agent do it.",
+        "cta_p": "In 30 minutes we show you what an agent like this would look like for your catalogue, on eBay, your website or any marketplace.",
+        "cta_wa": "Hi, I saw the Throwin' Salt case and want an agent like this for my business",
+        "card_h": "Throwin' Salt: luxury watches listed on eBay from WhatsApp",
+        "card_p": "Phase 1 of Gaia: 54 watches listed in four weeks, up to 23 in one day, with photos checked by computer vision and no dashboards.",
+        "card_meta": "Luxury watches &middot; eBay &middot; Phase 1",
+        "alt_txt": "Also in", "alt_link": "Spanish",
+    },
+    "es": {
+        "title": "Throwin' Salt: 54 relojes de lujo publicados en eBay desde WhatsApp | Caso ZENIA",
+        "desc": "Fase 1 de Gaia, el agente de IA de Throwin' Salt: sustituyó a InkFrog y publica relojes de lujo en eBay desde WhatsApp, con fotos revisadas por visión artificial, specs verificadas y un lote diario listo para aprobar.",
+        "kicker": ["Relojes de lujo", "eBay", "Fase 1"],
+        "h1": 'De un mensaje de WhatsApp a un anuncio en eBay. <span class="acc">Sin abrir ningún panel.</span>',
+        "lede": "Throwin' Salt vende relojes de alta gama en eBay. Hasta agosto de 2026, cada anuncio se montaba a mano en InkFrog, una herramienta que además cerraba. ZENIA construyó Gaia, un agente de IA que vive en el WhatsApp del equipo: prepara cada anuncio con título, especificaciones, fotos y precio, aplica las reglas de la casa y lo publica en eBay cuando el equipo dice &laquo;publica&raquo;. Esta es la fase 1.",
+        "facts": [("client", "Throwin' Salt"), ("sector", "Venta de relojes de lujo"), ("market", "Estados Unidos &middot; eBay"),
+                  ("scope", "Agente de IA en WhatsApp, publicación en eBay, revisión de fotos con visión artificial, lote diario"),
+                  ("status", "Fase 1 en producción desde agosto de 2026")],
+        "stage_txt": {"imgs": [("/cases/img/ts-gaia-chat.webp", "Recreación del chat del equipo con Gaia en WhatsApp"),
+                               ("/cases/img/ts-gaia-lote.webp", "El lote diario: relojes Full Set con 8 fotos revisadas")]},
+        "nums_cap": "La fase 1 en cifras (20 de agosto a 17 de septiembre de 2026)",
+        "nums": [("54", "relojes de lujo publicados en eBay desde el chat"), ("23", "relojes publicados en un solo día"),
+                 ("2 M$", "de inventario publicado, a unos 38.000 $ de media"), ("8", "fotos por anuncio, revisadas una a una por visión artificial")],
+        "brief_lab": "El reto",
+        "brief_h": "Publicar un reloj de 40.000 $ no puede depender de rellenar formularios a mano.",
+        "brief": ["Cada anuncio de alta relojería exige lo mismo: la referencia exacta con su variante, el material y el tamaño correctos, ocho fotos en el orden de la casa y un precio que no se equivoque por un cero. Hacerlo a mano en InkFrog llevaba horas, y un error en las specs obligaba a borrar el anuncio.",
+                  "Además, InkFrog cerraba. Throwin' Salt necesitaba otra forma de publicar, más rápida y con menos errores, sin cambiar la manera en que el equipo ya trabaja: por WhatsApp."],
+        "rules": ["Nunca un error de referencia: misma variante, con material y tamaño correctos.", "Nada de manos ni muñecas en las fotos, y siempre la caja oficial de la marca en los Full Set.",
+                  "Nunca repetir una referencia ya publicada.", "Nada sale en vivo sin el «sí» del equipo."],
+        "built_lab": "Lo que construimos",
+        "built_h": "Un agente que trabaja dentro del WhatsApp del equipo.",
+        "built_p": "Cinco piezas, una sola conversación.",
+        "chapters": [
+            {"h": "Gaia, el agente de WhatsApp", "p": "El equipo le escribe como a un compañero: manda referencias o fotos, pide un cambio de precio o dice &laquo;publica&raquo;. Gaia contesta en segundos, enseña un preview de cada anuncio y lo corrige por chat. Habla en español y entiende audios."},
+            {"h": "Del chat a eBay, sin InkFrog", "p": "Gaia monta cada anuncio con título optimizado, especificaciones completas, condición, ocho fotos en el orden de la casa y precio, y lo publica en eBay. También edita o retira lo que ya está en vivo, desde el mismo chat.",
+             "v": {"type": "flow", "cap": "De la referencia al anuncio en vivo, en una sola conversación.", "steps": STEPS_ES}},
+            {"h": "Fotos revisadas por visión artificial", "p": "Cada foto pasa por un modelo de visión antes de llegar al anuncio: fuera manos y muñecas, fuera cajas que no son de la marca y el Full Set confirmado mirando las propias fotos. El equipo dejó de cazar errores a ojo."},
+            {"h": "Un lote diario listo para aprobar", "p": "Cada mañana Gaia propone un lote de relojes nuevos, todos Full Set, con la referencia exacta, ocho fotos y el precio calculado, sin repetir nada de lo ya publicado. El equipo quita, corrige y publica desde el chat."},
+            {"h": "Control de lo publicado", "p": "Un registro de cada anuncio (quién lo pidió, cuándo y a qué precio) y un panel privado de todo lo publicado, para seguir el negocio y las cuentas."},
+        ],
+        "sig_lab": "Siguiente fase",
+        "sig_h": "La fase 1 resolvió publicar. La fase 2 va a por vender más.",
+        "signals": ["Con la publicación resuelta, el foco pasa a ampliar el catálogo de referencias disponibles, afinar los precios por tramos y llevar el mismo agente a Instagram y Facebook.",
+                    "El mismo patrón sirve para cualquier negocio con catálogo: un agente en el WhatsApp del equipo que convierte mensajes en anuncios publicados, sin tocar ningún panel."],
+        "deliverables": ["Agente de IA en WhatsApp", "Publicación en eBay", "Edición y retirada por chat", "Preview de cada anuncio", "Revisión de fotos con visión artificial",
+                         "Reglas de la casa automatizadas", "Lote diario", "Registro de publicaciones", "Panel privado", "Manual del equipo"],
+        "cta_h": "¿Tu equipo sigue publicando a mano? Que lo haga un agente.",
+        "cta_p": "En 30 minutos te enseñamos cómo quedaría un agente así para tu catálogo, sea en eBay, en tu web o en cualquier marketplace.",
+        "cta_wa": "Hola, he visto el caso de Throwin' Salt y quiero un agente así para mi negocio",
+        "card_h": "Throwin' Salt: relojes de lujo publicados en eBay desde WhatsApp",
+        "card_p": "Fase 1 de Gaia: 54 relojes publicados en cuatro semanas, hasta 23 en un día, con fotos revisadas por visión artificial y sin abrir ningún panel.",
+        "card_meta": "Relojes de lujo &middot; eBay &middot; Fase 1",
+        "alt_txt": "También en", "alt_link": "inglés",
+    },
+}
+
+CASES = {"croian": CROIAN, "cicero": CICERO, "gwb": GWB, "ts": TS}
 
 # Casos anteriores que se listan en los índices (solo los verificados).
 OLDER = {
@@ -764,10 +867,10 @@ def hub(lang):
     out.append('<body style="--a1:#8FB4FF;--a2:#8B5CF6;--glow:rgba(59,130,246,.10)">')
     out.append(nav(lang))
     cards = ""
-    for k in ("gwb", "croian", "cicero"):
+    for k in ("gwb", "ts", "croian", "cicero"):
         c = CASES[k]
         t = c[lang]
-        feat = ' class="feat"' if k == "gwb" else ""
+        feat = ' class="feat"' if k in ("gwb", "ts") else ""
         cards += (f'<a href="{c["url"][lang]}"{feat}><div class="card-img"><img src="{c["card_img"]}" alt="{e(c["client"])}" loading="lazy"></div>'
                   f'<div class="meta">{t["card_meta"]}</div><h3>{t["card_h"]}</h3><p>{t["card_p"]}</p>'
                   f'<span class="go" style="color:{c["a1"]}">{"Read the case" if lang == "en" else "Leer el caso"} &rarr;</span></a>')

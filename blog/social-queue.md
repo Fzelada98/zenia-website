@@ -8926,3 +8926,18 @@ Full breakdown (ES): https://zeniapartners.com/blog/integrar-bitrix24-con-whatsa
 #SystemsEngineering #WhatsAppBusinessAPI #AIAgents #B2BSaaS
 
 ---
+## 2026-10-18 - AI Agent for Pool Service Companies (EN)
+
+Field notes from deploying an AI agent across US pool service operators (4 to 11 trucks each) running Skimmer or Pool Brain as the pool management app, with Jobber handling the repair side. The business is route density, not demand, and three windows leak the most: 24/7 lead intake during the March to May pre-season spike, same-day proof-of-service to homeowners, and reschedule asks that destroy density if a human says yes without checking the route.
+
+Stack: WhatsApp Business API (Meta Cloud) and SMS (Twilio long-code) as the inbound front door; LLM tool-use loop against the Skimmer REST (service.create, route.query, chemical.read, invoice.add) with Pool Brain supported via its own API; chemical readings pulled directly from LaMotte and Taylor test equipment through the tech's phone and formatted into a WhatsApp report under 10 minutes from leaving the property; Stripe for one-tap chemical pay-ahead with the charge token tied to the next scheduled visit so the tech loads the product before rolling.
+
+Two numbers that mattered under load: reschedule evaluation against the route grid at p95 of 340ms (1.5-mile cluster fence, haversine on cached GPS centroids), and same-day chemical report delivery holding at 97% over 90 days on a six-truck Central Florida operator against 41% baseline. Chemical top-off conversion moved from 29% to 61% once the ask carried a specific reading, a visible price, and a one-tap approval wired to the Stripe link.
+
+The non-obvious piece was density-aware rescheduling. A human dispatcher says yes to whoever is in front of them. An AI that enforces a 1.5-mile fence on the destination day protects route profitability without turning the homeowner away: it offers the next slot inside the cluster, or a priority slot at a $15 premium. We route the exception cases (out-of-cluster, same-day emergencies, equipment failures) to the human.
+
+Full write-up with the 90-day case, pool-management integration map, and pre-season reactivation playbook: https://zeniapartners.com/blog/ai-agent-for-pool-service-companies.html
+
+#B2BSaaS #WhatsAppBusinessAPI #AgenticAI #FieldServiceTech
+
+---

@@ -8908,3 +8908,21 @@ Hardest piece was not the LLM. It was the state-compliance rate table: non-conse
 Full write-up with the 90-day case, TMS integration map, and compliance checklist: https://zeniapartners.com/blog/ai-agent-for-towing-companies.html
 
 #B2BSaaS #WhatsAppBusinessAPI #AgenticAI #FleetTech
+
+## 2026-10-18 - Integrating Bitrix24 with WhatsApp Business API
+
+Field notes from integrating Bitrix24 with WhatsApp Business API across several Spanish and LATAM pymes.
+
+Stack: WhatsApp Cloud API (Meta direct, no BSP) with a stateless Node backend on AWS eu-west-1; Redis for the 24h session window and Postgres for the audit log; LLM tool-use loop against Bitrix24 REST (crm.lead.add, crm.contact.get, imopenlines.message.add, crm.deal.update) with a 60s cache on contact reads to absorb peak load. Open Channels on the Bitrix24 Standard plan held under 1.2% error rate across 42k conversations/month.
+
+Two numbers that mattered under load: inbound webhook-to-first-reply p95 latency at 870ms, and bot-only resolution at 78% of inbound sessions once the tool schemas were tightened to reject half-filled slots instead of guessing them.
+
+The non-obvious lift was the plantillas (HSM) pipeline. Meta rejects roughly 22% of first-submission templates and the Bitrix24 "message outside 24h window" path has no retry queue of its own, so we built a template registry versioned alongside the agent prompt. A rejected template never ships, and the agent never attempts a channel it cannot use.
+
+Marketplace apps are fine when the goal is a visual inbox inside the CRM. For an agent with its own tool graph and attribution, writing against the Bitrix24 REST and WhatsApp Cloud API directly pays back inside a quarter.
+
+Full breakdown (ES): https://zeniapartners.com/blog/integrar-bitrix24-con-whatsapp-business.html
+
+#SystemsEngineering #WhatsAppBusinessAPI #AIAgents #B2BSaaS
+
+---

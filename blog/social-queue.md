@@ -8941,3 +8941,18 @@ Full write-up with the 90-day case, pool-management integration map, and pre-sea
 #B2BSaaS #WhatsAppBusinessAPI #AgenticAI #FieldServiceTech
 
 ---
+## 2026-10-18 - Integrar Airtable con WhatsApp Business (ES)
+
+Airtable's 5 req/s rate limit will blow up any WhatsApp Business integration past 500 msgs/day if the orchestration layer isn't batching.
+
+Pattern we've been running in production across Spain and LATAM: WhatsApp Business Cloud API webhook into an orchestration layer (Make for low-volume accounts, a Node service on Cloud Run for 2k+ msgs/day), then batched Airtable upserts (10 records per call) with exponential backoff on 429.
+
+Two numbers from the last 6 months on this stack: p95 end-to-end latency holds at 1.8 to 2.4s with the self-hosted orchestrator vs 5 to 15s on polling-based Zapier. A reprocess queue (SQS or Redis Streams) buys 7 days of webhook retries, matching the window Meta gives before it drops delivery.
+
+The non-obvious bit: putting the AI agent in front of Airtable (not after) batches intent-driven mutations before any API call, so 3 user turns compile to 1 Airtable write instead of 3. The rate limit stops being the bottleneck and the Business plan (54 USD/user/mo) covers volumes most teams would quote Enterprise for.
+
+Full architecture, cost breakdown and 5-phase rollout: https://zeniapartners.com/blog/integrar-airtable-con-whatsapp-business.html
+
+#WhatsAppBusinessAPI #Airtable #SystemsArchitecture #AIAgents
+
+---

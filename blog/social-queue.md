@@ -8971,3 +8971,16 @@ Full architecture, cost per plantilla by country (0.010 to 0.075 EUR), and the t
 #WhatsAppBusinessAPI #Mailchimp #SystemsArchitecture #AIAgents
 
 ---
+## 2026-10-19 - AI Agent for Locksmiths (EN)
+
+Locksmith intake is a latency problem disguised as a staffing problem. The miss rate on inbound calls sits at 34 percent industry median (webtonic.io, 2026) with 67 percent of volume outside business hours (IBISWorld). Voicemail is a hard stop: 88 percent of callers do not call back.
+
+The stack we ship for US shops: Twilio Programmable Voice fronting the business line, parallel WhatsApp Cloud API and SMS lanes, a stateless intake service on Cloud Run that routes to an LLM with a 142-row pricing table loaded as structured context (not RAG), Workiz REST API for tech availability and job writes, Postgres event store for the paper trail. Decision latency from first ring to texted quote: p50 at 7.8 seconds, p95 at 14.1 seconds. Escalation to the owner's cell on any safe-open, custody dispute, or vehicle the quote table does not cover, with a 2-minute SLA on human callback.
+
+Two production numbers from a two-truck Phoenix shop: answered-call rate from 62 to 97 percent across 24 hours, average time from first ring to confirmed Workiz dispatch from 11 minutes to 48 seconds. Agent monthly cost including Twilio minutes, WhatsApp Business conversation fees, LLM inference, and infra sits at $480.
+
+Pricing table design, FSM integration surface (Workiz, Jobber, Housecall Pro, QuoteIQ, ServiceM8), and the 30-day rollout: https://zeniapartners.com/blog/ai-agent-for-locksmiths.html
+
+#AIAgents #WhatsAppBusinessAPI #FieldServiceSoftware #SystemsArchitecture
+
+---

@@ -8984,3 +8984,18 @@ Pricing table design, FSM integration surface (Workiz, Jobber, Housecall Pro, Qu
 #AIAgents #WhatsAppBusinessAPI #FieldServiceSoftware #SystemsArchitecture
 
 ---
+## 2026-10-19 - Licencias Zoho por Transferencia Bancaria (ES)
+
+Zoho's self-serve billing in the EU accepts credit card and PayPal. Nothing else. For a Spanish entity that needs EUR invoices with 21 percent VAT desglosado, 30-day SEPA terms, and VeriFactu-compliant eInvoicing on the 2026 calendar, that's a procurement wall, not a payment inconvenience.
+
+The clean architectural pattern is partner-of-record on the subscription. Same Zoho org ID, same OAuth tokens, same REST and Deluge APIs, same support SLAs, same audit trail. The billing object is the only thing that moves: invoices emit from a Spanish CIF through B2Brouter (Zoho's AEAT-authorized service provider), the SEPA mandate replaces the stored card, and VeriFactu obligations stay with the entity actually operating on Spanish soil.
+
+Two implementation numbers from recent transfers: ownership transfer at Zoho's billing side closes in 2 to 5 business days with a single ticket, zero data movement, zero downtime on OAuth-connected services. SWIFT direct to Zoho Corporation adds 15 to 40 EUR per transfer in bank fees and 5 to 10 business days of activation lag, which usually makes partner-of-record cheaper than the direct route after the first order.
+
+Treat it like swapping an AWS reseller: infra identity preserved, finance identity swapped.
+
+Full flow with VeriFactu edge cases and EUR pricing as of October 2026: https://zeniapartners.com/blog/licencias-zoho-por-transferencia-bancaria.html
+
+#B2B #SaaS #ZohoCRM #SystemsArchitecture
+
+---

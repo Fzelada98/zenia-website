@@ -9012,3 +9012,20 @@ Qualifying flow design, FSM integration surface (Jobber, DripJobs, PaintScout, H
 #AIAgents #WhatsAppBusinessAPI #FieldServiceSoftware #SystemsArchitecture
 
 ---
+## 2026-10-19 - Fideliza Clientes con WhatsApp (ES)
+
+WhatsApp Business API open rate for October 2026 sits at 78.5 percent against 25.7 for email on the Chattigo provider panel. That delta is only useful if the loyalty stack behind it actually ships.
+
+Mass-blast on the number list burns Meta's quality tier in two weeks. What survives is event-driven: four flows pinned to CRM state, not calendar date.
+
+Stack we deploy: WhatsApp Business API via a BSP (Twilio or 360dialog), stateless intake service on Cloud Run with HMAC-signed webhooks, LLM agent carrying the business context as a structured prompt rather than RAG, CRM write-back on every turn, Postgres event store keyed by phone_e164 for the RGPD paper trail. Idempotent fire semantics on the scheduler so a redeploy never double-sends.
+
+Four flow triggers: repurchase reminder from a per-SKU cycle computed in SQL, birthday with an offer that references the customer's actual purchase history, 90-day silence reactivation with a single-token reply path, one-question post-sale survey that forks on 'bien'/'regular' into either a Google review link or human escalation.
+
+Decision latency from inbound webhook to outbound Meta Graph v21 publish: p50 under 3 seconds, p95 under 7 seconds including CRM read and LLM call. Per-conversation cost on the ES price list in October 2026: 0.0220 EUR utility and 0.0806 EUR marketing.
+
+Full architecture, flow specs and 2026 cost math: https://zeniapartners.com/blog/fideliza-clientes-con-whatsapp.html
+
+#WhatsAppBusinessAPI #AIAgents #CustomerRetention #SystemsArchitecture
+
+---

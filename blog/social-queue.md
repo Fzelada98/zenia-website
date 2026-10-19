@@ -8956,3 +8956,16 @@ Full architecture, cost breakdown and 5-phase rollout: https://zeniapartners.com
 #WhatsAppBusinessAPI #Airtable #SystemsArchitecture #AIAgents
 
 ---
+## 2026-10-19 - Integrar Mailchimp con WhatsApp Business (ES)
+
+There is no native Mailchimp to WhatsApp Business connector in October 2026, so every production integration is a thin service between two APIs the vendors chose not to join.
+
+The stack we ship in Spain and LATAM: Mailchimp Marketing API webhook into a Node service on Cloud Run, HMAC signature validation, idempotent event store in Postgres keyed by event_id, Redis Streams queue for retries, then POST to graph.facebook.com v21.0 messages with the system user token. The intermediate service is where the business logic lives: dedupe, double opt-in check against a WhatsApp consent column separate from the email list, template routing by category (Utility vs Marketing), and backoff on Meta error codes 131026, 131056, 132001.
+
+Two numbers from live deployments: filtered pass-through sits at 11 to 17 percent of Mailchimp events (the other 83 to 89 percent never justify a Marketing template), and WABA quality rating stays Green when that ratio holds; it drops to Yellow in under 72 hours when it does not. Template approval round trip from Meta is 2 to 18 hours and should be in CI, not a manual click.
+
+Full architecture, cost per plantilla by country (0.010 to 0.075 EUR), and the three-tier decision matrix: https://zeniapartners.com/blog/integrar-mailchimp-con-whatsapp-business.html
+
+#WhatsAppBusinessAPI #Mailchimp #SystemsArchitecture #AIAgents
+
+---

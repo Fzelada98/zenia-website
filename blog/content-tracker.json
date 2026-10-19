@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-10-18T22:04:00+00:00",
+  "lastRun": "2026-10-19T06:10:00+00:00",
   "posts": [
+    {
+      "slug": "integrar-mailchimp-con-whatsapp-business",
+      "keyword": "integrar mailchimp con whatsapp business",
+      "tier": 2,
+      "cluster": "crm-integraciones",
+      "status": "published",
+      "date": "2026-10-19",
+      "source": "generated"
+    },
     {
       "slug": "integrar-airtable-con-whatsapp-business",
       "keyword": "integrar airtable con whatsapp business",

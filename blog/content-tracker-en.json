@@ -352,7 +352,8 @@
       "keyword": "ai agent for painters",
       "tier": 2,
       "cluster": "trades",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-10-19"
     },
     {
       "slug": "ai-agent-for-audiologists",

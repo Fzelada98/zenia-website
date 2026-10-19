@@ -8999,3 +8999,16 @@ Full flow with VeriFactu edge cases and EUR pricing as of October 2026: https://
 #B2B #SaaS #ZohoCRM #SystemsArchitecture
 
 ---
+## 2026-10-19 - AI Agent for Painters (EN)
+
+Residential painting intake is a window problem: the homeowner who messages at 7:14 PM picks a contractor inside the next 20 minutes, and the office is closed. Voicemail is the single largest profit leak in the business.
+
+The stack we ship for US shops: Twilio Programmable Voice fronting the GBP number with 2-ring intercept, parallel WhatsApp Cloud API (Meta Graph v21.0) and SMS lanes, a stateless Node intake on Cloud Run with HMAC-signed webhooks, an LLM qualifying flow pinned to a structured surface/price table loaded as context (not RAG), two-way calendar sync against Jobber or Google Calendar via conflict-safe upserts, Postgres event store keyed by conversation_id for the TCPA paper trail. Reminder cadence at T-48h, T-24h, T-2h driven by a Redis Streams scheduler with idempotent fire semantics so a redeploy never double-texts.
+
+Two production numbers from a 3-crew Charlotte shop over 90 days: answered-or-engaged rate from 72 to 96 percent during hours and 11 to 88 percent off-hours, estimate-booking conversion from 31 to 56 percent on qualified touches with no change in estimator or pricing. Agent monthly cost including Twilio minutes, WABA conversation fees, LLM inference, and infra lands under $600 at this volume.
+
+Qualifying flow design, FSM integration surface (Jobber, DripJobs, PaintScout, Housecall Pro), and the 2-week rollout: https://zeniapartners.com/blog/ai-agent-for-painters.html
+
+#AIAgents #WhatsAppBusinessAPI #FieldServiceSoftware #SystemsArchitecture
+
+---

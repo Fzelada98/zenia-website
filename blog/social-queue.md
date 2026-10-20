@@ -9044,3 +9044,18 @@ Full breakdown with the 4 vs 10 device math, Meta pricing by category, and the e
 #WhatsAppBusinessAPI #CloudAPI #SystemsArchitecture #B2B
 
 ---
+## 2026-10-20 - AI CRM for Pest Control (EN)
+
+"AI CRM for pest control" splits in half on the demo. One half is a scripted bot sitting next to the schedule; the other is a system that writes jobs, invoices, and route changes through APIs. The split shows up on day two.
+
+Stack we ship for US operators (1 to 20 trucks): WhatsApp Business Cloud API via a BSP (Twilio or 360dialog) fronting the GBP, website form and ad lead-form endpoints, HMAC-verified webhooks into a stateless Node intake on Cloud Run, an LLM agent carrying service menu + ZIP pricing + warranty + cancellation policy as structured context (not RAG, because the index fits in prompt and latency matters), two-way API writes to the system of record (PestPac, FieldRoutes, GorillaDesk or Briostack) for job create and reschedule, QBO invoice drafts via the Intuit v3 API, Stripe retries on failed renewals with a 10-minute WhatsApp dunning sequence, Postgres event store keyed by conversation_id for the TCPA paper trail.
+
+Three numbers from live deployments on this pattern: decision latency from inbound webhook to booked job in the system of record p50 at 6.4 seconds, p95 at 11.8 seconds including CRM read + LLM call + write-back. Payment-fail recovery lift from 44 percent industry average to 72 to 80 percent on the 10-minute cadence. Agent all-in monthly cost (Twilio voice/SMS, WABA conversation fees, LLM inference, Cloud Run, Postgres) under $400 at 120 leads/month.
+
+The 2026 FieldRoutes State of the Trades survey across 1,027 operators has planned software investment at 44 percent (up from 20 percent in 2025) with AI picked as the top value driver by 40 percent of respondents. Uncertainty where to start is the barrier for 21 percent. The architecture is the answer.
+
+Full buyer's guide with the 2026 vendor landscape, 7-point integration checklist, and 2-week rollout: https://zeniapartners.com/blog/ai-crm-for-pest-control.html
+
+#AIAgents #WhatsAppBusinessAPI #FieldServiceSoftware #SystemsArchitecture
+
+---

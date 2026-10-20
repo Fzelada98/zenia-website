@@ -9059,3 +9059,16 @@ Full buyer's guide with the 2026 vendor landscape, 7-point integration checklist
 #AIAgents #WhatsAppBusinessAPI #FieldServiceSoftware #SystemsArchitecture
 
 ---
+## 2026-10-20 - Agente IA Postventa Automoción (ES)
+
+Aftersales in automotive dealerships and multi-brand workshops breaks on integration, not on the LLM. A chat layer that cannot write to the DMS is a demo, not a system.
+
+Stack we ship at Zenia Partners for Spanish and LATAM shops (1 to 15 service advisors): WhatsApp Business Cloud API on Meta Graph v21.0 behind HMAC-verified webhooks into a stateless Node intake on Cloud Run, LLM agent carrying model/VIN/km/open-campaign context as structured prompt (not RAG, the index fits), two-way API writes to the DMS of record (CDK, Gestoges, Grupo Lenon or in-house) for appointment create plus operation codes plus box assignment, nightly batch cross-join of ITV deadlines and mileage history to seed outbound template waves with proper opt-out and legitimate-interest flags, Postgres event store keyed by VIN plus conversation_id for the RGPD paper trail.
+
+Two numbers from live deployments on this pattern: decision latency from inbound webhook to booked slot in the DMS p50 under 7 seconds, p95 under 13 seconds including CRM read, LLM call and write-back. Cold-base reactivation hit rate on vehicles 9 to 18 months silent lands between 11 and 17 percent of contacted VINs returning to the shop within 60 days, measured against a holdout.
+
+Full breakdown with the 4 contracting models in October 2026, DMS integration layers and the 4-to-6 week rollout: https://zeniapartners.com/blog/agente-ia-postventa-automocion.html
+
+#WhatsAppBusinessAPI #AutomotiveAftersales #SystemsArchitecture #AIAgents
+
+---

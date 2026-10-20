@@ -9031,6 +9031,8 @@ Full architecture, flow specs and 2026 cost math: https://zeniapartners.com/blog
 ---
 ## 2026-10-20 - WhatsApp Business varios usuarios (ES post)
 
+<!-- PUBLISHED:make-webhook at 2026-10-20T08:30:01Z -->
+
 WhatsApp Business multi-user has a cliff that most engineering teams discover the hard way. The free app caps at 1 primary device + 4 linked (10 with Meta Verified for Business). Devices, not accounts: every linked session sees the same inbox and can write any chat. No per-agent identity, no routing, no audit trail of who answered what. Linked sessions also drop silently if the primary phone sits unused for ~14 days.
 
 The clean fix is WhatsApp Business Cloud API, Meta Graph v21.0, with the inbox layer owned by your software: HMAC-verified webhooks on message_in, assignment rules (round-robin, language, skill or current load), per-agent accounts with role + hours + templates pre-approved by Meta for outbound. The number itself is registered once in Business Manager; migration from the app is a webhook swap plus a short service window, no number change for the customer.

@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-10-20T00:00:00+00:00",
+  "lastRun": "2026-10-20T14:04:45+00:00",
   "posts": [
     {
       "slug": "whatsapp-business-varios-usuarios",
@@ -4351,6 +4351,15 @@
       "cluster": "automocion",
       "status": "published",
       "date": "2026-10-16"
+    },
+    {
+      "slug": "agente-ia-postventa-automocion",
+      "keyword": "agente ia talleres automocion postventa",
+      "tier": 1,
+      "cluster": "automocion",
+      "source": "striking",
+      "status": "published",
+      "date": "2026-10-20"
     }
   ]
 }

@@ -9072,3 +9072,17 @@ Full breakdown with the 4 contracting models in October 2026, DMS integration la
 #WhatsAppBusinessAPI #AutomotiveAftersales #SystemsArchitecture #AIAgents
 
 ---
+
+## 2026-10-20 - AI Agent for Audiologists (EN)
+
+"AI agent for audiologists" usually ships as a reminder bot bolted onto Sycle. Our version is a stateless service that writes bookings into the system of record and runs the full hearing aid follow-up cadence (2w / 30d / 60d / 6m / 12m) off a cohort query, not a cron.
+
+Stack we ship for US private practices (1 to 5 audiologists, 400 to 900 active patients): WhatsApp Business Cloud API (Meta Graph v21.0) + SMS gateway behind HMAC-verified webhooks into a stateless Node intake on Cloud Run, LLM agent carrying patient PMS context (purchase date, warranty, trial window, last audiogram) as structured prompt rather than RAG since the per-patient payload fits in a single call, two-way REST writes to the PMS of record (Sycle, Suno, Auditdata Manage, Blueprint OMS) for appointment create/modify, NOAH 4 read via a NOAHlink service for audiogram metadata where the deployment needs it, Postgres event store keyed by patient_id + conversation_id for the HIPAA audit trail under a signed BAA.
+
+Two numbers from production: p50 inbound-to-booked-slot write-back 6.1 seconds, p95 11.4 seconds including PMS read, LLM call and write. 2-week post-fitting follow-up attendance 71 to 89 percent on cohorts of 80+ patients, up from a 61 to 74 percent human-only baseline, measured against holdout.
+
+Full write-up with integration layer by PMS, cost ranges, HIPAA checks and 2-3 week rollout: https://zeniapartners.com/blog/ai-agent-for-audiologists.html
+
+#WhatsAppBusinessAPI #HealthcareIntegration #SystemsArchitecture #AIAgents
+
+---

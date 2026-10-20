@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-10-20T14:04:45+00:00",
+  "lastRun": "2026-10-20T22:04:22+00:00",
   "posts": [
+    {
+      "slug": "mensajes-masivos-whatsapp-business",
+      "keyword": "mensajes masivos whatsapp business",
+      "tier": 2,
+      "cluster": "whatsapp-technical",
+      "status": "published",
+      "date": "2026-10-20",
+      "source": "generated"
+    },
     {
       "slug": "whatsapp-business-varios-usuarios",
       "keyword": "whatsapp business varios usuarios al mismo tiempo",

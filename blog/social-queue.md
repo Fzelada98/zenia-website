@@ -9086,3 +9086,16 @@ Full write-up with integration layer by PMS, cost ranges, HIPAA checks and 2-3 w
 #WhatsAppBusinessAPI #HealthcareIntegration #SystemsArchitecture #AIAgents
 
 ---
+## 2026-10-20 - Mensajes masivos WhatsApp Business (ES)
+
+"WhatsApp bulk" splits into three distinct architectures on day two. The Business app with 256-contact broadcast lists, the Business Platform (Cloud API) with templates + opt-in + per-conversation billing, and a shadow category of non-official automation that burns numbers.
+
+Stack we ship at Zenia Partners for Spanish and LATAM SMBs (2k to 25k opted-in contacts): WhatsApp Business Cloud API on Meta Graph v21.0 behind HMAC-verified webhooks into a stateless Node intake on Cloud Run, template catalog versioned in Postgres with Meta approval state, number-warming scheduler ramping daily unique recipients across tier 1 to tier 3 (1k, 10k, 100k) while watching the quality rating in the Meta Business API, two-way writes to the CRM of record (HubSpot, Zoho, in-house) tying every delivery and reply to the contact record, LLM agent on inbound to triage replies in under a minute, Postgres event store keyed by waba_id + conversation_id for the RGPD paper trail.
+
+Two numbers from live deployments on this pattern: outbound send pacing kept at 500 to 1,000 messages/hour inside 10:00 to 20:00 local keeps quality rating green across 50k+ monthly templates, p95 inbound-reply latency from webhook to LLM-authored response at 2.9 seconds across utility + marketing templates. Marketing conversation cost sits near 0.0529 GBP per delivered conversation (Hyperleap, October 2026 UK calculator) vs 0.0128 GBP for utility, so category selection on the template catalog is the single biggest cost lever.
+
+Full breakdown with Meta tiers, pricing by category, template approval rules and the architecture that keeps the number green: https://zeniapartners.com/blog/mensajes-masivos-whatsapp-business.html
+
+#WhatsAppBusinessAPI #SystemsArchitecture #AIAgents #B2B
+
+---

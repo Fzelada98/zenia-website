@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-10-20",
+  "lastRun": "2026-10-21",
   "market": "US/UK small business",
   "posts": [
     {
@@ -377,7 +377,8 @@
       "keyword": "ai agent for podiatrists",
       "tier": 2,
       "cluster": "healthcare",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-10-21"
     },
     {
       "slug": "electrician-crm-with-ai",
@@ -877,6 +878,335 @@
       "cluster": "beauty",
       "status": "published",
       "date": "2026-09-24"
+    },
+    {
+      "slug": "ai-agent-for-med-aesthetics",
+      "keyword": "ai agent for med aesthetics",
+      "tier": 2,
+      "cluster": "beauty",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-orthopedic-clinics",
+      "keyword": "ai agent for orthopedic clinics",
+      "tier": 2,
+      "cluster": "healthcare",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-cardiology-clinics",
+      "keyword": "ai agent for cardiology clinics",
+      "tier": 3,
+      "cluster": "healthcare",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-urology-clinics",
+      "keyword": "ai agent for urology clinics",
+      "tier": 3,
+      "cluster": "healthcare",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-pulmonology-clinics",
+      "keyword": "ai agent for pulmonology clinics",
+      "tier": 3,
+      "cluster": "healthcare",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-gastroenterology-clinics",
+      "keyword": "ai agent for gastroenterology clinics",
+      "tier": 3,
+      "cluster": "healthcare",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-ent-clinics",
+      "keyword": "ai agent for ent clinics",
+      "tier": 3,
+      "cluster": "healthcare",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-plastic-surgeons",
+      "keyword": "ai agent for plastic surgeons",
+      "tier": 2,
+      "cluster": "healthcare",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-fertility-clinics",
+      "keyword": "ai agent for fertility clinics",
+      "tier": 2,
+      "cluster": "healthcare",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-weight-loss-clinics",
+      "keyword": "ai agent for weight loss clinics",
+      "tier": 2,
+      "cluster": "healthcare",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-wellness-centers",
+      "keyword": "ai agent for wellness centers",
+      "tier": 2,
+      "cluster": "fitness",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-crossfit-boxes",
+      "keyword": "ai agent for crossfit boxes",
+      "tier": 2,
+      "cluster": "fitness",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-boxing-gyms",
+      "keyword": "ai agent for boxing gyms",
+      "tier": 3,
+      "cluster": "fitness",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-climbing-gyms",
+      "keyword": "ai agent for climbing gyms",
+      "tier": 3,
+      "cluster": "fitness",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-swim-schools",
+      "keyword": "ai agent for swim schools",
+      "tier": 3,
+      "cluster": "education",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-language-schools",
+      "keyword": "ai agent for language schools",
+      "tier": 2,
+      "cluster": "education",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-test-prep-tutors",
+      "keyword": "ai agent for test prep tutors",
+      "tier": 2,
+      "cluster": "education",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-college-consultants",
+      "keyword": "ai agent for college consultants",
+      "tier": 3,
+      "cluster": "education",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-event-venues",
+      "keyword": "ai agent for event venues",
+      "tier": 2,
+      "cluster": "hospitality",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-wedding-planners",
+      "keyword": "ai agent for wedding planners",
+      "tier": 2,
+      "cluster": "services",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-wedding-photographers",
+      "keyword": "ai agent for wedding photographers",
+      "tier": 2,
+      "cluster": "creative",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-videographers",
+      "keyword": "ai agent for videographers",
+      "tier": 3,
+      "cluster": "creative",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-dj-services",
+      "keyword": "ai agent for dj services",
+      "tier": 3,
+      "cluster": "creative",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-food-trucks",
+      "keyword": "ai agent for food trucks",
+      "tier": 2,
+      "cluster": "food",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-ice-cream-shops",
+      "keyword": "ai agent for ice cream shops",
+      "tier": 3,
+      "cluster": "food",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-juice-bars",
+      "keyword": "ai agent for juice bars",
+      "tier": 3,
+      "cluster": "food",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-ghost-kitchens",
+      "keyword": "ai agent for ghost kitchens",
+      "tier": 3,
+      "cluster": "food",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-handyman-businesses",
+      "keyword": "ai agent for handyman businesses",
+      "tier": 2,
+      "cluster": "trades",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-fencing-contractors",
+      "keyword": "ai agent for fencing contractors",
+      "tier": 3,
+      "cluster": "trades",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-garage-door-companies",
+      "keyword": "ai agent for garage door companies",
+      "tier": 2,
+      "cluster": "trades",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-septic-companies",
+      "keyword": "ai agent for septic companies",
+      "tier": 3,
+      "cluster": "trades",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-chimney-sweeps",
+      "keyword": "ai agent for chimney sweeps",
+      "tier": 3,
+      "cluster": "trades",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-tree-service-companies",
+      "keyword": "ai agent for tree service companies",
+      "tier": 2,
+      "cluster": "trades",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-irrigation-companies",
+      "keyword": "ai agent for irrigation companies",
+      "tier": 3,
+      "cluster": "trades",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-mobile-detailers",
+      "keyword": "ai agent for mobile detailers",
+      "tier": 2,
+      "cluster": "auto",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-rv-dealers",
+      "keyword": "ai agent for rv dealers",
+      "tier": 3,
+      "cluster": "auto",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-motorcycle-dealers",
+      "keyword": "ai agent for motorcycle dealers",
+      "tier": 3,
+      "cluster": "auto",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-boat-dealers",
+      "keyword": "ai agent for boat dealers",
+      "tier": 3,
+      "cluster": "auto",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-property-managers",
+      "keyword": "ai agent for property managers",
+      "tier": 2,
+      "cluster": "real-estate",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-vacation-rental-managers",
+      "keyword": "ai agent for vacation rental managers",
+      "tier": 2,
+      "cluster": "real-estate",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-notaries",
+      "keyword": "ai agent for notaries",
+      "tier": 3,
+      "cluster": "professional",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-tax-preparers",
+      "keyword": "ai agent for tax preparers",
+      "tier": 2,
+      "cluster": "professional",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-bookkeepers",
+      "keyword": "ai agent for bookkeepers",
+      "tier": 2,
+      "cluster": "professional",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-estate-planning-attorneys",
+      "keyword": "ai agent for estate planning attorneys",
+      "tier": 2,
+      "cluster": "professional",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-criminal-defense-attorneys",
+      "keyword": "ai agent for criminal defense attorneys",
+      "tier": 2,
+      "cluster": "professional",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-personal-injury-attorneys",
+      "keyword": "ai agent for personal injury attorneys",
+      "tier": 2,
+      "cluster": "professional",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-family-law-attorneys",
+      "keyword": "ai agent for family law attorneys",
+      "tier": 2,
+      "cluster": "professional",
+      "status": "pending"
     }
   ]
 }

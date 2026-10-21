@@ -9114,3 +9114,16 @@ Full write-up with the comparison table, pricing in MXN and EUR, zone-by-zone pa
 #WhatsAppBusinessAPI #RestaurantTech #SystemsArchitecture #AIAgents
 
 ---
+## 2026-10-21 - AI Agent for Podiatrists (EN)
+
+"AI agent for podiatrists" usually ships as a reminder blast bolted onto the EHR. Our version is a stateless service that writes appointments back into the EHR of record (eClinicalWorks via FHIR R4, Modernizing Medicine EMA via its Marketplace FHIR appointment resource, Nextech via vendor API, DrChrono via public FHIR) and runs the full podiatry recall cadence (CDFE 180d, therapeutic shoe refit 365d, orthotic reassessment 365d, post-op 2w/6w/12w) off a nightly cohort query against patients with LOPS, not a cron on calendar reminders.
+
+Stack we ship for US private podiatry practices (1 to 3 DPMs, 1,500 to 4,000 active patients): WhatsApp Business Cloud API (Meta Graph v21.0) + Twilio voice behind HMAC-verified webhooks into a stateless Node intake on Cloud Run, LLM agent carrying patient PMS context (last visit date, visit type, diabetic status, orthotic dispense date, Medicare therapeutic shoe benefit anniversary) as structured prompt rather than RAG since the per-patient payload fits in a single call, two-way REST writes with idempotency keys on the appointment resource of the EHR of record, Postgres event store keyed by patient_id + conversation_id + waba_id for the HIPAA audit trail under a signed BAA covering the LLM provider, the hosting infra and the WABA.
+
+Two numbers from production: p50 inbound-to-booked-slot write-back 6.4 seconds, p95 12.1 seconds including PMS read, LLM call and FHIR appointment create. 90-day diabetic CDFE recall attendance 51 to 74 percent on a 2,400-patient panel with 28 percent diabetic prevalence, measured against a holdout cohort kept on the previous SMS-only reminder.
+
+Full write-up with EHR integration map, HIPAA checks, Medicare CDFE recall math, 2-week rollout and 8 vendor-screening questions: https://zeniapartners.com/blog/ai-agent-for-podiatrists.html
+
+#WhatsAppBusinessAPI #HealthcareIntegration #SystemsArchitecture #AIAgents
+
+---

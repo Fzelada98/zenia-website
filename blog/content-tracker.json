@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-10-20T22:04:22+00:00",
+  "lastRun": "2026-10-21T00:00:00+00:00",
   "posts": [
+    {
+      "slug": "automatizacion-para-restaurantes-en-cdmx",
+      "keyword": "automatizacion para restaurantes en cdmx",
+      "tier": 4,
+      "cluster": "restaurantes-geo",
+      "status": "published",
+      "date": "2026-10-21",
+      "source": "matrix"
+    },
     {
       "slug": "mensajes-masivos-whatsapp-business",
       "keyword": "mensajes masivos whatsapp business",

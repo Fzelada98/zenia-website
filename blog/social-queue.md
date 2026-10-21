@@ -9099,3 +9099,16 @@ Full breakdown with Meta tiers, pricing by category, template approval rules and
 #WhatsAppBusinessAPI #SystemsArchitecture #AIAgents #B2B
 
 ---
+## 2026-10-21 - Automatización para restaurantes en CDMX (ES)
+
+Mexico City is a density test for a WhatsApp agent, not a scripting exercise. 92.2 percent WhatsApp penetration in Mexican adults (Meta, cited by Milenio), 75 percent of businesses already on WhatsApp Business (Meta/BCG via Forbes México), and SECTUR CDMX projecting 2 to 3 million visitors around the 5 World Cup matches hosted in the city in 2026. The booking inbox stops being a chat and becomes an event stream.
+
+Stack we ship at Zenia Partners for restaurants in CDMX (one-location fondas up to 4-site groups in Polanco, Reforma, Santa Fe, Condesa and Roma): WhatsApp Business Cloud API on Meta Graph v21.0 behind HMAC-verified webhooks into a stateless Node intake on Cloud Run, LLM agent carrying menu + capacity + comensal history as structured prompt (not RAG, the per-service payload fits in one call), two-way REST writes to the reservation system of record (OpenTable, Resy, TheFork or in-house) for slot create/modify/cancel with idempotency keys on the write path, OpenPay or Stripe deposit intents when the policy needs them, bilingual intent classifier (ES-MX + EN) in front of the agent, Postgres event store keyed by phone_hash + conversation_id for the retention and audit trail.
+
+Two numbers from production on this pattern: p50 inbound-to-slot-write-back 5.4 seconds, p95 10.8 seconds including availability check, LLM call and reservation API write. Pre-warmed webhook pods on match-day windows hold p95 reply under 2 seconds while inbound rate crosses 12x baseline for 90-minute spikes.
+
+Full write-up with the comparison table, pricing in MXN and EUR, zone-by-zone patterns and the 3 to 5 week rollout: https://zeniapartners.com/blog/automatizacion-para-restaurantes-en-cdmx.html
+
+#WhatsAppBusinessAPI #RestaurantTech #SystemsArchitecture #AIAgents
+
+---

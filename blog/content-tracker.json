@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-10-21T14:04:55+00:00",
+  "lastRun": "2026-10-21T22:10:00+00:00",
   "posts": [
+    {
+      "slug": "automatizacion-para-gimnasios-en-santiago",
+      "keyword": "automatizacion para gimnasios en santiago",
+      "tier": 4,
+      "cluster": "gimnasios-geo",
+      "status": "published",
+      "date": "2026-10-21",
+      "source": "matrix"
+    },
     {
       "slug": "integrar-google-sheets-con-whatsapp-business",
       "keyword": "integrar google sheets con whatsapp business",

@@ -9153,3 +9153,16 @@ Full write-up with EHR integration map, HIPAA/BAA chain, treatment-specific reca
 #WhatsAppBusinessAPI #HealthcareIntegration #SystemsArchitecture #AIAgents
 
 ---
+## 2026-10-21 - Automatización para gimnasios en Santiago (ES)
+
+"Automate the gym" usually ships in Santiago as a WhatsApp broadcast tool stapled on the side of the DMS. Our build treats the DMS (Trainingym REST, Virtuagym REST, Dmoov hybrid connectors, or an internal MySQL in the operator's rack) as the system of record and writes bookings, dunning state and reactivation events back into it on every turn, instead of maintaining a shadow membership table in the agent.
+
+Stack we ship for Santiago fitness operators (300 to 3,000 active members, one to eight locations across Las Condes, Vitacura, Providencia, Ñuñoa): WhatsApp Business Cloud API on Meta Graph v21.0 behind HMAC-verified webhooks into a stateless Node intake on Cloud Run, LLM agent loading the member record (last check-in, membership state, outstanding balance, class history, consent timestamp per Ley 19.628) as structured JSON per turn, two-way writes to Trainingym or Virtuagym with idempotency keys on class_reservation_id and payment_intent_id so retries never double-book or double-charge, dunning cycle at D+3 / D+7 / D+14 off a nightly cohort query against the DMS payments table (not a static cron), payment links through Transbank Webpay, Khipu or Mercado Pago generated per conversation and short-lived (<30 minutes TTL), Postgres event store keyed by member_id + conversation_id + waba_id for the operator's audit trail, strict 24-hour conversation window enforced at intake so marketing templates never leak into service traffic.
+
+Two numbers from production on this pattern in RM gyms: p50 inbound-to-booked-slot write-back 2.4 seconds, p95 4.1 seconds including DMS read, LLM call and reservation create against Trainingym; D+3 dunning template recovered 46% of outstanding monthly fees on a 1,800-member panel in the first 90 days, against an SMS-only baseline sitting at 18% on the same cohort.
+
+Full write-up with the four-route comparison (gratis WhatsApp Business app, DMS native, generic rule-based bot, personalized AI agent + CRM), Chile pricing in CLP, Ley 19.628 opt-in flow and 4-6 week rollout plan: https://zeniapartners.com/blog/automatizacion-para-gimnasios-en-santiago.html
+
+#WhatsAppBusinessAPI #FitnessTech #SystemsArchitecture #AIAgents
+
+---

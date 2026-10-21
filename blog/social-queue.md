@@ -9127,3 +9127,16 @@ Full write-up with EHR integration map, HIPAA checks, Medicare CDFE recall math,
 #WhatsAppBusinessAPI #HealthcareIntegration #SystemsArchitecture #AIAgents
 
 ---
+## 2026-10-21 - Integrar Google Sheets con WhatsApp Business (ES)
+
+"Integrate Google Sheets with WhatsApp Business" splits into two architectures the moment you look twice. Fire-and-forget notifications (one-way, Sheet row triggers an outbound template) are a different system from a conversational agent that reads the Sheet on each inbound and writes state back on confirm/modify/cancel. 175M businesses on the WhatsApp Business app and 25M+ on the API as of Meta Q4 2025 (SearchLab, Oct 2026), and the SMB long tail still runs on Sheets as a makeshift CRM.
+
+Stack we ship at Zenia Partners for ES + LATAM SMBs sitting on 300 to 3,000 contacts in a shared Sheet: WhatsApp Business Cloud API on Meta Graph v21.0 behind HMAC-verified webhooks into a stateless Node intake on Cloud Run, Google Sheets as source of truth read/written via Sheets API v4 under a dedicated service account scoped to a single spreadsheet ID (never a user OAuth token), LLM agent loading the row-by-phone as structured context on each inbound (not RAG, one row fits in one call), two-way writes with idempotency keys on a status column to survive concurrent Apps Script triggers, template catalog with Meta approval state cached in Firestore, 24-hour conversation window enforced at the intake so marketing templates never leak into service traffic.
+
+Two numbers from production on this pattern: p50 inbound-to-Sheet-write-back 1.9 seconds, p95 3.4 seconds including Sheets API read, LLM call and status column write; Apps Script-only reference implementations we benchmarked topped out at 20k UrlFetch/day on Workspace tier before quota exhaustion, so the stateless intake is the piece that lets the same spreadsheet keep operating past that ceiling.
+
+Full write-up with the five-route comparison (Apps Script + Cloud API, Twilio, Zapier, Make, personalized AI agent), per-conversation Meta pricing, RGPD notes and when Sheets stops being enough: https://zeniapartners.com/blog/integrar-google-sheets-con-whatsapp-business.html
+
+#WhatsAppBusinessAPI #GoogleSheets #SystemsArchitecture #AIAgents
+
+---

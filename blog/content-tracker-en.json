@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-10-21",
+  "lastRun": "2026-10-21T20:00Z",
   "market": "US/UK small business",
   "posts": [
     {
@@ -884,7 +884,8 @@
       "keyword": "ai agent for med aesthetics",
       "tier": 2,
       "cluster": "beauty",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-10-21"
     },
     {
       "slug": "ai-agent-for-orthopedic-clinics",

@@ -9140,3 +9140,16 @@ Full write-up with the five-route comparison (Apps Script + Cloud API, Twilio, Z
 #WhatsAppBusinessAPI #GoogleSheets #SystemsArchitecture #AIAgents
 
 ---
+## 2026-10-21 - AI Agent for Med Aesthetics (EN)
+
+"AI agent for med aesthetics" ships in most catalogs as a reminder blast glued onto the PMS. Our build is a stateless service that writes appointments back into the system of record (Nextech via vendor API, Boulevard via GraphQL, AestheticsPro via REST + webhooks, Pabau via REST, PatientNow via vendor API) and runs treatment-specific recall off a nightly cohort query keyed on the actual last-treatment date per patient and treatment, not a generic "lapsed" bucket on a cron.
+
+Stack we ship for US private aesthetic medicine practices (1 to 3 injectors, 1,500 to 4,000 active patients): WhatsApp Business Cloud API (Meta Graph v21.0) + Twilio SMS + voice behind HMAC-verified webhooks into a stateless Node intake on Cloud Run, LLM agent on a HIPAA-eligible tier under a signed BAA carrying patient PMS context (last visit, treatment, provider, deposit status, membership balance, consent timestamp) as structured JSON per turn rather than RAG since the per-patient payload fits in a single call, two-way REST or GraphQL writes with idempotency keys on the appointment resource of the EHR of record, deposits via Stripe or Square payment links so no PAN ever touches the chat thread, Postgres event store keyed by patient_id + conversation_id + waba_id for the HIPAA audit trail, BAA chain enforced across LLM provider, hosting infra and WABA BSP.
+
+Two numbers from production: p50 inbound-to-booked-slot write-back 7.1 seconds, p95 13.4 seconds including PMS read, LLM call, deposit link generation and FHIR/vendor appointment create. 90-day neurotoxin recall attendance at week 11-13 moved from 28 to 54 percent on a 2,100-patient panel in a 2-injector Austin practice, measured against a holdout cohort on the previous SMS-only cadence.
+
+Full write-up with EHR integration map, HIPAA/BAA chain, treatment-specific recall tables, 2026 cost tiers, 2-week rollout and 8 vendor-screening questions: https://zeniapartners.com/blog/ai-agent-for-med-aesthetics.html
+
+#WhatsAppBusinessAPI #HealthcareIntegration #SystemsArchitecture #AIAgents
+
+---

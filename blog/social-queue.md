@@ -9197,3 +9197,18 @@ Full write-up: https://zeniapartners.com/blog/ai-receptionist-for-martial-arts-s
 #SystemsArchitecture #VoiceAI #WhatsAppBusinessAPI #AIAgents
 
 ---
+## 2026-10-22 - Reducir no shows en centros de estética (ES post, EN caption)
+
+Field notes from building a no-show reduction system for an aesthetic clinic chain in Spain (6 locations, ~380 bookable hours/week, average ticket 85 €).
+
+Stack: WhatsApp Business API with Meta-approved utility templates for the four reminder layers, agente IA personalizado on a shared reasoning layer, bidirectional sync with the practice management system (Flowww and Agendapro via REST, Zenoti via webhook subscriptions), Stripe for 20-30% deposits on tickets over 60 €, and a deterministic release scheduler that watches the booking_state field and emits a waitlist broadcast when a slot is marked unconfirmed at T-4h. Idempotency keyed on (patient_id, slot_id, template_name) so a resent template never double-charges or double-books.
+
+Two numbers that held in production: median round-trip for the 24h confirmation (template send -> inbound SI/NO -> state write in PMS -> ack in CRM) under 900 ms, waitlist fill rate on released slots 71% within the first 30 minutes. Combined no-show rate moved from 19% to 8% in the first 90 days; the 24h layer alone contributed about 60% of that drop, the deposit policy carried the rest on the long-ticket segment.
+
+Hardest part was not the model. It was the state machine around slot_state transitions when a client replies "NO" to the 24h template while a human receptionist is manually confirming the same slot by phone: last-writer-wins corrupts the waitlist broadcast, so we moved to version vectors on the slot record and a 500 ms coalescing window before the release scheduler runs.
+
+Full write-up: https://zeniapartners.com/blog/reducir-no-shows-estetica-whatsapp.html
+
+#SystemsArchitecture #WhatsAppBusinessAPI #AIAgents #HealthTech
+
+---

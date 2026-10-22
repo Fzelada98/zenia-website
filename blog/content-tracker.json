@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-10-22T06:05:00+00:00",
+  "lastRun": "2026-10-22T14:05:00+00:00",
   "posts": [
     {
       "slug": "cuanto-cuesta-implementar-un-crm",
@@ -4405,6 +4405,14 @@
       "source": "striking",
       "status": "published",
       "date": "2026-10-20"
+    },
+    {
+      "slug": "reducir-no-shows-estetica-whatsapp",
+      "keyword": "reducir no shows en centros de estética",
+      "tier": 2,
+      "cluster": "estetica",
+      "status": "published",
+      "date": "2026-10-22"
     }
   ]
 }

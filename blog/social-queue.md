@@ -9168,6 +9168,8 @@ Full write-up with the four-route comparison (gratis WhatsApp Business app, DMS 
 ---
 ## 2026-10-22 - Cuánto cuesta implementar un CRM (ES)
 
+<!-- PUBLISHED:make-webhook at 2026-10-22T08:30:05Z -->
+
 "CRM implementation cost" is almost never a licence problem. Ecosire's 2026 teardown puts the licence at 25-40% of a SMB first-year spend, and Salesdorado's October 2026 Spain data puts the realistic first-year envelope for a 10-user SMB at 15,000-20,000 EUR all-in, dropping to about 5,000 EUR/year on steady state. For 50 users it jumps to 60,000-80,000 EUR year one, and HubSpot/Salesforce stacks sit at 30,000-80,000 USD year one on 10 seats per the same source.
 
 What eats the budget is the plumbing most RFPs under-scope: data migration against a dirty source (1,500-10,000 USD per Ecosire), one or two production integrations wired through Make or Zapier (recurring tariff, not one-off), and the training line usually priced at a single day that then shows up as the 43% adoption-failure root cause tracked by the 2026 CRM failure meta-analysis Mewayz republished (Gartner at ~30%, Johnny Grow at 55% not meeting objectives).

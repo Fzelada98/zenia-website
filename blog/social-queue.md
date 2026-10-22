@@ -9166,3 +9166,16 @@ Full write-up with the four-route comparison (gratis WhatsApp Business app, DMS 
 #WhatsAppBusinessAPI #FitnessTech #SystemsArchitecture #AIAgents
 
 ---
+## 2026-10-22 - Cuánto cuesta implementar un CRM (ES)
+
+"CRM implementation cost" is almost never a licence problem. Ecosire's 2026 teardown puts the licence at 25-40% of a SMB first-year spend, and Salesdorado's October 2026 Spain data puts the realistic first-year envelope for a 10-user SMB at 15,000-20,000 EUR all-in, dropping to about 5,000 EUR/year on steady state. For 50 users it jumps to 60,000-80,000 EUR year one, and HubSpot/Salesforce stacks sit at 30,000-80,000 USD year one on 10 seats per the same source.
+
+What eats the budget is the plumbing most RFPs under-scope: data migration against a dirty source (1,500-10,000 USD per Ecosire), one or two production integrations wired through Make or Zapier (recurring tariff, not one-off), and the training line usually priced at a single day that then shows up as the 43% adoption-failure root cause tracked by the 2026 CRM failure meta-analysis Mewayz republished (Gartner at ~30%, Johnny Grow at 55% not meeting objectives).
+
+Our fixed-scope build for SMBs that live on WhatsApp: WhatsApp Business Cloud API on Meta Graph v21.0 behind HMAC-verified webhooks into a stateless Node intake on Cloud Run, a personalized AI agent loading the contact record (pipeline stage, last touch, channel of origin, consent timestamp) as structured JSON per turn, two-way writes with idempotency keys on contact_id + conversation_id so retries never duplicate records or re-trigger flows, channel attribution baked into the CRM at ingest instead of reconstructed in BI later, Postgres event store for the full conversation + mutation audit trail. Priced at 997 EUR setup + 297 EUR/month on Starter, 497 EUR/month on Growth, no per-seat tax.
+
+Full breakdown with the per-vendor table (GoHighLevel, Zoho, Pipedrive, HubSpot, Salesforce, Zenia), the SMB-by-headcount cost ladder in EUR, the five budget-doubling line items and the six-FAQ pricing teardown: https://zeniapartners.com/blog/cuanto-cuesta-implementar-un-crm.html
+
+#CRM #SystemsArchitecture #WhatsAppBusinessAPI #AIAgents
+
+---

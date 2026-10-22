@@ -9181,3 +9181,19 @@ Full breakdown with the per-vendor table (GoHighLevel, Zoho, Pipedrive, HubSpot,
 #CRM #SystemsArchitecture #WhatsAppBusinessAPI #AIAgents
 
 ---
+
+## 2026-10-22 - AI Receptionist for Martial Arts Schools (EN)
+
+Field notes from a US martial arts deployment (3-location Dallas-Fort Worth karate school, ~420 active members, 71 inbound calls/week).
+
+Stack: a dual front-end receptionist with Twilio Voice (SIP forward on the dojo's main number) and WhatsApp Business Cloud API on the same reasoning layer, bilingual EN/ES at the message level with per-turn language detection, LLM tool-use loop with typed function calls into Jackrabbit (roster + attendance), Stripe (autopay + testing fees), Google Calendar (trial slots) and DocuSign (minor waiver). Idempotency keyed on caller_id + intent_hash so a parent who hangs up and texts the same number does not get a duplicate trial booking.
+
+Two numbers that held under load: WhatsApp first-token latency p95 at 1.2s and voice end-to-end median at 2 rings including the Twilio SIP leg plus the LLM response plus the TTS stream back. End-to-end trial booking (greet + qualify age + read calendar + hold slot + waiver link + Stripe pre-auth) delivered in under 11s on voice, 4s on WhatsApp. Inbound answer rate moved 38% to 97% in 90 days; after-hours capture (8 PM to 11 PM parent calls that previously died in voicemail) alone added 9 booked trials per month.
+
+Hardest part was not the agent. It was collapsing Jackrabbit's class-roster endpoint, Google Calendar availability, the age-bracket rules and the belt-test eligibility matrix into a single deterministic tool surface so the model never hallucinates a 5-year-old into an adult BJJ slot.
+
+Full write-up: https://zeniapartners.com/blog/ai-receptionist-for-martial-arts-schools.html
+
+#SystemsArchitecture #VoiceAI #WhatsAppBusinessAPI #AIAgents
+
+---

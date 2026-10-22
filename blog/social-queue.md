@@ -9212,3 +9212,18 @@ Full write-up: https://zeniapartners.com/blog/reducir-no-shows-estetica-whatsapp
 #SystemsArchitecture #WhatsAppBusinessAPI #AIAgents #HealthTech
 
 ---
+## 2026-10-22 - AI Agent for Orthopedic Clinics (EN)
+
+Field notes from a US orthopedic deployment (single-location sports medicine group, 6 providers, ~220 visits/week, in-house MRI partner).
+
+Stack: voice + WhatsApp on a shared reasoning layer, Twilio SIP forward on the clinic's main number with WhatsApp Business Cloud API on the same session store; HIPAA-covered inference routed through AWS Bedrock under BAA (no PHI to consumer LLM endpoints); typed tool-use loop with function calls into Modernizing Medicine EMA (scheduling + chart write-back), Availity (real-time 270/271 eligibility), DrFirst (non-controlled refills), Updox (inbound fax parsing into structured referrals), Rectangle Health (copay). Subspecialty routing is a deterministic matrix (ICD-10 + body region + age bucket -> provider_id) sitting in front of the LLM so a pediatric spine case can never be booked with an adult surgeon. Idempotency keyed on referral_fax_hash + patient_dob to collapse duplicate faxes from referring offices.
+
+Two numbers that held under load: Monday 8-11 AM burst of 180+ inbound (call + WhatsApp + fax) sustained with p95 voice answer under 2 rings and WhatsApp first token under 1.4s; referral-to-booked-visit median collapsed from 1.9 business days to under 15 minutes for 83% of referrals received in business hours. No-show rate 14.2% to 8.7% in 90 days (relative -39%), post-op 6-week compliance 76% to 94%.
+
+Hardest part was not the model. It was the fax ingest: referring offices send scanned multi-page PDFs with handwritten diagnosis annotations, so we run a two-pass OCR (textract + a vision model fallback on low-confidence pages) and gate every parsed referral through a human-approval queue when ICD-10 extraction confidence drops below 0.82.
+
+Full write-up: https://zeniapartners.com/blog/ai-agent-for-orthopedic-clinics.html
+
+#SystemsArchitecture #HealthTech #WhatsAppBusinessAPI #VoiceAI
+
+---

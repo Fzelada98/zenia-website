@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-10-22T08:00Z",
+  "lastRun": "2026-10-22T09:00Z",
   "market": "US/UK small business",
   "posts": [
     {
@@ -901,7 +901,8 @@
       "keyword": "ai agent for orthopedic clinics",
       "tier": 2,
       "cluster": "healthcare",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-10-22"
     },
     {
       "slug": "ai-agent-for-cardiology-clinics",

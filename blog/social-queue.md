@@ -9227,3 +9227,18 @@ Full write-up: https://zeniapartners.com/blog/ai-agent-for-orthopedic-clinics.ht
 #SystemsArchitecture #HealthTech #WhatsAppBusinessAPI #VoiceAI
 
 ---
+## 2026-10-22 - CRM for Franchise Networks (ES post, EN caption)
+
+Field notes from building a CRM stack for a 24-location Spanish franchise network (hospitality segment, central office in Madrid, locations across 11 provinces, average 180 leads per location per month).
+
+Stack: Zoho CRM core in multi-tenant mode with row-level security per franchisee_id, WhatsApp Business Cloud API on a single national number with geographic lead routing based on postal_code -> nearest_location lookup, agente IA personalizado on a shared reasoning layer with per-location variables (address, hours, promo_vigente, named manager), typed tool-use loop into the local POS of each franchisee (Agora REST for 14 locations, Revo webhooks for 7, Hiopos CSV polling for 3) so royalty calculation runs on real revenue not on monthly declarations. Idempotency keyed on (lead_id, franchisee_id, template_hash) so a resent template never double-books or double-charges royalty. Audit log is append-only in Postgres with per-franchisee partitions for GDPR data-ownership separation.
+
+Two numbers that held in production: central-to-local lead handoff p95 under 1.1s (geo-lookup + round-robin within province + WhatsApp template dispatch), royalty reconciliation drift collapsed from a mean of 11.3% in manual declarations to under 0.4% on automated POS-read calculation across 90 days. SLA escalation (franchisee not opening the chat in 10 minutes -> agent takes over) fires on 34% of leads and recovers 71% of them to a booked visit.
+
+Hardest part was not the model. It was the row-level permissions on shared tables: a lead that moves across franchisees when a customer relocates has to carry its history without exposing the previous franchisee's notes, so we moved to vector clocks per lead_version and a franchisee_scope ACL evaluated at query time instead of at the application layer.
+
+Full write-up: https://zeniapartners.com/blog/crm-para-franquicias.html
+
+#SystemsArchitecture #CRM #WhatsAppBusinessAPI #AIAgents
+
+---

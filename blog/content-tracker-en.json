@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-10-22T09:00Z",
+  "lastRun": "2026-10-23T09:00Z",
   "market": "US/UK small business",
   "posts": [
     {
@@ -944,7 +944,8 @@
       "keyword": "ai agent for plastic surgeons",
       "tier": 2,
       "cluster": "healthcare",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-10-23"
     },
     {
       "slug": "ai-agent-for-fertility-clinics",

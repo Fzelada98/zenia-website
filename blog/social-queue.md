@@ -9259,3 +9259,18 @@ Full write-up (ES): https://zeniapartners.com/blog/crm-para-dentistas.html
 #healthtech #patientretention #AI #automation
 
 ---
+## 2026-10-23 - AI Agent for Plastic Surgeons (EN post, EN caption)
+
+Field notes from building an AI agent stack for a two-surgeon cosmetic plastic surgery practice on Nextech + PatientNow, inquiry mix 48% Instagram DM, 31% web form, 14% phone, 7% Facebook Messenger.
+
+Stack: single reasoning layer with per-channel adapters (Meta Graph API for IG DM and Messenger, Twilio voice + Deepgram transcription for the main line, webhook from the Nextech lead form), HIPAA-compliant handoff into Spruce the moment the thread turns clinical (BAA signed, PHI never touches Meta surfaces), typed tool-use loop into Nextech REST for appointment write-back and into PatientNow for pipeline stage so the marketing attribution model keeps working, and a payment link against the practice's existing Stripe-under-BAA setup for same-day deposits. Four-touch pre-consult and three-touch post-consult cadences are driven by Temporal workflows keyed on consult_id so a reschedule reindexes the timers without duplicate sends.
+
+Two numbers that held across 90 days: p95 inquiry-to-first-reply 48 seconds across all four channels including out-of-hours, and consult-to-surgery close rate moved from 18% to 29% primarily because the deposit-at-consult workflow (secure payment link + CareCredit soft pre-qual pulled before the visit) converted 61% of qualified cases on the day instead of 22%.
+
+Hardest part was not the model. It was keeping Instagram DM public and the clinical thread private under one logical conversation ID: Meta does not sign a BAA for IG, so we route by intent classifier confidence, materialize the handoff point as a signed secure-link redirect on our side, and store the IG and Spruce segments as two separate conversation shards joined only through a hashed patient_handle index that the agent never has to resolve to display a continuous user experience.
+
+Full write-up: https://zeniapartners.com/blog/ai-agent-for-plastic-surgeons.html
+
+#SystemsArchitecture #HealthTech #AIAgents #HIPAA
+
+---

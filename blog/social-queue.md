@@ -9289,3 +9289,18 @@ Full write-up (ES): https://zeniapartners.com/blog/integrar-n8n-con-whatsapp-bus
 #SystemsArchitecture #WhatsAppBusinessAPI #n8n #AIAgents
 
 ---
+## 2026-10-23 - AI Agent for Fertility Clinics (EN post)
+
+Infra notes from shipping a WhatsApp AI agent for a US fertility clinic (3 REIs, ~110 cycles/mo). HIPAA-aligned stack, so most of the complexity is in the plumbing, not the model.
+
+Topology: WhatsApp Business Cloud API via a BAA-covered BSP, ingress Lambda doing HMAC validation and consent-state lookup in DynamoDB, SQS fan-out to a worker Lambda that handles intent classification (small on-device classifier, not the LLM) before routing to either a template response or a Claude call behind a VPC endpoint. All PHI stays in a dedicated AWS account with KMS CMK encryption, model inference logs stripped of PHI pre-write, 7-year retention on the audit table.
+
+The two numbers that mattered during the pilot: p95 first-token latency 740 ms (template path 90 ms), and lead-to-consult conversion moving from 29% to 46% in 90 days against a prior-year cohort. Scheduling integration goes against eIVF via a nightly delta pull plus webhook for same-day slot changes, no direct writes to the EMR, which is how we kept the compliance review to a 3-week window instead of 3 months.
+
+Non-obvious bit: the hardest engineering was not the agent, it was the clinical boundary enforcer. A classifier runs on every outbound draft to catch anything that could be construed as clinical advice and routes to a human nurse before the message leaves the system. False positive rate 4.2%, false negative rate under 0.3% on a 1,200-message eval set.
+
+Full write-up: https://zeniapartners.com/blog/ai-agent-for-fertility-clinics.html
+
+#SystemsArchitecture #HealthTech #AIAgents #HIPAA
+
+---

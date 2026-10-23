@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-10-22T22:05:00+00:00",
+  "lastRun": "2026-10-23T06:05:00+00:00",
   "posts": [
+    {
+      "slug": "crm-para-dentistas",
+      "keyword": "crm para dentistas",
+      "tier": 2,
+      "cluster": "dental",
+      "status": "published",
+      "date": "2026-10-23",
+      "source": "generated"
+    },
     {
       "slug": "crm-para-franquicias",
       "keyword": "crm para franquicias",

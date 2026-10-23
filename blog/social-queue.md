@@ -9244,6 +9244,8 @@ Full write-up: https://zeniapartners.com/blog/crm-para-franquicias.html
 ---
 ## 2026-10-23 - CRM for Dental Practices (ES post, EN caption)
 
+<!-- PUBLISHED:make-webhook at 2026-10-23T08:30:32Z -->
+
 Field notes from wiring a CRM + AI agent stack over a dental clinic's existing practice management software (Dentalink / Clinic Cloud / Dendoo). The constraint that drives every design decision is RGPD: clinical data (odontogram, radiographs, prescriptions) stays inside the PMS; the CRM holds only relational state (channel, intent, consent, next recall date). Keeping those two stores separate is what makes the integration auditable at all.
 
 Stack: WhatsApp Business API via an official BSP on the clinic's existing number (Meta verification 24-72h), per-clinic LLM agent with a tool-use loop into the PMS over REST where available or a 2-minute sync job where it is not, CRM state in Postgres with recall_due_at as the triggering column, and a scheduler that fires the recall sequence at day 150 / 180 / 210 since last_visit_at. Median agent response latency 2.3s, p95 under 4s. Escalation to recepción triggers on three signals: pain keywords ("dolor fuerte", "no puedo masticar"), unaccompanied minor, or treatment-plan question outside the published pricebook.

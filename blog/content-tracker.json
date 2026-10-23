@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-10-23T14:04:00+00:00",
+  "lastRun": "2026-10-23T22:10:00+00:00",
   "posts": [
+    {
+      "slug": "recuperar-reservas-canceladas-restaurante",
+      "keyword": "recuperar reservas canceladas restaurante",
+      "tier": 2,
+      "cluster": "restaurantes",
+      "status": "published",
+      "date": "2026-10-23",
+      "source": "generated"
+    },
     {
       "slug": "integrar-n8n-con-whatsapp-business",
       "keyword": "integrar n8n con whatsapp business",

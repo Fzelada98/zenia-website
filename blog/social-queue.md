@@ -9304,3 +9304,16 @@ Full write-up: https://zeniapartners.com/blog/ai-agent-for-fertility-clinics.htm
 #SystemsArchitecture #HealthTech #AIAgents #HIPAA
 
 ---
+## 2026-10-23 - Recuperar reservas canceladas en restaurante (ES post, EN caption)
+
+Reservation systems in hospitality emit a cancellation event on roughly 15% of bookings (Bloom Intelligence 2026), yet median time-to-rebind sits at 30-60 minutes because nobody polls the event and nobody dials humans mid-service.
+
+Topology: webhook listener in front of the booking API (TheFork, CoverManager, custom POS), event dispatched to a ranker that scores a waitlist by three weighted signals, slot match 50%, FIFO queue age 30%, LTV pulled from the CRM 20%. Winner receives a WhatsApp Business utility template (Meta-approved category, no 24-hour window dependency) carrying a 15-minute confirmation TTL. First TAKE wins and locks the slot in the reservation system; a sweeper re-offers to the next candidate every 90 seconds if no response. On rejection or TTL expiry, the state machine advances without any human in the loop.
+
+Two numbers held across the 60-day run: p95 cancellation-event to confirmed rebind at 4 minutes 12 seconds, and 61% of released slots refilled before the service started, against a manual baseline of 10-20%. The non-obvious lift was idempotency on the Meta side, template delivery receipts can arrive before the confirmation reply, so the state machine key has to be (reservation_id, slot_offer_version) not just reservation_id, or you end up double-booking the same table on a race between the TAKE webhook and a late read receipt.
+
+Full write-up (ES): https://zeniapartners.com/blog/recuperar-reservas-canceladas-restaurante.html
+
+#SystemsArchitecture #WhatsAppBusinessAPI #EventDriven #RestaurantTech
+
+---

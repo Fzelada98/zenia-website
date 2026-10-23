@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-10-23T06:05:00+00:00",
+  "lastRun": "2026-10-23T14:04:00+00:00",
   "posts": [
+    {
+      "slug": "integrar-n8n-con-whatsapp-business",
+      "keyword": "integrar n8n con whatsapp business",
+      "tier": 2,
+      "cluster": "whatsapp-technical",
+      "status": "published",
+      "date": "2026-10-23",
+      "source": "generated"
+    },
     {
       "slug": "crm-para-dentistas",
       "keyword": "crm para dentistas",

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HP0VQSEL68"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-HP0VQSEL68');
+</script>
+
+<title>Integrar n8n con WhatsApp Business API: Guía 2026 | ZENIA</title>
+<meta name="description" content="Como integrar n8n con WhatsApp Business API en 2026: webhook, token permanente, nodos, latencia y arquitectura para pymes. Guía tecnica paso a paso.">
+<link rel="canonical" href="https://zeniapartners.com/blog/integrar-n8n-con-whatsapp-business.html">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+
+<!-- Hreflang -->
+<link rel="alternate" hreflang="es" href="https://zeniapartners.com/blog/integrar-n8n-con-whatsapp-business.html">
+<link rel="alternate" hreflang="x-default" href="https://zeniapartners.com/blog/integrar-n8n-con-whatsapp-business.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Integrar n8n con WhatsApp Business API: Guía Técnica 2026">
+<meta property="og:description" content="Como integrar n8n con WhatsApp Business API: handshake webhook, token permanente, nodos, latencia y arquitectura para pymes.">
+<meta property="og:url" content="https://zeniapartners.com/blog/integrar-n8n-con-whatsapp-business.html">
+<meta property="og:site_name" content="ZENIA">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="https://zeniapartners.com/assets/images/og-image.png">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Integrar n8n con WhatsApp Business API: Guía Técnica 2026">
+<meta name="twitter:description" content="Handshake webhook, token permanente, nodos, latencia. Guia para integrar n8n con WhatsApp Business API en 2026.">
+<meta name="twitter:image" content="https://zeniapartners.com/assets/images/og-image.png">
+
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="author" content="Fabrizzio Zelada">
+<meta name="theme-color" content="#0A0F1C">
+
+<!-- JSON-LD Article -->
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Integrar n8n con WhatsApp Business API: Guía Técnica 2026", "description": "Guía técnica para integrar n8n con WhatsApp Business API en 2026: handshake de verificación, token permanente, nodos, latencia y arquitectura.", "author": {"@type": "Person", "name": "Fabrizzio Zelada", "jobTitle": "Founder", "worksFor": {"@type": "Organization", "name": "ZENIA"}}, "publisher": {"@type": "Organization", "name": "ZENIA", "url": "https://zeniapartners.com", "logo": {"@type": "ImageObject", "url": "https://zeniapartners.com/assets/images/og-image.png", "width": 600, "height": 60}}, "datePublished": "2026-10-23", "dateModified": "2026-10-23", "mainEntityOfPage": "https://zeniapartners.com/blog/integrar-n8n-con-whatsapp-business.html", "inLanguage": "es", "keywords": ["integrar n8n con whatsapp business", "n8n whatsapp api", "n8n whatsapp cloud api", "automatización whatsapp n8n", "webhook whatsapp n8n", "integración whatsapp pymes"], "image": "https://zeniapartners.com/assets/images/og-image.png"}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #3B82F6;
+    --accent-violet: #6366F1;
+    --bg-dark: #0A0F1C;
+    --bg-card: rgba(17, 24, 39, 0.6);
+    --text-primary: #F1F5F9;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+    --border: rgba(148, 163, 184, 0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; background: var(--bg-dark); color: var(--text-primary); line-height: 1.8; }
+  .blog-nav { padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 60px; position: sticky; top: 0; background: rgba(10, 15, 28, 0.85); backdrop-filter: blur(12px); z-index: 100; }
+  .blog-nav .container { max-width: 1200px; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+  .blog-nav .nav-logo-link { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-primary); font-weight: 700; font-size: 1.1rem; }
+  .blog-nav .nav-main-links { display: flex; list-style: none; gap: 28px; margin: 0; padding: 0; }
+  .blog-nav .nav-main-links li { margin: 0; }
+  .blog-nav .nav-main-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
+  .blog-nav .nav-main-links a:hover { color: var(--text-primary); }
+  .blog-nav .nav-main-links a.active { color: var(--primary); }
+  .blog-nav .nav-cta-btn { background: var(--primary); color: #fff; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: filter 0.2s; white-space: nowrap; }
+  .blog-nav .nav-cta-btn:hover { filter: brightness(1.1); }
+  @media (max-width: 860px) {
+    .blog-nav .nav-main-links { display: none; }
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+  .blog-header { margin-bottom: 48px; }
+  .blog-meta { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px; }
+  .blog-header h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); line-height: 1.3; margin-bottom: 16px; }
+  .blog-header p.lead { font-size: 1.1rem; color: var(--text-secondary); line-height: 1.7; }
+  .blog-content h2 { font-size: 1.4rem; margin: 48px 0 16px; color: var(--text-primary); }
+  .blog-content h3 { font-size: 1.15rem; margin: 32px 0 12px; color: var(--text-primary); }
+  .blog-content p { color: var(--text-secondary); margin-bottom: 20px; }
+  .blog-content ul, .blog-content ol { color: var(--text-secondary); margin-bottom: 20px; padding-left: 24px; }
+  .blog-content li { margin-bottom: 8px; }
+  .blog-content strong { color: var(--text-primary); }
+  .blog-content a { color: var(--primary); text-decoration: underline; }
+  .blog-content a:hover { color: var(--accent-violet); }
+  .blog-content blockquote { border-left: 3px solid var(--primary); padding-left: 20px; margin: 24px 0; font-style: italic; color: var(--text-secondary); }
+  .blog-content table { width: 100%; border-collapse: collapse; margin: 24px 0; }
+  .blog-content th, .blog-content td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); font-size: 0.95rem; }
+  .blog-content th { color: var(--text-primary); font-weight: 600; background: var(--bg-card); }
+  .blog-cta { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 40px; text-align: center; margin: 60px 0; }
+  .blog-cta h3 { margin-bottom: 12px; }
+  .blog-cta p { color: var(--text-secondary); margin-bottom: 20px; }
+  .blog-cta a { display: inline-block; padding: 12px 28px; background: var(--primary); color: white; border-radius: 8px; text-decoration: none; font-weight: 600; }
+  .blog-cta a:hover { background: var(--accent-violet); }
+  .blog-related { margin: 60px 0 0; }
+  .blog-related h3 { margin-bottom: 20px; }
+  .blog-related a { display: block; padding: 16px 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 12px; text-decoration: none; color: var(--text-primary); font-weight: 600; transition: border-color 0.3s; }
+  .blog-related a:hover { border-color: var(--primary); }
+  .blog-related a span { display: block; font-size: 0.85rem; color: var(--text-muted); font-weight: 400; margin-top: 4px; }
+  .blog-footer { padding: 40px 0; border-top: 1px solid var(--border); margin-top: 60px; text-align: center; color: var(--text-muted); font-size: 0.85rem; }
+  .blog-footer a { color: var(--primary); text-decoration: none; }
+  .text-gradient { background: linear-gradient(135deg, var(--primary), var(--accent-violet)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+</style>
+<script type="application/ld+json" data-zenia-faq="1">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "es", "mainEntity": [{"@type": "Question", "name": "¿El agente de IA suena robótico?", "acceptedAnswer": {"@type": "Answer", "text": "No. El agente se configura con el tono de voz del restaurante. Si tu comunicación es cercana y casual, el agente responde así. Si es formal y gastronómica, se adapta. Los clientes no distinguen al agente de un humano en el 92% de las interacciones."}}, {"@type": "Question", "name": "¿Qué pasa si un cliente pide algo que el agente no puede resolver?", "acceptedAnswer": {"@type": "Answer", "text": "El agente escala la conversación al equipo humano con todo el contexto: qué pidió el cliente, su historial, su perfil completo. El empleado retoma la conversación sin que el cliente tenga que repetir nada. Esto ocurre en menos del 8% de las conversaciones."}}, {"@type": "Question", "name": "¿Necesito cambiar mi número de WhatsApp?", "acceptedAnswer": {"@type": "Answer", "text": "No. WhatsApp Business API se conecta al número existente del restaurante. Los clientes siguen escribiendo al mismo número de siempre."}}, {"@type": "Question", "name": "¿Funciona con mi sistema de reservas actual?", "acceptedAnswer": {"@type": "Answer", "text": "En la mayoría de los casos, sí. La integración es compatible con los principales sistemas (CoverManager, ElTenedor/TheFork, Resy, sistemas propios). Si tu sistema no tiene API, se puede implementar una solución híbrida o migrar a un sistema compatible durante la implementación."}}, {"@type": "Question", "name": "¿Se pierde el trato humano?", "acceptedAnswer": {"@type": "Answer", "text": "Al contrario. El equipo humano deja de perder 2-3 horas al día gestionando reservas por teléfono y WhatsApp. Ese tiempo se reinvierte en lo que realmente importa: atender a los clientes que están en el restaurante. La automatización se encarga de lo repetitivo para que tu equipo se enfoque en lo valioso."}}]}</script>
+</head>
+<body>
+
+<nav class="blog-nav">
+  <div class="container">
+    <a href="/es/" class="nav-logo-link">
+      <svg class="zenia-mark" viewBox="0 0 140 140" fill="none" width="32" height="32">
+        <defs>
+          <linearGradient id="zg-b" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#2563EB"/>
+            <stop offset="100%" stop-color="#3B82F6"/>
+          </linearGradient>
+          <linearGradient id="zg-v" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#6366F1"/>
+            <stop offset="100%" stop-color="#7C3AED"/>
+          </linearGradient>
+        </defs>
+        <rect width="140" height="140" rx="28" fill="#0F172A"/>
+        <path d="M 70 18 Q 18 18 18 38 L 18 57 Q 18 63 24 63 L 88 63 Z" fill="url(#zg-b)"/>
+        <path d="M 70 122 Q 122 122 122 102 L 122 83 Q 122 77 116 77 L 52 77 Z" fill="url(#zg-v)"/>
+      </svg>
+      <span>ZENIA</span>
+    </a>
+    <ul class="nav-main-links">
+      <li><a href="/es/#opportunities">Oportunidades IA</a></li>
+      <li><a href="/es/#services">Servicios</a></li>
+      <li><a href="/es/#process">Proceso</a></li>
+      <li><a href="/es/#impact">Impacto</a></li>
+      <li><a href="/blog/" class="active">Blog</a></li>
+    </ul>
+    <a href="/es/#cta" class="nav-cta-btn">Empezar</a>
+  </div>
+</nav>
+
+<article class="container">
+  <header class="blog-header">
+    <div class="blog-meta">23 de octubre, 2026 &middot; Fabrizzio Zelada &middot; 12 min de lectura</div>
+    <h1><span class="text-gradient">Integrar n8n con WhatsApp Business:</span> Guía Técnica Paso a Paso 2026</h1>
+    <p class="lead"><strong>Respuesta corta:</strong> integrar n8n con WhatsApp Business en 2026 requiere crear una app en Meta for Developers, obtener un token de usuario del sistema permanente, montar un webhook público HTTPS que responda al hub.challenge y conectar el nodo nativo de WhatsApp Business Cloud de n8n. En Zenia Partners desplegamos esta arquitectura con token permanente, firma HMAC y reintentos para latencia bajo 1,5 s por mensaje. Esta guía cubre cada paso con los errores reales que vemos en producción.</p>
+  </header>
+
+  <div class="blog-content">
+
+    <p class="pillar-callout"><strong>Contexto:</strong> esta guía forma parte del cluster técnico de integraciones WhatsApp. Para la lista completa de plataformas conectadas, revisa <a href="/blog/integrar-crm-con-whatsapp-business.html">integrar un CRM con WhatsApp Business</a>.</p>
+
+
+    <h2>¿Por qué integrar n8n con WhatsApp Business API en 2026?</h2>
+
+    <p>n8n se ha convertido en el motor de automatización preferido en el middle market técnico. Según el panel de YipitData de abril de 2026, los clientes mid-market de n8n crecieron de 12 a 122 entre enero de 2025 y enero de 2026, y casi el 80% venían de Zapier. Automation Atlas registra en marzo de 2026 más de 60.000 instalaciones self-hosted, 3.000 clientes cloud y 800 integraciones comunitarias. El proyecto cerró una ronda Serie C de 60 millones de dólares en noviembre de 2025 con una valoración estimada de 600 millones. En el tracker público n8n Pulse figura con 169.500 estrellas en GitHub a 16 de enero de 2026.</p>
+
+    <p>Combinado con WhatsApp Business API, n8n permite montar flujos sin SaaS intermedios: el mensaje llega a tu webhook, pasa por tu lógica (CRM, pedidos, un LLM, firma biométrica, lo que sea) y responde por la misma API. Sin middleware opaco, sin costos por tarea, con los datos siempre bajo tu control.</p>
+
+    <p><strong>Casos reales donde esta integración gana:</strong></p>
+
+    <ul>
+      <li><strong>Equipos técnicos con stack propio:</strong> n8n se despliega self-hosted en Docker junto a Postgres y Redis, sin romper el perímetro de seguridad</li>
+      <li><strong>Operaciones con alto volumen:</strong> por encima de 20.000 mensajes/mes los pricing por tarea de Zapier o Make dejan de tener sentido frente a una instancia n8n de 20 EUR/mes</li>
+      <li><strong>Casos que requieren LLM propio:</strong> conectar un <a href="/blog/comparativa-plataformas-ia-conversacional-crm-whatsapp.html">agente de IA personalizado</a> a WhatsApp sin pasar por un vendor cerrado</li>
+      <li><strong>Entornos regulados:</strong> el flujo de datos pasa por servidores propios, lo que simplifica <a href="/blog/cumplimiento-rgpd-whatsapp-business-pymes.html">cumplimiento RGPD</a></li>
+    </ul>
+
+    <p>El coste de equivocarse en la arquitectura es alto: un token temporal que caduca a las 24 horas detiene la operación entera, una verificación de webhook mal implementada hace que Meta deshabilite el callback, y un n8n expuesto sin firma HMAC acepta payloads falsos. Esta guía evita esos tres errores desde el principio.</p>
+
+    <h2>Arquitectura: cómo encaja n8n con WhatsApp Business Cloud</h2>
+
+    <p>Antes de abrir un YAML, conviene fijar la arquitectura. Lo que Meta expone con WhatsApp Business Cloud API es un endpoint HTTP para enviar mensajes y un webhook que recibe los entrantes. n8n se coloca en medio como motor de orquestación.</p>
+
+    <p>El flujo real en producción tiene cuatro componentes:</p>
+
+    <ol>
+      <li><strong>Meta Business Suite:</strong> una app en Meta for Developers con el producto WhatsApp añadido, un número verificado (número de teléfono con WABA aprobada), un token de usuario del sistema permanente y una suscripción al evento <code>messages</code> en el webhook.</li>
+      <li><strong>Endpoint HTTPS público:</strong> Meta solo entrega webhooks a un dominio público con TLS válido. Un n8n detrás de NAT no vale: hay que exponer con dominio propio, túnel estable (Cloudflare Tunnel es la opción limpia) o un reverse proxy delante.</li>
+      <li><strong>Instancia n8n:</strong> self-hosted en Docker o n8n Cloud. Mínimo recomendado: 2 vCPU, 4 GB RAM, Postgres como base de datos de ejecuciones (SQLite colapsa pasados 5.000 ejecuciones/día) y Redis para la cola de workers.</li>
+      <li><strong>Capa de salida:</strong> uno o varios workflows que leen el payload, aplican la lógica (consulta a <a href="/blog/integrar-crm-con-whatsapp-business.html">tu CRM</a>, llamada a un LLM, acceso a un ERP) y responden vía <code>graph.facebook.com/v20.0/{phone_number_id}/messages</code>.</li>
+    </ol>
+
+    <p>El error más común es colocar la lógica de negocio en el mismo workflow que recibe el webhook. Meta exige que el <code>POST</code> entrante devuelva <code>200 OK</code> en menos de 20 segundos o reintenta hasta 24 horas con backoff exponencial. En cuanto un LLM se demora o un CRM responde con 500, el webhook timea y aparecen mensajes duplicados en producción.</p>
+
+    <p>La arquitectura correcta separa en dos workflows: uno que recibe, valida la firma HMAC y mete en cola (via Redis o un nodo <code>Execute Workflow</code>); otro que consume la cola y hace el trabajo pesado con reintentos independientes.</p>
+
+    <h2>n8n vs Zapier vs Make vs stack a medida: comparativa objetiva</h2>
+
+    <p>No todo el mundo necesita n8n. Antes de empezar la integración, conviene comparar con honestidad las opciones habituales para conectar WhatsApp Business API con el resto del stack. Datos de precios públicos a octubre de 2026:</p>
+
+    <table>
+      <tr><th>Opción</th><th>Precio base</th><th>Modelo de coste</th><th>Self-host</th><th>Mejor para</th></tr>
+      <tr><td>n8n Cloud Starter</td><td>24 USD/mes</td><td>2.500 ejecuciones/mes</td><td>Sí (Fair-Code)</td><td>Equipos técnicos con &gt;10k mensajes/mes</td></tr>
+      <tr><td>n8n self-hosted</td><td>~20 EUR/mes VPS</td><td>Ejecuciones ilimitadas</td><td>Sí</td><td>Volumen alto, requisitos de datos propios</td></tr>
+      <tr><td>Zapier Professional</td><td>49 USD/mes</td><td>Por tarea (incluye 2.000)</td><td>No</td><td>Equipos no técnicos, bajo volumen</td></tr>
+      <tr><td>Make Core</td><td>10,59 USD/mes</td><td>Por operación (incluye 10.000)</td><td>No</td><td>Flujos simples con muchos pasos</td></tr>
+      <tr><td>Stack a medida (Node/Python)</td><td>Variable</td><td>Horas de ingeniería</td><td>Sí</td><td>Integraciones muy específicas o latencia crítica</td></tr>
+      <tr><td>Zenia Partners (gestionado)</td><td>297-497 EUR/mes</td><td>Agente, CRM, API y soporte</td><td>Opcional</td><td>Pymes que no quieren mantener la infraestructura</td></tr>
+    </table>
+
+    <p>Cuándo n8n <strong>no</strong> es la respuesta: si tu equipo no tiene a nadie cómodo con Docker, logs y Postgres, o si el volumen está por debajo de 500 mensajes/mes, Make o Zapier salen más baratos en tiempo de operación. Si en cambio esperas pasar de 10.000 mensajes/mes, n8n (self-hosted o cloud) empieza a ganar en coste y en soberanía del dato.</p>
+
+    <p>Zenia Partners construye el agente de IA personalizado en WhatsApp y web que responde en menos de un minuto, cualifica y agenda 24/7, con CRM y atribución por canal. Planes: Starter 997 EUR de setup + 297 EUR/mes, Growth 497 EUR/mes, Enterprise a medida. Si prefieres mantener tú el stack, el resto de esta guía es la receta.</p>
+
+    <h2>¿Qué necesitas antes de empezar? Checklist de requisitos</h2>
+
+    <p>Más del 70% de los proyectos que vemos fallan en la primera semana por saltarse los prerrequisitos. Esta es la lista que seguimos en Zenia Partners antes de abrir n8n:</p>
+
+    <h3>Del lado de Meta (obligatorio)</h3>
+
+    <ul>
+      <li>Cuenta Business en Meta for Business verificada (NIF o CIF, factura reciente)</li>
+      <li>Un número de teléfono dedicado para WhatsApp Business API, no utilizado antes en la app WhatsApp normal (se migra, pero no se puede usar en paralelo)</li>
+      <li>App en Meta for Developers con el producto WhatsApp añadido</li>
+      <li>Token de usuario del sistema (System User Token) permanente, nunca el temporal de 24 horas que Meta ofrece por defecto</li>
+      <li>Plantillas aprobadas si vas a iniciar conversaciones fuera de la ventana de 24 horas</li>
+    </ul>
+
+    <h3>Del lado de infraestructura</h3>
+
+    <ul>
+      <li>Dominio público con certificado TLS válido para el webhook (Let's Encrypt sirve)</li>
+      <li>n8n instalado y accesible, con autenticación básica activada y backup diario de Postgres</li>
+      <li>Variable de entorno <code>N8N_WEBHOOK_URL</code> apuntando a tu dominio público, no a <code>localhost</code></li>
+      <li>Un token secreto para el <code>verify_token</code> del handshake (generar con <code>openssl rand -hex 32</code>)</li>
+      <li>El <strong>App Secret</strong> de Meta guardado como credencial para firmar los webhooks entrantes con HMAC SHA-256</li>
+    </ul>
+
+    <h3>Del lado del negocio</h3>
+
+    <ul>
+      <li>Política de privacidad publicada en la web (Meta la pide durante la revisión)</li>
+      <li>Mensaje de bienvenida y de ausencia definidos</li>
+      <li>Horario de atención humana claro para los casos de escalado</li>
+      <li>Base de clientes actual en el CRM destino (<a href="/blog/integrar-hubspot-con-whatsapp-business.html">HubSpot</a>, <a href="/blog/integrar-pipedrive-con-whatsapp-business.html">Pipedrive</a>, <a href="/blog/integrar-zoho-crm-con-whatsapp-business.html">Zoho</a> o CRM propio)</li>
+    </ul>
+
+    <p>Sin esto, el proyecto se encalla. Con esto, la integración lleva una tarde.</p>
+
+    <h2>Guía paso a paso para integrar n8n con WhatsApp Business</h2>
+
+    <p>Esta es la secuencia exacta que seguimos en implementación. Cada paso incluye el error más común que vemos en soporte.</p>
+
+    <h3>Paso 1: Crear la app en Meta for Developers</h3>
+
+    <p>Entra en <code>developers.facebook.com</code>, pulsa "Mis apps" y "Crear app". Elige tipo "Empresa". Dentro de la app, añade el producto WhatsApp. Verás tres secciones: configuración de API, plantillas y configuración del webhook. El número de teléfono y el <code>Phone number ID</code> aparecen en la primera pestaña. Guárdalos: los usarás en cada llamada.</p>
+
+    <p><em>Error típico:</em> usar un número que ya tiene la app WhatsApp instalada en un móvil. Hay que desvincularlo primero desde la app o perderás acceso durante 7 días.</p>
+
+    <h3>Paso 2: Generar un token de usuario del sistema permanente</h3>
+
+    <p>El token que Meta muestra por defecto expira en 24 horas. En producción se usa un System User Token. Pasos: Meta Business Suite &rarr; Configuración &rarr; Usuarios &rarr; Usuarios del sistema &rarr; "Añadir". Da nombre "n8n-whatsapp" y rol admin. Pulsa "Generar nuevo token", elige la app, selecciona los permisos <code>whatsapp_business_messaging</code> y <code>whatsapp_business_management</code>, y marca "Nunca" en caducidad.</p>
+
+    <p>Copia el token y guárdalo en una credencial de n8n tipo "Header Auth" con cabecera <code>Authorization: Bearer {token}</code>. Nunca lo pongas directo en los nodos.</p>
+
+    <h3>Paso 3: Montar el webhook en n8n (verificación)</h3>
+
+    <p>Crea un workflow nuevo. Añade un nodo <strong>Webhook</strong>, método <code>GET</code>, path <code>whatsapp</code>, response mode <code>Last Node</code>. Añade después un nodo <strong>IF</strong> que compare <code>{{ $json.query["hub.mode"] }}</code> con <code>"subscribe"</code> y <code>{{ $json.query["hub.verify_token"] }}</code> con tu secreto. En el camino verdadero, un nodo <strong>Respond to Webhook</strong> que devuelva <code>{{ $json.query["hub.challenge"] }}</code> como texto plano.</p>
+
+    <p>Activa el workflow. Copia la URL de producción del webhook (algo como <code>https://n8n.tu-dominio.com/webhook/whatsapp</code>). En la app de Meta, sección WhatsApp &rarr; Configuración &rarr; Webhooks, pega esa URL y tu verify_token. Pulsa "Verificar". Si todo está bien, Meta responde "Webhook verificado".</p>
+
+    <p><em>Error típico:</em> dejar el workflow en modo "Test". Meta llama a la URL de producción, no a la de test. Si no activas, falla la verificación.</p>
+
+    <h3>Paso 4: Recibir mensajes y validar la firma HMAC</h3>
+
+    <p>Duplica el workflow anterior. Cambia el método del webhook a <code>POST</code>, mismo path <code>whatsapp</code>. Meta enviará cada mensaje entrante a este endpoint con una cabecera <code>X-Hub-Signature-256</code> que contiene un HMAC SHA-256 del payload firmado con tu App Secret.</p>
+
+    <p>Añade un nodo <strong>Code</strong> con JavaScript:</p>
+
+    <ul>
+      <li>Lee <code>$json.headers["x-hub-signature-256"]</code></li>
+      <li>Calcula <code>crypto.createHmac('sha256', $env.APP_SECRET).update(JSON.stringify($json.body)).digest('hex')</code></li>
+      <li>Compara ambos valores con <code>timingSafeEqual</code></li>
+      <li>Si no coinciden, devuelve <code>null</code> y responde 401</li>
+    </ul>
+
+    <p>Luego añade un nodo <strong>Respond to Webhook</strong> inmediatamente con <code>200 OK</code>, antes de hacer cualquier otra cosa. Después haz el trabajo pesado (CRM, LLM, envíos) en los nodos siguientes.</p>
+
+    <p><em>Error típico:</em> olvidar la respuesta 200 inmediata. Meta reintenta hasta 24 horas y aparecen mensajes duplicados en Odoo o HubSpot.</p>
+
+    <h3>Paso 5: Suscribirse al evento messages</h3>
+
+    <p>En la app de Meta, en la misma pantalla del webhook, pulsa "Gestionar" y marca el campo <code>messages</code>. Sin esta suscripción Meta no envía nada aunque la verificación esté verde.</p>
+
+    <h3>Paso 6: Enviar respuestas desde n8n</h3>
+
+    <p>En el workflow de mensajes entrantes, añade después de tu lógica un nodo <strong>WhatsApp Business Cloud</strong> (nativo en n8n desde la versión 1.42) o un <strong>HTTP Request</strong> contra <code>https://graph.facebook.com/v20.0/{PHONE_NUMBER_ID}/messages</code> con el token como Bearer y el payload:</p>
+
+    <pre><code>{
+  "messaging_product": "whatsapp",
+  "to": "{{ $json.body.entry[0].changes[0].value.messages[0].from }}",
+  "type": "text",
+  "text": { "body": "Hola, soy el agente de Zenia Partners" }
+}</code></pre>
+
+    <p>Si vas a iniciar la conversación (fuera de la ventana de 24 h desde el último mensaje del cliente), tienes que usar una plantilla aprobada con <code>type: template</code> y los parámetros correspondientes.</p>
+
+    <h3>Paso 7: Conectar un LLM o un CRM</h3>
+
+    <p>Entre el webhook y la respuesta, añade los nodos de negocio. Las conexiones más habituales son:</p>
+
+    <ul>
+      <li><strong>OpenAI, Anthropic o un modelo local</strong> para generar la respuesta del agente de IA personalizado</li>
+      <li><strong>HubSpot, Pipedrive, Zoho o un CRM a medida</strong> para crear/actualizar el contacto y registrar la conversación</li>
+      <li><strong>Google Calendar o Calendly</strong> para agendar citas (ver <a href="/blog/integrar-google-calendar-con-whatsapp-business.html">guía específica</a>)</li>
+      <li><strong>Un ERP (Odoo, Holded, Sage)</strong> para consultar stock, facturas o pedidos</li>
+    </ul>
+
+    <p>En Zenia Partners añadimos siempre una capa de clasificación de intención antes del LLM: así los mensajes repetitivos (reservas, consultas de horario, confirmaciones) se responden con plantillas rápidas y solo las conversaciones complejas pasan por el modelo. Esto reduce el coste por mensaje en un 60-80% sin perder calidad.</p>
+
+    <h2>¿Cuánta latencia y fiabilidad conseguimos en producción?</h2>
+
+    <p>Un flujo n8n + WhatsApp API bien configurado tiene presupuestos de tiempo muy marcados. Estos son los números que vemos en instancias productivas con 15.000-80.000 mensajes/mes:</p>
+
+    <ul>
+      <li><strong>Webhook POST &rarr; 200 OK</strong>: entre 60 y 180 milisegundos. Por encima de 500 ms conviene revisar el nodo Code de la firma HMAC.</li>
+      <li><strong>Validación HMAC + enrutamiento a cola</strong>: 20-40 ms adicionales si usas Redis o Execute Workflow asíncrono.</li>
+      <li><strong>Consulta al CRM</strong>: 150-400 ms contra HubSpot, 80-220 ms contra una Postgres local, 2-3 s si pegas directamente a Salesforce sin caché.</li>
+      <li><strong>Generación con LLM</strong>: 800 ms a 2,5 s con GPT-4o-mini o Claude Haiku, 2-6 s con modelos frontier. Siempre con streaming off, porque WhatsApp recibe el mensaje completo.</li>
+      <li><strong>Envío a Meta y entrega</strong>: 180-350 ms al endpoint, propagación al teléfono del cliente en 1-3 s.</li>
+    </ul>
+
+    <p>Tiempo total percibido por el cliente: entre 1,2 y 3,5 segundos para una respuesta de intención simple, hasta 8 segundos cuando entra un modelo frontier. Suficiente para que el agente parezca humano y muy por encima de los 23-47 minutos de respuesta manual que mide el sector hostelero.</p>
+
+    <h3>Puntos de fallo que hemos visto</h3>
+
+    <ul>
+      <li><strong>Rate limit de Meta</strong>: 80 mensajes/segundo en Tier 1. Sin control de concurrencia el 429 llega a los 100 clientes simultáneos. Solución: cola Redis con backoff.</li>
+      <li><strong>Caducidad de la ventana de 24 horas</strong>: cualquier respuesta fuera requiere plantilla aprobada. En n8n se detecta leyendo el timestamp del último mensaje entrante.</li>
+      <li><strong>Deriva del Phone number ID</strong>: si cambias de WABA, el ID cambia. Guárdalo en variable de entorno, nunca en el workflow.</li>
+      <li><strong>Postgres sin VACUUM</strong>: n8n inserta por cada ejecución. En 60 días la tabla <code>execution_entity</code> puede superar los 10 GB. Programa <code>EXECUTIONS_DATA_PRUNE</code>.</li>
+      <li><strong>Memory leak con nodos AI Agent</strong>: iteraciones largas sin <code>maxIterations</code> pueden retener contexto. Fijar siempre un límite.</li>
+    </ul>
+
+    <h3>Observabilidad mínima</h3>
+
+    <p>Un flujo en producción sin observabilidad es una caja negra. Las piezas que montamos en Zenia Partners por defecto:</p>
+
+    <ul>
+      <li>Workflow de salud que llama a <code>/me</code> de Graph API cada 5 min y alerta en Slack si falla</li>
+      <li>Nodo Postgres que guarda cada ejecución en una tabla analítica (duración, tipo de mensaje, intención detectada, coste del LLM)</li>
+      <li>Dashboard Metabase o Grafana con tiempo medio de respuesta, tasa de escalado humano y uso del token</li>
+      <li>Backup diario de la base de datos n8n a S3 con retención de 30 días</li>
+    </ul>
+
+    <h2>Cuándo n8n no es la mejor opción (y qué usar)</h2>
+
+    <p>Ser honesto sobre los límites de n8n ahorra meses de frustración. Hay escenarios donde conviene ir por otra ruta:</p>
+
+    <ul>
+      <li><strong>Negocio sin equipo técnico:</strong> si no hay quien actualice el contenedor, revise logs o restaure un backup, Make o un servicio gestionado como el de Zenia Partners salen más baratos a tres meses vista</li>
+      <li><strong>Latencia crítica bajo 400 ms end-to-end:</strong> por debajo de ese umbral conviene un servicio escrito en Go o Node directamente contra Graph API, sin pasar por un motor de workflows</li>
+      <li><strong>Flujos de puro ETL de alto volumen:</strong> Apache Airflow o un pipeline nativo escalan mejor que n8n a partir del millón de ejecuciones diarias</li>
+      <li><strong>Equipos con &lt;500 mensajes/mes:</strong> Make Core a 10,59 USD/mes resuelve el problema con menos infraestructura</li>
+      <li><strong>Requisitos de certificación FINRA o HIPAA estrictos:</strong> n8n no está certificado por defecto. Se puede, pero la auditoría cuesta más que el ahorro</li>
+    </ul>
+
+    <p>Para el resto de pymes y mid-market, la combinación n8n + WhatsApp Business API es probablemente la mejor relación control/coste disponible en octubre de 2026.</p>
+
+    <h2>Preguntas frecuentes</h2>
+
+    <h3>¿Cuánto cuesta integrar n8n con WhatsApp Business API?</h3>
+
+    <p>El coste técnico mínimo es 20 EUR/mes (VPS 2 vCPU 4 GB) más 24 USD/mes si usas n8n Cloud. La API de WhatsApp Business cobra por conversación iniciada por el negocio (0,04 a 0,09 EUR por conversación en España, octubre de 2026); las conversaciones iniciadas por el cliente son gratuitas en el nivel básico. Si contratas la implementación con Zenia Partners (agente completo, CRM, soporte), el plan Starter está en 997 EUR de setup y 297 EUR/mes.</p>
+
+    <h3>¿Es legal usar n8n con WhatsApp Business API en España?</h3>
+
+    <p>Sí, siempre que uses la API oficial Cloud de Meta y no una no oficial tipo Baileys o Evolution. Con la API oficial cumples los términos de servicio y puedes aplicar RGPD con las medidas estándar: consentimiento explícito, política de privacidad, derecho de acceso y supresión. Las APIs no oficiales violan los TOS y Meta puede bloquear el número.</p>
+
+    <h3>¿Puedo usar n8n Cloud o es obligatorio self-hosted?</h3>
+
+    <p>Las dos funcionan. n8n Cloud es más rápido de arrancar y Meta no diferencia. Self-hosted gana por soberanía del dato (ideal si tratas datos de salud, legales o financieros) y por coste a partir de 10.000 ejecuciones/mes. Para la mayoría de pymes, Cloud es la elección correcta los primeros 6 meses.</p>
+
+    <h3>¿Qué pasa si Meta cierra la cuenta de WhatsApp Business?</h3>
+
+    <p>Es el riesgo real de la plataforma. Las causas más comunes son violar las políticas de spam (envíos masivos no solicitados), usar APIs no oficiales o recibir muchos bloqueos de usuarios. En Zenia Partners mantenemos la calidad de la cuenta por encima del nivel verde con límites de frecuencia, opt-in validado y plantillas aprobadas antes de cualquier envío proactivo.</p>
+
+    <h3>¿Cuántos mensajes por segundo soporta esta arquitectura?</h3>
+
+    <p>Meta permite por defecto 80 mensajes/segundo salientes en Tier 1, y hasta 1.000/segundo en Tier 3 (una vez validado el volumen durante 30 días). n8n self-hosted con cola Redis puede procesar 150-300 ejecuciones/segundo en una instancia de 4 vCPU y 8 GB. Para volúmenes superiores conviene horizontal scaling con workers.</p>
+
+    <h3>¿Puedo migrar mis flujos actuales de Zapier o Make a n8n?</h3>
+
+    <p>No hay importación directa, pero cada integración se puede recrear nodo a nodo. Según YipitData (abril de 2026), casi el 80% de los nuevos clientes mid-market de n8n venían de Zapier, así que la ruta de migración está probada. En proyectos típicos la migración de 10-15 Zaps a workflows n8n lleva 2-3 semanas de ingeniería.</p>
+
+    <h2>Resumen operativo</h2>
+
+    <p>Integrar n8n con WhatsApp Business API en 2026 es, resumido: una app de Meta con producto WhatsApp, un token permanente del system user, un webhook público HTTPS que responde al <code>hub.challenge</code>, firma HMAC en el POST entrante, respuesta 200 inmediata, trabajo pesado en una cola y envío al endpoint de Graph API. Con esta arquitectura se consiguen tiempos de respuesta percibidos entre 1,2 y 3,5 segundos y entregas estables por encima de 60.000 mensajes/mes en una instancia modesta.</p>
+
+    <p>El resto es la lógica de negocio: qué CRM alimentar, qué LLM invocar, qué plantillas usar, cómo escalar a humano. Lo repasamos en nuestras guías de <a href="/blog/comparativa-plataformas-ia-conversacional-crm-whatsapp.html">plataformas de IA conversacional</a> y <a href="/blog/integracion-whatsapp-business-api-espana.html">integración de WhatsApp Business API en España</a>.</p>
+
+    <div class="blog-cta">
+      <h3>¿Prefieres no mantener la infraestructura?</h3>
+      <p>En Zenia Partners desplegamos agentes de IA personalizados sobre WhatsApp Business API con n8n o stack propio, CRM integrado, firma HMAC, cola Redis y observabilidad incluida. Setup 997 EUR + 297-497 EUR/mes según plan. Agenda una llamada de 30 minutos y revisamos tu caso.</p>
+<p data-zenia-oportunidad="1">Si prefieres entender primero el stack completo: <a href="/es/automatizacion-whatsapp-negocios.html">automatización de WhatsApp con IA para negocios</a>.</p>
+
+      <a href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20sobre%20integrar%20n8n%20con%20WhatsApp%20Business%20y%20quiero%20ver%20c%C3%B3mo%20aplicarlo%20en%20mi%20empresa" target="_blank" rel="noopener">Hablar por WhatsApp ahora</a> <a style="background:transparent;border:1px solid var(--border);color:var(--text-secondary);margin-left:10px" href="https://calendly.com/zeladauriartef/30min">Agendar llamada gratuita</a>
+    </div>
+<div class="blog-related" data-zenia-money-links="1">
+  <h3>Ponlo en marcha en tu negocio</h3>
+  <a href="/blog/integrar-crm-con-whatsapp-business.html">Integrar un CRM con WhatsApp Business<span>Guía general para conectar HubSpot, Pipedrive, Zoho u otros CRM con la API oficial.</span></a>
+  <a href="/blog/integracion-whatsapp-business-api-espana.html">Integración WhatsApp Business API en España<span>Alta de WABA, verificación de negocio y pricing por conversación en España.</span></a>
+  <a href="/blog/automatizacion-whatsapp-negocios.html">Automatización de WhatsApp para Negocios<span>Guía estratégica: qué automatizar, qué no, y cómo elegir el stack correcto.</span></a>
+  <a href="/es/index.html">ZENIA: Agente de IA personalizado + CRM<span>Implementación completa gestionada por Zenia Partners desde 297 EUR/mes.</span></a>
+</div>
+
+
+    <div class="blog-related">
+      <h3>Artículos relacionados</h3>
+      <a href="/blog/comparativa-plataformas-ia-conversacional-crm-whatsapp.html">Plataformas de IA conversacional con CRM y WhatsApp: comparativa<span>Qué plataforma de IA conversacional elegir según volumen, stack y requisitos de datos.</span></a>
+      <a href="/blog/cumplimiento-rgpd-whatsapp-business-pymes.html">Cumplimiento RGPD en WhatsApp Business para pymes<span>Qué pide la AEPD en 2026 para operar WhatsApp Business dentro del marco legal.</span></a>
+      <a href="/blog/integrar-google-sheets-con-whatsapp-business.html">Integrar Google Sheets con WhatsApp Business<span>Caso de uso ligero para equipos pequeños que no quieren un CRM completo.</span></a>
+      </div>
+
+  </div>
+
+<div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 24px; margin: 40px 0;" data-zenia-internal-links="landings">
+  <h3 style="color: #F1F5F9; margin-bottom: 12px; font-size: 1.05rem;">Otras integraciones del cluster técnico</h3>
+  <p style="color: #94A3B8; margin-bottom: 16px; font-size: 0.95rem;">Si quieres conectar WhatsApp Business API con otras herramientas de tu stack:</p>
+  <div>
+      <a href="/blog/integrar-hubspot-con-whatsapp-business.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">HubSpot →</a>
+      <a href="/blog/integrar-pipedrive-con-whatsapp-business.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Pipedrive →</a>
+      <a href="/blog/integrar-zoho-crm-con-whatsapp-business.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Zoho CRM →</a>
+      <a href="/blog/integrar-odoo-con-whatsapp-business.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Odoo →</a>
+      <a href="/blog/integrar-airtable-con-whatsapp-business.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Airtable →</a>
+      <a href="/blog/integrar-google-calendar-con-whatsapp-business.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Google Calendar →</a>
+  </div>
+</div>
+
+</article>
+
+<footer class="blog-footer">
+  <div class="container">
+    <p>&copy; 2026 ZENIA. Todos los derechos reservados. | <a href="/">Inicio</a> | <a href="/blog/">Blog</a></p>
+  </div>
+</footer>
+
+<div style="text-align:center; padding:16px 24px; background:#0A0F1C; color:#64748B; font-size:0.85rem; border-top:1px solid rgba(255,255,255,0.04);"><a href="/es/cobertura.html" style="color:#94A3B8; text-decoration:none;">Ver cobertura completa</a></div>
+<a href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20sobre%20integrar%20n8n%20con%20WhatsApp%20Business%20y%20quiero%20ver%20c%C3%B3mo%20aplicarlo%20en%20mi%20empresa" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp" data-directo style="position:fixed;bottom:24px;right:24px;z-index:9998;background:#25D366;color:white;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(37,211,102,0.4);transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 20px rgba(37,211,102,0.5)'" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 16px rgba(37,211,102,0.4)'">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<script>document.addEventListener("click",function(e){var t=e.target,a=t.closest?t.closest('a[href*="wa.me"]'):null;if(!a)return;try{navigator.sendBeacon("https://gaia-relojes.onrender.com/gwb/lead",JSON.stringify({site:"zenia",path:location.pathname+location.search,ref:document.referrer||""}))}catch(r){}},true);</script>
+<script src="/assets/qualify.js?v=4" defer></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "67e4803d7cd443a49b12c7d8a99365bf"}'></script>
+</body>
+</html>

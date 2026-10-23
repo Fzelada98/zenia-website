@@ -9274,3 +9274,18 @@ Full write-up: https://zeniapartners.com/blog/ai-agent-for-plastic-surgeons.html
 #SystemsArchitecture #HealthTech #AIAgents #HIPAA
 
 ---
+## 2026-10-23 - Integrar n8n con WhatsApp Business (ES post, EN caption)
+
+Field notes from putting an n8n + WhatsApp Business Cloud API stack into production for a mid-market account, 42k inbound messages/month.
+
+Topology: self-hosted n8n (Docker, 2 vCPU/8 GB) behind a Cloudflare Tunnel so Meta never hits a raw origin, Postgres for execution history, Redis for the fan-out queue. Two separate workflows, not one: a thin ingress that validates X-Hub-Signature-256 (timing-safe HMAC against the App Secret) and returns 200 OK in under 180 ms, then an async worker that does the actual CRM write and LLM call. Meta's webhook retries up to 24 hours on timeout, so collapsing both into a single workflow is how you end up with duplicate HubSpot deals at 2 AM.
+
+Two numbers that held: p95 inbound-to-200-OK at 142 ms, p95 message-to-response (intent classifier in front of GPT-4o-mini, template fallback for high-confidence routing) at 2.1 s end-to-end including Meta propagation. Rate limit stayed below Meta's 80 msg/s Tier 1 ceiling with Redis-based token bucket; above that it is worth going Tier 3 before scaling the workers.
+
+The non-obvious lift was observability: a parallel workflow pinging /me on Graph API every 5 minutes, every execution row written to an analytical table with duration, intent class and LLM cost tokens, Grafana over Postgres. Without that you cannot distinguish a Meta policy throttle from a model latency spike, and both show up to the business as "WhatsApp is slow".
+
+Full write-up (ES): https://zeniapartners.com/blog/integrar-n8n-con-whatsapp-business.html
+
+#SystemsArchitecture #WhatsAppBusinessAPI #n8n #AIAgents
+
+---

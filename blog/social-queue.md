@@ -9332,3 +9332,18 @@ Full write-up (ES): https://zeniapartners.com/blog/crm-automocion.html
 #SystemsArchitecture #WhatsAppBusinessAPI #AutomotiveTech #AIAgents
 
 ---
+## 2026-10-24 - AI Agent for Weight Loss Clinics (EN post)
+
+Infra notes from building an AI agent on top of a US medical weight loss clinic doing ~700 active GLP-1 patients across SimplePractice + a custom DTC pharmacy integration. The constraint is that this is PHI from the first inbound, so the agent cannot sit on top of a stock LLM pipeline.
+
+Topology: WhatsApp Business Cloud API behind a HIPAA-aligned BSP, ingress through a VPC-only ingress controller doing HMAC SHA-256 verification against the Meta app secret, dedupe keyed by (wa_message_id, 24h TTL) in Redis Cluster with encryption at rest and audit-logged key rotation. Agent worker is a Claude Sonnet call behind an AWS PrivateLink endpoint under a signed BAA, no PHI leaves the VPC. Routing policy is deterministic: anything matching the clinical taxonomy (dose change, new symptom, pregnancy status, interaction, severity escalation) short-circuits to a Twilio-powered on-call nurse queue, everything else is scheduling, intake, refill confirmation, and content retrieval from a pre-approved library stored in an immutable S3 bucket with Object Lock.
+
+Two numbers that held across the 90-day run: p95 inbound-to-first-token at 1.1 s end to end including the Meta round-trip, and 100% clinical-escalation precision on the taxonomy classifier because recall is non-negotiable so we tuned the threshold to over-escalate (false positives waste a nurse minute, false negatives are a liability event).
+
+Non-obvious bit was state machine key for the refill flow. Pharmacy-to-patient-to-clinic is a three-party reconciliation, and shipping delays, auth lapses, and dose titrations all mutate the next-fill timestamp. The lesson was keying on (patient_id, prescription_version) not patient_id alone, otherwise a mid-cycle dose change silently reused the old refill window and the patient got a reminder for the wrong dose.
+
+Full write-up: https://zeniapartners.com/blog/ai-agent-for-weight-loss-clinics.html
+
+#SystemsArchitecture #WhatsAppBusinessAPI #HIPAA #HealthTech #AIAgents
+
+---

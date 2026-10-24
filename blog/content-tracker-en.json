@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-10-23T17:30Z",
+  "lastRun": "2026-10-24T17:30Z",
   "market": "US/UK small business",
   "posts": [
     {
@@ -960,7 +960,8 @@
       "keyword": "ai agent for weight loss clinics",
       "tier": 2,
       "cluster": "healthcare",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-10-24"
     },
     {
       "slug": "ai-agent-for-wellness-centers",

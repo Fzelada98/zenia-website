@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-10-24T06:05:00+00:00",
+  "lastRun": "2026-10-24T14:05:00+00:00",
   "posts": [
+    {
+      "slug": "coste-crm",
+      "keyword": "coste crm",
+      "tier": 2,
+      "cluster": "crm-pricing",
+      "status": "published",
+      "date": "2026-10-24",
+      "source": "striking"
+    },
     {
       "slug": "crm-automocion",
       "keyword": "crm automocion",

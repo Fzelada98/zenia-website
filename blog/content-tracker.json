@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-10-23T22:10:00+00:00",
+  "lastRun": "2026-10-24T06:05:00+00:00",
   "posts": [
+    {
+      "slug": "crm-automocion",
+      "keyword": "crm automocion",
+      "tier": 2,
+      "cluster": "automocion",
+      "status": "published",
+      "date": "2026-10-24",
+      "source": "striking"
+    },
     {
       "slug": "recuperar-reservas-canceladas-restaurante",
       "keyword": "recuperar reservas canceladas restaurante",

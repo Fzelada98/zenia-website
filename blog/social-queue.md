@@ -9317,3 +9317,18 @@ Full write-up (ES): https://zeniapartners.com/blog/recuperar-reservas-canceladas
 #SystemsArchitecture #WhatsAppBusinessAPI #EventDriven #RestaurantTech
 
 ---
+## 2026-10-24 - CRM Automoción (ES post, EN caption)
+
+Infra notes from building an AI agent + CRM layer on top of an existing dealer DMS. The install base is a Spanish multimarca selling ~340 used vehicles/year, DMS is DealerSocket, so this is not a rip-and-replace, it is a WhatsApp + agent + attribution plane bolted on top.
+
+Topology: WhatsApp Business Cloud API via a BSP, ingress validator doing HMAC SHA-256 and dedupe against a Redis set keyed by (wa_message_id, 24h TTL), event fan-out through SQS into an agent worker that calls Claude Sonnet behind a VPC endpoint. Qualification JSON (budget, finance vs cash, trade-in bastidor if present, model shortlist) is written back to the DMS via the DealerSocket REST connector. Lead creation is idempotent on (phone, source, 7d window) so Coches.net and the dealership site stop double-counting the same prospect.
+
+Numbers that held across the first 60 days: p95 message-to-first-token 1.3 s end to end, lead-to-first-contact p95 at 54 seconds against a human baseline of 11 hours. Attribution plane feeding Grafana from a Postgres mirror of DMS events plus Meta and Google click IDs, which is the only honest way to answer "what is CAC per channel" when every portal takes credit for the same test drive.
+
+Non-obvious bit was the trade-in flow. Valuing a used car over WhatsApp without a photo is unreliable, so the agent explicitly refuses a firm number and books a 15-minute pickup appraisal against the appraiser's calendar. That path saves ~22% of leads that otherwise ghost after a bad quote.
+
+Full write-up (ES): https://zeniapartners.com/blog/crm-automocion.html
+
+#SystemsArchitecture #WhatsAppBusinessAPI #AutomotiveTech #AIAgents
+
+---

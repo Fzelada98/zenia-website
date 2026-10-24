@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-10-24T17:30Z",
+  "lastRun": "2026-10-24T18:00Z",
   "market": "US/UK small business",
   "posts": [
     {
@@ -968,7 +968,8 @@
       "keyword": "ai agent for wellness centers",
       "tier": 2,
       "cluster": "fitness",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-10-24"
     },
     {
       "slug": "ai-agent-for-crossfit-boxes",

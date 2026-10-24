@@ -9360,3 +9360,18 @@ Full write-up (ES): https://zeniapartners.com/blog/coste-crm.html
 #SystemsArchitecture #CRMPlatforms #TCO #B2BSaaS #AIAgents
 
 ---
+## 2026-10-24 - AI Agent for Wellness Centers (EN post)
+
+Infra notes from building an AI agent for a US wellness center chain running 3 locations on Boulevard with ~1,100 active members across massage, facials, infrared sauna, and cryotherapy. The product constraint is that the booking surface is multi-resource (provider calendar, room, equipment, service duration) and every one of those has to resolve atomically before the agent can confirm a slot over WhatsApp.
+
+Topology: WhatsApp Business Cloud API via BSP, ingress validator doing HMAC SHA-256 and dedupe against Redis Cluster keyed by (wa_message_id, 24h TTL), fan-out through SQS to an agent worker calling Claude Sonnet behind a VPC endpoint. Booking writes go through the Boulevard GraphQL API in a two-phase commit: the agent locks the slot via a reservation mutation, finishes intake over WhatsApp, then promotes the reservation to a confirmed appointment, or releases it after a 90-second TTL if the client drops off. Mindbody and Vagaro deployments use the same pattern against their REST surfaces with a thin adapter layer.
+
+Numbers that held across the 90-day run: p95 inbound-to-first-token at 1.2 s end to end, slot-lock-to-confirmed-booking p95 at 48 s against a legacy phone-booking baseline of 6 minutes. 73% of total bookings now land outside front-desk hours, which is the volume the center was quietly losing to Mindbody's native search.
+
+Non-obvious bit was the retail attach flow. Pushing product recommendations post-visit requires joining the service record to the provider's dispense log, which Boulevard does not expose cleanly. We built a thin Postgres materialized view keyed on (visit_id, provider_id, service_code) and refresh it on the appointment.completed webhook. That is what makes "Lauren recommended the X serum during your facial" a safe statement to put in an outbound message two days later.
+
+Full write-up: https://zeniapartners.com/blog/ai-agent-for-wellness-centers.html
+
+#SystemsArchitecture #WhatsAppBusinessAPI #WellnessTech #AIAgents
+
+---

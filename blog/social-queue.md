@@ -9347,3 +9347,16 @@ Full write-up: https://zeniapartners.com/blog/ai-agent-for-weight-loss-clinics.h
 #SystemsArchitecture #WhatsAppBusinessAPI #HIPAA #HealthTech #AIAgents
 
 ---
+## 2026-10-24 - Coste CRM 2026 (ES post, EN caption)
+
+Notes from stress-testing CRM TCO across 5 proveedores for a Spanish pyme deciding between a self-hosted SaaS stack and an agency-managed one. Vendor list price is noise, the line item that matters is 36-month fully loaded cost once migration, integration tier jumps, and internal admin hours are priced in.
+
+Decomposition after modeling it against Ecosire 2026 implementation data: license is 25-40% of year-one spend. The 60-75% residual sits in three places. Data migration (1.5-10 k€ for a typical pyme dataset, where idempotency on the dedupe key is the real blocker, not row count). Integration-tier add-ons that unlock when the embudo stops being toy-sized, usually when WhatsApp Business API template volume rises and p95 agent round-trip has to hold under 2 s, which pushes you to a VPC-adjacent inference path. And 20-40 admin hours per month over the first 24 months.
+
+Observed pattern across every spreadsheet. A "14 €/user/month" entry plan compounds past 48 k€ at 36 months once internal headcount cost is realistic, while a 297 €/month agency-managed stack with the admin surface absorbed lands near 11 k€ in the same window. The two TCO curves cross around month 14 for teams without a dedicated CRM admin.
+
+Full write-up (ES): https://zeniapartners.com/blog/coste-crm.html
+
+#SystemsArchitecture #CRMPlatforms #TCO #B2BSaaS #AIAgents
+
+---

@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-10-24T14:05:00+00:00",
+  "lastRun": "2026-10-24T22:05:00+00:00",
   "posts": [
+    {
+      "slug": "automatizar-recordatorios-clases-gimnasio",
+      "keyword": "automatizar recordatorios clases gimnasio",
+      "tier": 2,
+      "cluster": "gimnasios",
+      "status": "published",
+      "date": "2026-10-24",
+      "source": "generated"
+    },
     {
       "slug": "coste-crm",
       "keyword": "coste crm",

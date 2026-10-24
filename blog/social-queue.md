@@ -9375,3 +9375,18 @@ Full write-up: https://zeniapartners.com/blog/ai-agent-for-wellness-centers.html
 #SystemsArchitecture #WhatsAppBusinessAPI #WellnessTech #AIAgents
 
 ---
+## 2026-10-24 - Automatizar recordatorios de clases en gimnasios (ES post, EN caption)
+
+Infra notes from wiring class-reminder automation for a boutique gym chain with ~1,800 active members and ~80 group classes a week, running on Mindbody. The product constraint is that WhatsApp outbound outside the 24-hour service window has to go through an approved utility template, so the entire reminder pipeline is pre-authored and the state machine around it has to tolerate Meta's category-rejection latency without breaking idempotency.
+
+Topology: Mindbody class.booked and class.cancelled webhooks fan into an SQS queue keyed on (member_id, class_id, reminder_window), the orchestrator picks the correct utility template (reservation_confirmed, class_reminder_24h, class_reminder_2h) and ships through WhatsApp Business Cloud API; dedupe uses the same composite key in Redis with a TTL that spans the longest reminder window plus a 2h clock-skew buffer. Free-text inbound (reschedule, cancel, waitlist swap) hits a Claude Sonnet worker behind a VPC endpoint with tool-calling against the Mindbody GraphQL surface, two-phase commit on the slot swap so a failed downstream write releases the lock inside 90 seconds instead of double-booking.
+
+Two numbers that held over 60 days: p95 booked-event to WhatsApp accepted at 11 s end to end including template routing, and no-show rate on reminded classes moved from 19% to 8% with the second (2h) template adding roughly 9 percentage points on top of the 24h one, in line with the second-reminder effect reported in the Permanente Journal study Virtuagym cites.
+
+Non-obvious bit was the waitlist swap. Releasing a slot and promoting the next waitlisted member cannot race against another reserve coming in on a different session, so promotion runs inside a per-class advisory lock in Postgres with a 400 ms budget; above that we abort and let the next webhook pick it up. Without the lock, two members get the same seat and the staff gets a Monday morning complaint ticket.
+
+Full write-up (ES): https://zeniapartners.com/blog/automatizar-recordatorios-clases-gimnasio.html
+
+#SystemsArchitecture #WhatsAppBusinessAPI #FitnessTech #AIAgents
+
+---

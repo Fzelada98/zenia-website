@@ -4184,6 +4184,12 @@
 
   <!-- Blog articles (April 16, 2026) -->
   <url>
+    <loc>https://zeniapartners.com/blog/automatizar-recordatorios-clases-gimnasio.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://zeniapartners.com/blog/automatizar-reservas-restaurante-whatsapp.html</loc>
     <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>

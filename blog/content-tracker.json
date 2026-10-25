@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-10-24T22:05:00+00:00",
+  "lastRun": "2026-10-25T06:10:00+00:00",
   "posts": [
+    {
+      "slug": "integrar-make-con-whatsapp-business",
+      "keyword": "integrar make.com con whatsapp business",
+      "tier": 2,
+      "cluster": "whatsapp-technical",
+      "status": "published",
+      "date": "2026-10-25",
+      "source": "generated"
+    },
     {
       "slug": "automatizar-recordatorios-clases-gimnasio",
       "keyword": "automatizar recordatorios clases gimnasio",

@@ -9493,3 +9493,18 @@ Full write-up: https://zeniapartners.com/blog/ai-agent-for-language-schools.html
 #edtech #WhatsAppBusinessAPI #SystemsEngineering #AI #CRM
 
 ---
+## 2026-10-25 - CRM para asesorías 2026: how the stack actually fits together
+
+Build note for anyone wiring a CRM for Spanish asesorías in 2026: the integration tax lives at the gestión-software seam, not in the CRM itself.
+
+Reference stack from the latest asesoría deployment: WhatsApp Business Cloud API as the inbound bus, a per-tenant agent with the Spanish tax calendar loaded (303, 190, 180, SII cadence), bidirectional sync to a3 or Sage via REST with idempotency keys on expediente_id, Stripe/SEPA for recurring cuotas with webhook reconciliation, and a signed-document service in front of eIDAS firma reconocida.
+
+Hard numbers we hold in production: p95 inbound-to-first-reply under 60s on WhatsApp Cloud, expediente write-back under 1.4s on 95% of operations, VeriFactu round-trip under 2s. CRM-to-gestión drift budget: zero rows out of sync for more than 10 minutes.
+
+Reference point from the write-up: Holded's public plan starts at 7,50 €/month on the annual plan and goes up to 199 €/month in full suite (source: Guía Fiscal, July 2026), while Sage Despachos Connected keeps its pricing behind sales. The spread tells you which seam you are paying to close.
+
+Full technical write-up (in Spanish): https://zeniapartners.com/blog/mejor-crm-para-asesorias.html
+
+#WhatsAppBusinessAPI #CRM #SystemsEngineering #B2B #AI
+
+---

@@ -9463,3 +9463,20 @@ https://zeniapartners.com/cicero/?src=li
 #regtech #publicaffairs #DataArchitecture #AI #Italy
 
 ---
+## 2026-10-25 - Calendly to WhatsApp Business: three failure modes we only saw in production
+
+Three things that break Calendly to WhatsApp Business integrations in production:
+
+1. Webhook signature. Calendly sends `Calendly-Webhook-Signature` as HMAC SHA256; skipping validation lets anyone fire fake confirmations into the Cloud API.
+2. Phone normalization. Calendly stores whatever the invitee typed. Without E.164 normalization the Meta Cloud API returns error 131026 at the worst possible moment.
+3. Rate limits. New numbers start at Tier 250 unique recipients per 24h on the Cloud API, which breaks the first busy day.
+
+The middleware (Node on Cloud Run, behind the webhook) carries four pre-approved HSM utility templates. A personalized AI agent handles free-text replies, queries `GET /event_type_available_times`, and writes the state change back to the CRM.
+
+Reference points worth citing from the write-up: Meta's own Yves Rocher case study reports a 21% lift in appointment bookings when the booking channel moves from phone and in-store to WhatsApp. Template approval times in October 2026 range from 1 minute to 48 hours depending on dynamic URL buttons.
+
+Full technical write-up (in Spanish): https://zeniapartners.com/blog/integrar-calendly-con-whatsapp-business.html
+
+#WhatsAppBusinessAPI #B2B #SaaS #AI #automation
+
+---

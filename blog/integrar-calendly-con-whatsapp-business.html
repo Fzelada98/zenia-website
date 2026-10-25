@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HP0VQSEL68"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-HP0VQSEL68');
+</script>
+
+<title>Integrar Calendly con WhatsApp Business: Guía 2026 | ZENIA</title>
+<meta name="description" content="Integra Calendly con WhatsApp Business paso a paso. Confirmaciones, recordatorios y reagendado automático con IA para servicios y clínicas en 2026.">
+<link rel="canonical" href="https://zeniapartners.com/blog/integrar-calendly-con-whatsapp-business.html">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+
+<!-- Hreflang -->
+<link rel="alternate" hreflang="es" href="https://zeniapartners.com/blog/integrar-calendly-con-whatsapp-business.html">
+<link rel="alternate" hreflang="x-default" href="https://zeniapartners.com/blog/integrar-calendly-con-whatsapp-business.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Integrar Calendly con WhatsApp Business: guía 2026">
+<meta property="og:description" content="Conecta Calendly y WhatsApp Business para confirmar, recordar y reagendar citas en automático. Arquitectura, webhooks, plantillas HSM y costes reales.">
+<meta property="og:url" content="https://zeniapartners.com/blog/integrar-calendly-con-whatsapp-business.html">
+<meta property="og:site_name" content="ZENIA">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="https://zeniapartners.com/assets/images/og-image.png">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Integrar Calendly con WhatsApp Business: guía 2026">
+<meta name="twitter:description" content="Conecta Calendly y WhatsApp Business para confirmar, recordar y reagendar citas en automático con plantillas HSM.">
+<meta name="twitter:image" content="https://zeniapartners.com/assets/images/og-image.png">
+
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="author" content="Fabrizzio Zelada">
+<meta name="theme-color" content="#0A0F1C">
+
+<!-- JSON-LD Article -->
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Integrar Calendly con WhatsApp Business: guía 2026", "description": "Guía técnica para integrar Calendly con WhatsApp Business API: webhooks, plantillas HSM, confirmaciones, recordatorios y reagendado automático con un agente de IA personalizado.", "author": {"@type": "Person", "name": "Fabrizzio Zelada", "jobTitle": "Founder", "worksFor": {"@type": "Organization", "name": "Zenia Partners"}}, "publisher": {"@type": "Organization", "name": "Zenia Partners", "url": "https://zeniapartners.com", "logo": {"@type": "ImageObject", "url": "https://zeniapartners.com/assets/images/og-image.png", "width": 600, "height": 60}}, "datePublished": "2026-10-25", "dateModified": "2026-10-25", "mainEntityOfPage": "https://zeniapartners.com/blog/integrar-calendly-con-whatsapp-business.html", "inLanguage": "es", "keywords": ["integrar calendly con whatsapp business", "calendly whatsapp api", "webhook calendly whatsapp", "plantillas hsm calendly", "automatizar citas calendly whatsapp", "zenia partners"], "image": "https://zeniapartners.com/assets/images/og-image.png"}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #3B82F6;
+    --accent-violet: #6366F1;
+    --bg-dark: #0A0F1C;
+    --bg-card: rgba(17, 24, 39, 0.6);
+    --text-primary: #F1F5F9;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+    --border: rgba(148, 163, 184, 0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; background: var(--bg-dark); color: var(--text-primary); line-height: 1.8; }
+  .blog-nav { padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 60px; position: sticky; top: 0; background: rgba(10, 15, 28, 0.85); backdrop-filter: blur(12px); z-index: 100; }
+  .blog-nav .container { max-width: 1200px; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+  .blog-nav .nav-logo-link { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-primary); font-weight: 700; font-size: 1.1rem; }
+  .blog-nav .nav-main-links { display: flex; list-style: none; gap: 28px; margin: 0; padding: 0; }
+  .blog-nav .nav-main-links li { margin: 0; }
+  .blog-nav .nav-main-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
+  .blog-nav .nav-main-links a:hover { color: var(--text-primary); }
+  .blog-nav .nav-main-links a.active { color: var(--primary); }
+  .blog-nav .nav-cta-btn { background: var(--primary); color: #fff; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: filter 0.2s; white-space: nowrap; }
+  .blog-nav .nav-cta-btn:hover { filter: brightness(1.1); }
+  @media (max-width: 860px) {
+    .blog-nav .nav-main-links { display: none; }
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+  .blog-header { margin-bottom: 48px; }
+  .blog-meta { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px; }
+  .blog-header h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); line-height: 1.3; margin-bottom: 16px; }
+  .blog-header p.lead { font-size: 1.1rem; color: var(--text-secondary); line-height: 1.7; }
+  .blog-content h2 { font-size: 1.4rem; margin: 48px 0 16px; color: var(--text-primary); }
+  .blog-content h3 { font-size: 1.15rem; margin: 32px 0 12px; color: var(--text-primary); }
+  .blog-content p { color: var(--text-secondary); margin-bottom: 20px; }
+  .blog-content ul, .blog-content ol { color: var(--text-secondary); margin-bottom: 20px; padding-left: 24px; }
+  .blog-content li { margin-bottom: 8px; }
+  .blog-content strong { color: var(--text-primary); }
+  .blog-content a { color: var(--primary); text-decoration: underline; }
+  .blog-content a:hover { color: var(--accent-violet); }
+  .blog-content blockquote { border-left: 3px solid var(--primary); padding-left: 20px; margin: 24px 0; font-style: italic; color: var(--text-secondary); }
+  .blog-content table { width: 100%; border-collapse: collapse; margin: 24px 0; }
+  .blog-content th, .blog-content td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); font-size: 0.95rem; }
+  .blog-content th { color: var(--text-primary); font-weight: 600; background: var(--bg-card); }
+  .blog-cta { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 40px; text-align: center; margin: 60px 0; }
+  .blog-cta h3 { margin-bottom: 12px; }
+  .blog-cta p { color: var(--text-secondary); margin-bottom: 20px; }
+  .blog-cta a { display: inline-block; padding: 12px 28px; background: var(--primary); color: white; border-radius: 8px; text-decoration: none; font-weight: 600; }
+  .blog-cta a:hover { background: var(--accent-violet); }
+  .blog-related { margin: 60px 0 0; }
+  .blog-related h3 { margin-bottom: 20px; }
+  .blog-related a { display: block; padding: 16px 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 12px; text-decoration: none; color: var(--text-primary); font-weight: 600; transition: border-color 0.3s; }
+  .blog-related a:hover { border-color: var(--primary); }
+  .blog-related a span { display: block; font-size: 0.85rem; color: var(--text-muted); font-weight: 400; margin-top: 4px; }
+  .blog-footer { padding: 40px 0; border-top: 1px solid var(--border); margin-top: 60px; text-align: center; color: var(--text-muted); font-size: 0.85rem; }
+  .blog-footer a { color: var(--primary); text-decoration: none; }
+  .text-gradient { background: linear-gradient(135deg, var(--primary), var(--accent-violet)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+</style>
+</head>
+<body>
+
+<nav class="blog-nav">
+  <div class="container">
+    <a href="/es/" class="nav-logo-link">
+      <svg class="zenia-mark" viewBox="0 0 140 140" fill="none" width="32" height="32">
+        <defs>
+          <linearGradient id="zg-b" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#2563EB"/>
+            <stop offset="100%" stop-color="#3B82F6"/>
+          </linearGradient>
+          <linearGradient id="zg-v" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#6366F1"/>
+            <stop offset="100%" stop-color="#7C3AED"/>
+          </linearGradient>
+        </defs>
+        <rect width="140" height="140" rx="28" fill="#0F172A"/>
+        <path d="M 70 18 Q 18 18 18 38 L 18 57 Q 18 63 24 63 L 88 63 Z" fill="url(#zg-b)"/>
+        <path d="M 70 122 Q 122 122 122 102 L 122 83 Q 122 77 116 77 L 52 77 Z" fill="url(#zg-v)"/>
+      </svg>
+      <span>ZENIA</span>
+    </a>
+    <ul class="nav-main-links">
+      <li><a href="/es/#opportunities">Oportunidades IA</a></li>
+      <li><a href="/es/#services">Servicios</a></li>
+      <li><a href="/es/#process">Proceso</a></li>
+      <li><a href="/es/#impact">Impacto</a></li>
+      <li><a href="/blog/" class="active">Blog</a></li>
+    </ul>
+    <a href="/es/#cta" class="nav-cta-btn">Empezar</a>
+  </div>
+</nav>
+
+<article class="container">
+  <header class="blog-header">
+    <div class="blog-meta">25 de octubre, 2026 &middot; Fabrizzio Zelada &middot; 11 min de lectura</div>
+    <h1><span class="text-gradient">Integrar Calendly con WhatsApp Business:</span> arquitectura, webhooks y plantillas (octubre de 2026)</h1>
+    <p class="lead"><strong>Respuesta corta:</strong> integrar Calendly con WhatsApp Business en 2026 se hace con un webhook de Calendly que dispara mensajes vía WhatsApp Business Cloud API usando plantillas HSM aprobadas por Meta. En Zenia Partners lo montamos como un flujo de tres etapas (confirmación, recordatorio, reagendado) sobre un agente de IA personalizado, con conectores no-code (Make, n8n) o un backend propio en Node o Python. El coste real empieza alrededor de 297 €/mes de plataforma más el setup de 997 €, sin contar el consumo de conversaciones de Meta.</p>
+  </header>
+
+  <div class="blog-content">
+
+    <p class="pillar-callout"><strong>Lee también:</strong> si vienes del lado CRM, revisa nuestra <a href="/blog/integrar-crm-con-whatsapp-business.html">guía para integrar un CRM con WhatsApp Business</a> y la <a href="/blog/cuanto-cuesta-un-crm-para-pymes.html">calculadora de coste de un CRM para pymes</a>.</p>
+
+
+    <h2>¿Por qué integrar Calendly con WhatsApp Business?</h2>
+
+    <p>Calendly concentra la agenda de miles de pymes de servicios: clínicas, asesorías, estudios de estética, abogados, consultoras y academias online. Según el propio Calendly, en 2026 superan los 20 millones de usuarios activos. El problema no es la agenda. Es el canal: los correos de confirmación de Calendly tienen tasas de apertura por debajo del 25% en el segmento B2C, mientras que los mensajes de WhatsApp Business superan el 90% de apertura en las primeras 2 horas (fuente: Meta Business, informe <em>Messaging Metrics 2026</em>).</p>
+
+    <p>El resultado operativo es predecible: citas confirmadas pero fantasma, no-shows por olvido, llamadas al día siguiente para preguntar "¿era hoy a las 10 o a las 11?". La integración de Calendly con WhatsApp Business ataca ese agujero: cada evento que Calendly dispara (reserva nueva, cancelación, reagendado) sale al cliente por su canal principal, con confirmación y recordatorio, y permite responder sin salir del chat.</p>
+
+    <p>El caso público más citado es el de Yves Rocher en Hong Kong, documentado por Meta: la cadena automatizó las reservas de cita en tienda por WhatsApp y reportó un <strong>21% más de reservas</strong> frente al canal telefónico y presencial (fuente: Meta Business Success Stories, 2024-2025). Es un solo caso autoreportado, pero la dirección del impacto se repite en todos los pilotos que hemos visto en Zenia Partners.</p>
+
+    <p>La pregunta real no es si vale la pena, es cómo montarlo bien: qué conector usar, qué plantillas HSM aprobar primero y qué pasa cuando el cliente responde al recordatorio.</p>
+
+    <h2>¿Qué opciones de integración existen en 2026?</h2>
+
+    <p>No hay integración nativa oficial entre Calendly y WhatsApp Business API. Todo el ecosistema funciona con conectores intermedios o backend propio. Esta es la comparativa honesta de las cuatro rutas que vemos en producción, con precios de octubre de 2026:</p>
+
+    <table>
+      <tr><th>Opción</th><th>Setup</th><th>Coste mensual</th><th>Cuándo tiene sentido</th></tr>
+      <tr><td>Zapier (Calendly → WhatsApp)</td><td>1-2 horas</td><td>Desde 20 USD/mes (Zapier) + Meta</td><td>Volumen bajo, menos de 300 citas/mes, mensajes simples sin lógica condicional</td></tr>
+      <tr><td>Make (Integromat)</td><td>2-4 horas</td><td>Desde 10 €/mes (Make) + Meta</td><td>Volumen medio, ramas condicionales, varios idiomas, reagendado desde WhatsApp</td></tr>
+      <tr><td>Respond.io / Picky Assist / tyntec</td><td>1-2 días</td><td>Desde 79 USD/mes</td><td>Equipos que ya usan una bandeja de atención multiagente y quieren Calendly dentro del CRM</td></tr>
+      <tr><td>Backend propio (Node o Python) con agente de IA</td><td>3-5 semanas</td><td>Desde 297 €/mes (Zenia Partners Starter) + Meta</td><td>Lógica de negocio real: cualificar, reagendar, cobrar seña, integrar con CRM/EMR/DMS</td></tr>
+    </table>
+
+    <p>Las tres primeras rutas son <em>disparadores</em>: Calendly dispara, WhatsApp envía un mensaje. Suficiente para una pyme con una agenda sencilla. La cuarta ruta es un <em>agente de IA personalizado</em>: entiende el mensaje de respuesta del cliente ("necesito moverlo al jueves"), consulta la disponibilidad en Calendly, propone slots y confirma. Es lo que montamos en Zenia Partners cuando el cliente necesita que la conversación continúe más allá del recordatorio.</p>
+
+    <p>Si tu caso es "mando confirmación y recordatorio y punto", Make resuelve. Si tu caso es "mi agenda tiene 6 especialistas, 3 sedes y 4 tipos de servicio con precio distinto", necesitas backend.</p>
+
+    <h2>Arquitectura: cómo encajan Calendly, WhatsApp Business API y el agente de IA</h2>
+
+    <p>El flujo técnico es siempre el mismo, cambia el conector. Visto de arriba hacia abajo:</p>
+
+    <ol>
+      <li><strong>Calendly</strong> dispara un webhook en tres eventos: <code>invitee.created</code> (nueva cita), <code>invitee.canceled</code> (cancelación) e <code>invitee_no_show.created</code> (si lo marcas en Calendly). El webhook sale como JSON a la URL que configures en Developer &rarr; Webhooks.</li>
+      <li>Un <strong>middleware</strong> (Make, n8n, un endpoint propio) recibe el JSON, extrae nombre, teléfono E.164, email, URL del evento, hora en zona del invitado y preguntas personalizadas de Calendly.</li>
+      <li>El middleware llama a la <strong>WhatsApp Business Cloud API</strong> (<code>graph.facebook.com/v22.0/{PHONE_ID}/messages</code>) con una plantilla HSM aprobada. Fuera de la ventana de 24 horas de servicio al cliente, solo pasan plantillas marketing, utility o authentication.</li>
+      <li>El mensaje incluye botones de respuesta rápida (<em>quick replies</em>): "Confirmar", "Reagendar", "Cancelar". El click emite un webhook de WhatsApp a tu endpoint.</li>
+      <li>Si el cliente responde texto libre ("muévelo al jueves por la mañana"), el <strong>agente de IA personalizado</strong> interpreta la intención, consulta la API de Calendly (<code>GET /scheduled_events</code> y <code>GET /event_type_available_times</code>) y propone slots sin salir del chat.</li>
+      <li>Al confirmar, el agente llama a <code>POST /scheduled_events/{uuid}/cancellation</code> o crea un nuevo evento vía <code>POST /scheduling_links</code>, y registra todo en el CRM.</li>
+    </ol>
+
+    <p>Puntos que suelen romper esta cadena en producción:</p>
+
+    <ul>
+      <li><strong>Teléfono sin formato E.164:</strong> Calendly guarda el teléfono tal cual lo escribe el cliente. Si no normalizas a <code>+34612345678</code> antes de llamar a la API de WhatsApp, el mensaje se rechaza con error 131026 ("Receiver not a valid WhatsApp user").</li>
+      <li><strong>Zona horaria:</strong> Calendly envía la hora en zona del invitado y en zona del organizador. Mandar la del organizador a un cliente en otro huso crea no-shows.</li>
+      <li><strong>Rate limits de Meta:</strong> números nuevos empiezan en Tier 250 destinatarios únicos/24h. Un influencer con 1.000 citas en una tarde satura el tier antes de la mitad.</li>
+      <li><strong>Firma del webhook de Calendly:</strong> si no validas el header <code>Calendly-Webhook-Signature</code> (HMAC SHA256), cualquiera puede disparar confirmaciones falsas al endpoint.</li>
+    </ul>
+
+    <h2>Plantillas HSM que necesitas aprobar en Meta</h2>
+
+    <p>Meta exige que todo mensaje enviado fuera de la ventana de 24 horas use una plantilla pre-aprobada. Para un flujo Calendly &rarr; WhatsApp decente necesitas al menos cuatro, categorizadas como <em>utility</em>:</p>
+
+    <h3>1. Confirmación de cita (<code>cita_confirmacion</code>)</h3>
+
+    <p>Se dispara desde <code>invitee.created</code>. Variables: nombre, fecha, hora, nombre del profesional, dirección o enlace Zoom. Botón "Añadir al calendario" (URL dinámica con ICS) y "Reagendar" (quick reply).</p>
+
+    <h3>2. Recordatorio 24h antes (<code>cita_recordatorio_24h</code>)</h3>
+
+    <p>Se dispara desde un cron que lee las citas del día siguiente. Variables: nombre, hora, documento o preparación requerida ("ven en ayunas", "trae DNI"). Botones: "Confirmar asistencia", "Necesito moverla".</p>
+
+    <h3>3. Recordatorio 2h antes (<code>cita_recordatorio_2h</code>)</h3>
+
+    <p>Para servicios donde el no-show cuesta caro (consulta médica privada, abogados, estética). Variables: nombre, hora, dirección con enlace a Google Maps.</p>
+
+    <h3>4. Confirmación de cancelación o reagendado (<code>cita_cambio_estado</code>)</h3>
+
+    <p>Se dispara desde <code>invitee.canceled</code> o cuando el agente completa un reagendado. Variables: hora anterior, hora nueva (si aplica), motivo.</p>
+
+    <p>Tiempo de aprobación de Meta en octubre de 2026: entre 1 minuto y 48 horas. Las plantillas con botón URL dinámica suelen tardar más que las de texto plano. Rechazos frecuentes: usar la palabra "gratis" en una plantilla <em>utility</em>, incluir URL con parámetros raros, o pedir datos personales directamente en el cuerpo.</p>
+
+    <h2>Make paso a paso: la ruta no-code más rápida</h2>
+
+    <p>Si la operación es sencilla (confirmación + recordatorio + cancelación) Make es la forma más rápida de poner esto en producción. Son dos escenarios conectados:</p>
+
+    <h3>Escenario 1: nueva cita confirmada</h3>
+
+    <ol>
+      <li>Módulo <strong>Calendly &gt; Watch Events</strong>. Autenticación con tu cuenta Calendly, filtro "New Invitee". Make crea el webhook en tu cuenta automáticamente.</li>
+      <li>Módulo <strong>Tools &gt; Set Variable</strong> para normalizar el teléfono: <code>replace({{1.payload.invitee.phone_number}}; /\\s|-|\\(|\\)/g; "")</code> y añade el prefijo si falta.</li>
+      <li>Módulo <strong>Router</strong> con una ruta por tipo de evento (consulta inicial, revisión, seguimiento). Cada ruta elige una plantilla distinta.</li>
+      <li>Módulo <strong>WhatsApp Business Cloud &gt; Send a Template Message</strong>. Phone number ID y token los sacas de Meta Business Manager &rarr; WhatsApp Manager &rarr; API Setup. Pega el nombre exacto de la plantilla y mapea las variables.</li>
+      <li>Módulo <strong>HTTP &gt; Make a Request</strong> hacia tu CRM (webhook de HubSpot, Pipedrive, Zoho) para registrar la cita.</li>
+    </ol>
+
+    <h3>Escenario 2: recordatorio 24h antes</h3>
+
+    <ol>
+      <li>Módulo <strong>Schedule</strong> que se ejecuta cada hora.</li>
+      <li>Módulo <strong>Calendly &gt; List Scheduled Events</strong> con rango <code>min_start_time = now + 23h</code>, <code>max_start_time = now + 25h</code>.</li>
+      <li>Iterator sobre los eventos devueltos.</li>
+      <li>Módulo <strong>Calendly &gt; List Event Invitees</strong> para cada evento.</li>
+      <li>Módulo <strong>WhatsApp &gt; Send a Template Message</strong> con la plantilla <code>cita_recordatorio_24h</code>.</li>
+    </ol>
+
+    <p>Coste operativo en Make: una cuenta Core (10 €/mes) cubre hasta 10.000 operaciones. Un flujo típico de 500 citas/mes consume alrededor de 3.000 operaciones (confirmación + 2 recordatorios + reagendados). Suma lo que Meta cobre por conversación (ver abajo).</p>
+
+    <h2>Costes reales en octubre de 2026</h2>
+
+    <p>Suma de los tres bloques que paga una pyme que corre Calendly &rarr; WhatsApp:</p>
+
+    <table>
+      <tr><th>Bloque</th><th>Coste mensual (ES)</th><th>Nota</th></tr>
+      <tr><td>Calendly (plan Standard)</td><td>10 USD por usuario</td><td>El plan gratuito no da acceso a webhooks ni API</td></tr>
+      <tr><td>Conector (Make Core)</td><td>10 € por 10.000 ops</td><td>n8n self-hosted baja a 0 € si tienes servidor</td></tr>
+      <tr><td>WhatsApp Business Cloud</td><td>0,0150 € por conversación <em>utility</em> en España, 0,0375 € en México, 0,0585 € en Argentina</td><td>Tarifas Meta octubre 2026; conversaciones iniciadas por el cliente llevan 24h gratis desde la primera respuesta</td></tr>
+      <tr><td>Agente de IA personalizado (opcional)</td><td>Desde 297 €/mes (Zenia Partners Starter) o backend propio</td><td>Entra solo cuando la lógica supera lo que Make puede hacer</td></tr>
+    </table>
+
+    <p>Para una clínica dental con 400 citas al mes en España y 3 mensajes por cita (confirmación + 2 recordatorios), el coste Meta ronda 18 €/mes. Make le añade 10 €. Calendly aporta 10 USD/usuario. Total: unos 45-50 € de infraestructura antes del CRM o del agente de IA. El salto a Zenia Partners Starter se justifica cuando entra el agente conversacional, el CRM unificado y la atribución por canal.</p>
+
+    <h2>¿Cuándo pasar de disparador a agente de IA?</h2>
+
+    <p>El límite del enfoque disparador se nota en la respuesta del cliente. Un recordatorio con botón "Reagendar" lo lleva de vuelta al enlace público de Calendly, donde elige slot y abandona el canal. Si el cliente escribe "necesito moverla, estoy en el aeropuerto" al chat, el disparador no sabe qué hacer. Aquí entra el agente de IA personalizado.</p>
+
+    <p>Un agente de IA sobre WhatsApp Business API gestiona la conversación completa dentro del chat:</p>
+
+    <ul>
+      <li>Entiende el texto libre, saca intención (reagendar, cancelar, consultar) y entidades (fecha, hora, especialista).</li>
+      <li>Consulta Calendly vía API para listar los próximos slots que cumplen las restricciones ("jueves por la mañana con la doctora X").</li>
+      <li>Confirma el cambio sin que el cliente abra ningún enlace.</li>
+      <li>Escala al humano cuando no entiende o cuando el cliente pide algo fuera del alcance.</li>
+      <li>Guarda la conversación en el CRM con atribución por canal, campaña y especialista.</li>
+    </ul>
+
+    <p>El criterio práctico para pasar: si al menos el 15% de tus citas se reagendan o cancelan en WhatsApp cada mes, o si tu agenda tiene más de un recurso (varios profesionales, varias sedes, varios tipos de servicio con precio distinto), el disparador se queda corto. Si estás por debajo de ese umbral, Make basta.</p>
+
+    <h2>Checklist de integración antes de salir a producción</h2>
+
+    <p>Lo que revisamos en Zenia Partners antes de activar un flujo Calendly &rarr; WhatsApp para un cliente:</p>
+
+    <ol>
+      <li>WhatsApp Business Account verificada en Meta Business Manager y número con display name aprobado.</li>
+      <li>Webhook de Calendly con firma HMAC validada en el middleware.</li>
+      <li>Teléfonos normalizados a E.164 antes de llamar a la Cloud API.</li>
+      <li>Al menos 4 plantillas HSM aprobadas (confirmación, recordatorio 24h, recordatorio 2h, cambio de estado).</li>
+      <li>Política de opt-in registrada: el campo de teléfono de Calendly incluye casilla de consentimiento RGPD con texto propio y timestamp guardado.</li>
+      <li>Mecanismo de opt-out: la palabra <code>BAJA</code> o el botón "Dejar de recibir" bloquea el teléfono en el middleware antes de volver a enviarle.</li>
+      <li>Fallback: si Meta devuelve error, el middleware cae a email o SMS. No puede quedarse en silencio.</li>
+      <li>Panel de métricas: tasa de entrega, tasa de confirmación, no-shows antes y después, coste por conversación.</li>
+      <li>Pruebas de carga en Tier 1.000 antes de pedir upgrade a Meta.</li>
+      <li>Monitoreo del rate limit del endpoint <code>/scheduled_events</code> de Calendly (100 req/min).</li>
+    </ol>
+
+    <p>Saltarse el checklist suele costar entre 2 y 6 semanas de debugging una vez que ya hay volumen real.</p>
+
+    <h2>Verticales donde esta integración rinde más</h2>
+
+    <p>Calendly + WhatsApp Business se nota desde el primer mes en sectores donde el no-show es caro y la cita se agenda con días de antelación:</p>
+
+    <ul>
+      <li><strong>Clínicas dentales, de fisioterapia y de estética:</strong> consulta privada, hueco de agenda que se pierde si no se cubre. Ver <a href="/blog/agente-ia-para-clinicas-de-estetica.html">cómo lo montamos para clínicas de estética</a>.</li>
+      <li><strong>Despachos de abogados y asesorías:</strong> la primera consulta cualifica el caso. Un recordatorio bien hecho reduce el no-show y acelera la facturación. Más contexto en <a href="/blog/agente-ia-para-despachos-contables.html">despachos contables</a>.</li>
+      <li><strong>Peluquerías y centros de uñas:</strong> volumen alto, ticket medio, no-shows frecuentes. Ver <a href="/blog/reactivar-clientas-peluqueria-whatsapp.html">reactivación de clientas por WhatsApp</a>.</li>
+      <li><strong>Coaches, nutricionistas y psicólogos online:</strong> la cita vale 60-200 €, el reagendado por chat marca la diferencia entre cobrar o no.</li>
+      <li><strong>Academias con tutorías 1 a 1:</strong> gestionar 200 reagendados a la semana sin personal administrativo exige automatización.</li>
+      <li><strong>Inmobiliarias con visitas agendadas:</strong> una visita no confirmada es una tarde desperdiciada del comercial.</li>
+    </ul>
+
+    <p>Si tu operación no entra en ninguno de estos grupos pero haces entre 100 y 2.000 citas al mes, la integración vale la pena. Por debajo de 100 citas/mes, el coste de setup y mantenimiento no se recupera con la frecuencia suficiente.</p>
+
+    <h2>Preguntas frecuentes</h2>
+
+    <h3>¿Calendly tiene integración nativa con WhatsApp Business?</h3>
+
+    <p>No. En octubre de 2026 Calendly no publica una integración oficial con WhatsApp Business API. Toda la conexión pasa por un conector intermedio (Zapier, Make, n8n, Respond.io) o un backend propio que escuche el webhook de Calendly y llame a la Cloud API de Meta.</p>
+
+    <h3>¿Puedo mandar el enlace de Calendly por WhatsApp sin configurar nada técnico?</h3>
+
+    <p>Sí, pero eso es compartir un link, no una integración. Para que la cita se confirme, se recuerde y se pueda reagendar desde WhatsApp necesitas conectar el webhook de Calendly con la API de WhatsApp Business y usar plantillas HSM aprobadas por Meta.</p>
+
+    <h3>¿Cuánto tarda Meta en aprobar las plantillas de confirmación y recordatorio?</h3>
+
+    <p>Entre 1 minuto y 48 horas en la mayoría de los casos. Las plantillas <em>utility</em> con texto plano suelen pasar en minutos. Las que incluyen botones con URL dinámica, variables en el header o la palabra "gratis" son las que más se rechazan.</p>
+
+    <h3>¿Qué pasa con el RGPD si Calendly guarda el teléfono y yo envío WhatsApp?</h3>
+
+    <p>Necesitas opt-in explícito en el formulario de Calendly: una pregunta personalizada con casilla de consentimiento que diga que recibirá avisos por WhatsApp, con enlace a tu política de privacidad. Guarda la respuesta y el timestamp en tu CRM. La palabra <code>BAJA</code> debe bloquear el teléfono en el middleware antes de volver a mandarle nada.</p>
+
+    <h3>¿Puedo responder desde WhatsApp Business App sin usar la API?</h3>
+
+    <p>Solo si renuncias a disparadores automáticos. La app no permite enviar plantillas fuera de la ventana de 24 horas ni conectarse a un webhook. Para integrar Calendly con WhatsApp hace falta la Cloud API o la On-Premises API, no la app.</p>
+
+    <h3>¿Cuánto cuesta montar esto con Zenia Partners?</h3>
+
+    <p>Zenia Partners cobra un setup de 997 € y un plan desde 297 €/mes (Starter), 497 €/mes (Growth) o a medida (Enterprise), según octubre de 2026. Incluye el agente de IA personalizado, el conector con Calendly, las plantillas HSM aprobadas, el CRM y la atribución por canal. El consumo de WhatsApp lo paga el cliente directamente a Meta.</p>
+
+    <h2>Qué hacer esta misma semana</h2>
+
+    <p>Si vas a montar la integración por tu cuenta: abre cuenta de WhatsApp Business Cloud, verifica el número con display name, redacta las 4 plantillas HSM y envíalas a aprobación. Mientras Meta responde, monta el escenario de Make con los módulos de Calendly y haz una prueba con tu propio teléfono.</p>
+
+    <p>Si prefieres que lo monte un equipo con experiencia en WhatsApp Business API y agentes de IA, Zenia Partners lo entrega listo en 3-5 semanas, con plantillas aprobadas, CRM y agente de IA personalizado conectado a Calendly.</p>
+
+    <div class="blog-cta">
+      <h3>¿Quieres integrar Calendly con WhatsApp Business sin romper nada?</h3>
+      <p>En Zenia Partners montamos la integración completa (webhook, plantillas HSM, agente de IA personalizado y CRM) para clínicas, despachos y pymes de servicios. Agenda una llamada de 30 minutos y te mostramos la arquitectura aplicada a tu operación.</p>
+<p data-zenia-oportunidad="1">Todo esto parte de lo mismo: <a href="/es/automatizacion-whatsapp-negocios.html">automatizar WhatsApp con IA</a> para que ninguna cita se quede sin confirmar.</p>
+
+      <a href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20%C2%ABIntegrar%20Calendly%20con%20WhatsApp%20Business%C2%BB%20y%20quiero%20ver%20c%C3%B3mo%20montarlo%20en%20mi%20negocio" target="_blank" rel="noopener">Hablar por WhatsApp ahora</a> <a style="background:transparent;border:1px solid var(--border);color:var(--text-secondary);margin-left:10px" href="https://calendly.com/zeladauriartef/30min">Agendar llamada gratuita</a>
+    </div>
+<div class="blog-related" data-zenia-money-links="1">
+  <h3>Ponlo en marcha en tu negocio</h3>
+  <a href="/blog/integrar-crm-con-whatsapp-business.html">Integrar CRM con WhatsApp Business<span>Arquitectura, APIs y buenas prácticas para unir el CRM con WhatsApp Business.</span></a>
+  <a href="/es/automatizacion-whatsapp-negocios.html">Automatización de WhatsApp para negocios<span>Agente de IA por WhatsApp 24/7 + CRM. Implementación completa, desde €297/mes.</span></a>
+  <a href="/blog/cuanto-cuesta-un-crm-para-pymes.html">¿Cuánto cuesta un CRM para pymes?<span>Rangos reales de inversión en CRM y agente de IA para pymes en 2026.</span></a>
+  <a href="/blog/agente-ia-para-clinicas-de-estetica.html">Agente IA para clínicas de estética<span>Caso vertical: Calendly, WhatsApp y agente de IA en una clínica de estética.</span></a>
+</div>
+
+
+    <div class="blog-related">
+      <h3>Artículos relacionados</h3>
+      <a href="/blog/integrar-make-con-whatsapp-business.html">Integrar Make con WhatsApp Business<span>Guía paso a paso para montar flujos de WhatsApp con Make (ex Integromat).</span></a>
+      <a href="/blog/integrar-n8n-con-whatsapp-business.html">Integrar n8n con WhatsApp Business<span>Alternativa self-hosted con n8n para construir el middleware de Calendly.</span></a>
+      <a href="/blog/integrar-google-calendar-con-whatsapp-business.html">Integrar Google Calendar con WhatsApp Business<span>Si tu agenda es Google Calendar en vez de Calendly, el patrón es similar.</span></a>
+      </div>
+
+  </div>
+
+<div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 24px; margin: 40px 0;" data-zenia-internal-links="landings">
+  <h3 style="color: #F1F5F9; margin-bottom: 12px; font-size: 1.05rem;">¿Qué sector gestiona tu agenda?</h3>
+  <p style="color: #94A3B8; margin-bottom: 16px; font-size: 0.95rem;">Adaptamos la integración Calendly + WhatsApp Business a la operativa del vertical. Ve el caso que más se parece al tuyo:</p>
+  <div>
+      <a href="/blog/agente-ia-para-clinicas-de-estetica.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Clínicas de estética →</a>
+      <a href="/blog/agente-ia-para-despachos-contables.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Despachos y asesorías →</a>
+      <a href="/blog/reactivar-clientas-peluqueria-whatsapp.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Peluquerías y uñas →</a>
+      <a href="/es/automatizacion-whatsapp-negocios.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Guía general →</a>
+  </div>
+</div>
+
+</article>
+
+<footer class="blog-footer">
+  <div class="container">
+    <p>&copy; 2026 ZENIA. Todos los derechos reservados. | <a href="/">Inicio</a> | <a href="/blog/">Blog</a></p>
+  </div>
+</footer>
+
+<div style="text-align:center; padding:16px 24px; background:#0A0F1C; color:#64748B; font-size:0.85rem; border-top:1px solid rgba(255,255,255,0.04);"><a href="/es/cobertura.html" style="color:#94A3B8; text-decoration:none;">Ver cobertura completa</a></div>
+<a href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20%C2%ABIntegrar%20Calendly%20con%20WhatsApp%20Business%C2%BB%20y%20quiero%20ver%20c%C3%B3mo%20montarlo%20en%20mi%20negocio" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp" data-directo style="position:fixed;bottom:24px;right:24px;z-index:9998;background:#25D366;color:white;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(37,211,102,0.4);transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 20px rgba(37,211,102,0.5)'" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 16px rgba(37,211,102,0.4)'">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<script>document.addEventListener("click",function(e){var t=e.target,a=t.closest?t.closest('a[href*="wa.me"]'):null;if(!a)return;try{navigator.sendBeacon("https://gaia-relojes.onrender.com/gwb/lead",JSON.stringify({site:"zenia",path:location.pathname+location.search,ref:document.referrer||""}))}catch(r){}},true);</script>
+<script src="/assets/qualify.js?v=4" defer></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "67e4803d7cd443a49b12c7d8a99365bf"}'></script>
+</body>
+</html>

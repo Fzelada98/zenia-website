@@ -9420,3 +9420,46 @@ Full write-up: https://zeniapartners.com/blog/ai-agent-for-crossfit-boxes.html
 #SystemsArchitecture #WhatsAppBusinessAPI #FitnessTech #AIAgents
 
 ---
+## 2026-10-26 - Two models, one report: how regulatory documents get scored before anyone reads them (EN post, EN caption)
+
+Most AI pipelines that touch regulatory or legal text ship whatever the first model writes. That is the architecture decision that should worry anyone putting a report in front of a board.
+
+The pipeline we run for Cicero, our regulatory intelligence partner in Spain and Italy, splits drafting from judging into two models with two different jobs. The first model reads across 70+ near real-time sources, gazettes, parliaments, regulators, public consultations, sector press, and drafts an entry: what changed, who is pushing it, who is blocking it, mapped against 900+ actor profiles scored by power and interest across 12 regulatory sectors.
+
+The second model never drafts anything. It scores the first model's output on four axes before a human sees it: grounding, accuracy, calibration, actionability. Anything that fails threshold routes to a human review queue instead of the daily report.
+
+The point generalizes past regulatory intelligence: a judge model with a different objective than the writer model is what turns an AI reading documents into something a compliance team can actually cite.
+
+https://zeniapartners.com/cicero/?src=li
+
+#regtech #publicaffairs #AIArchitecture #LLM #Spain #Italy
+
+---
+## 2026-10-28 - The life of a norm: five phases, and the one where most companies find out (EN post, EN caption)
+
+A norm that affects a business does not start the day it gets published. It moves through five fairly predictable stages, and the window to actually change the outcome closes earlier than most monitoring setups assume.
+
+Stage 1: idea or preliminary draft, with an early public consultation open for roughly two weeks before any article is written. Stage 2: formal hearing and public information period, once there is a draft to react to. Stage 3: parliamentary process, committee work, amendments, floor vote. Stage 4: approval and publication in the official gazette. Stage 5: entry into force and secondary regulation.
+
+Each stage narrows the margin for input. Stages 1 and 3 are the only ones where a submission still changes the text. By stage 4 the document is fixed, and most monitoring, internal or outsourced, only starts reading there, because stage 1 rarely looks like news. It looks like a government webpage with a 15-day deadline and no press release attached.
+
+Full breakdown for Spain, including which government sources carry the signal at each stage, on the Zenia blog:
+
+https://zeniapartners.com/blog/la-vida-de-una-norma-donde-te-enteras-hoy.html
+
+#regtech #publicaffairs #PolicyMonitoring #Spain #AI
+
+---
+## 2026-10-30 - Why a daily regulatory report beats alerts (EN post, EN caption)
+
+Alert fatigue is an architecture problem, not a UX problem. A keyword alert tells you a string matched a document. It does not tell you whether the document matters, who is behind it, or what to do before the deadline passes, so the realistic outcome is a muted channel and a norm that still surprises you on the day it is published.
+
+A daily report is a different object because it is built as one, not assembled from alerts after the fact. Every entry carries the source it was pulled from, so a claim can be checked in under a minute instead of taken on faith. An actor map, scored by power and interest, shows who is pushing a dossier and who can still be reached before a position hardens. And a recommendation, the step most monitoring tools skip entirely, because recommending something is a liability an alert never has to carry.
+
+Keyword matching can tell you that 40 documents mentioned a topic this week. It cannot tell you which one is worth a call to your public affairs lead today.
+
+https://zeniapartners.com/cicero/?src=li
+
+#regtech #publicaffairs #DataArchitecture #AI #Italy
+
+---

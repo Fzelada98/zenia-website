@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-10-25T06:00Z",
+  "lastRun": "2026-10-25T17:10Z",
   "market": "US/UK small business",
   "posts": [
     {
@@ -1005,7 +1005,8 @@
       "keyword": "ai agent for language schools",
       "tier": 2,
       "cluster": "education",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-10-25"
     },
     {
       "slug": "ai-agent-for-test-prep-tutors",

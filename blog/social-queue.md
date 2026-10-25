@@ -9480,3 +9480,16 @@ Full technical write-up (in Spanish): https://zeniapartners.com/blog/integrar-ca
 #WhatsAppBusinessAPI #B2B #SaaS #AI #automation
 
 ---
+## 2026-10-25 - AI agent for language schools: the CEFR state machine that keeps A1 students alive
+
+The hard part of automating a language school is not the WhatsApp API. It is modeling CEFR progression as a state machine the agent can actually read and write.
+
+Each student record carries current_level (A1..C2), weeks_in_cohort, consecutive_absences and renewal_window_open_at. The agent subscribes to webhooks from the enrollment system (Classe365, Teachworks, OpenEduCat, LearnCube) and triggers four flows: 72h after two consecutive absences, a week-four pulse pushing a score into the teacher's CRM view, a Stripe/Square failed-card retry inside 15 minutes, and a level-up renewal 21 days before the current cohort ends.
+
+Latency targets we hold in production: inbound-to-first-reply p95 under 90s on WhatsApp Cloud API, write-back to the enrollment system under 1.2s on 95% of bookings. On a 2-location Miami deployment: A1-to-A2 renewal 58% → 76%, failed-card recovery 31% → 74%.
+
+Full write-up: https://zeniapartners.com/blog/ai-agent-for-language-schools.html
+
+#edtech #WhatsAppBusinessAPI #SystemsEngineering #AI #CRM
+
+---

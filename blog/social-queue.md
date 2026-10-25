@@ -9390,3 +9390,18 @@ Full write-up (ES): https://zeniapartners.com/blog/automatizar-recordatorios-cla
 #SystemsArchitecture #WhatsAppBusinessAPI #FitnessTech #AIAgents
 
 ---
+## 2026-10-25 - Integrar Make.com con WhatsApp Business (ES post, EN caption)
+
+Something worth modeling before picking Make.com as the glue layer between WhatsApp Business API and a product backend. Make's execution model is per-module credit billing with no shared state across runs, so every conversational turn that needs context has to round-trip through an external data store (Postgres, Redis, or a CRM record) just to carry memory forward. That is three network hops where a native agent worker calling Cloud API directly would have one.
+
+Numbers from a 60-day A/B against the same Meta Cloud API endpoint, one path through a Make scenario and one through a FastAPI worker in the same VPC: Make p95 inbound-to-outbound at 4.8 s with ~7 credits per bidirectional turn, direct worker at 0.9 s with no per-turn tax. Against Make's Pro plan (10k credits for ~16 USD) the break-even lands around 1,400 conversations per month; above that the iPaaS cost dominates and the p95 ceiling becomes the real limit for anything beyond a one-shot utility notification.
+
+Second constraint that bites at scale: Meta rate-limits by phone_number_id at 1,000 unique recipients per rolling 24h at tier 1. Make's scheduler batches without native backpressure against that quota, so a nightly 1,200-reminder scenario silently drops the tail in 429s unless you insert a Sleep module with jittered delay, which costs more credits per run and still does not read the quota header back.
+
+The spot where Make still wins: internal notifications under ~500 messages/month, prototypes, and non-conversational utility flows where the state machine is linear. Everything beyond that moves to a dedicated worker.
+
+Full write-up (ES): https://zeniapartners.com/blog/integrar-make-con-whatsapp-business.html
+
+#SystemsArchitecture #WhatsAppBusinessAPI #iPaaS #AIAgents
+
+---

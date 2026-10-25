@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HP0VQSEL68"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-HP0VQSEL68');
+</script>
+
+<title>Integrar Make.com con WhatsApp Business | ZENIA</title>
+<meta name="description" content="Guia 2026 para integrar Make.com con WhatsApp Business API: modulos, escenarios reales, limites de creditos y cuando conviene un agente a medida.">
+<link rel="canonical" href="https://zeniapartners.com/blog/integrar-make-con-whatsapp-business.html">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+
+<!-- Hreflang -->
+<link rel="alternate" hreflang="es" href="https://zeniapartners.com/blog/integrar-make-con-whatsapp-business.html">
+<link rel="alternate" hreflang="x-default" href="https://zeniapartners.com/blog/integrar-make-con-whatsapp-business.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Integrar Make.com con WhatsApp Business: guia 2026">
+<meta property="og:description" content="Como conectar Make.com con WhatsApp Business API en 2026: modulos, creditos, latencia y cuando pasar a un agente de IA personalizado.">
+<meta property="og:url" content="https://zeniapartners.com/blog/integrar-make-con-whatsapp-business.html">
+<meta property="og:site_name" content="ZENIA">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="https://zeniapartners.com/assets/images/og-image.png">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Integrar Make.com con WhatsApp Business: guia 2026">
+<meta name="twitter:description" content="Como conectar Make.com con WhatsApp Business API: modulos, creditos y limites reales de produccion.">
+<meta name="twitter:image" content="https://zeniapartners.com/assets/images/og-image.png">
+
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="author" content="Fabrizzio Zelada">
+<meta name="theme-color" content="#0A0F1C">
+
+<!-- JSON-LD Article -->
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Integrar Make.com con WhatsApp Business: guia 2026", "description": "Como conectar Make.com con la API de WhatsApp Business: modulos disponibles, escenarios reales, limites de creditos y cuando conviene saltar a un agente de IA personalizado.", "author": {"@type": "Person", "name": "Fabrizzio Zelada", "jobTitle": "Founder", "worksFor": {"@type": "Organization", "name": "ZENIA"}}, "publisher": {"@type": "Organization", "name": "ZENIA", "url": "https://zeniapartners.com", "logo": {"@type": "ImageObject", "url": "https://zeniapartners.com/assets/images/og-image.png", "width": 600, "height": 60}}, "datePublished": "2026-10-25", "dateModified": "2026-10-25", "mainEntityOfPage": "https://zeniapartners.com/blog/integrar-make-con-whatsapp-business.html", "inLanguage": "es", "keywords": ["integrar make.com con whatsapp business", "make.com whatsapp api", "automatizacion no code whatsapp", "integromat whatsapp business api", "whatsapp cloud api make"], "image": "https://zeniapartners.com/assets/images/og-image.png"}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #3B82F6;
+    --accent-violet: #6366F1;
+    --bg-dark: #0A0F1C;
+    --bg-card: rgba(17, 24, 39, 0.6);
+    --text-primary: #F1F5F9;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+    --border: rgba(148, 163, 184, 0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; background: var(--bg-dark); color: var(--text-primary); line-height: 1.8; }
+  .blog-nav { padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 60px; position: sticky; top: 0; background: rgba(10, 15, 28, 0.85); backdrop-filter: blur(12px); z-index: 100; }
+  .blog-nav .container { max-width: 1200px; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+  .blog-nav .nav-logo-link { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-primary); font-weight: 700; font-size: 1.1rem; }
+  .blog-nav .nav-main-links { display: flex; list-style: none; gap: 28px; margin: 0; padding: 0; }
+  .blog-nav .nav-main-links li { margin: 0; }
+  .blog-nav .nav-main-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
+  .blog-nav .nav-main-links a:hover { color: var(--text-primary); }
+  .blog-nav .nav-main-links a.active { color: var(--primary); }
+  .blog-nav .nav-cta-btn { background: var(--primary); color: #fff; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: filter 0.2s; white-space: nowrap; }
+  .blog-nav .nav-cta-btn:hover { filter: brightness(1.1); }
+  @media (max-width: 860px) {
+    .blog-nav .nav-main-links { display: none; }
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+  .blog-header { margin-bottom: 48px; }
+  .blog-meta { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px; }
+  .blog-header h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); line-height: 1.3; margin-bottom: 16px; }
+  .blog-header p.lead { font-size: 1.1rem; color: var(--text-secondary); line-height: 1.7; }
+  .blog-content h2 { font-size: 1.4rem; margin: 48px 0 16px; color: var(--text-primary); }
+  .blog-content h3 { font-size: 1.15rem; margin: 32px 0 12px; color: var(--text-primary); }
+  .blog-content p { color: var(--text-secondary); margin-bottom: 20px; }
+  .blog-content ul, .blog-content ol { color: var(--text-secondary); margin-bottom: 20px; padding-left: 24px; }
+  .blog-content li { margin-bottom: 8px; }
+  .blog-content strong { color: var(--text-primary); }
+  .blog-content a { color: var(--primary); text-decoration: underline; }
+  .blog-content a:hover { color: var(--accent-violet); }
+  .blog-content blockquote { border-left: 3px solid var(--primary); padding-left: 20px; margin: 24px 0; font-style: italic; color: var(--text-secondary); }
+  .blog-content table { width: 100%; border-collapse: collapse; margin: 24px 0; }
+  .blog-content th, .blog-content td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); font-size: 0.95rem; }
+  .blog-content th { color: var(--text-primary); font-weight: 600; background: var(--bg-card); }
+  .blog-cta { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 40px; text-align: center; margin: 60px 0; }
+  .blog-cta h3 { margin-bottom: 12px; }
+  .blog-cta p { color: var(--text-secondary); margin-bottom: 20px; }
+  .blog-cta a { display: inline-block; padding: 12px 28px; background: var(--primary); color: white; border-radius: 8px; text-decoration: none; font-weight: 600; }
+  .blog-cta a:hover { background: var(--accent-violet); }
+  .blog-related { margin: 60px 0 0; }
+  .blog-related h3 { margin-bottom: 20px; }
+  .blog-related a { display: block; padding: 16px 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 12px; text-decoration: none; color: var(--text-primary); font-weight: 600; transition: border-color 0.3s; }
+  .blog-related a:hover { border-color: var(--primary); }
+  .blog-related a span { display: block; font-size: 0.85rem; color: var(--text-muted); font-weight: 400; margin-top: 4px; }
+  .blog-footer { padding: 40px 0; border-top: 1px solid var(--border); margin-top: 60px; text-align: center; color: var(--text-muted); font-size: 0.85rem; }
+  .blog-footer a { color: var(--primary); text-decoration: none; }
+  .text-gradient { background: linear-gradient(135deg, var(--primary), var(--accent-violet)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+</style>
+<script type="application/ld+json" data-zenia-faq="1">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "es", "mainEntity": [{"@type": "Question", "name": "¿El agente de IA suena robótico?", "acceptedAnswer": {"@type": "Answer", "text": "No. El agente se configura con el tono de voz del restaurante. Si tu comunicación es cercana y casual, el agente responde así. Si es formal y gastronómica, se adapta. Los clientes no distinguen al agente de un humano en el 92% de las interacciones."}}, {"@type": "Question", "name": "¿Qué pasa si un cliente pide algo que el agente no puede resolver?", "acceptedAnswer": {"@type": "Answer", "text": "El agente escala la conversación al equipo humano con todo el contexto: qué pidió el cliente, su historial, su perfil completo. El empleado retoma la conversación sin que el cliente tenga que repetir nada. Esto ocurre en menos del 8% de las conversaciones."}}, {"@type": "Question", "name": "¿Necesito cambiar mi número de WhatsApp?", "acceptedAnswer": {"@type": "Answer", "text": "No. WhatsApp Business API se conecta al número existente del restaurante. Los clientes siguen escribiendo al mismo número de siempre."}}, {"@type": "Question", "name": "¿Funciona con mi sistema de reservas actual?", "acceptedAnswer": {"@type": "Answer", "text": "En la mayoría de los casos, sí. La integración es compatible con los principales sistemas (CoverManager, ElTenedor/TheFork, Resy, sistemas propios). Si tu sistema no tiene API, se puede implementar una solución híbrida o migrar a un sistema compatible durante la implementación."}}, {"@type": "Question", "name": "¿Se pierde el trato humano?", "acceptedAnswer": {"@type": "Answer", "text": "Al contrario. El equipo humano deja de perder 2-3 horas al día gestionando reservas por teléfono y WhatsApp. Ese tiempo se reinvierte en lo que realmente importa: atender a los clientes que están en el restaurante. La automatización se encarga de lo repetitivo para que tu equipo se enfoque en lo valioso."}}]}</script>
+</head>
+<body>
+
+<nav class="blog-nav">
+  <div class="container">
+    <a href="/es/" class="nav-logo-link">
+      <svg class="zenia-mark" viewBox="0 0 140 140" fill="none" width="32" height="32">
+        <defs>
+          <linearGradient id="zg-b" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#2563EB"/>
+            <stop offset="100%" stop-color="#3B82F6"/>
+          </linearGradient>
+          <linearGradient id="zg-v" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#6366F1"/>
+            <stop offset="100%" stop-color="#7C3AED"/>
+          </linearGradient>
+        </defs>
+        <rect width="140" height="140" rx="28" fill="#0F172A"/>
+        <path d="M 70 18 Q 18 18 18 38 L 18 57 Q 18 63 24 63 L 88 63 Z" fill="url(#zg-b)"/>
+        <path d="M 70 122 Q 122 122 122 102 L 122 83 Q 122 77 116 77 L 52 77 Z" fill="url(#zg-v)"/>
+      </svg>
+      <span>ZENIA</span>
+    </a>
+    <ul class="nav-main-links">
+      <li><a href="/es/#opportunities">Oportunidades IA</a></li>
+      <li><a href="/es/#services">Servicios</a></li>
+      <li><a href="/es/#process">Proceso</a></li>
+      <li><a href="/es/#impact">Impacto</a></li>
+      <li><a href="/blog/" class="active">Blog</a></li>
+    </ul>
+    <a href="/es/#cta" class="nav-cta-btn">Empezar</a>
+  </div>
+</nav>
+
+<article class="container">
+  <header class="blog-header">
+    <div class="blog-meta">25 de octubre, 2026 &middot; Fabrizzio Zelada &middot; 11 min de lectura</div>
+    <h1><span class="text-gradient">Integrar Make.com con WhatsApp Business:</span> Guia 2026 con Modulos, Creditos y Limites Reales</h1>
+    <p class="lead"><strong>Respuesta corta:</strong> Integrar Make.com con WhatsApp Business en 2026 requiere la Cloud API de Meta (gratis), un numero verificado, un token permanente y al menos una plantilla aprobada. Make no tiene conector oficial de WhatsApp, asi que se usan modulos de terceros (ChatArchitect, WATI, 360dialog) o el modulo HTTP generico. El plan Free de Make da 1.000 creditos y 2 escenarios activos; el plan Core cuesta unos 9 a 11 USD al mes con 10.000 creditos. Si manejas mas de 2.000 conversaciones mensuales, Make se queda corto y conviene un agente de IA personalizado.</p>
+  </header>
+
+  <div class="blog-content">
+
+    <p class="pillar-callout"><strong>Lee tambien:</strong> Si prefieres un stack mas potente que un workflow visual, lee la <a href="/blog/integrar-crm-con-whatsapp-business.html">guia completa para integrar un CRM con WhatsApp Business</a> y la comparativa <a href="/blog/integrar-n8n-con-whatsapp-business.html">n8n vs Make para WhatsApp</a>.</p>
+
+
+    <h2>Por que integrar Make.com con WhatsApp Business tiene sentido (y cuando no)</h2>
+
+    <p>Make.com (antes Integromat) es la plataforma no-code mas usada por pymes en Espana y Latinoamerica para conectar aplicaciones sin escribir codigo. Segun Latenode, desde el 27 de agosto de 2025 Make renombro la unidad "operacion" a "credito": un modulo ejecutado consume un credito, y los planes se miden por paquetes de creditos mensuales.</p>
+
+    <p>Integrar Make.com con WhatsApp Business tiene sentido cuando necesitas automatizar <strong>flujos puntuales de bajo volumen</strong>: notificar al equipo de ventas cuando llega un lead, enviar un recordatorio automatico desde Google Calendar, o disparar un mensaje de confirmacion cuando un cliente paga en Stripe. Es rapido de montar, visual y no requiere programador.</p>
+
+    <p><strong>No tiene sentido cuando:</strong></p>
+
+    <ul>
+      <li>Necesitas conversaciones bidireccionales inteligentes: Make dispara mensajes pero no entiende respuestas en lenguaje natural ni gestiona contexto conversacional.</li>
+      <li>Vas a enviar mas de 2.000 mensajes al mes: cada ejecucion consume creditos y el coste se dispara frente a una integracion directa.</li>
+      <li>Requieres latencia inferior a 2 segundos: la cola de Make y los webhooks de Meta anaden entre 3 y 8 segundos.</li>
+      <li>Manejas datos sensibles con requisitos de residencia en UE: Make procesa en servidores europeos solo en el plan Enterprise.</li>
+    </ul>
+
+    <p>Para esos casos, lo que necesitas no es un workflow visual, sino un <a href="/blog/agente-ia-personalizado-vs-chatbot-generico.html">agente de IA personalizado</a> conectado directamente a la Cloud API con tu CRM. Zenia Partners construye ese tipo de integraciones a medida y sin dependencia de Make.</p>
+
+    <h2>Como integrar Make.com con WhatsApp Business paso a paso</h2>
+
+    <p>El proceso oficial de Make requiere acceso a la API de WhatsApp Business via Meta Cloud API o un Business Solution Provider (BSP) certificado. No hay forma de usar WhatsApp personal con Make: necesitas una cuenta de WhatsApp Business API registrada en Meta Business Manager.</p>
+
+    <h3>Paso 1: Configurar Meta Cloud API</h3>
+
+    <p>Entra a <a href="https://developers.facebook.com/" target="_blank" rel="noopener">developers.facebook.com</a>, crea una aplicacion tipo Business, anade el producto "WhatsApp" y verifica el numero que vas a usar. Meta te asigna un numero de prueba gratis durante 90 dias; para produccion necesitas un numero verificado propio y un display name aprobado. El acceso a Cloud API es gratis: solo pagas por mensaje de plantilla entregado, segun la documentacion oficial de Meta.</p>
+
+    <h3>Paso 2: Generar un token permanente</h3>
+
+    <p>El token temporal que Meta da por defecto caduca a las 24 horas y rompe tu escenario de Make en produccion. Crea un System User en Business Manager, asignale permisos sobre la app de WhatsApp y genera un token permanente con los scopes <code>whatsapp_business_messaging</code> y <code>whatsapp_business_management</code>. Guardalo en el almacen de credenciales de Make, nunca hardcodeado en modulos HTTP.</p>
+
+    <h3>Paso 3: Crear y aprobar al menos una plantilla</h3>
+
+    <p>Desde el 1 de julio de 2025, Meta cobra solo por mensajes de plantilla entregados fuera de la ventana de servicio al cliente, segun la documentacion oficial de Meta en developers.facebook.com. Dentro de la ventana de 24 horas posterior a una respuesta del usuario, los mensajes de sesion son gratis. Crea una plantilla de categoria "utility" o "marketing" en el administrador de WhatsApp Business, espera la aprobacion (normalmente 2-6 horas) y guarda el nombre exacto: Make lo pedira literal.</p>
+
+    <h3>Paso 4: Elegir modulo en Make</h3>
+
+    <p>Make no tiene un conector oficial de WhatsApp Business en su catalogo nativo. Hay tres opciones:</p>
+
+    <ul>
+      <li><strong>Modulo HTTP generico "Make a request":</strong> cero coste adicional, flexibilidad total, pero tienes que escribir manualmente el endpoint <code>https://graph.facebook.com/v21.0/{PHONE_NUMBER_ID}/messages</code>, los headers de autenticacion y el cuerpo JSON.</li>
+      <li><strong>Modulos de terceros (ChatArchitect, WATI, 360dialog):</strong> interfaz visual mas simple, pero anaden coste mensual del proveedor BSP y a veces latencia extra.</li>
+      <li><strong>Webhook de Make como receptor:</strong> para capturar mensajes entrantes, configura un webhook en Meta Cloud API que apunte al URL de un escenario Make con disparador Webhook.</li>
+    </ul>
+
+    <h3>Paso 5: Construir el escenario</h3>
+
+    <p>Un escenario tipico de bajo volumen conecta un disparador (nueva fila en Google Sheets, lead en HubSpot, pago en Stripe) con el modulo HTTP que llama a Cloud API. Cada ejecucion del escenario consume creditos: un escenario que dispara 1.000 veces al mes gasta aproximadamente 2.000-3.000 creditos (1 por el disparador, 1-2 por los modulos de envio y filtros).</p>
+
+    <p>Para flujos bidireccionales (el cliente responde al mensaje), necesitas dos escenarios independientes: uno que envie y otro que escuche el webhook entrante. Este punto es donde Make muestra sus limites: no mantiene estado conversacional entre ejecuciones sin ayuda de un data store o un CRM externo.</p>
+
+    <h2>Make vs agente de IA personalizado vs BSP: comparativa 2026</h2>
+
+    <p>No todas las integraciones de WhatsApp Business sirven para lo mismo. Esta tabla compara las tres opciones mas habituales en octubre de 2026 por coste, latencia, limites y a quien le encaja cada una. Las cifras de Make.com provienen de Latenode y CostBench (octubre 2026); las de Cloud API, de la documentacion oficial de Meta.</p>
+
+    <table>
+      <tr><th>Variable</th><th>Make.com + Cloud API</th><th>BSP (WATI / 360dialog)</th><th>Agente IA personalizado (Zenia Partners)</th></tr>
+      <tr><td>Coste mensual plataforma</td><td>0 USD (Free) a 29-38 USD (Teams)</td><td>29-49 USD + consumo</td><td>997 EUR setup + 297 EUR/mes (Starter)</td></tr>
+      <tr><td>Coste por mensaje de plantilla</td><td>Precio Meta directo</td><td>Precio Meta + markup del BSP (10-30%)</td><td>Precio Meta directo</td></tr>
+      <tr><td>Limite practico de volumen</td><td>Hasta 2.000 conversaciones/mes</td><td>Hasta 20.000 conversaciones/mes</td><td>Sin limite teorico</td></tr>
+      <tr><td>Latencia media envio</td><td>3-8 segundos</td><td>1-3 segundos</td><td>Menos de 1 segundo</td></tr>
+      <tr><td>Conversacion bidireccional con contexto</td><td>No nativa, requiere data store externo</td><td>Limitada a flujos predefinidos</td><td>Si, con memoria y CRM integrado</td></tr>
+      <tr><td>Lenguaje natural (NLU)</td><td>No incluido</td><td>Chatbot de reglas en algunos BSP</td><td>LLM afinado al negocio</td></tr>
+      <tr><td>Tiempo de puesta en marcha</td><td>1-3 dias</td><td>1-2 semanas</td><td>4-6 semanas</td></tr>
+      <tr><td>Ideal para</td><td>Flujos puntuales, notificaciones, pymes con menos de 500 mensajes/mes</td><td>Soporte masivo con operadores humanos</td><td>Negocios que quieren vender y agendar 24/7 sin equipo humano</td></tr>
+    </table>
+
+    <p>Importante: ningun camino "gana" en todas las variables. Si recibes 80 mensajes al mes y solo quieres notificar al equipo cuando entra un lead, Make en plan Free es la respuesta correcta. Si recibes 1.500 mensajes diarios y tu equipo de ventas los pierde en el movil, un agente de IA personalizado paga su setup en el primer mes.</p>
+
+    <h2>Cuanto cuesta en creditos un escenario tipico</h2>
+
+    <p>El error mas comun al disenar escenarios en Make con WhatsApp es olvidar que cada modulo cuesta un credito y los filtros tambien cuentan. Un escenario con disparador + filtro + 2 modulos de envio consume 4 creditos por ejecucion. Multiplicado por 500 ejecuciones mensuales, son 2.000 creditos: ya se agoto el plan Free (1.000 creditos).</p>
+
+    <h3>Escenario 1: notificar al equipo cuando entra un lead</h3>
+
+    <p>Un trigger de HubSpot (nuevo contacto) dispara un mensaje de plantilla al numero del comercial. Modulos: disparador + modulo HTTP de WhatsApp. 2 creditos por lead. Con 300 leads al mes son 600 creditos, cabe en Free. Coste total: 0 USD de Make + aproximadamente 15-25 EUR en mensajes de plantilla "utility" segun tarifas Meta para Espana en octubre de 2026.</p>
+
+    <h3>Escenario 2: confirmacion de reserva automatica</h3>
+
+    <p>Una reserva en Calendly dispara una plantilla de confirmacion al cliente y, 24 horas antes, un recordatorio. Modulos: disparador Calendly + Sleep + HTTP + Router + HTTP + Data Store. 6 creditos por reserva. Con 400 reservas al mes son 2.400 creditos: fuera del Free, entra en plan Core (9-11 USD/mes). Mensajes de plantilla aproximadamente 20-35 EUR/mes.</p>
+
+    <h3>Escenario 3: contestar preguntas frecuentes</h3>
+
+    <p>Aqui Make se rompe. Un escenario que recibe un mensaje entrante y "contesta segun contenido" necesita un modulo OpenAI o Anthropic por cada mensaje (1 credito), un router para clasificar, varios HTTP para responder y almacenamiento en data store. 8-12 creditos por conversacion. Con solo 500 conversaciones al mes son 4.000-6.000 creditos. Plan Pro (16-21 USD) o Teams (29-38 USD). Y pierdes memoria conversacional entre ejecuciones, asi que el "chatbot" olvida lo que el cliente dijo hace 10 segundos. Esto es exactamente donde un agente de IA personalizado te ahorra mucho dinero y mejora la experiencia.</p>
+
+    <h2>Errores comunes al integrar Make con WhatsApp Business API</h2>
+
+    <p>Despues de montar decenas de escenarios reales para clientes de Zenia Partners en Espana y Latinoamerica, estos son los fallos que mas se repiten.</p>
+
+    <h3>1. Usar el token temporal en produccion</h3>
+
+    <p>El token de desarrollo que Meta ofrece en la pestana "Getting Started" caduca a las 24 horas. Hay escenarios parados dos semanas antes de que alguien notara el problema. Siempre crea un System User con token permanente desde Business Manager.</p>
+
+    <h3>2. Enviar texto libre fuera de la ventana de 24 horas</h3>
+
+    <p>Si el ultimo mensaje del cliente fue hace mas de 24 horas, Meta rechaza cualquier texto libre: solo acepta plantillas aprobadas. Make devuelve un error 400 que confunde a usuarios no tecnicos. Soluciona esto con un paso previo que valide si hay sesion abierta en Cloud API.</p>
+
+    <h3>3. No gestionar los limites de ratio</h3>
+
+    <p>Meta aplica rate limits por numero de telefono: en el tier 1 son 1.000 destinatarios unicos cada 24 horas. Un escenario de Make que envia 1.200 recordatorios en un batch nocturno se topa con error 429 y pierde la mitad de los mensajes. Solucion: anade un modulo Sleep con delay escalonado o pide a Meta subir al tier 2.</p>
+
+    <h3>4. Confundir numero de telefono con PHONE_NUMBER_ID</h3>
+
+    <p>El endpoint de Cloud API usa el PHONE_NUMBER_ID (un identificador numerico de 15-17 digitos), no tu numero en formato E.164. El error se nota solo al pulsar "Run once" y recibir un 404. Guardalo como variable global en el almacen de credenciales de Make.</p>
+
+    <h3>5. Olvidar los costes de Meta en el calculo</h3>
+
+    <p>Los creditos de Make son solo una parte del coste. Cada mensaje de plantilla fuera de la ventana de servicio se cobra por tarifa Meta: en Espana, octubre de 2026, aproximadamente 0,05 EUR por utility y hasta 0,25 EUR por marketing segun categoria y pais, segun las guias de Authgear y BSG basadas en el pricelist de Meta. Para 3.000 mensajes mensuales son entre 150 y 750 EUR adicionales. Si no lo factorizas, el ROI del escenario se evapora.</p>
+
+    <h2>Cuando migrar de Make.com a un agente de IA personalizado</h2>
+
+    <p>Make es una gran plataforma de arranque. En Zenia Partners recomendamos empezar con ella si el equipo quiere probar automatizaciones puntuales sin inversion inicial. Pero hay cuatro senales que indican que ya se quedo pequena.</p>
+
+    <ul>
+      <li><strong>Senal 1:</strong> gastas mas de 50 USD al mes en creditos de Make solo en escenarios de WhatsApp. A ese nivel ya puedes pagar un agente de IA personalizado y recibir el servicio incluido.</li>
+      <li><strong>Senal 2:</strong> los clientes se quejan de respuestas "robot" o fuera de contexto. Make clasifica mensajes con filtros rigidos; un LLM afinado al negocio responde con contexto conversacional real.</li>
+      <li><strong>Senal 3:</strong> el equipo pierde tiempo editando escenarios cada vez que cambia un precio o un horario. En un agente personalizado la fuente de verdad es el CRM, no el escenario.</li>
+      <li><strong>Senal 4:</strong> necesitas atribucion de leads a canales. Make no construye un CRM: construye flujos. La atribucion requiere un modelo de datos propio.</li>
+    </ul>
+
+    <p>Zenia Partners, agencia con sede en Madrid que trabaja con pymes en Espana y Latinoamerica, construye agentes de IA personalizados en WhatsApp y web que responden en menos de un minuto, cualifican y agendan 24/7, con CRM que atribuye cada venta a su canal. Los planes son: Starter 997 EUR de setup y 297 EUR/mes, Growth 497 EUR/mes y Enterprise a medida. En octubre de 2026 esta cifra incluye infraestructura, mantenimiento y actualizaciones mensuales del modelo.</p>
+
+    <h2>Cuando Make.com sigue siendo la respuesta correcta</h2>
+
+    <p>No queremos vender humo. Hay casos en los que Make bate a cualquier agente personalizado:</p>
+
+    <ul>
+      <li><strong>Automatizaciones internas de bajo volumen:</strong> notificar al equipo cuando se cierra una venta, mandar un resumen diario de leads.</li>
+      <li><strong>Enlace de herramientas existentes:</strong> pasar datos entre Google Sheets, Airtable y Trello sin WhatsApp conversacional.</li>
+      <li><strong>Pymes con menos de 300 interacciones mensuales:</strong> el plan Core de 9-11 USD cubre todo el escenario, y el agente de IA personalizado tendria un ROI mas lento.</li>
+      <li><strong>Equipos tecnicos que quieren control total del flujo:</strong> con el modulo HTTP, cada paso es inspeccionable y versionable.</li>
+      <li><strong>Prototipado rapido:</strong> validar una hipotesis en una tarde antes de invertir en una solucion definitiva.</li>
+    </ul>
+
+    <h2>Preguntas frecuentes</h2>
+
+    <h3>¿Make.com tiene un conector oficial de WhatsApp Business?</h3>
+
+    <p>No en el sentido estricto. Make lista integraciones de terceros como ChatArchitect, WATI o YourGPT, pero no un modulo oficial mantenido por Meta. La forma mas robusta de integrar es usar el modulo HTTP generico contra la Cloud API de Meta directamente, controlando headers, token y plantillas desde el escenario.</p>
+
+    <h3>¿Cuanto cuesta integrar Make.com con WhatsApp Business en 2026?</h3>
+
+    <p>El plan Free de Make incluye 1.000 creditos y 2 escenarios activos. El plan Core cuesta aproximadamente 9-11 USD al mes con 10.000 creditos segun Latenode y CostBench. A esto suma el coste de mensajes de plantilla de Meta: en Espana, octubre de 2026, aproximadamente 0,05 EUR por mensaje "utility" y hasta 0,25 EUR por "marketing", segun categoria y pais.</p>
+
+    <h3>¿Puedo responder a mensajes entrantes con Make.com?</h3>
+
+    <p>Si, pero con limites. Debes configurar un webhook en Meta Cloud API que apunte a un escenario Make con disparador tipo Webhook. Make recibe el mensaje y ejecuta tu logica. El problema es que Make no mantiene memoria conversacional nativa entre ejecuciones: necesitas un data store o un CRM externo para que el flujo recuerde que ese usuario pregunto algo hace 10 minutos.</p>
+
+    <h3>¿Make o un agente de IA personalizado?</h3>
+
+    <p>Make es ideal para flujos puntuales de bajo volumen (menos de 500 mensajes al mes) donde la logica es lineal. Un agente de IA personalizado como el que construye Zenia Partners encaja mejor cuando necesitas conversaciones bidireccionales con contexto, atencion 24/7, mas de 2.000 mensajes mensuales o integracion profunda con CRM y atribucion por canal.</p>
+
+    <h3>¿Que diferencia hay entre Cloud API y On-Premises API de WhatsApp Business?</h3>
+
+    <p>Cloud API es el servicio alojado por Meta: gratis, mantenimiento cero y recomendado por Meta desde 2022. On-Premises API requiere servidor propio, se descontinuo en octubre de 2025. Para integrar con Make en 2026, siempre Cloud API.</p>
+
+    <h3>¿Es seguro guardar el token permanente en Make.com?</h3>
+
+    <p>Make almacena credenciales cifradas en su servicio Keychain. En el plan Teams y superior puedes activar single sign-on y auditoria de accesos. Nunca pegues el token en el cuerpo HTTP visible: usalo siempre desde el almacen de credenciales, y rotalo cada 90 dias como buena practica.</p>
+
+    <h2>El resumen que importa</h2>
+
+    <p>Integrar Make.com con WhatsApp Business API es la via rapida y barata para automatizar flujos puntuales en 2026. Funciona bien hasta cierto volumen. A partir de 2.000 conversaciones mensuales, o cuando el negocio necesita entender lenguaje natural y mantener contexto, Make se queda corto y el ROI deja de compensar. En ese punto, un agente de IA personalizado conectado directamente a Cloud API y a tu CRM es la solucion correcta.</p>
+
+    <p>Si no sabes en que punto esta tu negocio, Zenia Partners hace una auditoria gratuita de volumen y escenarios actuales para recomendar el camino con numeros concretos.</p>
+
+    <div class="blog-cta">
+      <h3>¿Make se te queda corto para WhatsApp?</h3>
+      <p>Zenia Partners construye agentes de IA personalizados que sustituyen Make en los flujos conversacionales criticos. Setup 997 EUR, operacion desde 297 EUR al mes. Agenda una llamada de 30 minutos y lo revisamos con tus numeros actuales.</p>
+<p data-zenia-oportunidad="1">Todo esto parte de lo mismo: <a href="/es/automatizacion-whatsapp-negocios.html">automatizar WhatsApp con IA</a> para que ningun mensaje se quede sin responder.</p>
+
+      <a href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20sobre%20integrar%20Make.com%20con%20WhatsApp%20Business%20y%20quiero%20ver%20alternativas" target="_blank" rel="noopener">Hablar por WhatsApp ahora</a> <a style="background:transparent;border:1px solid var(--border);color:var(--text-secondary);margin-left:10px" href="https://calendly.com/zeladauriartef/30min">Agendar llamada gratuita</a>
+    </div>
+<div class="blog-related" data-zenia-money-links="1">
+  <h3>Ponlo en marcha en tu negocio</h3>
+  <a href="/blog/integrar-n8n-con-whatsapp-business.html">Integrar n8n con WhatsApp Business<span>Comparativa practica frente a Make: cuando elegir cada uno segun volumen y stack.</span></a>
+  <a href="/blog/integrar-crm-con-whatsapp-business.html">Integrar un CRM con WhatsApp Business<span>Guia completa para conectar HubSpot, Zoho o un CRM a medida con WhatsApp API.</span></a>
+  <a href="/blog/agente-ia-personalizado-vs-chatbot-generico.html">Agente de IA personalizado vs chatbot generico<span>Que diferencia hay y cuando compensa un agente a medida.</span></a>
+  <a href="/es/automatizacion-whatsapp-negocios.html">Automatizacion WhatsApp con IA<span>Agente de IA por WhatsApp 24/7 + CRM. Implementacion completa, desde 297 EUR/mes.</span></a>
+</div>
+
+
+    <div class="blog-related">
+      <h3>Articulos relacionados</h3>
+      <a href="/blog/integracion-whatsapp-business-api-espana.html">Integracion WhatsApp Business API en Espana: guia tecnica 2026<span>Que BSP elegir, requisitos legales y como obtener numero verificado paso a paso.</span></a>
+      <a href="/blog/integrar-hubspot-con-whatsapp-business.html">Integrar HubSpot con WhatsApp Business<span>Automatizar lead nurturing desde HubSpot con mensajes de plantilla aprobados.</span></a>
+      <a href="/blog/cuanto-cuesta-un-agente-de-ia-para-negocios.html">Cuanto cuesta un agente de IA para negocios<span>Desglose de setup, operacion y ROI en diferentes verticales.</span></a>
+      </div>
+
+  </div>
+
+</article>
+
+<footer class="blog-footer">
+  <div class="container">
+    <p>&copy; 2026 ZENIA. Todos los derechos reservados. | <a href="/">Inicio</a> | <a href="/blog/">Blog</a></p>
+  </div>
+</footer>
+
+<div style="text-align:center; padding:16px 24px; background:#0A0F1C; color:#64748B; font-size:0.85rem; border-top:1px solid rgba(255,255,255,0.04);"><a href="/es/cobertura.html" style="color:#94A3B8; text-decoration:none;">Ver cobertura completa</a></div>
+<a href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20sobre%20integrar%20Make.com%20con%20WhatsApp%20Business%20y%20quiero%20ver%20alternativas" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp" data-directo style="position:fixed;bottom:24px;right:24px;z-index:9998;background:#25D366;color:white;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(37,211,102,0.4);transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 20px rgba(37,211,102,0.5)'" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 16px rgba(37,211,102,0.4)'">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<script>document.addEventListener("click",function(e){var t=e.target,a=t.closest?t.closest('a[href*="wa.me"]'):null;if(!a)return;try{navigator.sendBeacon("https://gaia-relojes.onrender.com/gwb/lead",JSON.stringify({site:"zenia",path:location.pathname+location.search,ref:document.referrer||""}))}catch(r){}},true);</script>
+<script src="/assets/qualify.js?v=4" defer></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "67e4803d7cd443a49b12c7d8a99365bf"}'></script>
+</body>
+</html>

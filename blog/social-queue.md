@@ -9405,3 +9405,18 @@ Full write-up (ES): https://zeniapartners.com/blog/integrar-make-con-whatsapp-bu
 #SystemsArchitecture #WhatsAppBusinessAPI #iPaaS #AIAgents
 
 ---
+## 2026-10-25 - AI Agent for CrossFit Boxes (EN post, EN caption)
+
+Infra notes from building the WhatsApp AI agent layer for a CrossFit affiliate (180 active members, PushPress Flow as the system of record, Stripe for deposits). The core design constraint is that the No Sweat Intro booking has to write back to PushPress atomically with the deposit charge, because a confirmed slot in the agent's thread without the matching PushPress appointment produces a show-up with no coach assigned. Two-phase: Stripe PaymentIntent in requires_capture, PushPress appointment.create, then capture; on PushPress 5xx the intent voids inside 2 seconds and the slot releases.
+
+Topology: PushPress webhooks (lead.created, appointment.booked, appointment.cancelled, membership.started) fan into an SQS queue keyed on (lead_id, event_type), orchestrator routes to Claude Sonnet via a VPC endpoint with tool-calling against the PushPress REST surface and the Meta Cloud API. Outbound reminders ride utility templates (nsi_reminder_48h, nsi_reminder_2h) because they sit outside the 24h customer-service window. Attendance-drop retention runs on a nightly cron that queries the class check-in table for members with zero check-ins in 10 rolling days and schedules a marketing-category outbound through an opted-in subscriber list.
+
+Numbers that held across a 60-day pilot: p95 inbound-to-first-reply at 1.1 s against a baseline of 3-6 hours on the owner's phone, slot-hold-to-confirmed-booking p95 at 44 s with the two-phase deposit flow, no-show rate on NSIs with the 48h + 2h stack moved from 29% to 9%, 90-day member retention from 55% to 73%.
+
+Non-obvious bit was the PushPress rate limit. Their API caps at 60 requests per minute per account token, which gets saturated during the morning check-in surge when the retention cron is also running. We moved cron writes behind a token-bucket limiter at 30 rpm so the real-time booking path always has headroom, and the drop in Monday morning 429s to zero was more impactful than any model-side latency work.
+
+Full write-up: https://zeniapartners.com/blog/ai-agent-for-crossfit-boxes.html
+
+#SystemsArchitecture #WhatsAppBusinessAPI #FitnessTech #AIAgents
+
+---

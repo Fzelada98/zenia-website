@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-10-24T18:00Z",
+  "lastRun": "2026-10-25T06:00Z",
   "market": "US/UK small business",
   "posts": [
     {
@@ -976,7 +976,8 @@
       "keyword": "ai agent for crossfit boxes",
       "tier": 2,
       "cluster": "fitness",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-10-25"
     },
     {
       "slug": "ai-agent-for-boxing-gyms",

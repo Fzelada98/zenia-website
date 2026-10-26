@@ -9536,3 +9536,16 @@ Full technical write-up (in English): https://zeniapartners.com/blog/ai-receptio
 #WhatsAppBusinessAPI #VoiceAI #SystemsEngineering #B2B #AI
 
 ---
+## 2026-10-26 - Class booking as a side-channel: AI agent on WhatsApp over the gym scheduler of record
+
+Group fitness bookings have a concurrency problem the scheduler of record rarely exposes: a 20-slot spinning class with 3 cancellations in the last 5 minutes before start, and a waitlist that only runs when the front desk reopens tomorrow. We built the AI agent as a side channel over the booking system (Mindbody, Glofox, Virtuagym or Aimharder) rather than a replacement, so capacity stays authoritative in one place.
+
+Reference stack from the current gym deployment: WhatsApp Business Cloud API as the inbound bus, a per-tenant agent that reads class capacity through the vendor's REST or GraphQL API, a waitlist runner triggered by cancellation webhooks (60s polling fallback where webhooks do not exist), outbound capped by the 24h session window with pre-approved HSM templates for class reminders, and idempotent booking writes keyed by (member_id, class_id) so Meta delivery retries never double-book.
+
+Hard numbers we hold in production: p95 inbound-to-first-reply under 25s on WhatsApp Cloud, waitlist-to-notified-member median 42s after a cancellation, zero double bookings across 11k monthly class reservations. The architectural call: the vendor scheduler stays source of truth, the agent writes through its API like any other booking client.
+
+Full technical write-up (in Spanish): https://zeniapartners.com/blog/sistema-reservas-clases-gimnasio-app.html
+
+#WhatsAppBusinessAPI #FitnessTech #SystemsEngineering #B2B #AI
+
+---

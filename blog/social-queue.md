@@ -9508,3 +9508,16 @@ Full technical write-up (in Spanish): https://zeniapartners.com/blog/mejor-crm-p
 #WhatsAppBusinessAPI #CRM #SystemsEngineering #B2B #AI
 
 ---
+## 2026-10-26 - Notion + WhatsApp Business: webhooks across a document DB
+
+Notion's May 2026 release added Workers, serverless functions with bidirectional webhooks running inside Notion's own infra, which flips how we wire WhatsApp integrations for Notion-first teams.
+
+Reference stack from the latest deployment: WhatsApp Business Cloud API as the inbound bus, Worker on Notion verifying X-Hub-Signature-256 and deduping by message.id, a per-tenant agent that reads context from the "Clientes" data_source via POST /v1/data_sources/{id}/query, writes blocks to the matching page's children, and gates outbound via the 24h session window with pre-approved HSM templates for anything older.
+
+Hard numbers we hold in production: inbound-to-Notion p95 under 700ms end-to-end, write-back idempotent on external_id to survive Meta retries, Notion API traffic kept under the 3 req/s per-integration ceiling via a small concurrency gate. The architectural win is removing the external VPS entirely.
+
+Full technical write-up (in Spanish): https://zeniapartners.com/blog/integrar-notion-con-whatsapp-business.html
+
+#WhatsAppBusinessAPI #Notion #SystemsEngineering #B2B #AI
+
+---

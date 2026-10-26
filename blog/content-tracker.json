@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-10-26T06:00:00+00:00",
+  "lastRun": "2026-10-26T14:14:40+00:00",
   "posts": [
+    {
+      "slug": "sistema-reservas-clases-gimnasio-app",
+      "keyword": "sistema reservas clases gimnasio app",
+      "tier": 2,
+      "cluster": "gimnasios",
+      "status": "published",
+      "date": "2026-10-26",
+      "source": "generated"
+    },
     {
       "slug": "integrar-notion-con-whatsapp-business",
       "keyword": "integrar notion con whatsapp business",

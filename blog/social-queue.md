@@ -9452,6 +9452,8 @@ https://zeniapartners.com/blog/la-vida-de-una-norma-donde-te-enteras-hoy.html
 ---
 ## 2026-10-30 - Why a daily regulatory report beats alerts (EN post, EN caption)
 
+<!-- PUBLISHED:make-webhook at 2026-10-26T09:30:05Z -->
+
 Alert fatigue is an architecture problem, not a UX problem. A keyword alert tells you a string matched a document. It does not tell you whether the document matters, who is behind it, or what to do before the deadline passes, so the realistic outcome is a muted channel and a norm that still surprises you on the day it is published.
 
 A daily report is a different object because it is built as one, not assembled from alerts after the fact. Every entry carries the source it was pulled from, so a claim can be checked in under a minute instead of taken on faith. An actor map, scored by power and interest, shows who is pushing a dossier and who can still be reached before a position hardens. And a recommendation, the step most monitoring tools skip entirely, because recommending something is a liability an alert never has to carry.

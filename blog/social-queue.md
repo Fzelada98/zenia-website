@@ -9549,3 +9549,16 @@ Full technical write-up (in Spanish): https://zeniapartners.com/blog/sistema-res
 #WhatsAppBusinessAPI #FitnessTech #SystemsEngineering #B2B #AI
 
 ---
+## 2026-10-26 - AI agent for test prep tutors: a stateful compliance tracker on top of TutorBird
+
+Test prep is not a subscription business, it is a countdown with a score guarantee attached. The engineering problem is less "answer at 10 PM" and more "track the N variables the refund clause depends on so a push notification goes out before week 8, not after week 12".
+
+Reference stack from a 90-day production deployment on a 2-location Northern Virginia SAT and ACT business (160 to 228 active students): WhatsApp Business Cloud API as the inbound bus, TutorBird as scheduler of record bridged through Zapier (native API thin), a per-student state machine keyed by target_test + test_date tracking attendance, practice-test completion, homework compliance (Khan Academy + UWorld opened/not), and guarantee-eligibility flags, Stripe for failed-card recovery over WhatsApp templates inside 15 minutes, Google Reviews API triggered 72h after the official score drop.
+
+Hard numbers from production: session no-show 21% to 7.4% once the three-touch cadence (T-24h, T-2h, T+10 min) was wired in, homework compliance 51% to 78% via a Tuesday-night nudge to the student (not the parent), score-guarantee refund rate 11% to 3.5% because the compliance window closes with a yellow flag in the CRM at week 5 instead of a lawsuit at week 14. The architectural win was keeping TutorBird as source of truth and layering the agent as another booking client over the Zapier bridge.
+
+Full technical write-up (in English): https://zeniapartners.com/blog/ai-agent-for-test-prep-tutors.html
+
+#WhatsAppBusinessAPI #EdTech #SystemsEngineering #B2B #AI
+
+---

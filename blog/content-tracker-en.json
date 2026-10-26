@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-10-26T09:13Z",
+  "lastRun": "2026-10-26T17:12Z",
   "market": "US/UK small business",
   "posts": [
     {
@@ -1022,7 +1022,8 @@
       "keyword": "ai agent for test prep tutors",
       "tier": 2,
       "cluster": "education",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-10-26"
     },
     {
       "slug": "ai-agent-for-college-consultants",

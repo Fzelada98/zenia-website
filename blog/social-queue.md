@@ -9562,3 +9562,16 @@ Full technical write-up (in English): https://zeniapartners.com/blog/ai-agent-fo
 #WhatsAppBusinessAPI #EdTech #SystemsEngineering #B2B #AI
 
 ---
+## 2026-10-26 - Zapier + WhatsApp Business: when the bridge is enough and when it is not
+
+Zapier is a trigger-action orchestrator, not a conversational runtime. For a lead flowing from Typeform to HubSpot to a WhatsApp template, the three-step Zap is the right answer. The moment the engineering requirement becomes "parse an inbound message, hold multi-turn state, consult inventory or availability in flight, and hand off to a human with full transcript", the Zap graph starts leaking.
+
+Three architectures ship today against WhatsApp Business Cloud API: the official Zapier app over OAuth to Meta, a BSP app (360dialog, WATI, Chatarchitect) over API key, or Webhooks by Zapier calling the REST endpoint directly. All three share the same three constraints: Meta's 24-hour service window, mandatory template approval for outbound outside it, and per-message pricing per category and country (Meta migrated from conversation-based to per-message on July 1, 2025).
+
+Pattern we deploy in production: Zapier owns the linear flows (CRM write, calendar sync, billing, Slack ops). A separate agent runtime owns the WhatsApp conversation layer with Redis for per-conversation memory, a Postgres transcript store, and signed webhooks the Zaps consume downstream. The agent keeps the 24-hour window and template parameter order; Zapier handles everything else. Keeps Zap task count bounded (template sends do not fan out per turn) and keeps the conversational logic testable.
+
+Full write-up with the three architectures and the stack we run: https://zeniapartners.com/blog/integrar-zapier-con-whatsapp-business.html
+
+#WhatsAppBusinessAPI #Zapier #SystemsEngineering #B2B #AI
+
+---

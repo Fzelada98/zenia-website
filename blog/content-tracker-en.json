@@ -1,7 +1,16 @@
 {
-  "lastRun": "2026-10-25T17:10Z",
+  "lastRun": "2026-10-26T09:13Z",
   "market": "US/UK small business",
   "posts": [
+    {
+      "slug": "ai-receptionist-for-driving-schools",
+      "keyword": "ai receptionist for driving schools",
+      "tier": 0,
+      "cluster": "education",
+      "status": "published",
+      "date": "2026-10-26",
+      "note": "striking-loop hit: 22 impressions, pos 29.7. Was printing on /blog/ai-agent-for-driving-schools.html; added cross-link there with 'AI receptionist for driving schools' anchor."
+    },
     {
       "slug": "ai-receptionist-for-martial-arts-schools",
       "keyword": "ai receptionist for martial arts schools",

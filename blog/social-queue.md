@@ -9521,3 +9521,16 @@ Full technical write-up (in Spanish): https://zeniapartners.com/blog/integrar-no
 #WhatsAppBusinessAPI #Notion #SystemsEngineering #B2B #AI
 
 ---
+## 2026-10-26 - AI receptionist for driving schools: voice + WhatsApp on top of DMS schedules
+
+Driving schools in the US have a hard latency problem: owners are in the passenger seat 3-9 PM six days a week, and 37% of inbound calls hit voicemail. We built the AI receptionist as a voice-first front door backed by WhatsApp Business Cloud API, with the booking surface living in whatever scheduling tool the school already runs (DrivoPilot, DriversEdPro, DriveScout, Instructor Hub, Google Calendar fallback).
+
+Reference stack from a 90-day production deployment on a 2-car Dallas school: Twilio SIP trunk for voice with streaming STT, LLM router with a per-state rules database (permit age, classroom hours, BTW hours, parent-supervised requirements), scheduler connector that reads instructor + car availability before quoting slots, Stripe deposit required to lock the first BTW, dual-channel reminders (24h two-way confirmation, 2h nudge) with waitlist auto-fill.
+
+Hard numbers from production: median pickup 1.4 rings, 98.5% answer rate across 341 monthly calls, median WhatsApp response 32 seconds, no-show rate 23.4% to 9.1% once the two-way reminder was wired into the deposit policy. The architectural win was keeping the scheduler of record untouched and layering the agent purely as a booking client.
+
+Full technical write-up (in English): https://zeniapartners.com/blog/ai-receptionist-for-driving-schools.html
+
+#WhatsAppBusinessAPI #VoiceAI #SystemsEngineering #B2B #AI
+
+---

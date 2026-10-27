@@ -1037,7 +1037,8 @@
       "keyword": "ai agent for event venues",
       "tier": 2,
       "cluster": "hospitality",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-10-27"
     },
     {
       "slug": "ai-agent-for-wedding-planners",

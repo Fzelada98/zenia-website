@@ -9589,3 +9589,17 @@ Technical breakdown and when the free away-message is enough vs. when the API + 
 #WhatsAppBusinessAPI #AIAgents #Infrastructure #SRE
 
 ---
+
+## 2026-10-27 - AI Agent for Event Venues
+
+Event venues sit on a sales funnel where the first-reply window owns the conversion curve. Published benchmarks across iVvy, VenueScanner and Tripleseat: 42-47 hour average first reply, 35-50% of bookings go to whoever answers first, 20-30% of inquiries lost outright to slow response.
+
+Architecture we deploy for US venues: WhatsApp Business Cloud API as the inbound channel, a Node orchestrator behind a Redis queue for durable per-conversation state, Postgres for transcript audit, model routing (small model for slot filling: date, guest count, event type; larger model only on open-ended questions). Calendar sync against Tripleseat / Perfect Venue / Event Temple / Honeybook, write-back to the CRM so sales reps work in the system of record, not the agent UI.
+
+Hard numbers from a 2-space Hudson Valley venue after 90 days in production: first-reply time from 31 hours to 54 seconds, inquiry-to-tour conversion 24% to 39%, tour no-show from 38% to 14% on a 48h/24h/2h WhatsApp reminder cadence. Signed contracts in the quarter doubled; at 50% attribution the agent paid for itself in 11 days.
+
+Full write-up with the stack, the inquiry workflow step by step, and the integration points: https://zeniapartners.com/blog/ai-agent-for-event-venues.html
+
+#WhatsAppBusinessAPI #AIAgents #SystemsEngineering #EventTech #B2B
+
+---

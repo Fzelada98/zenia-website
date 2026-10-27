@@ -9619,3 +9619,17 @@ Full breakdown of the four-step setup, the five production failure modes we fix 
 
 ---
 
+
+## 2026-10-27 - AI Agent for Wedding Planners
+
+Wedding planner inquiry traffic is bimodal: a daytime trickle and a 9 PM to midnight spike when couples sit down to compare vendors. The planner who replies in that late-night window converts up to 9x better than the one who answers Tuesday morning (WeddingPro, cross-vendor lead-response data). The Knot and WeddingPro also surface response time as a public ranking signal via their Quick Responder badge (80% of leads replied to within 24h).
+
+Architecture we deploy for US wedding planners: WhatsApp Business Cloud API as the inbound channel, Node orchestrator behind a Redis queue so webhook retries never double-book a discovery call or double-send a vendor shortlist, Postgres for transcript audit, model routing (small model for slot filling: wedding date, guest count, service tier; larger model only on open-ended edge cases). Vendor database as a structured record (style tags, price tier, availability calendar, past-event gallery) so the agent builds shortlists against live state. CRM write-back to HoneyBook / Dubsado / Aisle Planner / Planning Pod, so the planner works in the system of record, not the agent UI.
+
+Hard numbers from a 29-wedding-a-year Austin solo planner after 90 days: first-reply time 11h to 48s, inquiry-to-discovery-call 29% to 44%, discovery-call no-show 32% to 11% on a 48h/2h WhatsApp reminder cadence, hours per week on inbound and vendor coordination from 21 to 7.5. Signed contracts in the quarter 5 to 10.
+
+Full write-up with the stack, the 2-week deployment, and vendor-dispatch workflow: https://zeniapartners.com/blog/ai-agent-for-wedding-planners.html
+
+#WhatsAppBusinessAPI #AIAgents #SystemsEngineering #WeddingTech #B2B
+
+---

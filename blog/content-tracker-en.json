@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-10-26T17:12Z",
+  "lastRun": "2026-10-27T17:12Z",
   "market": "US/UK small business",
   "posts": [
     {
@@ -1045,7 +1045,8 @@
       "keyword": "ai agent for wedding planners",
       "tier": 2,
       "cluster": "services",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-10-27"
     },
     {
       "slug": "ai-agent-for-wedding-photographers",

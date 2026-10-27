@@ -9633,3 +9633,17 @@ Full write-up with the stack, the 2-week deployment, and vendor-dispatch workflo
 #WhatsAppBusinessAPI #AIAgents #SystemsEngineering #WeddingTech #B2B
 
 ---
+
+## 2026-10-27 - Agente de IA para Logopedas
+
+Shipping an AI agent build for a speech-therapy clinic in Madrid this quarter. The engineering constraint is not the WhatsApp flow; it is Article 9 GDPR. Health data cannot leak into prompt caches, template logs, or any third-party model training pipeline.
+
+Reference stack we deploy: WhatsApp Business Cloud API as the inbound channel, a Node orchestrator behind a Redis queue so Meta webhook retries never double-book a session or send duplicate reminders, Postgres (encrypted at rest, EU region) for appointment metadata only, clinical records stay in the practice EHR and never cross into the agent. Model routing (small model for slot filling: date, duration, modality presential/online; larger model only on open-ended administrative questions, never on clinical questions, those escalate to the practitioner with the full transcript).
+
+Hard numbers from similar deployments in private healthcare practices (sources: meetergo, Aurora Inbox benchmarks for 2026, triangulated): no-show rate 15-20% down to 8-10%, average response time hours to under one minute, administrative time 12-15 hours per week down to 2-3. The practitioner pattern is identical for nutritionists, podologists, speech therapists and physiotherapists; what changes is the escalation ruleset and the vocabulary of the small model.
+
+Full write-up with the GDPR checklist, Meta pricing in Oct 2026, and when NOT to deploy this (practices under 30 active patients, mostly): https://zeniapartners.com/blog/agente-ia-para-logopedas.html
+
+#WhatsAppBusinessAPI #HealthTech #GDPR #SystemsEngineering
+
+---

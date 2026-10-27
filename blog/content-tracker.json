@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-10-27T06:00:00+00:00",
+  "lastRun": "2026-10-27T14:30:00+00:00",
   "posts": [
+    {
+      "slug": "integrar-brevo-con-whatsapp-business",
+      "keyword": "integrar brevo con whatsapp business",
+      "tier": 2,
+      "cluster": "crm-integraciones",
+      "status": "published",
+      "date": "2026-10-27",
+      "source": "generated"
+    },
     {
       "slug": "respuesta-automatica-fuera-de-horario-whatsapp",
       "keyword": "respuesta automatica fuera de horario whatsapp",

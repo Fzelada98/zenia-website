@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HP0VQSEL68"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-HP0VQSEL68');
+</script>
+
+<title>Integrar Brevo con WhatsApp Business: Guía 2026 | ZENIA</title>
+<meta name="description" content="Cómo integrar Brevo con WhatsApp Business API en 2026: setup nativo, plantillas, CRM, precios por conversación y arquitectura real para pymes.">
+<link rel="canonical" href="https://zeniapartners.com/blog/integrar-brevo-con-whatsapp-business.html">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+
+<!-- Hreflang -->
+<link rel="alternate" hreflang="es" href="https://zeniapartners.com/blog/integrar-brevo-con-whatsapp-business.html">
+<link rel="alternate" hreflang="x-default" href="https://zeniapartners.com/blog/integrar-brevo-con-whatsapp-business.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Integrar Brevo con WhatsApp Business: Guía Técnica 2026">
+<meta property="og:description" content="Setup nativo, plantillas, CRM, precios por conversación y arquitectura real para integrar Brevo con WhatsApp Business API en pymes.">
+<meta property="og:url" content="https://zeniapartners.com/blog/integrar-brevo-con-whatsapp-business.html">
+<meta property="og:site_name" content="ZENIA">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="https://zeniapartners.com/assets/images/og-image.png">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Integrar Brevo con WhatsApp Business: Guía Técnica 2026">
+<meta name="twitter:description" content="Setup nativo, plantillas, CRM, precios por conversación y arquitectura real para pymes.">
+<meta name="twitter:image" content="https://zeniapartners.com/assets/images/og-image.png">
+
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="author" content="Fabrizzio Zelada">
+<meta name="theme-color" content="#0A0F1C">
+
+<!-- JSON-LD Article -->
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Integrar Brevo con WhatsApp Business: Guía Técnica 2026", "description": "Guía técnica para conectar Brevo con WhatsApp Business API: embedded signup, plantillas, segmentación en CRM, precios por conversación y arquitectura real para pymes en España y LATAM.", "author": {"@type": "Person", "name": "Fabrizzio Zelada", "jobTitle": "Founder", "worksFor": {"@type": "Organization", "name": "ZENIA"}}, "publisher": {"@type": "Organization", "name": "ZENIA", "url": "https://zeniapartners.com", "logo": {"@type": "ImageObject", "url": "https://zeniapartners.com/assets/images/og-image.png", "width": 600, "height": 60}}, "datePublished": "2026-10-27", "dateModified": "2026-10-27", "mainEntityOfPage": "https://zeniapartners.com/blog/integrar-brevo-con-whatsapp-business.html", "inLanguage": "es", "keywords": ["integrar brevo con whatsapp business", "brevo whatsapp api", "brevo integracion crm", "whatsapp business api brevo", "plantillas whatsapp brevo", "automatizacion brevo whatsapp"], "image": "https://zeniapartners.com/assets/images/og-image.png"}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #3B82F6;
+    --accent-violet: #6366F1;
+    --bg-dark: #0A0F1C;
+    --bg-card: rgba(17, 24, 39, 0.6);
+    --text-primary: #F1F5F9;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+    --border: rgba(148, 163, 184, 0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; background: var(--bg-dark); color: var(--text-primary); line-height: 1.8; }
+  .blog-nav { padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 60px; position: sticky; top: 0; background: rgba(10, 15, 28, 0.85); backdrop-filter: blur(12px); z-index: 100; }
+  .blog-nav .container { max-width: 1200px; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+  .blog-nav .nav-logo-link { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-primary); font-weight: 700; font-size: 1.1rem; }
+  .blog-nav .nav-main-links { display: flex; list-style: none; gap: 28px; margin: 0; padding: 0; }
+  .blog-nav .nav-main-links li { margin: 0; }
+  .blog-nav .nav-main-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
+  .blog-nav .nav-main-links a:hover { color: var(--text-primary); }
+  .blog-nav .nav-main-links a.active { color: var(--primary); }
+  .blog-nav .nav-cta-btn { background: var(--primary); color: #fff; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: filter 0.2s; white-space: nowrap; }
+  .blog-nav .nav-cta-btn:hover { filter: brightness(1.1); }
+  @media (max-width: 860px) {
+    .blog-nav .nav-main-links { display: none; }
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+  .blog-header { margin-bottom: 48px; }
+  .blog-meta { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px; }
+  .blog-header h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); line-height: 1.3; margin-bottom: 16px; }
+  .blog-header p.lead { font-size: 1.1rem; color: var(--text-secondary); line-height: 1.7; }
+  .blog-content h2 { font-size: 1.4rem; margin: 48px 0 16px; color: var(--text-primary); }
+  .blog-content h3 { font-size: 1.15rem; margin: 32px 0 12px; color: var(--text-primary); }
+  .blog-content p { color: var(--text-secondary); margin-bottom: 20px; }
+  .blog-content ul, .blog-content ol { color: var(--text-secondary); margin-bottom: 20px; padding-left: 24px; }
+  .blog-content li { margin-bottom: 8px; }
+  .blog-content strong { color: var(--text-primary); }
+  .blog-content a { color: var(--primary); text-decoration: underline; }
+  .blog-content a:hover { color: var(--accent-violet); }
+  .blog-content blockquote { border-left: 3px solid var(--primary); padding-left: 20px; margin: 24px 0; font-style: italic; color: var(--text-secondary); }
+  .blog-content table { width: 100%; border-collapse: collapse; margin: 24px 0; }
+  .blog-content th, .blog-content td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); font-size: 0.95rem; }
+  .blog-content th { color: var(--text-primary); font-weight: 600; background: var(--bg-card); }
+  .blog-cta { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 40px; text-align: center; margin: 60px 0; }
+  .blog-cta h3 { margin-bottom: 12px; }
+  .blog-cta p { color: var(--text-secondary); margin-bottom: 20px; }
+  .blog-cta a { display: inline-block; padding: 12px 28px; background: var(--primary); color: white; border-radius: 8px; text-decoration: none; font-weight: 600; }
+  .blog-cta a:hover { background: var(--accent-violet); }
+  .blog-related { margin: 60px 0 0; }
+  .blog-related h3 { margin-bottom: 20px; }
+  .blog-related a { display: block; padding: 16px 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 12px; text-decoration: none; color: var(--text-primary); font-weight: 600; transition: border-color 0.3s; }
+  .blog-related a:hover { border-color: var(--primary); }
+  .blog-related a span { display: block; font-size: 0.85rem; color: var(--text-muted); font-weight: 400; margin-top: 4px; }
+  .blog-footer { padding: 40px 0; border-top: 1px solid var(--border); margin-top: 60px; text-align: center; color: var(--text-muted); font-size: 0.85rem; }
+  .blog-footer a { color: var(--primary); text-decoration: none; }
+  .text-gradient { background: linear-gradient(135deg, var(--primary), var(--accent-violet)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+</style>
+</head>
+<body>
+
+<nav class="blog-nav">
+  <div class="container">
+    <a href="/es/" class="nav-logo-link">
+      <svg class="zenia-mark" viewBox="0 0 140 140" fill="none" width="32" height="32">
+        <defs>
+          <linearGradient id="zg-b" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#2563EB"/>
+            <stop offset="100%" stop-color="#3B82F6"/>
+          </linearGradient>
+          <linearGradient id="zg-v" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#6366F1"/>
+            <stop offset="100%" stop-color="#7C3AED"/>
+          </linearGradient>
+        </defs>
+        <rect width="140" height="140" rx="28" fill="#0F172A"/>
+        <path d="M 70 18 Q 18 18 18 38 L 18 57 Q 18 63 24 63 L 88 63 Z" fill="url(#zg-b)"/>
+        <path d="M 70 122 Q 122 122 122 102 L 122 83 Q 122 77 116 77 L 52 77 Z" fill="url(#zg-v)"/>
+      </svg>
+      <span>ZENIA</span>
+    </a>
+    <ul class="nav-main-links">
+      <li><a href="/es/#opportunities">Oportunidades IA</a></li>
+      <li><a href="/es/#services">Servicios</a></li>
+      <li><a href="/es/#process">Proceso</a></li>
+      <li><a href="/es/#impact">Impacto</a></li>
+      <li><a href="/blog/" class="active">Blog</a></li>
+    </ul>
+    <a href="/es/#cta" class="nav-cta-btn">Empezar</a>
+  </div>
+</nav>
+
+<article class="container">
+  <header class="blog-header">
+    <div class="blog-meta">27 de octubre, 2026 &middot; Fabrizzio Zelada &middot; 11 min de lectura</div>
+    <h1><span class="text-gradient">Integrar Brevo con WhatsApp Business:</span> Guía Técnica 2026 (BSP nativo, Plantillas y CRM)</h1>
+    <p class="lead"><strong>Respuesta corta:</strong> Brevo es Business Solution Provider (BSP) oficial de WhatsApp, así que integrar Brevo con WhatsApp Business se hace con el embedded signup del propio Brevo, sin API intermedia. Conectas la WABA (WhatsApp Business Account) en 15 minutos, gestionas plantillas sin código y envías marketing, transaccionales y conversaciones two-way desde el mismo CRM. El coste de integración es cero y después pagas por conversación según el país del destinatario.</p>
+  </header>
+
+  <div class="blog-content">
+
+    <h2>¿Qué significa integrar Brevo con WhatsApp Business?</h2>
+
+    <p>Brevo (antes Sendinblue) es una plataforma de marketing y CRM muy usada por pymes en España, Francia y LATAM por su precio competitivo y porque el equipo de soporte habla español. Desde 2022 opera como <strong>Business Solution Provider (BSP) oficial de Meta</strong>, lo que cambia por completo la lógica de la integración con WhatsApp Business.</p>
+
+    <p>En octubre de 2026, integrar Brevo con WhatsApp Business ya no significa colocar Zapier, Make o un conector externo en medio. Significa activar el canal WhatsApp dentro de la propia cuenta Brevo, verificar el número en Meta Business Manager a través del <em>embedded signup</em> de Brevo y empezar a enviar plantillas aprobadas desde el mismo panel donde ya gestionas el email y el SMS.</p>
+
+    <p>Esto importa por dos razones muy prácticas:</p>
+
+    <ul>
+      <li><strong>No hay doble facturación por conversación.</strong> Al ser Brevo el proveedor de BSP, se evita el markup típico del 15 al 40% que cobran agregadores como Twilio o 360dialog cuando se usan como capa intermedia.</li>
+      <li><strong>Los contactos y las listas viven en el mismo CRM.</strong> El opt-in de email, la lista segmentada y el perfil del contacto son los mismos objetos que usas para WhatsApp. No se duplican bases.</li>
+    </ul>
+
+    <p>Si estás evaluando esta integración junto a otras alternativas, hemos escrito guías paralelas para <a href="/blog/integrar-mailchimp-con-whatsapp-business.html">Mailchimp</a>, <a href="/blog/integrar-hubspot-con-whatsapp-business.html">HubSpot</a> y <a href="/blog/integrar-pipedrive-con-whatsapp-business.html">Pipedrive</a>. Si prefieres un agente de IA personalizado conectado a tu CRM existente (Brevo incluido), lo construimos nosotros desde <a href="/es/">Zenia Partners</a>.</p>
+
+    <h2>¿Cómo funciona la integración nativa de Brevo con la WhatsApp Business API?</h2>
+
+    <p>El flujo técnico tiene cuatro pasos y los documenta <a href="https://www.brevo.com/whatsapp-api/" rel="nofollow" target="_blank">la propia página oficial de WhatsApp API de Brevo</a>:</p>
+
+    <ol>
+      <li><strong>Alta en Meta Business Manager.</strong> Necesitas una cuenta verificada en Meta Business, un número de teléfono (fijo o móvil) que no esté asociado a WhatsApp personal y una tarjeta para el método de pago. Si ya tienes un número en WhatsApp Business App personal, hay que migrarlo (proceso de 24-72 horas).</li>
+      <li><strong>Embedded signup desde Brevo.</strong> Dentro de Brevo abres el canal WhatsApp y lanzas el flujo embebido de Meta: autenticas la cuenta Business, seleccionas el número, verificas por SMS o llamada y aceptas los permisos. En la práctica son 10 a 20 minutos si la cuenta de Meta Business está limpia.</li>
+      <li><strong>Creación de plantillas.</strong> Las plantillas (templates) son los mensajes que puedes enviar fuera de la ventana de 24 horas de conversación. Brevo las crea desde su editor visual y las manda a Meta para aprobación. El tiempo medio de aprobación en 2026 es de 1 a 4 horas para mensajes marketing y bajo 15 minutos para transaccionales.</li>
+      <li><strong>Conexión al CRM y a los flujos.</strong> Una vez el canal está activo, el envío de WhatsApp aparece como un paso más dentro del constructor de automatizaciones de Brevo, junto a email y SMS. Puedes disparar un mensaje al crearse un contacto, al abrir un email, al cambiar un atributo o desde la API transaccional.</li>
+    </ol>
+
+    <p>Esta arquitectura nativa evita tres puntos de fricción típicos: no hace falta mantener un script que mueva contactos entre dos sistemas, no se pierde la trazabilidad del consentimiento, y el soporte técnico de un único proveedor cubre todo el stack.</p>
+
+    <h2>¿Cuánto cuesta integrar Brevo con WhatsApp Business en 2026?</h2>
+
+    <p>El coste tiene tres componentes y conviene separarlos para no confundir el gasto fijo con el variable.</p>
+
+    <p><strong>1. Licencia de Brevo.</strong> La función de WhatsApp está disponible desde el plan Starter de Brevo. Según la página oficial de Brevo en octubre de 2026, la integración de WhatsApp Business en sí es gratuita como componente de la plataforma.</p>
+
+    <p><strong>2. Conversaciones con Meta.</strong> Es el coste variable. Meta cambió el modelo en julio de 2025 y ahora factura por mensaje de plantilla enviado, no por ventanas de 24 horas como antes. El precio depende del país del destinatario y de la categoría del mensaje (marketing, utility, authentication).</p>
+
+    <p><strong>3. Setup e integración con el CRM operativo.</strong> Es el coste real para una pyme. Un setup serio incluye: migración del número, mapeo de atributos entre Brevo y tu CRM operativo, diseño de plantillas que pasen aprobación de Meta a la primera, flujos de opt-in y opt-out conformes al RGPD. Hecho internamente son 20 a 40 horas de trabajo; hecho con una agencia como Zenia Partners, oscila entre 997 y 2.500 euros según el alcance.</p>
+
+    <table>
+      <tr><th>Componente</th><th>Coste octubre 2026</th><th>Notas</th></tr>
+      <tr><td>Brevo Starter</td><td>desde 9 &euro;/mes</td><td>Incluye el canal WhatsApp activado</td></tr>
+      <tr><td>Brevo Business</td><td>desde 18 &euro;/mes</td><td>Añade automatizaciones multicanal y A/B testing</td></tr>
+      <tr><td>Brevo Enterprise</td><td>a medida</td><td>Soporte dedicado, SLA, SSO, 25 números por WABA</td></tr>
+      <tr><td>Marketing Spain (por mensaje)</td><td>~0,0507 &euro;</td><td>Precio Meta octubre 2026, se factura dentro de Brevo</td></tr>
+      <tr><td>Utility Spain (por mensaje)</td><td>~0,0180 &euro;</td><td>Recordatorios, confirmaciones, actualizaciones</td></tr>
+      <tr><td>User-initiated (service)</td><td>0 &euro; / mensaje</td><td>Gratis desde noviembre de 2024 según Meta</td></tr>
+      <tr><td>Setup con agencia (Zenia)</td><td>desde 997 &euro;</td><td>Único, incluye diseño de plantillas, flujos y QA</td></tr>
+      <tr><td>Setup interno</td><td>0 &euro; directo</td><td>20-40 horas de equipo técnico</td></tr>
+    </table>
+
+    <p>Los números de la fila "marketing Spain" y "utility Spain" vienen del tarifario público de Meta para WhatsApp Business Platform y pueden cambiar sin aviso; conviene verificarlos antes de dimensionar un presupuesto anual.</p>
+
+    <h2>¿Qué se puede hacer y qué no desde Brevo + WhatsApp?</h2>
+
+    <p>Esta parte es la que más decisiones de arquitectura condiciona. Brevo cubre bien el caso de uso <em>marketing + transaccional</em>, pero el caso de uso <em>conversación continua con un agente que entiende contexto</em> no está en su core.</p>
+
+    <h3>Lo que Brevo hace bien</h3>
+
+    <ul>
+      <li><strong>Campañas segmentadas.</strong> Enviar una plantilla a un segmento del CRM (por ejemplo, "clientes que compraron en los últimos 30 días y abrieron el último email") y medir aperturas, respuestas y bajas.</li>
+      <li><strong>Transaccionales por API.</strong> Confirmar un pedido, mandar la factura o avisar de un envío con un POST a <code>api.brevo.com</code> y una plantilla preaprobada.</li>
+      <li><strong>Automatizaciones multicanal.</strong> Combinar email, SMS y WhatsApp dentro del mismo flujo, con reglas de "si no abre el email en 48 horas, prueba por WhatsApp".</li>
+      <li><strong>Opt-in integrado.</strong> Formularios web que capturan consentimiento válido para WhatsApp, con doble opt-in opcional.</li>
+      <li><strong>Reporting unificado.</strong> KPIs de email, SMS y WhatsApp en el mismo dashboard, con atribución por contacto.</li>
+    </ul>
+
+    <h3>Lo que Brevo NO hace nativo</h3>
+
+    <ul>
+      <li><strong>Agente conversacional con IA.</strong> La <em>Conversations app</em> de Brevo soporta inbox humano para responder uno a uno, pero no es un agente de IA personalizado que cualifique leads, agende citas y escalone cuando corresponda.</li>
+      <li><strong>CRM operativo profundo.</strong> Brevo CRM es sencillo: pipeline, deals, tareas. Si tu negocio necesita gestión de ciclos complejos (B2B con 10 etapas, por ejemplo), encaja mejor como capa de marketing encima de Pipedrive, HubSpot o un CRM a medida.</li>
+      <li><strong>Integración two-way nativa con tu backend.</strong> Para que un mensaje de WhatsApp dispare una acción en tu sistema (crear un ticket, actualizar un pedido en Shopify) necesitas webhooks y, normalmente, un middleware como n8n, Make o código propio.</li>
+      <li><strong>Flujos conversacionales ramificados.</strong> El constructor de automatizaciones es lineal con reglas; no es un diseñador de árboles de diálogo tipo Flow Builder de Meta.</li>
+    </ul>
+
+    <h2>Brevo vs. otras rutas: cuándo tiene sentido y cuándo no</h2>
+
+    <p>Nadie integra WhatsApp solo porque le guste la herramienta. Lo hace porque hay un problema concreto que resolver. Esta tabla compara Brevo nativo contra las alternativas que vemos a diario en implementaciones de pymes españolas.</p>
+
+    <table>
+      <tr><th>Enfoque</th><th>Mejor para</th><th>Setup típico</th><th>Coste mensual estimado</th></tr>
+      <tr><td>Brevo nativo (BSP)</td><td>Pymes con marketing + email + algo de transaccional</td><td>1-2 semanas</td><td>desde 9 &euro; + conversaciones</td></tr>
+      <tr><td>HubSpot + Twilio</td><td>B2B con pipeline complejo y equipo de ventas grande</td><td>4-8 semanas</td><td>desde 90 &euro; + conversaciones + markup Twilio</td></tr>
+      <tr><td>Agente IA + CRM a medida (Zenia Partners)</td><td>Negocios que necesitan cualificar, agendar y cerrar por WhatsApp 24/7</td><td>3-5 semanas</td><td>desde 297 &euro;/mes + 997 &euro; setup</td></tr>
+      <tr><td>WhatsApp Business App gratis</td><td>Autónomos con menos de 100 mensajes/día</td><td>1 día</td><td>0 &euro;</td></tr>
+      <tr><td>Bot genérico de bajo coste</td><td>Casi nunca: cuesta más mantenerlo que su valor</td><td>2 semanas</td><td>desde 30 &euro;</td></tr>
+    </table>
+
+    <p>Tres criterios honestos para elegir:</p>
+
+    <ol>
+      <li><strong>Si tu volumen principal es email y WhatsApp es un canal complementario,</strong> Brevo nativo es la elección obvia. No hay plataforma más barata que haga marketing multicanal con WhatsApp integrado en el CRM.</li>
+      <li><strong>Si tu problema es que no respondes a tiempo y pierdes leads en WhatsApp,</strong> Brevo por sí solo no lo resuelve. Necesitas un <a href="/blog/agente-ia-para-call-center.html">agente de IA personalizado</a> encima del canal. La integración Brevo-agente puede convivir: Brevo mueve las campañas salientes, el agente atiende las entrantes.</li>
+      <li><strong>Si eres B2B con ciclos largos,</strong> probablemente Brevo CRM se te queda corto antes de un año. Mejor usar Brevo solo como motor de WhatsApp sobre tu CRM operativo (HubSpot, Pipedrive, Salesforce), sincronizando contactos por API.</li>
+    </ol>
+
+    <h2>Arquitectura real: cómo encaja Brevo con el resto del stack</h2>
+
+    <p>En una pyme típica, el stack después de integrar Brevo con WhatsApp Business suele quedar así:</p>
+
+    <ul>
+      <li><strong>Captura:</strong> web, formularios Brevo, anuncios click-to-WhatsApp en Meta Ads.</li>
+      <li><strong>Mensajería saliente:</strong> Brevo (email + SMS + WhatsApp) con plantillas aprobadas, atribución y segmentación.</li>
+      <li><strong>Mensajería entrante:</strong> Brevo Conversations para equipos pequeños, o un agente de IA personalizado conectado al mismo número cuando el volumen supera 50 conversaciones diarias.</li>
+      <li><strong>CRM operativo:</strong> Brevo si el pipeline es simple, o un CRM externo (HubSpot, Pipedrive, Zoho) sincronizado por API o Zapier/Make.</li>
+      <li><strong>Backoffice:</strong> Shopify, WooCommerce, Odoo o similar emiten eventos (compra, carrito abandonado, envío) que llegan a Brevo vía webhooks y disparan plantillas de WhatsApp.</li>
+      <li><strong>Observabilidad:</strong> dashboard de Brevo + exportación a BigQuery o Looker Studio para análisis cruzado con otros canales.</li>
+    </ul>
+
+    <p>Zenia Partners, agencia con sede en Madrid que trabaja con pymes en España y Latinoamérica, suele implementar esta arquitectura en tres capas: Brevo como capa de marketing y transaccional, un agente de IA personalizado en WhatsApp y web que responde en menos de un minuto, cualifica y agenda 24/7, y un CRM con atribución por canal donde el equipo humano retoma solo cuando hay un lead cualificado. Nuestros planes van desde el Starter de 997 euros de setup más 297 euros al mes hasta el Growth de 497 euros al mes y el Enterprise a medida.</p>
+
+    <h2>Errores comunes al integrar Brevo con WhatsApp Business</h2>
+
+    <p>En implementaciones reales con clientes de Zenia Partners, estos son los fallos que más veces hemos tenido que corregir:</p>
+
+    <h3>1. Lanzar sin plantillas en todas las categorías</h3>
+
+    <p>Meta diferencia marketing, utility y authentication. Si solo tienes aprobadas plantillas marketing, cualquier mensaje de confirmación transaccional se factura al precio marketing (hasta 3x más caro) o directamente se bloquea. Antes del lanzamiento conviene tener aprobadas al menos: welcome, confirmación de pedido, recordatorio, feedback.</p>
+
+    <h3>2. No implementar opt-out</h3>
+
+    <p>La política oficial de WhatsApp exige que cualquier mensaje marketing incluya una vía fácil de salida (típicamente, "Responde BAJA para dejar de recibir estos mensajes"). Brevo tiene un atributo <code>WHATSAPP_OPTIN</code> que hay que actualizar automáticamente cuando el contacto escribe BAJA, STOP o UNSUBSCRIBE. Olvidarlo es la primera causa de baja de calidad de la cuenta de WhatsApp.</p>
+
+    <h3>3. Confundir número verde WABA con número personal</h3>
+
+    <p>El número que vinculas a la WABA no puede estar activo en WhatsApp personal ni en WhatsApp Business App a la vez. Si lo migras desde una app existente, perdés el historial local y hay un periodo de 7 días en que el número no puede moverse a otro BSP. Planifica la migración en una ventana de bajo tráfico.</p>
+
+    <h3>4. Enviar campañas antes de calentar el número</h3>
+
+    <p>Un número nuevo arranca en tier bajo (1.000 mensajes por 24h a destinatarios únicos). Enviar 10.000 el primer día dispara los filtros y limita la cuenta. La recomendación: dos semanas enviando solo transaccionales a usuarios que ya han escrito al negocio, para subir a tier 10K y luego 100K.</p>
+
+    <h3>5. No sincronizar bajas y bloqueos</h3>
+
+    <p>Si un usuario responde "STOP" en WhatsApp pero no actualizas su atributo en Brevo, la siguiente campaña se lo envía otra vez. Meta cuenta ese mensaje como spam y la calidad baja. El flujo debería ser: webhook de respuesta entrante → match por teléfono → actualizar atributo <code>WHATSAPP_OPTIN=false</code>.</p>
+
+    <h2>Checklist técnico para una integración limpia</h2>
+
+    <p>Si vas a implementar la integración Brevo-WhatsApp Business tú mismo, estos son los puntos de control que validamos en Zenia Partners antes de considerar el proyecto en producción:</p>
+
+    <ul>
+      <li>Dominio verificado en Meta Business Manager y métodos de pago cargados.</li>
+      <li>Número migrado a WABA y asociado al perfil correcto (nombre, categoría, descripción, foto).</li>
+      <li>Al menos 4 plantillas aprobadas en categorías marketing y utility, en los idiomas de tu base.</li>
+      <li>Atributo <code>WHATSAPP_OPTIN</code> presente en cada contacto, con flujo automático de alta y baja.</li>
+      <li>Webhook de respuestas entrantes conectado al sistema que gestiona las conversaciones.</li>
+      <li>Política de ventana de 24 horas documentada: qué mensajes son service (gratis) y cuáles disparan plantilla de pago.</li>
+      <li>Panel con los tres KPIs mínimos: coste por conversación, tasa de respuesta, tasa de opt-out.</li>
+      <li>Prueba de carga: enviar 100 mensajes y verificar tiempos de entrega, errores y métricas en Brevo.</li>
+      <li>Documento interno con el "runbook" de cuándo cambiar de plantilla, cómo pedir aprobación a Meta y cómo reaccionar si cae la calidad del número.</li>
+    </ul>
+
+    <p>El tiempo medio desde la decisión "vamos con Brevo + WhatsApp" hasta la primera campaña en producción, con todo este checklist cerrado, es de 2 a 3 semanas en una pyme con equipo técnico y de 4 a 6 semanas si se externaliza completo. En Zenia Partners cerramos integraciones Brevo-WhatsApp en 3 semanas de media.</p>
+
+    <h2>Preguntas frecuentes</h2>
+
+    <h3>¿Brevo es Business Solution Provider oficial de WhatsApp?</h3>
+
+    <p>Sí. Brevo opera como BSP oficial de Meta, por lo que la integración se hace con su embedded signup sin necesidad de proveedores intermedios como Twilio o 360dialog. Esto evita capas de markup sobre el precio por conversación.</p>
+
+    <h3>¿Puedo usar un agente de IA con la integración Brevo-WhatsApp?</h3>
+
+    <p>Brevo cubre marketing, transaccional y conversaciones humanas vía su Conversations app. Si necesitas un agente de IA personalizado que entienda contexto, cualifique leads y agende sin intervención humana, hay que montarlo encima: Brevo gestiona campañas salientes y el agente responde las entrantes sobre el mismo número.</p>
+
+    <h3>¿Cuánto tarda Meta en aprobar una plantilla en 2026?</h3>
+
+    <p>Entre 15 minutos y 4 horas en octubre de 2026 según nuestras implementaciones. Las plantillas marketing tardan más que las utility porque pasan filtros de contenido más estrictos. Si una plantilla se rechaza, Meta explica el motivo y suele ser por lenguaje promocional en categoría utility o por falta del opt-out visible.</p>
+
+    <h3>¿Puedo mantener mi CRM actual (HubSpot, Pipedrive) y usar Brevo solo para WhatsApp?</h3>
+
+    <p>Sí, y es la arquitectura que más vemos en B2B. Brevo actúa de capa de mensajería y los contactos se sincronizan con el CRM operativo por API nativa, Zapier o Make. El riesgo a vigilar es la doble entrada de datos: hay que definir cuál es la fuente de verdad del teléfono y del consentimiento.</p>
+
+    <h3>¿Cumple la integración con el RGPD?</h3>
+
+    <p>Brevo tiene servidores en la Unión Europea y ofrece DPA firmado. El cumplimiento depende más de cómo se recoja el opt-in (consentimiento explícito y verificable) y de cómo se gestionen las bajas. Para pymes españolas, con un formulario web con casilla de verificación específica para WhatsApp y un flujo de BAJA que actualice el atributo en Brevo, se cumple.</p>
+
+    <h3>¿Puedo integrar Brevo con WhatsApp usando Zapier o Make?</h3>
+
+    <p>Puedes, pero no es necesario para el envío de WhatsApp porque Brevo es nativo. Zapier y Make se usan para conectar Brevo con sistemas externos: por ejemplo, pasar un contacto nuevo de un CRM operativo a Brevo para que entre en un flujo de WhatsApp, o escribir una respuesta entrante en Airtable.</p>
+
+    <div class="blog-cta">
+      <h3>¿Quieres integrar Brevo con WhatsApp Business en tu pyme?</h3>
+      <p>En Zenia Partners cerramos integraciones Brevo-WhatsApp en 3 semanas, incluyendo migración del número, plantillas aprobadas, flujos de opt-in RGPD y, si lo necesitas, un agente de IA personalizado encima del canal. Agencia con sede en Madrid, planes desde 997 € de setup y 297 €/mes.</p>
+
+      <a href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20sobre%20integrar%20Brevo%20con%20WhatsApp%20Business%20y%20quiero%20ver%20c%C3%B3mo%20aplicarlo%20en%20mi%20negocio" target="_blank" rel="noopener">Hablar por WhatsApp ahora</a> <a style="background:transparent;border:1px solid var(--border);color:var(--text-secondary);margin-left:10px" href="https://calendly.com/zeladauriartef/30min">Agendar llamada gratuita</a>
+    </div>
+
+    <div class="blog-related">
+      <h3>Artículos relacionados</h3>
+      <a href="/blog/integrar-mailchimp-con-whatsapp-business.html">Integrar Mailchimp con WhatsApp Business<span>Comparativa de alternativas de email marketing con canal WhatsApp integrado.</span></a>
+      <a href="/blog/integrar-hubspot-con-whatsapp-business.html">Integrar HubSpot con WhatsApp Business<span>Guía técnica para equipos B2B que ya usan HubSpot como CRM operativo.</span></a>
+      <a href="/blog/precios-whatsapp-business-api-2026.html">Precios WhatsApp Business API 2026<span>Tarifas por país, categoría y volumen actualizadas a octubre de 2026.</span></a>
+    </div>
+
+  </div>
+
+<div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 24px; margin: 40px 0;" data-zenia-internal-links="integrations">
+  <h3 style="color: #F1F5F9; margin-bottom: 12px; font-size: 1.05rem;">Otras integraciones WhatsApp Business para pymes</h3>
+  <p style="color: #94A3B8; margin-bottom: 16px; font-size: 0.95rem;">Comparamos las plataformas más usadas por pymes españolas y LATAM. Elige la que ya usas:</p>
+  <div>
+      <a href="/blog/integrar-mailchimp-con-whatsapp-business.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Mailchimp →</a>
+      <a href="/blog/integrar-hubspot-con-whatsapp-business.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">HubSpot →</a>
+      <a href="/blog/integrar-zoho-crm-con-whatsapp-business.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Zoho CRM →</a>
+      <a href="/blog/integrar-pipedrive-con-whatsapp-business.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Pipedrive →</a>
+      <a href="/blog/integrar-holded-con-whatsapp-business.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Holded →</a>
+  </div>
+</div>
+
+</article>
+
+<footer class="blog-footer">
+  <div class="container">
+    <p>&copy; 2026 ZENIA. Todos los derechos reservados. | <a href="/">Inicio</a> | <a href="/blog/">Blog</a></p>
+  </div>
+</footer>
+
+<div style="text-align:center; padding:16px 24px; background:#0A0F1C; color:#64748B; font-size:0.85rem; border-top:1px solid rgba(255,255,255,0.04);"><a href="/es/cobertura.html" style="color:#94A3B8; text-decoration:none;">Ver cobertura completa</a></div>
+<a href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20sobre%20integrar%20Brevo%20con%20WhatsApp%20Business%20y%20quiero%20ver%20c%C3%B3mo%20aplicarlo%20en%20mi%20negocio" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp" data-directo style="position:fixed;bottom:24px;right:24px;z-index:9998;background:#25D366;color:white;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(37,211,102,0.4);transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 20px rgba(37,211,102,0.5)'" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 16px rgba(37,211,102,0.4)'">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<script>document.addEventListener("click",function(e){var t=e.target,a=t.closest?t.closest('a[href*="wa.me"]'):null;if(!a)return;try{navigator.sendBeacon("https://gaia-relojes.onrender.com/gwb/lead",JSON.stringify({site:"zenia",path:location.pathname+location.search,ref:document.referrer||""}))}catch(r){}},true);</script>
+<script src="/assets/qualify.js?v=4" defer></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "67e4803d7cd443a49b12c7d8a99365bf"}'></script>
+</body>
+</html>

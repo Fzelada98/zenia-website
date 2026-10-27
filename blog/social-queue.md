@@ -9605,3 +9605,17 @@ Full write-up with the stack, the inquiry workflow step by step, and the integra
 #WhatsAppBusinessAPI #AIAgents #SystemsEngineering #EventTech #B2B
 
 ---
+## 2026-10-27 - Integrar Brevo con WhatsApp Business
+
+Brevo became a Meta BSP in 2022, which quietly changed the integration math for anyone with WhatsApp downstream of email + SMS. Running an aggregator (Twilio, 360dialog) in front of Meta adds a 15-40% markup on per-message pricing and a second webhook layer to maintain; cutting them out saves both.
+
+Reference stack we deploy on Brevo-native: embedded signup for WABA onboarding, contact attributes synced one-way from the CRM of record (Pipedrive/HubSpot) via API, utility and marketing templates split into separate categories so Meta billing matches intent, opt-in state as a Brevo attribute updated from inbound webhook on BAJA/STOP so campaigns respect the quality score. Meta template approval runs under 4 hours in production for utility, 1-4 for marketing. Per-message pricing on Meta migrated from conversation-based July 2025, so cost modeling now runs per template send.
+
+Where Brevo stops: Conversations app covers human inbox but not a stateful AI agent. For that we layer a Node agent behind a Redis queue on the same WABA number, Brevo owns outbound campaigns, agent owns inbound conversation.
+
+Full breakdown of the four-step setup, the five production failure modes we fix most, and the cost table in October 2026: https://zeniapartners.com/blog/integrar-brevo-con-whatsapp-business.html
+
+#WhatsAppBusinessAPI #Brevo #SystemsEngineering #B2B
+
+---
+

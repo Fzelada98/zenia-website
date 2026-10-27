@@ -9575,3 +9575,17 @@ Full write-up with the three architectures and the stack we run: https://zeniapa
 #WhatsAppBusinessAPI #Zapier #SystemsEngineering #B2B #AI
 
 ---
+
+## 2026-10-27 - Respuesta automatica fuera de horario WhatsApp
+
+Half of inbound WhatsApp traffic from our SMB customers lands between 20:00 and 08:00 local time. Meta's free away-message is the naive answer. The correct answer is a latency budget plus durable per-conversation state.
+
+Our stack: WhatsApp Business Cloud API, a Node 20 orchestrator behind a Redis stream, model routing (small model for intent + slot filling, larger model only for non-cataloged questions), hydrated conversation state from the CRM, idempotent writes so webhook retries never double-book a slot.
+
+60-day numbers on live traffic: 99.95% webhook ingestion success, p95 message-to-first-token at 820 ms, zero duplicate bookings across 11,400 conversations.
+
+Technical breakdown and when the free away-message is enough vs. when the API + agent pays for itself: https://zeniapartners.com/blog/respuesta-automatica-fuera-de-horario-whatsapp.html
+
+#WhatsAppBusinessAPI #AIAgents #Infrastructure #SRE
+
+---

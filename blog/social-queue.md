@@ -9437,6 +9437,8 @@ https://zeniapartners.com/cicero/?src=li
 ---
 ## 2026-10-28 - The life of a norm: five phases, and the one where most companies find out (EN post, EN caption)
 
+<!-- PUBLISHED:make-webhook at 2026-10-27T09:30:01Z -->
+
 A norm that affects a business does not start the day it gets published. It moves through five fairly predictable stages, and the window to actually change the outcome closes earlier than most monitoring setups assume.
 
 Stage 1: idea or preliminary draft, with an early public consultation open for roughly two weeks before any article is written. Stage 2: formal hearing and public information period, once there is a draft to react to. Stage 3: parliamentary process, committee work, amendments, floor vote. Stage 4: approval and publication in the official gazette. Stage 5: entry into force and secondary regulation.

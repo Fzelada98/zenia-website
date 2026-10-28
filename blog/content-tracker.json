@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-10-28T14:14:04.336034+00:00",
+  "lastRun": "2026-10-28T22:12:18.797045+00:00",
   "posts": [
+    {
+      "slug": "segmentacion-rfm-clientes-ecommerce",
+      "keyword": "segmentacion rfm clientes ecommerce",
+      "tier": 2,
+      "cluster": "ecommerce",
+      "status": "published",
+      "date": "2026-10-28",
+      "source": "generated"
+    },
     {
       "slug": "integrar-activecampaign-con-whatsapp-business",
       "keyword": "integrar activecampaign con whatsapp business",

@@ -9709,3 +9709,16 @@ Full architecture, pickup-slot math and the 2-week rollout: https://zeniapartner
 #WhatsAppBusinessAPI #SystemsEngineering #AI #FoodTech #B2B
 
 ---
+## 2026-10-28 - Segmentacion RFM clientes ecommerce
+
+RFM is still the cheapest high-signal segmentation layer a DTC CRM can carry. Pipeline we deploy: nightly batch over Postgres orders table (12-month window, duplicates and refunds excluded), QUARTILE/PERCENTILE assigned per customer_id for R, F and M, mapped to 10 canonical segments (Shopify/Kanal taxonomy) and written back to the rfm_segment column via idempotent UPSERT so downstream flows stay drift-free.
+
+The segment propagates to a WhatsApp Business API worker and an ESP via webhook under 400ms p95. Guardrails that matter at scale: B2B orders filtered pre-quintile to avoid wholesale accounts collapsing the M axis, consent (opt-in and legal basis) checked at send time not at segmentation time, and a hard cap of 2 outbound WA messages per customer per month to protect Meta Quality Rating.
+
+Observed on a 15k-active-customer catalog: recomputing weekly instead of daily cuts job cost ~85% with no measurable AUC loss on At Risk prediction, and routing WhatsApp only to the top 5 segments (Champions, Loyal, New, At Risk, Can't Lose Them) lifts attributable revenue per message 3-4x vs undifferentiated email blast.
+
+Full breakdown with the quintile math, the 10-segment table and the WhatsApp vs email routing rules: https://zeniapartners.com/blog/segmentacion-rfm-clientes-ecommerce.html
+
+#DataEngineering #WhatsAppBusinessAPI #CRM #Ecommerce #SystemsEngineering
+
+---

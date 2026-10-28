@@ -9647,3 +9647,19 @@ Full write-up with the GDPR checklist, Meta pricing in Oct 2026, and when NOT to
 #WhatsAppBusinessAPI #HealthTech #GDPR #SystemsEngineering
 
 ---
+
+## 2026-10-28 - Guía WhatsApp Business para Restaurantes
+
+Standing up a WhatsApp Business API agent for a restaurant looks like a copy of the vendor demo, until the second week. The surface is a Meta Cloud API webhook feeding a Node/Python orchestrator; the moving parts are elsewhere.
+
+Reference stack we deploy: WhatsApp Business Cloud API as ingress, a stateless orchestrator behind a Redis queue so Meta webhook retries never double-book a table, Postgres for conversation state and audit, a small model for slot filling (date, pax, service, zone) and a larger model only on edge cases. The reservation layer talks to CoverManager / TheFork / Resy via REST, and the write-back is wrapped in an idempotency key because none of those DMS APIs guarantee it on their end. CRM lives downstream so sala and marketing read the same base.
+
+Hard numbers that matter in production: p95 first-reply under 60s, Meta Quality Rating Score held at High so template throughput stays uncapped, and template approval under 4h for utility, 1-4h for marketing. Meta's Oct 2026 pricing change moves to per-message billing with utility templates free inside the 24h window, so cost modeling re-runs per template category.
+
+Non-trivial parts: template governance across varias plantillas (reservations, recordatorios, encuestas), idempotent writes against DMS APIs that don't guarantee them, and keeping tool-call reasoning auditable per message for GDPR.
+
+Full architecture breakdown, cost math and the five-week rollout we use: https://zeniapartners.com/blog/guia-whatsapp-business-restaurantes.html
+
+#WhatsAppBusinessAPI #SystemsEngineering #AI #B2B
+
+---

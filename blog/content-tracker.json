@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-10-27T22:20:20+00:00",
+  "lastRun": "2026-10-28T06:13:12.333915+00:00",
   "posts": [
     {
       "slug": "agente-ia-para-logopedas",
@@ -4557,6 +4557,14 @@
       "status": "published",
       "date": "2026-10-25",
       "source": "striking"
+    },
+    {
+      "slug": "guia-whatsapp-business-restaurantes",
+      "keyword": "whatsapp business para restaurantes guia",
+      "tier": 1,
+      "cluster": "restaurantes-whatsapp",
+      "status": "published",
+      "date": "2026-10-28"
     }
   ]
 }

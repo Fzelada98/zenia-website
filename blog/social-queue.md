@@ -9694,3 +9694,18 @@ Full breakdown of the four architectures, cost math and when the native add-on a
 #WhatsAppBusinessAPI #MarketingAutomation #SystemsEngineering #B2B
 
 ---
+## 2026-10-28 - AI Agent for Food Trucks
+
+Food truck ops is a 90-minute throughput problem. Lunch demand slams a kitchen with 60 orders between 12:15 and 12:35 that physically cannot cook that volume in that time, so observed walk-away rates run around 22%. The architectural fix is not more labor, it is reshaping the arrival curve into pre-paid slots with per-slot capacity.
+
+Reference stack we deploy for single and small-fleet operators: WhatsApp Business Cloud API as ingress, stateless orchestrator behind Redis so Meta webhook retries never double-book a slot, Postgres for menu versioning (by day and by truck location) and order audit. Payment capture via Stripe or Square at order time with a 90-second slot lock, so an abandoned cart releases capacity automatically. Model routing: small model for slot filling (item, modifiers, pickup window), larger model only on allergen and modification edges. ZIP-segmented broadcast on the CRM read-side keeps Meta Quality Rating in High so template throughput never caps during the lunch rush.
+
+Non-trivial parts: 86'ing items from a running shift propagates to the agent inside 2s; TCPA + WhatsApp opt-in consent captured and timestamped at first contact; kitchen printer handoff keyed on pickup time, not arrival order; segmented broadcast cuts opt-outs ~70% vs undifferentiated blast.
+
+Numbers from a 90-day two-truck Austin deployment: avg lunch transactions 112 to 154 per shift (+37.5%), pre-order avg ticket $14.10 to $17.80 (menu-driven upsell), observed walk-away 22% to 8%, catering lead response 14h to under 2 min, catering bookings 2.1 to 4.7 per month.
+
+Full architecture, pickup-slot math and the 2-week rollout: https://zeniapartners.com/blog/ai-agent-for-food-trucks.html
+
+#WhatsAppBusinessAPI #SystemsEngineering #AI #FoodTech #B2B
+
+---

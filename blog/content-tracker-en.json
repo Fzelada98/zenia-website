@@ -1075,7 +1075,8 @@
       "keyword": "ai agent for food trucks",
       "tier": 2,
       "cluster": "food",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-10-28"
     },
     {
       "slug": "ai-agent-for-ice-cream-shops",

@@ -9679,3 +9679,18 @@ Full write-up with the stack, 4-field qualifier, CRM integration surface, and th
 #WhatsAppBusinessAPI #AIAgents #SystemsEngineering #WeddingTech #B2B
 
 ---
+## 2026-10-28 - Integrar ActiveCampaign con WhatsApp Business
+
+Marketing teams want "ActiveCampaign + WhatsApp" as one checkbox. In production it is four distinct architectures with different failure modes, and the choice is not a tooling preference, it is a throughput and latency decision.
+
+Reference deployment pattern we use when WhatsApp is the primary conversational channel: ActiveCampaign webhooks (contact subscribed, tag added, custom field updated) hit a stateless middleware behind a Redis queue, HMAC validation on ingress, Meta Cloud API egress with per-template idempotency keys because ActiveCampaign retries webhooks and Meta deduplicates by waba_message_id. Inbound traffic from WhatsApp goes the other direction, with the LLM routing (small model for intent + slot filling, larger model only on edges) deciding whether to write back a tag, enqueue a reply inside the 24h service window, or escalate to a human. CRM sits downstream so attribution is per-channel, not per-tool.
+
+Hard numbers that matter in October 2026: Meta moved to per-message billing from July 2025 (utility templates free inside the 24h window, marketing 0.025-0.24 USD depending on country) and SleekFlow flagged a further rate change on 1 Oct 2026, so cost modeling re-runs per template category and per market. ActiveCampaign's native WhatsApp add-on starts at 112 USD/mo on Plus and tops at 284 USD/mo on Enterprise, but it does not cover routed inbound or custom tool-use, which is why most B2B deployments keep it email-only and run the WhatsApp side on a BSP (360dialog, Twilio, Gupshup) plus their own orchestrator.
+
+Non-trivial parts: template governance across lifecycle stages, idempotency on both sides of the webhook pair, consent documentation that survives a GDPR audit, and keeping the Meta Quality Rating high enough that marketing template throughput is never throttled.
+
+Full breakdown of the four architectures, cost math and when the native add-on actually wins: https://zeniapartners.com/blog/integrar-activecampaign-con-whatsapp-business.html
+
+#WhatsAppBusinessAPI #MarketingAutomation #SystemsEngineering #B2B
+
+---

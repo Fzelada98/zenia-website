@@ -9650,6 +9650,8 @@ Full write-up with the GDPR checklist, Meta pricing in Oct 2026, and when NOT to
 
 ## 2026-10-28 - Guía WhatsApp Business para Restaurantes
 
+<!-- PUBLISHED:make-webhook at 2026-10-28T09:30:21Z -->
+
 Standing up a WhatsApp Business API agent for a restaurant looks like a copy of the vendor demo, until the second week. The surface is a Meta Cloud API webhook feeding a Node/Python orchestrator; the moving parts are elsewhere.
 
 Reference stack we deploy: WhatsApp Business Cloud API as ingress, a stateless orchestrator behind a Redis queue so Meta webhook retries never double-book a table, Postgres for conversation state and audit, a small model for slot filling (date, pax, service, zone) and a larger model only on edge cases. The reservation layer talks to CoverManager / TheFork / Resy via REST, and the write-back is wrapped in an idempotency key because none of those DMS APIs guarantee it on their end. CRM lives downstream so sala and marketing read the same base.

@@ -9663,3 +9663,17 @@ Full architecture breakdown, cost math and the five-week rollout we use: https:/
 #WhatsAppBusinessAPI #SystemsEngineering #AI #B2B
 
 ---
+
+## 2026-10-28 - AI Agent for Wedding Photographers
+
+Wedding photography inquiry traffic is bimodal. A daytime trickle, then a 20:00-00:00 spike when couples sit down and work a vendor shortlist in one session. The studio that answers inside that window wins the consult. The one that answers Tuesday 09:00 competes against three vendors who already quoted. WeddingPro cross-vendor data shows 3-5 photographers contacted in parallel per booking, which makes p95 first-reply the single lever a studio can move without changing the work itself.
+
+Reference stack we deploy for US wedding photographers: WhatsApp Business Cloud API as ingress, stateless Node orchestrator behind a Redis queue so Meta webhook retries never double-send the pricing guide or write a duplicate lead into Studio Ninja. Postgres for transcript audit. Model routing: small model handles slot filling (wedding date, venue, hours, budget bracket) at sub-2s; larger model only on open-ended edges (film coverage, Hindu ceremony, destination). Calendar reads live from Google Calendar / Calendly; CRM write-back wraps the lead object in an idempotency key because none of Studio Ninja / Dubsado / HoneyBook / Pixieset Studio Manager APIs guarantee it on their end.
+
+Hard numbers from a 2-person Nashville studio after 90 days: median first-reply 9h 14m to 38s, inquiry-to-consult-booked 22% to 39%, consult-to-contract 44% to 51% (consults are better qualified so close rate rises too), signed weddings per month 3.7 to 8.2 at $4,200 avg. Consult no-shows 29% to 11% on a 48h/2h WhatsApp reminder cadence.
+
+Full write-up with the stack, 4-field qualifier, CRM integration surface, and the 2-week deployment: https://zeniapartners.com/blog/ai-agent-for-wedding-photographers.html
+
+#WhatsAppBusinessAPI #AIAgents #SystemsEngineering #WeddingTech #B2B
+
+---

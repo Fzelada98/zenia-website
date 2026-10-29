@@ -9761,3 +9761,16 @@ Full breakdown with Ads Manager setup, CPL benchmarks and the 24-hour window mat
 #WhatsAppBusinessAPI #MetaAds #SystemsEngineering #AI #B2B
 
 ---
+## 2026-10-29 - AI to Support Live CSRs at Pest Control Companies (EN)
+
+Reference agent-assist stack we ship for US pest control operators (10-40 CSR seats on PestPac, FieldRoutes or GorillaDesk) when the goal is to augment humans, not replace them: SIPREC side-car off RingCentral/Dialpad/Aircall for both-channel audio, Deepgram streaming ASR with Spanish-English code-switching enabled, RAG index of 150-250 vetted answers on pgvector (plan rules, service-area coverage, pet/food-service safety), and typed CRM write-back tools (create_note, set_disposition, queue_followup) so the LLM never free-writes into production records.
+
+Non-trivial parts: audio capture under 500ms end-of-utterance latency so retrieval shows before the CSR starts speaking, acceptance-reject logging on every suggestion so the knowledge base is tunable from week two, and a hard rule that the copilot drafts outbound WhatsApp/SMS but never auto-sends during the live call. Index deliberately capped at ~2k entries to keep retrieval p95 under 900ms and prevent hallucinated pricing.
+
+Observed across 15 CSR seats (3 US operators, 90 days): average handle time -13%, after-call work -71% (38s to 11s), first call resolution +19%, quarterly plan attach on new leads +44%, 90-day CSR retention +24% (71% to 88%).
+
+Full architecture, telephony+ASR+RAG+CRM breakdown and the 2-week rollout for a 10-seat team: https://zeniapartners.com/blog/ai-support-live-csrs-pest-control-companies.html
+
+#AgentAssist #SystemsEngineering #CallCenterAI #RAG #B2B
+
+---

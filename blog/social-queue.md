@@ -9774,3 +9774,16 @@ Full architecture, telephony+ASR+RAG+CRM breakdown and the 2-week rollout for a 
 #AgentAssist #SystemsEngineering #CallCenterAI #RAG #B2B
 
 ---
+## 2026-10-29 - CRM for Spanish Insurance Brokers (EN)
+
+Spanish insurance brokers (3,445 inscribed with DGSFP as of Nov 2025, per the Informe Estadístico de Mediación) carry 1.5k to 4k active policies in shops of 4 users. The engineering problem is not a bot. It is keeping the policy object coherent across 10+ carrier portals, EIAC exchange files, a legacy core like EBROKER or Avant2, and WhatsApp Business API, while the regulator can request any IDD evidence on demand.
+
+Reference stack we layer on top of the broker's core (we do not rip and replace): BSP-direct WhatsApp Business Cloud API with Meta-approved templates per ramo (autos, hogar, decesos, vida), LLM agent fenced to the policy schema so tomador / asegurado / beneficiario are modelled as separate entities instead of a free-form "contact", EIAC webhook workers for carrier portals with retry and idempotency keyed on recibo id, and timestamped IDD/consent writes back to the core so the audit expediente builds itself.
+
+Non-trivial parts: typed tool calls (get_policy, open_siniestro, request_doc, schedule_renewal) so prompt drift does not corrupt policy records, HSM template rotation per ramo to keep Meta Quality Rating High during renewal spikes, and a hard rule that the agent drafts siniestro openings out-of-hours but only writes to the core after a mediator confirms on Monday morning. Target SLA on renewal flows: <60s median WhatsApp reply, 30 and 45-day pre-expiry triggers, every outbound message traced to a user id and a policy id.
+
+Full breakdown with vendor comparison (EBROKER, Avant2, Insly, horizontal CRMs), 2026 cost model and the DGSFP checklist (ES): https://zeniapartners.com/blog/crm-para-corredurias-de-seguros.html
+
+#InsurTech #WhatsAppBusinessAPI #SystemsEngineering #AI #B2B
+
+---

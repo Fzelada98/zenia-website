@@ -107,6 +107,7 @@
   .blog-footer a { color: var(--primary); text-decoration: none; }
   .text-gradient { background: linear-gradient(135deg, var(--primary), var(--accent-violet)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 </style>
+<script type="application/ld+json" data-zenia-faq="1">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "es", "mainEntity": [{"@type": "Question", "name": "¿Cuantos clientes como minimo necesito para que RFM tenga sentido?", "acceptedAnswer": {"@type": "Answer", "text": "Con menos de 300 clientes activos, los quintiles generan segmentos de 60 personas cada uno y la varianza aleatoria mata la senal. Por debajo de 500, usa cuartiles (puntuacion 1-4) y agrupa en 5 segmentos en vez de 10. Por encima de 1.000, RFM clasico funciona bien."}}, {"@type": "Question", "name": "¿Que ventana temporal uso: 6, 12 o 24 meses?", "acceptedAnswer": {"@type": "Answer", "text": "12 meses es el estandar del sector. Si tu ciclo de compra medio es largo (por ejemplo joyeria o colchones), extiende a 24. Si vendes consumibles de alta rotacion (cosmetica, suplementos, cafe), 6 meses captura mejor el estado real del cliente."}}, {"@type": "Question", "name": "¿Cada cuanto hay que recalcular RFM?", "acceptedAnswer": {"@type": "Answer", "text": "Semanal es lo habitual. Diario anade poca senal y mucho ruido, salvo que la base sea muy grande (>100k). Mensual se queda corto para accionar At Risk a tiempo, que es el segmento mas sensible al retraso."}}, {"@type": "Question", "name": "¿RFM funciona para suscripciones y SaaS?", "acceptedAnswer": {"@type": "Answer", "text": "Parcialmente. La F pierde sentido porque la \"frecuencia\" es un cobro automatico, no una decision de compra. Para suscripciones conviene reemplazarla por engagement (sesiones de uso, features usadas), que es exactamente lo que propone el modelo eRFM."}}, {"@type": "Question", "name": "¿Puedo hacer RFM solo con Google Sheets?", "acceptedAnswer": {"@type": "Answer", "text": "Si, para una base de hasta ~5.000 clientes. Las formulas QUARTILE o PERCENTILE son suficientes. El cuello de botella no es el calculo, es sincronizar el segmento resultante al CRM y al canal de envio sin trabajo manual. Para eso ya conviene una integracion o una plataforma que lo haga nativo."}}, {"@type": "Question", "name": "¿Que diferencia hay entre segmentacion RFM y lead scoring con IA?", "acceptedAnswer": {"@type": "Answer", "text": "RFM mira el pasado transaccional. El lead scoring automatico con IA mira senales en tiempo real (navegacion, aperturas, intencion) para predecir probabilidad de conversion. Son complementarios: RFM te dice que hacer con clientes que ya compraron, lead scoring te dice que hacer con prospectos que todavia no compraron."}}]}</script>
 </head>
 <body>
 
@@ -395,6 +396,13 @@
 
       <a href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20sobre%20segmentacion%20RFM%20clientes%20ecommerce%20y%20quiero%20aplicarlo%20en%20mi%20tienda" target="_blank" rel="noopener">Hablar por WhatsApp ahora</a> <a style="background:transparent;border:1px solid var(--border);color:var(--text-secondary);margin-left:10px" href="https://calendly.com/zeladauriartef/30min">Agendar llamada gratuita</a>
     </div>
+<div class="blog-related" data-zenia-money-links="1">
+  <h3>Ponlo en marcha en tu negocio</h3>
+  <a href="/es/crm-ecommerce.html">CRM con IA para Ecommerce<span>Agente de IA por WhatsApp 24/7 + CRM. Implementación completa, desde €297/mes.</span></a>
+  <a href="/es/crm-ecommerce-madrid.html">CRM con IA para Ecommerce en Madrid<span>Implementación local para ecommerce en Madrid. Demo gratuita por WhatsApp.</span></a>
+  <a href="/es/crm-ecommerce-barcelona.html">CRM con IA para Ecommerce en Barcelona<span>Implementación local para ecommerce en Barcelona. Demo gratuita por WhatsApp.</span></a>
+</div>
+
 
     <div class="blog-related">
       <h3>Articulos relacionados</h3>

@@ -9735,3 +9735,16 @@ Full architecture, provider comparison table and the 4-6 week rollout: https://z
 #WhatsAppBusinessAPI #SystemsEngineering #AI #B2B
 
 ---
+## 2026-10-29 - Click to Chat Ads (EN)
+
+Reference stack we deploy under a Meta Click-to-WhatsApp (CTWA) campaign so the ad spend actually clears cost: WhatsApp Business Cloud API as ingress, stateless Node.js orchestrator behind Redis so Meta webhook retries never double-reply inside the 24-hour service window, Postgres for conversation audit and template billing reconciliation, and model routing with small-model intent + slot filling and a larger model only on pricing, policy and escalation turns.
+
+Non-trivial parts: Conversions API offline event mapping back from the CRM (so Meta optimizes on booked jobs, not raw chats), a single utility template fired at t+20h to reopen the 24-hour window with ~84% WA open rate, and typed tool calls (search_contact, book_slot, send_quote) so prompt drift does not break scheduler integrations. Meta Quality Rating kept at High via per-segment template rotation so marketing throughput never caps during a rush.
+
+Measured across 46 US and UK accounts: median first-reply latency 1.4s on CTWA inbound, chat-to-booking lifts from 11% baseline (business-hours human-only) to 29-34% with the agent handling the first 15 minutes, utility+marketing template cost 1.3-4.0% of total ad spend.
+
+Full breakdown with Ads Manager setup, CPL benchmarks and the 24-hour window math: https://zeniapartners.com/blog/click-to-chat-ads-guide.html
+
+#WhatsAppBusinessAPI #MetaAds #SystemsEngineering #AI #B2B
+
+---

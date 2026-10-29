@@ -1,7 +1,16 @@
 {
-  "lastRun": "2026-10-28T18:00Z",
+  "lastRun": "2026-10-29T09:12Z",
   "market": "US/UK small business",
   "posts": [
+    {
+      "cluster": "paid-ads",
+      "date": "2026-10-29",
+      "keyword": "click to chat ads",
+      "note": "striking-loop hit: 36 impressions, pos 8.1 (en-market). Spanish page /blog/click-to-chat-ads-guia-meta-2026.html was printing for an English query. Dedicated English version published; cross-link added from the Spanish page with 'click to chat ads English version' anchor.",
+      "slug": "click-to-chat-ads-guide",
+      "status": "published",
+      "tier": 0
+    },
     {
       "slug": "ai-receptionist-for-driving-schools",
       "keyword": "ai receptionist for driving schools",

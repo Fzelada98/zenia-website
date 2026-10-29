@@ -9724,6 +9724,8 @@ Full breakdown with the quintile math, the 10-segment table and the WhatsApp vs 
 ---
 ## 2026-10-29 - Agente de IA para Empresas en Málaga
 
+<!-- PUBLISHED:make-webhook at 2026-10-29T09:30:04Z -->
+
 Deployment stack we ship for mid-market SMBs in Málaga when "AI agent" has to be more than a scripted FAQ bot: WhatsApp Business Cloud API as ingress, stateless orchestrator behind Redis so Meta webhook retries do not create duplicate CRM contacts, Postgres for conversation audit, and model routing (small model for intent + slot filling, Claude Sonnet 4.5 or GPT-4.1 only on the ~15% of turns that touch policy, pricing or escalation). Tools exposed to the LLM are typed and idempotent: search_contact, create_lead, book_meeting, send_quote.
 
 CRM integration layer is where most pilots quietly fail. HubSpot, Zoho, Pipedrive and Odoo expose stable REST surfaces, but a lot of local DMS and ERP stacks still require a thin adapter and a webhook signer. We keep that adapter stateless and version the agent's tool-use schema so prompt drift does not break production integrations.

@@ -9815,3 +9815,16 @@ Full breakdown with CRM comparison, Austin studio 90-day numbers and 14-day roll
 #PhotographyBusiness #WhatsAppBusinessAPI #SystemsEngineering #AI #B2B
 
 ---
+## 2026-10-30 - Alternativa a HubSpot para Pymes
+
+HubSpot Pro plus a third-party WhatsApp connector routes conversations through two inboxes and reconciles them with a sync job. The lag shows up as duplicate contacts and lost channel attribution.
+
+We ship a different topology: WhatsApp Cloud API webhooks write directly to the CRM event log, the agent reads from the same log, p95 end-to-end response stays under 60s at 150 msg/day/tenant.
+
+Three design choices that keep it stable: single pipeline event (no reconciliation lag), per-tenant prompt bundles versioned alongside the business rules and hot-reloaded, and WhatsApp template approvals treated as deploy artifacts with staging numbers.
+
+3-year TCO vs HubSpot Pro and the migration checklist: https://zeniapartners.com/blog/alternativa-a-hubspot-para-pymes.html
+
+#CRM #WhatsAppBusinessAPI #B2B #SystemsEngineering
+
+---

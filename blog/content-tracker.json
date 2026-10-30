@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-10-29T22:15:00+00:00",
+  "lastRun": "2026-10-30T06:13:21+00:00",
   "posts": [
+    {
+      "slug": "crm-para-alquiler-vacacional",
+      "keyword": "crm para alquiler vacacional",
+      "tier": 2,
+      "cluster": "alquiler-vacacional",
+      "status": "published",
+      "date": "2026-10-30",
+      "source": "matrix-generated"
+    },
     {
       "slug": "crm-para-corredurias-de-seguros",
       "keyword": "crm para corredurias de seguros",

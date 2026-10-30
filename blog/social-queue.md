@@ -9787,3 +9787,16 @@ Full breakdown with vendor comparison (EBROKER, Avant2, Insly, horizontal CRMs),
 #InsurTech #WhatsAppBusinessAPI #SystemsEngineering #AI #B2B
 
 ---
+## 2026-10-30 - CRM for Vacation Rental Managers (EN)
+
+Vacation rental managers in Spain run on a stack most product sites underplay: a PMS (Smoobu, Lodgify, Guesty, Hostaway, Net2Rent) plus a channel manager pulling Booking, Airbnb, Vrbo and Expedia, plus a separate CRM for guest history. In 2026 OTAs still move 65-80% of bookings per sector data, so the engineering problem is not building a reservation UI. It is keeping the guest object coherent across 4-6 ingress channels and WhatsApp Business API, under a Spanish regulatory frame that moved back to the autonomous communities after the Supreme Court voided the national short-term rental law on 21 May 2026.
+
+Reference stack we layer on top of the manager's PMS (no rip-and-replace): channel manager API as source of truth for inbound reservations with idempotency keyed on OTA booking id (Booking webhooks retry on 5xx, Airbnb double-notifies on modification), BSP-direct WhatsApp Business Cloud API with Meta-approved templates per lifecycle event (confirmation, pre check-in at t-24h, access code at t-6h, post check-out NPS at t+24h, reactivation at t+10m), LLM agent fenced to the stay schema so guest / lead_guest / payer are modelled as separate entities, and typed tool calls (check_availability, open_hold, send_access_code, log_viajero) so prompt drift cannot corrupt the parte de viajeros submission that each community still requires.
+
+Non-trivial parts: HSM template rotation per stay type (beach, urban, rural) to keep Meta Quality Rating High across the summer spike when outbound volume runs 8-10x the shoulder-season baseline, direct-booking funnel on the manager's own domain so OTA commission (15-18% Booking, 3-20% Airbnb between host and guest) can be arbitraged on repeat guests, and multi-language fallback (ES/EN/FR/DE) at the agent layer instead of per-template duplication. Target SLA across the deployed accounts: <60s median first reply on OTA plus direct inbound and 100% viajero data captured before check-in day; WhatsApp utility-conversation cost holds at Meta's 2026 rate of ~0,0085 EUR per service conversation in Spain.
+
+Full breakdown with PMS vendor comparison (Smoobu, Lodgify, Guesty, Hostaway, eviivo, Net2Rent), 2026 cost model per property, and 5-step integration sequence (ES): https://zeniapartners.com/blog/crm-para-alquiler-vacacional.html
+
+#VacationRental #WhatsAppBusinessAPI #SystemsEngineering #AI #B2B
+
+---

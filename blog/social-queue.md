@@ -9789,6 +9789,8 @@ Full breakdown with vendor comparison (EBROKER, Avant2, Insly, horizontal CRMs),
 ---
 ## 2026-10-30 - CRM for Vacation Rental Managers (EN)
 
+<!-- PUBLISHED:make-webhook at 2026-10-30T09:30:04Z -->
+
 Vacation rental managers in Spain run on a stack most product sites underplay: a PMS (Smoobu, Lodgify, Guesty, Hostaway, Net2Rent) plus a channel manager pulling Booking, Airbnb, Vrbo and Expedia, plus a separate CRM for guest history. In 2026 OTAs still move 65-80% of bookings per sector data, so the engineering problem is not building a reservation UI. It is keeping the guest object coherent across 4-6 ingress channels and WhatsApp Business API, under a Spanish regulatory frame that moved back to the autonomous communities after the Supreme Court voided the national short-term rental law on 21 May 2026.
 
 Reference stack we layer on top of the manager's PMS (no rip-and-replace): channel manager API as source of truth for inbound reservations with idempotency keyed on OTA booking id (Booking webhooks retry on 5xx, Airbnb double-notifies on modification), BSP-direct WhatsApp Business Cloud API with Meta-approved templates per lifecycle event (confirmation, pre check-in at t-24h, access code at t-6h, post check-out NPS at t+24h, reactivation at t+10m), LLM agent fenced to the stay schema so guest / lead_guest / payer are modelled as separate entities, and typed tool calls (check_availability, open_hold, send_access_code, log_viajero) so prompt drift cannot corrupt the parte de viajeros submission that each community still requires.

@@ -9800,3 +9800,16 @@ Full breakdown with PMS vendor comparison (Smoobu, Lodgify, Guesty, Hostaway, ev
 #VacationRental #WhatsAppBusinessAPI #SystemsEngineering #AI #B2B
 
 ---
+## 2026-10-30 - AI Receptionist for Photographers (EN)
+
+US photographers lose bookings in the gap between a 10:47 PM Instagram DM and a 1 AM reply after unloading SD cards. Couples contact 4-7 studios, 78% book with one of the first two to reply, and the manual median first-reply benchmark across HoneyBook / Dubsado / Studio Ninja accounts is 8-14h during business hours.
+
+Reference stack we deploy on top of the studio's existing CRM (HoneyBook, Dubsado, Studio Ninja, Tave, 17hats, Pixifi): Twilio SIP for a dedicated studio voice number, BSP-direct WhatsApp Business Cloud API plus Instagram Graph for DMs, LLM agent fenced to a structured package schema (base collection, hours, second shooter, travel-radius surcharge, elopement rate, seasonal pricing) with typed tool calls (check_date, soft_hold_date, send_sample_gallery, create_retainer_link) so prompt drift cannot quote a destination elopement at the local wedding rate. Tone is tuned by loading 60-100 of the owner's past replies and extracting their actual phrasing, not a generic persona.
+
+Non-trivial parts: idempotent calendar writes keyed on inquiry id (bride-to-be sends the same message on 3 channels within a minute), curated gallery library surfaced by venue + style + season (Mission Ranch 110 guests outdoor → correct 12-image set, not a generic highlight reel), and a 3-touch nurture (day 3 / day 7 / day 14) that recovers 11-18% of ghosted leads without being annoying. Target SLA on deployed studios: <60s median first reply across voice + WhatsApp + Instagram + email, inquiry-to-booking rate from 17% to ~32% within 90 days.
+
+Full breakdown with CRM comparison, Austin studio 90-day numbers and 14-day rollout: https://zeniapartners.com/blog/ai-receptionist-for-photographers.html
+
+#PhotographyBusiness #WhatsAppBusinessAPI #SystemsEngineering #AI #B2B
+
+---

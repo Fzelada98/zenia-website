@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-10-30T09:14Z",
+  "lastRun": "2026-10-30T17:14Z",
   "market": "US/UK small business",
   "posts": [
     {
@@ -1131,7 +1131,8 @@
       "keyword": "ai agent for handyman businesses",
       "tier": 2,
       "cluster": "trades",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-10-30"
     },
     {
       "slug": "ai-agent-for-fencing-contractors",

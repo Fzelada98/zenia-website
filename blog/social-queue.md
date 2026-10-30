@@ -9828,3 +9828,16 @@ Three design choices that keep it stable: single pipeline event (no reconciliati
 #CRM #WhatsAppBusinessAPI #B2B #SystemsEngineering
 
 ---
+## 2026-10-30 - AI Agent for Handyman Businesses (EN)
+
+US handyman shops are 1-3 person outfits where the owner is on a ladder with the phone on silent. Across the deployed accounts, 62% of inbound calls to a solo operator go to voicemail during business hours and 40% of appointment requests land outside 9-to-5. The engineering problem is not an "AI phone answering" greeting; it is the complete work-order write-back into the field service CRM.
+
+Reference stack we plug on top of the shop's existing Jobber, Housecall Pro, Workiz, Service Fusion, Markate or ServiceTitan account (no rip-and-replace): Twilio for a dedicated local number with voice, SMS and MMS; BSP-direct WhatsApp Business Cloud API plus Meta Messenger and Instagram Graph for message-the-business routes; Google Business Profile message routing into the same agent; LLM fenced to a structured job schema with typed tool calls (price_lookup, check_calendar, soft_hold_slot, write_work_order, send_deposit_link) so the agent cannot free-form a quote outside the flat-rate pricing book. Each entry in the pricing catalog carries a base price, a size or complexity modifier, and a "we need to come see it" trigger.
+
+Non-trivial parts: idempotent work-order writes keyed on inquiry id across voice + SMS + WhatsApp + web + GBP ingress (homeowner double-contacts within a minute), missed-call text-back under 20s from voicemail trigger, state-level licensing fence that routes jobs over the $500-$1,000 handyman threshold to a human estimate instead of auto-quoting, and ServiceTitan paid-API-tier handling vs Markate Zapier-bridge fallback. Target SLA across the deployed accounts: <60s median first reply (down from 2-4h), voicemail rate under 8%, inquiry-to-booking from 17-22% to 29-34% within 90 days. WhatsApp utility-conversation cost holds at Meta's 2026 US service-conversation rate.
+
+Full breakdown with CRM comparison, 90-day numbers from three US handyman deployments and 14-day rollout: https://zeniapartners.com/blog/ai-agent-for-handyman-businesses.html
+
+#HomeServices #WhatsAppBusinessAPI #SystemsEngineering #AI #B2B
+
+---

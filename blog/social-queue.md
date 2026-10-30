@@ -9841,3 +9841,16 @@ Full breakdown with CRM comparison, 90-day numbers from three US handyman deploy
 #HomeServices #WhatsAppBusinessAPI #SystemsEngineering #AI #B2B
 
 ---
+## 2026-10-30 - WhatsApp Business for Restaurants: App vs API (ES)
+
+Most restaurant teams treat "WhatsApp Business" as one product. For engineering it is three: the mobile app (max 4 linked devices, no API, no templates), the Business Platform API (BSP or Meta Cloud API, pay-per-conversation, template-gated outside the 24h window), and Click-to-WhatsApp ads (attribution surface, not a messaging channel). Choosing wrong is the top cause of number quality drops and account restrictions in the vertical.
+
+Reference stack we deploy on top of the restaurant's existing booking system (CoverManager, TheFork, Resy, Toast, Lightspeed, Agora or custom): Meta Cloud API direct for lower per-message cost, LLM fenced to a structured reservation schema with typed tool calls (check_availability, hold_slot, confirm_reservation, send_menu, escalate_to_human) so no free-form answer can double-book, Meta-approved utility templates versioned as deploy artifacts, and opt-in records written to the CRM event log at every entry point.
+
+Non-trivial parts: idempotent reservation writes keyed on conversation id across WhatsApp + Instagram DM + Click-to-WhatsApp (same guest hitting three channels in 20s), the 24-hour service-window state machine that drops out of free-form mode on expiry and switches to utility templates, and number-quality telemetry that pauses marketing templates when Meta drops rating to medium. Target SLA on deployed accounts: <60s median first reply 24/7, utility conversation cost under €0.08 in Spain, agent-only resolution 85-92% on reservations.
+
+Full breakdown with app vs API table, 2026 pricing by category, 5-step rollout and the 5 patterns that get numbers banned: https://zeniapartners.com/blog/whatsapp-business-para-restaurantes-guia.html
+
+#RestaurantTech #WhatsAppBusinessAPI #SystemsEngineering #AI #B2B
+
+---

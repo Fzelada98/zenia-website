@@ -9908,3 +9908,19 @@ Full breakdown with CRM comparison, 90-day numbers from three US garage door dep
 #HomeServices #WhatsAppBusinessAPI #SystemsEngineering #AI #B2B
 
 ---
+
+## 2026-10-31 - Reactivar clientas inactivas estética
+
+Reactivation campaigns for beauty centers are usually treated as marketing. The engineering view: it's a scheduled job over a dirty CRM.
+
+Our pipeline for a Madrid chain with 2,400 historical clients: nightly export from Flowww, dedup + E.164 phone normalization, segmentation by treatment cycle (not generic days-since-visit), queue a 3-step WhatsApp Business API sequence through Meta-approved templates with 24h message windows respected, and auto-pause anyone who replies so the LLM takes the thread.
+
+Latency per outbound: 180-220 ms end-to-end. Human escalation at ~7% of threads. Reactivation rate on inactive cohort landed at 13.4% over 6 weeks, inside the 10-20% range AgendaPro reports for structured campaigns.
+
+Three design choices mattered: a per-treatment inactivity threshold instead of a flat 45 days, template versioning so Meta rejections don't block the whole campaign, and a hard rate-limit on the booking calendar so the agent never proposes slots the chain can't fulfill.
+
+Full write-up: https://zeniapartners.com/blog/reactivar-clientas-inactivas-estetica.html
+
+#WhatsAppBusinessAPI #CRM #SystemsEngineering #AI #B2B
+
+---

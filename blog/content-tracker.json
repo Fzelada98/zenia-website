@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-10-31T14:12:44.303323+00:00",
+  "lastRun": "2026-10-31T22:11:39.140411+00:00",
   "posts": [
+    {
+      "slug": "reactivar-clientas-inactivas-estetica",
+      "keyword": "reactivar clientas inactivas estetica",
+      "tier": 2,
+      "cluster": "estetica-reactivacion",
+      "status": "published",
+      "date": "2026-10-31",
+      "source": "matrix-generated"
+    },
     {
       "slug": "crm-para-autoescuelas",
       "keyword": "crm para autoescuelas",

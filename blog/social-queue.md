@@ -9854,3 +9854,16 @@ Full breakdown with app vs API table, 2026 pricing by category, 5-step rollout a
 #RestaurantTech #WhatsAppBusinessAPI #SystemsEngineering #AI #B2B
 
 ---
+## 2026-10-31 - WhatsApp Sales Funnel: Infra Breakdown (ES)
+
+Most teams building a "WhatsApp sales funnel" wire a chatbot to the API and call it a day. The real failure modes are architectural: webhook delivery guarantees under burst load, idempotent writes to the CRM when a lead hits click-to-WhatsApp from an ad and the website chat widget in the same 20-second window, and the 24-hour service-window state machine that must flip from free-form LLM to Meta-approved utility templates without dropping context.
+
+Reference stack we deploy at Zenia Partners for the full TOFU-to-postventa pipeline: Meta Cloud API direct, LLM fenced to a typed tool schema (qualify_lead, book_demo, escalate_to_human, log_postventa_nps) so no free-form answer can skip CRM writes, template versioning as deploy artifacts, and lead-stage transitions emitted to the event log for cohort analysis. BSPs sit behind a feature flag for failover only.
+
+Numbers on deployed accounts in Spain, October 2026: 98% message-open rate (Infobip benchmark), 72% WhatsApp Flows completion vs 35% web forms (Meta), median first-reply under 60s 24/7, marketing-conversation cost held at €0.0732 per Meta's SP rate card. Click-to-WhatsApp CAC runs 30-50% below equivalent form-fill campaigns on the same Meta Ads account.
+
+Full breakdown with the 5 funnel stages, benchmark table by stage, cost model and the 4 patterns that burn number quality: https://zeniapartners.com/blog/embudo-de-ventas-con-whatsapp.html
+
+#WhatsAppBusinessAPI #SystemsEngineering #AI #B2B #CRM
+
+---

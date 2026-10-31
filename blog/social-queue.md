@@ -9880,3 +9880,18 @@ Full breakdown with the 9 call types, 90-day numbers from a single-location Aust
 #FoodService #WhatsAppBusinessAPI #SystemsEngineering #AI #B2B
 
 ---
+## 2026-10-31 - CRM for Driving Schools: Infra Breakdown (ES)
+
+Most "driving school CRMs" in Spain are an ERP (Gálibo, WinAutoGest) with an email field. Captation lives in a separate inbox nobody owns, and the API gap between the DGT-expediente ERP and the commercial CRM is the single reason schools lose 35-55% of paid leads at second-contact stage.
+
+Reference stack we deploy at Zenia Partners, non-displacing the sector ERP: Meta Cloud API direct for WhatsApp Business plus Instagram Graph for DM ingress into the same thread; LLM fenced to a typed tool schema (qualify_license_type, quote_course, book_theory_class, hold_practice_slot, escalate_to_human) so the agent cannot free-form a price outside the versioned catalogue; bidirectional sync with the ERP over its REST API (or nightly CSV where the ERP is older) keyed on DNI so expediente state and CRM lead state converge; event log of every lead-stage transition for cohort analysis across Meta Ads, Google Ads, organic and referral.
+
+Non-trivial parts: idempotent writes keyed on (DNI, conversation_id) across WhatsApp + IG + the website form hitting the funnel in a 30-second window; a 21-day inactivity rejector that fires a recovery sequence before the student churns; and the service-window state machine that drops free-form LLM mode on 24h expiry and switches to Meta-approved utility templates for practice reminders, exam-countdown and payment nudges. RGPD base is contract (art. 6.1.b) and legal obligation (art. 6.1.c), not consent, so retention policies run as a scheduled purge job, not as a legal review.
+
+Deployed SLAs in Spain, October 2026: median first reply under 60s 24/7, 85-92% agent-only resolution on captation and reminders, utility conversation cost held at €0.08-0.095 under Meta's SP rate card, lead-to-matrícula conversion 18-28% vs 8-14% baseline before deployment.
+
+Full breakdown with pricing table (Gálibo, WinAutoGest, AutoviaTest, Zenia), 4-week rollout and the 10-question vendor checklist: https://zeniapartners.com/blog/crm-para-autoescuelas.html
+
+#DrivingSchools #WhatsAppBusinessAPI #SystemsEngineering #AI #CRM
+
+---

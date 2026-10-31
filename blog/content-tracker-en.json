@@ -1155,7 +1155,8 @@
       "keyword": "ai agent for garage door companies",
       "tier": 2,
       "cluster": "trades",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-10-31"
     },
     {
       "slug": "ai-agent-for-septic-companies",

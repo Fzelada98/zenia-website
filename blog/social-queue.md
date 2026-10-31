@@ -9895,3 +9895,16 @@ Full breakdown with pricing table (Gálibo, WinAutoGest, AutoviaTest, Zenia), 4-
 #DrivingSchools #WhatsAppBusinessAPI #SystemsEngineering #AI #CRM
 
 ---
+## 2026-10-31 - AI Agent for Garage Door Companies (EN)
+
+US residential garage door shops run 2-8 trucks on a dispatch pattern that is spiky by weather and time-of-day: 45-60% of inbound calls to a sub-10-truck shop hit voicemail during business hours and roughly 38% of service requests land outside 9-5, concentrated in two spikes (6-10 PM weekdays, Saturday 7-11 AM). The engineering problem is not an AI phone greeting; it is the full work-order write-back into the shop's existing ServiceTitan or Housecall Pro, keyed on inquiry id across voice, SMS, GBP messaging, Angi, Thumbtack and web form.
+
+Reference stack we plug on top of the shop's existing Housecall Pro, Jobber, Workiz, Service Fusion, FieldEdge or ServiceTitan tenant (no rip-and-replace): Twilio for a dedicated local number with voice, SMS and MMS; Google Business Profile message routing into the same agent; Meta Messenger and Instagram Graph for DM ingress; BSP-direct WhatsApp Business Cloud API for the Hispanic segment; LLM fenced to a structured job schema with typed tool calls (price_lookup(job_type, door_size, spring_count), check_calendar(zip, duration, window), inventory_check(part_sku), soft_hold_slot, write_work_order) so the agent cannot free-form a quote outside the flat-rate pricing book of 60-90 symptom-indexed job types (torsion/extension spring, cable, roller, panel, opener by brand/HP, MyQ pairing, sensor realignment, tune-up, new door).
+
+Non-trivial parts: emergency-triage path for broken-spring and car-trapped states that jumps the queue and SMS-pages the on-call tech at the emergency rate; idempotent work-order writes across the five ingress channels when the homeowner double-contacts in under a minute; drive-time-aware calendar reads by ZIP so soft-held slots do not collide once routed; ServiceTitan paid-API-tier handling vs Housecall Pro Essentials native-API path; and the DIY-spring refusal guardrail. Target SLA across the deployed accounts: <60s median first reply (down from 2-4h), voicemail rate under 9%, inquiry-to-booking from 19-26% to 29-37%, after-hours booked share from under 12% to 29-34% within 90 days.
+
+Full breakdown with CRM comparison, 90-day numbers from three US garage door deployments and 14-day rollout: https://zeniapartners.com/blog/ai-agent-for-garage-door-companies.html
+
+#HomeServices #WhatsAppBusinessAPI #SystemsEngineering #AI #B2B
+
+---

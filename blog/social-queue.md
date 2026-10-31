@@ -9867,3 +9867,16 @@ Full breakdown with the 5 funnel stages, benchmark table by stage, cost model an
 #WhatsAppBusinessAPI #SystemsEngineering #AI #B2B #CRM
 
 ---
+## 2026-10-31 - AI Receptionist for Coffee Shops (EN)
+
+US independent coffee shops lose 22-31% of inbound calls during the 7-10 AM and 11-1 PM rushes — exactly when catering buyers call. The engineering problem is not an "AI phone greeting"; it is a complete catering-ticket write-back into POS + CRM with real menu, pricing, lead-time gates and inventory per heavy item.
+
+Reference stack we plug on top of the shop's existing Toast, Square, Clover, Lightspeed or Odeko (no rip-and-replace): Twilio voice SIP forwarded from the business number for sub-1.5s pickup; BSP-direct WhatsApp Business Cloud API plus Instagram Graph for DM ingress; Google Business Profile message routing into the same agent; LLM fenced to a structured catering schema with typed tool calls (menu_lookup, check_catering_lead_time, soft_hold_slot, write_order, send_deposit_link) so the agent cannot free-form a quote outside the versioned pricing book. Lead-time rules (cold brew keg: 18h; pastry tray: 12h; hot urn: 4h) run as a rejector in front of the booking tool, not as prose in a prompt.
+
+Non-trivial parts: idempotent order writes keyed on inquiry id across voice + SMS + WhatsApp + IG DM + GBP ingress (same office manager hits two channels in a minute), 25% deposit gate above $150 to kill no-shows, 86-list sync against POS inventory so the agent cannot quote a sold-out keg, and KDS + opener-SMS push on booking so the bar prep sheet updates before the opener unlocks the door. Target SLA across deployed accounts: 99%+ answer rate, median first reply under 30s, catering orders per month +100-160%, standing weekly orders opened 4-6 in the first 60 days.
+
+Full breakdown with the 9 call types, 90-day numbers from a single-location Austin cafe and 14-day rollout: https://zeniapartners.com/blog/ai-receptionist-for-coffee-shops.html
+
+#FoodService #WhatsAppBusinessAPI #SystemsEngineering #AI #B2B
+
+---

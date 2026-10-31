@@ -1,7 +1,16 @@
 {
-  "lastRun": "2026-10-30T17:14Z",
+  "lastRun": "2026-10-31T09:00Z",
   "market": "US/UK small business",
   "posts": [
+    {
+      "slug": "ai-receptionist-for-coffee-shops",
+      "keyword": "ai receptionist for coffee shops",
+      "tier": 0,
+      "cluster": "food-service",
+      "status": "published",
+      "date": "2026-10-31",
+      "note": "striking-loop hit: 16 impressions, pos 17.4. Was printing on /blog/ai-agent-for-coffee-shops.html; added cross-link there with 'ai receptionist for coffee shops' anchor."
+    },
     {
       "slug": "ai-receptionist-for-photographers",
       "keyword": "ai receptionist for photographers",

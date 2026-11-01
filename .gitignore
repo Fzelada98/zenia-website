@@ -37,6 +37,3 @@ scripts/validate.log
 scripts/personalize.log
 scripts/seo/__pycache__/
 scripts/seo/cache/
-
-# inspecciones locales de Taste Skill
-.taste-skill/

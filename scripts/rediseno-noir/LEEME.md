@@ -12,5 +12,5 @@ Escribe `es/index-a.html`, `es/index-b.html`, `es/index-c.html`, `styles/noir.cs
 `http://127.0.0.1:8766/es/index-a.html` (b, c). Capturas: `python3 scripts/rediseno-noir/shot2.py <url> salida.png 1440 12`
 (o 390 para el móvil; el 12 son los segundos de espera para que termine la conversación del agente).
 
-Los símbolos de la banda «Trabajamos sobre» son de simple-icons (CC0). `js/demo-chat.js` v2 rellena el avatar del chat.
+Los símbolos de la banda «Trabajamos sobre» son de simple-icons (CC0). `js/demo-chat.js` v3 reproduce el WhatsApp del agente dentro del teléfono (hora del visitante, «escribiendo…», ticks azules, botones de respuesta rápida, ficha del CRM al final); la sección 04 es una línea de tiempo con regla de semanas (`.gantt`).
 Pendiente: la portada inglesa (`index.html`) se hace igual cuando Fabrizzio elija variante.

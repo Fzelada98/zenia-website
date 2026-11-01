@@ -7,14 +7,12 @@
 html, body { background: var(--paper); }
 svg.zenia-mark path:first-of-type { fill: #3B82F6; }
 svg.zenia-mark path:last-of-type { fill: #5B8CFF; }
-.chat { background: rgba(17, 26, 44, 0.72); border-color: rgba(91, 140, 255, 0.25); }
-.chat-head { background: rgba(91, 140, 255, 0.08); }
-.chat-avatar { background: rgba(91, 140, 255, 0.12); }
-.msg.out { background: rgba(91, 140, 255, 0.2); }
-.btn-primary, .cta-actions .btn-primary, .booking-submit, .demo-switch button[aria-pressed="true"], .stage.s1 { background: var(--accent-deep); color: #fff; }
+.crm-toast { background: rgba(91, 140, 255, 0.07); }
+.btn-primary, .cta-actions .btn-primary, .booking-submit, .demo-switch button[aria-pressed="true"], .gantt-row:nth-child(1) .gantt-bar { background: var(--accent-deep); color: #fff; }
 .btn-primary:hover, .cta-actions .btn-primary:hover, .booking-submit:hover { background: #1D4ED8; }
-.stage.s2 { background: #1D4ED8; color: #fff; }
-.stage.s3 { background: rgba(91, 140, 255, 0.22); border-color: var(--line); }
+.gantt-row:nth-child(2) .gantt-bar { background: #1D4ED8; color: #fff; }
+.gantt-row:nth-child(3) .gantt-bar { background: rgba(91, 140, 255, 0.22); border-color: var(--line-strong); }
+.gantt-row--inf .gantt-bar { background: rgba(91, 140, 255, 0.14); border-color: var(--line); }
 .service-card--featured { background: rgba(91, 140, 255, 0.07); }
 .service-card--featured:hover { background: rgba(91, 140, 255, 0.1); }
 .price-hero { background: rgba(91, 140, 255, 0.06); }

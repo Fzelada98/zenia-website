@@ -31,7 +31,6 @@ FONTS = ("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@
 B_CSS = """/* Variante B: navy y champán */
 :root { --paper: #0B1220; --paper-2: #111A2C; --paper-3: #1A2540; --nav-bg: rgba(11, 18, 32, 0.86); }
 html, body { background: var(--paper); }
-.chat { background: rgba(17, 26, 44, 0.72); }
 .footer, body > div:has(> a[href$="cobertura.html"]) { background: #080D18 !important; }
 """
 
@@ -44,14 +43,12 @@ C_CSS = """/* Variante C: navy y azul de marca */
 html, body { background: var(--paper); }
 svg.zenia-mark path:first-of-type { fill: #3B82F6; }
 svg.zenia-mark path:last-of-type { fill: #5B8CFF; }
-.chat { background: rgba(17, 26, 44, 0.72); border-color: rgba(91, 140, 255, 0.25); }
-.chat-head { background: rgba(91, 140, 255, 0.08); }
-.chat-avatar { background: rgba(91, 140, 255, 0.12); }
-.msg.out { background: rgba(91, 140, 255, 0.2); }
-.btn-primary, .cta-actions .btn-primary, .booking-submit, .demo-switch button[aria-pressed="true"], .stage.s1 { background: var(--accent-deep); color: #fff; }
+.crm-toast { background: rgba(91, 140, 255, 0.07); }
+.btn-primary, .cta-actions .btn-primary, .booking-submit, .demo-switch button[aria-pressed="true"], .gantt-row:nth-child(1) .gantt-bar { background: var(--accent-deep); color: #fff; }
 .btn-primary:hover, .cta-actions .btn-primary:hover, .booking-submit:hover { background: #1D4ED8; }
-.stage.s2 { background: #1D4ED8; color: #fff; }
-.stage.s3 { background: rgba(91, 140, 255, 0.22); border-color: var(--line); }
+.gantt-row:nth-child(2) .gantt-bar { background: #1D4ED8; color: #fff; }
+.gantt-row:nth-child(3) .gantt-bar { background: rgba(91, 140, 255, 0.22); border-color: var(--line-strong); }
+.gantt-row--inf .gantt-bar { background: rgba(91, 140, 255, 0.14); border-color: var(--line); }
 .service-card--featured { background: rgba(91, 140, 255, 0.07); }
 .service-card--featured:hover { background: rgba(91, 140, 255, 0.1); }
 .price-hero { background: rgba(91, 140, 255, 0.06); }
@@ -61,6 +58,29 @@ svg.zenia-mark path:last-of-type { fill: #5B8CFF; }
 
 TOOLS = [("whatsapp", "WhatsApp Business API"), ("hubspot", "HubSpot"), ("zoho", "Zoho CRM"),
          ("odoo", "Odoo"), ("googlecalendar", "Google Calendar"), ("calendly", "Calendly")]
+
+# El teléfono con el WhatsApp del agente (tema oscuro oficial). Lo que va dentro es la versión
+# estática del restaurante: sin script se ve así; con script, demo-chat.js v3 la reproduce.
+TELEFONO = '''      __SWITCH__
+      <div class="phone" data-ui>
+        <div class="phone-status" aria-hidden="true"><span class="phone-time">23:48</span><span class="phone-icons"><svg viewBox="0 0 16 12"><path fill="currentColor" d="M0 9h2v3H0zM4 6h2v6H4zM8 3h2v9H8zM12 0h2v12h-2z"/></svg><svg viewBox="0 0 16 12"><path fill="currentColor" d="M8 2.4c2.6 0 4.9 1 6.6 2.7l-1.3 1.3A7.5 7.5 0 0 0 8 4.3a7.5 7.5 0 0 0-5.3 2.1L1.4 5.1A9.3 9.3 0 0 1 8 2.4zm0 3.6c1.6 0 3 .6 4.1 1.7l-1.3 1.3A4 4 0 0 0 8 7.9a4 4 0 0 0-2.8 1.1L3.9 7.7A5.8 5.8 0 0 1 8 6zm0 3.6c.7 0 1.3.3 1.7.7L8 12l-1.7-1.7c.4-.4 1-.7 1.7-.7z"/></svg><svg viewBox="0 0 24 12"><rect x=".5" y=".5" width="20" height="11" rx="2.5" fill="none" stroke="currentColor"/><rect x="2" y="2" width="16" height="8" rx="1.5" fill="currentColor"/><path fill="currentColor" d="M22 4v4a2 2 0 0 0 0-4z"/></svg></span></div>
+        <div class="chat" id="demoChat">
+          <div class="chat-head"><span class="chat-back" aria-hidden="true">&lsaquo;</span><span class="chat-avatar" aria-hidden="true">L</span><div class="chat-who"><strong>La Terraza &middot; Restaurante</strong><span class="chat-status">en l&iacute;nea</span></div><span class="chat-tools" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10 5-3v10l-5-3z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span></div>
+          <div class="chat-body">
+            <div class="chat-day">Hoy</div>
+            <div class="chat-lock">Los mensajes est&aacute;n cifrados de extremo a extremo.</div>
+            <div class="msg in shown"><span class="msg-text">Hola, &iquest;tienen mesa para 4 ma&ntilde;ana a las 21:00?</span><time>23:45</time></div>
+            <div class="msg out shown read"><span class="msg-text">&iexcl;Hola! S&iacute;, nos queda mesa para 4 a las 21:00. &iquest;D&oacute;nde prefieres?</span><time>23:45<i class="ticks" aria-hidden="true"></i></time><span class="msg-buttons"><span class="tapped">Terraza</span><span>Sal&oacute;n</span></span></div>
+            <div class="msg in reply shown"><span class="msg-text">Terraza</span><time>23:46</time></div>
+            <div class="msg in shown"><span class="msg-text">A nombre de Laura.</span><time>23:46</time></div>
+            <div class="msg out shown read"><span class="msg-text">Listo, Laura: mesa para 4 ma&ntilde;ana a las 21:00 en la terraza. Te mando un recordatorio ma&ntilde;ana a las 18:00. &iquest;Alguna alergia que debamos saber?</span><time>23:46<i class="ticks" aria-hidden="true"></i></time></div>
+            <div class="msg in shown"><span class="msg-text">Sin gluten, gracias</span><time>23:47</time></div>
+            <div class="msg out shown read"><span class="msg-text">Anotado, avisamos a cocina. &iexcl;Hasta ma&ntilde;ana!</span><time>23:47<i class="ticks" aria-hidden="true"></i></time></div>
+          </div>
+          <div class="chat-input" aria-hidden="true"><span class="chat-input-field">Mensaje</span><span class="chat-mic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 15a4 4 0 0 0 4-4V6a4 4 0 0 0-8 0v5a4 4 0 0 0 4 4zm6-4a6 6 0 0 1-12 0H4a8 8 0 0 0 7 7.9V22h2v-3.1A8 8 0 0 0 20 11z"/></svg></span></div>
+        </div>
+      </div>
+      <div class="crm-toast" id="crmToast" data-ui aria-live="polite"><p class="crm-label">Guardado en el CRM</p><strong>Laura &middot; Mesa para 4</strong><p>Ma&ntilde;ana 21:00 &middot; Terraza &middot; Sin gluten</p><p>Recordatorio autom&aacute;tico: ma&ntilde;ana a las 18:00</p></div>'''
 
 
 def leer(p):
@@ -93,14 +113,11 @@ def base_html(s):
     h2 = uno(r'<h2[^>]*>(.*?)</h2>', sec).group(1)
     switch = uno(r'<div class="demo-switch".*?</div>', sec).group(0)
     note = uno(r'<p class="demo-note"[^>]*>.*?</p>', sec).group(0)
-    chat = uno(r'<div class="chat reveal reveal-delay-2" id="demoChat" data-ui>.*?\n    </div>\n', sec).group(0)
     s = s[: demo.start()] + "\n" + s[demo.end():]
-    chat = chat.replace('<div class="chat-head"><div>', '<div class="chat-head"><span class="chat-avatar" aria-hidden="true">L</span><div>', 1)
-    assert 'chat-avatar' in chat
+    telefono = TELEFONO.replace("__SWITCH__", switch)
     bloque = f'''    <div class="hero-demo reveal reveal-delay-2">
-      <p class="demo-caption">{h2}</p>
-      {switch}
-      {chat.strip()}
+      <p class="demo-caption" id="demoCaption">{h2}</p>
+{telefono}
       {note}
     </div>
 '''
@@ -111,7 +128,11 @@ def base_html(s):
     cierre = h.rfind("</div>\n</section>")
     assert cierre > 0, "no encuentro el cierre de la portada"
     h = h[:cierre] + bloque + "  " + h[cierre:]
+    ini = h.index('<p class="eyebrow">')
+    fin = h.index('    <div class="hero-demo')
+    h = h[:ini] + '<div class="hero-copy">\n    ' + h[ini:fin] + '    </div>\n' + h[fin:]
     s = s[: hero.start()] + h + s[hero.end():]
+    assert s.count('hero-copy') == 1
     assert 'class="hero-demo' in s, "no pude colocar la conversación en la portada"
 
     # 2. la banda de herramientas, con símbolo
@@ -151,12 +172,25 @@ def base_html(s):
     tarjeta = uno(r'<div class="service-card service-card--featured reveal">.*?</section>', s).group(0)
     assert tarjeta.index('service-figure') < tarjeta.index('</section>') and tarjeta.count('service-figure') == 1
 
-    # 6. el proceso: la etapa escrita dentro de cada tramo
-    etapas = {"s1": "An&aacute;lisis", "s2": "Redise&ntilde;o", "s3": "Implementaci&oacute;n", "s4": "Optimizaci&oacute;n continua"}
-    for k, v in etapas.items():
-        pat = re.compile(r'(<div class="stage %s" style="--w:[0-9.]+"><span>[^<]*</span>)(</div>)' % k)
-        assert len(pat.findall(s)) == 1, k
-        s = pat.sub(lambda mm: mm.group(1) + f'<strong>{v}</strong>' + mm.group(2), s, count=1)
+    # 6. el proceso: línea de tiempo con regla de semanas (como en un informe)
+    pasos = re.findall(r'<li class="process-step" style="--w:[0-9.]+"><h3>(.*?)</h3><p>(.*?)</p></li>', s)
+    assert len(pasos) == 4, len(pasos)
+    pos = [(0, 2, "1 a 2 semanas", ""), (2, 4, "1 a 2 semanas", ""),
+           (4, 9.5, "4 a 6 semanas", '<span class="gantt-mark"><span>Primer resultado</span></span>'),
+           (9.5, 12, "Continuo, cada mes", "")]
+    filas = []
+    for (h3, ptxt), (a, b, dur, extra) in zip(pasos, pos):
+        inf = ' gantt-row--inf' if b >= 12 else ''
+        corto = "Continuo" if inf else dur
+        filas.append(f'      <li class="gantt-row{inf}" style="--s:{a};--e:{b}"><div class="gantt-text"><h3>{h3}</h3><p>{ptxt}</p><span class="gantt-dur">{dur}</span></div>'
+                     f'<div class="gantt-track">{extra}<span class="gantt-bar"><i>{corto}</i></span></div></li>')
+    regla = "".join(f"<span>{'Sem. 1' if i == 1 else i}</span>" for i in range(1, 11)) + '<span class="gantt-inf">en adelante</span>'
+    gantt = ('    <div class="gantt reveal reveal-delay-1" data-ui>\n      <div class="gantt-head"><span class="gantt-corner">Etapa</span>'
+             '<div class="gantt-ruler" aria-hidden="true">' + regla + '</div></div>\n      <ol class="gantt-rows">\n' + "\n".join(filas) +
+             '\n      </ol>\n      <p class="gantt-note">Semanas desde la primera llamada. El primer resultado medible llega antes de la octava.</p>\n    </div>')
+    m = uno(r'    <div class="stage-bar reveal reveal-delay-1" data-ui>.*?</ol>\n', s)
+    s = s[: m.start()] + gantt + "\n" + s[m.end():]
+    assert 'stage-bar' not in s and 'class="gantt' in s
 
     # 7. la frase de cifras (ya está en la rejilla) y la burbuja sobre el precio
     s = re.sub(r'\n\s*<p class="impact-sentence reveal">.*?</p>', '', s, count=1, flags=re.S)
@@ -199,7 +233,7 @@ def main():
         v = v.replace('<link rel="stylesheet" href="../styles/main.css?v=10">', '<link rel="stylesheet" href="../styles/noir.css?v=2">' + extra)
         assert "noir.css" in v
         v = v.replace('<meta name="theme-color" content="#F4F4F1">', f'<meta name="theme-color" content="{theme}">')
-        v = v.replace('../js/demo-chat.js?v=1', '../js/demo-chat.js?v=2')
+        v = v.replace('../js/demo-chat.js?v=1', '../js/demo-chat.js?v=3')
         escribir(os.path.join(ZV, "es", f"index-{letra}.html"), v)
         print("es/index-%s.html" % letra, len(v))
 

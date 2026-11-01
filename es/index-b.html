@@ -115,6 +115,7 @@
 <section class="hero hero-portada" id="hero">
   
   <div class="container">
+    <div class="hero-copy">
     <p class="eyebrow">CRM + WhatsApp + IA para PYMEs en Espa&ntilde;a y Latinoam&eacute;rica</p>
     <h1 class="reveal reveal-delay-1">CRM con IA y WhatsApp <span class="text-gradient">para PYMEs en Espa&ntilde;a</span></h1>
     <p class="hero-subtitle reveal reveal-delay-2">Automatiza ventas, fidelizaci&oacute;n y atenci&oacute;n al cliente con un CRM inteligente y agentes IA por WhatsApp. Resultados medibles en 4 semanas para restaurantes, gimnasios, cl&iacute;nicas, hoteles, retail y m&aacute;s.</p>
@@ -134,25 +135,33 @@
         <span class="industry-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg> Wellness</span>
       </div>
     </div>
-      <div class="hero-demo reveal reveal-delay-2">
-      <p class="demo-caption">Lo que hace el agente a las 23:48, cuando ya cerraste</p>
+      </div>
+    <div class="hero-demo reveal reveal-delay-2">
+      <p class="demo-caption" id="demoCaption">Lo que hace el agente a las 23:48, cuando ya cerraste</p>
       <div class="demo-switch" role="group" aria-label="Tipo de negocio">
         <button type="button" data-sector="restaurante" aria-pressed="true">Restaurante</button>
         <button type="button" data-sector="clinica" aria-pressed="false">Clínica</button>
         <button type="button" data-sector="gimnasio" aria-pressed="false">Gimnasio</button>
       </div>
-      <div class="chat reveal reveal-delay-2" id="demoChat" data-ui>
-      <div class="chat-head"><span class="chat-avatar" aria-hidden="true">L</span><div><strong>La Terraza · Restaurante</strong><span>en línea</span></div></div>
-      <div class="chat-body">
-        <div class="msg in shown">Hola, ¿tienen mesa para 4 mañana a las 21:00?<time>23:48</time></div>
-        <div class="msg out shown">¡Hola! Sí, nos queda mesa para 4 a las 21:00, en la terraza o en el salón. ¿Cuál prefieres?<time>23:48</time></div>
-        <div class="msg in shown">Terraza. A nombre de Laura.<time>23:49</time></div>
-        <div class="msg out shown">Listo, Laura: mesa para 4 mañana a las 21:00 en la terraza. Te mando un recordatorio mañana a las 18:00. ¿Alguna alergia que debamos saber?<time>23:49</time></div>
-        <div class="msg in shown">Sin gluten, gracias<time>23:50</time></div>
-        <div class="msg out shown">Anotado, avisamos a cocina. ¡Hasta mañana!<time>23:50</time></div>
+      <div class="phone" data-ui>
+        <div class="phone-status" aria-hidden="true"><span class="phone-time">23:48</span><span class="phone-icons"><svg viewBox="0 0 16 12"><path fill="currentColor" d="M0 9h2v3H0zM4 6h2v6H4zM8 3h2v9H8zM12 0h2v12h-2z"/></svg><svg viewBox="0 0 16 12"><path fill="currentColor" d="M8 2.4c2.6 0 4.9 1 6.6 2.7l-1.3 1.3A7.5 7.5 0 0 0 8 4.3a7.5 7.5 0 0 0-5.3 2.1L1.4 5.1A9.3 9.3 0 0 1 8 2.4zm0 3.6c1.6 0 3 .6 4.1 1.7l-1.3 1.3A4 4 0 0 0 8 7.9a4 4 0 0 0-2.8 1.1L3.9 7.7A5.8 5.8 0 0 1 8 6zm0 3.6c.7 0 1.3.3 1.7.7L8 12l-1.7-1.7c.4-.4 1-.7 1.7-.7z"/></svg><svg viewBox="0 0 24 12"><rect x=".5" y=".5" width="20" height="11" rx="2.5" fill="none" stroke="currentColor"/><rect x="2" y="2" width="16" height="8" rx="1.5" fill="currentColor"/><path fill="currentColor" d="M22 4v4a2 2 0 0 0 0-4z"/></svg></span></div>
+        <div class="chat" id="demoChat">
+          <div class="chat-head"><span class="chat-back" aria-hidden="true">&lsaquo;</span><span class="chat-avatar" aria-hidden="true">L</span><div class="chat-who"><strong>La Terraza &middot; Restaurante</strong><span class="chat-status">en l&iacute;nea</span></div><span class="chat-tools" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10 5-3v10l-5-3z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span></div>
+          <div class="chat-body">
+            <div class="chat-day">Hoy</div>
+            <div class="chat-lock">Los mensajes est&aacute;n cifrados de extremo a extremo.</div>
+            <div class="msg in shown"><span class="msg-text">Hola, &iquest;tienen mesa para 4 ma&ntilde;ana a las 21:00?</span><time>23:45</time></div>
+            <div class="msg out shown read"><span class="msg-text">&iexcl;Hola! S&iacute;, nos queda mesa para 4 a las 21:00. &iquest;D&oacute;nde prefieres?</span><time>23:45<i class="ticks" aria-hidden="true"></i></time><span class="msg-buttons"><span class="tapped">Terraza</span><span>Sal&oacute;n</span></span></div>
+            <div class="msg in reply shown"><span class="msg-text">Terraza</span><time>23:46</time></div>
+            <div class="msg in shown"><span class="msg-text">A nombre de Laura.</span><time>23:46</time></div>
+            <div class="msg out shown read"><span class="msg-text">Listo, Laura: mesa para 4 ma&ntilde;ana a las 21:00 en la terraza. Te mando un recordatorio ma&ntilde;ana a las 18:00. &iquest;Alguna alergia que debamos saber?</span><time>23:46<i class="ticks" aria-hidden="true"></i></time></div>
+            <div class="msg in shown"><span class="msg-text">Sin gluten, gracias</span><time>23:47</time></div>
+            <div class="msg out shown read"><span class="msg-text">Anotado, avisamos a cocina. &iexcl;Hasta ma&ntilde;ana!</span><time>23:47<i class="ticks" aria-hidden="true"></i></time></div>
+          </div>
+          <div class="chat-input" aria-hidden="true"><span class="chat-input-field">Mensaje</span><span class="chat-mic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 15a4 4 0 0 0 4-4V6a4 4 0 0 0-8 0v5a4 4 0 0 0 4 4zm6-4a6 6 0 0 1-12 0H4a8 8 0 0 0 7 7.9V22h2v-3.1A8 8 0 0 0 20 11z"/></svg></span></div>
+        </div>
       </div>
-      <div class="chat-sys">Reserva guardada en el CRM · Recordatorio programado para mañana a las 18:00</div>
-    </div>
+      <div class="crm-toast" id="crmToast" data-ui aria-live="polite"><p class="crm-label">Guardado en el CRM</p><strong>Laura &middot; Mesa para 4</strong><p>Ma&ntilde;ana 21:00 &middot; Terraza &middot; Sin gluten</p><p>Recordatorio autom&aacute;tico: ma&ntilde;ana a las 18:00</p></div>
       <p class="demo-note">Conversación de ejemplo. Nombres, horas y precios son ilustrativos; el flujo (responder, consultar, agendar y registrar en el CRM) es lo que hace el agente.</p>
     </div>
   </div>
@@ -315,18 +324,16 @@
       <h2 class="section-title">Del An&aacute;lisis a la <span class="text-gradient">Optimizaci&oacute;n Continua</span></h2>
       <p class="section-desc">Un modelo de trabajo estructurado para velocidad, claridad e impacto duradero. Cada paso es medible.</p>
     </div>
-    <div class="stage-bar reveal reveal-delay-1" data-ui>
-      <div class="stage s1" style="--w:1.5"><span>1 a 2 semanas</span><strong>An&aacute;lisis</strong></div>
-      <div class="stage s2" style="--w:1.5"><span>1 a 2 semanas</span><strong>Redise&ntilde;o</strong></div>
-      <div class="stage s3" style="--w:5"><span>4 a 6 semanas</span><strong>Implementaci&oacute;n</strong></div>
-      <div class="stage s4" style="--w:3"><span>Continuo, cada mes</span><strong>Optimizaci&oacute;n continua</strong></div>
+    <div class="gantt reveal reveal-delay-1" data-ui>
+      <div class="gantt-head"><span class="gantt-corner">Etapa</span><div class="gantt-ruler" aria-hidden="true"><span>Sem. 1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span class="gantt-inf">en adelante</span></div></div>
+      <ol class="gantt-rows">
+      <li class="gantt-row" style="--s:0;--e:2"><div class="gantt-text"><h3>An&aacute;lisis de Oportunidades de IA</h3><p>Evaluamos tus operaciones, identificamos objetivos de automatizaci&oacute;n y cuantificamos el ROI potencial.</p><span class="gantt-dur">1 a 2 semanas</span></div><div class="gantt-track"><span class="gantt-bar"><i>1 a 2 semanas</i></span></div></li>
+      <li class="gantt-row" style="--s:2;--e:4"><div class="gantt-text"><h3>Redise&ntilde;o de Procesos</h3><p>Dise&ntilde;amos nuevos flujos que integran IA de forma nativa, eliminando ineficiencias y maximizando rendimiento.</p><span class="gantt-dur">1 a 2 semanas</span></div><div class="gantt-track"><span class="gantt-bar"><i>1 a 2 semanas</i></span></div></li>
+      <li class="gantt-row" style="--s:4;--e:9.5"><div class="gantt-text"><h3>Implementaci&oacute;n del Sistema</h3><p>Nuestro equipo desarrolla, prueba e implementa sistemas de IA en tu infraestructura existente sin interrupciones.</p><span class="gantt-dur">4 a 6 semanas</span></div><div class="gantt-track"><span class="gantt-mark"><span>Primer resultado</span></span><span class="gantt-bar"><i>4 a 6 semanas</i></span></div></li>
+      <li class="gantt-row gantt-row--inf" style="--s:9.5;--e:12"><div class="gantt-text"><h3>Optimizaci&oacute;n Continua</h3><p>Monitoreamos rendimiento, refinamos modelos y expandimos la automatizaci&oacute;n conforme evoluciona tu organizaci&oacute;n.</p><span class="gantt-dur">Continuo, cada mes</span></div><div class="gantt-track"><span class="gantt-bar"><i>Continuo</i></span></div></li>
+      </ol>
+      <p class="gantt-note">Semanas desde la primera llamada. El primer resultado medible llega antes de la octava.</p>
     </div>
-    <ol class="stages reveal reveal-delay-2">
-      <li class="process-step" style="--w:1.5"><h3>An&aacute;lisis de Oportunidades de IA</h3><p>Evaluamos tus operaciones, identificamos objetivos de automatizaci&oacute;n y cuantificamos el ROI potencial.</p></li>
-      <li class="process-step" style="--w:1.5"><h3>Redise&ntilde;o de Procesos</h3><p>Dise&ntilde;amos nuevos flujos que integran IA de forma nativa, eliminando ineficiencias y maximizando rendimiento.</p></li>
-      <li class="process-step" style="--w:5"><h3>Implementaci&oacute;n del Sistema</h3><p>Nuestro equipo desarrolla, prueba e implementa sistemas de IA en tu infraestructura existente sin interrupciones.</p></li>
-      <li class="process-step" style="--w:3"><h3>Optimizaci&oacute;n Continua</h3><p>Monitoreamos rendimiento, refinamos modelos y expandimos la automatizaci&oacute;n conforme evoluciona tu organizaci&oacute;n.</p></li>
-    </ol>
   </div>
 </section>
 
@@ -768,7 +775,7 @@ window.showLangModal = showLangModal;
 </script>
 <script src="../js/main.js?v=7"></script>
 <script defer src="../js/booking.js?v=2"></script>
-<script defer src="../js/demo-chat.js?v=2"></script>
+<script defer src="../js/demo-chat.js?v=3"></script>
 
 
 

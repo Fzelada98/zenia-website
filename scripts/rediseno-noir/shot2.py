@@ -13,6 +13,10 @@ with sync_playwright() as p:
         pg.get_by_role("button", name="Aceptar").first.click(timeout=1500)
     except Exception:
         pass
+    try:
+        pg.evaluate("document.getElementById('demoChat').scrollIntoView({block:'center'})")
+    except Exception:
+        pass
     time.sleep(wait)
     y, h = 0, pg.evaluate("document.body.scrollHeight")
     while y < h:

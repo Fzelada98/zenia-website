@@ -72,6 +72,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 500; line-heigh
 h1 { font-size: var(--t-display); line-height: 0.98; letter-spacing: -0.025em; }
 h2 { font-size: var(--t-h2); line-height: 1.02; }
 h3 { font-size: var(--t-h3); line-height: 1.15; }
+h1 br, h2 br { display: none; }
 p { max-width: 62ch; }
 a { color: inherit; text-decoration: none; }
 a:hover { text-decoration: underline; text-underline-offset: 0.15em; }
@@ -135,8 +136,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
    izquierda y la acción abajo a la derecha, sobre la misma línea. */
 .hero { position: relative; padding: clamp(40px, 6vw, 88px) 0 clamp(24px, 3vw, 40px); display: flex; align-items: flex-start; overflow: visible; }
 .hero .container { width: 100%; display: grid; grid-template-columns: repeat(12, var(--col)); column-gap: 24px; row-gap: 28px; text-align: left; position: static; z-index: auto; }
-.hero h1 { grid-column: 1 / -1; max-width: none; margin: 0 0 clamp(24px, 5vw, 72px); font-family: var(--serif); font-size: clamp(2.25rem, 4.4vw, 3.75rem); }
-.hero-portada h1 { font-size: var(--t-display); }
+.hero h1 { grid-column: 1 / -1; max-width: none; margin: 0 0 clamp(24px, 5vw, 72px); font-family: var(--serif); }
 .hero-subtitle { grid-column: 1 / 8; font-size: var(--t-lead); line-height: 1.4; max-width: 40ch; margin: 0; color: var(--ink); align-self: end; }
 .hero-actions { grid-column: 9 / -1; display: flex; flex-direction: column; align-items: stretch; gap: 12px; justify-self: end; min-width: 300px; margin: 0; align-self: end; }
 .hero-actions .btn { width: 100%; }
@@ -486,7 +486,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 /* Teléfono */
 @media (max-width: 768px) {
   :root { --gap: clamp(72px, 18vw, 112px); }
-  h1, .hero h1 { font-size: 2rem; }
+  h1 { font-size: 2rem; }
   h2, .section-title { font-size: clamp(1.5rem, 6.6vw, 1.75rem); }
   .section { padding: var(--gap) 0; }
   .nav-inner { height: 72px; }
@@ -542,7 +542,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   .price-overlap { width: 40%; top: -12%; font-size: 0.8125rem; }
 }
 @media (max-width: 480px) {
-  html[lang="en"] .hero-portada h1 { font-size: 1.75rem; }
+  html[lang="en"] .hero h1 { font-size: 1.75rem; }
   .footer-columns { grid-template-columns: 1fr; }
   .demo-switch button { flex: 1; padding: 0 12px; }
   .opp-card h3 { font-size: 1.625rem; }

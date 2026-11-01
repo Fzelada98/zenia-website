@@ -3,6 +3,15 @@
   "market": "US/UK small business",
   "posts": [
     {
+      "slug": "crm-whatsapp-integration",
+      "keyword": "crm whatsapp integration",
+      "tier": 0,
+      "cluster": "whatsapp-crm",
+      "status": "published",
+      "date": "2026-11-01",
+      "note": "striking-loop hit: 25 impressions, pos 21.8 (en-market). Spanish page /blog/integrar-crm-con-whatsapp-business.html was printing for an English query. Dedicated English version published with US/UK pricing, HubSpot/Salesforce/Zoho native comparison, and 2-week rollout; cross-link added from the Spanish page with 'crm whatsapp integration' anchor."
+    },
+    {
       "slug": "ai-receptionist-for-coffee-shops",
       "keyword": "ai receptionist for coffee shops",
       "tier": 0,

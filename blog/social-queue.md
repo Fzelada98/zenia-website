@@ -9970,3 +9970,19 @@ Teardown of the four formats (QR, tablet, app, WhatsApp-integrated), real 2026 c
 #RestaurantTech #WhatsAppBusinessAPI #SystemsEngineering #AI #B2B
 
 ---
+
+## 2026-11-01 - CRM WhatsApp Integration: 2026 US & UK Playbook (EN)
+
+Field notes from a 90-day CRM WhatsApp integration delivered on HubSpot Service Hub Professional for a 14-person US services operator (pest control, TX).
+
+Stack: HubSpot native WhatsApp connector (one Business Unit, one Meta-registered number), 360dialog as fallback BSP for template approvals and traffic observability, six Meta-approved templates (new-lead confirm, quote-sent follow-up, T-24h and T-2h appointment reminders, post-service review ask, 60-day re-engagement), an LLM tool-use agent owned outside the BSP so BSP swaps do not nuke flows, Click-to-WhatsApp referral ID carried from Meta Ads straight into HubSpot deal properties. Opt-in records written to the CRM on every form, QR and POS capture so marketing templates are provable.
+
+Two engineering details that matter: templates were split by Meta category (marketing / utility / authentication) and priced per message against the 2026 US rate card (~$0.025 marketing, ~$0.004 utility, ~$0.0135 auth), not the retired per-conversation model; and the 24h service window boundary was handled as an explicit state in the agent loop, downgrading free-form LLM output to the nearest approved utility template when the window closed, with the opt-out path respected across every surface.
+
+90-day production numbers: median first reply 38s on business hours (from 47min), quote-to-close 22%->34%, 41 reactivated customers in the 60-day window (~$7.5k attributable), monthly WhatsApp spend held at $218 all-in.
+
+Full breakdown with HubSpot/Salesforce/Zoho native-vs-connector matrix, 2026 pricing, 7 integration patterns and 10-business-day rollout: https://zeniapartners.com/blog/crm-whatsapp-integration.html
+
+#WhatsAppBusinessAPI #CRM #HubSpot #SystemsEngineering #B2B
+
+---

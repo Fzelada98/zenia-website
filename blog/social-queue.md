@@ -9940,3 +9940,19 @@ Full breakdown with pricing in EUR/CLP, 5-week rollout and the integration matri
 #WhatsAppBusinessAPI #RestaurantTech #SystemsEngineering #AI #B2B
 
 ---
+
+## 2026-11-01 - AI Agent for Tree Service Companies (EN)
+
+Field notes from three US tree service deployments (3-9 crews, residential-heavy, some light commercial).
+
+Stack: Twilio voice + SMS for the dedicated local number, Meta WhatsApp Business Cloud API for the Hispanic residential segment, GBP Messages API ingestion, an LLM tool-use loop fenced to typed function calls (price_lookup by DBH + height + access, check_calendar by ZIP and crew type, hazard_classify), two-way REST sync with Arborgold, ArboStar, SingleOps or Jobber. Every conversation logged with intent, hazard tag, revenue attribution and crew board state at write-time.
+
+Two numbers that stood out under load: p95 first-message latency on WhatsApp at 1.3s, and bid-with-three-route-aware-slots delivered end-to-end in under 7s (pricing book lookup + calendar read + drive-time scoring + LLM response). Across the three ops, voicemail rate collapsed from 44-51% to 6-9% and estimate-to-booked-job moved 29-35% to 36-42% over 90 days. The after-hours slice ran heavier: jobs booked outside 8-5 moved from 9-13% to 26-32%, concentrated in storm Thursdays.
+
+Hardest piece was not the model. It was collapsing a bid book (DBH buckets x height buckets x access modifier x haul-away toggle), a dispatch calendar and the FSM's opportunity schema into one deterministic tool surface the agent could call without quoting an $800 removal on a $4,200 crane job.
+
+Full write-up: https://zeniapartners.com/blog/ai-agent-for-tree-service-companies.html
+
+#WhatsAppBusinessAPI #FieldServiceSoftware #SystemsEngineering #AI #B2B
+
+---

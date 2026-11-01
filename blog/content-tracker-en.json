@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-10-31T09:00Z",
+  "lastRun": "2026-11-01T09:00Z",
   "market": "US/UK small business",
   "posts": [
     {
@@ -1177,7 +1177,8 @@
       "keyword": "ai agent for tree service companies",
       "tier": 2,
       "cluster": "trades",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-11-01"
     },
     {
       "slug": "ai-agent-for-irrigation-companies",

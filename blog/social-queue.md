@@ -9924,3 +9924,19 @@ Full write-up: https://zeniapartners.com/blog/reactivar-clientas-inactivas-estet
 #WhatsAppBusinessAPI #CRM #SystemsEngineering #AI #B2B
 
 ---
+
+## 2026-11-01 - Automatización restaurantes Santiago
+
+Shipping an AI reservation agent for Santiago restaurants on top of WhatsApp Business API.
+
+Reference stack: Meta Cloud API webhooks into a NestJS worker, function-calling LLM fenced to a typed tool schema (check_availability, hold_slot, book_reservation, modify, cancel, add_to_waitlist, escalate_to_human) so the agent cannot propose a slot outside live capacity; thin adapters for CoverManager, TheFork and Resy keyed on phone + reservation_id; Postgres CRM with per-channel attribution (WhatsApp, IG DM, inbound call, web); dynamic waitlist worker that rebooks a canceled table in 11-18 minutes median.
+
+Non-trivial parts: idempotent reservation writes across duplicate inbound webhooks under 40 msg/min load; graceful downgrade from free-form LLM to Meta-approved utility templates when the 24h conversation window closes; and a 24h confirm/modify/cancel button pattern that cut no-show from 12-14% to 6-8% in the first four weeks, trending toward CoverManager's SMS-reconfirm benchmark of 1.52% on 9,500 restaurants in Spain.
+
+Deployed SLAs, October 2026: median first reply 1.1s, p95 2.7s, 92-96% agent-only resolution on reservation flow, utility conversation cost held at Meta's LATAM rate card.
+
+Full breakdown with pricing in EUR/CLP, 5-week rollout and the integration matrix with CoverManager/TheFork/Resy: https://zeniapartners.com/blog/automatizacion-para-restaurantes-en-santiago.html
+
+#WhatsAppBusinessAPI #RestaurantTech #SystemsEngineering #AI #B2B
+
+---

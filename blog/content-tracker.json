@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-10-31T22:11:39.140411+00:00",
+  "lastRun": "2026-11-01T06:11:42.257433+00:00",
   "posts": [
     {
       "slug": "reactivar-clientas-inactivas-estetica",
@@ -4664,6 +4664,15 @@
       "cluster": "restaurantes-whatsapp",
       "status": "published",
       "date": "2026-10-28"
+    },
+    {
+      "slug": "automatizacion-para-restaurantes-en-santiago",
+      "keyword": "automatizacion para restaurantes en santiago",
+      "tier": 4,
+      "cluster": "restaurantes-city",
+      "status": "published",
+      "source": "matrix-tier4-gap",
+      "date": "2026-11-01"
     }
   ]
 }

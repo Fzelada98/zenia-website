@@ -1,7 +1,7 @@
 # DESIGN.md: zeniapartners.com
 
 Sistema de diseño de la web de Zenia Partners desde el 31 de octubre de 2026 (hoja de estilos
-`styles/main.css` v10). Cualquier agente o persona que toque la web lee esto antes de escribir
+`styles/main.css` v11). Cualquier agente o persona que toque la web lee esto antes de escribir
 HTML o CSS. Lo que no aparece aquí se decide con las reglas de la casa de Taste Skill (sin
 degradados, sin sombras en reposo, sin cristal, sin etiquetas pequeñas en mayúsculas, sin
 numeración decorativa, sin tarjetas con icono, titulares de dos líneas como máximo).
@@ -108,4 +108,4 @@ node ~/.claude/skills/design-taste-frontend/scripts/inspect.mjs https://zeniapar
 ```
 
 Mirar las capturas a 1440, 768 y 390 px antes de dar nada por bueno. Al cambiar `main.css`,
-subir `?v=N` en los `<link>` de las dos portadas (GitHub Pages cachea unos diez minutos).
+subir `?v=N` (hoy v11) en los `<link>` de las dos portadas (GitHub Pages cachea unos diez minutos).

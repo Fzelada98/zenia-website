@@ -1,0 +1,22 @@
+/* Variante C: navy y azul de marca */
+:root { --paper: #0B1220; --paper-2: #111A2C; --paper-3: #1A2540; --nav-bg: rgba(11, 18, 32, 0.86);
+  --accent: #5B8CFF; --accent-deep: #2563EB; --accent-light: #8DB3FF; --accent-text: #8DB3FF;
+  --accent-pale: rgba(91, 140, 255, 0.18); --accent-on-ink: #8DB3FF; --on-accent: #ffffff;
+  --line: rgba(91, 140, 255, 0.2); --line-strong: rgba(91, 140, 255, 0.45);
+  --halo: rgba(91, 140, 255, 0.14); --halo-2: rgba(91, 140, 255, 0.04); --ring: rgba(91, 140, 255, 0.16); }
+html, body { background: var(--paper); }
+svg.zenia-mark path:first-of-type { fill: #3B82F6; }
+svg.zenia-mark path:last-of-type { fill: #5B8CFF; }
+.chat { background: rgba(17, 26, 44, 0.72); border-color: rgba(91, 140, 255, 0.25); }
+.chat-head { background: rgba(91, 140, 255, 0.08); }
+.chat-avatar { background: rgba(91, 140, 255, 0.12); }
+.msg.out { background: rgba(91, 140, 255, 0.2); }
+.btn-primary, .cta-actions .btn-primary, .booking-submit, .demo-switch button[aria-pressed="true"], .stage.s1 { background: var(--accent-deep); color: #fff; }
+.btn-primary:hover, .cta-actions .btn-primary:hover, .booking-submit:hover { background: #1D4ED8; }
+.stage.s2 { background: #1D4ED8; color: #fff; }
+.stage.s3 { background: rgba(91, 140, 255, 0.22); border-color: var(--line); }
+.service-card--featured { background: rgba(91, 140, 255, 0.07); }
+.service-card--featured:hover { background: rgba(91, 140, 255, 0.1); }
+.price-hero { background: rgba(91, 140, 255, 0.06); }
+#cookieBanner button:first-child { background: var(--accent-deep) !important; color: #fff !important; }
+.footer, body > div:has(> a[href$="cobertura.html"]) { background: #080D18 !important; }

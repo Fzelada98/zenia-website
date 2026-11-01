@@ -107,7 +107,9 @@
     current = key;
     var d = DATA[lang()][key];
     head.querySelector('strong').textContent = d.name;
-    head.querySelector('span').textContent = d.status;
+    head.querySelector('strong + span').textContent = d.status;
+    var av = head.querySelector('.chat-avatar');
+    if (av) av.textContent = d.name.charAt(0);
     sys.textContent = d.sys;
     body.innerHTML = '';
     var typing = document.createElement('div');

@@ -9956,3 +9956,17 @@ Full write-up: https://zeniapartners.com/blog/ai-agent-for-tree-service-companie
 #WhatsAppBusinessAPI #FieldServiceSoftware #SystemsEngineering #AI #B2B
 
 ---
+
+## 2026-11-01 - Carta Digital Restaurante: Formatos y Coste 2026 (ES)
+
+A restaurant menu lives in four places now: the QR, the tablet, the POS and WhatsApp. Keeping them in sync is the actual engineering problem, not "which menu platform to buy".
+
+Reference topology we deploy on top of the restaurant's existing stack (CoverManager, TheFork, Resy, Toast, Agora or custom POS): one canonical menu schema in the CRM, QR a web rendered server-side from that schema, Meta Cloud API agent reading the same schema with typed tool calls (get_menu_section, check_allergens, hold_slot, place_order, send_pay_link), and POS write-back idempotent on conversation id so a guest hitting QR + WhatsApp in 20s does not double-order.
+
+Non-trivial parts: menu diff propagation under 2s across all four surfaces, allergen tagging normalized to EU 1169/2011 so the agent cannot invent "gluten-free" labels, and the Spanish Consumo rule that forbids QR-only menus (so a physical fallback is a product requirement, not a nice-to-have). Deployed SLA: p50 agent latency on menu queries 820ms, p99 on order writes 2.1s, zero duplicate orders in 90 days of production traffic.
+
+Teardown of the four formats (QR, tablet, app, WhatsApp-integrated), real 2026 cost ranges and the integration points: https://zeniapartners.com/blog/carta-digital-restaurante-formatos-coste.html
+
+#RestaurantTech #WhatsAppBusinessAPI #SystemsEngineering #AI #B2B
+
+---

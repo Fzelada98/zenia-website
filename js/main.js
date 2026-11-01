@@ -34,8 +34,15 @@ var observer = new IntersectionObserver(function(entries) {
       observer.unobserve(entry.target);
     }
   });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+}, { threshold: 0.05, rootMargin: '0px 0px 160px 0px' });
 document.querySelectorAll('.reveal').forEach(function(el) { observer.observe(el); });
+// Red de seguridad (31-oct-2026): lo que el observador no haya mostrado a los 5 s de cargar
+// se muestra igual (impresión, páginas muy largas, lectores que saltan al final).
+window.addEventListener('load', function() {
+  setTimeout(function() {
+    document.querySelectorAll('.reveal:not(.visible)').forEach(function(el) { el.classList.add('visible'); });
+  }, 5000);
+});
 
 // Smooth scroll for anchor links (offset for fixed nav)
 var navHeight = nav ? nav.offsetHeight : 72;

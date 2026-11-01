@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>document.documentElement.classList.add('js')</script>
 
 <!-- Google Analytics 4 -->
 <script>
@@ -52,7 +53,7 @@
 <!-- SEO: Additional meta -->
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name="author" content="ZENIA">
-<meta name="theme-color" content="#0A0F1C">
+<meta name="theme-color" content="#F4F4F1">
 <meta name="keywords" content="CRM con IA, CRM para PYMEs Espa&ntilde;a, CRM WhatsApp, CRM restaurantes, CRM gimnasios, CRM cl&iacute;nicas, CRM hoteles, automatizaci&oacute;n WhatsApp, agente IA ventas, CRM Madrid, CRM Barcelona">
 
 <!-- SEO: JSON-LD Structured Data -->
@@ -70,22 +71,28 @@
 <!-- Google Fonts: async load to avoid render-blocking -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet"></noscript>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=Space+Grotesk:wght@700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet"></noscript>
 
 <!-- Stylesheet -->
-<link rel="stylesheet" href="../styles/main.css?v=9">
-<link rel="stylesheet" href="/es/styles/landing-es.css">
+<link rel="stylesheet" href="../styles/main.css?v=10">
 <script type="application/ld+json" data-zenia-org="1">{"@context": "https://schema.org", "@type": ["Organization", "ProfessionalService"], "@id": "https://zeniapartners.com/#organizacion", "name": "Zenia Partners", "alternateName": "Zenia", "url": "https://zeniapartners.com/", "logo": "https://zeniapartners.com/assets/logos/zenia-logo.png", "image": "https://zeniapartners.com/assets/logos/zenia-logo.png", "description": "Zenia Partners es una agencia de inteligencia artificial que implementa agentes de IA sobre WhatsApp y CRM para pequeñas y medianas empresas en España y Latinoamérica. El agente atiende consultas, agenda citas, confirma reservas y recupera clientes inactivos las 24 horas, integrado con las herramientas que la empresa ya usa.", "email": "fabrizzio.zelada@zeniapartners.com", "founder": {"@type": "Person", "name": "Fabrizzio Zelada Uriarte"}, "sameAs": ["https://www.linkedin.com/company/zenia-partners/", "https://www.instagram.com/zeniapartners"], "areaServed": [{"@type": "Country", "name": "España"}, {"@type": "Country", "name": "Perú"}, {"@type": "Country", "name": "México"}, {"@type": "Country", "name": "Colombia"}, {"@type": "Country", "name": "Chile"}, {"@type": "Country", "name": "Argentina"}, {"@type": "Country", "name": "Ecuador"}, {"@type": "Country", "name": "Uruguay"}, {"@type": "Country", "name": "Bolivia"}], "knowsAbout": ["agentes de IA", "automatización de WhatsApp", "WhatsApp Business API", "CRM con inteligencia artificial", "automatización de citas y reservas", "recuperación de clientes inactivos", "atención al cliente 24/7"], "slogan": "Agentes de IA y CRM con WhatsApp para PyMEs", "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Servicios de Zenia Partners", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Agente de IA por WhatsApp", "description": "Agente conversacional propio sobre WhatsApp Business API que responde, cualifica y agenda 24/7 con el tono de cada negocio."}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "CRM con inteligencia artificial", "description": "CRM implantado y conectado al agente, con ficha de cliente, historial y seguimiento automático."}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Automatización de citas y reservas", "description": "Agenda, confirmaciones y recordatorios automáticos para reducir las ausencias a las citas."}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Recuperación de clientes inactivos", "description": "Campañas automáticas que reactivan a clientes que llevan meses sin comprar."}}]}}</script>
 </head>
 <body>
 
 <a href="#opportunities" class="skip-to-content">Ir al contenido</a>
+<div id="cookieBanner" style="display:none;position:static;background:#E8E8E3;color:#0F172A;padding:14px clamp(20px,3.2vw,48px);z-index:1;font-family:-apple-system,BlinkMacSystemFont,'Helvetica Neue',Helvetica,'Segoe UI',Roboto,Arial,sans-serif;font-size:14px;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+  <p style="margin:0;flex:1;min-width:240px;line-height:1.5;">Usamos cookies para anal&iacute;tica (Google Analytics) y mejorar tu experiencia. No compartimos datos con terceros. <a href="/privacy/" style="color:#1D4ED8;text-decoration:underline;">Pol&iacute;tica de privacidad</a></p>
+  <div style="display:flex;gap:8px;flex-shrink:0;">
+    <button onclick="acceptCookies()" style="background:#2563EB;color:#fff;border:0;padding:10px 20px;border-radius:0;font-size:14px;font-weight:600;cursor:pointer;">Aceptar</button>
+    <button onclick="rejectCookies()" style="background:none;color:#0F172A;border:0;padding:10px 12px;font-size:14px;text-decoration:underline;cursor:pointer;">Rechazar</button>
+  </div>
+</div>
 
 <!-- NAV -->
 <nav class="nav" id="nav">
   <div class="nav-inner">
-    <a href="/es/" class="nav-logo"><svg class="zenia-mark" viewBox="0 0 140 140" fill="none"><defs><linearGradient id="zg-b" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2563EB"/><stop offset="100%" stop-color="#3B82F6"/></linearGradient><linearGradient id="zg-v" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6366F1"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient></defs><rect width="140" height="140" rx="28" fill="#0F172A"/><path d="M 70 18 Q 18 18 18 38 L 18 57 Q 18 63 24 63 L 88 63 Z" fill="url(#zg-b)"/><path d="M 70 122 Q 122 122 122 102 L 122 83 Q 122 77 116 77 L 52 77 Z" fill="url(#zg-v)"/></svg><span class="nav-logo-text">ZENIA</span></a>
+    <a href="/es/" class="nav-logo"><!-- taste-skill-ignore: símbolo de la marca --><svg class="zenia-mark" viewBox="0 0 140 140" fill="none"><defs><linearGradient id="zg-b" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2563EB"/><stop offset="100%" stop-color="#3B82F6"/></linearGradient><linearGradient id="zg-v" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6366F1"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient></defs><rect width="140" height="140" rx="28" fill="#0F172A"/><path d="M 70 18 Q 18 18 18 38 L 18 57 Q 18 63 24 63 L 88 63 Z" fill="url(#zg-b)"/><path d="M 70 122 Q 122 122 122 102 L 122 83 Q 122 77 116 77 L 52 77 Z" fill="url(#zg-v)"/></svg><span class="nav-logo-text">ZENIA</span></a>
     <ul class="nav-links">
       <li><a href="#opportunities">Oportunidades IA</a></li>
       <li><a href="#services">Servicios</a></li>
@@ -105,10 +112,9 @@
 
 <!-- HERO -->
 <section class="hero" id="hero">
-  <div class="hero-bg"><canvas id="glsl-canvas"></canvas><div class="hero-bg-top"></div></div>
+  
   <div class="container">
-    <div class="hero-badge reveal">CRM + WhatsApp + IA para PYMEs en Espa&ntilde;a</div>
-    <h1 class="reveal reveal-delay-1">CRM con IA y WhatsApp<br><span class="text-gradient">para PYMEs en Espa&ntilde;a</span></h1>
+    <h1 class="reveal reveal-delay-1">CRM con IA y WhatsApp <span class="text-gradient">para PYMEs en Espa&ntilde;a</span></h1>
     <p class="hero-subtitle reveal reveal-delay-2">Automatiza ventas, fidelizaci&oacute;n y atenci&oacute;n al cliente con un CRM inteligente y agentes IA por WhatsApp. Resultados medibles en 4 semanas para restaurantes, gimnasios, cl&iacute;nicas, hoteles, retail y m&aacute;s.</p>
     <div class="hero-actions reveal reveal-delay-3">
       <a href="#" onclick="openCalendly(event)" class="btn btn-primary btn-arrow">Agenda una Llamada Gratis</a>
@@ -128,48 +134,69 @@
     </div>
   </div>
 </section>
+<!-- DEMO: la conversación del agente -->
+<section class="demo" id="demo">
+  <div class="container">
+    <div class="demo-text reveal">
+      <h2>Lo que hace el agente a las 23:48, cuando ya cerraste</h2>
+      <p class="demo-lead">Un cliente escribe fuera de horario. El agente responde con tu tono, consulta disponibilidad, agenda y lo deja todo en el CRM. Elige un negocio para ver cómo va la conversación.</p>
+      <div class="demo-switch" role="group" aria-label="Tipo de negocio">
+        <button type="button" data-sector="restaurante" aria-pressed="true">Restaurante</button>
+        <button type="button" data-sector="clinica" aria-pressed="false">Clínica</button>
+        <button type="button" data-sector="gimnasio" aria-pressed="false">Gimnasio</button>
+      </div>
+      <p class="demo-note">Conversación de ejemplo. Nombres, horas y precios son ilustrativos; el flujo (responder, consultar, agendar y registrar en el CRM) es lo que hace el agente.</p>
+    </div>
+    <div class="chat reveal reveal-delay-2" id="demoChat" data-ui>
+      <div class="chat-head"><div><strong>La Terraza · Restaurante</strong><span>en línea</span></div></div>
+      <div class="chat-body">
+        <div class="msg in shown">Hola, ¿tienen mesa para 4 mañana a las 21:00?<time>23:48</time></div>
+        <div class="msg out shown">¡Hola! Sí, nos queda mesa para 4 a las 21:00, en la terraza o en el salón. ¿Cuál prefieres?<time>23:48</time></div>
+        <div class="msg in shown">Terraza. A nombre de Laura.<time>23:49</time></div>
+        <div class="msg out shown">Listo, Laura: mesa para 4 mañana a las 21:00 en la terraza. Te mando un recordatorio mañana a las 18:00. ¿Alguna alergia que debamos saber?<time>23:49</time></div>
+        <div class="msg in shown">Sin gluten, gracias<time>23:50</time></div>
+        <div class="msg out shown">Anotado, avisamos a cocina. ¡Hasta mañana!<time>23:50</time></div>
+      </div>
+      <div class="chat-sys">Reserva guardada en el CRM · Recordatorio programado para mañana a las 18:00</div>
+    </div>
+  </div>
+</section>
+
 
 <!-- OPORTUNIDADES IA -->
 <section class="opportunities" id="opportunities">
   <div class="container">
     <div class="text-center reveal">
-      <span class="section-label">Oportunidades IA</span>
-      <h2 class="section-title">D&oacute;nde la IA Genera<br><span class="text-gradient">Valor de Negocio Inmediato</span></h2>
+      <h2 class="section-title">D&oacute;nde la IA Genera <span class="text-gradient">Valor de Negocio Inmediato</span></h2>
       <p class="section-desc">Estas son las &aacute;reas donde las empresas obtienen los retornos m&aacute;s r&aacute;pidos y significativos con la transformaci&oacute;n con IA.</p>
     </div>
     <div class="opp-grid">
       <div class="opp-card reveal reveal-delay-1">
-        <span class="opp-card-number">01</span>
         <div class="opp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
         <h3>Automatizaci&oacute;n Comercial</h3>
         <p>Calificaci&oacute;n de leads con IA, prospecci&oacute;n automatizada y anal&iacute;tica predictiva de pipeline que aceleran ingresos sin aumentar equipo.</p>
       </div>
       <div class="opp-card reveal reveal-delay-2">
-        <span class="opp-card-number">02</span>
         <div class="opp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
         <h3>Atenci&oacute;n al Cliente con IA</h3>
         <p>Agentes inteligentes que resuelven consultas al instante, escalan temas complejos y mejoran la satisfacci&oacute;n reduciendo costos.</p>
       </div>
       <div class="opp-card reveal reveal-delay-3">
-        <span class="opp-card-number">03</span>
         <div class="opp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
         <h3>Copilotos de Conocimiento Interno</h3>
         <p>Asistentes IA integrados en las herramientas diarias de tu equipo que encuentran informaci&oacute;n, redactan documentos y aceleran decisiones.</p>
       </div>
       <div class="opp-card reveal reveal-delay-1">
-        <span class="opp-card-number">04</span>
         <div class="opp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
         <h3>Automatizaci&oacute;n de Operaciones</h3>
         <p>Automatiza reportes, aprobaciones, agendas y coordinaci&oacute;n entre equipos. Elimina carga manual en todos los departamentos.</p>
       </div>
       <div class="opp-card reveal reveal-delay-2">
-        <span class="opp-card-number">05</span>
         <div class="opp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg></div>
         <h3>Soporte a Decisiones con IA</h3>
         <p>Anal&iacute;tica en tiempo real y modelos predictivos que dan a la direcci&oacute;n la claridad para tomar decisiones estrat&eacute;gicas m&aacute;s r&aacute;pidas.</p>
       </div>
       <div class="opp-card reveal reveal-delay-3">
-        <span class="opp-card-number">06</span>
         <div class="opp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
         <h3>Plataformas SaaS a Medida</h3>
         <p>Productos SaaS completos creados desde cero con IA en el centro. Dise&ntilde;ados para tu mercado, usuarios y modelo de negocio.</p>
@@ -181,15 +208,13 @@
   </div>
 </section>
 
-<hr class="section-divider">
 
 <!-- ENFOQUE -->
 <section class="tailor" id="tailor">
   <div class="container">
     <div class="tailor-content">
       <div class="tailor-text reveal">
-        <span class="section-label">Construido Desde Adentro</span>
-        <h2>Tu Empresa,<br><span class="text-gradient">Reconstruida Con Inteligencia</span></h2>
+        <h2>Tu Empresa, <span class="text-gradient">Reconstruida Con Inteligencia</span></h2>
         <p>No te entregamos una herramienta y nos vamos. Nos sumergimos en tus operaciones, entendemos tu negocio a un nivel que ning&uacute;n producto gen&eacute;rico podr&iacute;a, y construimos sistemas propietarios que se convierten en parte del ADN de tu empresa.</p>
         <div class="tailor-points">
           <div class="tailor-point">
@@ -236,14 +261,12 @@
   </div>
 </section>
 
-<hr class="section-divider">
 
 <!-- SERVICIOS -->
 <section class="section" id="services">
   <div class="container">
     <div class="reveal">
-      <span class="section-label">Qu&eacute; Hacemos</span>
-      <h2 class="section-title">Inteligencia Operacional,<br><span class="text-gradient">Dise&ntilde;ada con IA</span></h2>
+      <h2 class="section-title">Inteligencia Operacional, <span class="text-gradient">Dise&ntilde;ada con IA</span></h2>
       <p class="section-desc">Dise&ntilde;amos, desarrollamos e implementamos sistemas que transforman por completo c&oacute;mo opera tu organizaci&oacute;n.</p>
     </div>
     <div class="services-grid">
@@ -279,51 +302,38 @@
   </div>
 </section>
 
-<hr class="section-divider">
 
 <!-- PROCESO -->
-<section class="section" id="process">
-  <div class="container text-center">
+<section class="section process" id="process">
+  <div class="container">
     <div class="reveal">
-      <span class="section-label">C&oacute;mo Funciona</span>
-      <h2 class="section-title">Del An&aacute;lisis a la<br><span class="text-gradient">Optimizaci&oacute;n Continua</span></h2>
+      <h2 class="section-title">Del An&aacute;lisis a la <span class="text-gradient">Optimizaci&oacute;n Continua</span></h2>
       <p class="section-desc">Un modelo de trabajo estructurado para velocidad, claridad e impacto duradero. Cada paso es medible.</p>
     </div>
-    <div class="process-steps">
-      <div class="process-step reveal reveal-delay-1">
-        <div class="step-number">01</div>
-        <h3>An&aacute;lisis de Oportunidades de IA</h3>
-        <p>Evaluamos tus operaciones, identificamos objetivos de automatizaci&oacute;n y cuantificamos el ROI potencial.</p>
-      </div>
-      <div class="process-step reveal reveal-delay-2">
-        <div class="step-number">02</div>
-        <h3>Redise&ntilde;o de Procesos</h3>
-        <p>Dise&ntilde;amos nuevos flujos que integran IA de forma nativa, eliminando ineficiencias y maximizando rendimiento.</p>
-      </div>
-      <div class="process-step reveal reveal-delay-3">
-        <div class="step-number">03</div>
-        <h3>Implementaci&oacute;n del Sistema</h3>
-        <p>Nuestro equipo desarrolla, prueba e implementa sistemas de IA en tu infraestructura existente sin interrupciones.</p>
-      </div>
-      <div class="process-step reveal reveal-delay-4">
-        <div class="step-number">04</div>
-        <h3>Optimizaci&oacute;n Continua</h3>
-        <p>Monitoreamos rendimiento, refinamos modelos y expandimos la automatizaci&oacute;n conforme evoluciona tu organizaci&oacute;n.</p>
-      </div>
+    <div class="stage-bar reveal reveal-delay-1" data-ui>
+      <div class="stage s1" style="--w:1.5"><span>1 a 2 semanas</span></div>
+      <div class="stage s2" style="--w:1.5"><span>1 a 2 semanas</span></div>
+      <div class="stage s3" style="--w:5"><span>4 a 6 semanas</span></div>
+      <div class="stage s4" style="--w:3"><span>Continuo, cada mes</span></div>
     </div>
+    <ol class="stages reveal reveal-delay-2">
+      <li class="process-step" style="--w:1.5"><h3>An&aacute;lisis de Oportunidades de IA</h3><p>Evaluamos tus operaciones, identificamos objetivos de automatizaci&oacute;n y cuantificamos el ROI potencial.</p></li>
+      <li class="process-step" style="--w:1.5"><h3>Redise&ntilde;o de Procesos</h3><p>Dise&ntilde;amos nuevos flujos que integran IA de forma nativa, eliminando ineficiencias y maximizando rendimiento.</p></li>
+      <li class="process-step" style="--w:5"><h3>Implementaci&oacute;n del Sistema</h3><p>Nuestro equipo desarrolla, prueba e implementa sistemas de IA en tu infraestructura existente sin interrupciones.</p></li>
+      <li class="process-step" style="--w:3"><h3>Optimizaci&oacute;n Continua</h3><p>Monitoreamos rendimiento, refinamos modelos y expandimos la automatizaci&oacute;n conforme evoluciona tu organizaci&oacute;n.</p></li>
+    </ol>
   </div>
 </section>
 
-<hr class="section-divider">
 
 <!-- IMPACTO -->
 <section class="section" id="impact">
   <div class="container text-center">
     <div class="reveal">
-      <span class="section-label">Impacto Medible</span>
-      <h2 class="section-title">Resultados que<br><span class="text-gradient">Hablan por S&iacute; Mismos</span></h2>
+      <h2 class="section-title">Resultados que <span class="text-gradient">Hablan por S&iacute; Mismos</span></h2>
       <p class="section-desc">Nuestros clientes no conf&iacute;an en la IA a ciegas. La miden. Estos son los resultados que logran con ZENIA.</p>
     </div>
+    <p class="impact-sentence reveal">Ciclos de decisión <b>10&times;</b> más rápidos, costes operativos <b>&minus;40&nbsp;%</b>, productividad del equipo <b>&times;3</b>, <b>85&nbsp;%</b> de los procesos automatizados, operaciones <b>24/7</b> y el primer resultado en menos de <b>8&nbsp;semanas</b>.</p>
     <div class="impact-grid">
       <div class="impact-card reveal reveal-delay-1">
         <div class="impact-number text-gradient">10x</div>
@@ -362,83 +372,61 @@
 <!-- PRUEBA SOCIAL -->
 <section class="proof" id="proof">
   <div class="container">
-    <div class="text-center reveal">
-      <span class="section-label">Resultados Reales</span>
-      <h2 class="section-title">Hecho Para Empresas<br><span class="text-gradient">Como la Tuya</span></h2>
+    <div class="reveal">
+      <h2 class="section-title">Hecho Para Empresas <span class="text-gradient">Como la Tuya</span></h2>
     </div>
-    <div class="proof-grid">
-      <div class="proof-card proof-card-wide reveal">
-        <div class="proof-card-industry">Despacho Legal Boutique &middot; Espa&ntilde;a&harr;LATAM &middot; Caso destacado</div>
-        <h3>Sistema de Captaci&oacute;n IA para un Despacho de Abogados Boutique</h3>
-        <p>Un despacho boutique con m&aacute;s de 23.000 seguidores respond&iacute;a cada consulta a mano, en un solo huso horario. Montamos el sistema completo: agente IA humanizado que califica y agenda 24/7, CRM con atribuci&oacute;n por canal, Google Ads geolocalizado con p&iacute;xel de conversi&oacute;n y agentes aut&oacute;nomos que lo optimizan cada d&iacute;a. <a href="/es/caso-despacho-boutique.html" style="color:var(--primary);text-decoration:none;font-weight:600;">Ver el caso completo &rarr;</a></p>
-        <div class="proof-wide-stats">
-          <div class="proof-stat">
-            <span class="proof-stat-value text-gradient">&lt;1 min</span>
-            <span class="proof-stat-label">de respuesta, 24/7, husos LATAM</span>
-          </div>
-          <div class="proof-stat">
-            <span class="proof-stat-value text-gradient">3&#8209;8</span>
-            <span class="proof-stat-label">citas esperadas con inversi&oacute;n m&iacute;nima en Ads</span>
-          </div>
-        </div>
-      </div>
-      <div class="proof-card reveal">
-        <div class="proof-card-industry">Lujo &middot; Suiza</div>
-        <h3>Una Casa Privada de Vinos Raros, Lanzada en 72 Horas</h3>
-        <p>De una lista de precios a una casa de lujo completa para coleccionistas suizos: posicionamiento, identidad grabada, una bodega digital con una página por añada, visibilidad en IA y el kit para vender en persona.</p>
-        <div class="proof-stat">
-          <span class="proof-stat-value text-gradient">430+</span>
-          <span class="proof-stat-label">páginas construidas desde el inventario real</span>
-        </div>
-        <div><a href="/es/caso-croian-hein.html" style="display:inline-block;margin-top:20px;font-size:14px;font-weight:600;color:#93B4FF">Leer el caso &rarr;</a></div>
-      </div>
-      <div class="proof-card reveal">
-        <div class="proof-card-industry">IA regulatoria &middot; España e Italia</div>
-        <h3>Motor de Entrada al Mercado para una Plataforma de Asuntos Públicos con IA</h3>
-        <p>Partner de crecimiento sobre el terreno para Cicero: tesis de mercado, posicionamiento por país, inteligencia de cuentas, outbound en dos idiomas y un sistema de demos completo.</p>
-        <div class="proof-stat">
-          <span class="proof-stat-value text-gradient">150</span>
-          <span class="proof-stat-label">cuentas investigadas y puntuadas en la primera semana</span>
-        </div>
-        <div><a href="/es/caso-cicero.html" style="display:inline-block;margin-top:20px;font-size:14px;font-weight:600;color:#93B4FF">Leer el caso &rarr;</a></div>
-      </div>
-      <div class="proof-card reveal reveal-delay-1">
-        <div class="proof-card-industry">Wellness</div>
-        <h3>Sistema IA de Captaci&oacute;n de Sponsors</h3>
-        <p>Construimos un sistema inteligente que identifica, califica e inicia contacto con potenciales sponsors en una comunidad wellness de 72,000+ miembros. Reemplazamos la prospecci&oacute;n manual con agentes IA que trabajan 24/7.</p>
-        <div class="proof-stat">
-          <span class="proof-stat-value text-gradient">72K+</span>
-          <span class="proof-stat-label">miembros de comunidad alcanzados</span>
-        </div>
-      </div>
-      <div class="proof-card reveal reveal-delay-2">
-        <div class="proof-card-industry">Marketplace de Lujo</div>
-        <h3>SaaS para Dealers de Relojes de Lujo</h3>
-        <p>SaaS marketplace que automatiza listados, matching comprador-vendedor y seguimiento de deals para dealers de relojes de lujo. Reducci&oacute;n de 1.5h de trabajo manual diario por dealer.</p>
-        <div class="proof-stat">
-          <span class="proof-stat-value text-gradient">5x</span>
-          <span class="proof-stat-label">matching de deals m&aacute;s r&aacute;pido</span>
-        </div>
-      </div>
-      <div class="proof-card reveal reveal-delay-3">
-        <div class="proof-card-industry">Fitness y Wellness</div>
-        <h3>Automatizaci&oacute;n de Operaciones para una Marca Nacional</h3>
-        <p>Dise&ntilde;amos automatizaci&oacute;n con IA en las operaciones centrales de una marca l&iacute;der regional de fitness y wellness. Procesos que consum&iacute;an horas de trabajo manual diario ahora funcionan de forma aut&oacute;noma.</p>
-        <div class="proof-stat">
-          <span class="proof-stat-value text-gradient">80%</span>
-          <span class="proof-stat-label">de procesos manuales automatizados</span>
-        </div>
-      </div>
-      <div class="proof-card reveal reveal-delay-4">
-        <div class="proof-card-industry">Wellness</div>
-        <h3>Lanzamiento de Producto Digital y Motor de Monetizaci&oacute;n</h3>
-        <p>Dise&ntilde;amos y lanzamos un programa digital de running con funnels de venta automatizados, secuencias de email y pagos integrados. Convertimos una comunidad offline en una fuente de ingresos digitales escalable.</p>
-        <div class="proof-stat">
-          <span class="proof-stat-value text-gradient">+40%</span>
-          <span class="proof-stat-label">aumento en ventas de producto</span>
-        </div>
-      </div>
+    <div class="work-strip reveal reveal-delay-1">
+      <figure><img src="/cases/img/croian-home.webp" alt="Croian &amp; Hein, la portada: una casa de vinos raros para coleccionistas suizos, hecha por Zenia" width="1600" height="1000" loading="lazy"><figcaption>Croian &amp; Hein, la portada: una casa de vinos raros para coleccionistas suizos, hecha por Zenia</figcaption></figure>
+      <figure><img src="/cases/img/croian-cellar.webp" alt="Croian &amp; Hein, la bodega digital: una página por añada, construida desde el inventario real" width="1400" height="875" loading="lazy"><figcaption>Croian &amp; Hein, la bodega digital: una página por añada, construida desde el inventario real</figcaption></figure>
+      <figure><img src="/cases/img/ts-card.webp" alt="Throwin’ Salt: Gaia, el agente que prepara el lote del día de relojes para eBay" width="1600" height="1000" loading="lazy"><figcaption>Throwin’ Salt: Gaia, el agente que prepara el lote del día de relojes para eBay</figcaption></figure>
     </div>
+    <table class="cases reveal reveal-delay-2">
+      <thead><tr><th>Sector</th><th>Proyecto</th><th>Qué construimos</th><th>Resultado</th></tr></thead>
+      <tbody>
+      <tr>
+        <td>Despacho Legal Boutique &middot; Espa&ntilde;a&harr;LATAM &middot; Caso destacado</td>
+        <td><h3>Sistema de Captaci&oacute;n IA para un Despacho de Abogados Boutique</h3><div><a href="/es/caso-despacho-boutique.html" class="case-link">Ver el caso completo &rarr;</a></div></td>
+        <td>Un despacho boutique con m&aacute;s de 23.000 seguidores respond&iacute;a cada consulta a mano, en un solo huso horario. Montamos el sistema completo: agente IA humanizado que califica y agenda 24/7, CRM con atribuci&oacute;n por canal, Google Ads geolocalizado con p&iacute;xel de conversi&oacute;n y agentes aut&oacute;nomos que lo optimizan cada d&iacute;a.</td>
+        <td><div class="result"><b>&lt;1 min</b><span>de respuesta, 24/7, husos LATAM</span></div><div class="result"><b>3&#8209;8</b><span>citas esperadas con inversi&oacute;n m&iacute;nima en Ads</span></div></td>
+      </tr>
+      <tr>
+        <td>Lujo &middot; Suiza</td>
+        <td><h3>Una Casa Privada de Vinos Raros, Lanzada en 72 Horas</h3><div><a href="/es/caso-croian-hein.html" class="case-link">Leer el caso &rarr;</a></div></td>
+        <td>De una lista de precios a una casa de lujo completa para coleccionistas suizos: posicionamiento, identidad grabada, una bodega digital con una página por añada, visibilidad en IA y el kit para vender en persona.</td>
+        <td><div class="result"><b>430+</b><span>páginas construidas desde el inventario real</span></div></td>
+      </tr>
+      <tr>
+        <td>IA regulatoria &middot; España e Italia</td>
+        <td><h3>Motor de Entrada al Mercado para una Plataforma de Asuntos Públicos con IA</h3><div><a href="/es/caso-cicero.html" class="case-link">Leer el caso &rarr;</a></div></td>
+        <td>Partner de crecimiento sobre el terreno para Cicero: tesis de mercado, posicionamiento por país, inteligencia de cuentas, outbound en dos idiomas y un sistema de demos completo.</td>
+        <td><div class="result"><b>150</b><span>cuentas investigadas y puntuadas en la primera semana</span></div></td>
+      </tr>
+      <tr>
+        <td>Wellness</td>
+        <td><h3>Sistema IA de Captaci&oacute;n de Sponsors</h3></td>
+        <td>Construimos un sistema inteligente que identifica, califica e inicia contacto con potenciales sponsors en una comunidad wellness de 72,000+ miembros. Reemplazamos la prospecci&oacute;n manual con agentes IA que trabajan 24/7.</td>
+        <td><div class="result"><b>72K+</b><span>miembros de comunidad alcanzados</span></div></td>
+      </tr>
+      <tr>
+        <td>Marketplace de Lujo</td>
+        <td><h3>SaaS para Dealers de Relojes de Lujo</h3></td>
+        <td>SaaS marketplace que automatiza listados, matching comprador-vendedor y seguimiento de deals para dealers de relojes de lujo. Reducci&oacute;n de 1.5h de trabajo manual diario por dealer.</td>
+        <td><div class="result"><b>5x</b><span>matching de deals m&aacute;s r&aacute;pido</span></div></td>
+      </tr>
+      <tr>
+        <td>Fitness y Wellness</td>
+        <td><h3>Automatizaci&oacute;n de Operaciones para una Marca Nacional</h3></td>
+        <td>Dise&ntilde;amos automatizaci&oacute;n con IA en las operaciones centrales de una marca l&iacute;der regional de fitness y wellness. Procesos que consum&iacute;an horas de trabajo manual diario ahora funcionan de forma aut&oacute;noma.</td>
+        <td><div class="result"><b>80%</b><span>de procesos manuales automatizados</span></div></td>
+      </tr>
+      <tr>
+        <td>Wellness</td>
+        <td><h3>Lanzamiento de Producto Digital y Motor de Monetizaci&oacute;n</h3></td>
+        <td>Dise&ntilde;amos y lanzamos un programa digital de running con funnels de venta automatizados, secuencias de email y pagos integrados. Convertimos una comunidad offline en una fuente de ingresos digitales escalable.</td>
+        <td><div class="result"><b>+40%</b><span>aumento en ventas de producto</span></div></td>
+      </tr>
+      </tbody>
+    </table>
   </div>
 </section>
 
@@ -458,35 +446,16 @@
 <!-- PREGUNTAS FRECUENTES -->
 <section class="faq-section" id="faq">
   <div class="container">
-    <div class="text-center reveal">
-      <span class="section-label">Preguntas Frecuentes</span>
-      <h2 class="section-title">Preguntas que<br><span class="text-gradient">Nos Hacen Siempre</span></h2>
+    <div class="reveal">
+      <h2 class="section-title">Preguntas que <span class="text-gradient">Nos Hacen Siempre</span></h2>
     </div>
-    <div class="faq-grid">
-      <div class="faq-item reveal reveal-delay-1">
-        <h3>&iquest;Con qu&eacute; tipo de empresas trabaja ZENIA?</h3>
-        <p>Trabajamos con PyMEs en crecimiento en fitness, wellness, retail, ecommerce y servicios profesionales. Nuestro punto fuerte son empresas de 5-200 empleados que buscan automatizar operaciones y escalar sin aumentar equipo proporcionalmente.</p>
-      </div>
-      <div class="faq-item reveal reveal-delay-2">
-        <h3>&iquest;Cu&aacute;nto tiempo toma ver resultados con automatizaci&oacute;n IA?</h3>
-        <p>La mayor&iacute;a de clientes ven impacto medible en 4-8 semanas. Empezamos con una sesi&oacute;n estrat&eacute;gica, dise&ntilde;amos el sistema en 1-2 semanas y lo desplegamos en 4-6 semanas. La optimizaci&oacute;n continua comienza inmediatamente.</p>
-      </div>
-      <div class="faq-item reveal reveal-delay-3">
-        <h3>&iquest;Necesito conocimientos t&eacute;cnicos para trabajar con ZENIA?</h3>
-        <p>Para nada. Nos encargamos de todo, desde la estrategia hasta la implementaci&oacute;n. Nos sumergimos en tus operaciones, entendemos tus procesos y construimos sistemas que tu equipo puede usar sin experiencia t&eacute;cnica.</p>
-      </div>
-      <div class="faq-item reveal reveal-delay-4">
-        <h3>&iquest;Cu&aacute;nto cuestan los servicios de consultor&iacute;a IA de ZENIA?</h3>
-        <p>Cada proyecto se dimensiona a medida seg&uacute;n tus necesidades. Ofrecemos una llamada estrat&eacute;gica gratuita de 30 minutos para entender tu situaci&oacute;n, y despu&eacute;s enviamos una propuesta con precios claros y ROI esperado. Si quieres cifras orientativas antes de hablar, lee nuestra gu&iacute;a de <a href="/blog/cuanto-cuesta-un-crm-para-pymes.html" style="color:var(--primary);">cu&aacute;nto cuesta un CRM para pymes</a>.</p>
-      </div>
-      <div class="faq-item reveal reveal-delay-5">
-        <h3>&iquest;Qu&eacute; es un CRM para negocios y c&oacute;mo ayuda la IA?</h3>
-        <p>Un CRM (Customer Relationship Management) es un sistema para gestionar clientes y ventas. Con IA, tu CRM se vuelve inteligente: automatiza seguimientos por WhatsApp, califica leads autom&aacute;ticamente, y genera insights para cerrar m&aacute;s ventas sin esfuerzo manual.</p>
-      </div>
-      <div class="faq-item reveal reveal-delay-5">
-        <h3>&iquest;En qu&eacute; mercados opera ZENIA?</h3>
-        <p>Atendemos empresas en Europa y Am&eacute;rica. Nuestro equipo trabaja remoto y da servicio global con atenci&oacute;n biling&uuml;e (ingl&eacute;s/espa&ntilde;ol).</p>
-      </div>
+    <div class="faq-list reveal reveal-delay-1">
+      <details class="faq-item"><summary><h3>&iquest;Con qu&eacute; tipo de empresas trabaja ZENIA?</h3></summary><p>Trabajamos con PyMEs en crecimiento en fitness, wellness, retail, ecommerce y servicios profesionales. Nuestro punto fuerte son empresas de 5-200 empleados que buscan automatizar operaciones y escalar sin aumentar equipo proporcionalmente.</p></details>
+      <details class="faq-item"><summary><h3>&iquest;Cu&aacute;nto tiempo toma ver resultados con automatizaci&oacute;n IA?</h3></summary><p>La mayor&iacute;a de clientes ven impacto medible en 4-8 semanas. Empezamos con una sesi&oacute;n estrat&eacute;gica, dise&ntilde;amos el sistema en 1-2 semanas y lo desplegamos en 4-6 semanas. La optimizaci&oacute;n continua comienza inmediatamente.</p></details>
+      <details class="faq-item"><summary><h3>&iquest;Necesito conocimientos t&eacute;cnicos para trabajar con ZENIA?</h3></summary><p>Para nada. Nos encargamos de todo, desde la estrategia hasta la implementaci&oacute;n. Nos sumergimos en tus operaciones, entendemos tus procesos y construimos sistemas que tu equipo puede usar sin experiencia t&eacute;cnica.</p></details>
+      <details class="faq-item"><summary><h3>&iquest;Cu&aacute;nto cuestan los servicios de consultor&iacute;a IA de ZENIA?</h3></summary><p>Cada proyecto se dimensiona a medida seg&uacute;n tus necesidades. Ofrecemos una llamada estrat&eacute;gica gratuita de 30 minutos para entender tu situaci&oacute;n, y despu&eacute;s enviamos una propuesta con precios claros y ROI esperado. Si quieres cifras orientativas antes de hablar, lee nuestra gu&iacute;a de <a href="/blog/cuanto-cuesta-un-crm-para-pymes.html" style="color:var(--primary);">cu&aacute;nto cuesta un CRM para pymes</a>.</p></details>
+      <details class="faq-item"><summary><h3>&iquest;Qu&eacute; es un CRM para negocios y c&oacute;mo ayuda la IA?</h3></summary><p>Un CRM (Customer Relationship Management) es un sistema para gestionar clientes y ventas. Con IA, tu CRM se vuelve inteligente: automatiza seguimientos por WhatsApp, califica leads autom&aacute;ticamente, y genera insights para cerrar m&aacute;s ventas sin esfuerzo manual.</p></details>
+      <details class="faq-item"><summary><h3>&iquest;En qu&eacute; mercados opera ZENIA?</h3></summary><p>Atendemos empresas en Europa y Am&eacute;rica. Nuestro equipo trabaja remoto y da servicio global con atenci&oacute;n biling&uuml;e (ingl&eacute;s/espa&ntilde;ol).</p></details>
     </div>
   </div>
 </section>
@@ -495,7 +464,6 @@
 <section class="cta-section" id="cta">
   <div class="container">
     <div class="text-center reveal" style="margin-bottom: 48px;">
-      <span class="section-label">Un Nuevo Tipo de Empresa</span>
       <h2 class="section-title">Individuos Productivos No Hacen <span class="text-gradient">Empresas Productivas</span></h2>
     </div>
     <div class="vision-pillars" style="margin-bottom: 64px;">
@@ -516,8 +484,7 @@
       </div>
     </div>
     <div class="cta-box reveal">
-      <span class="section-label">&iquest;Listo para Transformar tu Empresa?</span>
-      <h2>30 Minutos Pueden<br><span class="text-gradient">Cambiar tu Pr&oacute;ximo Trimestre</span></h2>
+      <h2>30 Minutos Pueden <span class="text-gradient">Cambiar tu Pr&oacute;ximo Trimestre</span></h2>
       <p>Agenda una sesi&oacute;n estrat&eacute;gica con nuestro equipo. Analizaremos tus operaciones, identificaremos las oportunidades de IA de mayor impacto y te mostraremos lo que es posible.</p>
       <div class="cta-actions">
         <a href="#" onclick="openCalendly(event)" class="btn btn-primary btn-arrow">Agenda tu Sesi&oacute;n Estrat&eacute;gica de IA</a>
@@ -528,222 +495,119 @@
 </section>
 
 <!-- VERTICALES: GRID DE LANDING PAGES -->
-<section class="section" id="verticales" style="background:var(--bg-secondary,#0D1526);">
+<section class="section index" id="verticales">
   <div class="container">
-    <div class="text-center reveal">
-      <span class="section-label">Soluciones por Sector</span>
-      <h2 class="section-title">CRM con IA para<br><span class="text-gradient">Cada Tipo de Negocio</span></h2>
+    <div class="reveal">
+      <h2 class="section-title">CRM con IA para <span class="text-gradient">Cada Tipo de Negocio</span></h2>
       <p class="section-desc">Soluciones espec&iacute;ficas para cada vertical. Haz clic en tu sector para ver c&oacute;mo Zenia se adapta a tu negocio.</p>
     </div>
-
-    <!-- Verticales por industria -->
-    <div style="margin-bottom:12px;"><span class="section-label" style="font-size:11px;">Por Industria</span></div>
-    <div class="services-grid" style="grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;margin-bottom:40px;">
-      <a href="/es/crm-restaurantes.html" class="service-card reveal reveal-delay-1" style="text-decoration:none;display:block;padding:20px 24px;">
-        <div class="service-icon" style="width:36px;height:36px;margin-bottom:12px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div>
-        <h3 style="font-size:15px;margin-bottom:6px;">CRM para Restaurantes</h3>
-        <p style="font-size:13px;color:var(--text-muted,#94a3b8);margin:0;">Reservas, fidelizaci&oacute;n y WhatsApp</p>
-      </a>
-      <a href="/es/crm-gimnasios.html" class="service-card reveal reveal-delay-1" style="text-decoration:none;display:block;padding:20px 24px;">
-        <div class="service-icon" style="width:36px;height:36px;margin-bottom:12px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div>
-        <h3 style="font-size:15px;margin-bottom:6px;">CRM para Gimnasios</h3>
-        <p style="font-size:13px;color:var(--text-muted,#94a3b8);margin:0;">Retenci&oacute;n de socios y automatizaci&oacute;n</p>
-      </a>
-      <a href="/es/crm-salones-belleza.html" class="service-card reveal reveal-delay-2" style="text-decoration:none;display:block;padding:20px 24px;">
-        <div class="service-icon" style="width:36px;height:36px;margin-bottom:12px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
-        <h3 style="font-size:15px;margin-bottom:6px;">CRM para Salones de Belleza</h3>
-        <p style="font-size:13px;color:var(--text-muted,#94a3b8);margin:0;">Citas, recordatorios y fidelizaci&oacute;n</p>
-      </a>
-      <a href="/es/crm-clinicas.html" class="service-card reveal reveal-delay-2" style="text-decoration:none;display:block;padding:20px 24px;">
-        <div class="service-icon" style="width:36px;height:36px;margin-bottom:12px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
-        <h3 style="font-size:15px;margin-bottom:6px;">CRM para Cl&iacute;nicas</h3>
-        <p style="font-size:13px;color:var(--text-muted,#94a3b8);margin:0;">Pacientes, citas y seguimiento</p>
-      </a>
-      <a href="/es/crm-hoteles.html" class="service-card reveal reveal-delay-3" style="text-decoration:none;display:block;padding:20px 24px;">
-        <div class="service-icon" style="width:36px;height:36px;margin-bottom:12px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg></div>
-        <h3 style="font-size:15px;margin-bottom:6px;">CRM para Hoteles</h3>
-        <p style="font-size:13px;color:var(--text-muted,#94a3b8);margin:0;">H&uacute;espedes, reservas y upselling</p>
-      </a>
-      <a href="/es/crm-inmobiliarias.html" class="service-card reveal reveal-delay-3" style="text-decoration:none;display:block;padding:20px 24px;">
-        <div class="service-icon" style="width:36px;height:36px;margin-bottom:12px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-        <h3 style="font-size:15px;margin-bottom:6px;">CRM para Inmobiliarias</h3>
-        <p style="font-size:13px;color:var(--text-muted,#94a3b8);margin:0;">Leads, pipeline y seguimiento</p>
-      </a>
-      <a href="/es/crm-cafeterias.html" class="service-card reveal reveal-delay-1" style="text-decoration:none;display:block;padding:20px 24px;">
-        <div class="service-icon" style="width:36px;height:36px;margin-bottom:12px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/></svg></div>
-        <h3 style="font-size:15px;margin-bottom:6px;">CRM para Cafeter&iacute;as</h3>
-        <p style="font-size:13px;color:var(--text-muted,#94a3b8);margin:0;">Pedidos, fidelizaci&oacute;n y reseñas</p>
-      </a>
-      <a href="/es/crm-retail.html" class="service-card reveal reveal-delay-1" style="text-decoration:none;display:block;padding:20px 24px;">
-        <div class="service-icon" style="width:36px;height:36px;margin-bottom:12px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></div>
-        <h3 style="font-size:15px;margin-bottom:6px;">CRM para Retail</h3>
-        <p style="font-size:13px;color:var(--text-muted,#94a3b8);margin:0;">Ventas, inventario y clientes</p>
-      </a>
-      <a href="/es/crm-wellness.html" class="service-card reveal reveal-delay-2" style="text-decoration:none;display:block;padding:20px 24px;">
-        <div class="service-icon" style="width:36px;height:36px;margin-bottom:12px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>
-        <h3 style="font-size:15px;margin-bottom:6px;">CRM para Wellness</h3>
-        <p style="font-size:13px;color:var(--text-muted,#94a3b8);margin:0;">Clientes, sesiones y retenci&oacute;n</p>
-      </a>
-      <a href="/es/crm-academias.html" class="service-card reveal reveal-delay-2" style="text-decoration:none;display:block;padding:20px 24px;">
-        <div class="service-icon" style="width:36px;height:36px;margin-bottom:12px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></div>
-        <h3 style="font-size:15px;margin-bottom:6px;">CRM para Academias</h3>
-        <p style="font-size:13px;color:var(--text-muted,#94a3b8);margin:0;">Alumnos, matr&iacute;culas y comunicaci&oacute;n</p>
-      </a>
-      <a href="/es/crm-medicos.html" class="service-card reveal reveal-delay-3" style="text-decoration:none;display:block;padding:20px 24px;">
-        <div class="service-icon" style="width:36px;height:36px;margin-bottom:12px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
-        <h3 style="font-size:15px;margin-bottom:6px;">CRM para M&eacute;dicos</h3>
-        <p style="font-size:13px;color:var(--text-muted,#94a3b8);margin:0;">Agenda, pacientes y recordatorios</p>
-      </a>
-      <a href="/es/crm-consultorias.html" class="service-card reveal reveal-delay-3" style="text-decoration:none;display:block;padding:20px 24px;">
-        <div class="service-icon" style="width:36px;height:36px;margin-bottom:12px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-        <h3 style="font-size:15px;margin-bottom:6px;">CRM para Consultor&iacute;as</h3>
-        <p style="font-size:13px;color:var(--text-muted,#94a3b8);margin:0;">Clientes, proyectos y facturaci&oacute;n</p>
-      </a>
-      <a href="/es/crm-abogados.html" class="service-card reveal reveal-delay-1" style="text-decoration:none;display:block;padding:20px 24px;">
-        <div class="service-icon" style="width:36px;height:36px;margin-bottom:12px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-        <h3 style="font-size:15px;margin-bottom:6px;">CRM para Abogados</h3>
-        <p style="font-size:13px;color:var(--text-muted,#94a3b8);margin:0;">Expedientes, clientes y seguimiento</p>
-      </a>
-      <a href="/es/crm-fotografos.html" class="service-card reveal reveal-delay-1" style="text-decoration:none;display:block;padding:20px 24px;">
-        <div class="service-icon" style="width:36px;height:36px;margin-bottom:12px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
-        <h3 style="font-size:15px;margin-bottom:6px;">CRM para Fot&oacute;grafos</h3>
-        <p style="font-size:13px;color:var(--text-muted,#94a3b8);margin:0;">Sesiones, clientes y contratos</p>
-      </a>
-      <a href="/es/crm-pymes.html" class="service-card reveal reveal-delay-2" style="text-decoration:none;display:block;padding:20px 24px;">
-        <div class="service-icon" style="width:36px;height:36px;margin-bottom:12px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
-        <h3 style="font-size:15px;margin-bottom:6px;">CRM para PYMEs</h3>
-        <p style="font-size:13px;color:var(--text-muted,#94a3b8);margin:0;">Ventas, clientes y automatizaci&oacute;n</p>
-      </a>
-      <a href="/es/crm-negocios-pequenos.html" class="service-card reveal reveal-delay-2" style="text-decoration:none;display:block;padding:20px 24px;">
-        <div class="service-icon" style="width:36px;height:36px;margin-bottom:12px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-        <h3 style="font-size:15px;margin-bottom:6px;">CRM Negocios Peque&ntilde;os</h3>
-        <p style="font-size:13px;color:var(--text-muted,#94a3b8);margin:0;">Simple, potente y asequible</p>
-      </a>
-      <a href="/es/crm-whatsapp.html" class="service-card reveal reveal-delay-3" style="text-decoration:none;display:block;padding:20px 24px;">
-        <div class="service-icon" style="width:36px;height:36px;margin-bottom:12px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
-        <h3 style="font-size:15px;margin-bottom:6px;">CRM con WhatsApp</h3>
-        <p style="font-size:13px;color:var(--text-muted,#94a3b8);margin:0;">Ventas y atenci&oacute;n por WhatsApp Business</p>
-      </a>
-    </div>
-
-    <!-- Agentes IA por sector (familia de keywords con mejor posición en GSC) -->
-    <style>
-      .sector-chip{display:inline-flex;align-items:center;gap:7px;padding:10px 18px;background:rgba(59,130,246,0.07);border:1px solid rgba(59,130,246,0.22);border-radius:999px;color:#93C5FD;font-size:0.92rem;font-weight:500;text-decoration:none;transition:all .25s}
-      .sector-chip:hover{background:rgba(59,130,246,0.16);border-color:rgba(99,102,241,0.5);color:#DBEAFE;transform:translateY(-1px)}
-      .sector-chip.destacado{background:linear-gradient(135deg,rgba(37,99,235,0.25),rgba(99,102,241,0.25));border-color:rgba(99,102,241,0.45);color:#EDE9FE;font-weight:600}
-    </style>
-    <div style="margin-bottom:12px;"><span class="section-label" style="font-size:11px;">Agentes IA por Sector</span></div>
-    <p style="color:var(--text-secondary);font-size:0.98rem;max-width:660px;margin:0 0 22px;">Un <strong style="color:var(--text-primary);">agente IA personalizado</strong> que responde por WhatsApp, agenda citas y vende en el idioma de tu negocio. Elige tu sector y mira c&oacute;mo funciona:</p>
-    <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:48px;" class="reveal">
-      <a class="sector-chip" href="/blog/agente-ia-para-clinicas-esteticas.html">💆 Cl&iacute;nicas est&eacute;ticas</a>
-      <a class="sector-chip" href="/blog/agente-ia-para-peluquerias.html">💇 Peluquer&iacute;as</a>
-      <a class="sector-chip" href="/blog/agente-ia-para-fisioterapia.html">🤲 Fisioterapia</a>
-      <a class="sector-chip" href="/blog/agente-ia-para-podologos.html">🦶 Pod&oacute;logos</a>
-      <a class="sector-chip" href="/blog/agente-ia-para-clinicas-dentales.html">🦷 Cl&iacute;nicas dentales</a>
-      <a class="sector-chip" href="/blog/agente-ia-para-clinicas-veterinarias.html">🐾 Veterinarias</a>
-      <a class="sector-chip" href="/blog/agente-ia-para-farmacias.html">💊 Farmacias</a>
-      <a class="sector-chip" href="/blog/agente-ia-para-gimnasios.html">🏋️ Gimnasios</a>
-      <a class="sector-chip" href="/blog/agente-ia-para-psicologos.html">🧠 Psic&oacute;logos</a>
-      <a class="sector-chip" href="/blog/agente-ia-para-centros-de-masajes.html">🙌 Centros de masajes</a>
-      <a class="sector-chip" href="/blog/agente-ia-para-abogados.html">⚖️ Abogados</a>
-      <a class="sector-chip destacado" href="/blog/">Todos los sectores &rarr;</a>
-    </div>
-
-    <!-- Por Ciudad -->
-    <div style="margin-bottom:12px;"><span class="section-label" style="font-size:11px;">Por Ciudad</span></div>
-    <div class="services-grid" style="grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;margin-bottom:48px;">
-      <a href="/es/crm-madrid.html" class="service-card reveal reveal-delay-1" style="text-decoration:none;display:block;padding:16px 20px;">
-        <h3 style="font-size:14px;margin-bottom:4px;">CRM en Madrid</h3>
-        <p style="font-size:12px;color:var(--text-muted,#94a3b8);margin:0;">Empresas en Madrid y Comunidad</p>
-      </a>
-      <a href="/es/crm-barcelona.html" class="service-card reveal reveal-delay-1" style="text-decoration:none;display:block;padding:16px 20px;">
-        <h3 style="font-size:14px;margin-bottom:4px;">CRM en Barcelona</h3>
-        <p style="font-size:12px;color:var(--text-muted,#94a3b8);margin:0;">Empresas en Barcelona y Cataluña</p>
-      </a>
-      <a href="/es/crm-valencia.html" class="service-card reveal reveal-delay-2" style="text-decoration:none;display:block;padding:16px 20px;">
-        <h3 style="font-size:14px;margin-bottom:4px;">CRM en Valencia</h3>
-        <p style="font-size:12px;color:var(--text-muted,#94a3b8);margin:0;">Empresas en Valencia y Levante</p>
-      </a>
-      <a href="/es/crm-sevilla.html" class="service-card reveal reveal-delay-2" style="text-decoration:none;display:block;padding:16px 20px;">
-        <h3 style="font-size:14px;margin-bottom:4px;">CRM en Sevilla</h3>
-        <p style="font-size:12px;color:var(--text-muted,#94a3b8);margin:0;">Empresas en Sevilla y Andaluc&iacute;a</p>
-      </a>
-      <a href="/es/crm-malaga.html" class="service-card reveal reveal-delay-3" style="text-decoration:none;display:block;padding:16px 20px;">
-        <h3 style="font-size:14px;margin-bottom:4px;">CRM en M&aacute;laga</h3>
-        <p style="font-size:12px;color:var(--text-muted,#94a3b8);margin:0;">Empresas en M&aacute;laga y Costa del Sol</p>
-      </a>
+    <div class="index-cols">
+      <div class="index-col reveal">
+        <h3>Por industria</h3>
+        <ul>
+        <li><a href="/es/crm-restaurantes.html">CRM para Restaurantes<span>Reservas, fidelizaci&oacute;n y WhatsApp</span></a></li>
+        <li><a href="/es/crm-gimnasios.html">CRM para Gimnasios<span>Retenci&oacute;n de socios y automatizaci&oacute;n</span></a></li>
+        <li><a href="/es/crm-salones-belleza.html">CRM para Salones de Belleza<span>Citas, recordatorios y fidelizaci&oacute;n</span></a></li>
+        <li><a href="/es/crm-clinicas.html">CRM para Cl&iacute;nicas<span>Pacientes, citas y seguimiento</span></a></li>
+        <li><a href="/es/crm-hoteles.html">CRM para Hoteles<span>H&uacute;espedes, reservas y upselling</span></a></li>
+        <li><a href="/es/crm-inmobiliarias.html">CRM para Inmobiliarias<span>Leads, pipeline y seguimiento</span></a></li>
+        <li><a href="/es/crm-cafeterias.html">CRM para Cafeter&iacute;as<span>Pedidos, fidelizaci&oacute;n y reseñas</span></a></li>
+        <li><a href="/es/crm-retail.html">CRM para Retail<span>Ventas, inventario y clientes</span></a></li>
+        <li><a href="/es/crm-wellness.html">CRM para Wellness<span>Clientes, sesiones y retenci&oacute;n</span></a></li>
+        <li><a href="/es/crm-academias.html">CRM para Academias<span>Alumnos, matr&iacute;culas y comunicaci&oacute;n</span></a></li>
+        <li><a href="/es/crm-medicos.html">CRM para M&eacute;dicos<span>Agenda, pacientes y recordatorios</span></a></li>
+        <li><a href="/es/crm-consultorias.html">CRM para Consultor&iacute;as<span>Clientes, proyectos y facturaci&oacute;n</span></a></li>
+        <li><a href="/es/crm-abogados.html">CRM para Abogados<span>Expedientes, clientes y seguimiento</span></a></li>
+        <li><a href="/es/crm-fotografos.html">CRM para Fot&oacute;grafos<span>Sesiones, clientes y contratos</span></a></li>
+        <li><a href="/es/crm-pymes.html">CRM para PYMEs<span>Ventas, clientes y automatizaci&oacute;n</span></a></li>
+        <li><a href="/es/crm-negocios-pequenos.html">CRM Negocios Peque&ntilde;os<span>Simple, potente y asequible</span></a></li>
+        <li><a href="/es/crm-whatsapp.html">CRM con WhatsApp<span>Ventas y atenci&oacute;n por WhatsApp Business</span></a></li>
+        </ul>
+      </div>
+      <div class="index-col reveal reveal-delay-1">
+        <h3>Agentes de IA por sector</h3>
+        <p>Un <strong>agente IA personalizado</strong> que responde por WhatsApp, agenda citas y vende en el idioma de tu negocio. Elige tu sector y mira c&oacute;mo funciona:</p>
+        <ul>
+        <li><a href="/blog/agente-ia-para-clinicas-esteticas.html">Cl&iacute;nicas est&eacute;ticas</a></li>
+        <li><a href="/blog/agente-ia-para-peluquerias.html">Peluquer&iacute;as</a></li>
+        <li><a href="/blog/agente-ia-para-fisioterapia.html">Fisioterapia</a></li>
+        <li><a href="/blog/agente-ia-para-podologos.html">Pod&oacute;logos</a></li>
+        <li><a href="/blog/agente-ia-para-clinicas-dentales.html">Cl&iacute;nicas dentales</a></li>
+        <li><a href="/blog/agente-ia-para-clinicas-veterinarias.html">Veterinarias</a></li>
+        <li><a href="/blog/agente-ia-para-farmacias.html">Farmacias</a></li>
+        <li><a href="/blog/agente-ia-para-gimnasios.html">Gimnasios</a></li>
+        <li><a href="/blog/agente-ia-para-psicologos.html">Psic&oacute;logos</a></li>
+        <li><a href="/blog/agente-ia-para-centros-de-masajes.html">Centros de masajes</a></li>
+        <li><a href="/blog/agente-ia-para-abogados.html">Abogados</a></li>
+        <li><a class="more" href="/blog/">Todos los sectores &rarr;</a></li>
+        </ul>
+      </div>
+      <div class="index-col reveal reveal-delay-2">
+        <h3>Por ciudad</h3>
+        <ul>
+        <li><a href="/es/crm-madrid.html">CRM en Madrid<span>Empresas en Madrid y Comunidad</span></a></li>
+        <li><a href="/es/crm-barcelona.html">CRM en Barcelona<span>Empresas en Barcelona y Cataluña</span></a></li>
+        <li><a href="/es/crm-valencia.html">CRM en Valencia<span>Empresas en Valencia y Levante</span></a></li>
+        <li><a href="/es/crm-sevilla.html">CRM en Sevilla<span>Empresas en Sevilla y Andaluc&iacute;a</span></a></li>
+        <li><a href="/es/crm-malaga.html">CRM en M&aacute;laga<span>Empresas en M&aacute;laga y Costa del Sol</span></a></li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
 
-<hr class="section-divider">
 
 <!-- PRECIOS -->
-<section class="section" id="precios">
+<section class="section pricing" id="precios">
   <div class="container">
-    <div class="text-center reveal">
-      <span class="section-label">Precios Transparentes</span>
-      <h2 class="section-title">Planes para Cada<br><span class="text-gradient">Tama&ntilde;o de Negocio</span></h2>
+    <div class="reveal">
+      <h2 class="section-title">Planes para Cada <span class="text-gradient">Tama&ntilde;o de Negocio</span></h2>
       <p class="section-desc">Sin sorpresas ni letra peque&ntilde;a. Setup &uacute;nico + retainer mensual. Empieza en semanas, no en meses.</p>
     </div>
-    <div class="impact-grid" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:24px;align-items:start;">
-      <div class="impact-card reveal reveal-delay-1" style="padding:32px 28px;text-align:left;">
-        <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-muted,#94a3b8);margin-bottom:8px;">Starter</div>
-        <div class="impact-number text-gradient" style="font-size:36px;margin-bottom:4px;">&euro;297<span style="font-size:16px;font-weight:400;color:var(--text-muted,#94a3b8)">/mes</span></div>
-        <p style="font-size:13px;color:var(--text-muted,#94a3b8);margin-bottom:20px;">Para negocios con hasta 3 usuarios. CRM b&aacute;sico + WhatsApp + automatizaciones esenciales.</p>
-        <ul style="list-style:none;padding:0;margin:0 0 24px;font-size:13px;line-height:2;">
-          <li>&#10003; CRM hasta 3 usuarios</li>
-          <li>&#10003; Integraci&oacute;n WhatsApp Business</li>
-          <li>&#10003; 3 automatizaciones activas</li>
-          <li>&#10003; Soporte por email</li>
-        </ul>
-        <a href="#" onclick="openCalendly(event)" class="btn btn-secondary" style="width:100%;text-align:center;display:block;">Empezar</a>
+    <div class="price-hero reveal reveal-delay-1">
+      <div class="price-text">
+        <h3>Growth, el plan m&aacute;s elegido</h3>
+        <p>Para negocios en expansi&oacute;n. CRM completo + IA + omnicanal + soporte prioritario.</p>
       </div>
-      <div class="impact-card reveal reveal-delay-2" style="padding:32px 28px;text-align:left;border-color:rgba(99,102,241,0.4);position:relative;">
-        <div style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:linear-gradient(90deg,#6366f1,#7c3aed);color:white;font-size:11px;font-weight:700;padding:4px 16px;border-radius:20px;white-space:nowrap;">M&aacute;s Popular</div>
-        <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-muted,#94a3b8);margin-bottom:8px;">Growth</div>
-        <div class="impact-number text-gradient" style="font-size:36px;margin-bottom:4px;">&euro;497<span style="font-size:16px;font-weight:400;color:var(--text-muted,#94a3b8)">/mes</span></div>
-        <p style="font-size:13px;color:var(--text-muted,#94a3b8);margin-bottom:20px;">Para negocios en expansi&oacute;n. CRM completo + IA + omnicanal + soporte prioritario.</p>
-        <ul style="list-style:none;padding:0;margin:0 0 24px;font-size:13px;line-height:2;">
-          <li>&#10003; CRM hasta 10 usuarios</li>
-          <li>&#10003; Agente IA por WhatsApp</li>
-          <li>&#10003; Automatizaciones ilimitadas</li>
-          <li>&#10003; Integraciones omnicanal</li>
-          <li>&#10003; Soporte prioritario</li>
-        </ul>
-        <a href="#" onclick="openCalendly(event)" class="btn btn-primary" style="width:100%;text-align:center;display:block;">Empezar</a>
+      <div class="price-figure"><span class="cur">&euro;</span>497<span class="per">/mes</span>
+        <div class="price-overlap" data-ui aria-hidden="true"><div class="msg out shown">Listo, Laura: mesa para 4 ma&ntilde;ana a las 21:00 en la terraza. Te mando un recordatorio a las 18:00.<time>23:49</time></div></div>
       </div>
-      <div class="impact-card reveal reveal-delay-3" style="padding:32px 28px;text-align:left;">
-        <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-muted,#94a3b8);margin-bottom:8px;">Enterprise</div>
-        <div class="impact-number text-gradient" style="font-size:36px;margin-bottom:4px;">&euro;897<span style="font-size:16px;font-weight:400;color:var(--text-muted,#94a3b8)">/mes+</span></div>
-        <p style="font-size:13px;color:var(--text-muted,#94a3b8);margin-bottom:20px;">Para empresas con necesidades avanzadas. Implementaci&oacute;n a medida + dedicaci&oacute;n total.</p>
-        <ul style="list-style:none;padding:0;margin:0 0 24px;font-size:13px;line-height:2;">
-          <li>&#10003; Usuarios ilimitados</li>
-          <li>&#10003; Agentes IA personalizados</li>
-          <li>&#10003; Integraciones custom</li>
-          <li>&#10003; SLA garantizado</li>
-          <li>&#10003; Customer success dedicado</li>
-        </ul>
-        <a href="#" onclick="openCalendly(event)" class="btn btn-secondary" style="width:100%;text-align:center;display:block;">Hablar con el equipo</a>
+      <ul class="price-includes">
+        <li>CRM hasta 10 usuarios</li>
+        <li>Agente IA por WhatsApp</li>
+        <li>Automatizaciones ilimitadas</li>
+        <li>Integraciones omnicanal</li>
+        <li>Soporte prioritario</li>
+      </ul>
+      <a href="#" onclick="openCalendly(event)" class="btn btn-primary">Empezar con Growth</a>
+    </div>
+    <div class="plans reveal reveal-delay-2">
+      <div class="plan">
+        <h3>Starter</h3>
+        <p class="plan-price">&euro;297 <small>al mes</small></p>
+        <p>Para negocios con hasta 3 usuarios. CRM b&aacute;sico + WhatsApp + automatizaciones esenciales.</p>
+        <ul><li>CRM hasta 3 usuarios</li><li>Integraci&oacute;n WhatsApp Business</li><li>3 automatizaciones activas</li><li>Soporte por email</li></ul>
+        <a href="#" onclick="openCalendly(event)" class="btn btn-secondary">Empezar</a>
       </div>
-      <div class="impact-card reveal reveal-delay-4" style="padding:32px 28px;text-align:left;background:rgba(99,102,241,0.06);">
-        <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-muted,#94a3b8);margin-bottom:8px;">Setup &Uacute;nico</div>
-        <div class="impact-number text-gradient" style="font-size:36px;margin-bottom:4px;">&euro;997<span style="font-size:16px;font-weight:400;color:var(--text-muted,#94a3b8)"> setup</span></div>
-        <p style="font-size:13px;color:var(--text-muted,#94a3b8);margin-bottom:20px;">Pago &uacute;nico a la firma. Incluye diagn&oacute;stico, configuraci&oacute;n, integraciones e incorporaci&oacute;n del equipo.</p>
-        <ul style="list-style:none;padding:0;margin:0 0 24px;font-size:13px;line-height:2;">
-          <li>&#10003; Diagn&oacute;stico de procesos</li>
-          <li>&#10003; Configuraci&oacute;n completa</li>
-          <li>&#10003; Integraciones iniciales</li>
-          <li>&#10003; Formaci&oacute;n del equipo</li>
-        </ul>
-        <a href="#" onclick="openCalendly(event)" class="btn btn-secondary" style="width:100%;text-align:center;display:block;">Ver planes</a>
+      <div class="plan">
+        <h3>Enterprise</h3>
+        <p class="plan-price">&euro;897 <small>al mes, o m&aacute;s</small></p>
+        <p>Para empresas con necesidades avanzadas. Implementaci&oacute;n a medida + dedicaci&oacute;n total.</p>
+        <ul><li>Usuarios ilimitados</li><li>Agentes IA personalizados</li><li>Integraciones custom</li><li>SLA garantizado</li><li>Customer success dedicado</li></ul>
+        <a href="#" onclick="openCalendly(event)" class="btn btn-secondary">Hablar con el equipo</a>
+      </div>
+      <div class="plan">
+        <h3>Setup &uacute;nico</h3>
+        <p class="plan-price">&euro;997 <small>una sola vez</small></p>
+        <p>Pago &uacute;nico a la firma. Incluye diagn&oacute;stico, configuraci&oacute;n, integraciones e incorporaci&oacute;n del equipo.</p>
+        <ul><li>Diagn&oacute;stico de procesos</li><li>Configuraci&oacute;n completa</li><li>Integraciones iniciales</li><li>Formaci&oacute;n del equipo</li></ul>
+        <a href="#" onclick="openCalendly(event)" class="btn btn-secondary">Ver planes</a>
       </div>
     </div>
-    <p class="text-center reveal" style="margin-top:24px;font-size:13px;color:var(--text-muted,#94a3b8);">Todos los planes incluyen el setup una sola vez. Retainer con permanencia m&iacute;nima de 3 meses. Capacidad limitada: m&aacute;ximo 3 implementaciones simult&aacute;neas.</p>
+    <p class="plans-note reveal">Todos los planes incluyen el setup una sola vez. Retainer con permanencia m&iacute;nima de 3 meses. Capacidad limitada: m&aacute;ximo 3 implementaciones simult&aacute;neas.</p>
   </div>
 </section>
 
-<hr class="section-divider">
 
 <!-- BOOKING MODAL -->
 <div class="booking-overlay" id="bookingModal">
@@ -754,7 +618,7 @@
 
     <!-- Step 1: Calendly -->
     <div class="booking-step booking-step-calendly active" id="bookingStep1">
-      <div class="calendly-inline-widget" data-url="https://calendly.com/zeladauriartef/30min?hide_gdpr_banner=1&background_color=111827&text_color=f1f5f9&primary_color=3B82F6"></div>
+      <div class="calendly-inline-widget" data-url="https://calendly.com/zeladauriartef/30min?hide_gdpr_banner=1&background_color=F4F4F1&text_color=0F172A&primary_color=2563EB"></div>
     </div>
 
     <!-- Step 2: Cuestionario -->
@@ -821,11 +685,13 @@
 <!-- FOOTER -->
 <footer class="footer">
   <div class="container">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <div class="footer-logo"><svg class="zenia-mark zenia-mark--sm" viewBox="0 0 140 140" fill="none"><defs><linearGradient id="zg2-b" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2563EB"/><stop offset="100%" stop-color="#3B82F6"/></linearGradient><linearGradient id="zg2-v" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6366F1"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient></defs><rect width="140" height="140" rx="28" fill="#0F172A"/><path d="M 70 18 Q 18 18 18 38 L 18 57 Q 18 63 24 63 L 88 63 Z" fill="url(#zg2-b)"/><path d="M 70 122 Q 122 122 122 102 L 122 83 Q 122 77 116 77 L 52 77 Z" fill="url(#zg2-v)"/></svg><span>ZENIA</span></div>
-        <p class="footer-tagline">Ve M&aacute;s All&aacute;</p>
-        <p>Ayudamos a organizaciones a redise&ntilde;ar operaciones con automatizaci&oacute;n inteligente y sistemas de IA que entregan resultados medibles.</p>
+    <svg class="footer-wordmark" viewBox="0 0 1000 220" aria-hidden="true" focusable="false"><text x="0" y="205" textLength="1000" lengthAdjust="spacing">ZENIA</text></svg>
+    <div class="footer-row">
+      <div class="footer-contact">
+        <h3 class="footer-heading">Escríbenos</h3>
+        <a class="footer-mail" href="mailto:fabrizzio.zelada@zeniapartners.com">fabrizzio.zelada@zeniapartners.com</a>
+        <a class="footer-wa" href="https://wa.me/34677612799?text=Hola%2C%20vengo%20de%20la%20web%20de%20Zenia%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+        <p class="footer-brand-desc">Ayudamos a organizaciones a redise&ntilde;ar operaciones con automatizaci&oacute;n inteligente y sistemas de IA que entregan resultados medibles.</p>
       </div>
       <div class="footer-columns">
         <div class="footer-col">
@@ -841,7 +707,7 @@
             <li><a href="/es/automatizacion-whatsapp-negocios.html">Automatizar WhatsApp</a></li>
           </ul>
         </div>
-        <div class="footer-col">
+<div class="footer-col">
           <h3 class="footer-heading">Servicios</h3>
           <ul>
             <li><a href="#services">Estrategia IA</a></li>
@@ -850,7 +716,7 @@
             <li><a href="#services">Desarrollo SaaS a Medida</a></li>
           </ul>
         </div>
-        <div class="footer-col">
+<div class="footer-col">
           <h3 class="footer-heading">Empresa</h3>
           <ul>
             <li><a href="#tailor">Nuestro Enfoque</a></li>
@@ -859,7 +725,7 @@
             <li><a href="mailto:fabrizzio.zelada@zeniapartners.com">Contacto</a></li>
           </ul>
         </div>
-        <div class="footer-col">
+<div class="footer-col">
           <h3 class="footer-heading">Soluciones por Vertical</h3>
           <ul>
             <li><a href="/es/crm-gimnasios.html">CRM para Gimnasios</a></li>
@@ -871,18 +737,14 @@
         </div>
       </div>
     </div>
-    <div class="footer-featured" style="text-align:center;padding:24px 0;border-top:1px solid rgba(148,163,184,0.08);">
-      <a href="https://rankinpublic.xyz/products/zeniapartners.com" target="_blank" rel="noopener" aria-label="Featured on RankInPublic">
-        <img src="https://rankinpublic.xyz/api/badges/badge-featured.png?site=zeniapartners.com" alt="Featured on RankInPublic" title="Featured on RankInPublic" width="250" height="80" loading="lazy">
-      </a>
-    </div>
     <div class="footer-bottom">
       <p>&copy; 2026 ZENIA. <span>Todos los derechos reservados.</span></p>
       <p class="footer-founder">Fundada por <span>Fabrizzio Zelada</span></p>
-      <div class="footer-social">
-        <a href="https://www.linkedin.com/company/zenia-partners/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-        <a href="https://www.instagram.com/zeniapartners" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
-      </div>
+      <div class="footer-social"><a href="https://www.linkedin.com/company/zenia-partners/" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.instagram.com/zeniapartners" target="_blank" rel="noopener">Instagram</a></div>
+      <a href="#" class="footer-top">Volver arriba</a>
+      <div class="footer-featured"><a href="https://rankinpublic.xyz/products/zeniapartners.com" target="_blank" rel="noopener" aria-label="Featured on RankInPublic">
+        <img src="https://rankinpublic.xyz/api/badges/badge-featured.png?site=zeniapartners.com" alt="Featured on RankInPublic" title="Featured on RankInPublic" width="250" height="80" loading="lazy">
+      </a></div>
     </div>
   </div>
 </footer>
@@ -900,42 +762,12 @@ window.setLang = function() {};
 window.pickLang = pickLang;
 window.showLangModal = showLangModal;
 </script>
-<script src="../js/main.js?v=6"></script>
+<script src="../js/main.js?v=7"></script>
 <script defer src="../js/booking.js?v=2"></script>
+<script defer src="../js/demo-chat.js?v=1"></script>
 
-<!-- Mobile Sticky CTA -->
-<div class="mobile-sticky-cta" id="mobileCta">
-  <a href="#" onclick="openCalendly(event)" class="btn btn-primary btn-arrow">Agenda una Llamada Gratis</a>
-</div>
 
-<!-- Three.js: load 3s after page load, only on desktop -->
-<script>
-if (window.innerWidth > 768) {
-  window.addEventListener('load', function() {
-    setTimeout(function() {
-      var s1 = document.createElement('script');
-      s1.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
-      s1.onload = function() {
-        setTimeout(function() {
-          var s2 = document.createElement('script');
-          s2.src = '../js/animation.js';
-          document.body.appendChild(s2);
-        }, 100);
-      };
-      document.body.appendChild(s1);
-    }, 3000);
-  });
-}
-</script>
 
-<!-- Cookie Consent Banner -->
-<div id="cookieBanner" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#111827;color:#f9fafb;padding:16px 24px;z-index:9999;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:13px;box-shadow:0 -2px 12px rgba(0,0,0,0.2);align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
-  <p style="margin:0;flex:1;min-width:240px;line-height:1.5;">Usamos cookies para anal&iacute;tica (Google Analytics) y mejorar tu experiencia. No compartimos datos con terceros. <a href="/privacy/" style="color:#818cf8;text-decoration:underline;">Pol&iacute;tica de privacidad</a></p>
-  <div style="display:flex;gap:8px;flex-shrink:0;">
-    <button onclick="acceptCookies()" style="background:#6366f1;color:white;border:none;padding:8px 20px;border-radius:6px;font-size:13px;font-weight:600;cursor:pointer;">Aceptar</button>
-    <button onclick="rejectCookies()" style="background:transparent;color:#d1d5db;border:1px solid #4b5563;padding:8px 16px;border-radius:6px;font-size:13px;cursor:pointer;">Rechazar</button>
-  </div>
-</div>
 <script>
 (function(){
   var consent = localStorage.getItem('cookie_consent');
@@ -960,11 +792,11 @@ function rejectCookies() {
 </script>
 
 <!-- WhatsApp Floating Button -->
-<a href="https://wa.me/34677612799?text=Hola%2C%20vengo%20de%20vuestra%20p%C3%A1gina%20%C2%ABCRM%20con%20IA%20y%20WhatsApp%20para%20PYMEs%20en%20Espa%C3%B1a%C2%BB%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp" data-directo style="position:fixed;bottom:24px;right:24px;z-index:9998;background:#25D366;color:white;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(37,211,102,0.4);transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 20px rgba(37,211,102,0.5)'" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 16px rgba(37,211,102,0.4)'">
+<a href="https://wa.me/34677612799?text=Hola%2C%20vengo%20de%20vuestra%20p%C3%A1gina%20%C2%ABCRM%20con%20IA%20y%20WhatsApp%20para%20PYMEs%20en%20Espa%C3%B1a%C2%BB%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp" data-directo style="position:fixed;bottom:24px;right:24px;z-index:9998;background:#25D366;color:white;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:transform 0.2s;">
   <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
-<div style="text-align:center; padding:16px 24px; background:#0A0F1C; color:#64748B; font-size:0.85rem; border-top:1px solid rgba(255,255,255,0.04);"><a href="/es/cobertura.html" style="color:#94A3B8; text-decoration:none;">Ver cobertura completa</a></div>
+<div style="padding:16px clamp(20px,3.2vw,48px); background:#0F172A; color:#B9C0CC; font-size:0.875rem;"><a href="/es/cobertura.html" style="color:#F4F2EC; text-decoration:underline;">Ver cobertura completa</a></div>
 <script>document.addEventListener("click",function(e){var t=e.target,a=t.closest?t.closest('a[href*="wa.me"]'):null;if(!a)return;try{navigator.sendBeacon("https://gaia-relojes.onrender.com/gwb/lead",JSON.stringify({site:"zenia",path:location.pathname+location.search,ref:document.referrer||""}))}catch(r){}},true);</script>
 <script src="/assets/qualify.js?v=4" defer></script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "67e4803d7cd443a49b12c7d8a99365bf"}'></script>

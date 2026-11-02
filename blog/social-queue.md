@@ -9989,6 +9989,8 @@ Full breakdown with HubSpot/Salesforce/Zoho native-vs-connector matrix, 2026 pri
 
 ## 2026-11-02 - Carta digital hostelería (engineering)
 
+<!-- PUBLISHED:make-webhook at 2026-11-02T09:30:06Z -->
+
 A QR on a restaurant table that resolves to a static PDF is cheap but blind: no attribution per table, no multilingual swap, no path to WhatsApp.
 
 The build that moves the needle treats the QR as the entry edge of a four-stage pipeline. Dynamic QR -> short-link resolver with per-table/per-location UTM -> cached HTML menu served from the edge (sub-200ms LCP on 4G) -> wa.me deep-link with context token (table id, locale, viewed items). The menu renders in &lt;800ms including fonts and alérgenos data from a single JSON per locale; the WhatsApp deep-link seeds a session on WhatsApp Business API where a personalized AI agent (Claude-based, with menu embeddings in a vector store) answers reservation/allergy questions in &lt;1s p50 and writes the lead into the CRM with the originating QR attached.

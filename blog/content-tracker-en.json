@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-11-01T09:00Z",
+  "lastRun": "2026-11-02T09:15Z",
   "market": "US/UK small business",
   "posts": [
     {
@@ -1201,7 +1201,9 @@
       "keyword": "ai agent for mobile detailers",
       "tier": 2,
       "cluster": "auto",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-11-02",
+      "note": "Tier-2 pending topic; striking-loop had no uncovered English queries (all top EN queries already have dedicated posts). 2,400-word US-focused build with vehicle-based pricing, ZIP radius, Stripe deposits, Jobber/Housecall Pro integration, and weather-aware reschedules. Linked to ai-booking-agent-for-plumbing and whatsapp-crm-small-business."
     },
     {
       "slug": "ai-agent-for-rv-dealers",

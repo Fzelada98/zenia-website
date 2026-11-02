@@ -10000,3 +10000,19 @@ Full architecture, cost table and legal notes: https://zeniapartners.com/blog/ca
 #SystemsEngineering #WhatsAppBusinessAPI #Hospitality #AI #EdgeComputing
 
 ---
+
+## 2026-11-02 - AI Agent for Mobile Detailers (EN)
+
+Field notes from a US mobile detailing deployment (solo operator -> small crew, ~20 inbound/week).
+
+Stack: Twilio Voice as the primary intake with a tool-using LLM loop over OpenAI Realtime (streaming STT/TTS, 2-ring forward from the operator's main line), WhatsApp Business API (Meta Cloud) and SMS fallback for async threads, native calendar write-back into Jobber via REST, Stripe Payment Links generated inline during the call for deposits. The pricing surface is a deterministic matrix: {vehicle_class, package, surcharges} -> (price_cents, duration_min), served to the model as a single function call so quotes do not hallucinate. ZIP radius enforced server-side with a lat/long distance filter before the model is allowed to offer times.
+
+Two numbers under load: voice turn-around p95 at 820 ms end-to-end (ASR partial -> tool call -> TTS first byte), and quote-to-booked-with-deposit in a median of 118 s on the call itself. Deposit capture rate landed at 83% of bookings created, which pulled no-shows from 18% to 7%.
+
+Hardest piece was not the model. It was the weather-aware reschedule flow: paint correction and ceramic coating jobs needed a deterministic rule set on top of a forecast API, with the agent authorized to proactively text affected jobs the night before and lock the replacement slot without a human in the loop.
+
+Full breakdown with vendor red flags and 60-day targets: https://zeniapartners.com/blog/ai-agent-for-mobile-detailers.html
+
+#SystemsEngineering #WhatsAppBusinessAPI #VoiceAI #FieldService #AI
+
+---

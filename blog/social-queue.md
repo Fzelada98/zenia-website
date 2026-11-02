@@ -10046,3 +10046,16 @@ Full write-up with the integration stack and the 2-week rollout: https://zeniapa
 
 ---
 
+## 2026-11-02 - Integrating Klaviyo with WhatsApp Business (engineering)
+
+Klaviyo shipped a native WhatsApp channel in October 2025, but 2026 production builds still default to one of three architectures: native channel, outbound webhook to a BSP (Kanal, 360dialog, Charles, Chatarmin), or bidirectional sync. The decision rarely survives contact with Meta's conversation-category pricing.
+
+Meta WhatsApp Business pricing ES, August 2026: utility conversations around €0.0314, marketing around €0.0631. Pushing a full welcome series or newsletter through WhatsApp inflates the Meta invoice without moving conversion. The flows that pay off are time-sensitive: cart abandoned under 30 minutes, back-in-stock, order confirmation, post-purchase review.
+
+Reference stack we ship: Klaviyo kept as source of truth for profiles and email/SMS. Outbound webhook from each flow to a BSP. Inbound events (whatsapp_delivered, whatsapp_replied, whatsapp_opted_out) posted back to Klaviyo as custom events. Cross-channel suppression keyed on last_whatsapp_delivered_at kills duplicates with the email flow at the 20-minute boundary.
+
+Full breakdown of the three integration paths, 2026 Meta pricing and the mapping errors we see in audits: https://zeniapartners.com/blog/integrar-klaviyo-con-whatsapp-business.html
+
+#SystemsEngineering #Klaviyo #WhatsAppBusinessAPI #Ecommerce
+
+---

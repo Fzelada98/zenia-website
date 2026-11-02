@@ -22,7 +22,7 @@ with sync_playwright() as p:
     while y < h:
         pg.evaluate(f"window.scrollTo(0,{y})"); time.sleep(0.1); y += 500; h = pg.evaluate("document.body.scrollHeight")
     pg.evaluate("window.scrollTo(0,0)"); time.sleep(0.4)
-    pg.add_style_tag(content=".nav{position:relative!important} .reveal{opacity:1!important;transform:none!important;transition:none!important} .msg{opacity:1!important;transform:none!important} *{animation-play-state:paused!important}")
+    pg.add_style_tag(content=".crm td{animation:none!important} .nav{position:relative!important} .reveal{opacity:1!important;transform:none!important;transition:none!important} .msg{opacity:1!important;transform:none!important} *{animation-play-state:paused!important}")
     time.sleep(0.3)
     pg.screenshot(path=out, full_page=True)
     print(out, pg.evaluate("document.body.scrollHeight"), "overflowX:", pg.evaluate("document.documentElement.scrollWidth"), "vs", w)

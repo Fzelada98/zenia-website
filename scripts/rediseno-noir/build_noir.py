@@ -62,6 +62,7 @@ TOOLS = [("whatsapp", "WhatsApp Business API"), ("hubspot", "HubSpot"), ("zoho",
 # El teléfono con el WhatsApp del agente (tema oscuro oficial). Lo que va dentro es la versión
 # estática del restaurante: sin script se ve así; con script, demo-chat.js v3 la reproduce.
 TELEFONO = '''      __SWITCH__
+      <div class="scene">
       <div class="phone" data-ui>
         <div class="phone-status" aria-hidden="true"><span class="phone-time">23:48</span><span class="phone-icons"><svg viewBox="0 0 16 12"><path fill="currentColor" d="M0 9h2v3H0zM4 6h2v6H4zM8 3h2v9H8zM12 0h2v12h-2z"/></svg><svg viewBox="0 0 16 12"><path fill="currentColor" d="M8 2.4c2.6 0 4.9 1 6.6 2.7l-1.3 1.3A7.5 7.5 0 0 0 8 4.3a7.5 7.5 0 0 0-5.3 2.1L1.4 5.1A9.3 9.3 0 0 1 8 2.4zm0 3.6c1.6 0 3 .6 4.1 1.7l-1.3 1.3A4 4 0 0 0 8 7.9a4 4 0 0 0-2.8 1.1L3.9 7.7A5.8 5.8 0 0 1 8 6zm0 3.6c.7 0 1.3.3 1.7.7L8 12l-1.7-1.7c.4-.4 1-.7 1.7-.7z"/></svg><svg viewBox="0 0 24 12"><rect x=".5" y=".5" width="20" height="11" rx="2.5" fill="none" stroke="currentColor"/><rect x="2" y="2" width="16" height="8" rx="1.5" fill="currentColor"/><path fill="currentColor" d="M22 4v4a2 2 0 0 0 0-4z"/></svg></span></div>
         <div class="chat" id="demoChat">
@@ -80,7 +81,24 @@ TELEFONO = '''      __SWITCH__
           <div class="chat-input" aria-hidden="true"><span class="chat-input-field">Mensaje</span><span class="chat-mic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 15a4 4 0 0 0 4-4V6a4 4 0 0 0-8 0v5a4 4 0 0 0 4 4zm6-4a6 6 0 0 1-12 0H4a8 8 0 0 0 7 7.9V22h2v-3.1A8 8 0 0 0 20 11z"/></svg></span></div>
         </div>
       </div>
-      <div class="crm-toast" id="crmToast" data-ui aria-live="polite"><p class="crm-label">Guardado en el CRM</p><strong>Laura &middot; Mesa para 4</strong><p>Ma&ntilde;ana 21:00 &middot; Terraza &middot; Sin gluten</p><p>Recordatorio autom&aacute;tico: ma&ntilde;ana a las 18:00</p></div>'''
+      </div>'''
+
+CRM = '''    <div class="crm-window" id="crmWindow" data-ui aria-label="CRM a medida &middot; La Terraza">
+      <aside class="crm-side"><span class="crm-mark" aria-hidden="true">Z</span><span class="on">Reservas</span><span>Clientes</span><span>Campa&ntilde;as</span><span>Agente</span><span>Ajustes</span><div class="crm-who"><b>La Terraza</b>Madrid &middot; 2 salas</div></aside>
+      <div class="crm-main">
+        <div class="crm-top"><span class="crm-mark" aria-hidden="true">Z</span><span class="crm-brand">La Terraza <span>&middot; CRM a medida</span></span><span class="crm-live">Actualizado ahora</span><div class="crm-tabs"><span class="on">Reservas</span><span>Clientes</span><span>Campa&ntilde;as</span><span>Agente</span></div></div>
+        <div class="crm-kpis"><div class="crm-kpi"><small>Reservas para ma&ntilde;ana</small><strong>24<i>+1</i></strong></div><div class="crm-kpi"><small>Ocupaci&oacute;n a las 21:00</small><strong>92&nbsp;%</strong></div><div class="crm-kpi"><small>Atendidas por el agente</small><strong>16<i>+1</i></strong></div></div>
+        <div class="crm-title"><b>Reservas de ma&ntilde;ana</b><em>Martes</em></div>
+        <table class="crm"><thead><tr><th>Hora</th><th>Nombre</th><th>Pax</th><th class="opt">Zona</th><th class="opt">Notas</th><th>Estado</th></tr></thead><tbody>
+          <tr><td>20:00</td><td>Familia Ortega</td><td>6</td><td class="opt">Sal&oacute;n</td><td class="opt dim">Cumplea&ntilde;os</td><td><span class="crm-state ok">Confirmada</span></td></tr>
+          <tr><td>20:30</td><td>Marc Vidal</td><td>2</td><td class="opt">Terraza</td><td class="opt dim">&mdash;</td><td><span class="crm-state ok">Confirmada</span></td></tr>
+          <tr class="crm-row new show"><td>21:00</td><td>Laura</td><td>4</td><td class="opt">Terraza</td><td class="opt dim">Sin gluten</td><td><span class="crm-state agent">Por el agente</span></td></tr>
+          <tr><td>21:00</td><td>Ana Ruiz</td><td>3</td><td class="opt">Sal&oacute;n</td><td class="opt dim">Silla beb&eacute;</td><td><span class="crm-state wait">Pendiente</span></td></tr>
+          <tr><td>21:30</td><td>Pedro Lima</td><td>2</td><td class="opt">Terraza</td><td class="opt dim">&mdash;</td><td><span class="crm-state ok">Confirmada</span></td></tr>
+          <tr><td>22:00</td><td>Grupo Sato</td><td>8</td><td class="opt">Sal&oacute;n</td><td class="opt dim">Men&uacute; degustaci&oacute;n</td><td><span class="crm-state ok">Confirmada</span></td></tr>
+        </tbody></table>
+      </div>
+    </div>'''
 
 
 def leer(p):
@@ -118,11 +136,12 @@ def base_html(s):
     bloque = f'''    <div class="hero-demo reveal reveal-delay-2">
       <p class="demo-caption" id="demoCaption">{h2}</p>
 {telefono}
-      {note}
     </div>
+{CRM}
+    {note.replace('class="demo-note"', 'class="demo-note reveal reveal-delay-3"')}
 '''
     s = re.sub(r'(<section class="hero[^"]*" id="hero">\s*<div class="container">\s*)',
-               lambda m: m.group(1) + '<p class="eyebrow">CRM + WhatsApp + IA para PYMEs en Espa&ntilde;a y Latinoam&eacute;rica</p>\n    ', s, count=1)
+               lambda m: m.group(1) + '<p class="eyebrow">CRM a medida + agente de IA por WhatsApp</p>\n    ', s, count=1)
     hero = uno(r'<section class="hero[^"]*" id="hero">.*?</section>', s)
     h = hero.group(0)
     cierre = h.rfind("</div>\n</section>")
@@ -134,6 +153,9 @@ def base_html(s):
     s = s[: hero.start()] + h + s[hero.end():]
     assert s.count('hero-copy') == 1
     assert 'class="hero-demo' in s, "no pude colocar la conversación en la portada"
+
+    old_sub = uno(r'<p class="hero-subtitle reveal reveal-delay-2">.*?</p>', s).group(0)
+    s = s.replace(old_sub, '<p class="hero-subtitle reveal reveal-delay-2">Un CRM hecho a la medida de tu negocio y un agente de IA que atiende por WhatsApp: automatiza ventas, fidelizaci&oacute;n y atenci&oacute;n al cliente. Resultados medibles en 4 semanas para restaurantes, gimnasios, cl&iacute;nicas, hoteles, retail y m&aacute;s.</p>', 1)
 
     # 2. la banda de herramientas, con símbolo
     items = "".join(f"<li>{icono(k)}<span>{n}</span></li>" for k, n in TOOLS)
@@ -233,7 +255,7 @@ def main():
         v = v.replace('<link rel="stylesheet" href="../styles/main.css?v=10">', '<link rel="stylesheet" href="../styles/noir.css?v=2">' + extra)
         assert "noir.css" in v
         v = v.replace('<meta name="theme-color" content="#F4F4F1">', f'<meta name="theme-color" content="{theme}">')
-        v = v.replace('../js/demo-chat.js?v=1', '../js/demo-chat.js?v=3')
+        v = v.replace('../js/demo-chat.js?v=1', '../js/demo-chat.js?v=4')
         escribir(os.path.join(ZV, "es", f"index-{letra}.html"), v)
         print("es/index-%s.html" % letra, len(v))
 

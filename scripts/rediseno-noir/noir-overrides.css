@@ -342,7 +342,29 @@ table.crm { width: 100%; border-collapse: collapse; }
 .impact-card h3.h4-style { display: block; font-family: var(--sans); font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-mute); margin-bottom: 8px; font-weight: 600; }
 .impact-card p { color: var(--ink-soft); font-size: 1rem; }
 
-/* casos: fotos con filete y tabla con líneas finas */
+/* casos: el caso destacado con su vídeo, las fotos con filete y la tabla con líneas finas */
+.case-feature { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); column-gap: clamp(32px, 4vw, 56px); row-gap: 28px; align-items: center; margin-bottom: clamp(40px, 6vw, 72px); padding: clamp(24px, 3vw, 40px); background: var(--glass); border: 1px solid var(--line-strong); border-radius: 18px; }
+/* los vídeos (grabados en vertical) en un marco horizontal 4:3: llenan el marco y se recortan arriba y abajo;
+   comprobado fotograma a fotograma que los rótulos, las cifras y el chat viven en la franja central */
+.reel-frame { margin: 0; width: 100%; min-width: 0; }
+.stage-box { position: relative; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 14px; border: 1px solid var(--line-strong); background: #05070C center / cover no-repeat; background-image: var(--poster); box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5); }
+.stage-box::after { content: ""; position: absolute; inset: 0; pointer-events: none; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -60px 80px -40px rgba(0, 0, 0, 0.45); }
+.stage-box video { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 50% 50%; background: #000; border-radius: 0; border: 0; box-shadow: none; }
+.reel-frame figcaption { font-size: 0.875rem; color: var(--ink-mute); margin-top: 12px; line-height: 1.45; }
+.case-feature-text .eyebrow { margin-bottom: 16px; }
+.case-feature-text h3 { font-family: var(--serif); font-size: clamp(1.625rem, 2.4vw, 2.25rem); font-weight: 600; line-height: 1.1; color: var(--ink); margin-bottom: 14px; max-width: 22ch; }
+.case-feature-text > p { font-size: 1rem; color: var(--ink-soft); max-width: 52ch; margin-bottom: 24px; }
+.case-feature-stats { display: flex; flex-wrap: wrap; gap: 20px 40px; margin-bottom: 28px; }
+.case-feature-stats b { display: block; font-family: var(--serif); font-size: clamp(2rem, 2.8vw, 2.75rem); line-height: 1; color: var(--accent); font-weight: 500; white-space: nowrap; }
+.case-feature-stats span { display: block; font-size: 0.875rem; color: var(--ink-soft); margin-top: 6px; max-width: 16ch; }
+.service-figure.is-video { grid-column: 8 / -1; justify-self: stretch; width: 100%; align-self: center; }
+.service-card--featured .service-card-body h3 { max-width: 16ch; }
+.service-card--featured .service-card-body p { max-width: 50ch; font-size: 1.0625rem; }
+.service-points { order: 3; list-style: none; margin: 22px 0 0; padding: 0; display: grid; gap: 12px; max-width: 52ch; }
+.service-points li { position: relative; padding-left: 26px; color: var(--ink-soft); font-size: 1rem; line-height: 1.5; }
+.service-points li::before { content: "\2713"; position: absolute; left: 0; top: 0; color: var(--accent); font-weight: 600; }
+.service-figure.is-video img { display: none; }
+.service-figure.is-video figcaption a { color: var(--accent-text); }
 .work-strip figure { overflow: hidden; border-radius: 12px; }
 .work-strip img { border: 1px solid var(--line); border-radius: 12px; transition: transform 0.6s ease; }
 .work-strip figure:hover img { transform: scale(1.025); }
@@ -497,6 +519,8 @@ body > div:has(> a[href$="cobertura.html"]) a { color: var(--ink-soft) !importan
   .opp-card h3 { grid-column: 2 / -1; }
   .opp-card p { grid-column: 2 / -1; }
   .service-card--featured .service-card-body, .service-figure { grid-column: 1 / -1; }
+  .service-figure.is-video { grid-column: 1 / -1; width: 100%; }
+  .case-feature { grid-template-columns: 1fr; }
   .founder-blockquote p, .founder-blockquote footer { grid-column: 1 / -1; }
 }
 /* teléfono */
@@ -531,14 +555,41 @@ body > div:has(> a[href$="cobertura.html"]) a { color: var(--ink-soft) !importan
   .footer-head { grid-template-columns: 1fr; }
   .footer-head .btn { justify-self: start; }
   .phone { border-width: 7px; border-radius: 30px; }
-  .chat { height: 560px; }
   .crm-window { font-size: 12px; border-radius: 12px; }
   .crm-top { padding: 10px 12px 0; gap: 10px; }
   .crm-live { display: none; }
   .crm-tabs { gap: 12px; font-size: 11px; }
   .crm-top { flex-wrap: wrap; }
-  .crm-tabs { margin-left: 0; width: 100%; gap: 16px; }
+  .crm-tabs { margin-left: 0; width: 100%; gap: 18px; font-size: 12.5px; }
+  .crm-tab { padding: 10px 0 12px; min-height: 44px; }
+  .crm-window { font-size: 12.5px; }
+  .crm-kpi small, .crm th, .crm-state, .crm-live, .crm-who { font-size: 12px; }
+  .crm th, .crm td { white-space: normal; padding: 9px 8px; vertical-align: top; }
+  .crm th:first-child, .crm td:first-child { padding-left: 12px; }
+  .crm th:last-child, .crm td:last-child { padding-right: 12px; }
+  .crm-state { white-space: nowrap; }
+  .crm .optm { display: none; }
   .crm-set-text span { font-size: 12px; }
+  .cases .case-link { display: inline-block; padding: 10px 0; }
+  .footer-col ul a, .footer-mail, .footer-wa, .footer-social a, .footer-top { display: inline-block; padding: 8px 0; }
+  .footer-bottom { row-gap: 4px; }
+  .footer-col ul { gap: 2px; }
+  .case-feature { grid-template-columns: 1fr; padding: 20px; row-gap: 24px; }
+  .case-feature-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .case-feature-stats b { font-size: 1.75rem; }
+  .case-feature-stats span { font-size: 0.8125rem; max-width: none; }
+  .case-feature .eyebrow { align-items: flex-start; }
+  .case-feature .eyebrow::before { margin-top: 8px; }
+  body.nav-menu-open::after { content: ""; position: fixed; left: 0; right: 0; top: var(--nav-h); bottom: 0; background: var(--paper-2); z-index: 40; }
+  .nav-links.nav-open { padding-top: 20px; }
+  .nav-links.nav-open a { text-align: center; }
+  .service-figure figcaption a, .footer-credit a, body > div:has(> a[href$="cobertura.html"]) a { display: inline-block; padding: 8px 0; }
+  a[data-directo] { width: 50px !important; height: 50px !important; bottom: 16px !important; right: 16px !important; }
+  .chat { height: 620px; }
+  .case-feature .reel-frame { width: 100%; }
+  .stage-box { border-radius: 12px; }
+  .case-feature-text h3 { max-width: none; }
+  .service-figure.is-video { grid-column: 1 / -1; width: 100%; }
   .crm-kpi { padding: 10px 12px; }
   .crm-kpi strong { font-size: 18px; }
   .crm-title { padding: 12px 12px 4px; }

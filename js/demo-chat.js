@@ -27,7 +27,7 @@
               ['22:00', 'Grupo Sato', '8', 'Salón', 'Menú degustación', 'ok', 'Confirmada']
             ] },
           { tab: 'Clientes', kpis: [['Clientes en el CRM', '1.284', ''], ['Habituales (3 visitas o más)', '412', ''], ['Vuelven tras un recordatorio', '61 %', '']],
-            title: 'Clientes', when: 'Últimos 90 días', cols: ['Nombre', 'Visitas', 'Última', 'Preferencias', 'Estado'], opt: [3],
+            title: 'Clientes', when: 'Últimos 90 días', cols: ['Nombre', 'Visitas', 'Última', 'Preferencias', 'Estado'], opt: [3], optm: [2, 3],
             rows: [
               ['Laura', '1', 'Mañana', 'Sin gluten · Terraza', 'agent', 'Nueva'],
               ['Marc Vidal', '12', 'Mañana', 'Terraza · Vino de la casa', 'ok', 'Habitual'],
@@ -37,7 +37,7 @@
               ['Grupo Sato', '3', 'Hace 2 meses', 'Menú degustación · Empresa', 'ok', 'Empresa']
             ] },
           { tab: 'Campañas', kpis: [['Reservas por campañas este mes', '62', ''], ['Tasa de respuesta', '14 %', ''], ['Coste por reserva', '0,90 €', '']],
-            title: 'Campañas por WhatsApp', when: 'Noviembre', cols: ['Campaña', 'Enviados', 'Respuestas', 'Reservas', 'Estado'], opt: [2],
+            title: 'Campañas por WhatsApp', when: 'Noviembre', cols: ['Campaña', 'Enviados', 'Respuestas', 'Reservas', 'Estado'], opt: [2], optm: [1, 2],
             rows: [
               ['Menú de temporada', '620', '84', '37', 'ok', 'Activa'],
               ['Recuperar inactivos (90 días)', '240', '31', '14', 'ok', 'Activa'],
@@ -46,7 +46,7 @@
               ['Cena de empresa (Navidad)', '—', '—', '—', 'off', 'Borrador']
             ] },
           { tab: 'Agente', kpis: [['Conversaciones hoy', '31', '+1'], ['Resueltas sin intervención', '94 %', ''], ['Tiempo medio de respuesta', '28 s', '']],
-            title: 'Conversaciones de hoy', when: 'Última: ahora', cols: ['Hora', 'Cliente', 'Intención', 'Resultado', 'Estado'], opt: [2],
+            title: 'Conversaciones de hoy', when: 'Última: ahora', cols: ['Hora', 'Cliente', 'Intención', 'Resultado', 'Estado'], opt: [2], optm: [0, 2],
             rows: [
               ['{t}', 'Laura', 'Reserva', 'Mesa para 4 mañana 21:00', 'agent', 'Resuelto', true],
               ['22:31', 'Javier', 'Horario', 'Respondido', 'ok', 'Resuelto'],
@@ -90,7 +90,7 @@
               ['17:30', 'Luis Mora', 'Empaste', 'Enviado', 'ok', 'Confirmada']
             ] },
           { tab: 'Pacientes', kpis: [['Pacientes activos', '2.140', ''], ['Revisiones al día', '78 %', ''], ['Ausencias este mes', '4 %', '']],
-            title: 'Pacientes', when: 'Con cita este mes', cols: ['Paciente', 'Tratamiento', 'Última visita', 'Próxima', 'Estado'], opt: [3],
+            title: 'Pacientes', when: 'Con cita este mes', cols: ['Paciente', 'Tratamiento', 'Última visita', 'Próxima', 'Estado'], opt: [3], optm: [1, 2],
             rows: [
               ['Marta Gil', 'Revisión', 'Hace 6 meses', 'Jueves 17:00', 'agent', 'Cita cambiada'],
               ['Jorge Peña', 'Limpieza', 'Hace 1 año', 'Jueves 10:30', 'ok', 'Confirmada'],
@@ -100,7 +100,7 @@
               ['Luis Mora', 'Empaste', 'Hace 3 meses', 'Jueves 17:30', 'ok', 'Confirmada']
             ] },
           { tab: 'Campañas', kpis: [['Citas por campañas', '75', ''], ['Confirmaciones automáticas', '96 %', ''], ['Huecos recuperados este mes', '18', '']],
-            title: 'Campañas por WhatsApp', when: 'Noviembre', cols: ['Campaña', 'Enviados', 'Respuestas', 'Citas', 'Estado'], opt: [2],
+            title: 'Campañas por WhatsApp', when: 'Noviembre', cols: ['Campaña', 'Enviados', 'Respuestas', 'Citas', 'Estado'], opt: [2], optm: [1, 2],
             rows: [
               ['Revisión anual pendiente', '180', '71', '52', 'ok', 'Activa'],
               ['Confirmación 24 h antes', 'Automática', '—', '96 % confirman', 'ok', 'Activa'],
@@ -109,7 +109,7 @@
               ['Ortodoncia invisible', '—', '—', '—', 'wait', 'Programada']
             ] },
           { tab: 'Agente', kpis: [['Conversaciones hoy', '24', '+1'], ['Resueltas sin intervención', '91 %', ''], ['Tiempo medio de respuesta', '25 s', '']],
-            title: 'Conversaciones de hoy', when: 'Última: ahora', cols: ['Hora', 'Paciente', 'Intención', 'Resultado', 'Estado'], opt: [2],
+            title: 'Conversaciones de hoy', when: 'Última: ahora', cols: ['Hora', 'Paciente', 'Intención', 'Resultado', 'Estado'], opt: [2], optm: [0, 2],
             rows: [
               ['{t}', 'Marta Gil', 'Cambio de cita', 'Jueves 17:00 con la Dra. Ruiz', 'agent', 'Resuelto', true],
               ['21:40', 'Iván', 'Precio de una limpieza', 'Respondido', 'ok', 'Resuelto'],
@@ -152,7 +152,7 @@
               ['Sara Núñez', 'Instagram', 'Pilates', '—', 'wait', 'Seguimiento jueves']
             ] },
           { tab: 'Socios', kpis: [['Socios activos', '420', ''], ['Bajas este mes', '1,8 %', ''], ['Reactivados por el agente', '9', '']],
-            title: 'Socios', when: 'Asistencia de las últimas 2 semanas', cols: ['Socio', 'Plan', 'Alta', 'Asistencia', 'Estado'], opt: [2],
+            title: 'Socios', when: 'Asistencia de las últimas 2 semanas', cols: ['Socio', 'Plan', 'Alta', 'Asistencia', 'Estado'], opt: [2], optm: [1, 2],
             rows: [
               ['Nuria Bel', 'Mensual', '28 oct', '3 por semana', 'ok', 'Activo'],
               ['Iván Soto', 'Trimestral', '12 sep', '4 por semana', 'ok', 'Activo'],
@@ -162,7 +162,7 @@
               ['Lola Peña', 'Anual', '9 mar', '5 por semana', 'ok', 'Activo']
             ] },
           { tab: 'Campañas', kpis: [['Altas por campañas este mes', '7', ''], ['Reactivaciones', '9', ''], ['Coste por lead', '1,10 €', '']],
-            title: 'Campañas', when: 'Noviembre', cols: ['Campaña', 'Enviados', 'Respuestas', 'Resultado', 'Estado'], opt: [2],
+            title: 'Campañas', when: 'Noviembre', cols: ['Campaña', 'Enviados', 'Respuestas', 'Resultado', 'Estado'], opt: [2], optm: [1, 2],
             rows: [
               ['Reactivar socios inactivos (14 días)', '36', '14', '9 han vuelto', 'ok', 'Activa'],
               ['Clase de prueba gratis (Instagram)', '180', '31', '12 pruebas', 'ok', 'Activa'],
@@ -171,7 +171,7 @@
               ['Reto de enero', '—', '—', '—', 'off', 'Borrador']
             ] },
           { tab: 'Agente', kpis: [['Conversaciones hoy', '28', '+1'], ['Resueltas sin intervención', '89 %', ''], ['Tiempo medio de respuesta', '22 s', '']],
-            title: 'Conversaciones de hoy', when: 'Última: ahora', cols: ['Hora', 'Contacto', 'Intención', 'Resultado', 'Estado'], opt: [2],
+            title: 'Conversaciones de hoy', when: 'Última: ahora', cols: ['Hora', 'Contacto', 'Intención', 'Resultado', 'Estado'], opt: [2], optm: [0, 2],
             rows: [
               ['{t}', 'Diego', 'Precio y prueba', 'Funcional el miércoles 18:30', 'agent', 'Resuelto', true],
               ['22:20', 'Alba Gil', 'Volver tras una lesión', 'Pasado al entrenador', 'esc', 'Escalado'],
@@ -222,7 +222,7 @@
               ['22:00', 'Sato party', '8', 'Dining room', 'Tasting menu', 'ok', 'Confirmed']
             ] },
           { tab: 'Guests', kpis: [['Guests in the CRM', '1,284', ''], ['Regulars (3+ visits)', '412', ''], ['Return after a reminder', '61 %', '']],
-            title: 'Guests', when: 'Last 90 days', cols: ['Name', 'Visits', 'Last', 'Preferences', 'Status'], opt: [3],
+            title: 'Guests', when: 'Last 90 days', cols: ['Name', 'Visits', 'Last', 'Preferences', 'Status'], opt: [3], optm: [2, 3],
             rows: [
               ['Laura', '1', 'Tomorrow', 'Gluten free · Terrace', 'agent', 'New'],
               ['Marc Vidal', '12', 'Tomorrow', 'Terrace · House wine', 'ok', 'Regular'],
@@ -232,7 +232,7 @@
               ['Sato party', '3', '2 months ago', 'Tasting menu · Corporate', 'ok', 'Corporate']
             ] },
           { tab: 'Campaigns', kpis: [['Bookings from campaigns this month', '62', ''], ['Reply rate', '14 %', ''], ['Cost per booking', '€0.90', '']],
-            title: 'WhatsApp campaigns', when: 'November', cols: ['Campaign', 'Sent', 'Replies', 'Bookings', 'Status'], opt: [2],
+            title: 'WhatsApp campaigns', when: 'November', cols: ['Campaign', 'Sent', 'Replies', 'Bookings', 'Status'], opt: [2], optm: [1, 2],
             rows: [
               ['Seasonal menu', '620', '84', '37', 'ok', 'Live'],
               ['Win back inactive guests (90 days)', '240', '31', '14', 'ok', 'Live'],
@@ -241,7 +241,7 @@
               ['Corporate Christmas dinners', '—', '—', '—', 'off', 'Draft']
             ] },
           { tab: 'Agent', kpis: [['Conversations today', '31', '+1'], ['Resolved without a human', '94 %', ''], ['Average reply time', '28 s', '']],
-            title: 'Today’s conversations', when: 'Last: just now', cols: ['Time', 'Guest', 'Intent', 'Outcome', 'Status'], opt: [2],
+            title: 'Today’s conversations', when: 'Last: just now', cols: ['Time', 'Guest', 'Intent', 'Outcome', 'Status'], opt: [2], optm: [0, 2],
             rows: [
               ['{t}', 'Laura', 'Booking', 'Table for 4 tomorrow at 21:00', 'agent', 'Resolved', true],
               ['22:31', 'Javier', 'Opening hours', 'Answered', 'ok', 'Resolved'],
@@ -285,7 +285,7 @@
               ['17:30', 'Luis Mora', 'Filling', 'Sent', 'ok', 'Confirmed']
             ] },
           { tab: 'Patients', kpis: [['Active patients', '2,140', ''], ['Check-ups up to date', '78 %', ''], ['No-shows this month', '4 %', '']],
-            title: 'Patients', when: 'With an appointment this month', cols: ['Patient', 'Treatment', 'Last visit', 'Next', 'Status'], opt: [3],
+            title: 'Patients', when: 'With an appointment this month', cols: ['Patient', 'Treatment', 'Last visit', 'Next', 'Status'], opt: [3], optm: [1, 2],
             rows: [
               ['Marta Gil', 'Check-up', '6 months ago', 'Thursday 17:00', 'agent', 'Appointment moved'],
               ['Jorge Peña', 'Cleaning', '1 year ago', 'Thursday 10:30', 'ok', 'Confirmed'],
@@ -295,7 +295,7 @@
               ['Luis Mora', 'Filling', '3 months ago', 'Thursday 17:30', 'ok', 'Confirmed']
             ] },
           { tab: 'Campaigns', kpis: [['Appointments from campaigns', '75', ''], ['Automatic confirmations', '96 %', ''], ['Slots recovered this month', '18', '']],
-            title: 'WhatsApp campaigns', when: 'November', cols: ['Campaign', 'Sent', 'Replies', 'Appointments', 'Status'], opt: [2],
+            title: 'WhatsApp campaigns', when: 'November', cols: ['Campaign', 'Sent', 'Replies', 'Appointments', 'Status'], opt: [2], optm: [1, 2],
             rows: [
               ['Annual check-up due', '180', '71', '52', 'ok', 'Live'],
               ['Confirmation 24 h before', 'Automatic', '—', '96 % confirm', 'ok', 'Live'],
@@ -304,7 +304,7 @@
               ['Invisible orthodontics', '—', '—', '—', 'wait', 'Scheduled']
             ] },
           { tab: 'Agent', kpis: [['Conversations today', '24', '+1'], ['Resolved without a human', '91 %', ''], ['Average reply time', '25 s', '']],
-            title: 'Today’s conversations', when: 'Last: just now', cols: ['Time', 'Patient', 'Intent', 'Outcome', 'Status'], opt: [2],
+            title: 'Today’s conversations', when: 'Last: just now', cols: ['Time', 'Patient', 'Intent', 'Outcome', 'Status'], opt: [2], optm: [0, 2],
             rows: [
               ['{t}', 'Marta Gil', 'Move an appointment', 'Thursday 17:00 with Dr. Ruiz', 'agent', 'Resolved', true],
               ['21:40', 'Iván', 'Price of a cleaning', 'Answered', 'ok', 'Resolved'],
@@ -347,7 +347,7 @@
               ['Sara Núñez', 'Instagram', 'Pilates', '—', 'wait', 'Follow-up Thursday']
             ] },
           { tab: 'Members', kpis: [['Active members', '420', ''], ['Churn this month', '1.8 %', ''], ['Won back by the agent', '9', '']],
-            title: 'Members', when: 'Attendance, last 2 weeks', cols: ['Member', 'Plan', 'Joined', 'Attendance', 'Status'], opt: [2],
+            title: 'Members', when: 'Attendance, last 2 weeks', cols: ['Member', 'Plan', 'Joined', 'Attendance', 'Status'], opt: [2], optm: [1, 2],
             rows: [
               ['Nuria Bel', 'Monthly', '28 Oct', '3 a week', 'ok', 'Active'],
               ['Iván Soto', 'Quarterly', '12 Sep', '4 a week', 'ok', 'Active'],
@@ -357,7 +357,7 @@
               ['Lola Peña', 'Annual', '9 Mar', '5 a week', 'ok', 'Active']
             ] },
           { tab: 'Campaigns', kpis: [['Sign-ups from campaigns this month', '7', ''], ['Members won back', '9', ''], ['Cost per lead', '€1.10', '']],
-            title: 'Campaigns', when: 'November', cols: ['Campaign', 'Sent', 'Replies', 'Result', 'Status'], opt: [2],
+            title: 'Campaigns', when: 'November', cols: ['Campaign', 'Sent', 'Replies', 'Result', 'Status'], opt: [2], optm: [1, 2],
             rows: [
               ['Win back inactive members (14 days)', '36', '14', '9 came back', 'ok', 'Live'],
               ['Free trial class (Instagram)', '180', '31', '12 trials', 'ok', 'Live'],
@@ -366,7 +366,7 @@
               ['January challenge', '—', '—', '—', 'off', 'Draft']
             ] },
           { tab: 'Agent', kpis: [['Conversations today', '28', '+1'], ['Resolved without a human', '89 %', ''], ['Average reply time', '22 s', '']],
-            title: 'Today’s conversations', when: 'Last: just now', cols: ['Time', 'Contact', 'Intent', 'Outcome', 'Status'], opt: [2],
+            title: 'Today’s conversations', when: 'Last: just now', cols: ['Time', 'Contact', 'Intent', 'Outcome', 'Status'], opt: [2], optm: [0, 2],
             rows: [
               ['{t}', 'Diego', 'Price and trial', 'Functional on Wednesday 18:30', 'agent', 'Resolved', true],
               ['22:20', 'Alba Gil', 'Coming back after an injury', 'Handed to the trainer', 'esc', 'Escalated'],
@@ -501,14 +501,15 @@
           '<button type="button" class="crm-toggle' + (s[2] ? ' on' : '') + '" role="switch" aria-checked="' + (s[2] ? 'true' : 'false') + '" aria-label="' + esc(s[0]) + '"><span class="crm-toggle-label">' + esc(s[2] ? L.onLabel : L.offLabel) + '</span></button></div>';
       }).join('') + '</div>';
     } else {
-      html += '<table class="crm"><thead><tr>' + v.cols.map(function (col, i) { return '<th' + (v.opt.indexOf(i) >= 0 ? ' class="opt"' : '') + '>' + esc(col) + '</th>'; }).join('') + '</tr></thead><tbody>';
+      var optm = v.optm || [];
+      var colCls = function (i) { var c = []; if (v.opt.indexOf(i) >= 0) c.push('opt'); if (optm.indexOf(i) >= 0) c.push('optm'); return c; };
+      html += '<table class="crm"><thead><tr>' + v.cols.map(function (col, i) { var c = colCls(i); return '<th' + (c.length ? ' class="' + c.join(' ') + '"' : '') + '>' + esc(col) + '</th>'; }).join('') + '</tr></thead><tbody>';
       v.rows.forEach(function (r) {
         var n = v.cols.length - 1;
         var isNew = r[n + 2] === true;
         html += '<tr' + (isNew ? ' class="crm-row new' + (live ? ' show' : '') + '"' : '') + '>';
         for (var i = 0; i < n; i++) {
-          var cls = [];
-          if (v.opt.indexOf(i) >= 0) cls.push('opt');
+          var cls = colCls(i);
           if (v.opt.indexOf(i) >= 0 && i === v.opt[v.opt.length - 1]) cls.push('dim');
           html += '<td' + (cls.length ? ' class="' + cls.join(' ') + '"' : '') + '>' + esc(String(r[i]).replace('{t}', now)) + '</td>';
         }

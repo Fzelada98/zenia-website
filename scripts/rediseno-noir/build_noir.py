@@ -189,12 +189,19 @@ def base_html(s):
     assert "Cormorant" in s
 
     # 5. la tarjeta destacada de servicios, con su imagen a la derecha
-    fig = ('\n      <figure class="service-figure"><img src="/cases/img/ts-gaia-lote.webp" alt="Gaia, el agente de Throwin&rsquo; Salt: '
-           'el lote del d&iacute;a de relojes revisado y listo para eBay" width="1080" height="1350" loading="lazy">'
-           '<figcaption>Gaia, el agente que construimos para Throwin&rsquo; Salt: el lote del d&iacute;a de relojes, revisado y listo para publicar en eBay.</figcaption></figure>')
+    fig = ('\n      <figure class="service-figure is-video reel-frame"><div class="stage-box" style="--poster:url(/cases/img/gwb-network-poster.webp)"><video class="loop" muted loop playsinline preload="metadata" poster="/cases/img/gwb-network-poster.webp" width="720" height="1280" '
+           'aria-label="V&iacute;deo de lanzamiento de GWB Network, la red privada de transporte en mano construida por Zenia"><source src="/cases/video/gwb-network.mp4" type="video/mp4"></video></div>'
+           '<figcaption>GWB Network, la plataforma que construimos para Global Watch Buyers: una red privada de transporte en mano con miembros por aval, identidad verificada y un c&oacute;digo de entrega en cada viaje. V&iacute;deo en ingl&eacute;s, sin sonido; con sonido en <a href="/es/caso-global-watch-buyers.html">el caso</a>.</figcaption></figure>')
     m = uno(r'(<div class="service-card service-card--featured reveal">.*?<div class="service-card-body">.*?\n        </div>\n)(      </div>\n    </div>)', s)
     s = s[: m.end(1)] + "  " + fig.strip("\n") + "\n" + s[m.end(1):]
     assert 'service-figure' in s
+    # lo que lleva dentro una plataforma así, con GWB Network de ejemplo
+    puntos = ('\n          <ul class="service-points"><li>Red privada de transporte en mano para el gremio de relojes, con miembros por aval e identidad verificada</li>'
+              '<li>Un c&oacute;digo de entrega en cada viaje y panel de operaciones para el equipo</li>'
+              '<li>Dise&ntilde;o, desarrollo, lanzamiento y v&iacute;deo de presentaci&oacute;n: todo desde Zenia</li></ul>')
+    m2 = uno(r'(<div class="service-card-body">.*?<p>[^<]*producci&oacute;n\.</p>)', s)
+    s = s[: m2.end(1)] + puntos + s[m2.end(1):]
+    assert 'service-points' in s
     tarjeta = uno(r'<div class="service-card service-card--featured reveal">.*?</section>', s).group(0)
     assert tarjeta.index('service-figure') < tarjeta.index('</section>') and tarjeta.count('service-figure') == 1
 
@@ -228,15 +235,22 @@ def base_html(s):
     s = re.sub(r'\n\s*<div class="price-overlap" data-ui aria-hidden="true">.*?</div></div>', '', s, count=1, flags=re.S)
     assert 'price-overlap' not in s
 
-    # 8. la primera foto de casos: Global Watch Buyers
-    old = uno(r'<figure><img src="/cases/img/croian-home\.webp".*?</figure>', s).group(0)
-    gwb = ('<figure><img src="/cases/img/gwb-card.webp" alt="Global Watch Buyers: captaci&oacute;n de relojes por WhatsApp en 33 pa&iacute;ses '
-           '(conversaci&oacute;n recreada)" width="1600" height="1000" loading="lazy"><figcaption>Global Watch Buyers: captaci&oacute;n de relojes '
-           'por WhatsApp en 33 pa&iacute;ses, con GWB Network (conversaci&oacute;n recreada)</figcaption></figure>')
-    s = s.replace(old, gwb + "\n      " + old, 1)
-    old3 = uno(r'\n      <figure><img src="/cases/img/ts-card\.webp".*?</figure>', s).group(0)
-    s = s.replace(old3, "", 1)
-    assert s.count("<figure>") == 3 + 0, s.count("<figure>")
+    # 8. casos: el caso destacado de Global Watch Buyers con el vídeo de las 2:47, antes de las fotos
+    feature = '''    <div class="case-feature reveal reveal-delay-1">
+      <figure class="reel-frame"><div class="stage-box" style="--poster:url(/cases/img/gwb-agente-poster.webp)"><video class="loop" muted loop playsinline preload="metadata" poster="/cases/img/gwb-agente-poster.webp" width="720" height="1280" aria-label="Recreaci&oacute;n: un vendedor de relojes escribe a las 2:47 de la madrugada y sale con la llamada agendada"><source src="/cases/video/gwb-agente-247am.mp4" type="video/mp4"></video></div>
+        <figcaption>Las 2:47 de la madrugada: un vendedor en Londres escribe, se cualifica la pieza y queda agendada la llamada. Recreaci&oacute;n del flujo, sin sonido.</figcaption></figure>
+      <div class="case-feature-text">
+        <p class="eyebrow">Caso destacado &middot; Global Watch Buyers</p>
+        <h3>Vendedores de relojes de lujo de 33 pa&iacute;ses, captados por WhatsApp</h3>
+        <p>P&aacute;ginas de venta por marca y ciudad en 13 idiomas, WhatsApp con cualificaci&oacute;n, panel de leads por niveles y anuncios que solo traen vendedores. Sobre ese motor va el agente de IA que contesta en segundos, cualifica y agenda, como en la recreaci&oacute;n del v&iacute;deo.</p>
+        <div class="case-feature-stats"><div><b>831</b><span>conversaciones de WhatsApp</span></div><div><b>33</b><span>pa&iacute;ses</span></div><div><b>10 de 12</b><span>contactos de anuncios traen un reloj premium</span></div></div>
+        <a href="/es/caso-global-watch-buyers.html" class="btn btn-secondary btn-arrow">Ver el caso con los v&iacute;deos</a>
+      </div>
+    </div>
+'''
+    assert s.count('    <div class="work-strip reveal reveal-delay-1">') == 1
+    s = s.replace('    <div class="work-strip reveal reveal-delay-1">', feature + '    <div class="work-strip reveal reveal-delay-1">', 1)
+    assert s.count("<figure>") == 3, s.count("<figure>")
 
     # 8b. el cierre, con la fotografía velada
     assert s.count('<div class="cta-box reveal">') == 1
@@ -280,7 +294,7 @@ def main():
                                 ("c", '\n<link rel="stylesheet" href="../styles/noir-c.css?v=' + ver + '">', "#0B1220")):
         v = s.replace('<link rel="stylesheet" href="../styles/main.css?v=11">', '<link rel="stylesheet" href="../styles/noir.css?v=' + ver + '">' + extra)
         v = v.replace('<link rel="stylesheet" href="../styles/main.css?v=10">', '<link rel="stylesheet" href="../styles/noir.css?v=' + ver + '">' + extra)
-        v = v.replace('../js/demo-chat.js?v=1', '../js/demo-chat.js?v=' + ver + '"></script>\n<script defer src="../js/hero-net.js?v=' + ver)
+        v = v.replace('../js/demo-chat.js?v=1', '../js/demo-chat.js?v=' + ver + '"></script>\n<script defer src="../js/hero-net.js?v=' + ver + '"></script>\n<script defer src="../js/loops.js?v=' + ver)
         assert "noir.css" in v
         v = v.replace('<meta name="theme-color" content="#F4F4F1">', f'<meta name="theme-color" content="{theme}">')
         escribir(os.path.join(ZV, "es", f"index-{letra}.html"), v)

@@ -10032,3 +10032,17 @@ Full breakdown of the four stacks, 2026 costs and the migration cutover: https:/
 #SystemsEngineering #WhatsAppBusinessAPI #CRM #AI
 
 ---
+## 2026-11-02 - AI agent for property managers (engineering)
+
+61% of US rental inquiries now land outside business hours (ShowMojo, Q1 2026 analysis of 78M+ North American leads). A property-management AI agent is not a reply bot; it is a long-running agentic workflow over heterogeneous back-ends with real SLA targets.
+
+Reference architecture we ship for 50-500 door operators: WhatsApp Business API + 10DLC/A2P SMS + a SIP voice frontend, all terminated on a single BSP and fanned into one agent loop. Tool surface wraps the property-management system of record (AppFolio, Buildium, Rentvine, DoorLoop, Rent Manager) through their REST APIs or ETL where no API is exposed, with idempotent write-through on work orders. Fair-housing guardrails run as a pre-send classifier, not as prompt text. Emergency keywords ("gas", "no heat", "flooding") bypass the LLM and page a human via Twilio.
+
+Measured in production on a 180-door scattered-site book: median first-response 42s across all channels, maintenance intake-to-work-order under 3 minutes p50, 98% ticket capture in the PMS (vs 71% before). Days on market dropped 29 to 19.
+
+Full write-up with the integration stack and the 2-week rollout: https://zeniapartners.com/blog/ai-agent-for-property-managers.html
+
+#SystemsEngineering #AgenticAI #WhatsAppBusinessAPI #PropTech #AI
+
+---
+

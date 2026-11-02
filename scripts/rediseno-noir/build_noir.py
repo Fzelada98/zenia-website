@@ -87,9 +87,9 @@ __CRM__
       </div>'''
 
 CRM = '''    <div class="crm-window" id="crmWindow" data-ui aria-label="CRM a medida &middot; La Terraza">
-      <aside class="crm-side"><span class="crm-mark" aria-hidden="true">Z</span><span class="on">Reservas</span><span>Clientes</span><span>Campa&ntilde;as</span><span>Agente</span><span>Ajustes</span><div class="crm-who"><b>La Terraza</b>Madrid &middot; 2 salas</div></aside>
+      <aside class="crm-side"><span class="crm-mark" aria-hidden="true">Z</span><nav><span class="on">Reservas</span><span>Clientes</span><span>Campa&ntilde;as</span><span>Agente</span><span>Ajustes</span></nav><div class="crm-who"><b>La Terraza</b>Madrid &middot; 2 salas</div></aside>
       <div class="crm-main">
-        <div class="crm-top"><span class="crm-mark" aria-hidden="true">Z</span><span class="crm-brand">La Terraza <span>&middot; CRM a medida</span></span><span class="crm-live">Actualizado ahora</span><div class="crm-tabs"><span class="on">Reservas</span><span>Clientes</span><span>Campa&ntilde;as</span><span>Agente</span></div></div>
+        <div class="crm-top"><span class="crm-mark" aria-hidden="true">Z</span><span class="crm-brand">La Terraza <span>&middot; CRM a medida</span></span><span class="crm-live">Actualizado ahora</span><div class="crm-tabs"><span class="on">Reservas</span><span>Clientes</span><span>Campa&ntilde;as</span><span>Agente</span><span>Ajustes</span></div></div>
         <div class="crm-kpis"><div class="crm-kpi"><small>Reservas para ma&ntilde;ana</small><strong>24<i>+1</i></strong></div><div class="crm-kpi"><small>Ocupaci&oacute;n a las 21:00</small><strong>92&nbsp;%</strong></div><div class="crm-kpi"><small>Atendidas por el agente</small><strong>16<i>+1</i></strong></div></div>
         <div class="crm-title"><b>Reservas de ma&ntilde;ana</b><em>Martes</em></div>
         <table class="crm"><thead><tr><th>Hora</th><th>Nombre</th><th>Pax</th><th class="opt">Zona</th><th class="opt">Notas</th><th>Estado</th></tr></thead><tbody>

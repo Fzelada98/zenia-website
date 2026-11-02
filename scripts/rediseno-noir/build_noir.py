@@ -189,8 +189,8 @@ def base_html(s):
     assert "Cormorant" in s
 
     # 5. la tarjeta destacada de servicios, con su imagen a la derecha
-    fig = ('\n      <figure class="service-figure is-video reel-frame"><div class="stage-box" style="--poster:url(/cases/img/gwb-network-poster.webp)"><video class="loop" muted loop playsinline preload="metadata" poster="/cases/img/gwb-network-poster.webp" width="720" height="1280" '
-           'aria-label="V&iacute;deo de lanzamiento de GWB Network, la red privada de transporte en mano construida por Zenia"><source src="/cases/video/gwb-network.mp4" type="video/mp4"></video></div>'
+    fig = ('\n      <figure class="service-figure is-video reel-frame"><div class="stage-box" style="--poster:url(/cases/img/gwb-network-poster.webp)"><video class="loop" controls muted loop playsinline preload="metadata" poster="/cases/img/gwb-network-poster.webp" width="720" height="1280" '
+           'aria-label="V&iacute;deo de lanzamiento de GWB Network, la red privada de transporte en mano construida por Zenia"><source src="/cases/video/gwb-network.mp4" type="video/mp4"></video><button type="button" class="stage-sound">Ver con sonido</button></div>'
            '<figcaption>GWB Network, la plataforma que construimos para Global Watch Buyers: una red privada de transporte en mano con miembros por aval, identidad verificada y un c&oacute;digo de entrega en cada viaje. V&iacute;deo en ingl&eacute;s, sin sonido; con sonido en <a href="/es/caso-global-watch-buyers.html">el caso</a>.</figcaption></figure>')
     m = uno(r'(<div class="service-card service-card--featured reveal">.*?<div class="service-card-body">.*?\n        </div>\n)(      </div>\n    </div>)', s)
     s = s[: m.end(1)] + "  " + fig.strip("\n") + "\n" + s[m.end(1):]
@@ -237,7 +237,7 @@ def base_html(s):
 
     # 8. casos: el caso destacado de Global Watch Buyers con el vídeo de las 2:47, antes de las fotos
     feature = '''    <div class="case-feature reveal reveal-delay-1">
-      <figure class="reel-frame"><div class="stage-box" style="--poster:url(/cases/img/gwb-agente-poster.webp)"><video class="loop" muted loop playsinline preload="metadata" poster="/cases/img/gwb-agente-poster.webp" width="720" height="1280" aria-label="Recreaci&oacute;n: un vendedor de relojes escribe a las 2:47 de la madrugada y sale con la llamada agendada"><source src="/cases/video/gwb-agente-247am.mp4" type="video/mp4"></video></div>
+      <figure class="reel-frame"><div class="stage-box" style="--poster:url(/cases/img/gwb-agente-poster.webp)"><video class="loop" controls muted loop playsinline preload="metadata" poster="/cases/img/gwb-agente-poster.webp" width="720" height="1280" aria-label="Recreaci&oacute;n: un vendedor de relojes escribe a las 2:47 de la madrugada y sale con la llamada agendada"><source src="/cases/video/gwb-agente-247am.mp4" type="video/mp4"></video><button type="button" class="stage-sound">Ver con sonido</button></div>
         <figcaption>Las 2:47 de la madrugada: un vendedor en Londres escribe, se cualifica la pieza y queda agendada la llamada. Recreaci&oacute;n del flujo, sin sonido.</figcaption></figure>
       <div class="case-feature-text">
         <p class="eyebrow">Caso destacado &middot; Global Watch Buyers</p>
@@ -248,8 +248,20 @@ def base_html(s):
       </div>
     </div>
 '''
+    feature_ts = '''    <div class="case-feature case-feature--flip reveal reveal-delay-1">
+      <figure class="reel-frame"><div class="stage-box" style="--poster:url(/cases/img/ts-unmakeable-poster.webp)"><video class="loop" controls muted loop playsinline preload="metadata" poster="/cases/img/ts-unmakeable-poster.webp" width="720" height="1280" aria-label="The Unmakeable, pel&iacute;cula de marca de Throwin&rsquo; Salt Co. hecha por Zenia con relojes reales del stock"><source src="/cases/video/ts-unmakeable.mp4" type="video/mp4"></video><button type="button" class="stage-sound">Ver con sonido</button></div>
+        <figcaption>The Unmakeable, la pel&iacute;cula de marca de Throwin&rsquo; Salt Co.: hecha por Zenia con relojes reales del stock, voz y m&uacute;sica. En ingl&eacute;s.</figcaption></figure>
+      <div class="case-feature-text">
+        <p class="eyebrow">Caso destacado &middot; Throwin&rsquo; Salt Co.</p>
+        <h3>Relojes de alta gama: el lote del d&iacute;a, publicado en eBay desde WhatsApp</h3>
+        <p>Gaia, el agente que construimos para Throwin&rsquo; Salt, prepara cada anuncio con t&iacute;tulo, especificaciones, fotos y precio, aplica las reglas de la casa y lo publica en eBay cuando el equipo dice &laquo;publica&raquo;. Y para la marca, una pel&iacute;cula con los relojes como protagonistas.</p>
+        <div class="case-feature-stats"><div><b>54</b><span>relojes publicados en 4 semanas</span></div><div><b>23</b><span>en un solo d&iacute;a</span></div><div><b>2&nbsp;M$</b><span>de inventario en eBay</span></div></div>
+        <a href="/es/caso-throwin-salt-gaia.html" class="btn btn-secondary btn-arrow">Ver el caso de Throwin&rsquo; Salt</a>
+      </div>
+    </div>
+'''
     assert s.count('    <div class="work-strip reveal reveal-delay-1">') == 1
-    s = s.replace('    <div class="work-strip reveal reveal-delay-1">', feature + '    <div class="work-strip reveal reveal-delay-1">', 1)
+    s = s.replace('    <div class="work-strip reveal reveal-delay-1">', feature + feature_ts + '    <div class="work-strip reveal reveal-delay-1">', 1)
     assert s.count("<figure>") == 3, s.count("<figure>")
 
     # 8b. el cierre, con la fotografía velada

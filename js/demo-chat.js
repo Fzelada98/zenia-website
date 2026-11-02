@@ -180,6 +180,7 @@
   var caption = document.getElementById('demoCaption');
   var clock = document.querySelector('.phone-time');
   var win = document.getElementById('crmWindow');
+  var markHTML = (win && win.querySelector('.crm-mark')) ? win.querySelector('.crm-mark').innerHTML : 'Z';
   var timers = [];
   var current = 'restaurante';
   var motion = function () {
@@ -225,8 +226,8 @@
     win.classList.remove('updated');
     win.setAttribute('aria-label', L.crmTag + ' · ' + d.brand);
     var tabs = c.tabs.map(function (t, i) { return '<span' + (i === 0 ? ' class="on"' : '') + '>' + esc(t) + '</span>'; }).join('');
-    var html = '<aside class="crm-side"><span class="crm-mark" aria-hidden="true">Z</span>' + tabs + '<span>' + esc(L.settings) + '</span><div class="crm-who"><b>' + esc(d.brand) + '</b>' + esc(d.where) + '</div></aside><div class="crm-main">';
-    html += '<div class="crm-top"><span class="crm-mark" aria-hidden="true">Z</span><span class="crm-brand">' + esc(d.brand) + ' <span>· ' + esc(L.crmTag) + '</span></span><span class="crm-live">' + esc(L.updated) + '</span><div class="crm-tabs">' + tabs + '</div></div>';
+    var html = '<aside class="crm-side"><span class="crm-mark" aria-hidden="true">' + markHTML + '</span>' + tabs + '<span>' + esc(L.settings) + '</span><div class="crm-who"><b>' + esc(d.brand) + '</b>' + esc(d.where) + '</div></aside><div class="crm-main">';
+    html += '<div class="crm-top"><span class="crm-mark" aria-hidden="true">' + markHTML + '</span><span class="crm-brand">' + esc(d.brand) + ' <span>· ' + esc(L.crmTag) + '</span></span><span class="crm-live">' + esc(L.updated) + '</span><div class="crm-tabs">' + tabs + '</div></div>';
     html += '<div class="crm-kpis">' + c.kpis.map(function (k) {
       return '<div class="crm-kpi"><small>' + esc(k[0]) + '</small><strong>' + esc(k[1]) + (k[2] ? '<i>' + esc(k[2]) + '</i>' : '') + '</strong></div>';
     }).join('') + '</div>';

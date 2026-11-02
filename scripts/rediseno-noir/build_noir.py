@@ -39,8 +39,10 @@ C_CSS = """/* Variante C: navy y azul de marca */
   --accent: #5B8CFF; --accent-deep: #2563EB; --accent-light: #8DB3FF; --accent-text: #8DB3FF;
   --accent-pale: rgba(91, 140, 255, 0.18); --accent-on-ink: #8DB3FF; --on-accent: #ffffff;
   --line: rgba(91, 140, 255, 0.2); --line-strong: rgba(91, 140, 255, 0.45);
-  --halo: rgba(91, 140, 255, 0.14); --halo-2: rgba(91, 140, 255, 0.04); --ring: rgba(91, 140, 255, 0.16); }
+  --halo: rgba(91, 140, 255, 0.14); --halo-2: rgba(91, 140, 255, 0.04); --ring: rgba(91, 140, 255, 0.16);
+  --ink: #EEF1F7; --ink-2: #F7F9FC; --ink-soft: #C3CAD8; --ink-mute: #8B95A7; --on-ink: #EEF1F7; --on-ink-soft: #C3CAD8; }
 html, body { background: var(--paper); }
+.skip-to-content, .btn-primary, .cta-actions .btn-primary, .booking-submit { color: #fff; }
 svg.zenia-mark path:first-of-type { fill: #3B82F6; }
 svg.zenia-mark path:last-of-type { fill: #5B8CFF; }
 .crm-toast { background: rgba(91, 140, 255, 0.07); }
@@ -203,18 +205,22 @@ def base_html(s):
     filas = []
     for i, ((h3, ptxt), (a, b, dur)) in enumerate(zip(pasos, pos)):
         inf = ' gantt-row--inf' if b >= 12 else ''
-        corto = "Continuo" if inf else dur
+        corto = "Continuo" if inf else dur.replace(" semanas", " sem.")
         filas.append(f'      <li class="gantt-row{inf}" style="--s:{a};--e:{b};--r:{i + 2}"><div class="gantt-text"><h3>{h3}</h3><p>{ptxt}</p><span class="gantt-dur">{dur}</span></div>'
                      f'<div class="gantt-track"><span class="gantt-bar"><i>{corto}</i></span></div></li>')
     regla = "".join(f"<span>{'Sem. 1' if i == 1 else i}</span>" for i in range(1, 11)) + '<span class="gantt-inf">en adelante</span>'
     gantt = ('    <div class="gantt reveal reveal-delay-1" data-ui>\n      <div class="gantt-chart">\n        <div class="gantt-corner">Etapa</div>\n'
              '        <div class="gantt-ruler" aria-hidden="true">' + regla + '<b class="gantt-ms" style="--x:8">Primer resultado</b></div>\n'
              '        <div class="gantt-grid" aria-hidden="true"><span class="gantt-mark" style="--x:8"></span></div>\n'
-             '        <ol class="gantt-rows">\n' + "\n".join(filas) + '\n        </ol>\n      </div>\n'
-             '      <p class="gantt-note">Semanas desde la primera llamada. El primer resultado medible llega antes de la octava.</p>\n    </div>')
+             '        <ol class="gantt-rows">\n' + "\n".join(filas) + '\n        </ol>\n      </div>\n    </div>\n'
+             '    <p class="gantt-note reveal reveal-delay-2">Semanas desde la primera llamada. El primer resultado medible llega antes de la octava.</p>')
     m = uno(r'    <div class="stage-bar reveal reveal-delay-1" data-ui>.*?</ol>\n', s)
     s = s[: m.start()] + gantt + "\n" + s[m.end():]
     assert 'stage-bar' not in s and 'class="gantt' in s
+
+    # 6b. un titular que se iba a tres líneas
+    assert s.count('<h3>Copilotos de Conocimiento Interno</h3>') == 1
+    s = s.replace('<h3>Copilotos de Conocimiento Interno</h3>', '<h3>Copilotos de Conocimiento</h3>', 1)
 
     # 7. la frase de cifras (ya está en la rejilla) y la burbuja sobre el precio
     s = re.sub(r'\n\s*<p class="impact-sentence reveal">.*?</p>', '', s, count=1, flags=re.S)
@@ -244,6 +250,10 @@ def base_html(s):
                 '      <a href="#" onclick="openCalendly(event)" class="btn btn-primary btn-arrow">Agenda una llamada</a>\n    </div>\n')
     s = s.replace(wm, cabecera, 1)
     assert 'footer-head' in s and 'footer-wordmark' not in s
+    # el logo de Zenia en la ventana del CRM (en vez de la «Z»)
+    n = s.count('<span class="crm-mark" aria-hidden="true">Z</span>')
+    assert n == 2, n
+    s = s.replace('<span class="crm-mark" aria-hidden="true">Z</span>', '<span class="crm-mark" aria-hidden="true">' + marca + '</span>')
 
     # 9. nota de marcas en el pie
     s = s.replace('</p>\n      </div>\n      <div class="footer-columns">',

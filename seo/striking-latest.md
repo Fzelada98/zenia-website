@@ -21,7 +21,7 @@ Consultas donde zeniapartners.com ya imprime en posición 4-30 (últimos 8 días
 | 21.8 | 25 | crm whatsapp integration | /blog/integrar-crm-con-whatsapp-business.html |
 | 10.5 | 23 | crm para restaurantes | /blog/mejor-crm-para-restaurantes-en-bogota.html |
 | 16.3 | 21 | ai receptionist for coffee shops | /blog/ai-agent-for-coffee-shops.html |
-| 18.9 | 21 | carta digital hosteleria | /blog/carta-digital-qr-restaurante.html |
+| 18.9 | 21 | [carta digital hosteleria](/blog/carta-digital-hosteleria.html) | /blog/carta-digital-qr-restaurante.html |
 | 29.8 | 21 | coste crm | /blog/cuanto-cuesta-un-crm.html |
 | 20.4 | 20 | carta digital de restaurante | /blog/carta-digital-qr-restaurante.html |
 | 22.0 | 19 | chatbot empresarial malaga | /blog/agentes-inteligentes-ia-malaga.html |

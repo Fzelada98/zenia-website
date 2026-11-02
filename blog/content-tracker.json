@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-11-01T14:13:28.267404+00:00",
+  "lastRun": "2026-11-02T06:11:49.592810+00:00",
   "posts": [
+    {
+      "slug": "carta-digital-hosteleria",
+      "keyword": "carta digital hosteleria",
+      "tier": 1,
+      "cluster": "hosteleria-carta-digital",
+      "status": "published",
+      "date": "2026-11-02",
+      "source": "striking"
+    },
     {
       "slug": "carta-digital-restaurante-formatos-coste",
       "keyword": "carta digital restaurante",

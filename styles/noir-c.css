@@ -1,5 +1,5 @@
 /* Variante C: navy y azul de marca */
-:root { --paper: #0B1220; --paper-2: #111A2C; --paper-3: #1A2540; --nav-bg: rgba(11, 18, 32, 0.86); --paper-rgb: 11, 18, 32;
+:root { --paper: #0B1220; --paper-2: #111A2C; --paper-3: #1A2540; --nav-bg: rgba(11, 18, 32, 0.86); --paper-rgb: 11, 18, 32; --net-rgb: 91, 140, 255;
   --accent: #5B8CFF; --accent-deep: #2563EB; --accent-light: #8DB3FF; --accent-text: #8DB3FF;
   --accent-pale: rgba(91, 140, 255, 0.18); --accent-on-ink: #8DB3FF; --on-accent: #ffffff;
   --line: rgba(91, 140, 255, 0.2); --line-strong: rgba(91, 140, 255, 0.45);

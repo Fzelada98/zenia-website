@@ -1,4 +1,4 @@
 /* Variante B: navy y champán */
-:root { --paper: #0B1220; --paper-2: #111A2C; --paper-3: #1A2540; --nav-bg: rgba(11, 18, 32, 0.86); --paper-rgb: 11, 18, 32; }
+:root { --paper: #0B1220; --paper-2: #111A2C; --paper-3: #1A2540; --nav-bg: rgba(11, 18, 32, 0.86); --paper-rgb: 11, 18, 32; --net-rgb: 212, 184, 140; }
 html, body { background: var(--paper); }
 .footer, body > div:has(> a[href$="cobertura.html"]) { background: #080D18 !important; }

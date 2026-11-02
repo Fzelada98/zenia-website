@@ -29,13 +29,13 @@ FONTS = ("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@
          "&family=Space+Grotesk:wght@700&display=swap")
 
 B_CSS = """/* Variante B: navy y champán */
-:root { --paper: #0B1220; --paper-2: #111A2C; --paper-3: #1A2540; --nav-bg: rgba(11, 18, 32, 0.86); --paper-rgb: 11, 18, 32; }
+:root { --paper: #0B1220; --paper-2: #111A2C; --paper-3: #1A2540; --nav-bg: rgba(11, 18, 32, 0.86); --paper-rgb: 11, 18, 32; --net-rgb: 212, 184, 140; }
 html, body { background: var(--paper); }
 .footer, body > div:has(> a[href$="cobertura.html"]) { background: #080D18 !important; }
 """
 
 C_CSS = """/* Variante C: navy y azul de marca */
-:root { --paper: #0B1220; --paper-2: #111A2C; --paper-3: #1A2540; --nav-bg: rgba(11, 18, 32, 0.86); --paper-rgb: 11, 18, 32;
+:root { --paper: #0B1220; --paper-2: #111A2C; --paper-3: #1A2540; --nav-bg: rgba(11, 18, 32, 0.86); --paper-rgb: 11, 18, 32; --net-rgb: 91, 140, 255;
   --accent: #5B8CFF; --accent-deep: #2563EB; --accent-light: #8DB3FF; --accent-text: #8DB3FF;
   --accent-pale: rgba(91, 140, 255, 0.18); --accent-on-ink: #8DB3FF; --on-accent: #ffffff;
   --line: rgba(91, 140, 255, 0.2); --line-strong: rgba(91, 140, 255, 0.45);
@@ -141,8 +141,8 @@ def base_html(s):
     </div>
 '''
     assert s.count('<section class="hero hero-portada" id="hero">') == 1
-    s = s.replace('<section class="hero hero-portada" id="hero">', '<section class="hero hero-portada" id="hero">\n  <div class="hero-photo" aria-hidden="true"><picture><source media="(max-width: 768px)" srcset="/assets/images/hero-madrid-m.webp"><img src="/assets/images/hero-madrid.webp" width="2400" height="1109" alt="" decoding="async" fetchpriority="high"></picture></div>', 1)
-    s = re.sub(r'(<section class="hero[^"]*" id="hero">\s*(?:<div class="hero-photo"[^\n]*\n)?\s*<div class="container">\s*)',
+    s = s.replace('<section class="hero hero-portada" id="hero">', '<section class="hero hero-portada" id="hero">\n  <div class="hero-net" aria-hidden="true"></div>\n  <div class="hero-photo" aria-hidden="true"><picture><source media="(max-width: 768px)" srcset="/assets/images/hero-madrid-m.webp"><img src="/assets/images/hero-madrid.webp" width="2400" height="1109" alt="" decoding="async" fetchpriority="high"></picture></div>', 1)
+    s = re.sub(r'(<section class="hero[^"]*" id="hero">\s*(?:<div class="hero-net"[^\n]*\n)?\s*(?:<div class="hero-photo"[^\n]*\n)?\s*<div class="container">\s*)',
                lambda m: m.group(1) + '<p class="eyebrow">CRM a medida + agente de IA por WhatsApp</p>\n    ', s, count=1)
     hero = uno(r'<section class="hero[^"]*" id="hero">.*?</section>', s)
     h = hero.group(0)
@@ -196,22 +196,22 @@ def base_html(s):
     tarjeta = uno(r'<div class="service-card service-card--featured reveal">.*?</section>', s).group(0)
     assert tarjeta.index('service-figure') < tarjeta.index('</section>') and tarjeta.count('service-figure') == 1
 
-    # 6. el proceso: línea de tiempo con regla de semanas (como en un informe)
+    # 6. el proceso: la línea de tiempo como un cuadro de una sola pieza
     pasos = re.findall(r'<li class="process-step" style="--w:[0-9.]+"><h3>(.*?)</h3><p>(.*?)</p></li>', s)
     assert len(pasos) == 4, len(pasos)
-    pos = [(0, 2, "1 a 2 semanas", ""), (2, 4, "1 a 2 semanas", ""),
-           (4, 9.5, "4 a 6 semanas", '<span class="gantt-mark"><span>Primer resultado</span></span>'),
-           (9.5, 12, "Continuo, cada mes", "")]
+    pos = [(0, 2, "1 a 2 semanas"), (2, 4, "1 a 2 semanas"), (4, 9.5, "4 a 6 semanas"), (9.5, 12, "Continuo, cada mes")]
     filas = []
-    for (h3, ptxt), (a, b, dur, extra) in zip(pasos, pos):
+    for i, ((h3, ptxt), (a, b, dur)) in enumerate(zip(pasos, pos)):
         inf = ' gantt-row--inf' if b >= 12 else ''
         corto = "Continuo" if inf else dur
-        filas.append(f'      <li class="gantt-row{inf}" style="--s:{a};--e:{b}"><div class="gantt-text"><h3>{h3}</h3><p>{ptxt}</p><span class="gantt-dur">{dur}</span></div>'
-                     f'<div class="gantt-track">{extra}<span class="gantt-bar"><i>{corto}</i></span></div></li>')
+        filas.append(f'      <li class="gantt-row{inf}" style="--s:{a};--e:{b};--r:{i + 2}"><div class="gantt-text"><h3>{h3}</h3><p>{ptxt}</p><span class="gantt-dur">{dur}</span></div>'
+                     f'<div class="gantt-track"><span class="gantt-bar"><i>{corto}</i></span></div></li>')
     regla = "".join(f"<span>{'Sem. 1' if i == 1 else i}</span>" for i in range(1, 11)) + '<span class="gantt-inf">en adelante</span>'
-    gantt = ('    <div class="gantt reveal reveal-delay-1" data-ui>\n      <div class="gantt-head"><span class="gantt-corner">Etapa</span>'
-             '<div class="gantt-ruler" aria-hidden="true">' + regla + '</div></div>\n      <ol class="gantt-rows">\n' + "\n".join(filas) +
-             '\n      </ol>\n      <p class="gantt-note">Semanas desde la primera llamada. El primer resultado medible llega antes de la octava.</p>\n    </div>')
+    gantt = ('    <div class="gantt reveal reveal-delay-1" data-ui>\n      <div class="gantt-chart">\n        <div class="gantt-corner">Etapa</div>\n'
+             '        <div class="gantt-ruler" aria-hidden="true">' + regla + '<b class="gantt-ms" style="--x:8">Primer resultado</b></div>\n'
+             '        <div class="gantt-grid" aria-hidden="true"><span class="gantt-mark" style="--x:8"></span></div>\n'
+             '        <ol class="gantt-rows">\n' + "\n".join(filas) + '\n        </ol>\n      </div>\n'
+             '      <p class="gantt-note">Semanas desde la primera llamada. El primer resultado medible llega antes de la octava.</p>\n    </div>')
     m = uno(r'    <div class="stage-bar reveal reveal-delay-1" data-ui>.*?</ol>\n', s)
     s = s[: m.start()] + gantt + "\n" + s[m.end():]
     assert 'stage-bar' not in s and 'class="gantt' in s
@@ -235,6 +235,15 @@ def base_html(s):
     # 8b. el cierre, con la fotografía velada
     assert s.count('<div class="cta-box reveal">') == 1
     s = s.replace('<div class="cta-box reveal">', '<div class="cta-box reveal">\n      <div class="cta-bg" aria-hidden="true"><img src="/assets/images/hero-madrid.webp" width="2400" height="1109" alt="" loading="lazy" decoding="async"></div>', 1)
+
+    # 8c. el pie: símbolo, nombre, lema y acción en vez del nombre gigante
+    marca = uno(r'<svg class="zenia-mark".*?</svg>', s).group(0)
+    wm = uno(r'    <svg class="footer-wordmark".*?</svg>\n', s).group(0)
+    cabecera = ('    <div class="footer-head">\n      <a href="/es/" class="footer-brand">' + marca + '<span>ZENIA</span></a>\n'
+                '      <p class="footer-tag">CRM a medida y agentes de IA por WhatsApp para PYMEs en Espa&ntilde;a y Latinoam&eacute;rica.</p>\n'
+                '      <a href="#" onclick="openCalendly(event)" class="btn btn-primary btn-arrow">Agenda una llamada</a>\n    </div>\n')
+    s = s.replace(wm, cabecera, 1)
+    assert 'footer-head' in s and 'footer-wordmark' not in s
 
     # 9. nota de marcas en el pie
     s = s.replace('</p>\n      </div>\n      <div class="footer-columns">',
@@ -261,7 +270,7 @@ def main():
                                 ("c", '\n<link rel="stylesheet" href="../styles/noir-c.css?v=' + ver + '">', "#0B1220")):
         v = s.replace('<link rel="stylesheet" href="../styles/main.css?v=11">', '<link rel="stylesheet" href="../styles/noir.css?v=' + ver + '">' + extra)
         v = v.replace('<link rel="stylesheet" href="../styles/main.css?v=10">', '<link rel="stylesheet" href="../styles/noir.css?v=' + ver + '">' + extra)
-        v = v.replace('../js/demo-chat.js?v=1', '../js/demo-chat.js?v=' + ver)
+        v = v.replace('../js/demo-chat.js?v=1', '../js/demo-chat.js?v=' + ver + '"></script>\n<script defer src="../js/hero-net.js?v=' + ver)
         assert "noir.css" in v
         v = v.replace('<meta name="theme-color" content="#F4F4F1">', f'<meta name="theme-color" content="{theme}">')
         escribir(os.path.join(ZV, "es", f"index-{letra}.html"), v)

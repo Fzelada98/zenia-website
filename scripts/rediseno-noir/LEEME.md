@@ -16,3 +16,5 @@ Los símbolos de la banda «Trabajamos sobre» son de simple-icons (CC0). `js/de
 Pendiente: la portada inglesa (`index.html`) se hace igual cuando Fabrizzio elija variante.
 
 2-nov-2026: la portada lleva la frase centrada sobre la foto de Madrid de noche (`assets/images/hero-madrid.webp`, Tim Adams, CC BY 2.0, crédito en el pie; fuente y licencia en `assets/images/hero-src/credits.json`), el teléfono y el CRM a medida como captura de producto, la cita del fundador centrada y el cierre con la misma foto. La hoja cambia de versión (`?v=<epoch>`) en cada construcción para que el navegador no reutilice la vieja.
+
+2-nov-2026 (noche): la portada lleva además una red de nodos animada en canvas (`js/hero-net.js`, color de `--net-rgb`, se para fuera de pantalla y con movimiento reducido pinta un fotograma) y una veladura radial más fuerte detrás del texto; la sección 04 es un cuadro de una pieza (`.gantt-chart`, filas con `display: contents`, rejilla continua, hito «Primer resultado» con rombo); el pie cambia el nombre gigante por una cabecera (símbolo, ZENIA, lema y botón).

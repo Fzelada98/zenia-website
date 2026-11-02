@@ -9986,3 +9986,17 @@ Full breakdown with HubSpot/Salesforce/Zoho native-vs-connector matrix, 2026 pri
 #WhatsAppBusinessAPI #CRM #HubSpot #SystemsEngineering #B2B
 
 ---
+
+## 2026-11-02 - Carta digital hostelería (engineering)
+
+A QR on a restaurant table that resolves to a static PDF is cheap but blind: no attribution per table, no multilingual swap, no path to WhatsApp.
+
+The build that moves the needle treats the QR as the entry edge of a four-stage pipeline. Dynamic QR -> short-link resolver with per-table/per-location UTM -> cached HTML menu served from the edge (sub-200ms LCP on 4G) -> wa.me deep-link with context token (table id, locale, viewed items). The menu renders in &lt;800ms including fonts and alérgenos data from a single JSON per locale; the WhatsApp deep-link seeds a session on WhatsApp Business API where a personalized AI agent (Claude-based, with menu embeddings in a vector store) answers reservation/allergy questions in &lt;1s p50 and writes the lead into the CRM with the originating QR attached.
+
+Two numbers that matter in production: the resolver layer carries the whole stack through vendor churn (switch menu SaaS without changing the printed vinyl), and the attribution column turns "which table generates reservations" from guesswork into a query. We've also had to design for VeriFactu arriving in 2027 (RD-ley 15/2025) and for ES Reglamento 1169/2011 allergen compliance baked into the menu schema, not bolted on.
+
+Full architecture, cost table and legal notes: https://zeniapartners.com/blog/carta-digital-hosteleria.html
+
+#SystemsEngineering #WhatsAppBusinessAPI #Hospitality #AI #EdgeComputing
+
+---

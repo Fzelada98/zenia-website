@@ -10018,3 +10018,17 @@ Full breakdown with vendor red flags and 60-day targets: https://zeniapartners.c
 #SystemsEngineering #WhatsAppBusinessAPI #VoiceAI #FieldService #AI
 
 ---
+
+## 2026-11-02 - Agile CRM with WhatsApp (engineering)
+
+Agile CRM does not ship a native WhatsApp Business channel in 2026. Teams that need WhatsApp inside Agile CRM assemble one of four routes: Zapier + Twilio, Make + 360dialog, Latenode, or OttoKit over the WhatsApp Cloud API. The outbound path is fine; the inbound path is where the architecture breaks.
+
+Technically the gap sits in two places: (1) the connector fires on Agile CRM webhooks but customer replies land on the BSP, not back on the contact record, so attribution and context are split across two systems; (2) no connector exposes an HSM template manager that respects Meta's 2026 utility/marketing/service category pricing (€0.0314 vs €0.0821 per conversation ES), so compliance drift shows up in the Meta invoice before anyone notices.
+
+Production shape when WhatsApp is a first-order channel: WhatsApp Business API terminated on a BSP (Twilio/360dialog), an agent loop (tool-calling LLM) with your CRM schema as the function surface, and a single write path to the CRM record. One system of record, median first-response under 60s, template categorization enforced at send time.
+
+Full breakdown of the four stacks, 2026 costs and the migration cutover: https://zeniapartners.com/blog/agile-crm-con-whatsapp-integrar-alternativas.html
+
+#SystemsEngineering #WhatsAppBusinessAPI #CRM #AI
+
+---

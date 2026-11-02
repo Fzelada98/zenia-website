@@ -22,7 +22,7 @@ Consultas donde zeniapartners.com ya imprime en posición 4-30 (últimos 8 días
 | 16.0 | 25 | carta qr restaurante | /blog/carta-digital-qr-restaurante.html |
 | 8.3 | 25 | crm a medida madrid | /blog/crm-a-medida-madrid.html |
 | 10.8 | 25 | crm para restaurantes | /blog/mejor-crm-para-restaurantes-en-bogota.html |
-| 14.3 | 24 | agile crm whatsapp | /blog/whatsapp-crm-pymes-guia.html |
+| 14.3 | 24 | agile crm whatsapp | /blog/whatsapp-crm-pymes-guia.html &rarr; [agile crm whatsapp](/blog/agile-crm-con-whatsapp-integrar-alternativas.html) |
 | 23.2 | 22 | coste crm | /blog/cuanto-cuesta-un-crm.html |
 | 13.0 | 22 | crm asesorias | /blog/crm-para-asesorias.html |
 | 11.2 | 22 | crm para asesorias | /blog/mejor-crm-para-asesorias.html |

@@ -29,13 +29,13 @@ FONTS = ("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@
          "&family=Space+Grotesk:wght@700&display=swap")
 
 B_CSS = """/* Variante B: navy y champán */
-:root { --paper: #0B1220; --paper-2: #111A2C; --paper-3: #1A2540; --nav-bg: rgba(11, 18, 32, 0.86); }
+:root { --paper: #0B1220; --paper-2: #111A2C; --paper-3: #1A2540; --nav-bg: rgba(11, 18, 32, 0.86); --paper-rgb: 11, 18, 32; }
 html, body { background: var(--paper); }
 .footer, body > div:has(> a[href$="cobertura.html"]) { background: #080D18 !important; }
 """
 
 C_CSS = """/* Variante C: navy y azul de marca */
-:root { --paper: #0B1220; --paper-2: #111A2C; --paper-3: #1A2540; --nav-bg: rgba(11, 18, 32, 0.86);
+:root { --paper: #0B1220; --paper-2: #111A2C; --paper-3: #1A2540; --nav-bg: rgba(11, 18, 32, 0.86); --paper-rgb: 11, 18, 32;
   --accent: #5B8CFF; --accent-deep: #2563EB; --accent-light: #8DB3FF; --accent-text: #8DB3FF;
   --accent-pale: rgba(91, 140, 255, 0.18); --accent-on-ink: #8DB3FF; --on-accent: #ffffff;
   --line: rgba(91, 140, 255, 0.2); --line-strong: rgba(91, 140, 255, 0.45);
@@ -63,6 +63,7 @@ TOOLS = [("whatsapp", "WhatsApp Business API"), ("hubspot", "HubSpot"), ("zoho",
 # estática del restaurante: sin script se ve así; con script, demo-chat.js v3 la reproduce.
 TELEFONO = '''      __SWITCH__
       <div class="scene">
+__CRM__
       <div class="phone" data-ui>
         <div class="phone-status" aria-hidden="true"><span class="phone-time">23:48</span><span class="phone-icons"><svg viewBox="0 0 16 12"><path fill="currentColor" d="M0 9h2v3H0zM4 6h2v6H4zM8 3h2v9H8zM12 0h2v12h-2z"/></svg><svg viewBox="0 0 16 12"><path fill="currentColor" d="M8 2.4c2.6 0 4.9 1 6.6 2.7l-1.3 1.3A7.5 7.5 0 0 0 8 4.3a7.5 7.5 0 0 0-5.3 2.1L1.4 5.1A9.3 9.3 0 0 1 8 2.4zm0 3.6c1.6 0 3 .6 4.1 1.7l-1.3 1.3A4 4 0 0 0 8 7.9a4 4 0 0 0-2.8 1.1L3.9 7.7A5.8 5.8 0 0 1 8 6zm0 3.6c.7 0 1.3.3 1.7.7L8 12l-1.7-1.7c.4-.4 1-.7 1.7-.7z"/></svg><svg viewBox="0 0 24 12"><rect x=".5" y=".5" width="20" height="11" rx="2.5" fill="none" stroke="currentColor"/><rect x="2" y="2" width="16" height="8" rx="1.5" fill="currentColor"/><path fill="currentColor" d="M22 4v4a2 2 0 0 0 0-4z"/></svg></span></div>
         <div class="chat" id="demoChat">
@@ -132,15 +133,16 @@ def base_html(s):
     switch = uno(r'<div class="demo-switch".*?</div>', sec).group(0)
     note = uno(r'<p class="demo-note"[^>]*>.*?</p>', sec).group(0)
     s = s[: demo.start()] + "\n" + s[demo.end():]
-    telefono = TELEFONO.replace("__SWITCH__", switch)
+    telefono = TELEFONO.replace("__SWITCH__", switch).replace("__CRM__", CRM)
     bloque = f'''    <div class="hero-demo reveal reveal-delay-2">
       <p class="demo-caption" id="demoCaption">{h2}</p>
 {telefono}
+      {note.replace('class="demo-note"', 'class="demo-note reveal reveal-delay-3"')}
     </div>
-{CRM}
-    {note.replace('class="demo-note"', 'class="demo-note reveal reveal-delay-3"')}
 '''
-    s = re.sub(r'(<section class="hero[^"]*" id="hero">\s*<div class="container">\s*)',
+    assert s.count('<section class="hero hero-portada" id="hero">') == 1
+    s = s.replace('<section class="hero hero-portada" id="hero">', '<section class="hero hero-portada" id="hero">\n  <div class="hero-photo" aria-hidden="true"><picture><source media="(max-width: 768px)" srcset="/assets/images/hero-madrid-m.webp"><img src="/assets/images/hero-madrid.webp" width="2400" height="1109" alt="" decoding="async" fetchpriority="high"></picture></div>', 1)
+    s = re.sub(r'(<section class="hero[^"]*" id="hero">\s*(?:<div class="hero-photo"[^\n]*\n)?\s*<div class="container">\s*)',
                lambda m: m.group(1) + '<p class="eyebrow">CRM a medida + agente de IA por WhatsApp</p>\n    ', s, count=1)
     hero = uno(r'<section class="hero[^"]*" id="hero">.*?</section>', s)
     h = hero.group(0)
@@ -230,9 +232,13 @@ def base_html(s):
     s = s.replace(old3, "", 1)
     assert s.count("<figure>") == 3 + 0, s.count("<figure>")
 
+    # 8b. el cierre, con la fotografía velada
+    assert s.count('<div class="cta-box reveal">') == 1
+    s = s.replace('<div class="cta-box reveal">', '<div class="cta-box reveal">\n      <div class="cta-bg" aria-hidden="true"><img src="/assets/images/hero-madrid.webp" width="2400" height="1109" alt="" loading="lazy" decoding="async"></div>', 1)
+
     # 9. nota de marcas en el pie
     s = s.replace('</p>\n      </div>\n      <div class="footer-columns">',
-                  '</p>\n        <p class="footer-brands">Las marcas y s&iacute;mbolos de terceros pertenecen a sus propietarios; no implican afiliaci&oacute;n.</p>\n      </div>\n      <div class="footer-columns">', 1)
+                  '</p>\n        <p class="footer-brands">Las marcas y s&iacute;mbolos de terceros pertenecen a sus propietarios; no implican afiliaci&oacute;n.</p>\n        <p class="footer-credit">Fotograf&iacute;a de Madrid: <a href="https://commons.wikimedia.org/wiki/File:Skyline_view_of_Madrid,_Spain_at_night_-_50317258357.jpg" target="_blank" rel="noopener">Tim Adams</a>, CC BY 2.0, v&iacute;a Wikimedia Commons.</p>\n      </div>\n      <div class="footer-columns">', 1)
     assert 'footer-brands' in s
 
     # 10. iconos decorativos ocultos: que no los lea el lector de pantalla
@@ -248,14 +254,16 @@ def main():
     escribir(os.path.join(STYLES, "noir.css"), main_css + "\n\n" + over)
     escribir(os.path.join(STYLES, "noir-b.css"), B_CSS)
     escribir(os.path.join(STYLES, "noir-c.css"), C_CSS)
+    import time
+    ver = str(int(time.time()))  # cada construcción cambia la versión: el navegador no reutiliza la hoja vieja
     for letra, extra, theme in (("a", "", "#0a0a0a"),
-                                ("b", '\n<link rel="stylesheet" href="../styles/noir-b.css?v=2">', "#0B1220"),
-                                ("c", '\n<link rel="stylesheet" href="../styles/noir-c.css?v=2">', "#0B1220")):
-        v = s.replace('<link rel="stylesheet" href="../styles/main.css?v=11">', '<link rel="stylesheet" href="../styles/noir.css?v=2">' + extra)
-        v = v.replace('<link rel="stylesheet" href="../styles/main.css?v=10">', '<link rel="stylesheet" href="../styles/noir.css?v=2">' + extra)
+                                ("b", '\n<link rel="stylesheet" href="../styles/noir-b.css?v=' + ver + '">', "#0B1220"),
+                                ("c", '\n<link rel="stylesheet" href="../styles/noir-c.css?v=' + ver + '">', "#0B1220")):
+        v = s.replace('<link rel="stylesheet" href="../styles/main.css?v=11">', '<link rel="stylesheet" href="../styles/noir.css?v=' + ver + '">' + extra)
+        v = v.replace('<link rel="stylesheet" href="../styles/main.css?v=10">', '<link rel="stylesheet" href="../styles/noir.css?v=' + ver + '">' + extra)
+        v = v.replace('../js/demo-chat.js?v=1', '../js/demo-chat.js?v=' + ver)
         assert "noir.css" in v
         v = v.replace('<meta name="theme-color" content="#F4F4F1">', f'<meta name="theme-color" content="{theme}">')
-        v = v.replace('../js/demo-chat.js?v=1', '../js/demo-chat.js?v=4')
         escribir(os.path.join(ZV, "es", f"index-{letra}.html"), v)
         print("es/index-%s.html" % letra, len(v))
 

@@ -75,8 +75,8 @@
 <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet"></noscript>
 
 <!-- Stylesheet -->
-<link rel="stylesheet" href="../styles/noir.css?v=2">
-<link rel="stylesheet" href="../styles/noir-c.css?v=2">
+<link rel="stylesheet" href="../styles/noir.css?v=1793656643">
+<link rel="stylesheet" href="../styles/noir-c.css?v=1793656643">
 <script type="application/ld+json" data-zenia-org="1">{"@context": "https://schema.org", "@type": ["Organization", "ProfessionalService"], "@id": "https://zeniapartners.com/#organizacion", "name": "Zenia Partners", "alternateName": "Zenia", "url": "https://zeniapartners.com/", "logo": "https://zeniapartners.com/assets/logos/zenia-logo.png", "image": "https://zeniapartners.com/assets/logos/zenia-logo.png", "description": "Zenia Partners es una agencia de inteligencia artificial que implementa agentes de IA sobre WhatsApp y CRM para pequeñas y medianas empresas en España y Latinoamérica. El agente atiende consultas, agenda citas, confirma reservas y recupera clientes inactivos las 24 horas, integrado con las herramientas que la empresa ya usa.", "email": "fabrizzio.zelada@zeniapartners.com", "founder": {"@type": "Person", "name": "Fabrizzio Zelada Uriarte"}, "sameAs": ["https://www.linkedin.com/company/zenia-partners/", "https://www.instagram.com/zeniapartners"], "areaServed": [{"@type": "Country", "name": "España"}, {"@type": "Country", "name": "Perú"}, {"@type": "Country", "name": "México"}, {"@type": "Country", "name": "Colombia"}, {"@type": "Country", "name": "Chile"}, {"@type": "Country", "name": "Argentina"}, {"@type": "Country", "name": "Ecuador"}, {"@type": "Country", "name": "Uruguay"}, {"@type": "Country", "name": "Bolivia"}], "knowsAbout": ["agentes de IA", "automatización de WhatsApp", "WhatsApp Business API", "CRM con inteligencia artificial", "automatización de citas y reservas", "recuperación de clientes inactivos", "atención al cliente 24/7"], "slogan": "Agentes de IA y CRM con WhatsApp para PyMEs", "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Servicios de Zenia Partners", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Agente de IA por WhatsApp", "description": "Agente conversacional propio sobre WhatsApp Business API que responde, cualifica y agenda 24/7 con el tono de cada negocio."}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "CRM con inteligencia artificial", "description": "CRM implantado y conectado al agente, con ficha de cliente, historial y seguimiento automático."}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Automatización de citas y reservas", "description": "Agenda, confirmaciones y recordatorios automáticos para reducir las ausencias a las citas."}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Recuperación de clientes inactivos", "description": "Campañas automáticas que reactivan a clientes que llevan meses sin comprar."}}]}}</script>
 </head>
 <body>
@@ -113,6 +113,7 @@
 
 <!-- HERO -->
 <section class="hero hero-portada" id="hero">
+  <div class="hero-photo" aria-hidden="true"><picture><source media="(max-width: 768px)" srcset="/assets/images/hero-madrid-m.webp"><img src="/assets/images/hero-madrid.webp" width="2400" height="1109" alt="" decoding="async" fetchpriority="high"></picture></div>
   
   <div class="container">
     <div class="hero-copy">
@@ -144,6 +145,22 @@
         <button type="button" data-sector="gimnasio" aria-pressed="false">Gimnasio</button>
       </div>
       <div class="scene">
+    <div class="crm-window" id="crmWindow" data-ui aria-label="CRM a medida &middot; La Terraza">
+      <aside class="crm-side"><span class="crm-mark" aria-hidden="true">Z</span><span class="on">Reservas</span><span>Clientes</span><span>Campa&ntilde;as</span><span>Agente</span><span>Ajustes</span><div class="crm-who"><b>La Terraza</b>Madrid &middot; 2 salas</div></aside>
+      <div class="crm-main">
+        <div class="crm-top"><span class="crm-mark" aria-hidden="true">Z</span><span class="crm-brand">La Terraza <span>&middot; CRM a medida</span></span><span class="crm-live">Actualizado ahora</span><div class="crm-tabs"><span class="on">Reservas</span><span>Clientes</span><span>Campa&ntilde;as</span><span>Agente</span></div></div>
+        <div class="crm-kpis"><div class="crm-kpi"><small>Reservas para ma&ntilde;ana</small><strong>24<i>+1</i></strong></div><div class="crm-kpi"><small>Ocupaci&oacute;n a las 21:00</small><strong>92&nbsp;%</strong></div><div class="crm-kpi"><small>Atendidas por el agente</small><strong>16<i>+1</i></strong></div></div>
+        <div class="crm-title"><b>Reservas de ma&ntilde;ana</b><em>Martes</em></div>
+        <table class="crm"><thead><tr><th>Hora</th><th>Nombre</th><th>Pax</th><th class="opt">Zona</th><th class="opt">Notas</th><th>Estado</th></tr></thead><tbody>
+          <tr><td>20:00</td><td>Familia Ortega</td><td>6</td><td class="opt">Sal&oacute;n</td><td class="opt dim">Cumplea&ntilde;os</td><td><span class="crm-state ok">Confirmada</span></td></tr>
+          <tr><td>20:30</td><td>Marc Vidal</td><td>2</td><td class="opt">Terraza</td><td class="opt dim">&mdash;</td><td><span class="crm-state ok">Confirmada</span></td></tr>
+          <tr class="crm-row new show"><td>21:00</td><td>Laura</td><td>4</td><td class="opt">Terraza</td><td class="opt dim">Sin gluten</td><td><span class="crm-state agent">Por el agente</span></td></tr>
+          <tr><td>21:00</td><td>Ana Ruiz</td><td>3</td><td class="opt">Sal&oacute;n</td><td class="opt dim">Silla beb&eacute;</td><td><span class="crm-state wait">Pendiente</span></td></tr>
+          <tr><td>21:30</td><td>Pedro Lima</td><td>2</td><td class="opt">Terraza</td><td class="opt dim">&mdash;</td><td><span class="crm-state ok">Confirmada</span></td></tr>
+          <tr><td>22:00</td><td>Grupo Sato</td><td>8</td><td class="opt">Sal&oacute;n</td><td class="opt dim">Men&uacute; degustaci&oacute;n</td><td><span class="crm-state ok">Confirmada</span></td></tr>
+        </tbody></table>
+      </div>
+    </div>
       <div class="phone" data-ui>
         <div class="phone-status" aria-hidden="true"><span class="phone-time">23:48</span><span class="phone-icons"><svg viewBox="0 0 16 12"><path fill="currentColor" d="M0 9h2v3H0zM4 6h2v6H4zM8 3h2v9H8zM12 0h2v12h-2z"/></svg><svg viewBox="0 0 16 12"><path fill="currentColor" d="M8 2.4c2.6 0 4.9 1 6.6 2.7l-1.3 1.3A7.5 7.5 0 0 0 8 4.3a7.5 7.5 0 0 0-5.3 2.1L1.4 5.1A9.3 9.3 0 0 1 8 2.4zm0 3.6c1.6 0 3 .6 4.1 1.7l-1.3 1.3A4 4 0 0 0 8 7.9a4 4 0 0 0-2.8 1.1L3.9 7.7A5.8 5.8 0 0 1 8 6zm0 3.6c.7 0 1.3.3 1.7.7L8 12l-1.7-1.7c.4-.4 1-.7 1.7-.7z"/></svg><svg viewBox="0 0 24 12"><rect x=".5" y=".5" width="20" height="11" rx="2.5" fill="none" stroke="currentColor"/><rect x="2" y="2" width="16" height="8" rx="1.5" fill="currentColor"/><path fill="currentColor" d="M22 4v4a2 2 0 0 0 0-4z"/></svg></span></div>
         <div class="chat" id="demoChat">
@@ -163,24 +180,8 @@
         </div>
       </div>
       </div>
+      <p class="demo-note reveal reveal-delay-3">Conversación de ejemplo. Nombres, horas y precios son ilustrativos; el flujo (responder, consultar, agendar y registrar en el CRM) es lo que hace el agente.</p>
     </div>
-    <div class="crm-window" id="crmWindow" data-ui aria-label="CRM a medida &middot; La Terraza">
-      <aside class="crm-side"><span class="crm-mark" aria-hidden="true">Z</span><span class="on">Reservas</span><span>Clientes</span><span>Campa&ntilde;as</span><span>Agente</span><span>Ajustes</span><div class="crm-who"><b>La Terraza</b>Madrid &middot; 2 salas</div></aside>
-      <div class="crm-main">
-        <div class="crm-top"><span class="crm-mark" aria-hidden="true">Z</span><span class="crm-brand">La Terraza <span>&middot; CRM a medida</span></span><span class="crm-live">Actualizado ahora</span><div class="crm-tabs"><span class="on">Reservas</span><span>Clientes</span><span>Campa&ntilde;as</span><span>Agente</span></div></div>
-        <div class="crm-kpis"><div class="crm-kpi"><small>Reservas para ma&ntilde;ana</small><strong>24<i>+1</i></strong></div><div class="crm-kpi"><small>Ocupaci&oacute;n a las 21:00</small><strong>92&nbsp;%</strong></div><div class="crm-kpi"><small>Atendidas por el agente</small><strong>16<i>+1</i></strong></div></div>
-        <div class="crm-title"><b>Reservas de ma&ntilde;ana</b><em>Martes</em></div>
-        <table class="crm"><thead><tr><th>Hora</th><th>Nombre</th><th>Pax</th><th class="opt">Zona</th><th class="opt">Notas</th><th>Estado</th></tr></thead><tbody>
-          <tr><td>20:00</td><td>Familia Ortega</td><td>6</td><td class="opt">Sal&oacute;n</td><td class="opt dim">Cumplea&ntilde;os</td><td><span class="crm-state ok">Confirmada</span></td></tr>
-          <tr><td>20:30</td><td>Marc Vidal</td><td>2</td><td class="opt">Terraza</td><td class="opt dim">&mdash;</td><td><span class="crm-state ok">Confirmada</span></td></tr>
-          <tr class="crm-row new show"><td>21:00</td><td>Laura</td><td>4</td><td class="opt">Terraza</td><td class="opt dim">Sin gluten</td><td><span class="crm-state agent">Por el agente</span></td></tr>
-          <tr><td>21:00</td><td>Ana Ruiz</td><td>3</td><td class="opt">Sal&oacute;n</td><td class="opt dim">Silla beb&eacute;</td><td><span class="crm-state wait">Pendiente</span></td></tr>
-          <tr><td>21:30</td><td>Pedro Lima</td><td>2</td><td class="opt">Terraza</td><td class="opt dim">&mdash;</td><td><span class="crm-state ok">Confirmada</span></td></tr>
-          <tr><td>22:00</td><td>Grupo Sato</td><td>8</td><td class="opt">Sal&oacute;n</td><td class="opt dim">Men&uacute; degustaci&oacute;n</td><td><span class="crm-state ok">Confirmada</span></td></tr>
-        </tbody></table>
-      </div>
-    </div>
-    <p class="demo-note reveal reveal-delay-3">Conversación de ejemplo. Nombres, horas y precios son ilustrativos; el flujo (responder, consultar, agendar y registrar en el CRM) es lo que hace el agente.</p>
   </div>
 </section>
 
@@ -512,6 +513,7 @@
       </div>
     </div>
     <div class="cta-box reveal">
+      <div class="cta-bg" aria-hidden="true"><img src="/assets/images/hero-madrid.webp" width="2400" height="1109" alt="" loading="lazy" decoding="async"></div>
       <h2>30 Minutos Pueden <span class="text-gradient">Cambiar tu Pr&oacute;ximo Trimestre</span></h2>
       <p>Agenda una sesi&oacute;n estrat&eacute;gica con nuestro equipo. Analizaremos tus operaciones, identificaremos las oportunidades de IA de mayor impacto y te mostraremos lo que es posible.</p>
       <div class="cta-actions">
@@ -720,6 +722,7 @@
         <a class="footer-wa" href="https://wa.me/34677612799?text=Hola%2C%20vengo%20de%20la%20web%20de%20Zenia%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
         <p class="footer-brand-desc">Ayudamos a organizaciones a redise&ntilde;ar operaciones con automatizaci&oacute;n inteligente y sistemas de IA que entregan resultados medibles.</p>
         <p class="footer-brands">Las marcas y s&iacute;mbolos de terceros pertenecen a sus propietarios; no implican afiliaci&oacute;n.</p>
+        <p class="footer-credit">Fotograf&iacute;a de Madrid: <a href="https://commons.wikimedia.org/wiki/File:Skyline_view_of_Madrid,_Spain_at_night_-_50317258357.jpg" target="_blank" rel="noopener">Tim Adams</a>, CC BY 2.0, v&iacute;a Wikimedia Commons.</p>
       </div>
       <div class="footer-columns">
         <div class="footer-col">
@@ -792,7 +795,7 @@ window.showLangModal = showLangModal;
 </script>
 <script src="../js/main.js?v=7"></script>
 <script defer src="../js/booking.js?v=2"></script>
-<script defer src="../js/demo-chat.js?v=4"></script>
+<script defer src="../js/demo-chat.js?v=1793656643"></script>
 
 
 

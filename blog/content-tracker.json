@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-11-02T22:00:00+00:00",
+  "lastRun": "2026-11-03T06:00:00+00:00",
   "posts": [
+    {
+      "slug": "crm-para-fisioterapeutas",
+      "keyword": "crm para fisioterapeutas",
+      "tier": 2,
+      "cluster": "crm-wellness",
+      "status": "published",
+      "date": "2026-11-03",
+      "source": "matrix-generated"
+    },
     {
       "slug": "integrar-klaviyo-con-whatsapp-business",
       "keyword": "integrar klaviyo con whatsapp business",

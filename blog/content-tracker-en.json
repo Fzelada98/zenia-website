@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-11-02T17:12Z",
+  "lastRun": "2026-11-03T00:00Z",
   "market": "US/UK small business",
   "posts": [
     {
@@ -1239,7 +1239,9 @@
       "keyword": "ai agent for vacation rental managers",
       "tier": 2,
       "cluster": "real-estate",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-11-03",
+      "note": "Tier 2 topic from tracker. 60-door Carolinas STR case study, PMS write-back table (Guesty/Hostaway/Hospitable/OwnerRez), 7-workflow launch sequence, 2-week rollout, OTA-safe guardrails."
     },
     {
       "slug": "ai-agent-for-notaries",

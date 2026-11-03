@@ -10073,3 +10073,19 @@ Full breakdown of the stack, GDPR notes on Article 28 contracts and the ROI mode
 #SystemsEngineering #WhatsAppBusinessAPI #HealthTech #CRM
 
 ---
+
+---
+
+## 2026-11-03 - AI Agent for Vacation Rental Managers
+
+Behind an STR agent that holds under 60s response time across 60 doors sits a boring stack problem: three OTA inboxes (Airbnb, Vrbo, Booking.com), WhatsApp Business API, SMS, voice, and a PMS write-back that cannot drop a message.
+
+We built it as a thin orchestrator over the PMS: webhooks from Guesty, Hostaway, Hospitable, or OwnerRez trigger a per-guest state machine; replies go back through the native OTA thread (never a sideloaded link, which gets you delisted); maintenance tickets land in Breezeway or Operto Teams with photo + severity tag; smart-lock codes come from Igloohome, August, or Yale at T-2h.
+
+Numbers from a 60-door Carolinas portfolio over 90 days: median response time 47 min to 38 sec, Airbnb response rate 93% to 100%, inquiry-to-booking conversion 19.4% to 26.1%. Platform plus Meta WABA fees stayed under $1,650/mo.
+
+The hard parts were idempotency on OTA webhooks (dedupe keys per thread + message id, not timestamp) and keeping property profiles in retrieval rather than a 20-page prompt that drifts.
+
+Full write-up: https://zeniapartners.com/blog/ai-agent-for-vacation-rental-managers.html
+
+#propertyManagement #AIagents #WhatsAppBusinessAPI #vacationrentals

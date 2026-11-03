@@ -10091,3 +10091,19 @@ The hard parts were idempotency on OTA webhooks (dedupe keys per thread + messag
 Full write-up: https://zeniapartners.com/blog/ai-agent-for-vacation-rental-managers.html
 
 #propertyManagement #AIagents #WhatsAppBusinessAPI #vacationrentals
+
+---
+
+## 2026-11-03 - Recepcionista Virtual con IA para Pymes
+
+A virtual receptionist that holds under 800 ms voice round-trip and under 10 s on WhatsApp is not a model choice. It is a stack choice.
+
+Reference architecture we ship for SMB front desks: WhatsApp Business API via an official BSP for chat, SIP trunk into a cloud PBX that forks unanswered calls to a voice agent, retrieval-grounded prompt per client (services, prices, calendar), and CRM write-back on every turn. Voice path uses streaming ASR with partials under 300 ms, LLM response capped under 400 ms through speculative decoding, TTS streamed back frame-by-frame while the model still writes. Barge-in on half-duplex is the hard part: VAD on the inbound track, cancel TTS buffer, flush to the next turn.
+
+Two numbers that bound the design. 56% of SMB callers reach a human (Invoca, 70M+ calls) and 69% of missed business calls get no callback within 48 hours (Quo, 16.7M missed calls). That is the slice the receptionist agent closes, not the ones the human team already handles.
+
+EU AI Act Article 50 takes effect 2 August 2026: the agent must declare itself as AI on turn one. We put the disclosure in the opening frame of both channels and keep a signed audit log of each conversation for 6 months.
+
+Full write-up with the pricing comparison vs. a 1.600-2.400 EUR human receptionist and the 3-5 week rollout plan: https://zeniapartners.com/blog/recepcionista-virtual-ia-pymes.html
+
+#AIagents #WhatsAppBusinessAPI #VoiceAI #SystemsEngineering

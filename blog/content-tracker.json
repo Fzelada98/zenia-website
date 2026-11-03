@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-11-03T06:00:00+00:00",
+  "lastRun": "2026-11-03T14:00:00+00:00",
   "posts": [
+    {
+      "slug": "recepcionista-virtual-ia-pymes",
+      "keyword": "recepcionista virtual con IA para pymes",
+      "tier": 1,
+      "cluster": "recepcionista-virtual-ia",
+      "status": "published",
+      "date": "2026-11-03",
+      "source": "matrix-generated"
+    },
     {
       "slug": "crm-para-fisioterapeutas",
       "keyword": "crm para fisioterapeutas",

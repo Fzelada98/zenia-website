@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-11-03T14:00:00+00:00",
+  "lastRun": "2026-11-03T22:00:00+00:00",
   "posts": [
+    {
+      "slug": "whatsapp-business-api-para-pymes",
+      "keyword": "whatsapp business api para pymes",
+      "tier": 2,
+      "cluster": "whatsapp-business",
+      "status": "published",
+      "date": "2026-11-03",
+      "source": "matrix-generated"
+    },
     {
       "slug": "recepcionista-virtual-ia-pymes",
       "keyword": "recepcionista virtual con IA para pymes",

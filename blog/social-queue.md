@@ -10062,6 +10062,8 @@ Full breakdown of the three integration paths, 2026 Meta pricing and the mapping
 
 ## 2026-11-03 - CRM para Fisioterapeutas
 
+<!-- PUBLISHED:make-webhook at 2026-11-03T09:30:05Z -->
+
 Physiotherapy clinics in Spain handle Article 9 GDPR data on a workflow that still runs over the raw WhatsApp Business app on a receptionist's phone. That is the gap we are closing with an API-first stack, not a UX tweak.
 
 Architecture for a 3-15 practitioner clinic: WhatsApp Business API through an official BSP, personalized AI agent on top (intent routing, red-flag triage, booking), CRM with channel attribution, and REST/webhook integrations into the vertical software the clinic already uses (Physitrack, Fisiopublic, Nookal, Cliniko). The agent never writes to the clinical record directly: it proposes a slot, the EMR confirms, and the chat state transitions on the webhook ack.

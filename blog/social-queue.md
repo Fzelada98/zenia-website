@@ -10059,3 +10059,17 @@ Full breakdown of the three integration paths, 2026 Meta pricing and the mapping
 #SystemsEngineering #Klaviyo #WhatsAppBusinessAPI #Ecommerce
 
 ---
+
+## 2026-11-03 - CRM para Fisioterapeutas
+
+Physiotherapy clinics in Spain handle Article 9 GDPR data on a workflow that still runs over the raw WhatsApp Business app on a receptionist's phone. That is the gap we are closing with an API-first stack, not a UX tweak.
+
+Architecture for a 3-15 practitioner clinic: WhatsApp Business API through an official BSP, personalized AI agent on top (intent routing, red-flag triage, booking), CRM with channel attribution, and REST/webhook integrations into the vertical software the clinic already uses (Physitrack, Fisiopublic, Nookal, Cliniko). The agent never writes to the clinical record directly: it proposes a slot, the EMR confirms, and the chat state transitions on the webhook ack.
+
+Two numbers that drive the design. First-response p50 under 60s on inbound WhatsApp. Reminder cadence T-24h and T-2h, which is where published sources (ChatDaddy, Spoki, AgendaPro) report 20-50% relative no-show reduction against a baseline where industry adherence sits at a 19% drop-off (Elsevier Fisioterapia, March-April 2026).
+
+Full breakdown of the stack, GDPR notes on Article 28 contracts and the ROI model we use for underwriting the Starter plan: https://zeniapartners.com/blog/crm-para-fisioterapeutas.html
+
+#SystemsEngineering #WhatsAppBusinessAPI #HealthTech #CRM
+
+---

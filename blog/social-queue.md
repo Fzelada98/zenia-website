@@ -10107,3 +10107,19 @@ EU AI Act Article 50 takes effect 2 August 2026: the agent must declare itself a
 Full write-up with the pricing comparison vs. a 1.600-2.400 EUR human receptionist and the 3-5 week rollout plan: https://zeniapartners.com/blog/recepcionista-virtual-ia-pymes.html
 
 #AIagents #WhatsAppBusinessAPI #VoiceAI #SystemsEngineering
+
+---
+
+## 2026-11-03 - AI Agent for Tax Preparers
+
+Tax-firm agents are a specialized integration problem, not a chatbot. The engine sign-off has to stay with the preparer under Circular 230, so the agent runs the clerical ring around it.
+
+Reference architecture we ship for solo and 2-partner US firms: WhatsApp Business API via an official BSP, status read from the tax engine (Drake, Lacerte, UltraTax, ProConnect, or TaxWise), document portal (SmartVault, SafeSend, TaxDome, or Canopy) exposing per-return folders, e-signature on DocuSign or Adobe Sign for engagement letter, 7216, 8879, and a thin orchestrator that holds the per-client checklist state machine (intake -> missing-doc chase -> in-prep -> review -> filed -> accepted). Hard escalation list on keywords (IRS notice, audit, amended, divorce, death) routes to a human on the first match; every outbound message is logged to the client file for workpapers.
+
+Two numbers from a solo EA pilot across the 2026 season: average days to complete intake 12.4 -> 4.1, admin hours per return 1.3 -> 0.5. Document-chase latency dropped most of the delta; status-reply volume ate the rest.
+
+Hard parts: idempotency on portal webhooks when a client re-uploads the same W-2 three times, and keeping the approved-answer corpus in retrieval rather than a prompt that bloats across 30+ FAQs.
+
+Full write-up with the stack diagram, Circular 230 guardrails and 2-week rollout: https://zeniapartners.com/blog/ai-agent-for-tax-preparers.html
+
+#AIagents #TaxTech #SystemsEngineering #WhatsAppBusinessAPI

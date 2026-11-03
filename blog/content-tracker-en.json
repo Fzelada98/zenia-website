@@ -1255,7 +1255,8 @@
       "keyword": "ai agent for tax preparers",
       "tier": 2,
       "cluster": "professional",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-11-03"
     },
     {
       "slug": "ai-agent-for-bookkeepers",

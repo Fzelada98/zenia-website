@@ -10123,3 +10123,19 @@ Hard parts: idempotency on portal webhooks when a client re-uploads the same W-2
 Full write-up with the stack diagram, Circular 230 guardrails and 2-week rollout: https://zeniapartners.com/blog/ai-agent-for-tax-preparers.html
 
 #AIagents #TaxTech #SystemsEngineering #WhatsAppBusinessAPI
+
+---
+
+## 2026-11-03 - WhatsApp Business API para Pymes
+
+Shipping WhatsApp Business API for an SMB is less "drop in a bot" and more a small distributed-messaging problem.
+
+Reference 2026 stack: Meta Cloud API on a dedicated number, webhook fan-out into an event bus, stateful LLM agent (sub-1s median latency, p99 under 3.2 s) with a tool-use layer that writes to the customer CRM (HubSpot, Pipedrive, Odoo). Plantillas go through Meta template review; human handoff is a first-class route, not a fallback.
+
+Two numbers we track on every rollout: 65-85% containment on service conversations, and under EUR 0.05 per resolved conversation at typical SMB volume in Spain (utility + user-initiated).
+
+Hard parts in 2026: Meta moved from per-conversation to per-message pricing in July 2025, and the January 2026 AI rules require explicit identification and a working escalation path or the number loses quality score.
+
+Full write-up with cost math and the five migration failures we see most: https://zeniapartners.com/blog/whatsapp-business-api-para-pymes.html
+
+#WhatsAppBusinessAPI #AIagents #SystemsEngineering #B2B

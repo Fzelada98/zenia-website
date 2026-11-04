@@ -10173,3 +10173,21 @@ Hard parts in 2026: QBO and Xero both shipped their own in-ledger agents (Intuit
 Full architecture, QBO/Xero integration map and 2-week rollout: https://zeniapartners.com/blog/ai-agent-for-bookkeepers.html
 
 #WhatsAppBusinessAPI #AIagents #SystemsEngineering #Fintech
+
+---
+
+## 2026-11-04 - CRM para Comerciales
+
+B2B sales teams still burn 21% of the week on admin, according to SPOTIO's State of Field Sales 2026. Eight hours per rep, every week, out of the room.
+
+The stack is usually the problem: a CRM for pipeline, a separate WhatsApp Business inbox, and a shared spreadsheet nobody trusts. Context fragments across three systems and the handoff becomes copy-paste.
+
+We built a thin integration layer that sits between WhatsApp Business Cloud API and the CRM of record. Inbound message → NLU with function-calling → CRM contact lookup → dynamic qualification script (sector, budget, timeframe) → opportunity write with source and channel attribution. First-response p95 under 60 seconds, agent p99 under 3.2 s, zero spreadsheets.
+
+For teams on Pipedrive, HubSpot or Salesforce we expose it as a sidecar via REST/webhooks. For teams still on Excel we ship the CRM in the same deployment. State lives in Redis across the 24-hour WhatsApp session window; writes go through the CRM's audit log so sales ops can replay any handoff.
+
+Hard parts in 2026: Meta's per-message pricing (since July 2025) changes the economics of the follow-up sequence, and the EU AI Act in force since August 2026 requires explicit AI identification plus a working human escalation path or the number loses quality score.
+
+Full architecture, pricing math and the seven functions a sales CRM needs in 2026: https://zeniapartners.com/blog/crm-para-comerciales.html
+
+#WhatsAppBusinessAPI #AIagents #SystemsEngineering #B2B

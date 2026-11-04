@@ -1272,8 +1272,9 @@
       "keyword": "ai agent for estate planning attorneys",
       "tier": 2,
       "cluster": "professional",
-      "status": "pending"
-    },
+      "status": "published",
+      "date": "2026-11-04",
+      "note": "Tier 2 topic from tracker; striking-loop had no uncovered EN queries meeting criteria (only EN queries printing were 'ai receptionist for photographers' and 'ai receptionist for driving schools', both already have dedicated pages). 2,600-word US-focused build with 3-attorney Phoenix firm case study (lead-to-consult 31→58%, median response 4h22m→47s, 90-day trust funding 58→89%), Clio/MyCase/Lawmatics/DecisionVault/Calendly/LawPay stack table, 5 workflows including the 90-day trust funding chase, bar-safe guardrails (no legal advice, jurisdiction/conflict checks, auditable transcripts), 2-week rollout. Linked to ai-agent-for-law-firms, law-firm-crm-with-ai, whatsapp-automation-for-law-firms, ai-agent-for-tax-preparers."
     {
       "slug": "ai-agent-for-criminal-defense-attorneys",
       "keyword": "ai agent for criminal defense attorneys",

@@ -10191,3 +10191,19 @@ Hard parts in 2026: Meta's per-message pricing (since July 2025) changes the eco
 Full architecture, pricing math and the seven functions a sales CRM needs in 2026: https://zeniapartners.com/blog/crm-para-comerciales.html
 
 #WhatsAppBusinessAPI #AIagents #SystemsEngineering #B2B
+
+---
+
+## 2026-11-04 - AI Agent for Estate Planning Attorneys
+
+Estate planning intake is a latency problem dressed up as a conversion problem.
+
+The architecture we shipped for a 3-attorney Phoenix firm: WhatsApp Business API on the firm number, a stateful qualification agent (7 fields, <15s per turn p95), bidirectional sync to Clio Grow for the lead and Clio Manage for the matter, Calendly for consult slotting, DecisionVault for the intake form, and LawPay for the retainer link - all stitched by a Node service on Cloud Run with idempotent webhooks to keep Meta, Clio and DecisionVault consistent under retries.
+
+Two numbers that moved: median lead response time 4h22m → 47s (after-hours leads pick up the same conversation at 10:47 pm), and 90-day trust funding rate 58 → 89 percent because a scheduled chase actually runs instead of sitting on a paralegal's to-do list.
+
+Guardrails in the prompt layer: strict jurisdiction/conflict gate before any confidential field is accepted, hard refusal on legal-advice patterns with a routed escalation, full transcript persisted to the Clio matter so every outbound message is auditable.
+
+Write-up and the full stack: https://zeniapartners.com/blog/ai-agent-for-estate-planning-attorneys.html
+
+#WhatsAppBusinessAPI #AIagents #LegalTech #SystemsEngineering

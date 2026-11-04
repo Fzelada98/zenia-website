@@ -10139,3 +10139,19 @@ Hard parts in 2026: Meta moved from per-conversation to per-message pricing in J
 Full write-up with cost math and the five migration failures we see most: https://zeniapartners.com/blog/whatsapp-business-api-para-pymes.html
 
 #WhatsAppBusinessAPI #AIagents #SystemsEngineering #B2B
+
+---
+
+## 2026-11-04 - Agente IA para Hoteles Rurales
+
+A rural guest decides a weekend trip in 48-72h and writes "do you take dogs?" at 23:00. If the answer lands in the morning, the booking is gone to Booking.com.
+
+The deployment we run for casas rurales is less conversational UI, more small reservation engine. WhatsApp Business Cloud API as the ingest, an LLM agent with function-calling into the property's channel manager (Smoobu, Lodgify, Avirato, Octorate) for live inventory, Stripe or Redsys for the deposit, and a write-through CRM so each message lands against a guest record with channel attribution. State persists in Redis across 48-72h because the guest's decision window does.
+
+Numbers we target on these rollouts: under 60 s median first-response, agent p99 under 3.2 s, zero double bookings (the lock lives in the channel manager, not in the LLM), and the 25-40% direct-booking lift vs OTA share that Prostay reported in 2026.
+
+Hard parts in rural: PMS with no public API still exist in the long tail, Meta template approval is an async queue measured in hours, and WhatsApp conversation pricing shifted from per-session to per-message in July 2025, which changes the unit economics of the reminder flow.
+
+Full architecture, PMS integration map and 5-week rollout for a 4-unit casa rural: https://zeniapartners.com/blog/agente-ia-para-hoteles-rurales.html
+
+#WhatsAppBusinessAPI #AIagents #SystemsEngineering #Hospitality

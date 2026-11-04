@@ -10144,6 +10144,8 @@ Full write-up with cost math and the five migration failures we see most: https:
 
 ## 2026-11-04 - Agente IA para Hoteles Rurales
 
+<!-- PUBLISHED:make-webhook at 2026-11-04T09:30:05Z -->
+
 A rural guest decides a weekend trip in 48-72h and writes "do you take dogs?" at 23:00. If the answer lands in the morning, the booking is gone to Booking.com.
 
 The deployment we run for casas rurales is less conversational UI, more small reservation engine. WhatsApp Business Cloud API as the ingest, an LLM agent with function-calling into the property's channel manager (Smoobu, Lodgify, Avirato, Octorate) for live inventory, Stripe or Redsys for the deposit, and a write-through CRM so each message lands against a guest record with channel attribution. State persists in Redis across 48-72h because the guest's decision window does.

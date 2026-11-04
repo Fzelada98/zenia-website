@@ -10155,3 +10155,19 @@ Hard parts in rural: PMS with no public API still exist in the long tail, Meta t
 Full architecture, PMS integration map and 5-week rollout for a 4-unit casa rural: https://zeniapartners.com/blog/agente-ia-para-hoteles-rurales.html
 
 #WhatsAppBusinessAPI #AIagents #SystemsEngineering #Hospitality
+
+---
+
+## 2026-11-04 - AI Agent for Bookkeepers
+
+An AI agent for a US bookkeeping firm is less a chat UI, more a client-facing queue runner bolted onto the ledger.
+
+Reference 2026 stack: WhatsApp Business Cloud API on the firm's number, an LLM agent with function-calling into QuickBooks Online and Xero (read-only to start), Dext or Hubdoc for receipt ingest, and write-through into the CRM so every doc request, reply, and escalation lives against a client record. State is per-client and per-period, with a month-end queue that reconciles against the workpaper folder, not the LLM's memory.
+
+Two numbers we hold a deployment to: 72% drop in weekly client-chasing hours (11.5 to 3.2 per bookkeeper on a 42-client Atlanta firm) and close date moving from day 19 to day 11 of the following month. The ledger write path stays human-approved, so the agent proposes batches and never posts.
+
+Hard parts in 2026: QBO and Xero both shipped their own in-ledger agents (Intuit Accounting/Payroll/Sales Tax Agent, Xero XeroForce + JAX in M365 Copilot), so the client-comms layer has to coexist without duplicating the categorization path. Escalation rate on a mature deployment settles at 8-12% of inbound messages and is the KPI we actually watch.
+
+Full architecture, QBO/Xero integration map and 2-week rollout: https://zeniapartners.com/blog/ai-agent-for-bookkeepers.html
+
+#WhatsAppBusinessAPI #AIagents #SystemsEngineering #Fintech

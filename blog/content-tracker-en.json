@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-11-03T00:00Z",
+  "lastRun": "2026-11-04T00:00Z",
   "market": "US/UK small business",
   "posts": [
     {
@@ -1263,7 +1263,9 @@
       "keyword": "ai agent for bookkeepers",
       "tier": 2,
       "cluster": "professional",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-11-04",
+      "note": "Tier 2 topic from tracker; striking-loop had no uncovered EN queries meeting criteria (all top EN queries already have dedicated posts). 2,348-word US-focused build with 42-client Atlanta firm case study, QBO/Xero stack layering, WhatsApp vs email response-rate table, 2-week rollout, and read-only ledger guardrails. Linked to ai-agent-for-tax-preparers, accounting-firm-crm-with-ai, and whatsapp-crm-small-business."
     },
     {
       "slug": "ai-agent-for-estate-planning-attorneys",

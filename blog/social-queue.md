@@ -10207,3 +10207,17 @@ Guardrails in the prompt layer: strict jurisdiction/conflict gate before any con
 Write-up and the full stack: https://zeniapartners.com/blog/ai-agent-for-estate-planning-attorneys.html
 
 #WhatsAppBusinessAPI #AIagents #LegalTech #SystemsEngineering
+
+---
+
+## 2026-11-04 - Atencion al cliente ecommerce con IA
+
+Baymard puts average ecommerce cart abandonment at 69.8% and Gorgias clocks the industry median first-response time at 6.3 hours (March 2026, $10M GMV cohort). HubSpot says 60% of buyers define "immediate" as under 10 minutes. That gap is where the agent earns its keep.
+
+The service layer we run for ecommerce clients: WhatsApp Business Cloud API as transport, a stateful agent with function-calling bound to the shop API (Shopify, WooCommerce, VTEX, TiendaNube read/write), a carrier adapter for Correos/SEUR/Andreani/Oca tracking, and a CRM sidecar that persists the full transcript on the customer record for replay and audit.
+
+Hard parts in 2026: Meta's per-message pricing (service 0.0073 EUR, utility 0.0218 EUR, marketing 0.0591 EUR in Spain) changes the follow-up economics, and EU AI Act obligations in force since August 2026 force explicit AI identification plus a working human escalation path. Autonomous resolution lands between 55 and 70 percent on mature deployments; the KPI we watch is escalated-ticket latency, not first-response time.
+
+Full architecture, pricing math and the 4-week rollout plan: https://zeniapartners.com/blog/atencion-al-cliente-ecommerce-ia.html
+
+#WhatsAppBusinessAPI #AIagents #Ecommerce #SystemsEngineering

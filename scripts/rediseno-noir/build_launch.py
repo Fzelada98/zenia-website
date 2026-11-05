@@ -388,6 +388,16 @@ def build(lang, s, ver):
     assert s.count(old_js) == 1
     s = s.replace(old_js, f'<script defer src="{pre}js/demo-chat.js?v={ver}"></script>\n<script defer src="{pre}js/hero-net.js?v={ver}"></script>\n<script defer src="{pre}js/loops.js?v={ver}"></script>', 1)
     s = s.replace('<meta name="theme-color" content="#F4F4F1">', '<meta name="theme-color" content="#0B1220">')
+    # el contador de Cloudflare con el token de envío (la fuente de la rama trae el identificador de consulta)
+    s = s.replace('"token": "67e4803d7cd443a49b12c7d8a99365bf"', '"token": "eceeed460f6d465bba3b970417d5f6b0"')
+    # la tarjeta de vista previa (WhatsApp, LinkedIn, X) propia de cada portada
+    og = f"https://zeniapartners.com/assets/images/og-home-{lang}.jpg"
+    n_og = s.count('<meta property="og:image" content="https://zeniapartners.com/assets/images/og-image.png">')
+    assert n_og == 1, n_og
+    s = s.replace('<meta property="og:image" content="https://zeniapartners.com/assets/images/og-image.png">',
+                  f'<meta property="og:image" content="{og}">\n<meta property="og:image:secure_url" content="{og}">\n<meta property="og:image:type" content="image/jpeg">', 1)
+    s = s.replace('<meta name="twitter:image" content="https://zeniapartners.com/assets/images/og-image.png">', f'<meta name="twitter:image" content="{og}">', 1)
+    assert s.count(og) == 3, s.count(og)
     if lang == "en":
         # el aviso de cookies, en inglés
         s = s.replace('Usamos cookies para analítica (Google Analytics) y mejorar tu experiencia. No compartimos datos con terceros. <a href="/privacy/" style="color:#1D4ED8;text-decoration:underline;">Política de privacidad</a>',

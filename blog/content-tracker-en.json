@@ -1,7 +1,16 @@
 {
-  "lastRun": "2026-11-04T00:00Z",
+  "lastRun": "2026-11-05T00:00Z",
   "market": "US/UK small business",
   "posts": [
+    {
+      "slug": "crm-for-dentists",
+      "keyword": "crm for dentists",
+      "tier": 0,
+      "cluster": "dental",
+      "status": "published",
+      "date": "2026-11-05",
+      "note": "striking-loop hit: 21 impressions, pos 23.0 (en-market). /blog/dental-crm.html was printing for the query but its title targets 'Dental CRM', not 'CRM for Dentists' head-on. Dedicated 2,314-word owner-dentist-framed build: 5 symptoms that signal a CRM is needed, buyer checklist, PMS integration table (Open Dental, Dentrix G7/G8+Ascend, Eaglesoft, Curve, Denticon), 2-dentist Austin case study (recall 64→81%, case acceptance on $1,500+ plans 31→46%, hygiene no-show 14→8%, 148/980 dormant reactivated, ~$168k incremental over 6 months vs $5,800 CRM spend), pricing bands $149 to $1,800/month per office, 5 automations (overdue recall, dormant 12-24mo, unscheduled treatment follow-up, 24/7 AI agent, end-of-year PPO benefits push), HIPAA checklist, 2-week rollout. Cross-link added from dental-crm.html using 'CRM for Dentists' as anchor."
+    },
     {
       "slug": "crm-whatsapp-integration",
       "keyword": "crm whatsapp integration",
@@ -1275,6 +1284,7 @@
       "status": "published",
       "date": "2026-11-04",
       "note": "Tier 2 topic from tracker; striking-loop had no uncovered EN queries meeting criteria (only EN queries printing were 'ai receptionist for photographers' and 'ai receptionist for driving schools', both already have dedicated pages). 2,600-word US-focused build with 3-attorney Phoenix firm case study (lead-to-consult 31→58%, median response 4h22m→47s, 90-day trust funding 58→89%), Clio/MyCase/Lawmatics/DecisionVault/Calendly/LawPay stack table, 5 workflows including the 90-day trust funding chase, bar-safe guardrails (no legal advice, jurisdiction/conflict checks, auditable transcripts), 2-week rollout. Linked to ai-agent-for-law-firms, law-firm-crm-with-ai, whatsapp-automation-for-law-firms, ai-agent-for-tax-preparers."
+    },
     {
       "slug": "ai-agent-for-criminal-defense-attorneys",
       "keyword": "ai agent for criminal defense attorneys",

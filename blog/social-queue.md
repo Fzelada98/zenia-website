@@ -10237,3 +10237,19 @@ Two numbers that moved on last year's cohort: no-show rate on 8+ pax parties dro
 Full calendar, templates and the ROI math for a 60-cover venue (+22,377 EUR incremental in December): https://zeniapartners.com/blog/campanas-navidad-restaurante-whatsapp.html
 
 #WhatsAppBusinessAPI #AIagents #RestaurantTech #SystemsEngineering
+
+---
+
+## 2026-11-05 - CRM for Dentists
+
+US dental is still a three-layer stack problem: the PMS (Dentrix, Eaglesoft, Open Dental, Curve, Denticon) owns the chart and schedule, a reminder service owns the 24-hour text, and the CRM owns the 5-year patient relationship. In 2026 the integration ceiling is set by the PMS, not by the CRM.
+
+Architecture we ship: Open Dental via its published REST + FHIR R4 API with webhooks (near-real-time, full write-back); Dentrix via the Henry Schein One DDP API plus a local SQL sync agent polling 1 to 5 minutes against the Dentrix SQL Server; Eaglesoft via Patterson's Innovation Connection and an ODBC bridge (polling 5 to 15 minutes, write-back limited to new-patient and notes); Curve and Denticon are REST + webhooks, full write-back, no local agent. WhatsApp Business Cloud API as the patient transport, a stateful agent with function-calling bound to the PMS adapter, and a CRM sidecar that persists every transcript on the chart for audit.
+
+HIPAA is the hard constraint, not the tooling. The pipeline runs TLS 1.2+ in transit, AES-256 at rest, role-based named accounts (no shared logins), a signed BAA before the first chart syncs, and PHI-light outbound templates ("appointment with Dr. Chen on Nov 12 at 2 pm" rather than "crown prep on tooth #14"). Clinical specifics stay inside the authenticated portal.
+
+Two numbers that moved on a 2-dentist Austin practice in 90 days: hygiene recall rate 64 → 81 percent after the overdue cohort sweep plus the LTV-ranked call list, and 148 of 980 dormant charts booked in 90 days (~$462 production per reactivated patient over the following 6 months, ~$168k incremental).
+
+Full stack, pricing bands and the 2-week rollout: https://zeniapartners.com/blog/crm-for-dentists.html
+
+#WhatsAppBusinessAPI #AIagents #DentalTech #SystemsEngineering

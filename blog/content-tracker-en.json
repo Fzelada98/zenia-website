@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-11-05T00:00Z",
+  "lastRun": "2026-11-05T17:12Z",
   "market": "US/UK small business",
   "posts": [
     {
@@ -1290,7 +1290,9 @@
       "keyword": "ai agent for criminal defense attorneys",
       "tier": 2,
       "cluster": "professional",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-11-05",
+      "note": "Tier 2 topic from tracker; striking-loop had no uncovered EN queries meeting criteria (all top EN striking queries already have dedicated posts: ai-receptionist-for-photographers, ai-receptionist-for-driving-schools, crm-for-dentists, crm-whatsapp-integration). 2,450-word US-focused build with 2-attorney Houston DUI/felony firm case study (after-hours live-answer near 0 to 100 percent, lead-to-retainer 19 to 29 percent, median response 2h38m to 41s, 14 extra signed retainers at $4.2k average = ~$58.8k incremental monthly revenue), Clio/MyCase/PracticePanther/Rocket Matter/Lawmatics/LawPay stack table, 5 workflow steps (arrest-time capture, jurisdiction-conflict triage, soft-retainer link, attorney paging, follow-through), bar-safe guardrails (no advice, no solicitation, jurisdiction/conflict checks, auditable transcripts), 2-week rollout. Linked to ai-agent-for-law-firms, law-firm-crm-with-ai, whatsapp-automation-for-law-firms, ai-agent-for-estate-planning-attorneys, ai-agent-for-immigration-lawyers."
     },
     {
       "slug": "ai-agent-for-personal-injury-attorneys",

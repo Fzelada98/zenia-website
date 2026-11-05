@@ -10271,3 +10271,19 @@ Full calendar, 7 Meta-approved templates and the ROI math for a 2,000 opt-in lis
 #WhatsAppBusinessAPI #Ecommerce #AIagents #SystemsEngineering
 
 ---
+
+## 2026-11-05 - AI Agent for Criminal Defense Attorneys
+
+Criminal defense is the practice area where latency has the biggest P&L impact. 55-70% of qualifying intake lands between 10pm and 6am or on weekends; the family calling at 2:14am signs with whoever answers first. Voicemail and generic answering services lose the case before the attorney wakes up.
+
+Architecture we ship for a 1-5 attorney US firm: WhatsApp Business Cloud API + inbound-voice bridge on the firm number (Twilio Voice with speech-to-text + barge-in), a stateful agent with function-calling bound to Clio Manage / MyCase / PracticePanther / Rocket Matter adapters, a Lawmatics or Clio Grow intake connector for structured fields (jail, booking number, bond, charges, next court event), LawPay for the soft-retainer link, and LawToolBox for court-calendar write-back. CRM sidecar persists every transcript on the matter record for bar audit.
+
+Hard constraints that break naive deployments: ABA Model Rule 7.3 solicitation rules mean no outbound to arrest records, no claimed results, no false comparisons - the agent is inbound-only and uses pre-approved firm language; conflict check must run on name-match against Clio/MyCase before any case specifics are exchanged, with an auto-pause and attorney page on any flag; all transcripts stored with timestamps because a bar inquiry can ask what was said at 2am. Call-pickup P50 under 1.5s, agent-to-attorney page under 20s on in-scope cases.
+
+Two numbers that moved on a 2-attorney Houston firm in 90 days: after-hours live-answer near 0 -> 100 percent, and lead-to-signed-retainer 19 -> 29 percent on a 151 inbound monthly volume. The retainer-link conversion within 24h of the arrest call moved 14 -> 38 percent because the family was asked while the arrest was still raw.
+
+Full stack, bar-safe guardrails and the 2-week rollout: https://zeniapartners.com/blog/ai-agent-for-criminal-defense-attorneys.html
+
+#WhatsAppBusinessAPI #LegalTech #AIagents #SystemsEngineering
+
+---

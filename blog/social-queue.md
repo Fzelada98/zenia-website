@@ -10221,3 +10221,19 @@ Hard parts in 2026: Meta's per-message pricing (service 0.0073 EUR, utility 0.02
 Full architecture, pricing math and the 4-week rollout plan: https://zeniapartners.com/blog/atencion-al-cliente-ecommerce-ia.html
 
 #WhatsAppBusinessAPI #AIagents #Ecommerce #SystemsEngineering
+
+---
+
+## 2026-11-05 - Campanas Navidad Restaurante por WhatsApp
+
+December hits Spanish restaurants with 31% of the month's reservations coming from group bookings (TheFork Nov 2025 observatory), compressed into three weeks and dominated by parties of 10+ that arrive by WhatsApp between 8 pm and 1 am.
+
+Architecture for the seasonal campaign: WhatsApp Business Cloud API as transport, four pre-approved Meta templates (utility + marketing, ~24h approval SLA), a stateful agent with function-calling bound to the booking system (CoverManager, TheFork, Resy, ad-hoc PMS), Stripe/Bizum for the deposit link rendered inline, and a CRM sidecar for per-wave attribution (corporate, friends, reactivation, review).
+
+Hard parts in 2026: Meta marketing conversation pricing in Spain sits at 0.0591 EUR, so the four-wave cadence (Nov 10 to Jan 5) becomes a measurable P&L line rather than a flat expense, and per-wave CAC tracking is non-negotiable. EU AI Act obligations in force since August 2026 require explicit AI identification plus a working human escalation path on every template or the number loses quality score.
+
+Two numbers that moved on last year's cohort: no-show rate on 8+ pax parties dropped from 22% to 7% once a 72-hour confirmation template was wired to the booking-system write-back, and the <24h post-visit review template lifted December Google review intake 3.8x vs batch monthly emails.
+
+Full calendar, templates and the ROI math for a 60-cover venue (+22,377 EUR incremental in December): https://zeniapartners.com/blog/campanas-navidad-restaurante-whatsapp.html
+
+#WhatsAppBusinessAPI #AIagents #RestaurantTech #SystemsEngineering

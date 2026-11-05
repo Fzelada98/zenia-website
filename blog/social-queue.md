@@ -10255,3 +10255,19 @@ Two numbers that moved on a 2-dentist Austin practice in 90 days: hygiene recall
 Full stack, pricing bands and the 2-week rollout: https://zeniapartners.com/blog/crm-for-dentists.html
 
 #WhatsAppBusinessAPI #AIagents #DentalTech #SystemsEngineering
+
+## 2026-11-05 - Campanas Black Friday pymes WhatsApp
+
+Black Friday 2026 lands on Nov 27 and most pyme ecommerce stacks we audit this week are still not WhatsApp-ready: no BSP wired (Twilio, 360dialog, Meta Cloud API), marketing templates not even submitted for the 24-72h approval SLA, and opt-in collection sitting in a Google Sheet with no audit trail. None of that gets fixed in the week of.
+
+Architecture we ship for the campaign: WhatsApp Business Cloud API as transport, BSP + webhook consumer + a stateful agent with function-calling bound to catalog/stock via Shopify or WooCommerce connectors, a CRM sidecar persisting opt-in events and marketing conversation IDs for attribution, and a pre-approved 7-template library covering teaser / VIP / launch / cart-recovery / Cyber Monday. Response P50 under 2s, P99 under 8s at 2k-msg bursts.
+
+Hard constraints that break naive deployments in 2026: Meta's per-number quality-rating throttle drops throughput silently when block-rate crosses ~2%; the 24-hour conversation window governs retry semantics and reply-cost accounting; frequency cap on marketing templates per user forces you to sequence impacts, not stack them; Meta marketing pricing in Spain sits at 0.0603 EUR so the five-wave cadence is a measurable P&L line, not a flat expense.
+
+Benchmark worth planning against (Chatarmin 2026, n=382 brands): 79% open rate, 11.8% CTR, 1.72 EUR revenue per message in BFCM month, 0.37% opt-out per message. Halve the revenue figure as a sanity prior for a Spanish pyme list on a first campaign and the economics still clear email by 3x on CTR.
+
+Full calendar, 7 Meta-approved templates and the ROI math for a 2,000 opt-in list: https://zeniapartners.com/blog/campanas-black-friday-pymes-whatsapp.html
+
+#WhatsAppBusinessAPI #Ecommerce #AIagents #SystemsEngineering
+
+---

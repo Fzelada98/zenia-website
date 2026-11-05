@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-11-05T14:03:57+00:00",
+  "lastRun": "2026-11-05T22:11:37+00:00",
   "posts": [
     {
       "slug": "campanas-black-friday-pymes-whatsapp",
@@ -4781,6 +4781,14 @@
       "status": "published",
       "source": "matrix-tier4-gap",
       "date": "2026-11-01"
+    },
+    {
+      "slug": "automatizacion-para-estetica-en-madrid",
+      "keyword": "automatizacion para estetica en madrid",
+      "tier": 4,
+      "cluster": "belleza-city",
+      "status": "published",
+      "date": "2026-11-05"
     }
   ]
 }

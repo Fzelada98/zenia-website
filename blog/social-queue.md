@@ -10287,3 +10287,17 @@ Full stack, bar-safe guardrails and the 2-week rollout: https://zeniapartners.co
 #WhatsAppBusinessAPI #LegalTech #AIagents #SystemsEngineering
 
 ---
+## 2026-11-05 - Automatización para Estética en Madrid
+
+Beauty-clinic automation in a dense market like Madrid is a latency problem dressed up as a CRM problem. Default stack for a 3-cabin center: WhatsApp Business Cloud API on the existing number (360dialog BSP), a stateful agent with function calls bound to the booking system (Flowww, Shortcuts, Agendapro) over their public API, a thin sync layer for the ones that still ship only webhooks, and a CRM sidecar that joins agenda state with channel-attributed leads from Meta Ads click-to-WhatsApp and the Google Business Profile message endpoint.
+
+Reliability constraints that break naive builds: EU AI Act applies since August 2026 so Meta-mandated "AI" message tagging and a visible human-escalation path are non-negotiable, waitlist re-offer must land under 2 minutes after a cancellation to recover the slot, and every conversation needs to persist on the client record for continuity across morning/afternoon shifts. We target P50 first-response under 60s and an availability SLO that doesn't degrade on Meta pricing-change days.
+
+Two numbers from the Zenoti 2026 benchmark that frame the ROI: medspa no-shows dropped from 14 percent to 4 percent with deposit + 48h reminder flows, and first-booking cancellation at 37 percent collapses to 4 percent after the second visit - so recovery automation on cancellations matters more than acquisition spend.
+
+Full architecture, integrations and cost model: https://zeniapartners.com/blog/automatizacion-para-estetica-en-madrid.html
+
+#WhatsAppBusinessAPI #BeautyTech #AIagents #SystemsEngineering
+
+---
+

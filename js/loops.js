@@ -11,6 +11,15 @@
 
   // si el navegador no deja arrancar el bucle, se queda el póster con el botón «Ver con sonido»
   function play(v) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+  // en el teléfono, «con sonido» = el reproductor a pantalla completa, como cualquier vídeo
+  var phone = window.matchMedia('(max-width: 768px), (pointer: coarse)').matches;
+  function fullscreen(v) {
+    try {
+      if (v.webkitEnterFullscreen) { v.webkitEnterFullscreen(); return true; }
+      if (v.requestFullscreen) { var r = v.requestFullscreen(); if (r && r.catch) r.catch(function () {}); return true; }
+    } catch (e) {}
+    return false;
+  }
 
   boxes.forEach(function (box) {
     var v = box.querySelector('video');
@@ -33,7 +42,11 @@
       v.loop = false; v.muted = false; v.volume = 1; v.controls = true;
       try { v.currentTime = 0; } catch (e) {}
       play(v);
+      if (phone) { setTimeout(function () { fullscreen(v); }, 60); }
     }
+    // al salir de pantalla completa (o al terminar), vuelve al reposo
+    v.addEventListener('webkitendfullscreen', function () { rest(); });
+    document.addEventListener('fullscreenchange', function () { if (!document.fullscreenElement && v.dataset.user) rest(); });
     function rest() {
       box.classList.remove('is-live');
       delete v.dataset.user;

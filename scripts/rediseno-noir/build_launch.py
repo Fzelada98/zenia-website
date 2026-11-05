@@ -54,7 +54,7 @@ L = {
     "es": {
         "pre": "../", "home": "/es/", "lang": "es",
         "eyebrow": "CRM a medida + agente de IA por WhatsApp",
-        "subtitle": "Un CRM hecho a la medida de tu negocio y un agente de IA que atiende por WhatsApp: automatiza ventas, fidelizaci&oacute;n y atenci&oacute;n al cliente. Resultados medibles en 4 semanas para restaurantes, gimnasios, cl&iacute;nicas, hoteles, retail y m&aacute;s.",
+        "subtitle": "Un CRM hecho a la medida de tu negocio y un agente de IA que atiende, agenda y vende por WhatsApp. Resultados medibles en 4 semanas.",
         "strip_aria": "Herramientas", "strip_label": "Trabajamos sobre",
         "chat_name": "La Terraza &middot; Restaurante", "online": "en l&iacute;nea", "today": "Hoy",
         "lock": "Los mensajes est&aacute;n cifrados de extremo a extremo.", "input": "Mensaje",
@@ -76,26 +76,24 @@ L = {
                  ("22:00", "Grupo Sato", "8", "Sal&oacute;n", "Men&uacute; degustaci&oacute;n", "ok", "Confirmada", False)],
         "sound": "Ver con sonido",
         "saas_aria": "V&iacute;deo de lanzamiento de GWB Network, la red privada de transporte en mano construida por Zenia",
-        "saas_cap": 'GWB Network, la plataforma que construimos para Global Watch Buyers: una red privada de transporte en mano con miembros por aval, identidad verificada y un c&oacute;digo de entrega en cada viaje. V&iacute;deo en ingl&eacute;s; con sonido en <a href="/es/caso-global-watch-buyers.html">el caso</a>.',
-        "saas_points": ["Red privada de transporte en mano para el gremio de relojes, con miembros por aval e identidad verificada",
-                        "Un c&oacute;digo de entrega en cada viaje y panel de operaciones para el equipo",
-                        "Dise&ntilde;o, desarrollo, lanzamiento y v&iacute;deo de presentaci&oacute;n: todo desde Zenia"],
+        "saas_cap": 'GWB Network, la plataforma que construimos para Global Watch Buyers. <a href="/es/caso-global-watch-buyers.html">Ver el caso</a>.',
+        "saas_points": ["Red privada de transporte en mano, con miembros por aval e identidad verificada", "Un c&oacute;digo de entrega en cada viaje y panel para el equipo", "Dise&ntilde;o, desarrollo, lanzamiento y v&iacute;deo: todo desde Zenia"],
         "durs": ["1 a 2 semanas", "1 a 2 semanas", "4 a 6 semanas", "Continuo, cada mes"], "shorts": ["1 a 2 sem.", "1 a 2 sem.", "4 a 6 sem.", "Continuo"],
         "wk1": "Sem. 1", "onwards": "en adelante", "stage": "Etapa", "first": "Primer resultado",
-        "gantt_note": "Semanas desde la primera llamada. El primer resultado medible llega antes de la octava.",
+        "gantt_note": "Semanas desde la primera llamada.",
         "copilots": ("<h3>Copilotos de Conocimiento Interno</h3>", "<h3>Copilotos de Conocimiento</h3>"),
         "gwb_aria": "Recreaci&oacute;n: un vendedor de relojes escribe a las 2:47 de la madrugada y sale con la llamada agendada",
-        "gwb_cap": "Las 2:47 de la madrugada: un vendedor en Londres escribe, se cualifica la pieza y queda agendada la llamada. Recreaci&oacute;n del flujo.",
+        "gwb_cap": "Las 2:47 de la madrugada: un vendedor escribe y sale con la llamada agendada. Recreaci&oacute;n.",
         "gwb_eyebrow": "Caso destacado &middot; Global Watch Buyers",
         "gwb_h3": "Vendedores de relojes de lujo de 33 pa&iacute;ses, captados por WhatsApp",
-        "gwb_p": "P&aacute;ginas de venta por marca y ciudad en 13 idiomas, WhatsApp con cualificaci&oacute;n, panel de leads por niveles y anuncios que solo traen vendedores. Sobre ese motor va el agente de IA que contesta en segundos, cualifica y agenda, como en la recreaci&oacute;n del v&iacute;deo.",
+        "gwb_p": "P&aacute;ginas de venta en 13 idiomas, WhatsApp con cualificaci&oacute;n, panel de leads y anuncios que solo traen vendedores. Encima, el agente de IA que contesta, cualifica y agenda.",
         "gwb_stats": [("831", "conversaciones de WhatsApp"), ("33", "pa&iacute;ses"), ("10 de 12", "contactos de anuncios traen un reloj premium")],
         "gwb_link": "/es/caso-global-watch-buyers.html", "gwb_btn": "Ver el caso con los v&iacute;deos",
         "ts_aria": "The Unmakeable, pel&iacute;cula de marca de Throwin&rsquo; Salt Co. hecha por Zenia con relojes reales del stock",
-        "ts_cap": "The Unmakeable, la pel&iacute;cula de marca de Throwin&rsquo; Salt Co.: hecha por Zenia con relojes reales del stock, voz y m&uacute;sica. En ingl&eacute;s.",
+        "ts_cap": "The Unmakeable, la pel&iacute;cula de marca de Throwin&rsquo; Salt Co., hecha por Zenia.",
         "ts_eyebrow": "Caso destacado &middot; Throwin&rsquo; Salt Co.",
         "ts_h3": "Relojes de alta gama: el lote del d&iacute;a, publicado en eBay desde WhatsApp",
-        "ts_p": "Gaia, el agente que construimos para Throwin&rsquo; Salt, prepara cada anuncio con t&iacute;tulo, especificaciones, fotos y precio, aplica las reglas de la casa y lo publica en eBay cuando el equipo dice &laquo;publica&raquo;. Y para la marca, una pel&iacute;cula con los relojes como protagonistas.",
+        "ts_p": "Gaia, el agente que construimos, prepara cada anuncio con t&iacute;tulo, fotos y precio y lo publica en eBay cuando el equipo dice &laquo;publica&raquo;.",
         "ts_stats": [("54", "relojes publicados en 4 semanas"), ("23", "en un solo d&iacute;a"), ("2&nbsp;M$", "de inventario en eBay")],
         "ts_link": "/es/caso-throwin-salt-gaia.html", "ts_btn": "Ver el caso de Throwin&rsquo; Salt",
         "footer_tag": "CRM a medida y agentes de IA por WhatsApp para PYMEs en Espa&ntilde;a y Latinoam&eacute;rica.",
@@ -106,7 +104,7 @@ L = {
     "en": {
         "pre": "", "home": "/", "lang": "en",
         "eyebrow": "Tailor-made CRM + AI agent on WhatsApp",
-        "subtitle": "A CRM built around your business and an AI agent that answers on WhatsApp: automate sales, retention and customer service. Measurable results in 4 weeks for restaurants, gyms, clinics, hotels, retail and more.",
+        "subtitle": "A CRM built around your business and an AI agent that answers, books and sells on WhatsApp. Measurable results in 4 weeks.",
         "strip_aria": "Tools", "strip_label": "We work on",
         "chat_name": "La Terraza &middot; Restaurant", "online": "online", "today": "Today",
         "lock": "Messages are end-to-end encrypted.", "input": "Message",
@@ -128,26 +126,24 @@ L = {
                  ("22:00", "Sato party", "8", "Dining room", "Tasting menu", "ok", "Confirmed", False)],
         "sound": "Play with sound",
         "saas_aria": "Launch film of GWB Network, the private hand-carry network built by Zenia",
-        "saas_cap": 'GWB Network, the platform we built for Global Watch Buyers: a private hand-carry network with vouched members, verified identity and a handover code on every trip. <a href="/cases/global-watch-buyers-ai-acquisition.html">Read the case</a>.',
-        "saas_points": ["A private hand-carry network for the watch trade, with vouched members and verified identity",
-                        "A handover code on every trip and an operations panel for the team",
-                        "Design, build, launch and launch film: all from Zenia"],
+        "saas_cap": 'GWB Network, the platform we built for Global Watch Buyers. <a href="/cases/global-watch-buyers-ai-acquisition.html">Read the case</a>.',
+        "saas_points": ["A private hand-carry network, with vouched members and verified identity", "A handover code on every trip and a panel for the team", "Design, build, launch and film: all from Zenia"],
         "durs": ["1 to 2 weeks", "1 to 2 weeks", "4 to 6 weeks", "Ongoing, every month"], "shorts": ["1 to 2 wks", "1 to 2 wks", "4 to 6 wks", "Ongoing"],
         "wk1": "Wk 1", "onwards": "onwards", "stage": "Stage", "first": "First result",
-        "gantt_note": "Weeks from the first call. The first measurable result arrives before week eight.",
+        "gantt_note": "Weeks from the first call.",
         "copilots": None,
         "gwb_aria": "Re-enactment: a watch seller writes at 2:47 in the morning and leaves with a call booked",
-        "gwb_cap": "2:47 in the morning: a seller in London writes, the piece is qualified and a call is booked. A re-enactment of the flow.",
+        "gwb_cap": "2:47 in the morning: a seller writes and leaves with a call booked. A re-enactment.",
         "gwb_eyebrow": "Featured case &middot; Global Watch Buyers",
         "gwb_h3": "Luxury watch sellers from 33 countries, acquired on WhatsApp",
-        "gwb_p": "Selling pages by brand and city in 13 languages, WhatsApp with qualification, a tiered lead panel and ads that only bring sellers. On top of that engine sits the AI agent that answers in seconds, qualifies and books, as in the re-enactment.",
+        "gwb_p": "Selling pages in 13 languages, WhatsApp with qualification, a lead panel and ads that only bring sellers. On top, the AI agent that answers, qualifies and books.",
         "gwb_stats": [("831", "WhatsApp conversations"), ("33", "countries"), ("10 of 12", "ad contacts bring a premium watch")],
         "gwb_link": "/cases/global-watch-buyers-ai-acquisition.html", "gwb_btn": "See the case with the films",
         "ts_aria": "The Unmakeable, the brand film of Throwin&rsquo; Salt Co., made by Zenia with real watches from stock",
-        "ts_cap": "The Unmakeable, the brand film of Throwin&rsquo; Salt Co.: made by Zenia with real watches from stock, voice and music.",
+        "ts_cap": "The Unmakeable, the brand film of Throwin&rsquo; Salt Co., made by Zenia.",
         "ts_eyebrow": "Featured case &middot; Throwin&rsquo; Salt Co.",
         "ts_h3": "High-end watches: the day&rsquo;s lot, listed on eBay from WhatsApp",
-        "ts_p": "Gaia, the agent we built for Throwin&rsquo; Salt, prepares every listing with title, specs, photos and price, applies the house rules and publishes it on eBay when the team says &ldquo;publish&rdquo;. And for the brand, a film with the watches as the stars.",
+        "ts_p": "Gaia, the agent we built, prepares every listing with title, photos and price and publishes it on eBay when the team says &ldquo;publish&rdquo;.",
         "ts_stats": [("54", "watches listed in 4 weeks"), ("23", "in a single day"), ("$2&nbsp;M", "of inventory on eBay")],
         "ts_link": "/cases/throwin-salt-gaia-ebay-whatsapp.html", "ts_btn": "See the Throwin&rsquo; Salt case",
         "footer_tag": "Tailor-made CRM and AI agents on WhatsApp for SMBs in Spain and Latin America.",
@@ -377,6 +373,32 @@ def build(lang, s, ver):
     # 10. iconos decorativos fuera del lector de pantalla
     s = s.replace('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">',
                   '<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">')
+
+    # 11b. al punto: una sola frase en las descripciones y fuera lo redundante
+    def primera(frase):
+        m = re.match(r'(.*?[.!?])(\s+\S.*)$', frase.strip(), re.S)
+        return m.group(1) if m else frase
+    def corta(m):
+        return m.group(1) + primera(m.group(2)) + m.group(3)
+    for pat in (r'(<div class="opp-card[^"]*">.*?<p>)(.*?)(</p>)',
+                r'(<div class="service-card[^>]*>.*?<p[^>]*>)(.*?)(</p>)',
+                r'(<p class="section-desc"[^>]*>)(.*?)(</p>)',
+                r'(<div class="tailor-text[^"]*">.*?<h2[^>]*>.*?</h2>\s*<p[^>]*>)(.*?)(</p>)',
+                r'(<div class="tailor-point">.*?<p[^>]*>)(.*?)(</p>)',
+                r'(<div class="vision-pillar[^"]*">.*?<p[^>]*>)(.*?)(</p>)',
+                r'(<div class="cta-box reveal">.*?<p[^>]*>)(.*?)(</p>)',
+                r'(<td>)([^<]{140,})(</td>)'):
+        s = re.sub(pat, corta, s, flags=re.S)
+    # las cifras de impacto: número y etiqueta, sin párrafo
+    s = re.sub(r'(<div class="impact-card[^"]*">.*?</h3>)\s*<p[^>]*>.*?</p>', r'\1', s, flags=re.S)
+    # el enfoque: las tres tarjetas sin párrafo (ya lo dicen los tres puntos)
+    s = re.sub(r'(<div class="tailor-card[^"]*">.*?</h3>)\s*<p[^>]*>.*?</p>', r'\1', s, flags=re.S)
+    # la tarjeta de SaaS: fuera el párrafo, se quedan los tres puntos
+    s = re.sub(r'(<div class="service-card-body">.*?</h3>)\s*<p[^>]*>.*?</p>', r'\1', s, count=1, flags=re.S)
+    # pies de las fotos de casos: solo el nombre del trabajo
+    s = re.sub(r'(<figcaption>)([^<:]*):[^<]*(</figcaption>)', r'\1\2\3', s)
+    # la nota de la conversación
+    s = re.sub(r'(<p class="demo-note[^"]*">)(.*?)(</p>)', lambda m: m.group(1) + ("Conversaci&oacute;n de ejemplo. El flujo es el real." if lang == "es" else "Example conversation. The flow is the real one.") + m.group(3), s, count=1, flags=re.S)
 
     # 11. hoja, scripts y color del tema
     n = 0

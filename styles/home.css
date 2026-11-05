@@ -903,7 +903,9 @@ table.crm { width: 100%; border-collapse: collapse; }
 .reel-frame { margin: 0; width: 100%; min-width: 0; }
 .stage-box { position: relative; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 14px; border: 1px solid var(--line-strong); background: #05070C center / cover no-repeat; background-image: var(--poster); box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5); }
 .stage-box::after { content: ""; position: absolute; inset: 0; pointer-events: none; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -60px 80px -40px rgba(0, 0, 0, 0.45); }
-.stage-box video { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 50% 50%; background: #000; border-radius: 0; border: 0; box-shadow: none; }
+.stage-box video { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 50% 50%; background: transparent; border-radius: 0; border: 0; box-shadow: none; opacity: 0; transition: opacity 0.35s ease; }
+.stage-box.is-playing video, .stage-box.is-live video { opacity: 1; }
+.stage-box.is-live { background-color: #000; }
 .stage-box.is-live video { object-fit: contain; max-width: 100%; }
 .reel-frame, .case-feature-text { min-width: 0; max-width: 100%; }
 .stage-sound { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 2; display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 20px 0 14px; border-radius: 999px;

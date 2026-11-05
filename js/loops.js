@@ -16,6 +16,12 @@
     var btn = box.querySelector('.stage-sound');
     if (!v) return;
     v.muted = true; v.defaultMuted = true; v.loop = true;
+    v.setAttribute('muted', ''); v.setAttribute('playsinline', ''); v.playsInline = true;
+    // el vídeo solo se pinta cuando de verdad está reproduciendo: hasta entonces se ve el póster
+    // (Safari en el iPhone pinta el primer fotograma, que es negro, aunque no haya arrancado)
+    v.addEventListener('playing', function () { box.classList.add('is-playing'); });
+    v.addEventListener('pause', function () { if (!v.dataset.user) box.classList.remove('is-playing'); });
+    v.addEventListener('emptied', function () { box.classList.remove('is-playing'); });
     v.controls = reduce; // en reposo sin controles; con movimiento reducido, con ellos
     if (reduce) { v.removeAttribute('autoplay'); }
 

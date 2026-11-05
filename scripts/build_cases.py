@@ -162,7 +162,7 @@ TAIL = ('<a href="{wa}" target="_blank" rel="noopener" aria-label="Contactar por
         '<script>document.addEventListener("click",function(e){{var t=e.target,a=t.closest?t.closest(\'a[href*="wa.me"]\'):null;if(!a)return;'
         'try{{navigator.sendBeacon("https://gaia-relojes.onrender.com/gwb/lead",JSON.stringify({{site:"zenia",path:location.pathname+location.search,ref:document.referrer||""}}))}}catch(r){{}}}},true);</script>\n'
         '<script src="/assets/qualify.js?v=4" defer></script>\n'
-        '<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon=\'{{"token": "67e4803d7cd443a49b12c7d8a99365bf"}}\'></script>')
+        '<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon=\'{{"token": "eceeed460f6d465bba3b970417d5f6b0"}}\'></script>')
 
 UI = {
     "en": {"cases": "Cases", "blog": "Blog", "talk": "Talk to us", "home": "/", "blog_url": "/blog/",

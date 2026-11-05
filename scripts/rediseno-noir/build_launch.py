@@ -87,15 +87,15 @@ L = {
         "gwb_eyebrow": "Caso destacado &middot; Global Watch Buyers",
         "gwb_h3": "Vendedores de relojes de lujo de 33 pa&iacute;ses, captados por WhatsApp",
         "gwb_p": "P&aacute;ginas de venta en 13 idiomas, WhatsApp con cualificaci&oacute;n, panel de leads y anuncios que solo traen vendedores. Encima, el agente de IA que contesta, cualifica y agenda.",
-        "gwb_stats": [("831", "conversaciones de WhatsApp"), ("33", "pa&iacute;ses"), ("10 de 12", "contactos de anuncios traen un reloj premium")],
-        "gwb_link": "/es/caso-global-watch-buyers.html", "gwb_btn": "Ver el caso con los v&iacute;deos",
+        "gwb_stats": [("831", "conversaciones de WhatsApp"), ("33", "pa&iacute;ses"), ("10 de 12", "contactos de anuncios con reloj premium")],
+        "gwb_link": "/es/caso-global-watch-buyers.html", "gwb_btn": "Ver el caso",
         "ts_aria": "The Unmakeable, pel&iacute;cula de marca de Throwin&rsquo; Salt Co. hecha por Zenia con relojes reales del stock",
         "ts_cap": "The Unmakeable, la pel&iacute;cula de marca de Throwin&rsquo; Salt Co., hecha por Zenia.",
         "ts_eyebrow": "Caso destacado &middot; Throwin&rsquo; Salt Co.",
         "ts_h3": "Relojes de alta gama: el lote del d&iacute;a, publicado en eBay desde WhatsApp",
         "ts_p": "Gaia, el agente que construimos, prepara cada anuncio con t&iacute;tulo, fotos y precio y lo publica en eBay cuando el equipo dice &laquo;publica&raquo;.",
         "ts_stats": [("54", "relojes publicados en 4 semanas"), ("23", "en un solo d&iacute;a"), ("2&nbsp;M$", "de inventario en eBay")],
-        "ts_link": "/es/caso-throwin-salt-gaia.html", "ts_btn": "Ver el caso de Throwin&rsquo; Salt",
+        "ts_link": "/es/caso-throwin-salt-gaia.html", "ts_btn": "Ver el caso",
         "footer_tag": "CRM a medida y agentes de IA por WhatsApp para PYMEs en Espa&ntilde;a y Latinoam&eacute;rica.",
         "footer_cta": "Agenda una llamada",
         "brands": "Las marcas y s&iacute;mbolos de terceros pertenecen a sus propietarios; no implican afiliaci&oacute;n.",
@@ -137,15 +137,15 @@ L = {
         "gwb_eyebrow": "Featured case &middot; Global Watch Buyers",
         "gwb_h3": "Luxury watch sellers from 33 countries, acquired on WhatsApp",
         "gwb_p": "Selling pages in 13 languages, WhatsApp with qualification, a lead panel and ads that only bring sellers. On top, the AI agent that answers, qualifies and books.",
-        "gwb_stats": [("831", "WhatsApp conversations"), ("33", "countries"), ("10 of 12", "ad contacts bring a premium watch")],
-        "gwb_link": "/cases/global-watch-buyers-ai-acquisition.html", "gwb_btn": "See the case with the films",
+        "gwb_stats": [("831", "WhatsApp conversations"), ("33", "countries"), ("10 of 12", "ad contacts with a premium watch")],
+        "gwb_link": "/cases/global-watch-buyers-ai-acquisition.html", "gwb_btn": "See the case",
         "ts_aria": "The Unmakeable, the brand film of Throwin&rsquo; Salt Co., made by Zenia with real watches from stock",
         "ts_cap": "The Unmakeable, the brand film of Throwin&rsquo; Salt Co., made by Zenia.",
         "ts_eyebrow": "Featured case &middot; Throwin&rsquo; Salt Co.",
         "ts_h3": "High-end watches: the day&rsquo;s lot, listed on eBay from WhatsApp",
         "ts_p": "Gaia, the agent we built, prepares every listing with title, photos and price and publishes it on eBay when the team says &ldquo;publish&rdquo;.",
         "ts_stats": [("54", "watches listed in 4 weeks"), ("23", "in a single day"), ("$2&nbsp;M", "of inventory on eBay")],
-        "ts_link": "/cases/throwin-salt-gaia-ebay-whatsapp.html", "ts_btn": "See the Throwin&rsquo; Salt case",
+        "ts_link": "/cases/throwin-salt-gaia-ebay-whatsapp.html", "ts_btn": "See the case",
         "footer_tag": "Tailor-made CRM and AI agents on WhatsApp for SMBs in Spain and Latin America.",
         "footer_cta": "Book a call",
         "brands": "Third-party marks and logos belong to their owners; no affiliation is implied.",
@@ -374,6 +374,9 @@ def build(lang, s, ver):
     s = s.replace('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">',
                   '<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">')
 
+    # 11a. títulos que abren con h3 y cierran con h4 (error antiguo de la portada inglesa)
+    s = re.sub(r'(<h3\b[^>]*>[^<]*)</h4>', r'\1</h3>', s)
+
     # 11b. al punto: una sola frase en las descripciones y fuera lo redundante
     def primera(frase):
         m = re.match(r'(.*?[.!?])(\s+\S.*)$', frase.strip(), re.S)
@@ -396,9 +399,14 @@ def build(lang, s, ver):
     # la tarjeta de SaaS: fuera el párrafo, se quedan los tres puntos
     s = re.sub(r'(<div class="service-card-body">.*?</h3>)\s*<p[^>]*>.*?</p>', r'\1', s, count=1, flags=re.S)
     # pies de las fotos de casos: solo el nombre del trabajo
-    s = re.sub(r'(<figcaption>)([^<:]*):[^<]*(</figcaption>)', r'\1\2\3', s)
+    s = re.sub(r'(<figure><img[^>]*>\s*<figcaption>)([^<:]*):[^<]*(</figcaption>)', r'\1\2\3', s)
     # la nota de la conversación
     s = re.sub(r'(<p class="demo-note[^"]*">)(.*?)(</p>)', lambda m: m.group(1) + ("Conversaci&oacute;n de ejemplo. El flujo es el real." if lang == "es" else "Example conversation. The flow is the real one.") + m.group(3), s, count=1, flags=re.S)
+
+    # 11c. botones del cierre, cortos
+    for a, b in (("Agenda tu Sesi&oacute;n Estrat&eacute;gica de IA", "Agenda tu sesi&oacute;n estrat&eacute;gica"), ("Ver Proceso de Transformaci&oacute;n", "Ver el proceso"),
+                 ("Book Your AI Strategy Session", "Book your strategy session"), ("See Transformation Process", "See the process"), ("View Transformation Process", "See the process")):
+        s = s.replace(a, b)
 
     # 11. hoja, scripts y color del tema
     n = 0
@@ -421,6 +429,10 @@ def build(lang, s, ver):
     s = s.replace('<meta name="twitter:image" content="https://zeniapartners.com/assets/images/og-image.png">', f'<meta name="twitter:image" content="{og}">', 1)
     assert s.count(og) == 3, s.count(og)
     if lang == "en":
+        # la portada inglesa es monolingüe: sin marcas data-i18n, el script de traducción no vuelve a
+        # escribir en vivo los textos recortados (i18n.js sigue cargado para el formulario de reserva)
+        s = re.sub(r'\s+data-i18n(?:-html)?="[^"]*"', '', s)
+        assert 'data-i18n' not in s
         # el aviso de cookies, en inglés
         s = s.replace('Usamos cookies para analítica (Google Analytics) y mejorar tu experiencia. No compartimos datos con terceros. <a href="/privacy/" style="color:#1D4ED8;text-decoration:underline;">Política de privacidad</a>',
                       'We use cookies for analytics (Google Analytics) and to improve your experience. We do not share data with third parties. <a href="/privacy/" style="color:#1D4ED8;text-decoration:underline;">Privacy policy</a>', 1)

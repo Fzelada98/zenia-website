@@ -9,7 +9,8 @@
   if (!boxes.length) return;
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  function play(v) { var p = v.play(); if (p && p.catch) p.catch(function () { v.controls = true; }); }
+  // si el navegador no deja arrancar el bucle, se queda el póster con el botón «Ver con sonido»
+  function play(v) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
 
   boxes.forEach(function (box) {
     var v = box.querySelector('video');

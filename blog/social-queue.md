@@ -10226,6 +10226,8 @@ Full architecture, pricing math and the 4-week rollout plan: https://zeniapartne
 
 ## 2026-11-05 - Campanas Navidad Restaurante por WhatsApp
 
+<!-- PUBLISHED:make-webhook at 2026-11-05T09:30:05Z -->
+
 December hits Spanish restaurants with 31% of the month's reservations coming from group bookings (TheFork Nov 2025 observatory), compressed into three weeks and dominated by parties of 10+ that arrive by WhatsApp between 8 pm and 1 am.
 
 Architecture for the seasonal campaign: WhatsApp Business Cloud API as transport, four pre-approved Meta templates (utility + marketing, ~24h approval SLA), a stateful agent with function-calling bound to the booking system (CoverManager, TheFork, Resy, ad-hoc PMS), Stripe/Bizum for the deposit link rendered inline, and a CRM sidecar for per-wave attribution (corporate, friends, reactivation, review).

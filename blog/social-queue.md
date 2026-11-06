@@ -10348,3 +10348,17 @@ Full stack, AEC integration matrix and the honest answer on when Zenia Partners 
 #WhatsAppBusinessAPI #AECtech #AIagents #SystemsEngineering
 
 ---
+
+## 2026-11-06 - AI Agent for Family Law Attorneys
+
+Family law intake is a conflict-check problem and a response-time problem stacked on the same call. Default stack for a 2-5 attorney US family practice: WhatsApp Business Cloud API via a BSP on the firm's commercial number plus a voice channel on the main DID, a stateful agent with function calls bound to the practice-management system (Clio Manage + Clio Grow, MyCase, Smokeball, PracticePanther, CosmoLex) over their REST APIs, Lawmatics as the standalone intake CRM when the PMS vendor's intake module is thin, and DocuSign or Clio Draft for the retainer agreement and initial invoice. The agent is inbound-only.
+
+Hard constraints: conflict check runs by name-match against the PMS before any case specifics are exchanged and before any consultation is booked (not after); state-bar UPL rules mean the agent collects facts and books consults but does not interpret statutes, so legal questions auto-route to a scheduled call; an attorney-client privilege disclaimer fires at first contact; voice disclosure that the caller is on an automated system is wired at session start to cover California, Illinois and the other states that require it; escalation triggers on "suicide", "abuse", "child in danger" and similar tokens page a human; transcripts persisted with timestamps for QA and the occasional subpoena. P50 first-response under 60s across chat, SMS, WhatsApp and voice.
+
+Two numbers that moved on a 4-attorney Charlotte firm in 90 days against identical marketing spend: 24h response rate 72 -> 99 percent on 438 inbound, and consults booked 33 -> 45 percent of leads with consult-to-retainer flat at 39 percent. The system also caught 11 conflicts before the paid consult that would previously have surfaced after the fee was charged.
+
+Full stack, PMS integration matrix, UPL guardrails and the 2-week rollout: https://zeniapartners.com/blog/ai-agent-for-family-law-attorneys.html
+
+#WhatsAppBusinessAPI #LegalTech #AIagents #SystemsEngineering
+
+---

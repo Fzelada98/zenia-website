@@ -1308,7 +1308,9 @@
       "keyword": "ai agent for family law attorneys",
       "tier": 2,
       "cluster": "professional",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-11-06",
+      "note": "Tier 2 tracker build: US family law intake-automation guide, 2530 words. Covers 5 agent jobs (sub-60s first-response, conflict check before booking, attorney routing, retainer+DocuSign, long-window nurture), compliance (no legal advice, UPL guardrails, mandatory conflict check, voice-AI disclosure), integrations table for Clio/MyCase/Smokeball/PracticePanther/CosmoLex/Lawmatics, 4-attorney Charlotte case study (412 vs 438 leads, 72% vs 99% 24h response, 137 vs 198 consults, 52 vs 78 retainers, +$177k booked at $6.8k avg matter, 11 conflicts caught, ROI 9x year-one), US pricing bands $199-$3,500/mo, buyer checklist, vendor red flags, 2-week rollout."
     }
   ]
 }

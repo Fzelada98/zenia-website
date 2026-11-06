@@ -10332,3 +10332,19 @@ Full stack, bar-safe guardrails and the 2-week rollout: https://zeniapartners.co
 #WhatsAppBusinessAPI #LegalTech #AIagents #SystemsEngineering
 
 ---
+
+## 2026-11-06 - CRM para arquitectos: qué buscar en un software para estudios en 2026
+
+Architecture CRM is three different systems pretending to be one: a sales pipeline with a six-to-eighteen month cycle, a phased project ledger (estudio previo, proyecto básico, proyecto de ejecución, dirección de obra), and a document store that has to version CAD and BIM files next to the client record. Dropping Pipedrive on top of a studio and calling that a CRM is why two thirds of implementations get abandoned by month six.
+
+The architecture we ship for a mid-size Spanish studio: WhatsApp Business Cloud API via a BSP on the partner's existing number, a stateful agent with function-calling bound to the CRM of record (Zoho + Zoho Projects for 4-15 FTE, BQE Core or Deltek Vantagepoint for 15+), a document adapter that writes the uploaded plans to the project folder in Google Drive or SharePoint with the Revit/AutoCAD filename convention preserved, and a Verifactu/Ticketbai bridge to Holded or Sage so that each phase milestone (15/35/50) emits the invoice with the right series number.
+
+Hard constraints: the EU AI Act in force since August 2026 requires AI-message tagging and a human-escalation path, the WhatsApp 24-hour conversation window governs retry semantics on the "¿sigues interesado en la reforma?" nudge, and the first-response SLO has to beat the other two studios the promotor is talking to in parallel. P50 first-response under 60 seconds against a weekly inbound of 20 to 90 messages per partner.
+
+Two numbers that frame the P&L on a 9-person studio in Madrid: partner hours on first-response dropped from 6.5 to 0.8 per week, and lead-to-signed-contract went from 14 to 22 percent on the same 54 monthly inbound. The partner hours came back as billable dirección de obra, which is where the margin lives.
+
+Full stack, AEC integration matrix and the honest answer on when Zenia Partners is the wrong fit: https://zeniapartners.com/blog/crm-para-arquitectos.html
+
+#WhatsAppBusinessAPI #AECtech #AIagents #SystemsEngineering
+
+---

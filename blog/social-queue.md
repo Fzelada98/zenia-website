@@ -10317,3 +10317,16 @@ Full stack, onboarding flow and the math on ~45 extra activations per 4,500 EUR 
 #WhatsAppBusinessAPI #FitnessTech #AIagents #SystemsEngineering
 
 ---
+## 2026-11-06 - AI Agent for Personal Injury Attorneys
+
+PI intake is a tail-latency problem dressed up as a marketing problem. Default stack for a 1-5 attorney US PI firm: WhatsApp Business Cloud API via a BSP on the firm's commercial number, a stateful agent with function calls bound to the case-management system (Clio Manage, MyCase, PracticePanther, CloudLex, Filevine) over their REST APIs, Lawmatics or Clio Grow as the intake-form/lead-scoring layer, DocuSign or Lawmatics e-sign for the contingency engagement letter, and a thin HIPAA-aware handoff to ChartRequest for records retrieval. The agent is inbound-only by design.
+
+Hard constraints that break naive deployments: ABA Model Rule 7.3 and state analogs restrict live solicitation of prospects who have not asked for contact, so no outbound to accident reports or third-party lead lists in restricted states; conflict check must run on name-match against Clio/MyCase before any case specifics are exchanged and must cross-check the at-fault driver and carrier against prior adverse parties, with an auto-pause and attorney page on any flag; fee disclosure (33.3% pre-suit, 40% post-filing + expenses) is read verbatim from firm-approved copy and logged; PHI is minimized at intake and routed through the firm's records-retrieval workflow, never parsed by the agent; all transcripts persisted with timestamps because a bar inquiry can ask what was said at 10 pm on a Saturday. Target P50 first-response 60s, call-pickup P50 under 1.5s.
+
+Two numbers that moved on a 3-attorney Tampa firm in 90 days: after-hours live-answer 44 -> 96 percent, and lead-to-signed-retainer 21 -> 32 percent on a 186 inbound monthly volume. The retainer-link conversion within 24h of the accident call moved 17 -> 41 percent because the client was asked while the facts were still fresh and the ER discharge paperwork was still in their pocket.
+
+Full stack, bar-safe guardrails and the 2-week rollout: https://zeniapartners.com/blog/ai-agent-for-personal-injury-attorneys.html
+
+#WhatsAppBusinessAPI #LegalTech #AIagents #SystemsEngineering
+
+---

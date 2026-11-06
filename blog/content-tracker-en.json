@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-11-05T17:12Z",
+  "lastRun": "2026-11-06T09:00Z",
   "market": "US/UK small business",
   "posts": [
     {
@@ -1299,7 +1299,9 @@
       "keyword": "ai agent for personal injury attorneys",
       "tier": 2,
       "cluster": "professional",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-11-06",
+      "note": "Tier 2 topic from tracker; striking-loop had no uncovered EN queries meeting criteria (all top EN striking queries already have dedicated posts: ai-receptionist-for-photographers, ai-receptionist-for-driving-schools, crm-for-dentists, crm-whatsapp-integration, click-to-chat-ads-guide). 2,377-word US-focused build with 3-attorney Tampa PI firm case study (after-hours live-answer 44 to 96 percent, lead-to-retainer 21 to 32 percent, median response 2h11m to 38s, 24h signing 17 to 41 percent, 24 extra signed matters/month at $9.8k average fee, 71 percent historical resolution rate = ~$167k incremental monthly fee revenue in mature cohort), Clio/MyCase/PracticePanther/CloudLex/Filevine/Lawmatics/DocuSign stack table, 5 workflow steps (24/7 accident-time capture, jurisdiction/statute triage, name-match conflict check with at-fault carrier, contingency fee + e-signed retainer, attorney paging with structured brief and during-treatment status), bar-safe guardrails (no advice, ABA Rule 7.3 no-solicitation, pre-approved fee disclosure, HIPAA-aware handling, auditable transcripts), 2-week rollout. Linked to ai-agent-for-law-firms, law-firm-crm-with-ai, whatsapp-automation-for-law-firms, ai-agent-for-criminal-defense-attorneys, ai-agent-for-estate-planning-attorneys, ai-agent-for-immigration-lawyers."
     },
     {
       "slug": "ai-agent-for-family-law-attorneys",

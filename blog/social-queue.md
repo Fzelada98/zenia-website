@@ -10304,6 +10304,8 @@ Full architecture, integrations and cost model: https://zeniapartners.com/blog/a
 
 ## 2026-11-06 - Captar socios de gimnasio en enero con WhatsApp
 
+<!-- PUBLISHED:make-webhook at 2026-11-06T09:30:03Z -->
+
 January gym acquisition is a tail-latency problem dressed up as a marketing problem. A Spanish mid-size club takes 3-7x the WhatsApp inbound of December into a 21-day window, and conversion collapses because the P95 first-response moves from "minutes" to "hours" the second the floor rep walks into a trial.
 
 Architecture we ship for a mid-size club or chain: WhatsApp Business Cloud API via a BSP (360dialog) on the existing commercial number, a stateful agent with function-calling bound to the gym management system (Trainingym, Resasports, Mindbody, Glofox) over their REST APIs, a thin sync adapter for ERPs that still ship only webhooks, Stripe or Redsys payment-link generation in-chat for matrícula + first-month capture, and a CRM sidecar that joins agenda state with Meta Ads click-to-WhatsApp and Google Ads channel attribution.

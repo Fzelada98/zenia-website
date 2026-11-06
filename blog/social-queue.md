@@ -10301,3 +10301,19 @@ Full architecture, integrations and cost model: https://zeniapartners.com/blog/a
 
 ---
 
+
+## 2026-11-06 - Captar socios de gimnasio en enero con WhatsApp
+
+January gym acquisition is a tail-latency problem dressed up as a marketing problem. A Spanish mid-size club takes 3-7x the WhatsApp inbound of December into a 21-day window, and conversion collapses because the P95 first-response moves from "minutes" to "hours" the second the floor rep walks into a trial.
+
+Architecture we ship for a mid-size club or chain: WhatsApp Business Cloud API via a BSP (360dialog) on the existing commercial number, a stateful agent with function-calling bound to the gym management system (Trainingym, Resasports, Mindbody, Glofox) over their REST APIs, a thin sync adapter for ERPs that still ship only webhooks, Stripe or Redsys payment-link generation in-chat for matrícula + first-month capture, and a CRM sidecar that joins agenda state with Meta Ads click-to-WhatsApp and Google Ads channel attribution.
+
+Reliability constraints that break naive builds: the EU AI Act (in force since August 2026) requires Meta-mandated AI message tagging and a visible human-escalation path for sensitive topics (injury, pregnancy, medical), the 24-hour conversation window governs retry semantics on the Day-3/Day-7/Day-14 onboarding cadence, and the free-trial slot must be offered in-session against a live calendar read: a two-step redirect to a web booking form loses 25-40% of the lead right there. Target P50 first-response under 60s with no SLO degradation on Meta pricing-change days.
+
+Two numbers that frame the P&L: lead-to-trial moves from a manual baseline of 25-35% to 55-70% under sub-minute response, and silent churn (member stops showing up without cancelling) runs at 53% of eventual churners per the Zenoti 2026 survey of 1,393 members, so the same pipeline keeps working through March.
+
+Full stack, onboarding flow and the math on ~45 extra activations per 4,500 EUR of Meta Ads spend: https://zeniapartners.com/blog/captar-socios-gimnasio-enero-whatsapp.html
+
+#WhatsAppBusinessAPI #FitnessTech #AIagents #SystemsEngineering
+
+---

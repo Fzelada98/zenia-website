@@ -10362,3 +10362,19 @@ Full stack, PMS integration matrix, UPL guardrails and the 2-week rollout: https
 #WhatsAppBusinessAPI #LegalTech #AIagents #SystemsEngineering
 
 ---
+
+## 2026-11-06 - Campañas Reyes Magos WhatsApp para Pymes: Guía 2026
+
+Reyes Magos is the campaign that breaks naive WhatsApp stacks. The traffic is bursty (15-Dec to 5-Jan, with the 2-Jan "will it arrive?" spike), the template taxonomy flips the night of 22-Dec, and Meta's quality rating collapses the account if the MARKETING vs UTILITY category is wrong on a single send. Spanish OKDiario puts the average spend at 411 € per person across Navidad + Reyes 2025-2026 (+4.8 percent YoY), so the P&L consequence of losing the channel on 24-Dec is real.
+
+Default stack we ship for a Spanish retailer or restaurant group: WhatsApp Business Cloud API via a BSP on the merchant's commercial number, four pre-approved templates in Meta Business (active recurring, dormant 90-365d, new 60d, cold social lead) with the category locked before 15-Nov to survive the 24-48h review, a stateful agent with function-calling bound to the CRM of record (Zenia Partners CRM, Hubspot, Pipedrive, Zoho) for cohort assignment and attribution, and a UTM-tagged shortlink router so that web conversions map back to the exact template and cohort on the campaign dashboard.
+
+Hard constraints: the 24-hour conversation window governs retry semantics on the "¿aún quieres el pedido para Reyes?" nudge; AI Act in force since August 2026 requires AI-message tagging and a human-escalation path; the account quality rating has to stay above HIGH through 5-Jan or the daily send cap drops under the 2-Jan spike; P50 first-response under 60s across inbound volumes that go from ~20 msg/day baseline to 200-400 on 2-Jan and 4-Jan.
+
+Two numbers that frame the P&L on a 2,000-contact base: open rate 80-96 percent vs email 18-22 percent on the same send, and conversion-per-sent 4-6x higher on WhatsApp for the 26-Dec to 4-Jan window. Cost side: 0.042-0.065 € per marketing conversation in Spain against SMS at 0.05-0.09 € with a quarter of the response rate.
+
+Full calendar, segmentation cohorts, template categorization and the honest answer on when email is still the right call: https://zeniapartners.com/blog/campanas-reyes-magos-whatsapp-pymes.html
+
+#WhatsAppBusinessAPI #RetailTech #AIagents #SystemsEngineering
+
+---

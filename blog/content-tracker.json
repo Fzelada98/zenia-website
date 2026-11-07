@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-11-07T06:10:00+00:00",
+  "lastRun": "2026-11-07T22:10:00+00:00",
   "posts": [
+    {
+      "slug": "chatgpt-para-whatsapp-business-pymes",
+      "keyword": "chatgpt para whatsapp business",
+      "tier": 2,
+      "cluster": "whatsapp-ia-pymes",
+      "status": "published",
+      "date": "2026-11-07",
+      "source": "matrix-generated"
+    },
     {
       "slug": "crm-para-agencias-de-viajes",
       "keyword": "crm para agencias de viajes",

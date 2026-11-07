@@ -10418,3 +10418,19 @@ Two numbers from the 90-day production run: median referral-to-first-patient-con
 Full architecture, EHR integration table and the HIPAA/BAA checklist: https://zeniapartners.com/blog/ai-agent-for-urology-clinics.html
 
 #HealthTech #FHIR #WhatsAppBusinessAPI #SystemsEngineering
+
+## 2026-11-07 - ChatGPT for WhatsApp Business in 2026 (EN tech)
+
+Meta's January 15, 2026 policy change on WhatsApp Business API cut general-purpose AI assistants off the channel: ChatGPT's 1-800 number went dark, and bots that answer "anything" on business numbers now risk suspension.
+
+The remaining compliant path is a domain-scoped agent behind the official API. Our reference stack: WhatsApp Business Cloud API through a verified BSP (360dialog / Cloud API / Gupshup depending on region), a tool-calling agent on GPT-4 or Claude with a system prompt hard-bounded to the business domain, read/write to the CRM over typed tools (read_customer, propose_slot, write_appointment, escalate_to_human), and a strict "I don't have that, let me pass you to the team" fallback for out-of-scope turns.
+
+Two operational numbers from Spanish and LATAM SMB deployments this year: first-response latency on WhatsApp from 23–47 min (manual) to ~8 s (agent), and Meta template rejection rate stays under 5% when every proactive message runs through a utility-category template instead of marketing.
+
+Why domain scoping matters beyond compliance: it's also what keeps hallucinations out of customer channels. An agent that can only call five tools and only read the customer's own CRM record cannot invent an order status.
+
+Full breakdown with the cost split (WhatsApp API, BSP, agent, CRM), setup checklist and the five configuration mistakes that get numbers suspended: https://zeniapartners.com/blog/chatgpt-para-whatsapp-business-pymes.html
+
+#WhatsAppBusinessAPI #SystemsEngineering #AIAgents #B2B
+
+---

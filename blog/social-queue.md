@@ -10392,3 +10392,15 @@ Full breakdown with pricing bands and integration patterns: https://zeniapartner
 #TravelTech #WhatsAppBusinessAPI #AIagents #SystemsEngineering
 
 ---
+
+## 2026-11-07 - AI Agent for Cardiology Clinics (EN)
+
+Cardiology front desks are one of the harder specialty workloads to automate: 45-minute new-patient slots, referrals arriving by fax, device recalls on their own cadence, and PHI in every message. The engineering question is not "voice agent yes or no" but how you wire athenahealth or Epic (FHIR R4 + Open Scheduling), a HIPAA-eligible WhatsApp BSP, and a fax ingest pipeline into one agent that writes back to the schedule.
+
+Reference stack from a 3-cardiologist NC build: athenahealth Marketplace app for read/write on /appointments, Twilio-based voice path with BAA, WhatsApp Business Cloud API via a HIPAA-eligible BSP, fax-to-text ingest with structured output pinned to a referral schema, LLM agent (HIPAA-eligible config) with tool calls scoped to read_chart, propose_slot, write_appointment, request_prior_auth. All PHI with a 90-day retention window and per-action audit trail.
+
+Two numbers from the 90-day production run: median referral-to-first-patient-contact 54h → 12min, and morning-peak call abandon 22% → 4% with the voice agent carrying 8:00–11:00 AM only.
+
+Full architecture, EHR integration table and the HIPAA/BAA checklist: https://zeniapartners.com/blog/ai-agent-for-cardiology-clinics.html
+
+#HealthTech #FHIR #WhatsAppBusinessAPI #SystemsEngineering

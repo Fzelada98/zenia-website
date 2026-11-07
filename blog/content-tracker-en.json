@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-11-07T10:00Z",
+  "lastRun": "2026-11-07T15:00Z",
   "market": "US/UK small business",
   "posts": [
     {
@@ -981,7 +981,9 @@
       "keyword": "ai agent for urology clinics",
       "tier": 3,
       "cluster": "healthcare",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-11-07",
+      "note": "Tier-3 vertical build. 2,180 words. US urology focus: PCP referral triage (elevated PSA, hematuria), pre-op prep, recall for prostate surveillance and vasectomy SA, overflow/after-hours. 90-day case study on a 4-urologist athenahealth practice (abandonment 18%->3%, referral-to-contact 49h->14min median, new-patient no-show 16%->9%, procedure no-show 7%->3%, recall 34%->61%, pre-op prep 51%->86%, ~$94.6k incremental vs $8.1k cost). EHR integration table for Epic App Orchard FHIR R4, athenahealth Marketplace, eClinicalWorks HL7, NextGen Share, ModMed EMA Urology and Nexus EHR. HIPAA/BAA section, 2026 pricing bands ($299-$4,500+), 2-week rollout, 5 KPIs. No chatbot language, no em-dashes."
     },
     {
       "slug": "ai-agent-for-pulmonology-clinics",

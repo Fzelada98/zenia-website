@@ -10404,3 +10404,17 @@ Two numbers from the 90-day production run: median referral-to-first-patient-con
 Full architecture, EHR integration table and the HIPAA/BAA checklist: https://zeniapartners.com/blog/ai-agent-for-cardiology-clinics.html
 
 #HealthTech #FHIR #WhatsAppBusinessAPI #SystemsEngineering
+
+---
+
+## 2026-11-07 - AI Agent for Urology Clinics (EN)
+
+Urology scheduling is a four-stream routing problem: new-patient referrals (many with an elevated PSA or hematuria note), post-op follow-ups after vasectomy or cystoscopy, chronic BPH and stone management, and prostate-cancer surveillance recall. Each stream has a different urgency and a different visit length. The engineering question is not "voice agent yes or no" but how you wire the EHR scheduling API, a HIPAA-eligible WhatsApp BSP, and a referral urgency-rule engine into one agent that writes back to athenahealth, Epic or ModMed EMA Urology.
+
+Reference stack from the 4-urologist Southeast build: athenahealth Marketplace app for read/write on /appointments and /documents, Twilio voice path with BAA, WhatsApp Business Cloud API via a HIPAA-eligible BSP, and a tool-calling agent scoped to read_schedule, propose_slot, write_appointment, post_document, trigger_recall. Urgency rules on PSA threshold and visible hematuria fire a 48-hour telehealth-NP path. All PHI on a 90-day retention window with per-action audit trail; recall worklist driven off the EHR task queue, not a parallel database.
+
+Two numbers from the 90-day production run: median referral-to-first-patient-contact 49h → 14min, call abandonment 18% → 3% with the voice agent in front of the main line and after-hours, and recall completion on the 90-day prostate-surveillance cohort 34% → 61%.
+
+Full architecture, EHR integration table and the HIPAA/BAA checklist: https://zeniapartners.com/blog/ai-agent-for-urology-clinics.html
+
+#HealthTech #FHIR #WhatsAppBusinessAPI #SystemsEngineering

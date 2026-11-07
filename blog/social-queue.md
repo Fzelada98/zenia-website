@@ -10378,3 +10378,17 @@ Full calendar, segmentation cohorts, template categorization and the honest answ
 #WhatsAppBusinessAPI #RetailTech #AIagents #SystemsEngineering
 
 ---
+
+## 2026-11-07 - CRM para agencias de viajes 2026
+
+Travel agencies in Spain and LATAM get 60-75% of initial inquiries through WhatsApp, often outside business hours. The engineering question is not "what CRM" but "how do you wire WhatsApp Business API, a quoting pipeline with versions, and a GDS or ERP into a single source of truth without running two sync jobs that disagree by Monday."
+
+Reference architecture we deploy: WhatsApp Business Cloud API as inbound, LLM agent for qualification (destination, dates, budget, pax) with a hard-stop on structured output, write to CRM via webhook, and bidirectional sync with Travel Compositor / Amadeus / Tropingo via REST or Make/n8n when no API is exposed. P50 response latency under 45s end-to-end, idempotent writes keyed by WhatsApp message id.
+
+Two useful numbers from the build: 72% of inbound inquiries get qualified without human touch, and median agent-time per converted quote drops from 38 to 14 minutes once the CRM owns version history instead of email threads.
+
+Full breakdown with pricing bands and integration patterns: https://zeniapartners.com/blog/crm-para-agencias-de-viajes.html
+
+#TravelTech #WhatsAppBusinessAPI #AIagents #SystemsEngineering
+
+---

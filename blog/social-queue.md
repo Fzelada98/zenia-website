@@ -10434,3 +10434,17 @@ Full breakdown with the cost split (WhatsApp API, BSP, agent, CRM), setup checkl
 #WhatsAppBusinessAPI #SystemsEngineering #AIAgents #B2B
 
 ---
+## 2026-11-08 - Alternative to ManyChat for WhatsApp Business (EN tech)
+
+Migrating an SMB from ManyChat to a WhatsApp Business API stack is mostly a graph-replacement problem: a tree of nodes becomes a tool-calling agent with typed reads and writes. The wire format is what changes behavior, not the branding on the dashboard.
+
+Reference architecture from the November production builds (Spain and LATAM SMBs): WhatsApp Business Cloud API through a BSP (360dialog / Gupshup / Cloud API direct depending on vertical), a tool-calling agent on GPT-4 or Claude scoped to read_customer, propose_slot, write_appointment, escalate_to_human, and CRM writes to HubSpot, Salesforce or Zoho over typed APIs rather than Zapier chains. Template approval pipelines run in CI against Meta's category rules (marketing / utility / authentication) to keep rejection under 5%.
+
+Two operational numbers from the first 30 days of a ManyChat-to-API migration on a 12k-contact base: first-response P50 on WhatsApp 14 min to 9 s, and Zapier task cost dropped 72 EUR/month because the agent handles the writes the old flow tree was outsourcing. Per-channel attribution is now native rather than reconstructed from Google Sheets webhooks.
+
+Full breakdown with the pricing table (ManyChat, WATI, Respond.io, Landbot, Tidio, Zenia) and the 5-week migration plan: https://zeniapartners.com/blog/alternativa-a-manychat-para-whatsapp-business.html
+
+#WhatsAppBusinessAPI #SystemsEngineering #AIAgents #B2B
+
+---
+

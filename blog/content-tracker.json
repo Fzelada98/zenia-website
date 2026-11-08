@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-11-08T14:00:00+00:00",
+  "lastRun": "2026-11-08T22:00:00+00:00",
   "posts": [
+    {
+      "slug": "marketing-salon-de-unas-redes-sociales",
+      "keyword": "marketing salon de unas redes sociales",
+      "tier": 1,
+      "cluster": "belleza-marketing-redes",
+      "status": "published",
+      "date": "2026-11-08",
+      "source": "refresh"
+    },
     {
       "slug": "crm-para-psicologos",
       "keyword": "crm para psicologos",
@@ -3682,14 +3691,6 @@
     {
       "slug": "gestion-citas-spa-whatsapp-automatico",
       "keyword": "gestion citas spa whatsapp automatico",
-      "tier": 1,
-      "cluster": "belleza",
-      "status": "published",
-      "date": "2026-04-28"
-    },
-    {
-      "slug": "marketing-salon-de-unas-redes-sociales",
-      "keyword": "marketing salon de unas redes sociales",
       "tier": 1,
       "cluster": "belleza",
       "status": "published",

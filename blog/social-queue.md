@@ -10493,3 +10493,19 @@ Two numbers from 90 days: in-lab PSG no-show 22% → 8% (deposit-at-booking is t
 Full write-up with the EHR/sleep-lab integration table and pricing bands: https://zeniapartners.com/blog/ai-agent-for-pulmonology-clinics.html
 
 #AIAgents #SystemsEngineering #HealthTech #VoiceAI
+---
+
+## 2026-11-08 - Nail-salon social → WhatsApp agent (ES)
+
+The actual engineering problem at a nail salon isn't the chat. It's that the operator has her hands on a clienta for 90 minutes and the Instagram DM is where the booking dies.
+
+Architecture we settled on for the ES/LATAM salon pilot: Instagram bio link opens a prefilled wa.me deep link (no bio-aggregator detour, every hop drops ~18% of warm traffic), the webhook lands on a WhatsApp Cloud API tenant we provision per salon, a tool-calling agent with three tools exposed — read_calendar, hold_slot, confirm_slot — backed by a shared Postgres with row-level tenant isolation. The agent never writes the calendar directly; hold_slot takes a 90-second lease so two parallel conversations can't double-book the same gap.
+
+Latency budget: inbound webhook → first agent reply under 2s (p95 1.6s), slot lease → confirm roundtrip under 800ms. We log the Reel source as a UTM-equivalent on the deep link so attribution per clip is cheap at report time.
+
+Two numbers from a 60-day single-chair pilot in Madrid: median time-to-first-reply 11s (was 47min when handled manually between clients), DM-to-booked-slot conversion 18% → 41%, driven mostly by the lease model killing the "are you there?" dropoff.
+
+Full write-up with the per-week content cadence the agent is paired with: https://zeniapartners.com/blog/marketing-salon-de-unas-redes-sociales.html
+
+#AIAgents #WhatsAppBusinessAPI #SystemsEngineering #Attribution
+

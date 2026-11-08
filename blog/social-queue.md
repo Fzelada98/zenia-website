@@ -10463,3 +10463,19 @@ Full write-up including the per-state configuration requirements and the stack c
 #AIAgents #SystemsEngineering #WhatsAppBusinessAPI #VoiceAI
 
 ---
+
+## 2026-11-08 - CRM for psychology practices (ES/LATAM)
+
+Building a CRM for a solo psychology practice sounds like a schema problem. It isn't. It's a context-isolation problem.
+
+The agent on WhatsApp Business API has to book a first consultation in under 60 seconds, but it cannot carry the clinical history in its prompt. Mental-health notes are GDPR Article 9 (special category) and the Spanish psychology board's March 2026 circular requires a signed data-processor contract and audited access. So the context is split at the service boundary: the booking agent gets name, phone, intent, and calendar slots over mTLS; the clinical graph sits behind a separate service that only the clinician's dashboard queries, with per-professional access logs.
+
+Stack we settled on for the ES/LATAM pilot: WhatsApp Cloud API with pre-approved Meta templates (recordatorios have to live inside the template catalog, not the agent), Postgres for the CRM, encrypted blob store (AES-256 at rest, TLS 1.3 in transit) in AWS Frankfurt for clinical notes, Stripe + Verifactu for billing from day one (autónomos compliance), and a rule-based escalation layer that flags suicidal ideation, acute crisis, or minors without guardian straight to a human clinician — these conversations never stay inside the LLM.
+
+Two numbers worth sharing from the 30-day single-therapist pilot: 94% of first-contact WhatsApp messages answered in under 45s (median 11s), and 0 clinical-data leaks in log audits (expected: 0, but worth stating because the whole architecture exists to make that number stay at 0).
+
+Full write-up including the compliance checklist and the pricing bands: https://zeniapartners.com/blog/crm-para-psicologos.html
+
+#AIAgents #WhatsAppBusinessAPI #GDPR #HealthTech
+
+---

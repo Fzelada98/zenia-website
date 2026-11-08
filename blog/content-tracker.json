@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-11-08T06:30:00+00:00",
+  "lastRun": "2026-11-08T14:00:00+00:00",
   "posts": [
+    {
+      "slug": "crm-para-psicologos",
+      "keyword": "crm para psicologos",
+      "tier": 2,
+      "cluster": "crm-vertical-clinico",
+      "status": "published",
+      "date": "2026-11-08",
+      "source": "matrix-generated"
+    },
     {
       "slug": "alternativa-a-manychat-para-whatsapp-business",
       "keyword": "alternativa a manychat para whatsapp business",

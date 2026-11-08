@@ -10479,3 +10479,17 @@ Full write-up including the compliance checklist and the pricing bands: https://
 #AIAgents #WhatsAppBusinessAPI #GDPR #HealthTech
 
 ---
+
+## 2026-11-08 - AI agent for pulmonology clinics (US)
+
+Pulmonology front-desk is the cleanest multi-resource scheduling problem in specialty care: you're writing into Epic Cadence for consults, a Natus SleepWorks bed grid for in-lab PSG, a PFT room with its own tech availability, and a HSAT device inventory with pickup/return SLAs. Four different calendars, four different urgency rules, same phone line.
+
+Stack for the 90-day build on a 3-pulmonologist Southeast practice: Twilio Voice on the main line (BAA upstream), tool-calling agent with urgency rules keyed on referral payload (hemoptysis, chest-CT suspicious note, Epworth > 15 with witnessed apneas route to urgent paths, plain chronic cough to standard 2-4wk), Epic FHIR R4 for scheduling read/write and encounter-note posting, HL7 orders/results to Natus for PSG + waitlist-fill, SFTP ingest for ResMed AirView CPAP compliance (flags <4h/70% of nights), WhatsApp Cloud API + SMS for prep sequences at T-7d/T-48h/T-3h.
+
+Engineering constraints: sleep-study booking is only committed post-Stripe pre-auth webhook (no auth, no bed held); shortness-of-breath callback routing reads a SpO2 value before deciding escalation window (pre-week-2 the agent was flooding the nurse pool and burying real cases); documents must post back to the correct Epic encounter, not a loose documents folder — slot-type naming drift across offices (PFT_30 vs PFT_PRE_OP) is the integration tax nobody budgets.
+
+Two numbers from 90 days: in-lab PSG no-show 22% → 8% (deposit-at-booking is the lever, not reminder cadence), and sleep-lab bed utilization 68% → 86% driven almost entirely by the waitlist-fill broadcast on <72h openings.
+
+Full write-up with the EHR/sleep-lab integration table and pricing bands: https://zeniapartners.com/blog/ai-agent-for-pulmonology-clinics.html
+
+#AIAgents #SystemsEngineering #HealthTech #VoiceAI

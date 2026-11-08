@@ -999,7 +999,9 @@
       "keyword": "ai agent for pulmonology clinics",
       "tier": 3,
       "cluster": "healthcare",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-11-08",
+      "note": "Tier-3 pending (no English striking queries in 8-30 range left uncovered). 2,398-word front-desk guide for US pulmonology practices: 4 fragile workflow streams (consults, PFT/6MW, sleep PSG/HSAT, chronic management), 5-workflow AI agent playbook (referral triage with hemoptysis/Epworth rules, pre-test prep for PSG/HSAT/PFT/bronch, sleep-lab deposit-at-booking + waitlist fill, CPAP compliance outreach via AirView/Encore, overflow/after-hours with SpO2-aware routing), 90-day case study (3-pulmonologist Southeast practice on Epic Cadence + Natus SleepWorks: call abandon 21->4%, in-lab PSG no-show 22->8%, sleep-lab utilization 68->86%, CPAP 90-day compliance review 31->64%, $112.4k incremental over 90d on $9.4k spend), EHR+sleep-lab integration table (Epic, athena, eCW, NextGen, Natus/Nox, ResMed/Philips), HIPAA posture checklist, pricing bands $349-$4,900+/mo, 2-week rollout plan, 5 KPIs."
     },
     {
       "slug": "ai-agent-for-gastroenterology-clinics",

@@ -10448,3 +10448,18 @@ Full breakdown with the pricing table (ManyChat, WATI, Respond.io, Landbot, Tidi
 
 ---
 
+## 2026-11-08 - AI receptionist for solo driving instructors (US)
+
+The solo driving-instructor case is the cleanest illustration of why "AI receptionist" is not just a UI layer: the operator physically cannot answer the phone for 60 to 90 minutes at a time, repeated 4 to 6 times a day, and the inbound is high-intent transactional (a parent wanting to book a $500-700 package). Every hour under instruction is an hour the phone must close itself.
+
+Stack we shipped on a 1-car Arizona operator: Twilio Voice (number forwarded from his existing business line, BAA signed on the carrier side), a tool-calling agent with state-rule configuration loaded from a YAML keyed on the AZ MVD source (permit age, BTW hours, parent-taught eligibility, state-funded coupons, DMV wait feed updated weekly), write-back into Google Calendar via the Events API with idempotent upserts keyed on call-id, Stripe for the non-refundable deposit at booking (no deposit, no slot committed), and a confirmation cadence running T-24h / T-2h / T-15min through WhatsApp Business Cloud API where opt-in exists and SMS otherwise.
+
+Engineering constraints: double-booking is a hard-prevent because the agent reads the same calendar it writes; booking is only committed post-Stripe webhook (no PI succeeded, no slot); any in-lesson routing to the operator goes to text-with-transcript, not a live callback, because interrupting a lesson is a safety issue.
+
+Two numbers from the 90-day run: BTW no-show rate 38% → 9% (the deposit at booking is what moves this, not the reminder cadence on its own), and median time from first inbound call to first booked lesson 2.4 days → 6.5 hours.
+
+Full write-up including the per-state configuration requirements and the stack cost ($220-450/month all-in for a solo operator): https://zeniapartners.com/blog/ai-receptionist-for-driving-instructors.html
+
+#AIAgents #SystemsEngineering #WhatsAppBusinessAPI #VoiceAI
+
+---

@@ -1,7 +1,16 @@
 {
-  "lastRun": "2026-11-07T15:00Z",
+  "lastRun": "2026-11-08T09:00Z",
   "market": "US/UK small business",
   "posts": [
+    {
+      "slug": "ai-receptionist-for-driving-instructors",
+      "keyword": "ai receptionist for driving instructors",
+      "tier": 0,
+      "cluster": "education",
+      "status": "published",
+      "date": "2026-11-08",
+      "note": "striking-loop hit (2026-11-08): 31 impressions, pos 29.2. Query was printing on /blog/ai-receptionist-for-driving-schools.html, whose title targets 'driving schools' not 'driving instructors'. Dedicated solo-operator build (2,004 words): framed for independent 1-car US instructors (distinct from the schools article), 7-step AI receptionist workflow (first-ring answering during lessons, qualification, calendar writeback, deposit at booking, 24h/2h/15m confirmation cadence, waitlist fill, review loop), 1-car Phoenix 90-day case (missed calls 11/wk -> 0, no-shows 38 -> 9%, first-call-to-first-lesson 2.4d -> 6.5h, weekly revenue $2,410 -> $3,180, 41 new reviews), stack table ($220-$450/mo all-in), 5 state-specific config requirements (permit age, BTW hours, parent-taught, state-funded coupons, DMV wait times), explicit NO-list, pricing bands $149-$549/mo, 1-week rollout. Cross-link added from /blog/ai-receptionist-for-driving-schools.html using 'AI receptionist for driving instructors' as anchor text."
+    },
     {
       "slug": "crm-for-dentists",
       "keyword": "crm for dentists",

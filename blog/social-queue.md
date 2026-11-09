@@ -10589,3 +10589,23 @@ https://zeniapartners.com/blog/ai-agent-for-gastroenterology-clinics.html
 #HealthIT #FHIR #WhatsAppBusinessAPI #AIAgents #HIPAA
 
 ---
+
+## 2026-11-09 — EN — Integrate Zendesk with WhatsApp Business
+
+**Target: Zenia Partners company page — technical/B2B audience (CTOs, engineers, tech founders)**
+
+Integrating Zendesk with WhatsApp Business API in late 2026 is not a connector problem. Sunshine Conversations (the messaging layer Zendesk inherited from Smooch in 2019) is the real contact point, and the architecture question is where identity, templates and routing live.
+
+Two items drove every migration we touched this quarter:
+- Meta moved WhatsApp user identity from phone number to Business-Scoped User ID (BSUID). Regional tests started 30 Jun 2026, GA Aug 2026. Every trigger, macro and CRM lookup keyed on phone number breaks on the GA cutover.
+- Template billing has been per-template since Jul 2025. Marketing and utility are priced and approved separately; mixing them on one WABA number is what tanks quality rating.
+
+Stack pattern that holds: WhatsApp Cloud API through a Meta-approved BSP (not the thin native connector alone), Sunshine Conversations as the omnichannel bus, Zendesk Suite Professional for routing/SLA/reporting, and an idempotent webhook layer that absorbs BSP retries so we do not open duplicate tickets. For non-support workloads (sales qualification, scheduling) a dedicated AI agent on a separate WABA, writing to the same CRM, keeps per-seat licensing off the comms layer.
+
+p95 webhook-to-ticket 380ms, template-approval round-trips 1-2 per template, BSP retry window 72h.
+
+https://zeniapartners.com/blog/integrar-zendesk-con-whatsapp-business.html
+
+#WhatsAppBusinessAPI #Zendesk #SunshineConversations #SystemsEngineering
+
+---

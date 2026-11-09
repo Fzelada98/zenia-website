@@ -9,7 +9,7 @@ name: Capa de conversión (landings y blog)
 on:
   push:
     branches: [main]
-    paths: ['blog/**', 'es/**', 'en/**', 'scripts/capa-conversion/**']
+    paths: ['blog/**', 'es/**', 'en/**', 'cases/**', '*.html', 'scripts/capa-conversion/**', 'scripts/entidad-ia/**']
   workflow_run:
     workflows: ['Zenia SEO Boost — Indexing + Internal Linking', 'Auto-merge sandbox PRs (safety net)']
     types: [completed]
@@ -40,21 +40,25 @@ jobs:
       - name: Aplicar la capa
         run: python3 scripts/capa-conversion/aplicar.py .
 
+      - name: Una sola entidad «Zenia Partners» en los datos estructurados
+        run: python3 scripts/entidad-ia/aplicar.py .
+
       - name: Commit y push si hay cambios
         run: |
           git config user.name "Zenia capa de conversión"
           git config user.email "reports@zeniapartners.com"
-          if [[ -z $(git status --porcelain blog es en assets) ]]; then
+          if [[ -z $(git status --porcelain blog es en cases assets *.html) ]]; then
             echo "Nada que cambiar"
             exit 0
           fi
-          git add blog es en assets/zx-base.css assets/zx-landing.css assets/zx-blog.css assets/zx.js
+          git add blog es en cases ./*.html assets/zx-base.css assets/zx-landing.css assets/zx-blog.css assets/zx.js
           git commit -m "capa de conversión: páginas nuevas o regeneradas"
           for i in 1 2 3; do
             if git push origin HEAD:main; then echo "push ok"; exit 0; fi
             git pull --rebase origin main || true
             python3 scripts/capa-conversion/aplicar.py . >/dev/null
-            git add blog es en assets/zx-*.css assets/zx.js
+            python3 scripts/entidad-ia/aplicar.py . >/dev/null
+            git add blog es en cases ./*.html assets/zx-*.css assets/zx.js
             git diff --cached --quiet || git commit -m "capa de conversión: reaplicada tras rebase"
             sleep 3
           done

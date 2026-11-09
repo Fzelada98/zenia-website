@@ -32,7 +32,7 @@ import re
 import sys
 import urllib.parse
 
-VERSION = '4'
+VERSION = '5'
 WA_NUM = '34677612799'
 CAL = 'https://calendly.com/zeladauriartef/30min'
 DIR = os.path.dirname(os.path.abspath(__file__))
@@ -320,6 +320,8 @@ def tipo_de(ruta, h):
         return 'contab'
     if ruta == 'es/cobertura.html':
         return 'contab'      # misma hoja que contabilidad: main.css + marca, sin bloques
+    if ruta == 'es/sobre-zenia.html':
+        return 'nacional'    # misma plantilla que las landings nacionales (scripts/entidad-ia/sobre_zenia.py)
     if ruta in ('es/crm-ecommerce.html', 'es/automatizacion-whatsapp-negocios.html'):
         return 'base'
     if ruta.startswith('es/crm-') and 'class="hero"' in h and '/styles/main.css' in h:

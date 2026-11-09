@@ -6,168 +6,280 @@ User-agent: GPTBot
 Allow: /
 Disallow: /backend/
 Disallow: /reports/
+Disallow: /posts/
+Disallow: /demo/
+Disallow: /ts-preview/
+Disallow: /ts-beta/
 Disallow: /.claude/
 
 User-agent: OAI-SearchBot
 Allow: /
 Disallow: /backend/
 Disallow: /reports/
+Disallow: /posts/
+Disallow: /demo/
+Disallow: /ts-preview/
+Disallow: /ts-beta/
 Disallow: /.claude/
 
 User-agent: ChatGPT-User
 Allow: /
 Disallow: /backend/
 Disallow: /reports/
+Disallow: /posts/
+Disallow: /demo/
+Disallow: /ts-preview/
+Disallow: /ts-beta/
 Disallow: /.claude/
 
 User-agent: ClaudeBot
 Allow: /
 Disallow: /backend/
 Disallow: /reports/
+Disallow: /posts/
+Disallow: /demo/
+Disallow: /ts-preview/
+Disallow: /ts-beta/
 Disallow: /.claude/
 
 User-agent: Claude-User
 Allow: /
 Disallow: /backend/
 Disallow: /reports/
+Disallow: /posts/
+Disallow: /demo/
+Disallow: /ts-preview/
+Disallow: /ts-beta/
 Disallow: /.claude/
 
 User-agent: Claude-SearchBot
 Allow: /
 Disallow: /backend/
 Disallow: /reports/
+Disallow: /posts/
+Disallow: /demo/
+Disallow: /ts-preview/
+Disallow: /ts-beta/
 Disallow: /.claude/
 
 User-agent: anthropic-ai
 Allow: /
 Disallow: /backend/
 Disallow: /reports/
+Disallow: /posts/
+Disallow: /demo/
+Disallow: /ts-preview/
+Disallow: /ts-beta/
 Disallow: /.claude/
 
 User-agent: PerplexityBot
 Allow: /
 Disallow: /backend/
 Disallow: /reports/
+Disallow: /posts/
+Disallow: /demo/
+Disallow: /ts-preview/
+Disallow: /ts-beta/
 Disallow: /.claude/
 
 User-agent: Perplexity-User
 Allow: /
 Disallow: /backend/
 Disallow: /reports/
+Disallow: /posts/
+Disallow: /demo/
+Disallow: /ts-preview/
+Disallow: /ts-beta/
 Disallow: /.claude/
 
 User-agent: Google-Extended
 Allow: /
 Disallow: /backend/
 Disallow: /reports/
+Disallow: /posts/
+Disallow: /demo/
+Disallow: /ts-preview/
+Disallow: /ts-beta/
 Disallow: /.claude/
 
 User-agent: Googlebot
 Allow: /
 Disallow: /backend/
 Disallow: /reports/
+Disallow: /posts/
+Disallow: /demo/
+Disallow: /ts-preview/
+Disallow: /ts-beta/
 Disallow: /.claude/
 
 User-agent: Applebot
 Allow: /
 Disallow: /backend/
 Disallow: /reports/
+Disallow: /posts/
+Disallow: /demo/
+Disallow: /ts-preview/
+Disallow: /ts-beta/
 Disallow: /.claude/
 
 User-agent: Applebot-Extended
 Allow: /
 Disallow: /backend/
 Disallow: /reports/
+Disallow: /posts/
+Disallow: /demo/
+Disallow: /ts-preview/
+Disallow: /ts-beta/
 Disallow: /.claude/
 
 User-agent: Bingbot
 Allow: /
 Disallow: /backend/
 Disallow: /reports/
+Disallow: /posts/
+Disallow: /demo/
+Disallow: /ts-preview/
+Disallow: /ts-beta/
 Disallow: /.claude/
 
 User-agent: msnbot
 Allow: /
 Disallow: /backend/
 Disallow: /reports/
+Disallow: /posts/
+Disallow: /demo/
+Disallow: /ts-preview/
+Disallow: /ts-beta/
 Disallow: /.claude/
 
 User-agent: CCBot
 Allow: /
 Disallow: /backend/
 Disallow: /reports/
+Disallow: /posts/
+Disallow: /demo/
+Disallow: /ts-preview/
+Disallow: /ts-beta/
 Disallow: /.claude/
 
 User-agent: meta-externalagent
 Allow: /
 Disallow: /backend/
 Disallow: /reports/
+Disallow: /posts/
+Disallow: /demo/
+Disallow: /ts-preview/
+Disallow: /ts-beta/
 Disallow: /.claude/
 
 User-agent: FacebookBot
 Allow: /
 Disallow: /backend/
 Disallow: /reports/
+Disallow: /posts/
+Disallow: /demo/
+Disallow: /ts-preview/
+Disallow: /ts-beta/
 Disallow: /.claude/
 
 User-agent: Amazonbot
 Allow: /
 Disallow: /backend/
 Disallow: /reports/
+Disallow: /posts/
+Disallow: /demo/
+Disallow: /ts-preview/
+Disallow: /ts-beta/
 Disallow: /.claude/
 
 User-agent: cohere-ai
 Allow: /
 Disallow: /backend/
 Disallow: /reports/
+Disallow: /posts/
+Disallow: /demo/
+Disallow: /ts-preview/
+Disallow: /ts-beta/
 Disallow: /.claude/
 
 User-agent: YouBot
 Allow: /
 Disallow: /backend/
 Disallow: /reports/
+Disallow: /posts/
+Disallow: /demo/
+Disallow: /ts-preview/
+Disallow: /ts-beta/
 Disallow: /.claude/
 
 User-agent: DuckAssistBot
 Allow: /
 Disallow: /backend/
 Disallow: /reports/
+Disallow: /posts/
+Disallow: /demo/
+Disallow: /ts-preview/
+Disallow: /ts-beta/
 Disallow: /.claude/
 
 User-agent: Diffbot
 Allow: /
 Disallow: /backend/
 Disallow: /reports/
+Disallow: /posts/
+Disallow: /demo/
+Disallow: /ts-preview/
+Disallow: /ts-beta/
 Disallow: /.claude/
 
 User-agent: Timpibot
 Allow: /
 Disallow: /backend/
 Disallow: /reports/
+Disallow: /posts/
+Disallow: /demo/
+Disallow: /ts-preview/
+Disallow: /ts-beta/
 Disallow: /.claude/
 
 User-agent: MistralAI-User
 Allow: /
 Disallow: /backend/
 Disallow: /reports/
+Disallow: /posts/
+Disallow: /demo/
+Disallow: /ts-preview/
+Disallow: /ts-beta/
 Disallow: /.claude/
 
 User-agent: Bytespider
 Allow: /
 Disallow: /backend/
 Disallow: /reports/
+Disallow: /posts/
+Disallow: /demo/
+Disallow: /ts-preview/
+Disallow: /ts-beta/
 Disallow: /.claude/
 
 User-agent: PetalBot
 Allow: /
 Disallow: /backend/
 Disallow: /reports/
+Disallow: /posts/
+Disallow: /demo/
+Disallow: /ts-preview/
+Disallow: /ts-beta/
 Disallow: /.claude/
 
 User-agent: *
 Allow: /
 Disallow: /backend/
 Disallow: /reports/
+Disallow: /posts/
+Disallow: /demo/
+Disallow: /ts-preview/
+Disallow: /ts-beta/
 Disallow: /.claude/
 
 Sitemap: https://zeniapartners.com/sitemap.xml

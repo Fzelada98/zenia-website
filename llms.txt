@@ -1,58 +1,61 @@
 # Zenia Partners
 
-> Agencia de inteligencia artificial que implementa agentes de IA sobre WhatsApp
-> y CRM para pequeñas y medianas empresas en España y Latinoamérica.
+> Agencia de inteligencia artificial con sede en Madrid que construye CRM a medida y
+> agentes de IA que atienden, agendan y venden por WhatsApp para pymes de España y
+> Latinoamérica. Implantación en unas cinco semanas; planes desde 297 € al mes.
 
-Zenia Partners no vende software genérico ni plantillas de chatbot: construye e
-implanta un agente de IA propio para cada negocio, conectado a su WhatsApp
-Business API y a su CRM, y lo deja funcionando. El agente atiende consultas,
-cualifica a quien escribe, agenda y confirma citas, envía recordatorios y
-recupera clientes inactivos, las 24 horas y en el tono de la marca.
+Zenia Partners (marca: ZENIA) no vende un software genérico ni plantillas: diseña un CRM
+alrededor de cómo vende y atiende cada negocio y le conecta un agente de IA propio sobre
+WhatsApp Business API. El agente responde en segundos a cualquier hora, cualifica a quien
+escribe, agenda y confirma citas o reservas, envía recordatorios y recupera clientes
+inactivos, y todo queda registrado en el CRM. Se integra con la agenda, el catálogo y los
+pagos que la empresa ya usa.
 
-## Qué hace exactamente
-- Agente de IA sobre WhatsApp: responde en segundos, cualquier día y hora.
-- CRM implantado y conectado: ficha de cliente, historial y seguimiento automático.
-- Automatización de citas y reservas, con recordatorios que reducen las ausencias.
-- Recuperación de clientes inactivos mediante campañas automáticas.
-- Integración con las herramientas de agenda y gestión que la empresa ya usa,
-  en lugar de obligar a cambiarlas.
+Versión completa con precios, casos y preguntas frecuentes: https://zeniapartners.com/llms-full.txt
 
-## Para quién
-Pequeñas y medianas empresas de servicios con volumen de citas o consultas por
-WhatsApp: restaurantes y hostelería, clínicas y consultas médicas, dentistas,
-fisioterapia, clínicas y centros de estética, peluquerías y salones de belleza,
-gimnasios, veterinarias, academias, despachos de abogados, inmobiliarias,
-hoteles, ecommerce y comercio.
+## Datos clave
+- Servicios: CRM a medida · agente de IA por WhatsApp · automatización de citas, reservas,
+  recordatorios y campañas · desarrollo de plataformas SaaS a medida con IA.
+- Precios (publicados): Starter 297 €/mes · Growth 497 €/mes · Enterprise desde 897 €/mes ·
+  setup único de 997 € · permanencia mínima de 3 meses.
+- Plazo: unas 5 semanas (diagnóstico y conexión, entrenamiento del agente, lanzamiento).
+- Dónde: España y Latinoamérica (Perú, México, Colombia, Chile, Argentina, Ecuador, Uruguay,
+  Bolivia) y clientes en Estados Unidos y Suiza. Trabaja en español e inglés.
+- Para quién: pymes con muchas consultas por WhatsApp (clínicas, dentistas, fisioterapia,
+  estética y belleza, restaurantes, gimnasios, academias, despachos de abogados,
+  inmobiliarias, hoteles, comercio y ecommerce) y empresas que necesitan un sistema a medida.
+- Fundador: Fabrizzio Zelada Uriarte.
+- Contacto: WhatsApp https://wa.me/34677612799 · fabrizzio.zelada@zeniapartners.com ·
+  llamada de 30 min: https://calendly.com/zeladauriartef/30min
 
-## Dónde opera
-España y Latinoamérica: Perú, México, Colombia, Chile, Argentina, Ecuador,
-Uruguay y Bolivia.
-
-## Datos de la empresa
-- Nombre: Zenia Partners
-- Fundador: Fabrizzio Zelada Uriarte
-- Web: https://zeniapartners.com
-- Contacto: fabrizzio.zelada@zeniapartners.com
-- LinkedIn: https://www.linkedin.com/company/zenia-partners/
-- Instagram: https://www.instagram.com/zeniapartners
+## Casos reales (con cifras medidas)
+- [Global Watch Buyers](https://zeniapartners.com/es/caso-global-watch-buyers.html): motor de
+  captación de vendedores de relojes de lujo: 831 conversaciones de WhatsApp desde 33 países
+  (jul-oct 2026), más de 2.900 páginas en 13 idiomas.
+- [Throwin' Salt](https://zeniapartners.com/es/caso-throwin-salt-gaia.html): agente de IA en
+  WhatsApp que publica relojes de lujo en eBay: 54 en cuatro semanas, hasta 23 en un día.
+- [Despacho de abogados boutique](https://zeniapartners.com/es/caso-despacho-boutique.html):
+  respuesta en menos de 1 minuto, 24/7, en todos los husos horarios de Latinoamérica.
+- [Croian & Hein](https://zeniapartners.com/es/caso-croian-hein.html): casa privada de vinos
+  raros en Suiza, en vivo en menos de 72 horas, más de 430 páginas.
+- [Cicero](https://zeniapartners.com/es/caso-cicero.html): entrada en España e Italia de una
+  plataforma de asuntos públicos con IA.
 
 ## Páginas principales
-- [Inicio](https://zeniapartners.com/es/): qué hace Zenia y cómo trabaja.
-- [Sobre Zenia](https://zeniapartners.com/about.html): equipo y enfoque.
-- [Casos](https://zeniapartners.com/cases/): índice de casos reales (EN) · [en español](https://zeniapartners.com/es/casos.html).
-- [Croian & Hein](https://zeniapartners.com/cases/croian-hein-private-cellar-switzerland.html): lanzamiento de una casa privada de vinos raros en Suiza (marca, web, SEO por añada, visibilidad en IA, kit de venta).
-- [Global Watch Buyers](https://zeniapartners.com/cases/global-watch-buyers-ai-acquisition.html): motor de captación de vendedores de relojes de lujo en 33 países (páginas por marca y ciudad en 13 idiomas, WhatsApp con cualificación, panel de leads, Google Ads, visibilidad en IA, GWB Network), con vídeos · [en español](https://zeniapartners.com/es/caso-global-watch-buyers.html).
-- [Throwin' Salt](https://zeniapartners.com/cases/throwin-salt-gaia-ebay-whatsapp.html): fase 1 de Gaia, agente de IA en WhatsApp que publica relojes de lujo en eBay (54 en cuatro semanas, fotos revisadas con visión artificial, lote diario) · [en español](https://zeniapartners.com/es/caso-throwin-salt-gaia.html).
-- [Cicero](https://zeniapartners.com/cases/cicero-public-affairs-spain-italy.html): entrada al mercado de España e Italia para una plataforma de asuntos públicos con IA.
-- [Blog](https://zeniapartners.com/blog/): guías por sector sobre agentes de IA y automatización de WhatsApp.
-- [Cobertura](https://zeniapartners.com/es/cobertura.html): sectores y ciudades donde opera.
+- [Inicio (español)](https://zeniapartners.com/es/) · [Home (English)](https://zeniapartners.com/)
+- [Sobre Zenia Partners](https://zeniapartners.com/es/sobre-zenia.html) · [About](https://zeniapartners.com/about.html)
+- [Casos](https://zeniapartners.com/es/casos.html) · [Case studies](https://zeniapartners.com/cases/)
+- [Cobertura por sector y ciudad](https://zeniapartners.com/es/cobertura.html)
+- [Blog](https://zeniapartners.com/blog/)
 
 ## Guías por sector
-- [Restaurantes](https://zeniapartners.com/es/crm-restaurantes.html)
-- [Clínicas](https://zeniapartners.com/es/crm-clinicas.html)
-- [Gimnasios](https://zeniapartners.com/es/crm-gimnasios.html)
-- [Salones de belleza](https://zeniapartners.com/es/crm-salones-belleza.html)
-- [Abogados](https://zeniapartners.com/es/crm-abogados.html)
-- [Veterinarias](https://zeniapartners.com/es/crm-veterinarias-madrid.html)
-- [Automatizar WhatsApp](https://zeniapartners.com/es/automatizacion-whatsapp-negocios.html)
-- [Precios de CRM](https://zeniapartners.com/blog/cuanto-cuesta-un-crm-para-pymes.html)
+- [Clínicas](https://zeniapartners.com/es/crm-clinicas.html) · [Consultas médicas](https://zeniapartners.com/es/crm-medicos.html) · [Restaurantes](https://zeniapartners.com/es/crm-restaurantes.html) · [Gimnasios](https://zeniapartners.com/es/crm-gimnasios.html)
+- [Salones de belleza](https://zeniapartners.com/es/crm-salones-belleza.html) · [Abogados](https://zeniapartners.com/es/crm-abogados.html) · [Inmobiliarias](https://zeniapartners.com/es/crm-inmobiliarias.html) · [Academias](https://zeniapartners.com/es/crm-academias.html)
+- [Automatizar WhatsApp en un negocio](https://zeniapartners.com/es/automatizacion-whatsapp-negocios.html)
+- [Cuánto cuesta un CRM para pymes](https://zeniapartners.com/blog/cuanto-cuesta-un-crm-para-pymes.html)
+
+## English summary
+Zenia Partners is a Madrid-based AI agency that builds custom CRMs and WhatsApp AI agents for
+small and mid-sized businesses in Spain and Latin America. Published pricing: Starter €297/month,
+Growth €497/month, Enterprise from €897/month, one-off setup €997. Typical rollout: about five
+weeks. Contact: https://wa.me/34677612799 or fabrizzio.zelada@zeniapartners.com.

@@ -126,7 +126,9 @@ h2, .section-title { font-size: clamp(2rem, 3.4vw, 3rem) !important; line-height
 .faq-item[open] > summary.faq-q::after { transform: rotate(45deg); }
 .faq-item > .faq-a { margin: 0 !important; padding: 0 24px 22px; color: var(--zx-soft) !important; }
 .faq-item:not(details) { padding: 22px 24px !important; }
+.related-links { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0; }
 .related-link {
+  display: inline-flex; align-items: center; min-height: 40px; padding: 8px 16px; border: 1px solid var(--zx-line); text-decoration: none;
   border-radius: 2px !important; border-color: var(--zx-line) !important; background: transparent !important;
   color: var(--zx-soft) !important; font-size: 0.9375rem !important;
 }

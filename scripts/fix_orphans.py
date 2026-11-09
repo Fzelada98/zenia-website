@@ -15,7 +15,8 @@ REPO = Path(__file__).resolve().parent.parent
 ES_DIR = REPO / "es"
 EN_DIR = REPO / "en"
 EXCLUDES = {"node_modules", ".git", "reports", "_audit_", "backend",
-            "snippets", "demo", "agents", "ts-beta", "ts-preview", "lead-magnets"}
+            "snippets", "demo", "agents", "ts-beta", "ts-preview", "lead-magnets",
+            "posts", "zt"}  # posts/ = fuentes de imágenes (IG, recibos de ejemplo): nunca en el hub
 
 INTERNAL_HREF_RE = re.compile(r'href=["\'](/[^"\'#?]+\.html)["\']', re.IGNORECASE)
 TITLE_RE = re.compile(r'<title>(.*?)</title>', re.DOTALL)
@@ -25,6 +26,8 @@ def get_pages():
     files = []
     for path in REPO.rglob("*.html"):
         rel = path.relative_to(REPO)
+        if rel.name.startswith("google") or rel.name == "og-preview.html":
+            continue
         if any(part in EXCLUDES or part.startswith(".") for part in rel.parts):
             continue
         files.append(path)

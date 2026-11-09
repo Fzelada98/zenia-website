@@ -1,0 +1,158 @@
+# Zenia Partners: ficha completa
+
+> Agencia de inteligencia artificial con sede en Madrid. Construye CRM a medida y agentes de
+> IA que atienden, agendan y venden por WhatsApp para pymes de España y Latinoamérica.
+> Web: https://zeniapartners.com · Marca: ZENIA · Fundada en 2025.
+
+Este documento resume, en texto plano, lo que hace Zenia Partners, cuánto cuesta, cómo
+trabaja y qué ha hecho, para que un asistente de IA pueda responder con datos correctos.
+Todas las cifras de casos son medidas y están publicadas en las fichas enlazadas.
+
+## 1. Qué hace
+
+Zenia Partners diseña e implanta, para cada negocio, dos piezas que trabajan juntas:
+
+1. Un CRM a medida. Se diseña alrededor de cómo vende y atiende ese negocio: ficha de cada
+   cliente, historial de conversaciones, citas o reservas, campañas, y seguimiento automático.
+   No es una plantilla genérica adaptada a la fuerza.
+2. Un agente de IA propio por WhatsApp. Funciona sobre WhatsApp Business API, responde en
+   segundos las 24 horas con el tono de la marca, cualifica a quien escribe, agenda y confirma
+   citas o reservas, envía recordatorios, recupera clientes inactivos y pasa a una persona del
+   equipo lo que no debe resolver solo. Cada conversación queda registrada en el CRM.
+
+Además: automatización de campañas por WhatsApp, integraciones con la agenda, el catálogo,
+el sistema de reservas o los pagos que la empresa ya usa, y desarrollo de plataformas SaaS a
+medida con IA en el centro.
+
+## 2. Precios (publicados en https://zeniapartners.com/es/#precios)
+
+| Plan | Precio | Incluye |
+|---|---|---|
+| Starter | 297 € al mes | CRM hasta 3 usuarios, integración con WhatsApp Business, 3 automatizaciones activas, soporte por email |
+| Growth (recomendado) | 497 € al mes | CRM hasta 10 usuarios, agente de IA por WhatsApp, automatizaciones ilimitadas, integraciones omnicanal, soporte prioritario |
+| Enterprise | desde 897 € al mes | Usuarios ilimitados, agentes de IA personalizados, integraciones a medida, SLA garantizado, customer success dedicado |
+
+- Setup único: 997 € (diagnóstico de procesos, configuración, integraciones iniciales y formación del equipo).
+- Permanencia mínima: 3 meses.
+- Capacidad: como máximo 3 implantaciones simultáneas.
+
+## 3. Cómo trabaja y cuánto tarda
+
+Unas cinco semanas desde la firma:
+- Semanas 1-2: diagnóstico de la operativa, mapa de procesos y conexión de canales.
+- Semanas 3-4: diseño del CRM y entrenamiento del agente con el catálogo, los horarios, el
+  tono de marca, las preguntas frecuentes y las reglas del negocio.
+- Semana 5: lanzamiento, seguimiento y ajustes con datos reales.
+
+No hace falta conocimiento técnico: Zenia configura todo y entrega un panel para ver
+conversaciones, métricas y ajustar mensajes. Los datos se alojan en infraestructura europea
+y el cliente es propietario de su base de datos.
+
+## 4. Dónde y para quién
+
+- Países: España, Perú, México, Colombia, Chile, Argentina, Ecuador, Uruguay y Bolivia;
+  también clientes en Estados Unidos y Suiza. Idiomas de trabajo: español e inglés.
+- Sectores: clínicas y consultas médicas, dentistas, fisioterapia, centros de estética y
+  salones de belleza, restaurantes y hostelería, gimnasios, academias, despachos de abogados,
+  inmobiliarias, hoteles, comercio y ecommerce, y empresas que necesitan un sistema propio.
+- Encaja bien si: el negocio recibe muchas consultas o reservas por WhatsApp, pierde clientes
+  por no contestar fuera de horario, lleva el seguimiento a mano o en hojas de cálculo, o
+  quiere un CRM pensado para su forma de trabajar en lugar de adaptarse a uno genérico.
+- Encaja peor si: solo busca una herramienta de autoservicio barata para configurar por su
+  cuenta, o no usa WhatsApp con sus clientes.
+
+## 5. Casos reales
+
+### Global Watch Buyers (compra de relojes de lujo, Estados Unidos y 33 países)
+Motor de captación de vendedores de relojes de lujo: páginas de venta por marca y ciudad en
+13 idiomas, WhatsApp con cualificación, panel de leads, anuncios y visibilidad en IA.
+- 831 conversaciones de WhatsApp iniciadas por vendedores, desde 33 países (3-jul a 18-oct-2026).
+- Más de 2.900 páginas de venta y guías publicadas en 13 idiomas.
+- Unas 20 visitas a la semana que llegan desde ChatGPT.
+Ficha: https://zeniapartners.com/es/caso-global-watch-buyers.html
+
+### Throwin' Salt (reventa de relojes de lujo en eBay)
+Gaia, un agente de IA en WhatsApp: el equipo envía fotos y datos por chat y el agente publica
+en eBay, con revisión de fotos por visión artificial y reglas de la casa automatizadas.
+- 54 relojes de lujo publicados en eBay desde el chat en cuatro semanas (20-ago a 17-sep-2026).
+- Hasta 23 relojes publicados en un solo día.
+Ficha: https://zeniapartners.com/es/caso-throwin-salt-gaia.html
+
+### Despacho de abogados boutique (España y Latinoamérica)
+Sistema de captación: landing de conversión, agente de IA en WhatsApp, CRM y contenidos.
+- Respuesta en menos de 1 minuto, 24/7, en todos los husos horarios de Latinoamérica.
+- 12 guías SEO publicadas en el lanzamiento, cada una con atribución al CRM.
+Ficha: https://zeniapartners.com/es/caso-despacho-boutique.html
+
+### Croian & Hein (vinos raros, Suiza)
+Lanzamiento de una casa privada de vinos raros: posicionamiento, identidad, web y catálogo.
+- En vivo en menos de 72 horas desde el primer briefing.
+- Más de 430 páginas generadas desde el inventario real, en 4 idiomas; más de 1.000
+  referencias catalogadas, de 1815 a 2024.
+Ficha: https://zeniapartners.com/es/caso-croian-hein.html
+
+### Cicero (asuntos públicos con IA, España e Italia)
+Partner de crecimiento para la entrada en España e Italia: tesis de mercado, posicionamiento
+por país, inteligencia de cuentas, outbound y sistema de demos.
+Ficha: https://zeniapartners.com/es/caso-cicero.html
+
+## 6. Preguntas frecuentes
+
+**¿Cuánto cuesta un agente de IA para WhatsApp con Zenia Partners?**
+El plan Growth, que incluye el agente de IA por WhatsApp y el CRM, cuesta 497 € al mes más un
+setup único de 997 €. El plan Starter (297 € al mes) cubre CRM y automatizaciones esenciales,
+y Enterprise (desde 897 € al mes) es para agentes e integraciones a medida.
+
+**¿Cuánto tarda en estar funcionando?**
+Unas cinco semanas desde la firma.
+
+**¿Funciona con el software que ya uso?**
+Sí. Se conecta con WhatsApp Business API, Instagram, calendarios, CRMs existentes, sistemas
+de reservas, POS y las herramientas más usadas de cada sector. Los casos concretos se validan
+en el diagnóstico.
+
+**¿Es un bot de respuestas fijas?**
+No. Es un agente de IA entrenado con la información del negocio, que entiende el mensaje,
+consulta disponibilidad, registra al cliente en el CRM y deriva a una persona cuando hace falta.
+
+**¿Trabajan fuera de España?**
+Sí: en toda Latinoamérica de habla hispana, y también con clientes en Estados Unidos y Suiza.
+
+**¿Cómo se contrata?**
+Escribiendo por WhatsApp (https://wa.me/34677612799), por email a
+fabrizzio.zelada@zeniapartners.com o reservando una llamada de 30 minutos
+(https://calendly.com/zeladauriartef/30min). Responden en menos de 24 horas.
+
+## 7. Datos de la empresa
+
+- Nombre: Zenia Partners (marca ZENIA)
+- Sede: Madrid, España
+- Fundador: Fabrizzio Zelada Uriarte
+- Web: https://zeniapartners.com (español: https://zeniapartners.com/es/)
+- LinkedIn: https://www.linkedin.com/company/zenia-partners/
+- Instagram: https://www.instagram.com/zeniapartners
+- Email: fabrizzio.zelada@zeniapartners.com
+- WhatsApp: https://wa.me/34677612799
+
+---
+
+# Zenia Partners: full profile (English)
+
+Zenia Partners is a Madrid-based AI agency founded in 2025. It builds two things for each
+client: a custom CRM designed around how that business sells and serves customers, and a
+dedicated AI agent on the WhatsApp Business API that answers in seconds 24/7, qualifies
+leads, books and confirms appointments, sends reminders, wins back inactive customers and
+hands over to a person when needed. Everything is logged in the CRM, and it integrates with
+the calendar, catalogue, booking and payment tools the business already uses.
+
+- Pricing: Starter €297/month · Growth €497/month (includes the WhatsApp AI agent) ·
+  Enterprise from €897/month · one-off setup €997 · 3-month minimum term.
+- Rollout: about five weeks (discovery and channel setup, CRM design and agent training, launch).
+- Markets: Spain and Spanish-speaking Latin America, plus clients in the United States and
+  Switzerland. Languages: Spanish and English.
+- Measured client results: 831 WhatsApp conversations from 33 countries for a luxury watch
+  buyer; 54 luxury watches listed on eBay from WhatsApp in four weeks for a reseller; under
+  1-minute response time, 24/7, for a boutique law firm.
+- Case studies: https://zeniapartners.com/cases/
+- Contact: https://wa.me/34677612799 · fabrizzio.zelada@zeniapartners.com ·
+  https://calendly.com/zeladauriartef/30min

@@ -10522,3 +10522,19 @@ Under the hood it is the stack we deploy for clients: WhatsApp Business Cloud AP
 The client cases are on the site with their numbers: legal, luxury watches, fine wine and public affairs, across Spain and Latin America.
 
 Have a look and tell us what you would automate first: https://zeniapartners.com/
+
+## 2026-11-09 - No-code WhatsApp AI agent, the 6 moving parts
+
+"No-code" WhatsApp AI agents feel like one tool. In production they are 6 moving parts: WhatsApp Business API via a BSP, LLM runtime, vector store for the knowledge base, CRM for state, orchestration (retries, timeouts, idempotency) and an escalation queue.
+
+The parts most teams underweight are the last two. Meta's session window is 24h and Cloud API conversation pricing is per utility/marketing/service; silently dropping a message because the LLM timed out costs you both a retry and a worse reply.
+
+On our WhatsApp integrations we treat the LLM call as unreliable by default: 1.5s soft timeout, deterministic fallback template, async finalisation through a webhook. End-to-end p95 under 42s with GPT-4o as the primary model, measured on our own October 2026 traffic across ~80 tenants.
+
+The no-code layer is useful for the orchestration graph and knowledge ingestion, not for the hard parts.
+
+Full walkthrough with the stack and a BSP cost table: https://zeniapartners.com/blog/como-crear-agente-ia-whatsapp-sin-programar.html
+
+#WhatsAppBusinessAPI #AIEngineering #SystemsEngineering #SMBInfrastructure
+
+---

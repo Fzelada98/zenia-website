@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-11-08T22:00:00+00:00",
+  "lastRun": "2026-11-09T06:16:59+00:00",
   "posts": [
     {
       "slug": "marketing-salon-de-unas-redes-sociales",
@@ -4853,6 +4853,15 @@
       "cluster": "belleza-city",
       "status": "published",
       "date": "2026-11-05"
+    },
+    {
+      "slug": "como-crear-agente-ia-whatsapp-sin-programar",
+      "keyword": "como crear un agente de IA para WhatsApp sin programar",
+      "tier": 1,
+      "cluster": "whatsapp-ai-platform",
+      "status": "published",
+      "date": "2026-11-09",
+      "source": "matrix-expansion"
     }
   ]
 }

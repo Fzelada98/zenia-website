@@ -10509,3 +10509,16 @@ Full write-up with the per-week content cadence the agent is paired with: https:
 
 #AIAgents #WhatsAppBusinessAPI #SystemsEngineering #Attribution
 
+## 2026-11-09 - Anuncio: nueva web de Zenia
+
+<!-- PUBLISHED:make-webhook at 2026-11-09T02:00:00Z | urn:li:activity:7525376747098394624 | publicado a mano (anuncio del rediseño) -->
+
+We rebuilt zeniapartners.com. The homepage is now the product running live, not a description of it.
+
+Open it and you watch a WhatsApp AI agent handle a customer late at night, after closing, while the custom CRM beside it logs the conversation, the booking and the follow-up as they happen. Switch between a restaurant, a clinic and a gym, and click through bookings, clients, campaigns and the agent's own settings.
+
+Under the hood it is the stack we deploy for clients: WhatsApp Business Cloud API as transport, a stateful agent with function-calling into the business's own systems (calendar, catalogue, payments), and a CRM shaped around how that team actually sells instead of a template bent to fit.
+
+The client cases are on the site with their numbers: legal, luxury watches, fine wine and public affairs, across Spain and Latin America.
+
+Have a look and tell us what you would automate first: https://zeniapartners.com/

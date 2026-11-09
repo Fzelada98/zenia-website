@@ -90,12 +90,15 @@ function main() {
       .filter(f => f.endsWith('.html') && f !== 'index.html' && f !== path.basename(newFile))
       .map(f => path.join(BLOG_DIR, f));
 
+    // Solo artículos del mismo idioma: un lector en español no quiere un enlace a un post en inglés
+    const langOf = h => ((h.match(/<html[^>]*\blang="([a-zA-Z]+)/) || [])[1] || 'es').toLowerCase().slice(0, 2);
+    const newLang = langOf(newHtml);
     const candidates = [];
     for (const file of existingFiles) {
       try {
         const html = fs.readFileSync(file, 'utf-8');
         const fileCluster = detectCluster(path.basename(file, '.html'), html);
-        if (fileCluster === cluster) {
+        if (fileCluster === cluster && langOf(html) === newLang) {
           candidates.push({ file, html });
         }
       } catch (e) { /* skip */ }

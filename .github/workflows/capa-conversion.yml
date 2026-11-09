@@ -1,0 +1,61 @@
+name: Capa de conversión (landings y blog)
+
+# Aplica scripts/capa-conversion/aplicar.py a las páginas nuevas o regeneradas: marca de la
+# portada, tarjeta de WhatsApp en los artículos, barra fija, casos y planes en las landings.
+# Es idempotente: si no hay nada que cambiar, no hace commit. Complementa al guard local de
+# SEO (que corre en el Mac) para que los artículos nuevos tengan la capa aunque el Mac esté
+# apagado. Los pushes hechos con GITHUB_TOKEN no disparan otros workflows (sin bucles).
+
+on:
+  push:
+    branches: [main]
+    paths: ['blog/**', 'es/**', 'en/**', 'scripts/capa-conversion/**']
+  workflow_run:
+    workflows: ['Zenia SEO Boost — Indexing + Internal Linking', 'Auto-merge sandbox PRs (safety net)']
+    types: [completed]
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: capa-conversion
+  cancel-in-progress: false
+
+jobs:
+  aplicar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Aplicar la capa
+        run: python3 scripts/capa-conversion/aplicar.py .
+
+      - name: Commit y push si hay cambios
+        run: |
+          git config user.name "Zenia capa de conversión"
+          git config user.email "reports@zeniapartners.com"
+          if [[ -z $(git status --porcelain blog es en assets) ]]; then
+            echo "Nada que cambiar"
+            exit 0
+          fi
+          git add blog es en assets/zx-base.css assets/zx-landing.css assets/zx-blog.css assets/zx.js
+          git commit -m "capa de conversión: páginas nuevas o regeneradas"
+          for i in 1 2 3; do
+            if git push origin HEAD:main; then echo "push ok"; exit 0; fi
+            git pull --rebase origin main || true
+            python3 scripts/capa-conversion/aplicar.py . >/dev/null
+            git add blog es en assets/zx-*.css assets/zx.js
+            git diff --cached --quiet || git commit -m "capa de conversión: reaplicada tras rebase"
+            sleep 3
+          done
+          exit 1

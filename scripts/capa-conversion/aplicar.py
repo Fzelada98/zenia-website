@@ -32,7 +32,7 @@ import re
 import sys
 import urllib.parse
 
-VERSION = '2'
+VERSION = '3'
 WA_NUM = '34677612799'
 CAL = 'https://calendly.com/zeladauriartef/30min'
 DIR = os.path.dirname(os.path.abspath(__file__))
@@ -309,6 +309,8 @@ def cabecera(tipo, hoja, neg, wa_url):
 # ---------------------------------------------------------------- tipos de página
 def tipo_de(ruta, h):
     base = os.path.basename(ruta)
+    if ruta == 'blog/index.html':
+        return 'indice'
     if ruta.startswith('blog/'):
         lang = re.search(r'<html[^>]*\blang="([a-zA-Z]+)', h)
         if base == 'index.html' or (lang and lang.group(1).lower()[:2] not in ('es', 'en')):
@@ -343,6 +345,11 @@ def aplicar(ruta, h, idiomas=None):
     if tipo == 'blog':
         h = aplicar_blog(ruta, h, en, h1, idiomas or {})
         return h
+    if tipo == 'indice':
+        # índice del blog: solo un arreglo de móvil (las tarjetas ensanchaban la página 23 px)
+        fix = ('<style>.blog-list{grid-template-columns:minmax(0,1fr)}'
+               '.blog-card,.blog-card h2,.blog-card p{overflow-wrap:anywhere}</style>\n')
+        return h.replace('</head>', bloque('fix', fix) + '</head>', 1)
 
     # ---- landings
     pagina = re.split(r'\s*[|]\s*', h1)[0].rstrip('.')[:90] or 'Zenia'
@@ -428,6 +435,11 @@ def aplicar(ruta, h, idiomas=None):
 def aplicar_blog(ruta, h, en, h1, idiomas):
     slug = os.path.basename(ruta)
     tema = re.split(r'[:|]', h1)[0].strip()[:80] or ('this topic' if en else 'este tema')
+    if en:
+        # algunos posts en inglés traían el mensaje de WhatsApp en español (lo puso el guard):
+        # se reescribe en inglés en todos sus enlaces, botón flotante incluido
+        msg_en = wa(f'Hi, I read your article "{tema}" and I\'d like to see how this would work for my business')
+        h = re.sub(r'href="https://wa\.me/' + WA_NUM + r'\?text=Hola[^"]*"', lambda _: f'href="{esc(msg_en)}"', h)
     m = re.search(r'class="blog-cta".*?href="(https://wa\.me/[^"]+)"', h, re.S)
     wa_url = hm.unescape(m.group(1)) if m else (primer_wa(h) or wa(
         f'Hi, I read your article "{tema}" and I\'d like to see how this would work for my business' if en

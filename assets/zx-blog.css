@@ -234,6 +234,11 @@ body { background: var(--zx-bg) !important; color: var(--zx-ink); font-family: v
 .blog-content blockquote { border-left: 2px solid var(--zx-accent) !important; color: var(--zx-soft) !important; }
 .blog-content th { background: var(--zx-bg2) !important; color: var(--zx-ink) !important; }
 .blog-content th, .blog-content td { border-bottom-color: var(--zx-line) !important; }
+.blog-content { overflow-wrap: break-word; }
+.blog-content code { overflow-wrap: anywhere; word-break: break-word; }
+.blog-content pre { max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.blog-content pre code { overflow-wrap: normal; word-break: normal; white-space: pre; }
+.blog-content img, .blog-content video, .blog-content iframe { max-width: 100%; height: auto; }
 .blog-content .pillar-callout {
   padding: 18px 20px; border: 1px solid var(--zx-line); border-radius: 12px; background: rgba(17, 26, 44, 0.6); font-size: 1rem;
 }

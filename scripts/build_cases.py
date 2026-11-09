@@ -106,7 +106,7 @@ h1,h2,h3{font-family:'Space Grotesk','Inter',sans-serif;font-weight:700;letter-s
 .qs{display:flex;flex-wrap:wrap;gap:10px;margin:8px 0 24px}
 .qs span{font-family:'SFMono-Regular',ui-monospace,Menlo,monospace;font-size:14px;padding:9px 16px;border-radius:999px;border:1px solid var(--line);color:var(--ink)}
 .qs span:before{content:'⌕ ';color:var(--a1)}
-.dl{font-size:1rem;line-height:2.1;color:var(--ink2)}.dl span:after{content:'/';color:var(--mute);margin:0 14px;opacity:.6}.dl span:last-child:after{content:''}
+.dl{font-size:1rem;line-height:2.1;color:var(--ink2);overflow-wrap:anywhere;overflow:hidden}.dl span:after{content:'/';color:var(--mute);margin:0 14px;opacity:.6}.dl span:last-child:after{content:''}
 .cta{text-align:center;padding:170px 0 120px;position:relative;overflow:hidden}
 .cta:before{content:'';position:absolute;top:30%;left:50%;width:900px;height:600px;transform:translateX(-50%);background:radial-gradient(closest-side,var(--glow),transparent);pointer-events:none}
 .cta h2{font-size:clamp(2.2rem,5vw,4rem);max-width:18ch;margin:0 auto 24px;position:relative}

@@ -424,8 +424,10 @@ h2, .section-title { font-size: clamp(2rem, 3.4vw, 3rem) !important; line-height
   .zx-plan-for { min-height: 0; }
   .zx-plan-price { font-size: 2.5rem; }
 }
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1100px) {
   .zx-planes-grid { gap: 14px; }
-  .zx-plan { padding: 28px 22px 24px; }
+  .zx-plan { padding: 28px 20px 24px; }
+  .zx-plan .zx-btn, .zx-mid .zx-btn { padding: 0 12px; font-size: 12px; letter-spacing: 0.08em; white-space: nowrap; }
   .zx-mid-in { padding: 40px 36px; gap: 32px; }
+  .zx-proof a { padding: 24px 22px; }
 }

@@ -6,6 +6,7 @@ Generate programmatic landings for the AI bookkeeping vertical.
 Each landing leverages the published case study at /cases/whatsapp-bookkeeping-importer.html
 Generates ~30 landings + appends to sitemap.xml.
 """
+import json
 import os
 import re
 
@@ -74,7 +75,7 @@ def en_template(city_slug, city_name, related):
     ]
 
     faq_jsonld_items = ", ".join(
-        f'{{"@type": "Question", "name": {repr(q)}, "acceptedAnswer": {{"@type": "Answer", "text": {repr(a)}}}}}'
+        f'{{"@type": "Question", "name": {json.dumps(q, ensure_ascii=False)}, "acceptedAnswer": {{"@type": "Answer", "text": {json.dumps(a, ensure_ascii=False)}}}}}'
         for q, a in faq_items
     )
 
@@ -297,7 +298,7 @@ def es_template(city_slug, city_name, related):
     ]
 
     faq_jsonld_items = ", ".join(
-        f'{{"@type": "Question", "name": {repr(q)}, "acceptedAnswer": {{"@type": "Answer", "text": {repr(a)}}}}}'
+        f'{{"@type": "Question", "name": {json.dumps(q, ensure_ascii=False)}, "acceptedAnswer": {{"@type": "Answer", "text": {json.dumps(a, ensure_ascii=False)}}}}}'
         for q, a in faq_items
     )
 

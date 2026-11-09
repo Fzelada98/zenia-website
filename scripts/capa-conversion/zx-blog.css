@@ -63,6 +63,11 @@ body { background: var(--zx-bg) !important; color: var(--zx-ink); font-family: v
 .blog-content pre { max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .blog-content pre code { overflow-wrap: normal; word-break: normal; white-space: pre; }
 .blog-content img, .blog-content video, .blog-content iframe { max-width: 100%; height: auto; }
+[data-zenia-consolidacion] {
+  background: rgba(17, 26, 44, 0.6) !important; border: 1px solid var(--zx-line) !important; border-left: 2px solid var(--zx-accent) !important;
+  border-radius: 0 12px 12px 0 !important; padding: 16px 20px !important; color: var(--zx-soft) !important; font-size: 1rem; line-height: 1.6;
+}
+[data-zenia-consolidacion] a { color: var(--zx-light) !important; text-underline-offset: 3px; }
 .blog-content .pillar-callout {
   padding: 18px 20px; border: 1px solid var(--zx-line); border-radius: 12px; background: rgba(17, 26, 44, 0.6); font-size: 1rem;
 }

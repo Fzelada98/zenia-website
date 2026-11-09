@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-11-09T09:11Z",
+  "lastRun": "2026-11-09T17:12Z",
   "market": "US/UK small business",
   "posts": [
     {
@@ -1017,7 +1017,8 @@
       "keyword": "ai agent for gastroenterology clinics",
       "tier": 3,
       "cluster": "healthcare",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-11-09"
     },
     {
       "slug": "ai-agent-for-ent-clinics",

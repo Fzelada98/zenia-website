@@ -10569,3 +10569,23 @@ Full breakdown with the comparison table (manual vs rigid bot vs personalized AI
 #WhatsAppBusinessAPI #AIAgents #RealEstateTech #SystemsEngineering
 
 ---
+
+## 2026-11-09 — EN — AI Agent for Gastroenterology Clinics
+
+**Target: Zenia Partners company page — technical/B2B audience (CTOs, engineers, tech founders, health-IT leads)**
+
+Built an AI agent for a 4-physician GI practice on gGastro + Provation. Same-day colonoscopy cancellations dropped from 21% to 9% over 90 days.
+
+Stack: Meta WhatsApp Cloud API through a HIPAA Business Solution Provider (BAA-covered), Twilio voice with HIPAA BAA, FHIR R4 feed into gGastro for schedule/demographics/med reconciliation, HL7 result messages out of Provation for pathology routing and recall, and 270/271 eligibility at scheduling against Availity.
+
+Two numbers that mattered to the architecture:
+- Referral-to-first-contact p50: 61h → 11 min (fax OCR + FHIR patient match + outbound template)
+- Standby slot re-fill on same-day cancellation: 22% → 71% (20-minute WhatsApp response window, serial fan-out)
+
+Prep flow runs a 14/7/3/1-day cadence with scripted templates and a nurse-approval inbox for anything off-script. First 5 days of the pilot the nurse-approval rate climbed 60% → 95%, at which point the scripted branches went autonomous.
+
+https://zeniapartners.com/blog/ai-agent-for-gastroenterology-clinics.html
+
+#HealthIT #FHIR #WhatsAppBusinessAPI #AIAgents #HIPAA
+
+---

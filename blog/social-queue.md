@@ -10538,3 +10538,19 @@ Full walkthrough with the stack and a BSP cost table: https://zeniapartners.com/
 #WhatsAppBusinessAPI #AIEngineering #SystemsEngineering #SMBInfrastructure
 
 ---
+
+## 2026-11-09 - AI receptionist for videographers: the state machine that survives a shoot day
+
+Wedding and corporate video is where "AI receptionist" stops being a prompt-engineering problem and becomes a state machine problem. The inbox is not the bottleneck. The bottleneck is a 7 to 21 day decision window where the lead expects coherent context across WhatsApp, Instagram DM and email, and a quote that reflects a real edit backlog.
+
+Stack we are running in production for a 2-shooter studio: WhatsApp Business API via BSP, Twilio voice trunk, agent with tool calls into Dubsado (read_calendar, read_edit_queue, create_project, send_retainer_link), unified conversation key on E.164 phone with fallback to Instagram handle, Vimeo unlisted samples tagged by venue and style surfaced via vector match on the inbound message.
+
+Two constraints that drive the design. First, quote honesty: the agent reads a live edit_backlog_weeks field and refuses to promise a delivery sooner than backlog + 2 weeks, because a signed retainer with a broken timeline becomes a one-star review. Second, add-on eligibility is rule-based, not freeform: FAA Part 107 airspace class, music licensing tier, usage rights for commercial scope, each gated before the agent quotes a number.
+
+Numbers from a 90-day pilot (Nashville, 28 weddings + 62 corporate days per year): median first-reply 14h 40m to 49s, inquiry-to-booking 16 to 31 percent, discovery-call 27 to 48 percent. p95 agent latency 1.4s to first token.
+
+Full breakdown with the stack table and the 9 inquiry-type matrix: https://zeniapartners.com/blog/ai-receptionist-for-videographers.html
+
+#AIAgents #WhatsAppBusinessAPI #SystemsEngineering #StateMachines
+
+---

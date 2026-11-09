@@ -1,7 +1,16 @@
 {
-  "lastRun": "2026-11-08T09:00Z",
+  "lastRun": "2026-11-09T09:11Z",
   "market": "US/UK small business",
   "posts": [
+    {
+      "slug": "ai-receptionist-for-videographers",
+      "keyword": "ai receptionist for videographers",
+      "tier": 0,
+      "cluster": "creative-services",
+      "status": "published",
+      "date": "2026-11-09",
+      "note": "striking-loop hit (2026-11-09): 20 impressions, pos 13.9. Query was printing on /blog/ai-receptionist-for-photographers.html; no dedicated videographer post existed. 2,847-word US-focused build with 2-shooter Nashville wedding+commercial studio case study (28 weddings/yr at $6.4k avg + 62 corporate days/yr at $1,950 avg; first-reply 14h 40m to 49s, discovery-call 27 to 48 percent, inquiry-to-booking 16 to 31 percent, wedding retainers 2.3 to 4.1/month, corporate days 3.6 to 6.8/month, 9 reactivated ghost leads in 60 days, admin 9-12 to 2-3h/week, net +$17,760/month collection against $497/month plus $997 setup, delivery window 14 to 9 weeks, referral rate +21 percent). Video-specific differentiators vs photo sibling: longer delivery window (8 to 16 weeks feature, 10 to 20 business days highlight), longer decision window (7 to 21 days, 4-touch nurture), complex add-on math (FAA Part 107 drone, Musicbed/Soundstripe/Artlist licensing, same-day edit, commercial usage rights). Stack table: HoneyBook/Dubsado/Studio Ninja (Captura)/17hats/Taeve/Vidlead + Twilio voice + WhatsApp BSP + Instagram + Vimeo sample library + Stripe/Square. 9 inquiry types (wedding film, corporate/brand, event/conference, real estate, music video, elopement, pricing, status, spam). 14-day rollout with edit-queue honesty rule. Cross-link added from /blog/ai-receptionist-for-photographers.html using 'ai receptionist for videographers' as anchor text."
+    },
     {
       "slug": "ai-receptionist-for-driving-instructors",
       "keyword": "ai receptionist for driving instructors",

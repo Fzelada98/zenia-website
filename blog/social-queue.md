@@ -10554,3 +10554,18 @@ Full breakdown with the stack table and the 9 inquiry-type matrix: https://zenia
 #AIAgents #WhatsAppBusinessAPI #SystemsEngineering #StateMachines
 
 ---
+## 2026-11-09 - Qualifying real estate leads on WhatsApp: the BANT state machine that wins the 5-minute window
+
+Real estate lead qualification on WhatsApp is not an LLM problem, it is a routing problem. The sector median first-reply time is ~15 hours (HousingWire), and a Pinova study of 10,000 leads showed sub-5-minute contact converts to live conversation ~4x higher than >30-minute contact. That window is where everything else breaks.
+
+Stack running for a mid-size Spanish agency: WhatsApp Business API via a Meta-approved BSP, agent with tool calls into Inmovilla and HubSpot (search_stock, read_calendar, tag_lead, schedule_visit), event-driven ingest from Idealista and Fotocasa portals via webhook, BANT distributed across 4-6 turns instead of a single form drop.
+
+Two design calls worth naming. First, BANT is enforced server-side, not inside the prompt: budget + timeline + authority + need each have a typed slot, and the agent cannot mark a lead as A unless all four are filled and inside configured ranges, which keeps hallucinated qualifications out of the CRM. Second, out-of-24h-window re-engagement uses Meta-approved template categories (utility vs marketing) picked by lead tier, because mis-categorizing a marketing message as utility is what gets a number quality-rated down.
+
+p95 agent-to-reply latency 1.1s, BANT completion 68 percent inside 90s, cost per qualified lead ~0.04 EUR (Meta conversation fees) + flat platform.
+
+Full breakdown with the comparison table (manual vs rigid bot vs personalized AI agent) and the 5 implementation errors: https://zeniapartners.com/blog/cualificar-leads-inmobiliaria-whatsapp.html
+
+#WhatsAppBusinessAPI #AIAgents #RealEstateTech #SystemsEngineering
+
+---

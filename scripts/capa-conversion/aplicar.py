@@ -32,7 +32,7 @@ import re
 import sys
 import urllib.parse
 
-VERSION = '1'
+VERSION = '2'
 WA_NUM = '34677612799'
 CAL = 'https://calendly.com/zeladauriartef/30min'
 DIR = os.path.dirname(os.path.abspath(__file__))

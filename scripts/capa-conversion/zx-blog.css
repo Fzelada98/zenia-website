@@ -53,6 +53,8 @@ body { background: var(--zx-bg) !important; color: var(--zx-ink); font-family: v
 .blog-content p:not([class^="zx-"]), .blog-content ul, .blog-content ol { color: var(--zx-soft) !important; }
 .blog-content a { color: var(--zx-light) !important; text-underline-offset: 3px; text-decoration-color: rgba(141, 179, 255, 0.45) !important; }
 .blog-content a:hover { text-decoration-color: var(--zx-light) !important; }
+.blog-content a.zx-btn, .blog-content a.zx-btn:hover { color: #fff !important; text-decoration: none !important; }
+.blog-content .zx-cta-stats a { color: inherit !important; text-decoration: none !important; }
 .blog-content blockquote { border-left: 2px solid var(--zx-accent) !important; color: var(--zx-soft) !important; }
 .blog-content th { background: var(--zx-bg2) !important; color: var(--zx-ink) !important; }
 .blog-content th, .blog-content td { border-bottom-color: var(--zx-line) !important; }

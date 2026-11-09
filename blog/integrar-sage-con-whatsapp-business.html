@@ -108,7 +108,8 @@
   .text-gradient { background: linear-gradient(135deg, var(--primary), var(--accent-violet)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 </style>
 <script type="application/ld+json" data-zenia-faq="1">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "es", "mainEntity": [{"@type": "Question", "name": "¿Sage tiene un conector oficial para WhatsApp Business?", "acceptedAnswer": {"@type": "Answer", "text": "En octubre de 2026 Sage no ofrece un conector oficial propio y gratuito con WhatsApp Business API. Existen partners del Sage ISV Marketplace (como CP WhatsApp Sales para Sage 200) y rutas vía Zapier para Sage Sales Management, pero la mayoría de PYMES acaba con una integración custom construida por un BSP (Twilio, 360dialog) o por un integrador especializado como Zenia Partners."}}, {"@type": "Question", "name": "¿Puedo seguir usando mi número actual de WhatsApp?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, siempre que no esté asociado a una cuenta personal ni a la app de WhatsApp Business estándar. Si lo está, se migra el número a WhatsApp Business API con un proceso que Meta exige y que tarda entre 24 y 72 horas; durante ese tiempo el número sigue operativo salvo durante la migración final (unos minutos)."}}, {"@type": "Question", "name": "¿Qué pasa si Sage cae o la API deja de responder?", "acceptedAnswer": {"@type": "Answer", "text": "El middleware encola la petición y responde al cliente con un mensaje de \"déjanos un minuto, estamos consultándolo\" en vez de romper la conversación. Si el fallo persiste más de X segundos (configurable, por defecto 20), el caso se escala a un humano con el contexto completo. En Zenia Partners monitorizamos ambos extremos y avisamos antes de que lo note el cliente final."}}, {"@type": "Question", "name": "¿Cuánto tarda en estar operativa la integración?", "acceptedAnswer": {"@type": "Answer", "text": "Entre 4 y 6 semanas con Zenia Partners para la mayoría de PYMES españolas: 1 semana de auditoría, 2 de desarrollo del conector y plantillas, 1 de agente de IA personalizado y 1-2 de pruebas y go-live. Una integración 100% custom contratada a un integrador independiente suele estirarse a 3-6 meses."}}, {"@type": "Question", "name": "¿Cumple con RGPD y con las políticas de Meta?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, siempre que se configure correctamente: base legal declarada, opt-out visible, contrato de encargado de tratamiento con el BSP, plantillas HSM aprobadas y segmentación que respete la finalidad del consentimiento. Zenia Partners entrega plantillas y cláusulas listas en el setup; nunca enviamos marketing a quien no lo consintió."}}, {"@type": "Question", "name": "¿Qué planes ofrece Zenia Partners para esta integración?", "acceptedAnswer": {"@type": "Answer", "text": "Starter 997 € de setup + 297 €/mes (hasta 1.500 conversaciones/mes y un módulo de Sage), Growth 497 €/mes (hasta 6.000 conversaciones, dos módulos y campañas), y Enterprise a medida (volúmenes mayores, SLA, multisede). Precios en octubre de 2026, no incluyen IVA ni el consumo de mensajes de Meta."}}]}</script>
-</head>
+<!--zx:head--><meta name="zx-page" content="blog"><meta name="zx-negocio" content="tu negocio"><meta name="zx-wa" content="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20sobre%20integrar%20Sage%20con%20WhatsApp%20Business%20y%20quiero%20ver%20c%C3%B3mo%20aplicarlo%20en%20mi%20empresa"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&amp;family=Space+Grotesk:wght@700&amp;display=swap"><link rel="stylesheet" href="/assets/zx-blog.css?v=1">
+<!--/zx:head--></head>
 <body>
 
 <nav class="blog-nav">
@@ -138,7 +139,7 @@
       <li><a href="/es/#impact">Impacto</a></li>
       <li><a href="/blog/" class="active">Blog</a></li>
     </ul>
-    <a href="/es/#cta" class="nav-cta-btn">Empezar</a>
+    <a href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20sobre%20integrar%20Sage%20con%20WhatsApp%20Business%20y%20quiero%20ver%20c%C3%B3mo%20aplicarlo%20en%20mi%20empresa" class="nav-cta-btn" data-zx-src="nav" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88M20.46 3.49A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.42"/></svg><span><span class="zx-l">Escríbenos por </span>WhatsApp</span></a>
   </div>
 </nav>
 
@@ -197,18 +198,20 @@
 
     <p>El flujo típico extremo a extremo: cliente envía un WhatsApp con "¿cuándo llega mi pedido 23198?" → webhook llega al middleware → agente identifica intención "consulta estado pedido" → middleware llama a Sage 200 Web API con el número de albarán → recibe fecha de expedición y transportista → el agente redacta la respuesta en lenguaje natural y la envía por WhatsApp Business API. Todo en 6-9 segundos.</p>
 
-    <h2>Comparativa: opciones para conectar Sage con WhatsApp en 2026</h2>
+    <!--zx:cta-->
+<aside class="zx-cta" aria-label="Zenia"><p class="zx-eyebrow">CRM a medida + agente de IA</p><p class="zx-cta-t" role="heading" aria-level="3">¿Quieres esto funcionando en tu negocio?</p><p class="zx-cta-p">Montamos el CRM y el agente de IA que atienden, agendan y hacen seguimiento por WhatsApp, con tus procesos y tu tono. Cuéntanos tu caso y te respondemos en menos de 24 h.</p><div class="zx-cta-stats"><a href="/es/caso-global-watch-buyers.html"><strong>831</strong><span>conversaciones de WhatsApp captadas para un cliente</span></a><a href="/es/caso-despacho-boutique.html"><strong>&lt;1 min</strong><span>de respuesta, 24/7, en un despacho de abogados</span></a></div><div class="zx-cta-act"><a class="zx-btn" href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20sobre%20integrar%20Sage%20con%20WhatsApp%20Business%20y%20quiero%20ver%20c%C3%B3mo%20aplicarlo%20en%20mi%20empresa" target="_blank" rel="noopener" data-zx-src="inline"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88M20.46 3.49A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.42"/></svg><span>Escríbenos por WhatsApp</span></a><a class="zx-link" href="/es/casos.html">Ver casos reales</a></div></aside>
+<!--/zx:cta--><h2>Comparativa: opciones para conectar Sage con WhatsApp en 2026</h2>
 
     <p>Un responsable técnico que investiga esta integración se topa con cuatro familias de solución. Esta tabla contrasta las reales en el mercado español en octubre de 2026, basada en documentación pública de cada proveedor:</p>
 
-    <table>
+    <div class="zx-table"><p class="zx-table-hint">Desliza para ver la tabla completa →</p><div class="zx-table-in"><table>
       <tr><th>Opción</th><th>Módulo Sage</th><th>Setup (una vez)</th><th>Mensual</th><th>Puede escribir en Sage</th></tr>
       <tr><td>App WhatsApp Business sola</td><td>Ninguno</td><td>0 €</td><td>0 €</td><td>No</td></tr>
       <tr><td>Zapier + Sage Sales Management</td><td>Sales Management</td><td>0-200 €</td><td>30-80 €</td><td>Parcial (sin IA)</td></tr>
       <tr><td>CP WhatsApp Sales (partner Sage ISV)</td><td>Sage 200</td><td>desde 1.500 €</td><td>desde 90 €</td><td>Sí, catálogo/pedidos</td></tr>
       <tr><td>Integración custom con BSP (Twilio, 360dialog)</td><td>50 / 200 / CRM</td><td>2.500-8.000 €</td><td>120-500 €</td><td>Sí, personalizable</td></tr>
       <tr><td>Zenia Partners (agente IA + conector Sage)</td><td>50 / 200 / CRM</td><td>997 €</td><td>297-497 €</td><td>Sí, bidireccional</td></tr>
-    </table>
+    </table></div></div>
 
     <p>Honestidad obligada: si tu caso de uso es "mandar un folleto por WhatsApp una vez al mes a 50 clientes de Sage 50", no necesitas Zenia Partners ni un BSP; la propia app de WhatsApp Business con una exportación CSV desde Sage te sirve. Si tu caso es "mi comercial pierde 2 horas al día buscando datos en Sage para responder WhatsApp", entonces sí hace falta integración real. Y si tu volumen supera los 2.000 mensajes al mes o necesitas escribir pedidos en Sage, la ruta BSP o Zenia Partners es la única sostenible.</p>
 
@@ -289,14 +292,14 @@
 
     <p>Los números varían con el volumen y el módulo de Sage, pero para una PYME española tipo (10-50 empleados, 1.500-6.000 conversaciones de WhatsApp al mes, Sage 200 Advanced) el coste total realista en octubre de 2026 queda así:</p>
 
-    <table>
+    <div class="zx-table"><p class="zx-table-hint">Desliza para ver la tabla completa →</p><div class="zx-table-in"><table>
       <tr><th>Concepto</th><th>Rango mensual</th><th>Notas</th></tr>
       <tr><td>WhatsApp Business API (Meta)</td><td>60-280 €</td><td>Según mix marketing/utility, tarjeta España julio 2026</td></tr>
       <tr><td>BSP (Twilio, 360dialog o similar)</td><td>0-150 €</td><td>Cloud API de Meta es 0; BSP cobra cuota + markup opcional</td></tr>
       <tr><td>Middleware / agente de IA</td><td>297-497 €</td><td>Plan Zenia Partners Starter o Growth</td></tr>
       <tr><td>Mantenimiento del conector Sage</td><td>incluido en plan Zenia</td><td>Equipo responde a cambios de Sage y de Meta</td></tr>
       <tr><td>IVA español (21%)</td><td>sobre todas las cuotas</td><td>Deducible como gasto</td></tr>
-    </table>
+    </table></div></div>
 
     <p>Setup: Zenia Partners cobra 997 € una sola vez (incluye diagnóstico, conexión, plantillas HSM y agente). Un integrador independiente que parta de cero suele presupuestar entre 2.500 y 8.000 € de setup, más jornadas de mantenimiento. Sage España cobra aparte las licencias de Sage 200 Web API y de Sage CRM según módulo; si ya pagas Sage, no es un coste nuevo.</p>
 
@@ -436,5 +439,6 @@
 <script>document.addEventListener("click",function(e){var t=e.target,a=t.closest?t.closest('a[href*="wa.me"]'):null;if(!a)return;try{navigator.sendBeacon("https://gaia-relojes.onrender.com/gwb/lead",JSON.stringify({site:"zenia",path:location.pathname+location.search,ref:document.referrer||""}))}catch(r){}},true);</script>
 <script src="/assets/qualify.js?v=4" defer></script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "eceeed460f6d465bba3b970417d5f6b0"}'></script>
-</body>
+<!--zx:js--><script src="/assets/zx.js?v=1" defer></script>
+<!--/zx:js--></body>
 </html>

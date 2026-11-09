@@ -108,7 +108,8 @@
   .text-gradient { background: linear-gradient(135deg, var(--primary), var(--accent-violet)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 </style>
 <script type="application/ld+json" data-zenia-faq="1">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "es", "mainEntity": [{"@type": "Question", "name": "¿Existe una integración nativa oficial entre Mailchimp y WhatsApp Business?", "acceptedAnswer": {"@type": "Answer", "text": "No, no en octubre de 2026. Ni Meta ni Mailchimp han publicado un conector nativo oficial. Todo lo que verás anunciado como \"integración oficial\" es una conexión mediante Mailchimp Marketing API y WhatsApp Cloud API, orquestada por un BSP, un iPaaS o un backend propio."}}, {"@type": "Question", "name": "¿Cuánto tarda en estar operativa la integración de Mailchimp con WhatsApp Business?", "acceptedAnswer": {"@type": "Answer", "text": "Con Zapier o un BSP tipo Chatarmin, entre 1 y 3 días si la verificación de Meta Business ya está hecha. Con backend propio, entre 2 y 4 semanas. En Zenia Partners entregamos la implementación completa (plantillas, agente de IA personalizado, integración con el CRM, pruebas) en 5 semanas."}}, {"@type": "Question", "name": "¿Qué información de Mailchimp puedo pasar como variable en una plantilla de WhatsApp?", "acceptedAnswer": {"@type": "Answer", "text": "Cualquier merge tag estándar de Mailchimp (nombre, email, última compra, campo personalizado) se puede inyectar como variable en la plantilla. La limitación la pone Meta: cada variable debe tener un valor por defecto en la plantilla aprobada y no puede contener URLs externas en texto libre."}}, {"@type": "Question", "name": "¿Puedo enviar campañas masivas desde Mailchimp directamente a WhatsApp?", "acceptedAnswer": {"@type": "Answer", "text": "Técnicamente sí, legalmente depende. Meta solo permite plantillas Marketing si el usuario dio opt-in explícito a WhatsApp. Si no, el envío se rechaza y el rating de la WABA baja. Antes de pensar en campañas masivas, hay que construir una lista WhatsApp propia con doble opt-in registrado y auditable."}}, {"@type": "Question", "name": "¿Afecta el RGPD a enviar WhatsApp desde Mailchimp?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. El RGPD trata WhatsApp y email como canales distintos: necesitas consentimiento específico para cada uno. Además, el número de teléfono es un dato personal igual que el email. Lo recomendado: añadir una casilla separada en el formulario de alta de Mailchimp pidiendo opt-in a WhatsApp, guardar el timestamp y la IP, y poder exportarlos si el usuario los solicita."}}, {"@type": "Question", "name": "¿Qué precio tiene esta integración si lo contrato a Zenia Partners?", "acceptedAnswer": {"@type": "Answer", "text": "El plan Starter de Zenia Partners incluye setup de 997 € + 297 €/mes con una pyme en España o Latinoamérica. Incluye diseño de plantillas, conexión Mailchimp-WhatsApp Business API, agente de IA personalizado, CRM con atribución por canal y mantenimiento. El plan Growth está en 497 €/mes para listas mayores de 20.000 contactos o varios idiomas. Enterprise a medida."}}]}</script>
-</head>
+<!--zx:head--><meta name="zx-page" content="blog"><meta name="zx-negocio" content="tu negocio"><meta name="zx-wa" content="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20%C2%ABIntegrar%20Mailchimp%20con%20WhatsApp%20Business%C2%BB%20y%20quiero%20ver%20c%C3%B3mo%20aplicarlo%20en%20mi%20negocio"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&amp;family=Space+Grotesk:wght@700&amp;display=swap"><link rel="stylesheet" href="/assets/zx-blog.css?v=1">
+<!--/zx:head--></head>
 <body>
 
 <nav class="blog-nav">
@@ -138,7 +139,7 @@
       <li><a href="/es/#impact">Impacto</a></li>
       <li><a href="/blog/" class="active">Blog</a></li>
     </ul>
-    <a href="/es/#cta" class="nav-cta-btn">Empezar</a>
+    <a href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20%C2%ABIntegrar%20Mailchimp%20con%20WhatsApp%20Business%C2%BB%20y%20quiero%20ver%20c%C3%B3mo%20aplicarlo%20en%20mi%20negocio" class="nav-cta-btn" data-zx-src="nav" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88M20.46 3.49A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.42"/></svg><span><span class="zx-l">Escríbenos por </span>WhatsApp</span></a>
   </div>
 </nav>
 
@@ -184,17 +185,19 @@
 
     <p>Mailchimp emite un webhook con el evento, un servicio intermedio recibe el JSON, decide si pasa al siguiente paso según reglas de negocio, selecciona la plantilla aprobada por Meta, inyecta las variables y hace POST a la WhatsApp Cloud API con el token de la WABA. Si el usuario responde, abre una ventana de servicio de 24 horas en la que el <a href="/blog/agente-ia-personalizado-vs-chatbot-generico.html">agente de IA personalizado</a> puede contestar sin plantilla.</p>
 
-    <h2>Tres arquitecturas para integrar Mailchimp con WhatsApp Business</h2>
+    <!--zx:cta-->
+<aside class="zx-cta" aria-label="Zenia"><p class="zx-eyebrow">CRM a medida + agente de IA</p><p class="zx-cta-t" role="heading" aria-level="3">¿Quieres esto funcionando en tu negocio?</p><p class="zx-cta-p">Montamos el CRM y el agente de IA que atienden, agendan y hacen seguimiento por WhatsApp, con tus procesos y tu tono. Cuéntanos tu caso y te respondemos en menos de 24 h.</p><div class="zx-cta-stats"><a href="/es/caso-global-watch-buyers.html"><strong>831</strong><span>conversaciones de WhatsApp captadas para un cliente</span></a><a href="/es/caso-despacho-boutique.html"><strong>&lt;1 min</strong><span>de respuesta, 24/7, en un despacho de abogados</span></a></div><div class="zx-cta-act"><a class="zx-btn" href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20%C2%ABIntegrar%20Mailchimp%20con%20WhatsApp%20Business%C2%BB%20y%20quiero%20ver%20c%C3%B3mo%20aplicarlo%20en%20mi%20negocio" target="_blank" rel="noopener" data-zx-src="inline"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88M20.46 3.49A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.42"/></svg><span>Escríbenos por WhatsApp</span></a><a class="zx-link" href="/es/casos.html">Ver casos reales</a></div></aside>
+<!--/zx:cta--><h2>Tres arquitecturas para integrar Mailchimp con WhatsApp Business</h2>
 
     <p>Hay tres caminos para montar la integración, y la decisión no es técnica sino de volumen y de control. Esta es la comparativa honesta en octubre de 2026, incluyendo cuándo Zenia Partners no es la mejor opción:</p>
 
-    <table>
+    <div class="zx-table"><p class="zx-table-hint">Desliza para ver la tabla completa →</p><div class="zx-table-in"><table>
       <tr><th>Opción</th><th>Setup</th><th>Coste mensual aprox.</th><th>Volumen razonable</th><th>Buena para</th></tr>
       <tr><td>iPaaS sin código (Zapier, Make, Pluga)</td><td>1-3 h</td><td>20-50 € + plantillas Meta</td><td>Hasta 2.000 eventos/mes</td><td>Equipo de marketing que ya domina Mailchimp y quiere pilotar</td></tr>
       <tr><td>BSP con conector específico (Chatarmin, AiSensy, 360dialog)</td><td>1-2 días</td><td>40-150 €/mes + mensajes</td><td>2.000-50.000 eventos/mes</td><td>Equipo sin ingeniería y envío recurrente a listas grandes</td></tr>
       <tr><td>Backend propio (Mailchimp API + WhatsApp Cloud API)</td><td>2-4 semanas</td><td>Servidor 10-30 €/mes + mensajes</td><td>Sin límite práctico</td><td>Lógica de negocio compleja, varios idiomas, respuesta bidireccional con IA</td></tr>
       <tr><td>Zenia Partners (setup 997 € + 297-497 €/mes)</td><td>5 semanas incluye diseño, plantillas y agente IA</td><td>297-497 €/mes todo incluido</td><td>Cualquier volumen</td><td>Pyme en España o Latinoamérica que quiere delegar y no gestionar BSP</td></tr>
-    </table>
+    </table></div></div>
 
     <p>Si tu caso es menos de 500 eventos al mes, Mailchimp sigue cubriendo bien y solo quieres probar, empieza con Zapier. No contrates una agencia para eso. Si pasas de 2.000 eventos/mes o quieres conversación de ida y vuelta con un asistente inteligente, el iPaaS se queda corto.</p>
 
@@ -210,13 +213,13 @@
 
     <p>La parte de la integración que se olvida en la mayoría de blogs son las plantillas de Meta. Desde julio de 2025 Meta estandarizó la Cloud API y cobra por categoría de plantilla entregada. En octubre de 2026 los rangos públicos para España y Latinoamérica (ES, PE, MX, CO) son estos. No son precios de proveedor sino cargo directo de Meta sobre la WABA:</p>
 
-    <table>
+    <div class="zx-table"><p class="zx-table-hint">Desliza para ver la tabla completa →</p><div class="zx-table-in"><table>
       <tr><th>Categoría de plantilla</th><th>Cuándo se usa</th><th>Coste por entrega (ES)</th><th>Coste por entrega (MX/PE/CO)</th></tr>
       <tr><td>Service (ventana 24h abierta)</td><td>Respuesta a un mensaje del cliente</td><td>Gratis</td><td>Gratis</td></tr>
       <tr><td>Utility (recordatorio, factura, cita)</td><td>Dentro de ventana o fuera, informativo</td><td>0,010-0,018 €</td><td>0,003-0,008 USD</td></tr>
       <tr><td>Authentication (OTP)</td><td>Códigos de verificación</td><td>0,015-0,022 €</td><td>0,006-0,010 USD</td></tr>
       <tr><td>Marketing (promoción, cupón, upsell)</td><td>Oferta o reactivación</td><td>0,055-0,075 €</td><td>0,015-0,030 USD</td></tr>
-    </table>
+    </table></div></div>
 
     <p>Estos rangos cambian con frecuencia. Confirma siempre en el <a href="https://developers.facebook.com/docs/whatsapp" target="_blank" rel="noopener">centro de desarrolladores de Meta</a> antes de proyectar un presupuesto. Las categorías Marketing son el tramo caro, y son exactamente las que un flujo Mailchimp-WhatsApp dispara con más frecuencia.</p>
 
@@ -382,5 +385,6 @@
 <script>document.addEventListener("click",function(e){var t=e.target,a=t.closest?t.closest('a[href*="wa.me"]'):null;if(!a)return;try{navigator.sendBeacon("https://gaia-relojes.onrender.com/gwb/lead",JSON.stringify({site:"zenia",path:location.pathname+location.search,ref:document.referrer||""}))}catch(r){}},true);</script>
 <script src="/assets/qualify.js?v=4" defer></script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "eceeed460f6d465bba3b970417d5f6b0"}'></script>
-</body>
+<!--zx:js--><script src="/assets/zx.js?v=1" defer></script>
+<!--/zx:js--></body>
 </html>

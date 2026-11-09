@@ -108,7 +108,8 @@
   .text-gradient { background: linear-gradient(135deg, var(--primary), var(--accent-violet)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 </style>
 <script type="application/ld+json" data-zenia-faq="1">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "es", "mainEntity": [{"@type": "Question", "name": "¿Google penaliza pedir reseñas por WhatsApp?", "acceptedAnswer": {"@type": "Answer", "text": "No, siempre que el copy no exija estrellas concretas ni ofrezca incentivos. Pedir \"cuéntanos qué te pareció\" con un link a la ficha es una práctica legítima. Lo que Google penaliza es el review gating cerrado (bloquear la petición pública a clientes descontentos) hecho de forma explícita en el flujo público, no la segmentación interna post-encuesta que hace este sistema."}}, {"@type": "Question", "name": "¿Qué pasa con las reseñas negativas que llegan igual?", "acceptedAnswer": {"@type": "Answer", "text": "El agente detecta menciones negativas nuevas en la ficha (via API de Google Business Profile) y alerta al gerente en menos de 30 minutos. Responder a una reseña negativa en menos de 48h recupera al cliente el 34% de las veces y baja el peso perceptual de esa reseña en el visitante siguiente."}}, {"@type": "Question", "name": "¿Sirve para reseñas en TripAdvisor o TheFork?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. La misma arquitectura funciona con cualquier plataforma que tenga link directo de reseña o formulario público. TripAdvisor requiere un flujo ligeramente distinto (mensaje más largo, más contexto) y TheFork suele ser gestionado por su propia app, pero se puede complementar."}}, {"@type": "Question", "name": "¿Cuánto tarda en verse impacto en la nota media?", "acceptedAnswer": {"@type": "Answer", "text": "Con 90-160 reseñas nuevas al mes, un restaurante con 82 reseñas actuales llega a 250+ en 60 días. La nota media empieza a moverse a partir del día 30 y se consolida a los 90-120 días. Antes de eso, lo que se ve son mejoras en volumen y frescura, no en el número mostrado."}}, {"@type": "Question", "name": "¿Necesito consentimiento LOPD/GDPR para escribir por WhatsApp?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. La reserva o el formulario de captura tiene que incluir el opt-in explícito (\"acepto recibir comunicaciones por WhatsApp\"). El sistema lo registra con timestamp y IP. La comunicación transaccional (confirmación de reserva) está permitida sin opt-in adicional; la petición de reseña, no."}}]}</script>
-</head>
+<!--zx:head--><meta name="zx-page" content="blog"><meta name="zx-negocio" content="tu restaurante"><meta name="zx-wa" content="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20%C2%ABPedir%20Rese%C3%B1as%20de%20Google%20Autom%C3%A1tico%C2%BB%20y%20quiero%20aplicarlo%20en%20mi%20restaurante"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&amp;family=Space+Grotesk:wght@700&amp;display=swap"><link rel="stylesheet" href="/assets/zx-blog.css?v=1">
+<!--/zx:head--></head>
 <body>
 
 <nav class="blog-nav">
@@ -138,7 +139,7 @@
       <li><a href="/es/#impact">Impacto</a></li>
       <li><a href="/blog/" class="active">Blog</a></li>
     </ul>
-    <a href="/es/#cta" class="nav-cta-btn">Empezar</a>
+    <a href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20%C2%ABPedir%20Rese%C3%B1as%20de%20Google%20Autom%C3%A1tico%C2%BB%20y%20quiero%20aplicarlo%20en%20mi%20restaurante" class="nav-cta-btn" data-zx-src="nav" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88M20.46 3.49A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.42"/></svg><span><span class="zx-l">Escríbenos por </span>WhatsApp</span></a>
   </div>
 </nav>
 
@@ -204,11 +205,13 @@
 
     <p>Toda esta orquestación corre sobre <a href="/es/crm-restaurantes.html">WhatsApp Business API</a> conectada al CRM del restaurante. Cada respuesta se guarda en el perfil del comensal, lo que alimenta el siguiente ciclo de <a href="/blog/fidelizacion-clientes-restaurante-2026.html">fidelización</a>.</p>
 
-    <h2>Métricas reales del flujo automatizado</h2>
+    <!--zx:cta-->
+<aside class="zx-cta" aria-label="Zenia"><p class="zx-eyebrow">CRM a medida + agente de IA</p><p class="zx-cta-t" role="heading" aria-level="3">¿Quieres esto funcionando en tu restaurante?</p><p class="zx-cta-p">Montamos el CRM y el agente de IA que atienden, agendan y hacen seguimiento por WhatsApp, con tus procesos y tu tono. Cuéntanos tu caso y te respondemos en menos de 24 h.</p><div class="zx-cta-stats"><a href="/es/caso-global-watch-buyers.html"><strong>831</strong><span>conversaciones de WhatsApp captadas para un cliente</span></a><a href="/es/caso-despacho-boutique.html"><strong>&lt;1 min</strong><span>de respuesta, 24/7, en un despacho de abogados</span></a></div><div class="zx-cta-act"><a class="zx-btn" href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20%C2%ABPedir%20Rese%C3%B1as%20de%20Google%20Autom%C3%A1tico%C2%BB%20y%20quiero%20aplicarlo%20en%20mi%20restaurante" target="_blank" rel="noopener" data-zx-src="inline"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88M20.46 3.49A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.42"/></svg><span>Escríbenos por WhatsApp</span></a><a class="zx-link" href="/es/casos.html">Ver casos reales</a></div></aside>
+<!--/zx:cta--><h2>Métricas reales del flujo automatizado</h2>
 
     <p>Estos son los rangos que vemos en implementaciones tipo con un <a href="/blog/crm-restaurantes-guia-completa.html">CRM con IA</a> correctamente configurado y cumpliendo las guías de Google:</p>
 
-    <table>
+    <div class="zx-table"><p class="zx-table-hint">Desliza para ver la tabla completa →</p><div class="zx-table-in"><table>
       <tr><th>Métrica</th><th>Manual / QR</th><th>Automatizado WhatsApp</th><th>Diferencia</th></tr>
       <tr><td>Tasa de respuesta a encuesta NPS</td><td>8-15%</td><td>45-60%</td><td>+4x</td></tr>
       <tr><td>Conversión a reseña (promotores)</td><td>3-5%</td><td>22-35%</td><td>+6x</td></tr>
@@ -217,7 +220,7 @@
       <tr><td>Tiempo del equipo dedicado</td><td>4-6 h/semana</td><td>&lt;30 min/semana</td><td>-90%</td></tr>
       <tr><td>Detractores atendidos antes de reseña pública</td><td>~0%</td><td>~100%</td><td>infinito</td></tr>
       <tr><td>Ganancia media de nota Google en 6 meses</td><td>+0.1 a +0.2</td><td>+0.4 a +0.7</td><td>+3x</td></tr>
-    </table>
+    </table></div></div>
 
     <p>El dato más útil no está en la tabla: <strong>los negocios que combinan dos canales (WhatsApp + QR o WhatsApp + email) acumulan entre 2.5 y 3 veces más reseñas que los que usan solo uno</strong>. WhatsApp es el motor principal, pero no elimina los complementarios: los suma.</p>
 
@@ -281,7 +284,7 @@
 
     <h3>Resumen de ROI</h3>
 
-    <table>
+    <div class="zx-table"><p class="zx-table-hint">Desliza para ver la tabla completa →</p><div class="zx-table-in"><table>
       <tr><th>Concepto</th><th>Impacto mensual</th></tr>
       <tr><td>Subida de nota media (+0.4)</td><td>+1.632 &euro;</td></tr>
       <tr><td>Mejora ranking Local Pack</td><td>+5.500 &euro;</td></tr>
@@ -291,7 +294,7 @@
       <tr><td><strong>Beneficio total estimado</strong></td><td><strong>+8.187 &euro;/mes</strong></td></tr>
       <tr><td>Coste del sistema (CRM + IA + API)</td><td>-297 a -497 &euro;/mes</td></tr>
       <tr><td><strong>ROI neto mensual</strong></td><td><strong>+7.690 a +7.890 &euro;</strong></td></tr>
-    </table>
+    </table></div></div>
 
     <p>Incluso recortando estimaciones a la mitad, el retorno supera los 3.800 euros al mes frente a 300-500 euros de inversión. <strong>ROI de 8x a 15x</strong>. Y este cálculo no incluye el efecto compuesto: cada mes que la nota sube, la barra de entrada de la competencia se aleja más.</p>
 
@@ -430,5 +433,6 @@
 <script>document.addEventListener("click",function(e){var t=e.target,a=t.closest?t.closest('a[href*="wa.me"]'):null;if(!a)return;try{navigator.sendBeacon("https://gaia-relojes.onrender.com/gwb/lead",JSON.stringify({site:"zenia",path:location.pathname+location.search,ref:document.referrer||""}))}catch(r){}},true);</script>
 <script src="/assets/qualify.js?v=4" defer></script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "eceeed460f6d465bba3b970417d5f6b0"}'></script>
-</body>
+<!--zx:js--><script src="/assets/zx.js?v=1" defer></script>
+<!--/zx:js--></body>
 </html>

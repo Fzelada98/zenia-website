@@ -108,7 +108,8 @@
   .text-gradient { background: linear-gradient(135deg, var(--primary), var(--accent-violet)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 </style>
 <script type="application/ld+json" data-zenia-faq="1">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "es", "mainEntity": [{"@type": "Question", "name": "¿Puedo integrar Google Calendar con WhatsApp Business sin API?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, pero con límites. Con la app WhatsApp Business estándar puedes usar enlaces wa.me dentro de la descripción del evento, de modo que al tocar el evento el cliente abra WhatsApp. Para envíos automáticos (recordatorios programados) necesitas WhatsApp Business API vía un proveedor BSP, aunque sea a través de Zapier o Make. Sin API no hay envíos automáticos salientes."}}, {"@type": "Question", "name": "¿Cuánto tarda Meta en aprobar las plantillas HSM en español?", "acceptedAnswer": {"@type": "Answer", "text": "En octubre de 2026, las plantillas de categoría UTILITY redactadas correctamente se aprueban en 1 a 24 horas. Las que incluyen copy promocional o se solapan con MARKETING pueden rechazarse y requerir reescritura. Zenia Partners envía las 5 plantillas base en paralelo para no bloquear el calendario de implementación."}}, {"@type": "Question", "name": "¿Puedo responder \"cambiar la cita al jueves\" por WhatsApp y que Google Calendar se actualice solo?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, pero solo con un agente de IA personalizado detrás. Un conector Zapier/Make clásico recibe el mensaje y lo deja en inbox. Para que el calendario se actualice solo necesitas un modelo que interprete la intención, consulte huecos y haga events.patch . Esta parte es la que diferencia a Zenia Partners de un conector no-code puro."}}, {"@type": "Question", "name": "¿Cuánto cuesta integrar Google Calendar con WhatsApp Business en octubre de 2026?", "acceptedAnswer": {"@type": "Answer", "text": "Depende del camino: desde 20 €/mes con Zapier y un número básico de WhatsApp Business API vía 360dialog hasta 497 €/mes con Zenia Partners en modo Growth (incluye CRM, agente de IA, plantillas gestionadas y soporte). El setup único con Zenia Partners es de 997 €. Un SaaS vertical como Eazybe o AuroraInbox se mueve en el rango 29-99 €/mes."}}, {"@type": "Question", "name": "¿Cuál es la latencia mínima realista de un recordatorio?", "acceptedAnswer": {"@type": "Answer", "text": "Con Zapier polling: 1 a 5 minutos. Con Make webhook: 15 a 60 segundos. Con WhatsApp Cloud API nativa y cola propia: por debajo de 2 segundos desde el momento programado. Para \"estamos listos para recibirte en 15 min\" solo las dos últimas opciones son fiables."}}, {"@type": "Question", "name": "¿Es legal enviar recordatorios por WhatsApp a mis clientes?", "acceptedAnswer": {"@type": "Answer", "text": "En España y la UE, el envío de recordatorios UTILITY a clientes que ya tienen una cita confirmada entra en el interés legítimo del RGPD. Debes informar en la política de privacidad que el canal de notificación es WhatsApp y guardar el consentimiento al pedir la cita. Para campañas de marketing distintas al recordatorio hace falta opt-in explícito."}}]}</script>
-</head>
+<!--zx:head--><meta name="zx-page" content="blog"><meta name="zx-negocio" content="tu negocio"><meta name="zx-wa" content="https://wa.me/34677612799?text=Hola%2C%20quiero%20integrar%20Google%20Calendar%20con%20WhatsApp%20Business%20en%20mi%20negocio"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&amp;family=Space+Grotesk:wght@700&amp;display=swap"><link rel="stylesheet" href="/assets/zx-blog.css?v=1">
+<!--/zx:head--></head>
 <body>
 
 <nav class="blog-nav">
@@ -138,7 +139,7 @@
       <li><a href="/es/#impact">Impacto</a></li>
       <li><a href="/blog/" class="active">Blog</a></li>
     </ul>
-    <a href="/es/#cta" class="nav-cta-btn">Empezar</a>
+    <a href="https://wa.me/34677612799?text=Hola%2C%20quiero%20integrar%20Google%20Calendar%20con%20WhatsApp%20Business%20en%20mi%20negocio" class="nav-cta-btn" data-zx-src="nav" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88M20.46 3.49A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.42"/></svg><span><span class="zx-l">Escríbenos por </span>WhatsApp</span></a>
   </div>
 </nav>
 
@@ -163,13 +164,13 @@
 
     <p>Hay tres caminos técnicos reales. Elegir mal cuesta meses de retrabajo cuando Meta cambia las políticas de plantillas o cuando el negocio crece y necesita CRM. Esta tabla compara las tres rutas con datos verificables de octubre de 2026:</p>
 
-    <table>
+    <div class="zx-table"><p class="zx-table-hint">Desliza para ver la tabla completa →</p><div class="zx-table-in"><table>
       <tr><th>Opción</th><th>Latencia media</th><th>Coste mensual (ES)</th><th>Plantillas HSM</th><th>Mejor para</th></tr>
       <tr><td>Zapier (no-code)</td><td>1-5 min</td><td>20-70 €</td><td>Limitado a conectores</td><td>Autónomos, 1-50 citas/semana</td></tr>
       <tr><td>Make (ex Integromat)</td><td>15-60 s</td><td>9-40 €</td><td>Vía módulo HTTP</td><td>Pymes técnicas, flujos complejos</td></tr>
       <tr><td>SaaS vertical (Eazybe, AuroraInbox)</td><td>5-30 s</td><td>29-99 €</td><td>Prediseñadas por sector</td><td>Clínica/salón sin equipo IT</td></tr>
       <tr><td>WhatsApp Cloud API nativa</td><td>&lt;2 s</td><td>Precio Meta + CRM (desde 297 €)</td><td>Propias, aprobadas</td><td>Negocios con CRM y &gt;50 citas/sem</td></tr>
-    </table>
+    </table></div></div>
 
     <p>Los conectores Zapier y Make tiran de la API pública de Google Calendar (evento <code>created</code>, <code>updated</code>, <code>cancelled</code>) y disparan un paso que llama a un número de WhatsApp Business API con una plantilla preaprobada. El punto débil es la latencia: Zapier polea el calendario cada 1-15 minutos según el plan, así que un recordatorio "en 2 horas" puede llegar fuera de ventana. Make permite webhooks reales de Google Calendar y rebaja la latencia a segundos.</p>
 
@@ -177,7 +178,9 @@
 
     <p>La API nativa de Meta (<a href="/blog/whatsapp-cloud-api-vs-whatsapp-business-app.html">WhatsApp Cloud API</a>) exige número verificado en Business Manager, aprobación de cada plantilla en español y un backend propio. A cambio da sub-segundo de latencia, control de reintentos y datos crudos para alimentar el CRM. Es la que montamos en <strong>Zenia Partners</strong> cuando el cliente factura por hueco de agenda.</p>
 
-    <h2>¿Cómo integrar Google Calendar con WhatsApp sin código (Zapier y Make)?</h2>
+    <!--zx:cta-->
+<aside class="zx-cta" aria-label="Zenia"><p class="zx-eyebrow">CRM a medida + agente de IA</p><p class="zx-cta-t" role="heading" aria-level="3">¿Quieres esto funcionando en tu negocio?</p><p class="zx-cta-p">Montamos el CRM y el agente de IA que atienden, agendan y hacen seguimiento por WhatsApp, con tus procesos y tu tono. Cuéntanos tu caso y te respondemos en menos de 24 h.</p><div class="zx-cta-stats"><a href="/es/caso-global-watch-buyers.html"><strong>831</strong><span>conversaciones de WhatsApp captadas para un cliente</span></a><a href="/es/caso-despacho-boutique.html"><strong>&lt;1 min</strong><span>de respuesta, 24/7, en un despacho de abogados</span></a></div><div class="zx-cta-act"><a class="zx-btn" href="https://wa.me/34677612799?text=Hola%2C%20quiero%20integrar%20Google%20Calendar%20con%20WhatsApp%20Business%20en%20mi%20negocio" target="_blank" rel="noopener" data-zx-src="inline"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88M20.46 3.49A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.42"/></svg><span>Escríbenos por WhatsApp</span></a><a class="zx-link" href="/es/casos.html">Ver casos reales</a></div></aside>
+<!--/zx:cta--><h2>¿Cómo integrar Google Calendar con WhatsApp sin código (Zapier y Make)?</h2>
 
     <p>Si todavía no tienes WhatsApp Business API y solo buscas que cada cita confirmada envíe un recordatorio por WhatsApp, un conector sin código es la vía más rápida. Se monta en una tarde y se puede migrar más adelante.</p>
 
@@ -230,14 +233,14 @@
 
     <h3>Plantillas HSM mínimas en español que debes aprobar</h3>
 
-    <table>
+    <div class="zx-table"><p class="zx-table-hint">Desliza para ver la tabla completa →</p><div class="zx-table-in"><table>
       <tr><th>Nombre interno</th><th>Categoría</th><th>Variables</th><th>Momento de envío</th></tr>
       <tr><td>cita_confirmada_v1</td><td>UTILITY</td><td>nombre, fecha, hora, direccion</td><td>Al crear evento</td></tr>
       <tr><td>recordatorio_24h_v1</td><td>UTILITY</td><td>nombre, fecha, hora</td><td>24 h antes</td></tr>
       <tr><td>recordatorio_2h_v1</td><td>UTILITY</td><td>nombre, hora, direccion</td><td>2 h antes</td></tr>
       <tr><td>cita_cambiada_v1</td><td>UTILITY</td><td>nombre, antigua, nueva</td><td>Al modificar evento</td></tr>
       <tr><td>cita_cancelada_v1</td><td>UTILITY</td><td>nombre, fecha, enlace_reagendar</td><td>Al cancelar evento</td></tr>
-    </table>
+    </table></div></div>
 
     <p>Meta tarda de 1 a 24 horas en aprobar cada plantilla. Las plantillas de categoría UTILITY no requieren opt-in explícito más allá del inicio de conversación, pero deben enviarse dentro de un contexto operativo real; si la plantilla se envía como promoción encubierta, Meta la revoca.</p>
 
@@ -251,14 +254,14 @@
 
     <p>Los recordatorios de 24h y 2h por WhatsApp reducen el no-show típicamente al 5-7% según datos agregados del sector (fuentes vendor como Mindbody y Fresha publican rangos entre 60% y 70% de reducción respecto al email). Con la cuenta anterior, el salón recupera unos 1.820 €/mes, frente a un coste de integración que va de 20 € (Zapier) a 497 € (plan Growth de Zenia Partners con CRM incluido). El payback es inferior a 30 días en casi todos los perfiles.</p>
 
-    <table>
+    <div class="zx-table"><p class="zx-table-hint">Desliza para ver la tabla completa →</p><div class="zx-table-in"><table>
       <tr><th>Perfil</th><th>Huecos/mes</th><th>Ticket medio</th><th>No-shows antes</th><th>No-shows después</th><th>Recuperación mes</th></tr>
       <tr><td>Peluquería barrio</td><td>400</td><td>35 €</td><td>18%</td><td>6%</td><td>1.680 €</td></tr>
       <tr><td>Clínica dental</td><td>250</td><td>95 €</td><td>12%</td><td>4%</td><td>1.900 €</td></tr>
       <tr><td>Fisioterapia</td><td>320</td><td>45 €</td><td>15%</td><td>5%</td><td>1.440 €</td></tr>
       <tr><td>Centro de estética</td><td>500</td><td>55 €</td><td>14%</td><td>5%</td><td>2.475 €</td></tr>
       <tr><td>Despacho de abogados</td><td>80</td><td>180 €</td><td>10%</td><td>3%</td><td>1.008 €</td></tr>
-    </table>
+    </table></div></div>
 
     <p>Las cifras de ticket medio son de la propia operativa del cliente al implementar la integración. Las tasas de no-show son conservadoras y están alineadas con los rangos publicados por <a href="/blog/recordatorios-citas-medicas-whatsapp.html">estudios de recordatorios por WhatsApp en consulta médica</a>.</p>
 
@@ -371,5 +374,6 @@
 <script>document.addEventListener("click",function(e){var t=e.target,a=t.closest?t.closest('a[href*="wa.me"]'):null;if(!a)return;try{navigator.sendBeacon("https://gaia-relojes.onrender.com/gwb/lead",JSON.stringify({site:"zenia",path:location.pathname+location.search,ref:document.referrer||""}))}catch(r){}},true);</script>
 <script src="/assets/qualify.js?v=4" defer></script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "eceeed460f6d465bba3b970417d5f6b0"}'></script>
-</body>
+<!--zx:js--><script src="/assets/zx.js?v=1" defer></script>
+<!--/zx:js--></body>
 </html>

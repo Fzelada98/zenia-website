@@ -108,7 +108,8 @@
   .text-gradient { background: linear-gradient(135deg, var(--primary), var(--accent-violet)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 </style>
 <script type="application/ld+json" data-zenia-faq="1">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "es", "mainEntity": [{"@type": "Question", "name": "¿El agente IA reemplaza a todos mis agentes humanos?", "acceptedAnswer": {"@type": "Answer", "text": "No. Reemplaza el nivel 1 y libera capacidad para el nivel 2 y 3. En despliegues productivos el equipo humano baja entre un 20% y un 40%, pero los que quedan atienden conversaciones de mas valor: fidelizacion, ventas complejas, resolucion de conflictos. La mejor arquitectura es hibrida."}}, {"@type": "Question", "name": "¿Cuanto tiempo necesita el agente para aprender mi negocio?", "acceptedAnswer": {"@type": "Answer", "text": "La primera version se instruye con documentacion, procedimientos y una muestra de conversaciones etiquetadas. Va a produccion en la semana 6. A partir del mes 2, el agente se optimiza con datos reales: intents nuevas, ajuste de tono y expansion de tools. La curva de mejora se estabiliza a los 90 dias."}}, {"@type": "Question", "name": "¿Como cumple GDPR y LOPDGDD?", "acceptedAnswer": {"@type": "Answer", "text": "Datos personales anonimizados por defecto en las trazas, cifrado en transito y en reposo, DPA firmado con cada proveedor de la cadena (LLM, ASR, TTS, hosting) y politica de retencion configurable por caso de uso. En sectores regulados (banca, salud, seguros) sumamos evaluaciones de impacto y auditoria de PII con Presidio."}}, {"@type": "Question", "name": "¿Que pasa si el LLM tiene una caida?", "acceptedAnswer": {"@type": "Answer", "text": "La arquitectura contempla failover a un segundo proveedor de LLM. Si ambos caen simultaneamente, el agente redirige el trafico a la cola humana con mensaje contextual. En 2 anos operando este tipo de arquitectura no hemos visto una caida simultanea de dos proveedores frontera."}}, {"@type": "Question", "name": "¿Cuanto cuesta operarlo al mes?", "acceptedAnswer": {"@type": "Answer", "text": "Depende del volumen y del modelo. En despliegues de 10.000-30.000 conversaciones al mes, el coste operativo (tokens + ASR + TTS + infraestructura) se situa entre 800 y 2.400 euros. La guia detallada de costes de agentes IA desglosa cada partida por proveedor y volumen."}}]}</script>
-</head>
+<!--zx:head--><meta name="zx-page" content="blog"><meta name="zx-negocio" content="tu negocio"><meta name="zx-wa" content="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20sobre%20agente%20IA%20para%20call%20center%20y%20quiero%20aplicarlo%20en%20mi%20contact%20center"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&amp;family=Space+Grotesk:wght@700&amp;display=swap"><link rel="stylesheet" href="/assets/zx-blog.css?v=1">
+<!--/zx:head--></head>
 <body>
 
 <nav class="blog-nav">
@@ -138,7 +139,7 @@
       <li><a href="/es/#impact">Impacto</a></li>
       <li><a href="/blog/" class="active">Blog</a></li>
     </ul>
-    <a href="/es/#cta" class="nav-cta-btn">Empezar</a>
+    <a href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20sobre%20agente%20IA%20para%20call%20center%20y%20quiero%20aplicarlo%20en%20mi%20contact%20center" class="nav-cta-btn" data-zx-src="nav" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88M20.46 3.49A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.42"/></svg><span><span class="zx-l">Escríbenos por </span>WhatsApp</span></a>
   </div>
 </nav>
 
@@ -192,11 +193,13 @@
 
     <p>Toda conversacion se registra con metricas de latencia por capa, transcripcion completa, herramientas invocadas, coste de tokens y confidence score. Un modulo de guardarrailes valida que el agente no invente politicas comerciales, no comparta datos sensibles fuera de perimetro y escale segun reglas configuradas. En un contact center regulado (banca, salud, seguros) este bloque es lo que aprueba o tumba el proyecto.</p>
 
-    <h2>KPIs que importan (y como los medimos en produccion)</h2>
+    <!--zx:cta-->
+<aside class="zx-cta" aria-label="Zenia"><p class="zx-eyebrow">CRM a medida + agente de IA</p><p class="zx-cta-t" role="heading" aria-level="3">¿Quieres esto funcionando en tu negocio?</p><p class="zx-cta-p">Montamos el CRM y el agente de IA que atienden, agendan y hacen seguimiento por WhatsApp, con tus procesos y tu tono. Cuéntanos tu caso y te respondemos en menos de 24 h.</p><div class="zx-cta-stats"><a href="/es/caso-global-watch-buyers.html"><strong>831</strong><span>conversaciones de WhatsApp captadas para un cliente</span></a><a href="/es/caso-despacho-boutique.html"><strong>&lt;1 min</strong><span>de respuesta, 24/7, en un despacho de abogados</span></a></div><div class="zx-cta-act"><a class="zx-btn" href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20sobre%20agente%20IA%20para%20call%20center%20y%20quiero%20aplicarlo%20en%20mi%20contact%20center" target="_blank" rel="noopener" data-zx-src="inline"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88M20.46 3.49A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.42"/></svg><span>Escríbenos por WhatsApp</span></a><a class="zx-link" href="/es/casos.html">Ver casos reales</a></div></aside>
+<!--/zx:cta--><h2>KPIs que importan (y como los medimos en produccion)</h2>
 
     <p>Los KPIs de contact center tradicionales (AHT, FCR, CSAT) siguen aplicando, pero un agente IA introduce metricas nuevas que hay que instrumentar desde el dia uno. Esta es la bateria que exigimos en cada despliegue:</p>
 
-    <table>
+    <div class="zx-table"><p class="zx-table-hint">Desliza para ver la tabla completa →</p><div class="zx-table-in"><table>
       <tr><th>KPI</th><th>Definicion tecnica</th><th>Benchmark 2026</th></tr>
       <tr><td>Containment rate</td><td>Conversaciones resueltas sin escalar a humano</td><td>41-59% (top: 70-90%)</td></tr>
       <tr><td>Latencia end-to-end</td><td>Fin de turno de usuario hasta primer fonema del agente</td><td>&lt;300 ms</td></tr>
@@ -206,7 +209,7 @@
       <tr><td>Deflection rate</td><td>Contactos que evitan cola de nivel 2</td><td>19% del inbound total</td></tr>
       <tr><td>CSAT sobre agente IA</td><td>Encuesta post-conversacion 1-5</td><td>&gt;4,2</td></tr>
       <tr><td>Hallucination rate</td><td>Respuestas fuera de politica detectadas</td><td>&lt;0,3%</td></tr>
-    </table>
+    </table></div></div>
 
     <p>El KPI que mas subestima el equipo de negocio es la <strong>latencia por capa</strong>. Cuando la conversacion se siente lenta, la culpa casi nunca es del LLM: es un tool call que tarda 900 ms en volver del CRM, o un TTS que empieza tarde a stremear. Sin trazas por capa, se optimiza a ciegas.</p>
 
@@ -273,7 +276,7 @@
 
     <p>No hay un stack unico. Hay decisiones. Estas son las que tomamos en despliegues de escala media (10.000 a 100.000 contactos al mes):</p>
 
-    <table>
+    <div class="zx-table"><p class="zx-table-hint">Desliza para ver la tabla completa →</p><div class="zx-table-in"><table>
       <tr><th>Capa</th><th>Opcion recomendada</th><th>Alternativas serias</th></tr>
       <tr><td>ASR</td><td>Deepgram Nova-3</td><td>Whisper Large v3 autohosteado, Azure Speech</td></tr>
       <tr><td>LLM</td><td>Claude Sonnet 4.5 o GPT-5</td><td>Gemini 2.5 Pro, modelo afinado propio</td></tr>
@@ -283,7 +286,7 @@
       <tr><td>Telefonia</td><td>Twilio Programmable Voice + SIP</td><td>Vonage, Genesys, Amazon Connect</td></tr>
       <tr><td>Observabilidad</td><td>Langfuse + Grafana + OpenTelemetry</td><td>Datadog LLM Observability, Helicone</td></tr>
       <tr><td>Guardarrailes</td><td>Guardrails AI o reglas propias</td><td>NeMo Guardrails, Presidio para PII</td></tr>
-    </table>
+    </table></div></div>
 
     <p>La decision de LLM merece parrafo aparte. En 2026 los tres modelos frontera resuelven el 90% de los casos de call center con calidad equivalente. La diferencia esta en el coste por millon de tokens, la latencia de primer token y la capacidad de razonamiento sostenido. Para nivel 1 puro, un modelo mediano bien instruido es mas barato y mas rapido. Para escalado y razonamiento multi-paso, un modelo frontera vale su precio.</p>
 
@@ -398,11 +401,6 @@
 
       <a href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20sobre%20agente%20IA%20para%20call%20center%20y%20quiero%20aplicarlo%20en%20mi%20contact%20center" target="_blank" rel="noopener">Hablar por WhatsApp ahora</a> <a style="background:transparent;border:1px solid var(--border);color:var(--text-secondary);margin-left:10px" href="https://calendly.com/zeladauriartef/30min">Agendar llamada gratuita</a>
     </div>
-<div class="blog-related" data-zenia-money-links="1">
-  <h3>Ponlo en marcha en tu operacion</h3>
-      <a href="/blog/ai-agent-for-test-prep-tutors.html">AI Agent for Test Prep Tutors: The 2026 Playbook for Diagnostics, Score-Guarantee Programs and Test-Week Retention<span>A US test prep business lives on a calendar it does not control. SAT dates in March, May, June, Augu...</span></a>
-      </div>
-
 
     <div class="blog-related">
       <h3>Articulos relacionados</h3>
@@ -439,5 +437,6 @@
 <script>document.addEventListener("click",function(e){var t=e.target,a=t.closest?t.closest('a[href*="wa.me"]'):null;if(!a)return;try{navigator.sendBeacon("https://gaia-relojes.onrender.com/gwb/lead",JSON.stringify({site:"zenia",path:location.pathname+location.search,ref:document.referrer||""}))}catch(r){}},true);</script>
 <script src="/assets/qualify.js?v=4" defer></script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "eceeed460f6d465bba3b970417d5f6b0"}'></script>
-</body>
+<!--zx:js--><script src="/assets/zx.js?v=1" defer></script>
+<!--/zx:js--></body>
 </html>

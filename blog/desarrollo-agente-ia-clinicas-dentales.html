@@ -108,7 +108,8 @@
   .text-gradient { background: linear-gradient(135deg, var(--primary), var(--accent-violet)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 </style>
 <script type="application/ld+json" data-zenia-faq="1">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "es", "mainEntity": [{"@type": "Question", "name": "¿Hace falta fine-tuning del modelo?", "acceptedAnswer": {"@type": "Answer", "text": "No en el 95% de los casos. Un modelo generalista con function calling estricto y RAG clínico rinde mejor que un fine-tune, cuesta menos y es más fácil de mantener. Solo consideramos fine-tuning cuando la clínica tiene vocabulario propio con más de 3.000 términos internos (habitual en redes dentales grandes con nomenclatura unificada)."}}, {"@type": "Question", "name": "¿Cómo se protege el dato médico del paciente?", "acceptedAnswer": {"@type": "Answer", "text": "TLS 1.3 en tránsito, cifrado at rest en Postgres, tokenización de identificadores en logs, retención de logs de 90 días con purga automática y contrato de encargado de tratamiento con Meta y con el proveedor de LLM (Anthropic u OpenAI). El historial clínico nunca pasa por prompts sin filtro: el modelo trabaja sobre identificadores tokenizados y sobre resúmenes aprobados."}}, {"@type": "Question", "name": "¿Se puede desplegar en cloud pública?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, con las salvaguardas anteriores. En clínicas grandes con compliance interno hacemos despliegues en Google Cloud Madrid y AWS Frankfurt para mantener el dato en la UE. Para clínicas que exigen on-prem, el sistema corre en Docker Compose sobre servidor propio con runtime local del LLM cuando el volumen lo justifica."}}, {"@type": "Question", "name": "¿Cuánto cuesta operar el sistema al mes?", "acceptedAnswer": {"@type": "Answer", "text": "Para una clínica de 1 a 3 sedes con volumen medio (unos 30.000 mensajes/mes) el coste operativo se sitúa entre 320 y 640 euros mensuales, incluyendo tokens de LLM, infraestructura, WhatsApp Business API, firma electrónica y observabilidad. La inversión inicial de desarrollo va de 3.800 a 8.500 euros según integraciones y complejidad del PMS. El retorno se suele cubrir entre el segundo y cuarto mes de operación."}}, {"@type": "Question", "name": "¿Qué pasa cuando el agente se equivoca?", "acceptedAnswer": {"@type": "Answer", "text": "El agente marca la conversación como de baja confianza y la deriva a recepción con hilo completo, intento de respuesta y razón del escalado. La recepción responde y el sistema aprende de la corrección. En despliegues maduros esta tasa de escalado por baja confianza se estabiliza entre el 10% y el 16% de las conversaciones."}}, {"@type": "Question", "name": "¿Funciona con cualquier PMS dental?", "acceptedAnswer": {"@type": "Answer", "text": "En la mayoría de los casos sí. La integración está probada con Gesden, Dentalink, Odontonet, Klinikare, Dentrix y Open Dental. Para PMS sin API productiva montamos un conector sobre base de datos con permisos de solo lectura y una cola de comandos de escritura revisados por un técnico interno antes de impactar producción. Un desarrollo de agente IA para clínica dental es un proyecto de ingeniería seria. No es una plantilla, no se resuelve con un flujo visual y no se improvisa en 15 días. Es un sistema distribuido con estado persistente, integraciones críticas con el PMS, guardarraíles sanitarios y métricas por doctor. Cuando se construye bien, cambia el modelo económico de la clínica: menos no-shows, más presupuestos aceptados, más reseñas y una recepción que recupera horas para atender al paciente que está sentado en la sala, no al que escribe por WhatsApp."}}]}</script>
-</head>
+<!--zx:head--><meta name="zx-page" content="blog"><meta name="zx-negocio" content="tu clínica dental"><meta name="zx-wa" content="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20%C2%ABDesarrollo%20de%20Agente%20IA%20para%20Cl%C3%ADnicas%20Dentales%C2%BB%20y%20quiero%20ver%20c%C3%B3mo%20aplicarlo%20en%20mi%20cl%C3%ADnica"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&amp;family=Space+Grotesk:wght@700&amp;display=swap"><link rel="stylesheet" href="/assets/zx-blog.css?v=1">
+<!--/zx:head--></head>
 <body>
 
 <nav class="blog-nav">
@@ -138,7 +139,7 @@
       <li><a href="/es/#impact">Impacto</a></li>
       <li><a href="/blog/" class="active">Blog</a></li>
     </ul>
-    <a href="/es/#cta" class="nav-cta-btn">Empezar</a>
+    <a href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20%C2%ABDesarrollo%20de%20Agente%20IA%20para%20Cl%C3%ADnicas%20Dentales%C2%BB%20y%20quiero%20ver%20c%C3%B3mo%20aplicarlo%20en%20mi%20cl%C3%ADnica" class="nav-cta-btn" data-zx-src="nav" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88M20.46 3.49A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.42"/></svg><span><span class="zx-l">Escríbenos por </span>WhatsApp</span></a>
   </div>
 </nav>
 
@@ -194,7 +195,9 @@
 
     <p>Tracing por conversación con OpenTelemetry, métricas por doctor y por sede, KPIs por tratamiento (tasa de agendado para ortodoncia vs. revisión), dashboard de carga por horas pico. La dirección ve coste por lead, tasa de derivación humana y presupuestos aceptados. Sin esta capa el agente opera a ciegas y no hay iteración posible.</p>
 
-    <h2>Integraciones críticas con el stack dental</h2>
+    <!--zx:cta-->
+<aside class="zx-cta" aria-label="Zenia"><p class="zx-eyebrow">CRM a medida + agente de IA</p><p class="zx-cta-t" role="heading" aria-level="3">¿Quieres esto funcionando en tu clínica dental?</p><p class="zx-cta-p">Montamos el CRM y el agente de IA que atienden, agendan y hacen seguimiento por WhatsApp, con tus procesos y tu tono. Cuéntanos tu caso y te respondemos en menos de 24 h.</p><div class="zx-cta-stats"><a href="/es/caso-global-watch-buyers.html"><strong>831</strong><span>conversaciones de WhatsApp captadas para un cliente</span></a><a href="/es/caso-despacho-boutique.html"><strong>&lt;1 min</strong><span>de respuesta, 24/7, en un despacho de abogados</span></a></div><div class="zx-cta-act"><a class="zx-btn" href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20%C2%ABDesarrollo%20de%20Agente%20IA%20para%20Cl%C3%ADnicas%20Dentales%C2%BB%20y%20quiero%20ver%20c%C3%B3mo%20aplicarlo%20en%20mi%20cl%C3%ADnica" target="_blank" rel="noopener" data-zx-src="inline"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88M20.46 3.49A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.42"/></svg><span>Escríbenos por WhatsApp</span></a><a class="zx-link" href="/es/casos.html">Ver casos reales</a></div></aside>
+<!--/zx:cta--><h2>Integraciones críticas con el stack dental</h2>
 
     <p>El 70% del esfuerzo de desarrollo se va en integraciones, no en el modelo. La calidad final del agente depende de cómo encaja con el resto del stack dental. Estos son los conectores que han demostrado moverla más en despliegues reales.</p>
 
@@ -226,7 +229,7 @@
 
     <p>Estos son los KPIs medidos en una red española de 3 clínicas dentales entre marzo y septiembre de 2026. El agente fue construido siguiendo la arquitectura descrita e integra con Gesden como PMS y Signaturit para firma de consentimientos.</p>
 
-    <table>
+    <div class="zx-table"><p class="zx-table-hint">Desliza para ver la tabla completa →</p><div class="zx-table-in"><table>
       <tr><th>Métrica</th><th>Antes</th><th>Después</th><th>Delta</th></tr>
       <tr><td>Tiempo medio de primera respuesta</td><td>34 minutos</td><td>9 segundos</td><td>-99%</td></tr>
       <tr><td>Tasa de no-shows (todas las citas)</td><td>19%</td><td>6,5%</td><td>-66%</td></tr>
@@ -237,7 +240,7 @@
       <tr><td>Presupuestos aceptados sobre enviados</td><td>38%</td><td>61%</td><td>+61%</td></tr>
       <tr><td>Coste por lead cualificado</td><td>28,40 &euro;</td><td>9,70 &euro;</td><td>-66%</td></tr>
       <tr><td>Reseñas Google netas nuevas por mes</td><td>14</td><td>49</td><td>+250%</td></tr>
-    </table>
+    </table></div></div>
 
     <p>El salto en presupuestos aceptados no viene del modelo, viene de la integración. Cuando el agente puede explicar en el chat el detalle del tratamiento (piezas, materiales, pasos), ofrecer financiación en el mismo hilo y resolver dudas sin que el paciente tenga que pedir cita presencial, la fricción comercial cae. Un presupuesto que se queda abierto 10 días baja su probabilidad de aceptación un 42%; cerrar en 48 horas es la diferencia.</p>
 
@@ -338,7 +341,6 @@
 <div class="blog-related" data-zenia-money-links="1">
   <h3>Ponlo en marcha en tu clínica</h3>
       <a href="/blog/integrar-sage-con-whatsapp-business.html">Integrar Sage con WhatsApp Business: arquitectura, costes y agente de IA en 2026<span>Respuesta corta: integrar Sage con WhatsApp Business en 2026 significa conectar la API de Meta (vía ...</span></a>
-      <a href="/blog/electrician-crm-with-ai.html">Electrician CRM with AI: The 2026 Playbook for Booking Every Service Call<span>A homeowner smells something burning behind an outlet at 7:42 PM. They call three electricians. The ...</span></a>
       </div>
 
 
@@ -377,5 +379,6 @@
 <script>document.addEventListener("click",function(e){var t=e.target,a=t.closest?t.closest('a[href*="wa.me"]'):null;if(!a)return;try{navigator.sendBeacon("https://gaia-relojes.onrender.com/gwb/lead",JSON.stringify({site:"zenia",path:location.pathname+location.search,ref:document.referrer||""}))}catch(r){}},true);</script>
 <script src="/assets/qualify.js?v=4" defer></script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "eceeed460f6d465bba3b970417d5f6b0"}'></script>
-</body>
+<!--zx:js--><script src="/assets/zx.js?v=1" defer></script>
+<!--/zx:js--></body>
 </html>

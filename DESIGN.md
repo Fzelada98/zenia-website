@@ -84,6 +84,21 @@ vistas de los tres negocios, los tres vídeos con sonido) y el inspector de Tast
 (`~/.claude/skills/design-taste-frontend/scripts/inspect.mjs`), sabiendo que marcará a propósito
 las etiquetas en versalitas, los filetes, el cristal y las sombras, que aquí son decisión.
 
+## 6b. Landings y blog: la capa de conversión (nov-2026)
+
+Las ~540 landings (`es/crm-*`, contabilidad, `en/ai-bookkeeping-*`) y los ~740 artículos del blog
+llevan la misma marca que la portada sin rehacer sus plantillas: `scripts/capa-conversion/aplicar.py`
+añade, entre marcas `<!--zx:…-->`, la hoja `/assets/zx-landing.css` o `/assets/zx-blog.css` (se
+cargan después de la hoja vieja y la repintan), `/assets/zx.js` y los bloques de conversión: en las
+landings de ciudad una frase de valor por sector bajo el titular, la franja de casos reales, la
+llamada intermedia y los planes (`#planes`); en el blog la tarjeta antes del tercer H2, el botón de
+WhatsApp en el menú y las tablas en su caja deslizable. `zx.js` pone la barra fija del móvil (en
+escritorio solo si cabe en el margen del artículo) y añade `src` (hero, mid, plan-growth, inline,
+dock, nav, final, blog-end, float…) a los registros de leads de gaia. Es idempotente: para cambiar
+un texto se edita el script y se vuelve a correr; para cambiar CSS o JS, subir `VERSION`. El guard
+de SEO (`~/.zenia-seo-guard/inject_ctas.py`) lo corre en cada pasada, así que las páginas nuevas
+nacen con la capa.
+
 ## 7. Prohibido
 
 Fondos claros en las portadas, violeta e índigo, Inter, emojis, tarjetas con icono, titulares a

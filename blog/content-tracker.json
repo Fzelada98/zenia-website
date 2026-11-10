@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-11-09T22:00:00+00:00",
+  "lastRun": "2026-11-10T06:05:00+00:00",
   "posts": [
+    {
+      "slug": "atencion-telefonica-automatica-con-ia",
+      "keyword": "atencion telefonica automatica con ia",
+      "tier": 1,
+      "cluster": "voice-ai-pymes",
+      "status": "published",
+      "date": "2026-11-10",
+      "source": "matrix-generated"
+    },
     {
       "slug": "integrar-zendesk-con-whatsapp-business",
       "keyword": "integrar zendesk con whatsapp business",

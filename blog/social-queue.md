@@ -10609,3 +10609,18 @@ https://zeniapartners.com/blog/integrar-zendesk-con-whatsapp-business.html
 #WhatsAppBusinessAPI #Zendesk #SunshineConversations #SystemsEngineering
 
 ---
+## 2026-11-10 - Atención telefónica automática con IA
+
+650-850 ms p50 end-to-end latency. That is the number that decides whether an AI voice agent feels like a conversation or a robot.
+
+Stack we ship for SMB voice: Twilio SIP trunk → WebSocket to a GPT-4o-realtime / Gemini 2.5 Flash session → ElevenLabs TTS with barge-in → tool calls into HubSpot, Pipedrive, Google Calendar or Odoo via a FastAPI layer that writes the same CRM record our WhatsApp agent uses.
+
+Failure modes that actually matter in production: LLM provider outages (fallback to voicemail with WhatsApp transcript), SIP jitter above 40 ms (destroys the illusion), and silence detection tuned to Spanish filler words so the agent does not cut the caller off.
+
+First-call resolution lands at 55-80% depending on vertical; the remaining 20-45% transfers to a human with a summary pushed to Slack or Teams before the handoff rings.
+
+Full writeup with the 2026 price bands and the Spain legal piece: https://zeniapartners.com/blog/atencion-telefonica-automatica-con-ia.html
+
+#AIVoiceAgents #SystemsEngineering #WhatsAppBusinessAPI #SIP
+
+---

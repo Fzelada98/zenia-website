@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-11-10T06:05:00+00:00",
+  "lastRun": "2026-11-10T14:00:00+00:00",
   "posts": [
+    {
+      "slug": "agente-ia-para-osteopatas",
+      "keyword": "agente de ia para osteopatas",
+      "tier": 2,
+      "cluster": "healthcare-verticals",
+      "status": "published",
+      "date": "2026-11-10",
+      "source": "matrix-generated"
+    },
     {
       "slug": "atencion-telefonica-automatica-con-ia",
       "keyword": "atencion telefonica automatica con ia",

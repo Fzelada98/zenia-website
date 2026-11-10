@@ -10642,3 +10642,18 @@ Full technical writeup (EHR integration table, HIPAA posture, 2-week rollout): h
 #HealthIT #FHIR #HIPAA #WhatsAppBusinessAPI #SystemsEngineering
 
 ---
+## 2026-11-10 - EN - AI Agent for Osteopathy Clinics
+
+**Target: Zenia Partners company page - technical/B2B audience (CTOs, engineers, healthtech founders)**
+
+Osteopathy clinics look boring from the outside. The engineering job is interesting: Article 9 GDPR health data on WhatsApp, idempotent write-through to a calendar that is sometimes Google, sometimes Doctoralia, sometimes a legacy Access file, and a recall engine that has to re-engage patients 8, 12 and 24 weeks after their last session without sounding like a drip campaign.
+
+Stack we ship for a 2-5 practitioner clinic: WhatsApp Business API through a Meta-approved BSP -> realtime LLM session with a clinical-escalation guardrail (pregnancy, anticoagulants, acute pain keywords trigger human handoff before any scheduling tool-call) -> FastAPI layer that reconciles agenda state across Google Calendar + Doctoralia with a 409-retry budget of 2 before falling back to a human. DPA signed with every subprocessor, TLS 1.3 in transit, AES-256 at rest, 5-year retention policy exposed to the patient from within the chat thread.
+
+Three numbers from a Madrid clinic deployment: no-show 16% -> 6%, dormant-patient reactivation 18-24% at the 6-month mark, and 8-12 secretary hours a week reclaimed. p50 first-reply 42s during business hours, p95 under 90s at night.
+
+Full technical writeup (RGPD checklist, 2026 price bands, 4-week rollout): https://zeniapartners.com/blog/agente-ia-para-osteopatas.html
+
+#WhatsAppBusinessAPI #HealthTech #GDPR #SystemsEngineering
+
+---

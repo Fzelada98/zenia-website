@@ -10624,3 +10624,19 @@ Full writeup with the 2026 price bands and the Spain legal piece: https://zeniap
 #AIVoiceAgents #SystemsEngineering #WhatsAppBusinessAPI #SIP
 
 ---
+
+## 2026-11-10 — EN — AI Agent for ENT Clinics
+
+**Target: Zenia Partners company page — technical/B2B audience (CTOs, engineers, healthcare-platform teams)**
+
+An ENT front desk runs four schedules in parallel (consults, audiology, in-office procedures, allergy immunotherapy) on three or four different systems that rarely share state. The interesting engineering problem is not voice: it is idempotent writeback across ModMed EMA, Epic Cadence (FHIR R4 Scheduling/Appointment/Communication), athenahealth Marketplace and the audiology PM (Blueprint OMS or Sycle) without double-booking the same physical room.
+
+Stack we ship for a mid-size ENT group: Twilio SIP + WhatsApp Cloud API through a Meta-approved BSP → realtime LLM session with a hard-coded first-question rule for laterality and onset-timing (critical for sudden sensorineural hearing loss escalation) → FastAPI tool layer that resolves the right schedule (provider, audiologist, procedure room, shot nurse) before it writes, with 409-conflict retries bounded to 2.
+
+Three numbers from a 4-provider Midwest deployment on ModMed EMA: median referral-to-contact 51h → 16 min, hearing-aid 30-day fine-tune attendance 68% → 86%, surgery preop confirmation 74% → 96%. BAA covers the LLM provider, telephony carrier, BSP and transcript store; audit log retention set to 6 years per HIPAA policy.
+
+Full technical writeup (EHR integration table, HIPAA posture, 2-week rollout): https://zeniapartners.com/blog/ai-agent-for-ent-clinics.html
+
+#HealthIT #FHIR #HIPAA #WhatsAppBusinessAPI #SystemsEngineering
+
+---

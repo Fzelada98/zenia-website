@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-11-09T17:12Z",
+  "lastRun": "2026-11-10T07:45Z",
   "market": "US/UK small business",
   "posts": [
     {
@@ -1025,7 +1025,9 @@
       "keyword": "ai agent for ent clinics",
       "tier": 3,
       "cluster": "healthcare",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-11-10",
+      "note": "Tier-3 pending build (no uncovered English striking queries remaining: 'crm for dentists' already has /blog/crm-for-dentists.html head-on, 'ai receptionist for videographers' already has /blog/ai-receptionist-for-videographers.html head-on). 2,576-word US ENT front-desk guide. 4 parallel schedules framed (referrals, audiology, in-office procedures, allergy shots) with Black Book 2025/2026 ranking context (ModMed 9.4 standout for ENT; ENT & Allergy Associates Epic migration Feb 2026). 5-workflow playbook: referral triage with sudden SNHL and airway rules, audiology slot protection + hearing-aid 30/90-day fine-tune ladder, in-office procedure prep (balloon sinuplasty, laryngoscopy, cerumen, pediatric tubes), allergy immunotherapy 6-month adherence, overflow/after-hours with sudden-hearing-loss escalation. 90-day case study on 4-provider Midwest ENT group on ModMed EMA with in-house audiology and allergy: call abandon 23->4%, referral-to-contact 51h->16min, new-consult no-show 18->9%, audiology fit-day 14->6%, hearing-aid 30-day fine-tune 68->86%, in-office procedure day-of cancel 11->4%, allergy-shot 6-mo adherence 57->78%, surgery preop confirmation 74->96%, ~$148.2k incremental over 90 days on $8.9k setup+3mo platform. Integration table: ModMed EMA (standout), Epic App Orchard FHIR R4, athenahealth Marketplace, eClinicalWorks HL7, NextGen Share, plus Blueprint OMS/Sycle for standalone audiology. HIPAA posture checklist (BAA, TLS 1.2+, AES-256, RBAC/SSO/MFA, audit logging, consent capture, 60-day breach-notification runbook). 2026 US pricing bands ($349-$4,900+/mo). 2-week rollout plan with phased workflow activation. 5 KPIs (median referral-to-contact, new-consult/audiology no-show, surgery preop confirmation, hearing-aid 30/90-day fine-tune attendance, allergy-shot 6-mo adherence). No chatbot language, no em-dashes."
     },
     {
       "slug": "ai-agent-for-plastic-surgeons",

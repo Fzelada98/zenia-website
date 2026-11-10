@@ -10657,3 +10657,19 @@ Full technical writeup (RGPD checklist, 2026 price bands, 4-week rollout): https
 #WhatsAppBusinessAPI #HealthTech #GDPR #SystemsEngineering
 
 ---
+
+## 2026-11-10 - EN - AI Agent for Boxing Gyms
+
+**Target: Zenia Partners company page - technical/B2B audience (CTOs, engineers, fitness-platform teams)**
+
+A boxing gym looks like a simple booking problem until you look at the schedule: three distinct resource pools (group-class slots, one-on-one coach pad sessions, open-gym access) that live on different ends of Mindbody, Zen Planner, TeamUp, PushPress or Gymdesk, plus the kids program on a waiver-gated age gate that half the vendor APIs do not expose cleanly.
+
+Stack we ship for a mid-size US boxing gym: Twilio SIP + WhatsApp Cloud API through a Meta-approved BSP -> realtime LLM session with hard-coded first-question rules (age for Kids Boxing, waiver status for sparring, experience level for intro vs conditioning) -> FastAPI tool layer that resolves the right resource (coach, bag station, ring) before the writeback with 409-conflict retries bounded to 2 and a Stripe $20 hold on trial-class booking so the confirmation is settled before the row lands in the PMS.
+
+Three numbers from a 2-location Dallas deployment (420 active members, PushPress + Mindbody + Zen Planner across the sites): group-class no-show 19% -> 9%, failed-billing recovery within 7 days 41% -> 88% (10-minute dunning window on card decline via WhatsApp template), and private pad-session no-show 14% -> 6%. p50 first-reply 38s on inbound, TCPA opt-in and STOP keyword honored within 60s on outbound SMS.
+
+Full technical writeup (booking-platform integration table, 2026 pricing bands, 2-week rollout, 5 KPIs): https://zeniapartners.com/blog/ai-agent-for-boxing-gyms.html
+
+#FitTech #WhatsAppBusinessAPI #SystemsEngineering #PaymentOrchestration
+
+---

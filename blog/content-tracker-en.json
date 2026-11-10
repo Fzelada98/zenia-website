@@ -1074,7 +1074,9 @@
       "keyword": "ai agent for boxing gyms",
       "tier": 3,
       "cluster": "fitness",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-11-10",
+      "note": "Tier-3 pending build. No uncovered EN striking queries remained (all qualifying English queries from seo/striking-latest.md already have dedicated head-on pages: /blog/crm-for-dentists.html for 'crm for dentists', /blog/ai-receptionist-for-videographers.html for 'ai receptionist for videographers', /blog/ai-agent-for-photographers.html + /blog/ai-receptionist-for-photographers.html for 'ai receptionist for photographers'). 2,455-word US-focused build. 2-location Dallas boxing+MMA case study (420 members on PushPress/Mindbody/Zen Planner mix: phone answer 64% to 99% staffed and 0% to 97% after-hours, trial attended 33% to 69%, group no-show 19% to 9%, private pad no-show 14% to 6%, churn 7.2% to 4.8% monthly, failed-billing recovery 41% to 88% in 7 days, 23 dormant reinstated, ~$34,804 incremental over 90 days on $2,788 platform spend = net ~$32k). Booking-platform integration table (Mindbody, Zen Planner, TeamUp, PushPress, WellnessLiving, Gymdesk with 2026 starter pricing). 5-step automation launch order (trial-class booking with $20 hold, 48h/2h confirmation cadence, waitlist spot-fill, failed-billing recovery, dormant reactivation). Guardrails: no medical/injury advice, no sparring approval, age-gated Kids Boxing, waiver first, TCPA/CTIA compliance on SMS. Pricing bands $297-$897+/mo, 2-week rollout, 5 KPIs. HFA 66% retention benchmark cited; Les Mills 15% group-fitness no-show average cited. No chatbot language, no em-dashes. Cross-linked to ai-agent-for-gyms, ai-powered-member-retention-for-gyms, ai-agent-for-martial-arts-schools, ai-agent-for-crossfit-boxes, gym-crm-with-ai."
     },
     {
       "slug": "ai-agent-for-climbing-gyms",

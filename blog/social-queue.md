@@ -10673,3 +10673,18 @@ Full technical writeup (booking-platform integration table, 2026 pricing bands, 
 #FitTech #WhatsAppBusinessAPI #SystemsEngineering #PaymentOrchestration
 
 ---
+## 2026-11-10 - EN - WhatsApp Business Auto-Reply Layers
+
+**Target: Zenia Partners company page - technical/B2B audience (CTOs, platform engineers, founders shipping conversational AI)**
+
+Everyone collapses "WhatsApp auto-reply" into one bucket. Operationally there are three, and the cost and failure modes are nothing alike: (1) WhatsApp Business app rules (fixed-text welcome + away + 50 quick-replies, single device, no API), (2) WhatsApp Cloud API through a Meta-approved BSP with template categories (marketing/utility/authentication/service) and per-conversation pricing, (3) an LLM-driven agent on top of that API that reads intent and calls tools.
+
+Stack we ship for layer 3 on a Madrid pilot: WhatsApp Cloud API via a BSP -> inbound webhook queue with idempotency keys -> realtime LLM session with a routing guardrail (template-eligible categories gated by Meta category rules before any send fires) -> FastAPI tool layer resolving the right calendar/catalogue/CRM write with 409-retry budget of 2 -> explicit human handoff with full context on three triggers (low-confidence intent, category mismatch, explicit customer ask). p50 first-reply 42s per Zendesk CX Trends 2026; a human-only baseline lands near 3.2 min.
+
+Two numbers that matter more than p50: 70-85% of first-contact conversations close inside the agent without a handoff, and the conversation-category drift (utility sent as marketing) that gets accounts flagged by Meta drops to zero once template approval is gated in the tool layer instead of the prompt. The surprise: the cost line is almost never the LLM, it is the Meta per-conversation fee on marketing templates, so throttling template sends by intent score pays for itself in month one.
+
+Full writeup with the comparison table and pricing bands: https://zeniapartners.com/blog/respuestas-automaticas-whatsapp-business.html
+
+#WhatsAppBusinessAPI #ConversationalAI #SystemsEngineering #LLMOps
+
+---

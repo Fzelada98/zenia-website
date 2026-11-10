@@ -10611,6 +10611,8 @@ https://zeniapartners.com/blog/integrar-zendesk-con-whatsapp-business.html
 ---
 ## 2026-11-10 - Atención telefónica automática con IA
 
+<!-- PUBLISHED:make-webhook at 2026-11-10T09:30:03Z -->
+
 650-850 ms p50 end-to-end latency. That is the number that decides whether an AI voice agent feels like a conversation or a robot.
 
 Stack we ship for SMB voice: Twilio SIP trunk → WebSocket to a GPT-4o-realtime / Gemini 2.5 Flash session → ElevenLabs TTS with barge-in → tool calls into HubSpot, Pipedrive, Google Calendar or Odoo via a FastAPI layer that writes the same CRM record our WhatsApp agent uses.

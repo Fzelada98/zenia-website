@@ -10688,3 +10688,18 @@ Full writeup with the comparison table and pricing bands: https://zeniapartners.
 #WhatsAppBusinessAPI #ConversationalAI #SystemsEngineering #LLMOps
 
 ---
+## 2026-11-11 - EN - Best CRM for Dental Clinics in Madrid
+
+**Target: Zenia Partners company page - technical/B2B audience (CTOs, healthtech engineers, founders building vertical AI)**
+
+Dental clinic CRM comparisons in the Spanish market (Gesden ONE, Clinic Cloud, Dentalink, Pabau) argue about odontogram UX and license pricing, which is the wrong fight. The CRM is not where the leak is. In a Madrid clinic with 1,800 active patients and 55-90 EUR CPL on ortho/implant ads, the leak is between Meta/Google ad click and the moment a human sees the WhatsApp message - typical lag is 4-11 hours during peak campaign weeks.
+
+Stack we ship for a dental clinic in Madrid: WhatsApp Business API through a Meta-approved BSP -> realtime LLM session with a clinical-escalation guardrail (urgencia, dolor agudo, embarazo, anticoagulantes trigger human handoff before any scheduling tool-call) -> FastAPI layer that reconciles agenda state with the Gesden ONE / Clinic Cloud API and handles 409-retries with a budget of 2, falling back to a human slot hold. Article 9 GDPR (health data) forces EU-only servers, a signed DPA with every subprocessor, TLS 1.3 in transit, AES-256 at rest, and the clinical record never leaves the practice management system - the agent only reads availability and writes an appointment id.
+
+Numbers from the comparative: dental software market in Spain 78.3M USD in 2024 -> 251M USD by 2035, CAGR ~11% (MarketResearchFuture). Gartner reports conversational AI agents qualify leads 35% faster than form-to-email-to-call. p50 first-reply 44s during business hours, p95 under 75s overnight on our Madrid deployments.
+
+Full technical writeup (comparative table with 5 systems, EU-server checklist, 4-week rollout): https://zeniapartners.com/blog/mejor-crm-para-clinicas-dentales-en-madrid.html
+
+#HealthTech #WhatsAppBusinessAPI #GDPR #SystemsEngineering
+
+---

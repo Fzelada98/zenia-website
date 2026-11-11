@@ -10690,6 +10690,8 @@ Full writeup with the comparison table and pricing bands: https://zeniapartners.
 ---
 ## 2026-11-11 - EN - Best CRM for Dental Clinics in Madrid
 
+<!-- PUBLISHED:make-webhook at 2026-11-11T09:30:05Z -->
+
 **Target: Zenia Partners company page - technical/B2B audience (CTOs, healthtech engineers, founders building vertical AI)**
 
 Dental clinic CRM comparisons in the Spanish market (Gesden ONE, Clinic Cloud, Dentalink, Pabau) argue about odontogram UX and license pricing, which is the wrong fight. The CRM is not where the leak is. In a Madrid clinic with 1,800 active patients and 55-90 EUR CPL on ortho/implant ads, the leak is between Meta/Google ad click and the moment a human sees the WhatsApp message - typical lag is 4-11 hours during peak campaign weeks.

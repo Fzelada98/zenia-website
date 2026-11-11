@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-11-10T07:45Z",
+  "lastRun": "2026-11-11T07:45Z",
   "market": "US/UK small business",
   "posts": [
     {
@@ -1083,7 +1083,9 @@
       "keyword": "ai agent for climbing gyms",
       "tier": 3,
       "cluster": "fitness",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-11-11",
+      "note": "Tier-3 pending build from tracker. No uncovered English striking queries remained in seo/striking-latest.md: 'crm for dentists' already has /blog/crm-for-dentists.html head-on, 'ai receptionist for videographers' already has /blog/ai-receptionist-for-videographers.html head-on, 'ai receptionist for photographers' already has /blog/ai-receptionist-for-photographers.html head-on, 'click to chat ads' already has /blog/click-to-chat-ads-guide.html head-on. 2,373-word US climbing gym front-desk guide. CBJ Gyms and Trends Report 2026 context (53 new NA gyms in 2025, 4.7% net growth, 73% operators reported worsening conditions, 61% expect revenue improvement in 2026 driven by youth programming and retention) and IBISWorld $682m / 574 US facilities 2026 sizing. 5-workflow AI agent playbook (day-pass and first-visit intake with auto-belay vs orientation vs belay-check routing, belay-test slot protection with 24h/2h reminders and failed-test fallback path, youth team and rec class seasonal rosters with waitlist auto-promotion and USA Climbing age-group capture, party and group bookings with deposit at booking and group-waiver links plus corporate tier, overflow and after-hours call handling with callback transcripts). 90-day case study on a 2-location Denver-area climbing gym (Vertex Climbing Collective, 32k sq ft total, 1,460 members on Rock Gym Pro + Approach + Stripe: call abandon 17->3%, median first-response 6h22m->48s, day-pass to in-gym 47->66%, belay-test slot fill 71->94%, party inquiry to booked deposit 7-day 38->62%, youth team Fall unfilled seats 14->1, after-hours capture 22->97%, 142 captured after-hours WhatsApp conversations with 14 converting to member sign-ups, 23 reactivated lapsed members, ~$63,200 incremental over 90 days on $7,800 platform spend). Integration table: Rock Gym Pro (custom quote), Approach (custom quote, 99.9% uptime), Mindbody (from $169/mo), WellnessLiving (from $99/mo), Zen Planner (from $117/mo), Roller (custom quote), EasyWeek (from $29/mo). 6 climbing-specific guardrails (no belay certification over text, no skipping waiver, no minor sign-in without parent waiver, no medical or injury advice, no cancellation without human review, voice-AI disclosure). 2026 US pricing bands $249-$1,800+/mo, setup $1,500-$4,500. 2-week rollout plan with shadow mode. 5 KPIs (median first-response, belay-test slot fill, party conversion, youth team seasonal fill, after-hours capture). Cross-linked to ai-agent-for-gyms, gym-crm-with-ai, ai-powered-member-retention-for-gyms, ai-agent-for-martial-arts-schools, ai-agent-for-crossfit-boxes, ai-agent-for-boxing-gyms. No chatbot language, no em-dashes."
     },
     {
       "slug": "ai-agent-for-swim-schools",

@@ -10703,3 +10703,15 @@ Full technical writeup (comparative table with 5 systems, EU-server checklist, 4
 #HealthTech #WhatsAppBusinessAPI #GDPR #SystemsEngineering
 
 ---
+
+## 2026-11-11 — AI Agent for Climbing Gyms (EN, LinkedIn → Zenia Partners company page)
+
+How we architect the front-desk AI agent for a US climbing gym: WhatsApp Business API (Meta-approved BSP) + inbound voice SIP trunk -> realtime LLM session with a liability guardrail layer (belay-check never auto-approved, waiver gate blocks confirmation, minor sign-in forces parent flow) -> FastAPI layer that reads and writes against Rock Gym Pro's public API and Approach's REST endpoints in parallel, with webhook reconciliation for slot state and an idempotent deposit-collection path through Stripe. Two-sided writeback: membership + check-in on Rock Gym Pro, class and team roster on Approach. Voice-AI disclosure fires at session open where state law requires it.
+
+Numbers from a 2-location Denver-area deployment (1,460 members): p50 first-reply 48s across voice, WhatsApp and web chat; call abandonment 17 -> 3 percent in the 5-9 PM window; belay-test slot fill 71 -> 94 percent; after-hours capture 22 -> 97 percent across 142 inbound conversations. CBJ's 2026 Gyms and Trends Report has the macro: 73 percent of operators reported worsening conditions, and the growth that is still happening is in youth programming and retention - both front-desk-heavy.
+
+Full architecture writeup (5-workflow playbook, Rock Gym Pro / Approach integration table, guardrails, 2-week rollout): https://zeniapartners.com/blog/ai-agent-for-climbing-gyms.html
+
+#AIAgents #WhatsAppBusinessAPI #SystemsEngineering #RockGymPro
+
+---

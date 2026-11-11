@@ -10728,3 +10728,17 @@ Full technical writeup (comparison table of Odoo/Housecall Pro/ZenMaid/Zenia sta
 #CRM #WhatsAppBusinessAPI #SystemsEngineering #FieldService
 
 ---
+
+## 2026-11-11 - AI agent for swim schools (EN)
+
+Swim school front desks are airlines: three fleets (fall/spring sessions, summer intensives, a rolling waitlist), make-up credits, weather closures, and the whole parent conversation clustered after 8 PM.
+
+We built the integration layer on top of iClassPro and Jackrabbit Swim (and the long tail: Classcard, Omnify, Mindbody, LeadSquared). The agent runs on inbound phone + WhatsApp Business API with Meta-approved templates for weather closure, 24h reminder, re-enrollment hold and waitlist offer. State machine is five workflows: level-screened trial booking with deposit hold, top-2 waitlist auto-promotion on a 90-minute deadline, make-up credit with cross-session roll and expiry tag, closure broadcast inside 10 minutes of the owner's decision, and a 72-hour same-slot re-enrollment hold seeded 3 weeks before session end. Everything writes back to the student management system so iClassPro remains source of truth.
+
+90-day run at a 2-pool / 800-student Charlotte school: median first-response 4h 12m to 38s, waitlist seat-to-filled 2.1 days to 7h median (94% inside 24h), session-to-session re-enrollment 63 to 81%.
+
+https://zeniapartners.com/blog/ai-agent-for-swim-schools.html
+
+#WhatsAppBusinessAPI #iClassPro #JackrabbitSwim #SystemsEngineering #ConversationalAI
+
+---

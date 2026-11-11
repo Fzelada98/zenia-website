@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-11-11T06:00:00+00:00",
+  "lastRun": "2026-11-11T14:00:00+00:00",
   "posts": [
     {
       "slug": "mejor-crm-para-clinicas-dentales-en-madrid",
@@ -4916,6 +4916,15 @@
       "status": "published",
       "date": "2026-11-09",
       "source": "matrix-expansion"
+    },
+    {
+      "slug": "crm-para-empresas-de-limpieza",
+      "keyword": "CRM para empresas de limpieza",
+      "tier": 2,
+      "cluster": "servicios profesionales",
+      "status": "published",
+      "date": "2026-11-11",
+      "source": "generated"
     }
   ]
 }

@@ -10717,3 +10717,14 @@ Full architecture writeup (5-workflow playbook, Rock Gym Pro / Approach integrat
 #AIAgents #WhatsAppBusinessAPI #SystemsEngineering #RockGymPro
 
 ---
+## 2026-11-11 — CRM for Cleaning Companies (EN, LinkedIn → Zenia Partners company page)
+
+How we ship a CRM stack for a Spanish cleaning SMB with 40 cleaners across 65 recurring sites: Odoo-based data model (client → site → service → shift → signed worksheet) with a FastAPI write layer in front → WhatsApp Business API (Meta-approved BSP) for inbound incidents, quote requests and absence-reports → realtime LLM session with a routing guardrail (unknown surface, over-15m scaffolding, or price-outside-catalogue triggers human handoff before any confirmation) → mobile PWA for cleaners with geofenced clock-in, worksheet signature and before/after photos uploaded over a background queue that survives the lift-ride dead zone. VeriFactu 2026 is enforced at the invoice-emission step, EU-only servers, AES-256 at rest, signed DPA with every subprocessor.
+
+Numbers from our cleaning-SMB deployments: p50 WhatsApp first-reply 51s, p95 under 90s; same-day worksheet-closure 60 → 95 percent once the PWA replaces WhatsApp photos; invoice cycle 10-15 days → under 48h. Macro context from Informa DBK (2026): Iberian cleaning services market €16B in 2024, +6.5 percent YoY, top-5 players hold only 16 percent — long tail of 26,800+ SMBs on CNAE 812 running Excel plus WhatsApp personal, which is where the architecture matters most.
+
+Full technical writeup (comparison table of Odoo/Housecall Pro/ZenMaid/Zenia stack, 4-week rollout, VeriFactu integration points): https://zeniapartners.com/blog/crm-para-empresas-de-limpieza.html
+
+#CRM #WhatsAppBusinessAPI #SystemsEngineering #FieldService
+
+---

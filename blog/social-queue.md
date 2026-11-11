@@ -10742,3 +10742,16 @@ https://zeniapartners.com/blog/ai-agent-for-swim-schools.html
 #WhatsAppBusinessAPI #iClassPro #JackrabbitSwim #SystemsEngineering #ConversationalAI
 
 ---
+## 2026-11-11 — AI Agent for Geriatric Residences (EN, LinkedIn → Zenia Partners company page)
+
+How we ship an AI agent for a 90-bed Spanish geriatric residence: three isolated WhatsApp Business API flows (authorized next-of-kin, new-placement lead qualification, external medical scheduling) sitting on top of the existing care-management system (Resiplus / ADD / Residentia / Social&Gob) via REST where modern and a webhook + Google Sheets shim where not. The LLM runtime has a hard clinical boundary: any token that matches the medical-escalation grammar (symptom, medication, vital, fall, "hospital") shortcircuits to on-call nursing before the model can finalize a draft — zero model-generated clinical content leaves the service. Identity gate matches inbound phone to the authorized-contact table (hourly sync from the care system); unknown numbers get a human-only queue, never a generated reply.
+
+Infra details that matter: Meta BSP for the API, EU-only inference endpoints, 12-month conversation retention default, signed Art. 28 DPA with every subprocessor including the model vendor, append-only audit trail on all agenda writes with "AI, authorized by reception" as the actor. Benchmarks we hold to in prod: p50 admin-reply 38s on inbound, p95 under 70s; clinical-grammar precision ≥ 99.3% in red-team tests before go-live; hourly contact-list drift reconcile < 500ms per 1000 residents.
+
+Market context: Alimarket 2026 report puts 528 new geriatric projects in flight in Spain as of June 2026, with the IDIS 2025 sociosanitario report noting 43.1% of the sector reports knowing no tech innovation at all — an unusually wide delta between demand and software maturity.
+
+Full architecture writeup (flow table per persona, GDPR Art. 9 handling, 5-week rollout, care-system integration patterns): https://zeniapartners.com/blog/agente-ia-para-residencias-de-ancianos.html
+
+#WhatsAppBusinessAPI #ConversationalAI #SystemsEngineering #HealthTech
+
+---

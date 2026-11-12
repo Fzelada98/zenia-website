@@ -1,6 +1,14 @@
 {
-  "lastRun": "2026-11-12T14:00:00+00:00",
+  "lastRun": "2026-11-12T22:00:00+00:00",
   "posts": [
+    {
+      "slug": "doble-opt-in-whatsapp-business",
+      "keyword": "doble opt-in whatsapp business",
+      "tier": 2,
+      "cluster": "whatsapp-cumplimiento",
+      "status": "published",
+      "date": "2026-11-12"
+    },
     {
       "slug": "integrar-stripe-con-whatsapp-business",
       "keyword": "integrar stripe con whatsapp business",

@@ -10809,3 +10809,19 @@ Full writeup with integration table, nine inquiry types, pricing bands and 14-da
 #WhatsAppBusinessAPI #ConversationalAI #SystemsEngineering #EventTech
 
 ---
+
+## 2026-11-12 — Doble Opt-in on WhatsApp Business (ES post, EN LinkedIn → Zenia Partners company page)
+
+Double opt-in on WhatsApp Business, implemented as infrastructure not UI.
+
+The pipeline we run on client deployments: web form (never a pre-checked box) → event bus → WhatsApp Business API template in the UTILITY category, pre-approved by Meta, p95 dispatch under 2s → agent reads the SI / NO / BAJA / STOP reply in Spanish, English or Portuguese → CRM row updated with form_url, UA, timestamps, template_id and verbatim response body.
+
+Triple evidence per contact. One Postgres column for consent_state (opted_in | opted_out | pending), one retention job that sweeps pending → opted_out after 15 days, one webhook that revokes future UTILITY and MARKETING templates on any opt-out keyword within 60s SLA.
+
+Meta's November 2024 policy relaxed the channel-specific opt-in wording, but GDPR Art. 7.1 still requires provable consent. The second confirmation inside the channel is what closes that evidentiary gap for EU shipments and keeps the number's quality rating in the green band.
+
+Full write-up on how we wire it on WhatsApp Business API + CRM: https://zeniapartners.com/blog/doble-opt-in-whatsapp-business.html
+
+#WhatsAppBusinessAPI #GDPR #B2B #Infrastructure #ConversationalAI
+
+---

@@ -10796,3 +10796,16 @@ Full writeup with the 4-option comparison table, cost breakdown and common failu
 #WhatsAppBusinessAPI #Stripe #Payments #SystemsEngineering
 
 ---
+## 2026-11-12 — AI Agent for DJ Services (EN, LinkedIn → Zenia Partners company page)
+
+How we build an AI agent for a US mobile DJ company that books weddings, corporate events and private parties. Inbound surfaces are consolidated into one WhatsApp Business API inbox (The Knot, WeddingWire, Instagram DM, web form, Twilio Voice with TCPA-compliant AI disclosure at the open), and a single event-state machine writes through to the DJ CRM (Gigbuilder, DJ Event Planner, DJ Intelligence, HoneyBook or Check Cherry) over webhook plus REST. Dates are never held in the agent's working memory; the Stripe deposit webhook is the source of truth, which eliminates the "I thought you held it" class of race conditions during peak wedding season.
+
+Runtime boundaries we hold: no DJ-by-name commitment before the deposit payment_intent transitions to succeeded, no quote below the package floor, no uncontracted add-ons (cold spark, 360 booth, dancing on the clouds), do-not-play list edits human-gated, no card data over voice. All seven guardrails are enforced in tool-selection middleware, not just in the system prompt.
+
+Benchmarks on a 90-day 2-DJ Nashville deployment (62 weddings + 38 corporate + 31 private parties per year): p50 first-reply 4h 18m business and 11h 40m after-hours to 42s all-hours, no-reply rate 14% to 0%, inquiry-to-deposit 19 to 34%, planning-meeting auto-book 71% median 11 minutes, timeline-and-song returns 44 to 92% at 14 days out, final-balance on-time 61 to 94%, ~$52.8k net 90-day revenue lift on $2,691 platform spend.
+
+Full writeup with integration table, nine inquiry types, pricing bands and 14-day rollout: https://zeniapartners.com/blog/ai-agent-for-dj-services.html
+
+#WhatsAppBusinessAPI #ConversationalAI #SystemsEngineering #EventTech
+
+---

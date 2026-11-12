@@ -10781,3 +10781,18 @@ Full stack writeup (integration table, 9 intake conversation types, pricing band
 #WhatsAppBusinessAPI #ConversationalAI #SystemsEngineering #EdTech
 
 ---
+## 2026-11-12 — Integrar Stripe con WhatsApp Business (ES post, EN LinkedIn → Zenia Partners company page)
+
+How we wire Stripe into a WhatsApp Business API deployment for a Spain/LATAM SMB in late 2026, with native WhatsApp Pay via Stripe still Singapore-only per Stripe's own announcement.
+
+Reference architecture: Cloud API number → IA agent cualifies inside the 24h service window → backend calls POST /v1/payment_links with phone + conversation metadata → short-lived link sent as free text while the window is open, or wrapped in a UTILITY HSM template when it isn't. Webhook listener verifies the Stripe-Signature header, matches checkout.session.completed to the conversation_id, writes the payment to the CRM, and fires a confirmation HSM only if the window closed meanwhile.
+
+Three boundaries we hold in production: no card data ever transits WhatsApp (Stripe Checkout keeps PCI DSS scope to the Stripe boundary), every payment reconciles against Stripe not against the chat message (customers can delete messages, webhooks are the source of truth), and each Payment Link is single-customer with metadata so refunds and disputes don't cross-contaminate.
+
+Latency we see in a typical deployment: p50 first reply 2.8s, link generation 180ms, Stripe webhook to confirmation message 1.2s end-to-end. Four-week rollout from kickoff to production, including HSM template approval by Meta (the usual bottleneck, 24-72h per template).
+
+Full writeup with the 4-option comparison table, cost breakdown and common failure modes: https://zeniapartners.com/blog/integrar-stripe-con-whatsapp-business.html
+
+#WhatsAppBusinessAPI #Stripe #Payments #SystemsEngineering
+
+---

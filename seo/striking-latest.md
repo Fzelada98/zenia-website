@@ -2,6 +2,9 @@
 
 Consultas donde zeniapartners.com ya imprime en posición 4-30 (últimos 8 días). Prioridad para contenido nuevo/refuerzo.
 
+**2026-11-12 refuerzo cluster `crm para asesorias` (90 impresiones, pos 19):** nuevo post complementario en [software para asesorias contables](/blog/software-para-asesorias-contables.html). Enlaza desde las páginas que ya imprimen a este nuevo artículo para reforzar la red interna.
+
+
 | Posición | Impresiones | Consulta | Página que imprime |
 |---|---|---|---|
 | 19.0 | 90 | crm para asesorias | /blog/mejor-crm-para-asesorias.html |

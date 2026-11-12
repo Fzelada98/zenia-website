@@ -10755,3 +10755,14 @@ Full architecture writeup (flow table per persona, GDPR Art. 9 handling, 5-week 
 #WhatsAppBusinessAPI #ConversationalAI #SystemsEngineering #HealthTech
 
 ---
+## 2026-11-12 — Software para Asesorías Contables en 2026 (EN, LinkedIn → Zenia Partners company page)
+
+How we bolt a real AI layer on top of A3ASESOR, Sage 50, Holded, Contasol, Quipu or Anfix without replacing any of them: WhatsApp Business API as the single inbound surface, an LLM agent that reads live state over each vendor's REST API (model 303 status, last 111 filed, pending Verifactu receipts, outstanding documents from the client portal), and a small CRM layer that attributes every reply back to the client file in the contabilidad stack. The agent never writes into the accounting ledger: it drafts, reads and queues. Writes stay with the human técnico, which keeps audit and ROF compliance one-way and clean.
+
+Infra constraints that actually matter for a Spanish asesoría in 2026: Verifactu is mandatory for sociedades since 2026-01-01 and for autónomos in IRPF since 2026-07-01 (AEAT), so every read path must round-trip through the vendor's Verifactu endpoint for signed receipts, not scraped PDFs. EU-only inference, 12-month conversation retention default, signed Art. 28 DPA per subprocessor, append-only audit trail on every drafted reply with the técnico who approved it. Runtime targets we hold to in prod: p50 reply-latency under 60s during business hours, under 10 minutes off-hours; 55–70% of inbound traffic auto-resolves without touching a técnico in observed asesorías; hourly contact-list drift reconcile under 500ms per 1000 clients.
+
+Full stack writeup (vendor API matrix, what to ask before signing, the Verifactu plumbing, the Zenia Partners pricing at 997 € setup + 297 €/mes starter): https://zeniapartners.com/blog/software-para-asesorias-contables.html
+
+#WhatsAppBusinessAPI #SystemsEngineering #ConversationalAI #A3ASESOR
+
+---

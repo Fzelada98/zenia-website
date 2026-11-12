@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-11-11T22:00:00+00:00",
+  "lastRun": "2026-11-12T06:00:00+00:00",
   "posts": [
+    {
+      "slug": "software-para-asesorias-contables",
+      "keyword": "software para asesorias contables",
+      "tier": 2,
+      "cluster": "crm-vertical-asesoria",
+      "status": "published",
+      "date": "2026-11-12",
+      "source": "striking-cluster-reinforcement"
+    },
     {
       "slug": "agente-ia-para-residencias-de-ancianos",
       "keyword": "agente de IA para residencias de ancianos",

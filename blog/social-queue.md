@@ -10766,3 +10766,16 @@ Full stack writeup (vendor API matrix, what to ask before signing, the Verifactu
 #WhatsAppBusinessAPI #SystemsEngineering #ConversationalAI #A3ASESOR
 
 ---
+## 2026-11-12 — AI Agent for College Consultants (EN, LinkedIn → Zenia Partners company page)
+
+How we architect an AI agent for a US independent educational consultant (IEC) practice: WhatsApp Business API + voice as the single inbound surface, with REST writeback into CollegePlannerPro, Maia Learning, Scoir, or a Google Sheet when the practice has no PM tool. State machine is single-threaded per student record, with a 7-question qualification flow in the first 60 seconds (grade level, start year, GPA band, test plan, school list, budget band, parent decision-maker), then a live Calendly-booked discovery call. Milestone nurture is tied to an external deadline calendar (Common App Aug 1, FAFSA Oct 1, ED deadline, mid-year report Feb 15) rather than relative days, so the cadence survives a reschedule.
+
+Hard runtime boundaries we hold to: the model never speculates on admit chances for a named school, never generates essay feedback, never guarantees outcomes, and never collects SSN/DACA status in free text. Any token matching that grammar shortcircuits to the consultant. Identity gate is single-student scoped; cross-family context is unreachable by construction, not by prompt discipline.
+
+Benchmarks on an 11-month 2-consultant Boston-area deployment: p50 first-reply 38s across channels (vs 14h 22m baseline), inbound 318 → 346 with no new ad spend (review-loop driven), discovery calls 112 → 191, discovery-to-signed-contract 38 → 46%, admin hours 11-14 → 3-4 per week, ~$400k incremental revenue on ~$7,400 all-in (Meta BSP + voice minutes + agent subscription + setup).
+
+Full stack writeup (integration table, 9 intake conversation types, pricing bands, 14-day rollout with shadow mode): https://zeniapartners.com/blog/ai-agent-for-college-consultants.html
+
+#WhatsAppBusinessAPI #ConversationalAI #SystemsEngineering #EdTech
+
+---

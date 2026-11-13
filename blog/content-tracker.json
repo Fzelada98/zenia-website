@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-11-13T06:00:00+00:00",
+  "lastRun": "2026-11-13T22:00:00+00:00",
   "posts": [
+    {
+      "slug": "carta-digital-para-restaurantes",
+      "keyword": "carta digital para restaurantes",
+      "tier": 1,
+      "cluster": "restaurantes-carta-digital",
+      "status": "published",
+      "date": "2026-11-13",
+      "source": "striking"
+    },
     {
       "slug": "proveedor-whatsapp-business-api-espana",
       "keyword": "proveedor whatsapp business api espana",

@@ -10854,3 +10854,19 @@ Full architecture, POS integration table and 14-day rollout: https://zeniapartne
 #WhatsAppBusinessAPI #ConversationalAI #SystemsEngineering #POS
 
 ---
+## 2026-11-13 — Carta digital para restaurantes (ES post, EN LinkedIn → Zenia Partners company page)
+
+Most "digital menu" vendors stop at the QR landing page. The ticket-size lift comes from what sits behind it.
+
+Architecture we ship for Spanish restaurants: short-lived signed URL on the QR (rotated per-table, 72h TTL) resolves to a pre-rendered menu page under 180 KB served from a CDN, so time-to-first-byte stays under 400 ms on a 4G phone. The "ask about this dish" and "book another day" buttons deep-link to WhatsApp Business Cloud API with the dish SKU and table id prefilled in the first message body. An LLM-driven agent pulls allergens from the POS catalog (Toast, Revel, Hostfact, Camarero10) and availability from the reservation system (CoverManager, TheFork, Resy, or a Postgres fallback) through typed tool calls, and writes every turn to the CRM keyed by phone hash.
+
+Hard rules enforced in the tool layer, not the prompt: no allergen clearance without a per-SKU signed-off flag, no booking confirmed before availability lock + hold token, no price override, no pricing with VAT excluded (EU 1169/2011 and RD 126/2015). Catalan is required when the venue sits in Cataluña (Ley 1/1998 art. 32.3).
+
+Observed performance band from vendor data (Goomer, Menu Tiger): +10 to +25 percent average ticket on casual and café formats, with the lift concentrated where the QR triggers an LLM response in under 60 seconds.
+
+Full comparison of QR / tablet / app formats, cost table and 5-day rollout: https://zeniapartners.com/blog/carta-digital-para-restaurantes.html
+
+#RestaurantTech #WhatsAppBusinessAPI #ConversationalAI #SystemsEngineering
+
+---
+

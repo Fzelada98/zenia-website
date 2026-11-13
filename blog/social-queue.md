@@ -10644,6 +10644,8 @@ Full technical writeup (EHR integration table, HIPAA posture, 2-week rollout): h
 ---
 ## 2026-11-10 - EN - AI Agent for Osteopathy Clinics
 
+<!-- PUBLISHED:make-webhook at 2026-11-13T09:30:06Z -->
+
 **Target: Zenia Partners company page - technical/B2B audience (CTOs, engineers, healthtech founders)**
 
 Osteopathy clinics look boring from the outside. The engineering job is interesting: Article 9 GDPR health data on WhatsApp, idempotent write-through to a calendar that is sometimes Google, sometimes Doctoralia, sometimes a legacy Access file, and a recall engine that has to re-engage patients 8, 12 and 24 weeks after their last session without sounding like a drip campaign.

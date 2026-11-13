@@ -10837,3 +10837,18 @@ Our comparison of the 7 BSPs we vet before a deployment (Twilio, 360dialog, Info
 
 ---
 
+## 2026-11-13 — AI Agent for Ice Cream Shops (EN post, EN LinkedIn → Zenia Partners company page)
+
+How we architect an AI agent for a US ice cream shop so the Saturday counter stays on scoops and the party pipeline keeps closing.
+
+Inbound surfaces (WhatsApp Business Cloud API, Instagram DM, Messenger, Toast web chat, Twilio voice with FCC 2024 TCPA disclosure on the opening line) collapse into one event bus. A single booking state machine writes to the POS reservations module (Toast Tables, Square Appointments, Clover, Lavu, Heartland Retail), Google Calendar and Stripe. The Stripe payment_intent is the source of truth for every held date, which removes the "I thought you held that Saturday" race condition during peak summer concurrency.
+
+Hard runtime constraints we enforce in tool-selection middleware, not in the system prompt: no allergen clearance without a human-gated SOP flag per SKU, no custom-cake lead time below the shop's configured floor, no AI-issued refund, no AI-negotiated price, no booking confirmation before deposit success AND e-signed one-pager.
+
+90-day numbers on a 2-location Charleston SC family shop on Toast POS: p50 first-reply 6h 14m business / 14h+ after-hours to 38s all-hours, after-hours capture 12 to 96 percent, deposit-at-booking 41 to 97 percent, day-of cancellations without a deposit held 6 to 0, ~$44.3k net lift on $2.3k platform spend.
+
+Full architecture, POS integration table and 14-day rollout: https://zeniapartners.com/blog/ai-agent-for-ice-cream-shops.html
+
+#WhatsAppBusinessAPI #ConversationalAI #SystemsEngineering #POS
+
+---

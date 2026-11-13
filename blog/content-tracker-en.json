@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-11-12T00:00Z",
+  "lastRun": "2026-11-13T00:00Z",
   "market": "US/UK small business",
   "posts": [
     {
@@ -1174,7 +1174,9 @@
       "keyword": "ai agent for ice cream shops",
       "tier": 3,
       "cluster": "food",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-11-13",
+      "note": "Tier-3 pending build from tracker. No uncovered English striking-distance queries remained in seo/striking-latest.md (crm for dentists -> crm-for-dentists.html head-on; ai receptionist for videographers -> ai-receptionist-for-videographers.html head-on; ai receptionist for photographers -> ai-receptionist-for-photographers.html head-on; ai receptionist for driving schools -> ai-receptionist-for-driving-schools.html head-on; ai-enabled crm for roofing -> roofing-crm-with-ai.html head-on; click to chat ads -> click-to-chat-ads-guide.html head-on). Skipped the next-listed pending 'ai-agent-for-videographers' because the sibling ai-receptionist-for-videographers piece shipped only 4 days ago (2026-11-09) and a second videographer article now would cannibalize; moved to next uncovered vertical. 2,704-word US-focused build grounded in real 2026 industry stats: IBISWorld US ice cream shops $7.4bn market 2026, May-Aug ~60% annual sales concentration, Mass./Pittsburgh 2026 labor-shortage reporting on seasonal staff churn. 2-location Charleston SC family scoop shop + ice cream truck 90-day case (June-Aug 2026 on Toast POS + WhatsApp BSP + Stripe + Google Calendar): median first-reply 6h 14m/14h+ to 38s all-hours, inquiry-to-booked on parties 34 to 61 percent, parties booked 19 to 44, catering jobs 11 to 28, truck hires 7 to 19, deposit-at-booking 41 to 97 percent, day-of cancellations with no deposit 6 to 0, after-hours capture 12 to 96 percent, loyalty birthday coupon redemption 34 percent (new), reactivated customers 146 (new), Google reviews 22 to 71, owner admin 12-16 to 2-4 hrs/week, ~$46,665 incremental over 90 days (25 extra parties $385 avg + 17 extra catering $1,180 avg + 12 extra truck hires $1,420 avg) on $2,291 platform spend = net ~$44,374. Five-workflow playbook (party/catering intake sub-60s, deposit+signed terms before confirmation, weather/closure broadcast under 10 min, loyalty+reactivation+birthday pings, after-hours/overflow capture). POS integration table: Toast (free to $165/terminal + processing), Square for Restaurants ($0-$69/location), Clover ($14.95-$84.95/device + hardware), Lavu (from $59/terminal), Heartland Retail (from $89/register). Six guardrails: allergen clearance never without human SOP flag, custom cakes/pies hard lead-time rules never improvised, no AI price negotiation, no AI-issued refunds, FCC 2024 TCPA voice disclosure if voice front-end, no booking confirmation without signed one-pager + deposit. US pricing bands $249-$2,400/mo, setup $997-$6,500. 2-week rollout with 72h shadow mode. 5 KPIs (median first-reply <60s all hours, inquiry-to-booked >=55% parties / >=45% catering, deposit-at-booking >=95%, after-hours capture >=90%, reviews/month 2x baseline). Four objections answered (WhatsApp adoption 100M US / 2.78B WW, too-small shop ROI math, owner-approval workflow, allergen/custom-cake hard constraints). Cross-linked to ai-agent-for-coffee-shops, ai-agent-for-bakeries, ai-agent-for-caterers, ai-agent-for-food-trucks. No chatbot language, no em-dashes."
     },
     {
       "slug": "ai-agent-for-juice-bars",

@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-11-13T22:00:00+00:00",
+  "lastRun": "2026-11-13T22:05:00+00:00",
   "posts": [
+    {
+      "slug": "handoff-agente-ia-a-humano-whatsapp",
+      "keyword": "handoff agente de IA a humano en whatsapp",
+      "tier": 2,
+      "cluster": "arquitectura-agente-ia",
+      "status": "published",
+      "date": "2026-11-13",
+      "source": "matrix-generated"
+    },
     {
       "slug": "carta-digital-para-restaurantes",
       "keyword": "carta digital para restaurantes",

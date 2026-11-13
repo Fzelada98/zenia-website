@@ -10885,3 +10885,19 @@ Full architecture, POS integration table and 14-day rollout: https://zeniapartne
 #WhatsAppBusinessAPI #ConversationalAI #SystemsEngineering #POS
 
 ---
+## 2026-11-13 — Handoff Agente de IA a Humano en WhatsApp (EN LinkedIn → Zenia Partners company page)
+
+Where WhatsApp Business deployments fail is not the LLM. It is the handoff from AI to human.
+
+We ship it as four isolated concerns, each with its own SLO. Detection: intent classifier + sentiment + retrieval confidence + static allowlist of escalating topics, evaluated in parallel and fused into a single handoff_to_human() tool call so the model cannot escalate by silence. Context handoff: the tool writes a 5-10 line structured brief (goal, verified fields with source, prior IA steps, trigger with threshold, suggested next action) and pins it above the thread in the CRM, so the agent reads 50 words before the first turn, not the 40-message log. Routing: skill + language + real conversation load per agent, not round-robin, with an announced out-of-hours SLA that counts against the 90% target. State: a human_owned flag on the contact record suppresses IA turns for the cooldown window (2-24h, policy-driven), so IA and human never both type.
+
+Instrumentation that actually moves the system: handoff rate target band 8-18 percent, TTH median under 45s in-hours, TTH p95 under 3 min in-hours, context-repetition rate under 5 percent, CSAT post-handoff >= 4.3/5. Context-repetition is the signal that the brief is not useful (agents prefer re-asking to reading it) and it is the one we tune most often.
+
+Five9 Consumer CX Report 2026: 92 percent of consumers give an AI agent under 10 minutes before escalating. In WhatsApp that budget is tighter. The handoff is the loss function.
+
+Full breakdown with the four layers, metrics and failure modes: https://zeniapartners.com/blog/handoff-agente-ia-a-humano-whatsapp.html
+
+#WhatsAppBusinessAPI #ConversationalAI #SystemsEngineering #AIAgents
+
+---
+

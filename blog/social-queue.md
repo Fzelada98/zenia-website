@@ -10825,3 +10825,15 @@ Full write-up on how we wire it on WhatsApp Business API + CRM: https://zeniapar
 #WhatsAppBusinessAPI #GDPR #B2B #Infrastructure #ConversationalAI
 
 ---
+## 2026-11-13 — Proveedor WhatsApp Business API España (ES post, EN LinkedIn → Zenia Partners company page)
+
+Spain exited Meta's "Rest of Western Europe" WhatsApp pricing tier in July 2026. Marketing bills at a country-specific rate now, and from Oct 1, 2026 service messages lose their free window. For teams running on WhatsApp Business API in EU, the BSP choice stops being vendor math and becomes architecture.
+
+What we actually test before building a client on top of a BSP: template approval turnaround (72h on 360dialog vs 5+ days on enterprise desks), number custodian and data egress clauses, native CRM/ERP connectors vs Zapier-only glue, and the service / marketing volume mix now that Meta prices them apart. A sub-60s agent SLA breaks fast if any of those four are weak.
+
+Our comparison of the 7 BSPs we vet before a deployment (Twilio, 360dialog, Infobip, Sinch, Gupshup, Wati, MessageBird) against those criteria, plus the case for a local partner model when the stack needs to be BSP + CRM + agent as one contract: https://zeniapartners.com/blog/proveedor-whatsapp-business-api-espana.html
+
+#WhatsAppBusinessAPI #B2B #SaaS #Infrastructure
+
+---
+

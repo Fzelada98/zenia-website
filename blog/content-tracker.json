@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-11-12T22:00:00+00:00",
+  "lastRun": "2026-11-13T06:00:00+00:00",
   "posts": [
+    {
+      "slug": "proveedor-whatsapp-business-api-espana",
+      "keyword": "proveedor whatsapp business api espana",
+      "tier": 2,
+      "cluster": "whatsapp-business-api",
+      "status": "published",
+      "date": "2026-11-13",
+      "source": "matrix-generated"
+    },
     {
       "slug": "doble-opt-in-whatsapp-business",
       "keyword": "doble opt-in whatsapp business",

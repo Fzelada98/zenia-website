@@ -10870,3 +10870,18 @@ Full comparison of QR / tablet / app formats, cost table and 5-day rollout: http
 
 ---
 
+## 2026-11-13 — AI Agent for Juice Bars (EN LinkedIn → Zenia Partners company page)
+
+How we architect an AI agent for a US juice and smoothie bar so catering, cleanse subscriptions and corporate standing orders stop dying in the gap between blender cycles.
+
+Inbound surfaces (WhatsApp Business Cloud API, Instagram DM, Google Business chat, with optional Twilio voice gated by FCC 2024 TCPA disclosure on first ring) collapse into one event bus. A single booking state machine writes to the POS (Toast, Square for Restaurants, Clover, Lavu, Revel), Google Calendar and Stripe. The Stripe payment_intent is the source of truth for every held date, which removes the "I thought you held that catering Saturday" race condition during the May-August demand spike when IBISWorld shows 55-65 percent of annual sales concentrate.
+
+Hard runtime constraints enforced in tool-selection middleware, not in the system prompt: no allergen clearance without a per-SKU human-gated SOP flag, no health/detox/immunity/weight-loss claim language, no AI-issued refund, no catering booking confirmed before deposit success AND e-signed one-pager, no under-18 cleanse enrollment, rotating 24h calendar-hold TTL.
+
+90-day numbers on a 2-location Austin TX family operator on Toast POS + Stripe + Google Calendar: p50 first-reply 5h 12m weekday / 18h weekend to 41s all-hours, after-hours reply rate 41 to 98 percent, catering inquiry-to-deposit 29 to 52 percent, cleanse product-question-to-enrolled 34 to 61 percent, standing corporate accounts 6 to 14, ~$22.3k net 90-day lift on $2.97k platform spend plus $5.4k/mo new recurring.
+
+Full architecture, POS integration table and 14-day rollout: https://zeniapartners.com/blog/ai-agent-for-juice-bars.html
+
+#WhatsAppBusinessAPI #ConversationalAI #SystemsEngineering #POS
+
+---

@@ -16,3 +16,7 @@ demo como llamada a la acción), nunca su logo, textos ni clientes.
   compartir `assets/images/og-z2-*.jpg`, sitemap con los 3 nichos, GA4 sin cookies + Cloudflare.
   Inglés pendiente. El guard (`~/.zenia-seo-guard/inject_ctas.py`) ya no depende del botón flotante
   de esta portada (usa `~/.zenia-seo-guard/float_canon.html`).
+
+- **14-nov-2026: portada EN** (`index.html`) con `build_en.py` (commit 35799ec). Regenerar todo:
+  `python3 scripts/rebrand-v2/build.py . && python3 scripts/rebrand-v2/build_en.py .`
+  La redirección de idioma va la primera en el <head> de index.html (no quitarla).

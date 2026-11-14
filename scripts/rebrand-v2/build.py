@@ -610,7 +610,7 @@ def footer():
 <div><b>Soluciones</b>{nich}<a href="/es/cobertura.html">Todos los sectores</a></div>
 <div><b>Zenia</b><a href="/es/casos.html">Casos</a><a href="/blog/">Blog</a><a href="/about.html">Sobre Zenia</a></div>
 <div><b>Contacto</b><a href="mailto:fabrizzio.zelada@zeniapartners.com">fabrizzio.zelada@zeniapartners.com</a><a href="{E(wa('Hola, vengo de la web de Zenia y quiero más información'))}" target="_blank" rel="noopener">WhatsApp +34 677 612 799</a><a href="{CALENDLY}" target="_blank" rel="noopener">Agenda una llamada</a></div></div>
-<div class="foot-bottom"><span>© 2026 Zenia Partners · Madrid</span><span><a href="/privacy/" style="text-decoration:none">Privacidad</a> · <a href="/?lang=en" style="text-decoration:none">English</a></span></div>
+<div class="foot-bottom"><span>© 2026 Zenia Partners · Madrid</span><span><a href="/privacy/" style="text-decoration:none">Privacidad</a> · <a href="/?lang=en" data-lang="en" style="text-decoration:none">English</a></span></div>
 </div></footer>
 <a class="wa-float" href="{E(wa('Hola, vengo de la web de Zenia y quiero más información'))}" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp" data-directo>{WA_ICO}</a>
 '''
@@ -740,10 +740,11 @@ def escribir(ruta, txt):
     print(ruta.replace(RAIZ, ''), len(txt))
 
 
-os.makedirs(os.path.join(RAIZ, 'assets/z2'), exist_ok=True)
-shutil.copy(os.path.join(AQUI, 'z2.css'), os.path.join(RAIZ, 'assets/z2/z2.css'))
-shutil.copy(os.path.join(AQUI, 'z2.js'), os.path.join(RAIZ, 'assets/z2/z2.js'))
-base = os.path.join(RAIZ, 'v2') if PREVIEW else RAIZ
-escribir(os.path.join(base, 'es/index.html'), portada())
-for k in NICHOS:
-    escribir(os.path.join(base, f'es/{NICHOS[k]["slug"]}/index.html'), nicho(k))
+if __name__ == '__main__':
+    os.makedirs(os.path.join(RAIZ, 'assets/z2'), exist_ok=True)
+    shutil.copy(os.path.join(AQUI, 'z2.css'), os.path.join(RAIZ, 'assets/z2/z2.css'))
+    shutil.copy(os.path.join(AQUI, 'z2.js'), os.path.join(RAIZ, 'assets/z2/z2.js'))
+    base = os.path.join(RAIZ, 'v2') if PREVIEW else RAIZ
+    escribir(os.path.join(base, 'es/index.html'), portada())
+    for k in NICHOS:
+        escribir(os.path.join(base, f'es/{NICHOS[k]["slug"]}/index.html'), nicho(k))

@@ -2,717 +2,207 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="referrer" content="strict-origin-when-cross-origin">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script>document.documentElement.classList.add('js')</script>
-
-<!-- Google Analytics 4 -->
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('consent', 'default', { analytics_storage: 'denied' });
-</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HP0VQSEL68"></script>
-<script>
-  gtag('js', new Date());
-  gtag('config', 'G-HP0VQSEL68', { send_page_view: true });
-</script>
-<title>Zenia: CRM con IA + WhatsApp para PyMEs en España y LATAM</title>
-<meta name="description" content="CRM con IA + automatización WhatsApp para restaurantes, gimnasios, estética y ecommerce. Setup en 2-3 semanas. Demo gratuita.">
-
-<!-- Favicon -->
-<link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
-<link rel="apple-touch-icon" href="assets/icons/favicon.svg">
-
-<!-- SEO: Canonical URL -->
+<script>(function(){try{var q=new URLSearchParams(location.search).get("lang");if(q==="en")return;var s=localStorage.getItem("zenia-lang-v2");var n=(navigator.languages&&navigator.languages[0])||navigator.language||"";if(q==="es"||s==="es"||(!s&&/^es/i.test(n))){location.replace("/es/"+location.hash);}}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AI agent for WhatsApp with calendar and custom CRM | Zenia</title>
+<meta name="description" content="Zenia puts an AI agent on your business WhatsApp: it replies instantly, books into your calendar and logs every chat in your CRM. Your demo in 48 h.">
+<meta name="robots" content="index,follow">
 <link rel="canonical" href="https://zeniapartners.com/">
-
-<!-- SEO: hreflang for EN/ES -->
 <link rel="alternate" hreflang="en" href="https://zeniapartners.com/">
 <link rel="alternate" hreflang="es" href="https://zeniapartners.com/es/">
 <link rel="alternate" hreflang="x-default" href="https://zeniapartners.com/">
-
-<!-- SEO: Open Graph -->
+<link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
+<meta name="theme-color" content="#070B13">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="ZENIA">
-<meta property="og:title" content="ZENIA | AI Systems for Business | Sistemas de IA para Empresas">
-<meta property="og:description" content="CRM inteligente + automatización WhatsApp + IA para restaurantes, fitness y retail. Reservas, atención al cliente y ventas en piloto automático.">
+<meta property="og:title" content="AI agent for WhatsApp with calendar and custom CRM | Zenia">
+<meta property="og:description" content="Zenia puts an AI agent on your business WhatsApp: it replies instantly, books into your calendar and logs every chat in your CRM. Your demo in 48 h.">
 <meta property="og:url" content="https://zeniapartners.com/">
-<meta property="og:image" content="https://zeniapartners.com/assets/images/og-home-en.jpg">
-<meta property="og:image:secure_url" content="https://zeniapartners.com/assets/images/og-home-en.jpg">
+<meta property="og:image" content="https://zeniapartners.com/assets/images/og-z2-home-en.jpg">
+<meta property="og:image:secure_url" content="https://zeniapartners.com/assets/images/og-z2-home-en.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="en_US">
-<meta property="og:locale:alternate" content="es_ES">
-
-<!-- SEO: Twitter Cards -->
+<meta property="og:site_name" content="Zenia Partners">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="ZENIA | AI Systems for Business | Sistemas de IA para Empresas">
-<meta name="twitter:description" content="CRM inteligente + automatización WhatsApp + IA para restaurantes, fitness y retail. Reservas, atención al cliente y ventas en piloto automático.">
-<meta name="twitter:image" content="https://zeniapartners.com/assets/images/og-home-en.jpg">
-
-<!-- SEO: Additional meta -->
-<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-<meta name="author" content="ZENIA">
-<meta name="theme-color" content="#0B1220">
-
-<!-- SEO: JSON-LD Structured Data -->
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": ["Organization", "ProfessionalService"], "@id": "https://zeniapartners.com/#organization", "name": "Zenia Partners", "alternateName": ["ZENIA", "Zenia"], "url": "https://zeniapartners.com/", "logo": "https://zeniapartners.com/assets/logos/zenia-logo.png", "image": "https://zeniapartners.com/assets/images/og-home-en.jpg", "description": "Zenia Partners is a Madrid-based AI agency that builds custom CRMs and AI agents that answer, book and sell on WhatsApp for small and mid-sized businesses in Spain and Latin America. Each agent connects to the WhatsApp Business API and to the tools the business already uses. Rollout takes about five weeks and plans start at €297 per month.", "slogan": "Custom CRM and WhatsApp AI agents", "foundingDate": "2025", "founder": {"@type": "Person", "name": "Fabrizzio Zelada Uriarte", "jobTitle": "Founder", "sameAs": ["https://www.linkedin.com/in/fabrizziozelada/"]}, "address": {"@type": "PostalAddress", "addressLocality": "Madrid", "addressCountry": "ES"}, "areaServed": [{"@type": "Country", "name": "Spain"}, {"@type": "Country", "name": "Peru"}, {"@type": "Country", "name": "Mexico"}, {"@type": "Country", "name": "Colombia"}, {"@type": "Country", "name": "Chile"}, {"@type": "Country", "name": "Argentina"}, {"@type": "Country", "name": "Ecuador"}, {"@type": "Country", "name": "Uruguay"}, {"@type": "Country", "name": "Bolivia"}, {"@type": "Country", "name": "United States"}], "email": "fabrizzio.zelada@zeniapartners.com", "contactPoint": [{"@type": "ContactPoint", "contactType": "sales", "email": "fabrizzio.zelada@zeniapartners.com", "url": "https://wa.me/34677612799", "availableLanguage": ["es", "en"]}], "sameAs": ["https://www.linkedin.com/company/zenia-partners/", "https://www.instagram.com/zeniapartners"], "knowsAbout": ["custom CRM", "AI agents", "WhatsApp Business API", "WhatsApp automation", "booking automation", "customer reactivation", "AI for SMBs", "AI SaaS development"], "priceRange": "€297 - €897+ / month", "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Zenia Partners services", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Custom CRM", "description": "A CRM designed around how each business sells and serves customers, with client records, history and automated follow-up."}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "WhatsApp AI agent", "description": "A dedicated agent on the WhatsApp Business API that replies in seconds, 24/7, qualifies, books, confirms and wins back customers."}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Booking, reminder and campaign automation", "description": "Reminders, confirmations, reactivation of inactive customers and WhatsApp campaigns."}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Custom SaaS development", "description": "Own products and dashboards with AI at the core, from design to deployment."}}, {"@type": "Offer", "name": "Plan Starter", "price": "297", "priceCurrency": "EUR", "description": "CRM for up to 3 users, WhatsApp Business and 3 automations. One-off setup €997.", "priceSpecification": {"@type": "UnitPriceSpecification", "price": "297", "priceCurrency": "EUR", "unitText": "MONTH"}}, {"@type": "Offer", "name": "Plan Growth", "price": "497", "priceCurrency": "EUR", "description": "CRM for up to 10 users, WhatsApp AI agent and unlimited automations. One-off setup €997.", "priceSpecification": {"@type": "UnitPriceSpecification", "price": "497", "priceCurrency": "EUR", "unitText": "MONTH"}}, {"@type": "Offer", "name": "Plan Enterprise", "price": "897", "priceCurrency": "EUR", "description": "Unlimited users, custom AI agents and custom integrations (from). One-off setup €997.", "priceSpecification": {"@type": "UnitPriceSpecification", "price": "897", "priceCurrency": "EUR", "unitText": "MONTH"}}]}}, {"@type": "WebSite", "@id": "https://zeniapartners.com/#website", "name": "ZENIA", "url": "https://zeniapartners.com", "publisher": {"@id": "https://zeniapartners.com/#organization"}, "inLanguage": ["en", "es"]}, {"@type": "FAQPage", "@id": "https://zeniapartners.com/#faq", "mainEntity": [{"@type": "Question", "name": "What types of companies does ZENIA work with?", "acceptedAnswer": {"@type": "Answer", "text": "We work with growth-stage SMBs across fitness, wellness, retail, ecommerce, and professional services. Our sweet spot is companies with 5-200 employees looking to automate operations and scale without proportionally growing headcount."}}, {"@type": "Question", "name": "How long does it take to see results from AI automation?", "acceptedAnswer": {"@type": "Answer", "text": "Most clients see measurable impact within 4-8 weeks. We start with a strategy session, design the system in 1-2 weeks, and deploy within 4-6 weeks. Continuous optimization begins immediately after launch."}}, {"@type": "Question", "name": "Do I need technical knowledge to work with ZENIA?", "acceptedAnswer": {"@type": "Answer", "text": "Not at all. We handle everything from strategy to implementation. We immerse ourselves in your operations, understand your workflows, and build systems that your team can use without technical expertise."}}, {"@type": "Question", "name": "What is the cost of ZENIA's AI consulting services?", "acceptedAnswer": {"@type": "Answer", "text": "Every engagement is custom-scoped based on your needs. We offer a free 30-minute strategy call to understand your situation, then provide a tailored proposal with clear pricing and expected ROI."}}, {"@type": "Question", "name": "What markets does ZENIA serve?", "acceptedAnswer": {"@type": "Answer", "text": "We serve companies across Europe and the Americas. Our team works remotely and supports clients globally with bilingual (English/Spanish) service."}}]}]}</script>
-
-<!-- Performance: preconnect to CDNs -->
-<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
-<link rel="preconnect" href="https://assets.calendly.com">
-<link rel="dns-prefetch" href="https://assets.calendly.com">
-<link rel="dns-prefetch" href="https://zenia-backend-y6hp.onrender.com">
-
-<!-- Google Fonts: async load to avoid render-blocking -->
+<meta name="twitter:image" content="https://zeniapartners.com/assets/images/og-z2-home-en.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Space+Grotesk:wght@700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet"></noscript>
-
-<!-- Stylesheet -->
-<link rel="stylesheet" href="styles/home.css?v=1793907646">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/z2/z2.css?v=1794679759">
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HP0VQSEL68"></script>
+<script>gtag('js',new Date());gtag('config','G-HP0VQSEL68');</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": ["Organization", "ProfessionalService"], "@id": "https://zeniapartners.com/#organization", "name": "Zenia Partners", "url": "https://zeniapartners.com/", "logo": "https://zeniapartners.com/assets/logos/zenia-logo.png", "email": "fabrizzio.zelada@zeniapartners.com", "description": "AI agents for business WhatsApp, with calendar and a custom CRM."}</script>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav"><div class="wrap">
+<a class="brand" href="/" aria-label="Zenia, home"><svg viewBox="0 0 140 140" aria-hidden="true"><defs><linearGradient id="zb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563EB"/><stop offset="1" stop-color="#3B82F6"/></linearGradient><linearGradient id="zv" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366F1"/><stop offset="1" stop-color="#7C3AED"/></linearGradient></defs><rect width="140" height="140" rx="30" fill="#111A2E"/><path d="M70 18Q18 18 18 38v19q0 6 6 6h64Z" fill="url(#zb)"/><path d="M70 122q52 0 52-20V83q0-6-6-6H52Z" fill="url(#zv)"/></svg><span>Zenia</span></a>
+<nav class="nav-links" aria-label="Main"><a href="#how-it-works">How it works</a><a href="#solutions">Solutions</a><a href="#product">Product</a><a href="#cases">Cases</a><a href="#faq">FAQ</a></nav>
+<div class="nav-cta"><a class="nav-wa" href="https://wa.me/34677612799?text=Hi%2C%20I%27m%20coming%20from%20the%20Zenia%20website%20and%20would%20like%20more%20information" target="_blank" rel="noopener">WhatsApp</a><a class="btn btn-white" href="#demo">Get your demo</a></div>
+<details class="menu"><summary aria-label="Open menu"><span></span></summary>
+<div class="menu-panel"><a href="#how-it-works">How it works</a><a href="#solutions">Solutions</a><a href="#product">Product</a><a href="#cases">Cases</a><a href="#faq">FAQ</a><a href="https://wa.me/34677612799?text=Hi%2C%20I%27m%20coming%20from%20the%20Zenia%20website%20and%20would%20like%20more%20information" target="_blank" rel="noopener">Message us on WhatsApp</a><a class="btn btn-white" href="#demo">Get your demo</a></div></details>
+</div></header>
+<main id="main"><section class="hero"><div class="hero-bg" style="background-image:url(/assets/images/hero-madrid.webp)"></div><div class="hero-glow"></div><div class="wrap">
+<div><span class="label">AI agents for WhatsApp</span>
+<h1>Your WhatsApp answers, books and <span class="hl">sells 24/7</span></h1>
+<p class="lead">Zenia puts an AI agent on your business WhatsApp. It replies in seconds with your information, books into your calendar and logs every conversation in your CRM. Whatever needs a person, it hands over to you.</p>
+<div class="btns"><a class="btn btn-white" href="#demo">Get your free demo</a><a class="btn btn-ghost" href="#how-it-works"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m10 8 6 4-6 4z" fill="currentColor"/></svg>See how it works</a></div>
+<p class="check">Your demo with your business information in 48 h · No commitment</p>
+<div class="trust"><small>Works with</small><div class="trust-row"><span><i><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></i>WhatsApp Business API</span><span><i><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.164 7.93V5.084a2.198 2.198 0 001.267-1.978v-.067A2.2 2.2 0 0017.238.845h-.067a2.2 2.2 0 00-2.193 2.193v.067a2.196 2.196 0 001.252 1.973l.013.006v2.852a6.22 6.22 0 00-2.969 1.31l.012-.01-7.828-6.095A2.497 2.497 0 104.3 4.656l-.012.006 7.697 5.991a6.176 6.176 0 00-1.038 3.446c0 1.343.425 2.588 1.147 3.607l-.013-.02-2.342 2.343a1.968 1.968 0 00-.58-.095h-.002a2.033 2.033 0 102.033 2.033 1.978 1.978 0 00-.1-.595l.005.014 2.317-2.317a6.247 6.247 0 104.782-11.134l-.036-.005zm-.964 9.378a3.206 3.206 0 113.215-3.207v.002a3.206 3.206 0 01-3.207 3.207z"/></svg></i>HubSpot</span><span><i><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.66 6.897a1.299 1.299 0 0 0-1.205.765l-.642 1.44-.062-.385A1.291 1.291 0 0 0 5.27 7.648l-4.185.678A1.291 1.291 0 0 0 .016 9.807l.678 4.18a1.293 1.293 0 0 0 1.27 1.087c.074 0 .143-.01.216-.017l4.18-.678c.436-.07.784-.351.96-.723l2.933 1.307a1.304 1.304 0 0 0 .988.026c.321-.12.575-.365.716-.678l.28-.629.038.276a1.297 1.297 0 0 0 1.455 1.103l3.712-.501a1.29 1.29 0 0 0 1.03.514h4.236c.713 0 1.29-.58 1.291-1.291V9.545c0-.712-.58-1.291-1.291-1.291h-4.236c-.079 0-.155.008-.23.022a1.309 1.309 0 0 0-.275-.288c-.275-.21-.614-.3-.958-.253l-4.197.571c-.155.021-.3.07-.432.14L9.159 7.01a1.27 1.27 0 0 0-.499-.113zm-.025.705c.077 0 .159.013.24.052l2.971 1.324c-.128.238-.18.508-.142.782l.357 2.596h.002l-.745 1.672a.59.59 0 0 1-.777.296l-3.107-1.385-.004-.041-.41-2.526L8.1 7.95a.589.589 0 0 1 .536-.348zm-3.159.733c.125 0 .245.039.343.112.13.09.21.227.237.382l.234 1.446-.56 1.259a1.27 1.27 0 0 0-.026.987c.12.322.364.575.678.717l.295.131a.585.585 0 0 1-.428.314l-4.185.678a.59.59 0 0 1-.674-.485l-.678-4.18a.588.588 0 0 1 .485-.674l4.185-.678c.03-.004.064-.01.094-.01zm11.705.09a.59.59 0 0 1 .415.173 1.287 1.287 0 0 0-.416.947v4.237c0 .033.003.065.005.097l-3.55.482a.586.586 0 0 1-.66-.502l-.191-1.403.899-2.017a1.29 1.29 0 0 0-.333-1.5l3.754-.51c.026-.004.051-.004.077-.004zm1.3.532h4.227c.326 0 .588.266.588.588v4.237a.589.589 0 0 1-.588.588h-4.237a.564.564 0 0 1-.12-.013c.47-.246.758-.765.684-1.318zm-5.988.309.254.113c.296.133.43.48.296.777l-.432.97-.207-1.465a.58.58 0 0 1 .09-.395zm5.39.538.453 3.325a.583.583 0 0 1-.453.65zM6.496 11.545l.17 1.052a.588.588 0 0 1-.293-.776zm3.985 4.344a.588.588 0 0 0-.612.603c0 .358.244.61.601.61a.582.582 0 0 0 .607-.608c0-.35-.242-.605-.596-.605zm5.545 0a.588.588 0 0 0-.612.603c0 .358.245.61.602.61a.582.582 0 0 0 .606-.608c0-.35-.24-.605-.596-.605zm-8.537.018a.047.047 0 0 0-.048.047v.085c0 .026.021.047.048.047h.52l-.623.9a.052.052 0 0 0-.009.027v.027c0 .026.021.047.048.047h.815a.047.047 0 0 0 .047-.047v-.085a.047.047 0 0 0-.047-.047h-.55l.606-.9a.05.05 0 0 0 .008-.026v-.028a.047.047 0 0 0-.047-.047zm5.303 0a.047.047 0 0 0-.047.047v1.086c0 .026.02.047.047.047h.135a.047.047 0 0 0 .047-.047v-.454h.545v.454c0 .026.02.047.047.047h.134a.047.047 0 0 0 .047-.047v-1.086a.047.047 0 0 0-.047-.047h-.134a.047.047 0 0 0-.047.047v.453h-.545v-.453a.047.047 0 0 0-.047-.047zm-2.324.164c.25 0 .372.194.372.425 0 .219-.109.425-.358.426-.242 0-.375-.197-.375-.419 0-.235.108-.432.36-.432zm5.545 0c.25 0 .372.194.372.425 0 .219-.108.425-.358.426-.242 0-.374-.197-.374-.419 0-.235.108-.432.36-.432z"/></svg></i>Zoho CRM</span></div></div></div>
+<div class="hero-phone"><div class="seg" role="group" aria-label="Try it as a customer of"><button type="button" data-k="clinica" aria-pressed="false">Clinic</button><button type="button" data-k="taller" aria-pressed="false">Auto shop</button><button type="button" data-k="autoescuela" aria-pressed="false">Driving school</button></div><div class="phone" data-chat="live">
+<div class="phone-status" aria-hidden="true"><span>9:41</span><span><svg viewBox="0 0 16 12"><path fill="currentColor" d="M0 9h2v3H0zM4 6h2v6H4zM8 3h2v9H8zM12 0h2v12h-2z"/></svg><svg viewBox="0 0 24 12"><rect x=".5" y=".5" width="20" height="11" rx="2.5" fill="none" stroke="currentColor"/><rect x="2" y="2" width="16" height="8" rx="1.5" fill="currentColor"/></svg></span></div>
+<div class="chat"><div class="chat-head"><span class="chat-avatar" aria-hidden="true">D</span><div class="chat-who"><strong>Dental clinic · example</strong><span class="chat-status">online</span></div></div>
+<div class="chat-body" aria-live="polite"><div class="chat-day">Today</div></div>
+<div class="chips" role="group" aria-label="Example questions"></div>
+<div class="chat-input" aria-hidden="true"><span>Message</span><i></i></div></div></div><p class="seg-note">Tap a question like a customer would. Example business.</p></div>
+</div></section>
+<section class="logos"><div class="wrap"><small>Businesses already working with Zenia</small><div class="logo-row"><a class="logo-tile" href="/cases/global-watch-buyers-ai-acquisition.html"><img src="/cases/img/gwb-emblem.png" alt="" loading="lazy"><span>Global Watch Buyers<em>Luxury Watch Buyers · 33 countries</em></span></a><a class="logo-tile" href="/cases/croian-hein-private-cellar-switzerland.html"><img src="/cases/img/croian-mark.svg" alt="" loading="lazy"><span>Croian &amp; Hein<em>Rare wines · Switzerland</em></span></a><div class="logo-tile"><img src="/cases/img/migrafacil-mark.png" alt="" loading="lazy"><span>Migrafácil<em>Work and study in Europe</em></span></div><a class="logo-tile" href="/cases/throwin-salt-gaia-ebay-whatsapp.html"><img src="/cases/img/ts-mark.png" alt="" loading="lazy"><span>Throwin’ Salt Co.<em>Luxury Timepieces · USA</em></span></a><a class="logo-tile" href="/cases/cicero-public-affairs-spain-italy.html"><img src="/cases/img/cicero-mark.svg" alt="" loading="lazy"><span>Cicero<em>Public affairs with AI</em></span></a></div></div></section>
+<section class="band"><div class="wrap">
+<div class="head"><span class="label">Agent + calendar + CRM</span>
+<h2>Sell where your customers already message you. <span class="muted">On WhatsApp, with your calendar and CRM up to date.</span></h2></div>
+<div class="cards3">
+<div class="card"><div class="mini" aria-hidden="true"><div class="b in">Hi, how much is teeth whitening?</div><div class="b out">Hi! It depends on the type: let me explain both options and what each includes.</div><div class="b in">Do you have anything on Saturday?</div><div class="b out">Yes, at 11:00 am or 12:30 pm. Which one works?</div></div>
+<span class="label">WhatsApp + AI</span><h3>Your agent replies in seconds</h3><p>With your information and your tone, nights and weekends too.</p></div>
+<div class="card"><div class="mini" aria-hidden="true"><div class="slot"><span><b>Thu 5:00 pm</b> · Cleaning</span><span class="state cita">Booked by the agent</span></div><div class="slot"><span><b>Thu 6:30 pm</b> · Check-up</span><span class="state ok">Confirmed</span></div><div class="slot on"><span><b>Fri 10:00 am</b> · Free</span><span class="muted">Offered</span></div><div class="slot"><span><b>Fri 12:00 pm</b> · Braces</span><span class="state ok">Confirmed</span></div></div>
+<span class="label">Calendar</span><h3>Books into your calendar</h3><p>Offers only free slots, confirms and reminds the day before.</p></div>
+<div class="card"><div class="mini" aria-hidden="true"><table><tr><td>Laura G.</td><td>Thursday visit</td><td><span class="state cita">Booked</span></td></tr><tr><td>Mark R.</td><td>Braces price</td><td><span class="state ok">Answered</span></td></tr><tr><td>Anna P.</td><td>Toothache</td><td><span class="state esc">To your team</span></td></tr><tr><td>Peter L.</td><td>Reschedule</td><td><span class="state cita">Booked</span></td></tr></table></div>
+<span class="label">Custom CRM</span><h3>Every conversation, logged</h3><p>Who wrote, what they wanted and how it ended, no typing.</p></div>
+</div></div></section>
+<section class="band alt" id="solutions"><div class="wrap"><div class="head"><span class="label">Solutions by sector</span>
+<h2>Built for businesses that live on WhatsApp</h2><p class="lead">Every sector asks different things. The agent arrives knowing yours.</p></div>
+<div class="niches"><a class="niche" href="#demo"><div class="niche-top"><span class="niche-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3c-2 0-3.5 1.6-3.5 4 0 3 1.4 4.6 2.3 8.3.5 2 1 5.7 2.4 5.7 1.6 0 1.3-5 3.8-5s2.2 5 3.8 5c1.4 0 1.9-3.7 2.4-5.7.9-3.7 2.3-5.3 2.3-8.3 0-2.4-1.5-4-3.5-4-1.9 0-2.9 1-5 1S8.9 3 7 3z"/></svg></span><h3>Dental and aesthetic clinics</h3><p>Appointments, first visits, quotes and reminders, without leaving patients on read.</p>
+<ul><li>Booking by location and specialty</li><li>Reminder the day before</li><li>Clinical questions, always to your team</li></ul></div>
+<div class="niche-a" aria-hidden="true">Do you have a cleaning slot this week?</div><div class="niche-q" aria-hidden="true">Yes, Thursday at 5:00 pm at Midtown. Shall I book it?</div>
+<div class="niche-go">Get a demo for your clinic <span>→</span></div></a><a class="niche" href="#demo"><div class="niche-top"><span class="niche-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94z"/></svg></span><h3>Auto repair and tire shops</h3><p>Quotes, service bookings and “your car is ready” alerts.</p>
+<ul><li>Asks for make, model and plate</li><li>Workshop slots by location</li><li>Alert when the car is ready</li></ul></div>
+<div class="niche-a" aria-hidden="true">How much for brake pads?</div><div class="niche-q" aria-hidden="true">What&#x27;s the make, model and year? I&#x27;ll give you the exact price.</div>
+<div class="niche-go">Get a demo for your shop <span>→</span></div></a><a class="niche" href="#demo"><div class="niche-top"><span class="niche-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2"/><path d="M12 14v7M10 11.5 3.5 9.5M14 11.5l6.5-2"/></svg></span><h3>Driving schools</h3><p>Sign-ups, licence prices and lessons, answered on the spot.</p>
+<ul><li>Prices and packages from your site</li><li>Sign-up and lesson booking</li><li>Follow-up with people who did not sign up</li></ul></div>
+<div class="niche-a" aria-hidden="true">How much is the licence?</div><div class="niche-q" aria-hidden="true">We have three packages. Here is the price of each 👇</div>
+<div class="niche-go">Get a demo for your school <span>→</span></div></a></div>
+<p class="other">Another sector? Restaurants, real estate, gyms or law firms: <a href="https://wa.me/34677612799?text=Hi%2C%20I%20would%20like%20to%20know%20if%20Zenia%20fits%20my%20sector" target="_blank" rel="noopener">message us and we will take a look</a>.</p></div></section>
+<section class="band" id="how-it-works"><div class="wrap">
+<div class="head"><span class="label">How it works</span><h2>A full booking, without touching your phone</h2>
+<p class="lead">Watch a complete conversation: the agent answers, books, reminds and knows when to hand the chat to a person.</p></div>
+<div class="how"><div><ol class="steps"><li><div><b>The patient messages on WhatsApp</b><span>Any time. Even at 11:40 pm, after you have closed.</span></div></li><li><div><b>The agent answers with your information</b><span>Treatments, prices, hours and locations from your website, in your tone.</span></div></li><li><div><b>It offers real slots from your calendar</b><span>It reads your calendar and only offers free times.</span></div></li><li><div><b>It books and logs it in your CRM</b><span>The appointment lands in the calendar and the patient record, no typing.</span></div></li><li><div><b>It sends a reminder the day before</b><span>And if the patient can&#x27;t make it, it reschedules in the same chat.</span></div></li><li><div><b>Clinical questions go to your team</b><span>Pain, emergencies or medical doubts: reception gets the whole conversation.</span></div></li></ol>
+<div class="crm-feed" aria-live="polite"><p><b>In your CRM</b><span class="crm-dot">live</span></p><ul><li data-paso="0" hidden>New contact: Laura Gomez · WhatsApp</li><li data-paso="2" hidden>Interest: cleaning · afternoon</li><li data-paso="3" hidden>Appointment created: Thursday 5:00 pm · Midtown</li><li data-paso="4" hidden>Reminder sent · appointment confirmed</li><li data-paso="5" hidden>Reception alerted: question about gums</li></ul></div>
+<button class="replay" type="button">Play again</button></div>
+<div class="phone" data-chat="auto">
+<div class="phone-status" aria-hidden="true"><span>9:41</span><span><svg viewBox="0 0 16 12"><path fill="currentColor" d="M0 9h2v3H0zM4 6h2v6H4zM8 3h2v9H8zM12 0h2v12h-2z"/></svg><svg viewBox="0 0 24 12"><rect x=".5" y=".5" width="20" height="11" rx="2.5" fill="none" stroke="currentColor"/><rect x="2" y="2" width="16" height="8" rx="1.5" fill="currentColor"/></svg></span></div>
+<div class="chat"><div class="chat-head"><span class="chat-avatar" aria-hidden="true">C</span><div class="chat-who"><strong>Dental clinic · example</strong><span class="chat-status">online</span></div></div>
+<div class="chat-body" aria-live="polite"><div class="chat-day">Today</div></div>
 
-<a href="#opportunities" class="skip-to-content">Skip to content</a>
-<div id="cookieBanner" style="display:none;position:static;background:#E8E8E3;color:#0F172A;padding:14px clamp(20px,3.2vw,48px);z-index:1;font-family:-apple-system,BlinkMacSystemFont,'Helvetica Neue',Helvetica,'Segoe UI',Roboto,Arial,sans-serif;font-size:14px;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
-  <p style="margin:0;flex:1;min-width:240px;line-height:1.5;">We use cookies for analytics (Google Analytics) and to improve your experience. We do not share data with third parties. <a href="/privacy/" style="color:#1D4ED8;text-decoration:underline;">Privacy policy</a></p>
-  <div style="display:flex;gap:8px;flex-shrink:0;">
-    <button onclick="acceptCookies()" style="background:#2563EB;color:#fff;border:0;padding:10px 20px;border-radius:0;font-size:14px;font-weight:600;cursor:pointer;">Accept</button>
-    <button onclick="rejectCookies()" style="background:none;color:#0F172A;border:0;padding:10px 12px;font-size:14px;text-decoration:underline;cursor:pointer;">Reject</button>
-  </div>
-</div>
-
-<!-- NAV -->
-<nav class="nav" id="nav">
-  <div class="nav-inner">
-    <a href="#" class="nav-logo"><!-- taste-skill-ignore: símbolo de la marca --><svg class="zenia-mark" viewBox="0 0 140 140" fill="none"><defs><linearGradient id="zg-b" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2563EB"/><stop offset="100%" stop-color="#3B82F6"/></linearGradient><linearGradient id="zg-v" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6366F1"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient></defs><rect width="140" height="140" rx="28" fill="#0F172A"/><path d="M 70 18 Q 18 18 18 38 L 18 57 Q 18 63 24 63 L 88 63 Z" fill="url(#zg-b)"/><path d="M 70 122 Q 122 122 122 102 L 122 83 Q 122 77 116 77 L 52 77 Z" fill="url(#zg-v)"/></svg><span class="nav-logo-text">ZENIA</span></a>
-    <ul class="nav-links">
-      <li><a href="#opportunities">AI Opportunities</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#process">Process</a></li>
-      <li><a href="#impact">Impact</a></li>
-      <li><a href="/cases/">Cases</a></li>
-      <li><a href="/blog/">Blog</a></li>
-    </ul>
-    <div class="nav-right">
-      <div class="nav-cta"><a href="#" onclick="openCalendly(event)" class="btn btn-primary">Get Started</a></div>
-    </div>
-    <button class="nav-mobile-toggle" id="navToggle" aria-label="Toggle menu">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-    </button>
-  </div>
-</nav>
-
-<!-- HERO -->
-<section class="hero hero-portada" id="hero">
-  <div class="hero-net" aria-hidden="true"></div>
-  <div class="hero-photo" aria-hidden="true"><picture><source media="(max-width: 768px)" srcset="/assets/images/hero-madrid-m.webp"><img src="/assets/images/hero-madrid.webp" width="2400" height="1109" alt="" decoding="async" fetchpriority="high"></picture></div>
-  
-  <div class="container">
-    <div class="hero-copy">
-    <p class="eyebrow">Tailor-made CRM + AI agent on WhatsApp</p>
-    <h1 class="reveal reveal-delay-1">Don't Just Add AI. <span class="text-gradient">Redesign Your Business Around It.</span></h1>
-    <p class="hero-subtitle reveal reveal-delay-2">A CRM built around your business and an AI agent that answers, books and sells on WhatsApp. Measurable results in 4 weeks.</p>
-    <div class="hero-actions reveal reveal-delay-3">
-      <a href="#" onclick="openCalendly(event)" class="btn btn-primary btn-arrow">Book a Free Strategy Call</a>
-      <a href="https://wa.me/34677612799?text=Hi%2C%20I%27m%20coming%20from%20the%20Zenia%20website%20and%20I%27d%20like%20to%20know%20more" target="_blank" rel="noopener" class="btn btn-secondary">Message Us on WhatsApp</a>
-    </div>
-    <p class="hero-micro reveal reveal-delay-3">From first call to deployed AI in under 8 weeks</p>
-    <div class="hero-industries reveal reveal-delay-3">
-      <span>Built for</span>
-      <div class="industry-tags">
-        <span class="industry-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg> Ecommerce</span>
-        <span class="industry-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg> Retail</span>
-        <span class="industry-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg> Gastro</span>
-        <span class="industry-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg> Beauty</span>
-        <span class="industry-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M18 20V10M12 20V4M6 20v-6"/></svg> Fitness</span>
-        <span class="industry-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg> Wellness</span>
-      </div>
-    </div>
-      </div>
-    <div class="hero-demo reveal reveal-delay-2">
-      <p class="demo-caption" id="demoCaption">What the agent does at 23:48, when you have closed</p>
-      <div class="demo-switch" role="group" aria-label="Business type">
-        <button type="button" data-sector="restaurante" aria-pressed="true">Restaurant</button>
-        <button type="button" data-sector="clinica" aria-pressed="false">Clinic</button>
-        <button type="button" data-sector="gimnasio" aria-pressed="false">Gym</button>
-      </div>
-      <div class="scene">
-    <div class="crm-window" id="crmWindow" data-ui aria-label="Tailor-made CRM &middot; La Terraza">
-      <aside class="crm-side"><span class="crm-mark" aria-hidden="true"><svg class="zenia-mark" viewBox="0 0 140 140" fill="none"><defs><linearGradient id="zg-b" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2563EB"/><stop offset="100%" stop-color="#3B82F6"/></linearGradient><linearGradient id="zg-v" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6366F1"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient></defs><rect width="140" height="140" rx="28" fill="#0F172A"/><path d="M 70 18 Q 18 18 18 38 L 18 57 Q 18 63 24 63 L 88 63 Z" fill="url(#zg-b)"/><path d="M 70 122 Q 122 122 122 102 L 122 83 Q 122 77 116 77 L 52 77 Z" fill="url(#zg-v)"/></svg></span><nav><span class="on">Bookings</span><span>Guests</span><span>Campaigns</span><span>Agent</span><span>Settings</span></nav><div class="crm-who"><b>La Terraza</b>Madrid &middot; 2 rooms</div></aside>
-      <div class="crm-main">
-        <div class="crm-top"><span class="crm-mark" aria-hidden="true"><svg class="zenia-mark" viewBox="0 0 140 140" fill="none"><defs><linearGradient id="zg-b" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2563EB"/><stop offset="100%" stop-color="#3B82F6"/></linearGradient><linearGradient id="zg-v" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6366F1"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient></defs><rect width="140" height="140" rx="28" fill="#0F172A"/><path d="M 70 18 Q 18 18 18 38 L 18 57 Q 18 63 24 63 L 88 63 Z" fill="url(#zg-b)"/><path d="M 70 122 Q 122 122 122 102 L 122 83 Q 122 77 116 77 L 52 77 Z" fill="url(#zg-v)"/></svg></span><span class="crm-brand">La Terraza <span>&middot; Tailor-made CRM</span></span><span class="crm-live">Updated just now</span><div class="crm-tabs"><span class="on">Bookings</span><span>Guests</span><span>Campaigns</span><span>Agent</span><span>Settings</span></div></div>
-        <div class="crm-kpis"><div class="crm-kpi"><small>Bookings for tomorrow</small><strong>24<i>+1</i></strong></div><div class="crm-kpi"><small>Occupancy at 21:00</small><strong>92&nbsp;%</strong></div><div class="crm-kpi"><small>Handled by the agent</small><strong>16<i>+1</i></strong></div></div>
-        <div class="crm-title"><b>Tomorrow&rsquo;s bookings</b><em>Tuesday</em></div>
-        <table class="crm"><thead><tr><th>Time</th><th>Name</th><th>Guests</th><th class="opt">Area</th><th class="opt">Notes</th><th>Status</th></tr></thead><tbody>
-          <tr><td>20:00</td><td>Ortega family</td><td>6</td><td class="opt">Dining room</td><td class="opt dim">Birthday</td><td><span class="crm-state ok">Confirmed</span></td></tr>
-          <tr><td>20:30</td><td>Marc Vidal</td><td>2</td><td class="opt">Terrace</td><td class="opt dim">&mdash;</td><td><span class="crm-state ok">Confirmed</span></td></tr>
-          <tr class="crm-row new show"><td>21:00</td><td>Laura</td><td>4</td><td class="opt">Terrace</td><td class="opt dim">Gluten free</td><td><span class="crm-state agent">By the agent</span></td></tr>
-          <tr><td>21:00</td><td>Ana Ruiz</td><td>3</td><td class="opt">Dining room</td><td class="opt dim">High chair</td><td><span class="crm-state wait">Pending</span></td></tr>
-          <tr><td>21:30</td><td>Pedro Lima</td><td>2</td><td class="opt">Terrace</td><td class="opt dim">&mdash;</td><td><span class="crm-state ok">Confirmed</span></td></tr>
-          <tr><td>22:00</td><td>Sato party</td><td>8</td><td class="opt">Dining room</td><td class="opt dim">Tasting menu</td><td><span class="crm-state ok">Confirmed</span></td></tr>
-        </tbody></table>
-      </div>
-    </div>
-      <div class="phone" data-ui>
-        <div class="phone-status" aria-hidden="true"><span class="phone-time">23:48</span><span class="phone-icons"><svg viewBox="0 0 16 12"><path fill="currentColor" d="M0 9h2v3H0zM4 6h2v6H4zM8 3h2v9H8zM12 0h2v12h-2z"/></svg><svg viewBox="0 0 16 12"><path fill="currentColor" d="M8 2.4c2.6 0 4.9 1 6.6 2.7l-1.3 1.3A7.5 7.5 0 0 0 8 4.3a7.5 7.5 0 0 0-5.3 2.1L1.4 5.1A9.3 9.3 0 0 1 8 2.4zm0 3.6c1.6 0 3 .6 4.1 1.7l-1.3 1.3A4 4 0 0 0 8 7.9a4 4 0 0 0-2.8 1.1L3.9 7.7A5.8 5.8 0 0 1 8 6zm0 3.6c.7 0 1.3.3 1.7.7L8 12l-1.7-1.7c.4-.4 1-.7 1.7-.7z"/></svg><svg viewBox="0 0 24 12"><rect x=".5" y=".5" width="20" height="11" rx="2.5" fill="none" stroke="currentColor"/><rect x="2" y="2" width="16" height="8" rx="1.5" fill="currentColor"/><path fill="currentColor" d="M22 4v4a2 2 0 0 0 0-4z"/></svg></span></div>
-        <div class="chat" id="demoChat">
-          <div class="chat-head"><span class="chat-back" aria-hidden="true">&lsaquo;</span><span class="chat-avatar" aria-hidden="true">L</span><div class="chat-who"><strong>La Terraza &middot; Restaurant</strong><span class="chat-status">online</span></div><span class="chat-tools" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10 5-3v10l-5-3z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span></div>
-          <div class="chat-body">
-            <div class="chat-day">Today</div>
-            <div class="chat-lock">Messages are end-to-end encrypted.</div>
-            <div class="msg in shown"><span class="msg-text">Hi, do you have a table for 4 tomorrow at 21:00?</span><time>23:45</time></div>
-            <div class="msg out shown read"><span class="msg-text">Hi! Yes, we still have a table for 4 at 21:00. Where would you like to sit?</span><time>23:45<i class="ticks" aria-hidden="true"></i></time><span class="msg-buttons"><span class="tapped">Terrace</span><span>Dining room</span></span></div>
-            <div class="msg in reply shown"><span class="msg-text">Terrace</span><time>23:46</time></div>
-            <div class="msg in shown"><span class="msg-text">Under Laura.</span><time>23:46</time></div>
-            <div class="msg out shown read"><span class="msg-text">Done, Laura: table for 4 tomorrow at 21:00 on the terrace. I will send you a reminder tomorrow at 18:00. Any allergies we should know about?</span><time>23:46<i class="ticks" aria-hidden="true"></i></time></div>
-            <div class="msg in shown"><span class="msg-text">Gluten free, thanks</span><time>23:47</time></div>
-            <div class="msg out shown read"><span class="msg-text">Noted, we will tell the kitchen. See you tomorrow!</span><time>23:47<i class="ticks" aria-hidden="true"></i></time></div>
-          </div>
-          <div class="chat-input" aria-hidden="true"><span class="chat-input-field">Message</span><span class="chat-mic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 15a4 4 0 0 0 4-4V6a4 4 0 0 0-8 0v5a4 4 0 0 0 4 4zm6-4a6 6 0 0 1-12 0H4a8 8 0 0 0 7 7.9V22h2v-3.1A8 8 0 0 0 20 11z"/></svg></span></div>
-        </div>
-      </div>
-      </div>
-      <p class="demo-note reveal reveal-delay-3">Example conversation. The flow is the real one.</p>
-    </div>
-  </div>
-</section>
-
-
-<!-- AI OPPORTUNITIES -->
-<section class="strip" aria-label="Tools">
-  <div class="container">
-    <p class="strip-label">We work on</p>
-    <ul><li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg><span>WhatsApp Business API</span></li><li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.164 7.93V5.084a2.198 2.198 0 001.267-1.978v-.067A2.2 2.2 0 0017.238.845h-.067a2.2 2.2 0 00-2.193 2.193v.067a2.196 2.196 0 001.252 1.973l.013.006v2.852a6.22 6.22 0 00-2.969 1.31l.012-.01-7.828-6.095A2.497 2.497 0 104.3 4.656l-.012.006 7.697 5.991a6.176 6.176 0 00-1.038 3.446c0 1.343.425 2.588 1.147 3.607l-.013-.02-2.342 2.343a1.968 1.968 0 00-.58-.095h-.002a2.033 2.033 0 102.033 2.033 1.978 1.978 0 00-.1-.595l.005.014 2.317-2.317a6.247 6.247 0 104.782-11.134l-.036-.005zm-.964 9.378a3.206 3.206 0 113.215-3.207v.002a3.206 3.206 0 01-3.207 3.207z"/></svg><span>HubSpot</span></li><li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.66 6.897a1.299 1.299 0 0 0-1.205.765l-.642 1.44-.062-.385A1.291 1.291 0 0 0 5.27 7.648l-4.185.678A1.291 1.291 0 0 0 .016 9.807l.678 4.18a1.293 1.293 0 0 0 1.27 1.087c.074 0 .143-.01.216-.017l4.18-.678c.436-.07.784-.351.96-.723l2.933 1.307a1.304 1.304 0 0 0 .988.026c.321-.12.575-.365.716-.678l.28-.629.038.276a1.297 1.297 0 0 0 1.455 1.103l3.712-.501a1.29 1.29 0 0 0 1.03.514h4.236c.713 0 1.29-.58 1.291-1.291V9.545c0-.712-.58-1.291-1.291-1.291h-4.236c-.079 0-.155.008-.23.022a1.309 1.309 0 0 0-.275-.288c-.275-.21-.614-.3-.958-.253l-4.197.571c-.155.021-.3.07-.432.14L9.159 7.01a1.27 1.27 0 0 0-.499-.113zm-.025.705c.077 0 .159.013.24.052l2.971 1.324c-.128.238-.18.508-.142.782l.357 2.596h.002l-.745 1.672a.59.59 0 0 1-.777.296l-3.107-1.385-.004-.041-.41-2.526L8.1 7.95a.589.589 0 0 1 .536-.348zm-3.159.733c.125 0 .245.039.343.112.13.09.21.227.237.382l.234 1.446-.56 1.259a1.27 1.27 0 0 0-.026.987c.12.322.364.575.678.717l.295.131a.585.585 0 0 1-.428.314l-4.185.678a.59.59 0 0 1-.674-.485l-.678-4.18a.588.588 0 0 1 .485-.674l4.185-.678c.03-.004.064-.01.094-.01zm11.705.09a.59.59 0 0 1 .415.173 1.287 1.287 0 0 0-.416.947v4.237c0 .033.003.065.005.097l-3.55.482a.586.586 0 0 1-.66-.502l-.191-1.403.899-2.017a1.29 1.29 0 0 0-.333-1.5l3.754-.51c.026-.004.051-.004.077-.004zm1.3.532h4.227c.326 0 .588.266.588.588v4.237a.589.589 0 0 1-.588.588h-4.237a.564.564 0 0 1-.12-.013c.47-.246.758-.765.684-1.318zm-5.988.309.254.113c.296.133.43.48.296.777l-.432.97-.207-1.465a.58.58 0 0 1 .09-.395zm5.39.538.453 3.325a.583.583 0 0 1-.453.65zM6.496 11.545l.17 1.052a.588.588 0 0 1-.293-.776zm3.985 4.344a.588.588 0 0 0-.612.603c0 .358.244.61.601.61a.582.582 0 0 0 .607-.608c0-.35-.242-.605-.596-.605zm5.545 0a.588.588 0 0 0-.612.603c0 .358.245.61.602.61a.582.582 0 0 0 .606-.608c0-.35-.24-.605-.596-.605zm-8.537.018a.047.047 0 0 0-.048.047v.085c0 .026.021.047.048.047h.52l-.623.9a.052.052 0 0 0-.009.027v.027c0 .026.021.047.048.047h.815a.047.047 0 0 0 .047-.047v-.085a.047.047 0 0 0-.047-.047h-.55l.606-.9a.05.05 0 0 0 .008-.026v-.028a.047.047 0 0 0-.047-.047zm5.303 0a.047.047 0 0 0-.047.047v1.086c0 .026.02.047.047.047h.135a.047.047 0 0 0 .047-.047v-.454h.545v.454c0 .026.02.047.047.047h.134a.047.047 0 0 0 .047-.047v-1.086a.047.047 0 0 0-.047-.047h-.134a.047.047 0 0 0-.047.047v.453h-.545v-.453a.047.047 0 0 0-.047-.047zm-2.324.164c.25 0 .372.194.372.425 0 .219-.109.425-.358.426-.242 0-.375-.197-.375-.419 0-.235.108-.432.36-.432zm5.545 0c.25 0 .372.194.372.425 0 .219-.108.425-.358.426-.242 0-.374-.197-.374-.419 0-.235.108-.432.36-.432z"/></svg><span>Zoho CRM</span></li><li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21.1002 15.7957c-1.6015 0-2.8997-1.2983-2.8997-2.8998s1.2983-2.8997 2.8997-2.8997c1.6015 0 2.8998 1.2982 2.8998 2.8997 0 1.5999-1.2979 2.8998-2.8998 2.8998zm0-1.2c.9388.0006 1.7003-.7601 1.7008-1.6989.0004-.9388-.7602-1.7003-1.699-1.7007h-.0018c-.9388.0004-1.6994.7619-1.699 1.7007.0005.9381.761 1.6985 1.699 1.699zm-6.0655 1.2c-1.6014 0-2.8997-1.2983-2.8997-2.8998s1.2983-2.8997 2.8997-2.8997c1.6015 0 2.8998 1.2982 2.8998 2.8997 0 1.5999-1.2999 2.8998-2.8998 2.8998zm0-1.2c.9389.0006 1.7003-.7601 1.7008-1.6989.0005-.9388-.7602-1.7003-1.699-1.7007h-.0018c-.9388.0004-1.6994.7619-1.699 1.7007.0005.9381.761 1.6985 1.699 1.699zM11.865 12.858c0 1.6199-1.2979 2.9378-2.8977 2.9378s-2.8998-1.314-2.8998-2.9358 1.1799-2.8597 2.8998-2.8597c.6359 0 1.2239.134 1.6998.484v-1.68a.6.6 0 0 1 1.2 0v4.0537h-.002zm-2.8977 1.7399c.9388.0005 1.7002-.7602 1.7007-1.699.0005-.9388-.7602-1.7003-1.699-1.7007h-.0017c-.9389.0004-1.6995.7619-1.699 1.7007.0004.9381.7608 1.6985 1.699 1.699zm-6.0675 1.1979C1.2983 15.7957 0 14.4974 0 12.8959s1.2983-2.8997 2.8998-2.8997 2.8997 1.2982 2.8997 2.8997c0 1.5999-1.2999 2.8998-2.8997 2.8998zm0-1.2c.9388.0006 1.7002-.7601 1.7007-1.699.0005-.9387-.7602-1.7002-1.699-1.7006h-.0017c-.9388.0004-1.6995.7619-1.699 1.7007.0004.9381.7608 1.6985 1.699 1.699z"/></svg><span>Odoo</span></li><li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.316 5.684H24v12.632h-5.684V5.684zM5.684 24h12.632v-5.684H5.684V24zM18.316 5.684V0H1.895A1.894 1.894 0 0 0 0 1.895v16.421h5.684V5.684h12.632zm-7.207 6.25v-.065c.272-.144.5-.349.687-.617s.279-.595.279-.982c0-.379-.099-.72-.3-1.025a2.05 2.05 0 0 0-.832-.714 2.703 2.703 0 0 0-1.197-.257c-.6 0-1.094.156-1.481.467-.386.311-.65.671-.793 1.078l1.085.452c.086-.249.224-.461.413-.633.189-.172.445-.257.767-.257.33 0 .602.088.816.264a.86.86 0 0 1 .322.703c0 .33-.12.589-.36.778-.24.19-.535.284-.886.284h-.567v1.085h.633c.407 0 .748.109 1.02.327.272.218.407.499.407.843 0 .336-.129.614-.387.832s-.565.327-.924.327c-.351 0-.651-.103-.897-.311-.248-.208-.422-.502-.521-.881l-1.096.452c.178.616.505 1.082.977 1.401.472.319.984.478 1.538.477a2.84 2.84 0 0 0 1.293-.291c.382-.193.684-.458.902-.794.218-.336.327-.72.327-1.149 0-.429-.115-.797-.344-1.105a2.067 2.067 0 0 0-.881-.689zm2.093-1.931l.602.913L15 10.045v5.744h1.187V8.446h-.827l-2.158 1.557zM22.105 0h-3.289v5.184H24V1.895A1.894 1.894 0 0 0 22.105 0zm-3.289 23.5l4.684-4.684h-4.684V23.5zM0 22.105C0 23.152.848 24 1.895 24h3.289v-5.184H0v3.289z"/></svg><span>Google Calendar</span></li><li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.655 14.262c.281 0 .557.023.828.064 0 .005-.005.01-.005.014-.105.267-.234.534-.381.786l-1.219 2.106c-1.112 1.936-3.177 3.127-5.411 3.127h-2.432c-2.23 0-4.294-1.191-5.412-3.127l-1.218-2.106a6.251 6.251 0 0 1 0-6.252l1.218-2.106C6.736 4.832 8.8 3.641 11.035 3.641h2.432c2.23 0 4.294 1.191 5.411 3.127l1.219 2.106c.147.252.271.519.381.786 0 .004.005.009.005.014-.267.041-.543.064-.828.064-1.816 0-2.501-.607-3.291-1.306-.764-.676-1.711-1.517-3.44-1.517h-1.029c-1.251 0-2.387.455-3.2 1.278-.796.805-1.233 1.904-1.233 3.099v1.411c0 1.196.437 2.295 1.233 3.099.813.823 1.949 1.278 3.2 1.278h1.034c1.729 0 2.676-.841 3.439-1.517.791-.703 1.471-1.306 3.287-1.301Zm.005-3.237c.399 0 .794-.036 1.179-.11-.002-.004-.002-.01-.002-.014-.073-.414-.193-.823-.349-1.218.731-.12 1.407-.396 1.986-.819 0-.004-.005-.013-.005-.018-.331-1.085-.832-2.101-1.489-3.03-.649-.915-1.435-1.719-2.331-2.395-1.867-1.398-4.088-2.138-6.428-2.138-1.448 0-2.855.28-4.175.841-1.273.543-2.423 1.315-3.407 2.299S2.878 6.552 2.341 7.83c-.557 1.324-.842 2.726-.842 4.175 0 1.448.281 2.855.842 4.174.542 1.274 1.314 2.423 2.298 3.407s2.129 1.761 3.407 2.299c1.324.556 2.727.841 4.175.841 2.34 0 4.561-.74 6.428-2.137a10.815 10.815 0 0 0 2.331-2.396c.652-.929 1.158-1.949 1.489-3.03 0-.004.005-.014.005-.018-.579-.423-1.255-.699-1.986-.819.161-.395.276-.804.349-1.218.005-.009.005-.014.005-.023.869.166 1.692.506 2.404 1.035.685.505.552 1.075.446 1.416C22.184 20.437 17.619 24 12.221 24c-6.625 0-12-5.375-12-12s5.37-12 12-12c5.398 0 9.963 3.563 11.471 8.464.106.341.239.915-.446 1.421-.717.529-1.535.873-2.404 1.034.128.716.128 1.45 0 2.166-.387-.074-.782-.11-1.182-.11-4.184 0-3.968 2.823-6.736 2.823h-1.029c-1.899 0-3.15-1.357-3.15-3.095v-1.411c0-1.738 1.251-3.094 3.15-3.094h1.034c2.768 0 2.552 2.823 6.731 2.827Z"/></svg><span>Calendly</span></li></ul>
-  </div>
-</section>
-
-<section class="numbered opportunities" id="opportunities">
-  <div class="container">
-    <div class="text-center reveal">
-      <h2 class="section-title">Where AI Creates <span class="text-gradient">Immediate Business Value</span></h2>
-      <p class="section-desc">These are the areas where companies see the fastest and most significant returns from AI transformation.</p>
-    </div>
-    <div class="opp-grid">
-      <div class="opp-card reveal reveal-delay-1">
-        <div class="opp-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
-        <h3>Sales & Revenue Automation</h3>
-        <p>AI-powered lead scoring, automated outreach, and predictive pipeline analytics that accelerate revenue growth without adding headcount.</p>
-      </div>
-      <div class="opp-card reveal reveal-delay-2">
-        <div class="opp-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-        <h3>Customer Support AI</h3>
-        <p>Intelligent agents that resolve inquiries instantly, escalate complex issues, and improve satisfaction scores while reducing support costs.</p>
-      </div>
-      <div class="opp-card reveal reveal-delay-3">
-        <div class="opp-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-        <h3>Internal Knowledge Copilots</h3>
-        <p>AI assistants embedded in your team's daily tools that surface relevant information, draft documents, and accelerate decision-making.</p>
-      </div>
-      <div class="opp-card reveal reveal-delay-1">
-        <div class="opp-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
-        <h3>Operations Automation</h3>
-        <p>Automate reporting, approvals, scheduling, and cross-team coordination. Eliminate manual overhead across every department.</p>
-      </div>
-      <div class="opp-card reveal reveal-delay-2">
-        <div class="opp-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg></div>
-        <h3>AI Decision Support</h3>
-        <p>Real-time analytics and predictive models that give leadership the data clarity to make faster, higher-confidence strategic decisions.</p>
-      </div>
-      <div class="opp-card reveal reveal-delay-3">
-        <div class="opp-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-        <h3>Custom SaaS Platforms</h3>
-        <p>Full-stack software products built from scratch with AI at the core. Designed for your specific market, users, and business model.</p>
-      </div>
-    </div>
-    <div class="opp-cta reveal">
-      <a href="#process" class="btn btn-secondary btn-arrow">See How We Implement</a>
-    </div>
-  </div>
-</section>
-
-
-<!-- TAILOR-MADE -->
-<section class="numbered tailor" id="tailor">
-  <div class="container">
-    <div class="tailor-content">
-      <div class="tailor-text reveal">
-        <h2>Purpose-Built <span class="text-gradient">Around Your Operations</span></h2>
-        <p>We start by understanding how your company actually works.</p>
-        <div class="tailor-points">
-          <div class="tailor-point">
-            <div class="tailor-point-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-            <div>
-              <h3 class="h4-style">Designed for Your Specific Use Case</h3>
-              <p>Every system is architected from the ground up around your exact workflows, tools, and business objectives.</p>
-            </div>
-          </div>
-          <div class="tailor-point">
-            <div class="tailor-point-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
-            <div>
-              <h3 class="h4-style">Deep Business Immersion</h3>
-              <p>We embed in your operations to understand exactly how your team works before writing a single line of code.</p>
-            </div>
-          </div>
-          <div class="tailor-point">
-            <div class="tailor-point-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-            <div>
-              <h3 class="h4-style">Scales as You Grow</h3>
-              <p>Your AI systems grow and adapt as your needs evolve.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="tailor-visual reveal reveal-delay-2">
-        <div class="tailor-card tailor-card--highlight">
-          <div class="tailor-card-label">How We Work</div>
-          <h3 class="h4-style">Your Business. Your AI. Your Rules.</h3>
-        </div>
-        <div class="tailor-card">
-          <div class="tailor-card-label">Custom SaaS Development</div>
-          <h3 class="h4-style">We Build Entire Products for You</h3>
-        </div>
-        <div class="tailor-card">
-          <div class="tailor-card-label">The Result</div>
-          <h3 class="h4-style">Technology That Feels Like It Was Always There</h3>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- SERVICES -->
-<section class="numbered section" id="services">
-  <div class="container">
-    <div class="reveal">
-      <h2 class="section-title">Operational Intelligence, <span class="text-gradient">Engineered With AI</span></h2>
-      <p class="section-desc">We architect, build, and deploy systems that fundamentally transform how your organization operates.</p>
-    </div>
-    <div class="services-grid">
-      <div class="service-card reveal reveal-delay-1">
-        <div class="service-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
-        <h3>AI Strategy Consulting</h3>
-        <p>Comprehensive assessment of your operations to identify high-impact AI opportunities.</p>
-      </div>
-      <div class="service-card reveal reveal-delay-2">
-        <div class="service-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg></div>
-        <h3>Workflow Automation</h3>
-        <p>Transform manual processes into intelligent automated workflows.</p>
-      </div>
-      <div class="service-card reveal reveal-delay-3">
-        <div class="service-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/></svg></div>
-        <h3>AI Agent Deployment</h3>
-        <p>Design and deploy autonomous AI agents that handle complex tasks across your organization.</p>
-      </div>
-      <div class="service-card reveal reveal-delay-4">
-        <div class="service-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
-        <h3>Operational Transformation</h3>
-        <p>Full-scale redesign of how your company operates, powered by AI at every level.</p>
-      </div>
-      <div class="service-card service-card--featured reveal">
-        <div class="service-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-        <div class="service-card-body">
-          <div class="service-featured-badge">Full Product Development</div>
-          <h3>Custom SaaS Development</h3>
-          <ul class="service-points"><li>A private hand-carry network, with vouched members and verified identity</li><li>A handover code on every trip and a panel for the team</li><li>Design, build, launch and film: all from Zenia</li></ul>
-        </div>
-        <figure class="service-figure is-video reel-frame"><div class="stage-box" style="--poster:url(/cases/img/gwb-network-poster.webp)"><video class="loop" controls muted loop playsinline preload="metadata" poster="/cases/img/gwb-network-poster.webp" width="720" height="1280" aria-label="Launch film of GWB Network, the private hand-carry network built by Zenia"><source src="/cases/video/gwb-network.mp4" type="video/mp4"></video><button type="button" class="stage-sound">Play with sound</button></div><figcaption>GWB Network, the platform we built for Global Watch Buyers. <a href="/cases/global-watch-buyers-ai-acquisition.html">Read the case</a>.</figcaption></figure>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- PROCESS -->
-<section class="numbered section process" id="process">
-  <div class="container">
-    <div class="reveal">
-      <h2 class="section-title">From Assessment to <span class="text-gradient">Continuous Optimization</span></h2>
-      <p class="section-desc">A structured engagement model designed for speed, clarity, and lasting impact.</p>
-    </div>
-    <div class="gantt reveal reveal-delay-1" data-ui>
-      <div class="gantt-chart">
-        <div class="gantt-corner">Stage</div>
-        <div class="gantt-ruler" aria-hidden="true"><span>Wk 1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span class="gantt-inf">onwards</span><b class="gantt-ms" style="--x:8">First result</b></div>
-        <div class="gantt-grid" aria-hidden="true"><span class="gantt-mark" style="--x:8"></span></div>
-        <ol class="gantt-rows">
-      <li class="gantt-row" style="--s:0;--e:2;--r:2"><div class="gantt-text"><h3>AI Opportunity Analysis</h3><p>We audit your operations, identify automation targets, and quantify potential ROI for each opportunity.</p><span class="gantt-dur">1 to 2 weeks</span></div><div class="gantt-track"><span class="gantt-bar"><i>1 to 2 wks</i></span></div></li>
-      <li class="gantt-row" style="--s:2;--e:4;--r:3"><div class="gantt-text"><h3>Workflow Redesign</h3><p>We architect new workflows that integrate AI natively, eliminating waste and maximizing throughput.</p><span class="gantt-dur">1 to 2 weeks</span></div><div class="gantt-track"><span class="gantt-bar"><i>1 to 2 wks</i></span></div></li>
-      <li class="gantt-row" style="--s:4;--e:9.5;--r:4"><div class="gantt-text"><h3>System Implementation</h3><p>Our team builds, tests, and deploys AI systems into your existing infrastructure with zero disruption.</p><span class="gantt-dur">4 to 6 weeks</span></div><div class="gantt-track"><span class="gantt-bar"><i>4 to 6 wks</i></span></div></li>
-      <li class="gantt-row gantt-row--inf" style="--s:9.5;--e:12;--r:5"><div class="gantt-text"><h3>Continuous Optimization</h3><p>We monitor performance, refine models, and expand automation scope as your organization evolves.</p><span class="gantt-dur">Ongoing, every month</span></div><div class="gantt-track"><span class="gantt-bar"><i>Ongoing</i></span></div></li>
-        </ol>
-      </div>
-    </div>
-    <p class="gantt-note reveal reveal-delay-2">Weeks from the first call.</p>
-  </div>
-</section>
-
-
-<!-- IMPACT -->
-<section class="numbered section" id="impact">
-  <div class="container text-center">
-    <div class="reveal">
-      <h2 class="section-title">Results That <span class="text-gradient">Speak For Themselves</span></h2>
-      <p class="section-desc">Our clients don't hope AI works.</p>
-    </div>
-    <div class="impact-grid">
-      <div class="impact-card reveal reveal-delay-1">
-        <div class="impact-number text-gradient">10x</div>
-        <h3 class="h4-style">Faster Decision Cycles</h3>
-      </div>
-      <div class="impact-card reveal reveal-delay-2">
-        <div class="impact-number text-gradient">-40%</div>
-        <h3 class="h4-style">Operational Cost Reduction</h3>
-      </div>
-      <div class="impact-card reveal reveal-delay-3">
-        <div class="impact-number text-gradient">3x</div>
-        <h3 class="h4-style">Team Productivity</h3>
-      </div>
-      <div class="impact-card reveal reveal-delay-1">
-        <div class="impact-number text-gradient">85%</div>
-        <h3 class="h4-style">Process Automation Rate</h3>
-      </div>
-      <div class="impact-card reveal reveal-delay-2">
-        <div class="impact-number text-gradient">24/7</div>
-        <h3 class="h4-style">Always-On Operations</h3>
-      </div>
-      <div class="impact-card reveal reveal-delay-3">
-        <div class="impact-number text-gradient">&lt; 8w</div>
-        <h3 class="h4-style">Time to First Value</h3>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SOCIAL PROOF -->
-<section class="numbered proof" id="proof">
-  <div class="container">
-    <div class="reveal">
-      <h2 class="section-title">Built For Companies <span class="text-gradient">Like Yours</span></h2>
-    </div>
-    <div class="case-feature reveal reveal-delay-1">
-      <figure class="reel-frame"><div class="stage-box" style="--poster:url(/cases/img/gwb-agente-poster.webp)"><video class="loop" controls muted loop playsinline preload="metadata" poster="/cases/img/gwb-agente-poster.webp" width="720" height="1280" aria-label="Re-enactment: a watch seller writes at 2:47 in the morning and leaves with a call booked"><source src="/cases/video/gwb-agente-247am.mp4" type="video/mp4"></video><button type="button" class="stage-sound">Play with sound</button></div>
-        <figcaption>2:47 in the morning: a seller writes and leaves with a call booked. A re-enactment.</figcaption></figure>
-      <div class="case-feature-text">
-        <p class="eyebrow">Case &middot; Global Watch Buyers</p>
-        <h3>Luxury watch sellers from 33 countries, acquired on WhatsApp</h3>
-        <p>Selling pages in 13 languages, WhatsApp with qualification, a lead panel and ads that only bring sellers. On top, the AI agent that answers, qualifies and books.</p>
-        <div class="case-feature-stats"><div><b>831</b><span>WhatsApp conversations</span></div><div><b>33</b><span>countries</span></div><div><b>10 of 12</b><span>ad contacts with a premium watch</span></div></div>
-        <a href="/cases/global-watch-buyers-ai-acquisition.html" class="btn btn-secondary btn-arrow">See the case</a>
-      </div>
-    </div>
-    <div class="case-feature case-feature--flip reveal reveal-delay-1">
-      <figure class="reel-frame"><div class="stage-box" style="--poster:url(/cases/img/ts-unmakeable-poster.webp)"><video class="loop" controls muted loop playsinline preload="metadata" poster="/cases/img/ts-unmakeable-poster.webp" width="720" height="1280" aria-label="The Unmakeable, the brand film of Throwin&rsquo; Salt Co., made by Zenia with real watches from stock"><source src="/cases/video/ts-unmakeable.mp4" type="video/mp4"></video><button type="button" class="stage-sound">Play with sound</button></div>
-        <figcaption>The Unmakeable, the brand film of Throwin&rsquo; Salt Co., made by Zenia.</figcaption></figure>
-      <div class="case-feature-text">
-        <p class="eyebrow">Case &middot; Throwin&rsquo; Salt Co.</p>
-        <h3>High-end watches: the day&rsquo;s lot, listed on eBay from WhatsApp</h3>
-        <p>Gaia, the agent we built, prepares every listing with title, photos and price and publishes it on eBay when the team says &ldquo;publish&rdquo;.</p>
-        <div class="case-feature-stats"><div><b>54</b><span>watches listed in 4 weeks</span></div><div><b>23</b><span>in a single day</span></div><div><b>$2&nbsp;M</b><span>of inventory on eBay</span></div></div>
-        <a href="/cases/throwin-salt-gaia-ebay-whatsapp.html" class="btn btn-secondary btn-arrow">See the case</a>
-      </div>
-    </div>
-    <div class="work-strip reveal reveal-delay-1">
-      <figure><img src="/cases/img/croian-home.webp" alt="Croian &amp; Hein, the house page: a rare-wine house for Swiss collectors, built by Zenia" width="1600" height="1000" loading="lazy"><figcaption>Croian &amp; Hein, the house page: a rare-wine house for Swiss collectors, built by Zenia</figcaption></figure>
-      <figure><img src="/cases/img/croian-cellar.webp" alt="Croian &amp; Hein, the digital cellar: one page per vintage, built from the real inventory" width="1400" height="875" loading="lazy"><figcaption>Croian &amp; Hein, the digital cellar: one page per vintage, built from the real inventory</figcaption></figure>
-      <figure><img src="/cases/img/ts-card.webp" alt="Throwin’ Salt: Gaia, the agent that prepares the day’s lot of watches for eBay" width="1600" height="1000" loading="lazy"><figcaption>Throwin’ Salt: Gaia, the agent that prepares the day’s lot of watches for eBay</figcaption></figure>
-    </div>
-    <table class="cases reveal reveal-delay-2">
-      <thead><tr><th>Sector</th><th>Project</th><th>What we built</th><th>Result</th></tr></thead>
-      <tbody>
-      <tr>
-        <td>Boutique Law Firm &middot; Spain&harr;LATAM &middot; Featured Case</td>
-        <td><h3>AI Acquisition System for a Boutique Law Firm</h3><div><a href="/cases/boutique-law-firm-latam.html" class="case-link">Read the full case &rarr;</a></div></td>
-        <td>A boutique law firm with a 23,000+ follower audience answered every inquiry by hand, in one time zone. We built the full system: a humanized AI agent that qualifies and books 24/7, a CRM with per-channel attribution, geo-targeted Google Ads with a conversion pixel, and autonomous agents optimizing the loop daily.</td>
-        <td><div class="result"><b>&lt;1 min</b><span>response time, 24/7, across LATAM</span></div><div class="result"><b>3&#8209;8</b><span>bookings expected on minimum ad spend</span></div></td>
-      </tr>
-      <tr>
-        <td>Luxury &middot; Switzerland</td>
-        <td><h3>A Private Rare-Wine House, Launched in 72 Hours</h3><div><a href="/cases/croian-hein-private-cellar-switzerland.html" class="case-link">Read the case &rarr;</a></div></td>
-        <td>From a trade price list to a complete luxury house for Swiss collectors: positioning, an engraved identity, a digital cellar with a page for every vintage, AI visibility and the kit to sell in person.</td>
-        <td><div class="result"><b>430+</b><span>pages built from the real inventory</span></div></td>
-      </tr>
-      <tr>
-        <td>Regulatory AI &middot; Spain &amp; Italy</td>
-        <td><h3>Market Entry Engine for an AI Public-Affairs Platform</h3><div><a href="/cases/cicero-public-affairs-spain-italy.html" class="case-link">Read the case &rarr;</a></div></td>
-        <td>Growth partner on the ground for Cicero: market thesis, positioning per country, account intelligence, outbound in two languages and a full demo system.</td>
-        <td><div class="result"><b>150</b><span>accounts researched and scored in week one</span></div></td>
-      </tr>
-      <tr>
-        <td>Wellness</td>
-        <td><h3>AI-Powered Sponsor Acquisition System</h3></td>
-        <td>Built an intelligent system that identifies, qualifies, and initiates outreach to potential sponsors across a 72,000+ member wellness community. Replaced manual prospecting with AI agents that work around the clock.</td>
-        <td><div class="result"><b>72K+</b><span>community members reached</span></div></td>
-      </tr>
-      <tr>
-        <td>Luxury Marketplace</td>
-        <td><h3>SaaS Platform for Luxury Watch Dealers</h3></td>
-        <td>Built a SaaS marketplace that automates listing parsing, buyer-seller matching, and deal tracking for luxury watch dealers. Cut 1.5 hours of daily manual work per dealer.</td>
-        <td><div class="result"><b>5x</b><span>faster deal matching</span></div></td>
-      </tr>
-      <tr>
-        <td>Fitness & Wellness</td>
-        <td><h3>Operations Automation for a National Brand</h3></td>
-        <td>Designed AI automation across core operations for a leading regional fitness and wellness brand. Processes that consumed hours of manual work every day now run autonomously.</td>
-        <td><div class="result"><b>80%</b><span>of manual workflows automated</span></div></td>
-      </tr>
-      <tr>
-        <td>Wholesale Trade</td>
-        <td><h3>AI Receivables Agent for Wholesale Distribution</h3></td>
-        <td>Built an AI agent that tracks invoices, automates collection follow-ups via WhatsApp, and maintains a live operations sheet with bidirectional sync. Replaced manual debt-tracking spreadsheets with autonomous receivables management for a cross-border wholesale distributor.</td>
-        <td><div class="result"><b>100%</b><span>of receivables tracked automatically</span></div></td>
-      </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-<!-- FOUNDER QUOTE -->
-<section class="founder-quote-section">
-  <div class="container">
-    <blockquote class="founder-blockquote reveal">
-      <p>Every company is adding AI tools. Almost none are becoming AI companies. We don't give you a chatbot — we redesign your business from within, with custom technology that becomes your competitive edge.</p>
-      <footer>
-        <span class="founder-name">Fabrizzio Zelada</span>
-        <span class="founder-role">Founder, ZENIA</span>
-      </footer>
-    </blockquote>
-  </div>
-</section>
-
-<!-- FAQ SECTION -->
-<section class="numbered faq-section" id="faq">
-  <div class="container">
-    <div class="reveal">
-      <h2 class="section-title">Questions We <span class="text-gradient">Get Asked Often</span></h2>
-    </div>
-    <div class="faq-list reveal reveal-delay-1">
-      <details class="faq-item"><summary><h3>What types of companies does ZENIA work with?</h3></summary><p>We work with growth-stage SMBs across fitness, wellness, retail, ecommerce, and professional services. Our sweet spot is companies with 5-200 employees looking to automate operations and scale without proportionally growing headcount.</p></details>
-      <details class="faq-item"><summary><h3>How long does it take to see results from AI automation?</h3></summary><p>Most clients see measurable impact within 4-8 weeks. We start with a strategy session, design the system in 1-2 weeks, and deploy within 4-6 weeks. Continuous optimization begins immediately after launch.</p></details>
-      <details class="faq-item"><summary><h3>Do I need technical knowledge to work with ZENIA?</h3></summary><p>Not at all. We handle everything from strategy to implementation. We immerse ourselves in your operations, understand your workflows, and build systems that your team can use without technical expertise.</p></details>
-      <details class="faq-item"><summary><h3>What is the cost of ZENIA's AI consulting services?</h3></summary><p>Every engagement is custom-scoped based on your needs. We offer a free 30-minute strategy call to understand your situation, then provide a tailored proposal with clear pricing and expected ROI.</p></details>
-      <details class="faq-item"><summary><h3>What markets does ZENIA serve?</h3></summary><p>We serve companies across Europe and the Americas. Our team works remotely and supports clients globally with bilingual (English/Spanish) service.</p></details>
-    </div>
-  </div>
-</section>
-
-<!-- FINAL CTA (with vision pillars) -->
-<section class="cta-section" id="cta">
-  <div class="container">
-    <div class="text-center reveal" style="margin-bottom: 48px;">
-      <h2 class="section-title">Productive Individuals Don't Make <span class="text-gradient">Productive Companies</span></h2>
-    </div>
-    <div class="vision-pillars" style="margin-bottom: 64px;">
-      <div class="vision-pillar reveal reveal-delay-1">
-        <div class="vision-pillar-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
-        <h3 class="h4-style">Operational Redesign</h3>
-        <p>Restructure workflows around AI capabilities, not legacy processes</p>
-      </div>
-      <div class="vision-pillar reveal reveal-delay-2">
-        <div class="vision-pillar-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
-        <h3 class="h4-style">Compounding Advantage</h3>
-        <p>AI systems that learn and improve, creating exponential returns over time</p>
-      </div>
-      <div class="vision-pillar reveal reveal-delay-3">
-        <div class="vision-pillar-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
-        <h3 class="h4-style">Scalable Intelligence</h3>
-        <p>Grow revenue and capability without proportionally growing costs or complexity</p>
-      </div>
-    </div>
-    <div class="cta-box reveal">
-      <div class="cta-bg" aria-hidden="true"><img src="/assets/images/hero-madrid.webp" width="2400" height="1109" alt="" loading="lazy" decoding="async"></div>
-      <h2>30 Minutes Could <span class="text-gradient">Change Your Next Quarter</span></h2>
-      <p>Book a strategy session with our team.</p>
-      <div class="cta-actions">
-        <a href="#" onclick="openCalendly(event)" class="btn btn-primary btn-arrow">Book your strategy session</a>
-        <a href="#process" class="btn btn-secondary">See the process</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- BOOKING MODAL -->
-<div class="booking-overlay" id="bookingModal">
-  <div class="booking-overlay-bg" onclick="closeBooking()"></div>
-  <div class="booking-modal">
-    <div class="booking-progress"><div class="booking-progress-bar" id="bookingProgress" style="width:50%"></div></div>
-    <button class="booking-modal-close" onclick="closeBooking()">&times;</button>
-
-    <!-- Step 1: Calendly -->
-    <div class="booking-step booking-step-calendly active" id="bookingStep1">
-      <div class="calendly-inline-widget" data-url="https://calendly.com/zeladauriartef/30min?hide_gdpr_banner=1&background_color=F4F4F1&text_color=0F172A&primary_color=2563EB"></div>
-    </div>
-
-    <!-- Step 2: Questionnaire -->
-    <div class="booking-step booking-step-form hidden" id="bookingStep2">
-      <div class="booking-form-inner">
-        <div class="booking-form-header">
-          <div class="booking-form-icon">
-            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-          </div>
-          <h3 id="formTitle">Help us prepare your session</h3>
-          <p id="formDesc">A few quick questions so we can make the most of your time</p>
-        </div>
-        <form id="bookingForm" onsubmit="submitBookingForm(event)">
-          <div class="booking-field">
-            <label id="labelCompany">Company name</label>
-            <input type="text" id="companyName" placeholder="Enter your company name" required>
-          </div>
-          <div class="booking-field">
-            <label id="labelSize">Company size</label>
-            <select id="companySize" required>
-              <option value="" disabled selected id="optSizeDefault">Select...</option>
-              <option value="1-10" id="optSize1">1-10 employees</option>
-              <option value="10-50" id="optSize2">10-50 employees</option>
-              <option value="50-200" id="optSize3">50-200 employees</option>
-              <option value="200+" id="optSize4">200+ employees</option>
-            </select>
-          </div>
-          <div class="booking-field">
-            <label id="labelArea">Which area would you most like to improve?</label>
-            <select id="companyArea" required>
-              <option value="" disabled selected id="optAreaDefault">Select...</option>
-              <option value="Sales" id="optArea1">Sales</option>
-              <option value="Customer Support" id="optArea2">Customer Support</option>
-              <option value="Operations" id="optArea3">Operations</option>
-              <option value="Internal Productivity" id="optArea4">Internal Productivity</option>
-              <option value="Not sure yet" id="optArea5">Not sure yet</option>
-            </select>
-          </div>
-          <div class="booking-field">
-            <label id="labelOnline">Your main online presence <span style="font-weight:400;color:var(--text-muted)">(website, Instagram, LinkedIn, etc.)</span></label>
-            <input type="url" id="companyUrl" placeholder="Enter your URL" inputmode="url">
-          </div>
-          <button type="submit" class="booking-submit" id="formSubmitBtn">Confirm Booking</button>
-          <div class="booking-notice">
-            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-            <p id="noticeText">We will prepare a brief AI opportunity analysis for your company before the call.</p>
-          </div>
-        </form>
-      </div>
-    </div>
-
-    <!-- Step 3: Confirmation -->
-    <div class="booking-step booking-step-confirm hidden" id="bookingStep3">
-      <div class="booking-confirm-icon">
-        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-      </div>
-      <h3 id="confirmTitle">You're all set!</h3>
-      <p id="confirmDesc">We'll analyze your company before the call and come prepared with tailored AI opportunities for your business.</p>
-      <button class="booking-confirm-close" onclick="closeBooking()" id="confirmCloseBtn">Close</button>
-    </div>
-  </div>
-</div>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-head">
-      <a href="/" class="footer-brand"><svg class="zenia-mark" viewBox="0 0 140 140" fill="none"><defs><linearGradient id="zg-b" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2563EB"/><stop offset="100%" stop-color="#3B82F6"/></linearGradient><linearGradient id="zg-v" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6366F1"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient></defs><rect width="140" height="140" rx="28" fill="#0F172A"/><path d="M 70 18 Q 18 18 18 38 L 18 57 Q 18 63 24 63 L 88 63 Z" fill="url(#zg-b)"/><path d="M 70 122 Q 122 122 122 102 L 122 83 Q 122 77 116 77 L 52 77 Z" fill="url(#zg-v)"/></svg><span>ZENIA</span></a>
-      <p class="footer-tag">Tailor-made CRM and AI agents on WhatsApp for SMBs in Spain and Latin America.</p>
-      <a href="#" onclick="openCalendly(event)" class="btn btn-primary btn-arrow">Book a call</a>
-    </div>
-    <div class="footer-row">
-      <div class="footer-contact">
-        <h3 class="footer-heading">Write to us</h3>
-        <a class="footer-mail" href="mailto:fabrizzio.zelada@zeniapartners.com">fabrizzio.zelada@zeniapartners.com</a>
-        <a class="footer-wa" href="https://wa.me/34677612799?text=Hi%2C%20I%27m%20coming%20from%20the%20Zenia%20website%20and%20I%27d%20like%20to%20know%20more" target="_blank" rel="noopener">Message us on WhatsApp</a>
-        <p class="footer-brand-desc">We help organizations redesign operations using intelligent automation and AI systems that deliver measurable results.</p>
-        <p class="footer-brands">Third-party marks and logos belong to their owners; no affiliation is implied.</p>
-        <p class="footer-credit">Madrid photograph: <a href="https://commons.wikimedia.org/wiki/File:Skyline_view_of_Madrid,_Spain_at_night_-_50317258357.jpg" target="_blank" rel="noopener">Tim Adams</a>, CC BY 2.0, via Wikimedia Commons.</p>
-      </div>
-      <div class="footer-columns">
-        <div class="footer-col">
-          <h3 class="footer-heading">Soluciones</h3>
-          <ul>
-            <li><a href="/es/crm-restaurantes.html">CRM Restaurantes y Hostelería</a></li>
-            <li><a href="/es/crm-gimnasios.html">CRM Gimnasios</a></li>
-            <li><a href="/es/crm-clinicas.html">CRM Clínicas</a></li>
-            <li><a href="/es/crm-salones-belleza.html">CRM Salones de Belleza</a></li>
-            <li><a href="/es/crm-madrid.html">Agencia de IA en Madrid</a></li>
-            <li><a href="/es/crm-sevilla.html">Agencia de IA en Sevilla</a></li>
-            <li><a href="/es/crm-valencia.html">Agencia de IA en Valencia</a></li>
-            <li><a href="/es/automatizacion-whatsapp-negocios.html">Automatizar WhatsApp</a></li>
-          </ul>
-        </div>
-<div class="footer-col">
-          <h3 class="footer-heading">Services</h3>
-          <ul>
-            <li><a href="#services">AI Strategy</a></li>
-            <li><a href="#services">Workflow Automation</a></li>
-            <li><a href="#services">Agent Deployment</a></li>
-            <li><a href="#services">Custom SaaS Development</a></li>
-          </ul>
-        </div>
-<div class="footer-col">
-          <h3 class="footer-heading">Company</h3>
-          <ul>
-            <li><a href="/about.html">About</a></li>
-            <li><a href="/cases/">Case Studies</a></li>
-            <li><a href="#process">Process</a></li>
-            <li><a href="mailto:fabrizzio.zelada@zeniapartners.com">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 ZENIA. <span>All rights reserved.</span></p>
-      <p class="footer-founder">Founded by <span>Fabrizzio Zelada</span></p>
-      <div class="footer-social"><a href="https://www.linkedin.com/company/zenia-partners/" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.instagram.com/zeniapartners" target="_blank" rel="noopener">Instagram</a></div>
-      <a href="#hero" class="footer-top">Back to top</a>
-      <div class="footer-featured"><a href="https://rankinpublic.xyz/products/zeniapartners.com" target="_blank" rel="noopener" aria-label="Featured on RankInPublic">
-        <img src="https://rankinpublic.xyz/api/badges/badge-featured.png?site=zeniapartners.com" alt="Featured on RankInPublic" title="Featured on RankInPublic" width="250" height="80" loading="lazy">
-      </a></div>
-    </div>
-  </div>
-</footer>
-
-
-<!-- Scripts: i18n + main run immediately for translations & nav -->
-<script>(function(){try{var q=new URLSearchParams(location.search).get("lang");if(q==="en")return;var s=localStorage.getItem("zenia-lang-v2");var n=(navigator.languages&&navigator.languages[0])||navigator.language||"";if(q==="es"||s==="es"||(!s&&/^es/i.test(n))){location.replace("/es/"+location.hash);}}catch(e){}})();</script>
-<script src="js/i18n.js?v=8"></script>
-<script src="js/main.js?v=7"></script>
-<script defer src="js/booking.js?v=2"></script>
-<script defer src="js/demo-chat.js?v=1793907646"></script>
-<script defer src="js/hero-net.js?v=1793907646"></script>
-<script defer src="js/loops.js?v=1793907646"></script>
-
-
-
-<script>
-(function(){
-  var consent = localStorage.getItem('cookie_consent');
-  if (consent === null) {
-    document.getElementById('cookieBanner').style.display = 'flex';
-    // Disable GA4 until consent
-    window['ga-disable-G-HP0VQSEL68'] = true;
-  } else if (consent === 'rejected') {
-    window['ga-disable-G-HP0VQSEL68'] = true;
-  }
-})();
-function acceptCookies() {
-  localStorage.setItem('cookie_consent', 'accepted');
-  document.getElementById('cookieBanner').style.display = 'none';
-  window['ga-disable-G-HP0VQSEL68'] = false;
-  gtag('consent', 'update', { analytics_storage: 'granted' });
-}
-function rejectCookies() {
-  localStorage.setItem('cookie_consent', 'rejected');
-  document.getElementById('cookieBanner').style.display = 'none';
-  window['ga-disable-G-HP0VQSEL68'] = true;
-}
-</script>
-
-<div style="padding:16px clamp(20px,3.2vw,48px); background:#0F172A; color:#B9C0CC; font-size:0.875rem;"><a href="/es/cobertura.html" style="color:#F4F2EC; text-decoration:underline;">Ver cobertura completa</a></div>
-<a href="https://wa.me/34677612799?text=Hola%2C%20vengo%20de%20vuestra%20p%C3%A1gina%20%C2%ABDon%27t%20Just%20Add%20AI%C2%BB%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp" data-directo style="position:fixed;bottom:24px;right:24px;z-index:9998;background:#25D366;color:white;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:transform 0.2s;">
-  <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-</a>
+<div class="chat-input" aria-hidden="true"><span>Message</span><i></i></div></div></div></div>
+</div></section>
+<section class="band" id="product"><div class="wrap">
+<div class="head center"><span class="label">Integrated, custom CRM</span><h2>Your CRM, built for your business and connected to your WhatsApp</h2>
+<p class="lead">Every business gets its own CRM: with the fields, statuses and views of its sector, connected to its WhatsApp and calendar. Switch sector and see how it changes.</p></div>
+<div class="seg seg-panel" role="group" aria-label="See the CRM for"><button type="button" data-panel="clinica" aria-pressed="true">Clinic</button><button type="button" data-panel="taller" aria-pressed="false">Auto shop</button><button type="button" data-panel="autoescuela" aria-pressed="false">Driving school</button></div><div class="app-wrap" data-panel="clinica"><div class="tabs" role="tablist"><button role="tab" aria-selected="true" aria-controls="p-en-clinica-conv">Conversations</button><button role="tab" aria-selected="false" aria-controls="p-en-clinica-agenda">Calendar</button><button role="tab" aria-selected="false" aria-controls="p-en-clinica-fichas">Patients</button><button role="tab" aria-selected="false" aria-controls="p-en-clinica-agente">Agent</button></div>
+<div class="app"><div class="app-bar"><i></i><i></i><i></i><span>CRM for your clinic · built by Zenia</span></div>
+<div class="app-body"><div class="app-side"><b><svg viewBox="0 0 140 140" aria-hidden="true"><defs><linearGradient id="zb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563EB"/><stop offset="1" stop-color="#3B82F6"/></linearGradient><linearGradient id="zv" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366F1"/><stop offset="1" stop-color="#7C3AED"/></linearGradient></defs><rect width="140" height="140" rx="30" fill="#111A2E"/><path d="M70 18Q18 18 18 38v19q0 6 6 6h64Z" fill="url(#zb)"/><path d="M70 122q52 0 52-20V83q0-6-6-6H52Z" fill="url(#zv)"/></svg>Your clinic</b><span data-tab="p-en-clinica-conv" class="on">Conversations</span><span data-tab="p-en-clinica-agenda">Calendar</span><span data-tab="p-en-clinica-fichas">Patients</span><span>Campaigns</span><span data-tab="p-en-clinica-agente">Agent</span></div>
+<div class="app-main">
+<div class="app-panel" id="p-en-clinica-conv" role="tabpanel"><div class="convs"><div class="convs-list"><div><b>Anna P. <span class="state esc">To your team</span></b>My tooth really hurts…</div><div class="on"><b>Laura Gomez <span class="state cita">Booked</span></b>Thursday 5 pm · cleaning</div><div><b>Mark R. <span class="state ok">Answered</span></b>Braces in installments?</div><div><b>+1 ••• ••• 4128 <span class="state ok">Answered</span></b>Open on Saturdays?</div><div><b>Peter L. <span class="state cita">Booked</span></b>Moved his visit to Friday</div></div><div class="thread"><div class="b in">Hi, do you have an appointment for a cleaning this week?</div><div class="b out">Hi! Yes. The first visit is free. Mornings or afternoons?</div><div class="b in">Afternoon</div><div class="b out">I have Thursday at 5:00 pm or 6:30 pm, or Friday at 5:30 pm.</div><div class="b in">Thursday 5 pm. Laura Gomez</div><div class="b out">Done, Laura: Thursday at 5:00 pm at Midtown. I&#x27;ll remind you the day before.</div><span class="tag">Appointment created in the Midtown calendar · 11:44 pm</span></div></div></div>
+<div class="app-panel" id="p-en-clinica-agenda" role="tabpanel" hidden><div class="kpis"><div class="kpi"><small>Appointments this week</small><strong>38</strong></div><div class="kpi"><small>Booked by the agent</small><strong>21</strong></div><div class="kpi"><small>Confirmed by reminder</small><strong>33</strong></div><div class="kpi"><small>Rescheduled by chat</small><strong>4</strong></div></div><div class="tbl-wrap"><table class="tbl"><thead><tr><th>When</th><th>Patient</th><th>Treatment</th><th>Location</th><th>Clinician</th><th>Status</th></tr></thead><tbody><tr><td><b>Thu 5:00 pm</b></td><td>Laura Gomez</td><td>Cleaning</td><td>Midtown</td><td>Hygienist</td><td><span class="state cita">By the agent</span></td></tr><tr><td><b>Thu 6:30 pm</b></td><td>David Marin</td><td>Check-up</td><td>Midtown</td><td>Dr. Ruiz</td><td><span class="state ok">Confirmed</span></td></tr><tr><td><b>Fri 10:00 am</b></td><td>Carmen Vidal</td><td>First visit</td><td>Uptown</td><td>Dr. Soto</td><td><span class="state cita">By the agent</span></td></tr><tr><td><b>Fri 12:00 pm</b></td><td>Peter Lima</td><td>Braces</td><td>Uptown</td><td>Dr. Ruiz</td><td><span class="state ok">Confirmed</span></td></tr><tr><td><b>Fri 5:30 pm</b></td><td>Anna Perez</td><td>Emergency</td><td>Midtown</td><td>Dr. Soto</td><td><span class="state esc">By reception</span></td></tr></tbody></table></div></div>
+<div class="app-panel" id="p-en-clinica-fichas" role="tabpanel" hidden><div class="tbl-wrap"><table class="tbl"><thead><tr><th>Patient</th><th>Last contact</th><th>Interested in</th><th>Next visit</th><th>Location</th><th>Source</th></tr></thead><tbody><tr><td><b>Laura Gomez</b></td><td>Today, 11:44 pm</td><td>Cleaning</td><td>Thursday 5:00 pm</td><td>Midtown</td><td>WhatsApp</td></tr><tr><td><b>Mark Ruiz</b></td><td>Today, 7:10 pm</td><td>Clear aligners</td><td>Not booked</td><td>Uptown</td><td>Google</td></tr><tr><td><b>Carmen Vidal</b></td><td>Yesterday</td><td>Implants</td><td>Friday 10:00 am</td><td>Uptown</td><td>Instagram</td></tr><tr><td><b>Peter Lima</b></td><td>Monday</td><td>Braces</td><td>Friday 12:00 pm</td><td>Uptown</td><td>WhatsApp</td></tr></tbody></table></div></div>
+<div class="app-panel" id="p-en-clinica-agente" role="tabpanel" hidden><div class="toggles"><div class="toggle"><span><b>Reply after hours</b>Nights, weekends and holidays.</span><i class="sw"></i></div><div class="toggle"><span><b>Book in each location&#x27;s calendar</b>Only free slots of the right clinician.</span><i class="sw"></i></div><div class="toggle"><span><b>Reminder the day before</b>With the option to confirm or reschedule.</span><i class="sw"></i></div><div class="toggle"><span><b>Send clinical questions to reception</b>Pain, emergencies and medical doubts.</span><i class="sw"></i></div><div class="toggle"><span><b>Ask for a review after the visit</b>Only if the visit went well.</span><i class="sw off"></i></div></div></div>
+</div></div></div></div><div class="app-wrap" data-panel="taller" hidden><div class="tabs" role="tablist"><button role="tab" aria-selected="true" aria-controls="p-en-taller-conv">Conversations</button><button role="tab" aria-selected="false" aria-controls="p-en-taller-agenda">Workshop</button><button role="tab" aria-selected="false" aria-controls="p-en-taller-fichas">Vehicles</button><button role="tab" aria-selected="false" aria-controls="p-en-taller-agente">Agent</button></div>
+<div class="app"><div class="app-bar"><i></i><i></i><i></i><span>CRM for your shop · built by Zenia</span></div>
+<div class="app-body"><div class="app-side"><b><svg viewBox="0 0 140 140" aria-hidden="true"><defs><linearGradient id="zb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563EB"/><stop offset="1" stop-color="#3B82F6"/></linearGradient><linearGradient id="zv" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366F1"/><stop offset="1" stop-color="#7C3AED"/></linearGradient></defs><rect width="140" height="140" rx="30" fill="#111A2E"/><path d="M70 18Q18 18 18 38v19q0 6 6 6h64Z" fill="url(#zb)"/><path d="M70 122q52 0 52-20V83q0-6-6-6H52Z" fill="url(#zv)"/></svg>Your shop</b><span data-tab="p-en-taller-conv" class="on">Conversations</span><span data-tab="p-en-taller-agenda">Workshop</span><span data-tab="p-en-taller-fichas">Vehicles</span><span>Campaigns</span><span data-tab="p-en-taller-agente">Agent</span></div>
+<div class="app-main">
+<div class="app-panel" id="p-en-taller-conv" role="tabpanel"><div class="convs"><div class="convs-list"><div><b>James M. <span class="state ok">Quote sent</span></b>Brake pads?</div><div class="on"><b>Lucy R. <span class="state cita">Ready</span></b>Is my car ready?</div><div><b>Peter S. <span class="state esc">Shop manager</span></b>Strange noise in the steering</div><div><b>+1 ••• ••• 2083 <span class="state ok">Answered</span></b>Open on Saturday?</div><div><b>Anna T. <span class="state cita">Booked</span></b>Inspection check on Wednesday</div></div><div class="thread"><div class="b in">Hi, how much do you charge to replace brake pads?</div><div class="b out">Hi! What&#x27;s the make, model and year of the car?</div><div class="b in">2019 Honda Civic</div><div class="b out">I&#x27;ll send you the quote with front pads and labor. Shall I book you in?</div><div class="b in">Wednesday at 9. Plate 7ABC123</div><div class="b out">Booked: Wednesday 9:00 am, Honda Civic 7ABC123.</div><span class="tag">Quote and booking created · Honda Civic 7ABC123</span></div></div></div>
+<div class="app-panel" id="p-en-taller-agenda" role="tabpanel" hidden><div class="kpis"><div class="kpi"><small>Cars in the shop today</small><strong>14</strong></div><div class="kpi"><small>Booked by the agent</small><strong>9</strong></div><div class="kpi"><small>Quotes sent</small><strong>17</strong></div><div class="kpi"><small>“Car ready” alerts</small><strong>11</strong></div></div><div class="tbl-wrap"><table class="tbl"><thead><tr><th>Drop-off</th><th>Customer</th><th>Vehicle</th><th>Job</th><th>Location</th><th>Status</th></tr></thead><tbody><tr><td><b>Wed 9:00 am</b></td><td>James Martin</td><td>Honda Civic · 7ABC123</td><td>Brake pads</td><td>North</td><td><span class="state cita">By the agent</span></td></tr><tr><td><b>Wed 9:30 am</b></td><td>Anna Torres</td><td>Toyota Corolla · 8DEF456</td><td>Inspection check</td><td>North</td><td><span class="state ok">In the shop</span></td></tr><tr><td><b>Wed 10:00 am</b></td><td>Lucy Romero</td><td>VW Golf · 9GHJ789</td><td>Service</td><td>South</td><td><span class="state ok">Ready for pick-up</span></td></tr><tr><td><b>Wed 11:30 am</b></td><td>Peter Sanz</td><td>Kia Forte · 6KLM012</td><td>Steering</td><td>South</td><td><span class="state esc">Diagnosis</span></td></tr><tr><td><b>Wed 4:30 pm</b></td><td>Ray Gil</td><td>Ford Focus · 5NPQ345</td><td>Tires</td><td>North</td><td><span class="state cita">By the agent</span></td></tr></tbody></table></div></div>
+<div class="app-panel" id="p-en-taller-fichas" role="tabpanel" hidden><div class="tbl-wrap"><table class="tbl"><thead><tr><th>Plate</th><th>Vehicle</th><th>Customer</th><th>Last job</th><th>Next inspection</th><th>Source</th></tr></thead><tbody><tr><td><b>7ABC123</b></td><td>Honda Civic 2019</td><td>James Martin</td><td>Brake pads (today)</td><td>Mar 2027</td><td>WhatsApp</td></tr><tr><td><b>8DEF456</b></td><td>Toyota Corolla 2016</td><td>Anna Torres</td><td>Inspection check (today)</td><td>Nov 2026</td><td>Google</td></tr><tr><td><b>9GHJ789</b></td><td>VW Golf 2021</td><td>Lucy Romero</td><td>30,000-mile service</td><td>May 2027</td><td>WhatsApp</td></tr><tr><td><b>6KLM012</b></td><td>Kia Forte 2018</td><td>Peter Sanz</td><td>Steering (in progress)</td><td>Jan 2027</td><td>Referral</td></tr></tbody></table></div></div>
+<div class="app-panel" id="p-en-taller-agente" role="tabpanel" hidden><div class="toggles"><div class="toggle"><span><b>Ask for make, model and plate</b>Before giving any price.</span><i class="sw"></i></div><div class="toggle"><span><b>Book in each location&#x27;s calendar</b>By type of job.</span><i class="sw"></i></div><div class="toggle"><span><b>Tell customers when the car is ready</b>As soon as your team marks it done.</span><i class="sw"></i></div><div class="toggle"><span><b>Inspection and service reminders</b>A month before, with a slot to book.</span><i class="sw"></i></div><div class="toggle"><span><b>Ask for a review at pick-up</b>Only if the job went well.</span><i class="sw off"></i></div></div></div>
+</div></div></div></div><div class="app-wrap" data-panel="autoescuela" hidden><div class="tabs" role="tablist"><button role="tab" aria-selected="true" aria-controls="p-en-autoescuela-conv">Conversations</button><button role="tab" aria-selected="false" aria-controls="p-en-autoescuela-agenda">Lessons</button><button role="tab" aria-selected="false" aria-controls="p-en-autoescuela-fichas">Students</button><button role="tab" aria-selected="false" aria-controls="p-en-autoescuela-agente">Agent</button></div>
+<div class="app"><div class="app-bar"><i></i><i></i><i></i><span>CRM for your school · built by Zenia</span></div>
+<div class="app-body"><div class="app-side"><b><svg viewBox="0 0 140 140" aria-hidden="true"><defs><linearGradient id="zb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563EB"/><stop offset="1" stop-color="#3B82F6"/></linearGradient><linearGradient id="zv" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366F1"/><stop offset="1" stop-color="#7C3AED"/></linearGradient></defs><rect width="140" height="140" rx="30" fill="#111A2E"/><path d="M70 18Q18 18 18 38v19q0 6 6 6h64Z" fill="url(#zb)"/><path d="M70 122q52 0 52-20V83q0-6-6-6H52Z" fill="url(#zv)"/></svg>Your school</b><span data-tab="p-en-autoescuela-conv" class="on">Conversations</span><span data-tab="p-en-autoescuela-agenda">Lessons</span><span data-tab="p-en-autoescuela-fichas">Students</span><span>Campaigns</span><span data-tab="p-en-autoescuela-agente">Agent</span></div>
+<div class="app-main">
+<div class="app-panel" id="p-en-autoescuela-conv" role="tabpanel"><div class="convs"><div class="convs-list"><div><b>Martha R. <span class="state cita">Sign-up</span></b>15-lesson package</div><div class="on"><b>Evan G. <span class="state ok">Answered</span></b>Motorcycle licence price?</div><div><b>Sara L. <span class="state cita">Moved</span></b>Move Tuesday&#x27;s lesson</div><div><b>+1 ••• ••• 7315 <span class="state ok">Answered</span></b>Is the theory online?</div><div><b>Diego P. <span class="state esc">Office</span></b>Test date</div></div><div class="thread"><div class="b in">Hi! How much is it to get a licence with you?</div><div class="b out">Hi! We have three packages with theory and lessons. I&#x27;ll send you the price of each.</div><div class="b in">I like the 15-lesson one</div><div class="b out">To sign up, drop by with your ID. Does Friday at 6:00 pm work?</div><div class="b in">Yes. I&#x27;m Martha Ruiz</div><div class="b out">You&#x27;re in, Martha: Friday 6:00 pm at the office, 15-lesson package.</div><span class="tag">Student created · 15-lesson package · source: Instagram</span></div></div></div>
+<div class="app-panel" id="p-en-autoescuela-agenda" role="tabpanel" hidden><div class="kpis"><div class="kpi"><small>Lessons this week</small><strong>64</strong></div><div class="kpi"><small>Booked or moved by chat</small><strong>18</strong></div><div class="kpi"><small>Sign-ups this week</small><strong>7</strong></div><div class="kpi"><small>In follow-up</small><strong>12</strong></div></div><div class="tbl-wrap"><table class="tbl"><thead><tr><th>When</th><th>Student</th><th>Type</th><th>Instructor</th><th>Vehicle</th><th>Status</th></tr></thead><tbody><tr><td><b>Mon 8:00 am</b></td><td>Sara Lopez</td><td>Driving lesson</td><td>John</td><td>Clio · 2233</td><td><span class="state cita">Moved by chat</span></td></tr><tr><td><b>Mon 9:00 am</b></td><td>Evan Garcia</td><td>Motorcycle lesson</td><td>Rose</td><td>MT-07</td><td><span class="state ok">Confirmed</span></td></tr><tr><td><b>Mon 6:00 pm</b></td><td>Martha Ruiz</td><td>Sign-up</td><td>Office</td><td>Not needed</td><td><span class="state cita">By the agent</span></td></tr><tr><td><b>Tue 10:00 am</b></td><td>Diego Pena</td><td>Driving test</td><td>John</td><td>Clio · 2233</td><td><span class="state esc">Office</span></td></tr><tr><td><b>Tue 5:00 pm</b></td><td>Lara Gil</td><td>Driving lesson</td><td>Rose</td><td>Ibiza · 4455</td><td><span class="state ok">Confirmed</span></td></tr></tbody></table></div></div>
+<div class="app-panel" id="p-en-autoescuela-fichas" role="tabpanel" hidden><div class="tbl-wrap"><table class="tbl"><thead><tr><th>Student</th><th>Package</th><th>Lessons done</th><th>Theory</th><th>Test</th><th>Source</th></tr></thead><tbody><tr><td><b>Martha Ruiz</b></td><td>15 lessons</td><td>0 / 15</td><td>Pending</td><td>Not set</td><td>Instagram</td></tr><tr><td><b>Sara Lopez</b></td><td>20 lessons</td><td>12 / 20</td><td>Passed</td><td>Dec 2026</td><td>WhatsApp</td></tr><tr><td><b>Evan Garcia</b></td><td>Motorcycle</td><td>5 / 10</td><td>Passed</td><td>Not set</td><td>Google</td></tr><tr><td><b>Diego Pena</b></td><td>15 lessons</td><td>15 / 15</td><td>Passed</td><td>Tuesday</td><td>Referral</td></tr></tbody></table></div></div>
+<div class="app-panel" id="p-en-autoescuela-agente" role="tabpanel" hidden><div class="toggles"><div class="toggle"><span><b>Answer prices and packages</b>With what each one includes.</span><i class="sw"></i></div><div class="toggle"><span><b>Book the sign-up visit</b>In the office&#x27;s free slots.</span><i class="sw"></i></div><div class="toggle"><span><b>Move lessons by chat</b>Only with 24 hours&#x27; notice.</span><i class="sw"></i></div><div class="toggle"><span><b>Follow up with people who did not sign up</b>After 3 days, with what they asked.</span><i class="sw"></i></div><div class="toggle"><span><b>Test reminders</b>The day before, with time and place.</span><i class="sw off"></i></div></div></div>
+</div></div></div></div>
+<div class="crm-points">
+<div><b>Made to measure</b><span>Your fields (treatment, plate, package), your statuses and your views. Not a template.</span></div>
+<div><b>Integrated</b><span>WhatsApp, calendar and your current software: every conversation, booking and alert flows in on its own.</span></div>
+<div><b>Yours</b><span>Your team can step into any chat and see the full history, and the data belongs to your business.</span></div></div>
+<p class="app-note">Panel with example data.</p>
+</div></section>
+<section class="band alt"><div class="wrap">
+<div class="head center"><h2>What changes from day one</h2></div>
+<div class="stats">
+<div class="stat"><small>Availability</small><strong>24/7</strong><span>your agent never closes, not even on holidays</span></div>
+<div class="stat"><small>First reply</small><strong>&lt;1 min</strong><span>customers do not wait while you finish with someone else</span></div>
+<div class="stat"><small>Your demo</small><strong>48 h</strong><span>to try it with your business information</span></div>
+<div class="stat"><small>Real case</small><strong>831</strong><span>WhatsApp conversations handled for Global Watch Buyers</span></div>
+</div></div></section>
+<section class="band" id="cases"><div class="wrap">
+<div class="head"><span class="label">Cases</span><h2>Already working for real businesses</h2></div>
+<div class="cases">
+<a class="case" href="/cases/global-watch-buyers-ai-acquisition.html"><div class="case-img" style="background-image:url(/cases/img/gwb-agente-poster.webp)" role="img" aria-label="The Global Watch Buyers agent answering on WhatsApp"></div>
+<div class="case-txt"><span class="label">Global Watch Buyers</span><h3>Luxury watch sellers from 33 countries, handled on WhatsApp</h3>
+<p>Pages in 13 languages, WhatsApp with qualification and an AI agent that answers, qualifies and books.</p>
+<div class="case-nums"><div><b>831</b><span>conversations</span></div><div><b>33</b><span>countries</span></div><div><b>10 of 12</b><span>ad contacts with a premium watch</span></div></div>
+<div class="case-go">Read the case →</div></div></a>
+<a class="case" href="/cases/throwin-salt-gaia-ebay-whatsapp.html"><div class="case-img" style="background-image:url(/cases/img/ts-gaia-chat.webp)" role="img" aria-label="Gaia, the Throwin' Salt agent, on WhatsApp"></div>
+<div class="case-txt"><span class="label">Throwin’ Salt Co.</span><h3>High-end watches listed on eBay from WhatsApp</h3>
+<p>Gaia prepares each listing with title, photos and price, and publishes it when the team says “publish”.</p>
+<div class="case-nums"><div><b>54</b><span>watches in 4 weeks</span></div><div><b>23</b><span>in a single day</span></div><div><b>$2M</b><span>of inventory on eBay</span></div></div>
+<div class="case-go">Read the case →</div></div></a>
+</div></div></section>
+<section class="band alt"><div class="wrap">
+<div class="head center"><span class="label">Integrations</span><h2>Connects to what you already use</h2>
+<p class="lead">No need to switch software: the agent works on top of your WhatsApp, your calendar and your CRM. If you use another tool, we will look at it.</p></div>
+<div class="hub"><div class="hub-col"><div class="hub-node"><i><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></i>WhatsApp Business API</div><div class="hub-node"><i><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.316 5.684H24v12.632h-5.684V5.684zM5.684 24h12.632v-5.684H5.684V24zM18.316 5.684V0H1.895A1.894 1.894 0 0 0 0 1.895v16.421h5.684V5.684h12.632zm-7.207 6.25v-.065c.272-.144.5-.349.687-.617s.279-.595.279-.982c0-.379-.099-.72-.3-1.025a2.05 2.05 0 0 0-.832-.714 2.703 2.703 0 0 0-1.197-.257c-.6 0-1.094.156-1.481.467-.386.311-.65.671-.793 1.078l1.085.452c.086-.249.224-.461.413-.633.189-.172.445-.257.767-.257.33 0 .602.088.816.264a.86.86 0 0 1 .322.703c0 .33-.12.589-.36.778-.24.19-.535.284-.886.284h-.567v1.085h.633c.407 0 .748.109 1.02.327.272.218.407.499.407.843 0 .336-.129.614-.387.832s-.565.327-.924.327c-.351 0-.651-.103-.897-.311-.248-.208-.422-.502-.521-.881l-1.096.452c.178.616.505 1.082.977 1.401.472.319.984.478 1.538.477a2.84 2.84 0 0 0 1.293-.291c.382-.193.684-.458.902-.794.218-.336.327-.72.327-1.149 0-.429-.115-.797-.344-1.105a2.067 2.067 0 0 0-.881-.689zm2.093-1.931l.602.913L15 10.045v5.744h1.187V8.446h-.827l-2.158 1.557zM22.105 0h-3.289v5.184H24V1.895A1.894 1.894 0 0 0 22.105 0zm-3.289 23.5l4.684-4.684h-4.684V23.5zM0 22.105C0 23.152.848 24 1.895 24h3.289v-5.184H0v3.289z"/></svg></i>Google Calendar</div><div class="hub-node"><i><svg viewBox="0 0 24 24" fill="none" stroke="#006BFF" stroke-width="2.4"><circle cx="12" cy="12" r="8"/><path d="M15.5 9a4.5 4.5 0 1 0 0 6"/></svg></i>Calendly</div></div><div><div class="hub-core"><svg viewBox="0 0 140 140" aria-hidden="true"><defs><linearGradient id="zb2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563EB"/><stop offset="1" stop-color="#3B82F6"/></linearGradient><linearGradient id="zv2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366F1"/><stop offset="1" stop-color="#7C3AED"/></linearGradient></defs><path d="M70 18Q18 18 18 38v19q0 6 6 6h64Z" fill="url(#zb2)"/><path d="M70 122q52 0 52-20V83q0-6-6-6H52Z" fill="url(#zv2)"/></svg></div><p class="hub-cap">Zenia</p></div><div class="hub-col"><div class="hub-node"><i><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.164 7.93V5.084a2.198 2.198 0 001.267-1.978v-.067A2.2 2.2 0 0017.238.845h-.067a2.2 2.2 0 00-2.193 2.193v.067a2.196 2.196 0 001.252 1.973l.013.006v2.852a6.22 6.22 0 00-2.969 1.31l.012-.01-7.828-6.095A2.497 2.497 0 104.3 4.656l-.012.006 7.697 5.991a6.176 6.176 0 00-1.038 3.446c0 1.343.425 2.588 1.147 3.607l-.013-.02-2.342 2.343a1.968 1.968 0 00-.58-.095h-.002a2.033 2.033 0 102.033 2.033 1.978 1.978 0 00-.1-.595l.005.014 2.317-2.317a6.247 6.247 0 104.782-11.134l-.036-.005zm-.964 9.378a3.206 3.206 0 113.215-3.207v.002a3.206 3.206 0 01-3.207 3.207z"/></svg></i>HubSpot</div><div class="hub-node"><i><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.66 6.897a1.299 1.299 0 0 0-1.205.765l-.642 1.44-.062-.385A1.291 1.291 0 0 0 5.27 7.648l-4.185.678A1.291 1.291 0 0 0 .016 9.807l.678 4.18a1.293 1.293 0 0 0 1.27 1.087c.074 0 .143-.01.216-.017l4.18-.678c.436-.07.784-.351.96-.723l2.933 1.307a1.304 1.304 0 0 0 .988.026c.321-.12.575-.365.716-.678l.28-.629.038.276a1.297 1.297 0 0 0 1.455 1.103l3.712-.501a1.29 1.29 0 0 0 1.03.514h4.236c.713 0 1.29-.58 1.291-1.291V9.545c0-.712-.58-1.291-1.291-1.291h-4.236c-.079 0-.155.008-.23.022a1.309 1.309 0 0 0-.275-.288c-.275-.21-.614-.3-.958-.253l-4.197.571c-.155.021-.3.07-.432.14L9.159 7.01a1.27 1.27 0 0 0-.499-.113zm-.025.705c.077 0 .159.013.24.052l2.971 1.324c-.128.238-.18.508-.142.782l.357 2.596h.002l-.745 1.672a.59.59 0 0 1-.777.296l-3.107-1.385-.004-.041-.41-2.526L8.1 7.95a.589.589 0 0 1 .536-.348zm-3.159.733c.125 0 .245.039.343.112.13.09.21.227.237.382l.234 1.446-.56 1.259a1.27 1.27 0 0 0-.026.987c.12.322.364.575.678.717l.295.131a.585.585 0 0 1-.428.314l-4.185.678a.59.59 0 0 1-.674-.485l-.678-4.18a.588.588 0 0 1 .485-.674l4.185-.678c.03-.004.064-.01.094-.01zm11.705.09a.59.59 0 0 1 .415.173 1.287 1.287 0 0 0-.416.947v4.237c0 .033.003.065.005.097l-3.55.482a.586.586 0 0 1-.66-.502l-.191-1.403.899-2.017a1.29 1.29 0 0 0-.333-1.5l3.754-.51c.026-.004.051-.004.077-.004zm1.3.532h4.227c.326 0 .588.266.588.588v4.237a.589.589 0 0 1-.588.588h-4.237a.564.564 0 0 1-.12-.013c.47-.246.758-.765.684-1.318zm-5.988.309.254.113c.296.133.43.48.296.777l-.432.97-.207-1.465a.58.58 0 0 1 .09-.395zm5.39.538.453 3.325a.583.583 0 0 1-.453.65zM6.496 11.545l.17 1.052a.588.588 0 0 1-.293-.776zm3.985 4.344a.588.588 0 0 0-.612.603c0 .358.244.61.601.61a.582.582 0 0 0 .607-.608c0-.35-.242-.605-.596-.605zm5.545 0a.588.588 0 0 0-.612.603c0 .358.245.61.602.61a.582.582 0 0 0 .606-.608c0-.35-.24-.605-.596-.605zm-8.537.018a.047.047 0 0 0-.048.047v.085c0 .026.021.047.048.047h.52l-.623.9a.052.052 0 0 0-.009.027v.027c0 .026.021.047.048.047h.815a.047.047 0 0 0 .047-.047v-.085a.047.047 0 0 0-.047-.047h-.55l.606-.9a.05.05 0 0 0 .008-.026v-.028a.047.047 0 0 0-.047-.047zm5.303 0a.047.047 0 0 0-.047.047v1.086c0 .026.02.047.047.047h.135a.047.047 0 0 0 .047-.047v-.454h.545v.454c0 .026.02.047.047.047h.134a.047.047 0 0 0 .047-.047v-1.086a.047.047 0 0 0-.047-.047h-.134a.047.047 0 0 0-.047.047v.453h-.545v-.453a.047.047 0 0 0-.047-.047zm-2.324.164c.25 0 .372.194.372.425 0 .219-.109.425-.358.426-.242 0-.375-.197-.375-.419 0-.235.108-.432.36-.432zm5.545 0c.25 0 .372.194.372.425 0 .219-.108.425-.358.426-.242 0-.374-.197-.374-.419 0-.235.108-.432.36-.432z"/></svg></i>Zoho CRM</div><div class="hub-node"><i><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21.1002 15.7957c-1.6015 0-2.8997-1.2983-2.8997-2.8998s1.2983-2.8997 2.8997-2.8997c1.6015 0 2.8998 1.2982 2.8998 2.8997 0 1.5999-1.2979 2.8998-2.8998 2.8998zm0-1.2c.9388.0006 1.7003-.7601 1.7008-1.6989.0004-.9388-.7602-1.7003-1.699-1.7007h-.0018c-.9388.0004-1.6994.7619-1.699 1.7007.0005.9381.761 1.6985 1.699 1.699zm-6.0655 1.2c-1.6014 0-2.8997-1.2983-2.8997-2.8998s1.2983-2.8997 2.8997-2.8997c1.6015 0 2.8998 1.2982 2.8998 2.8997 0 1.5999-1.2999 2.8998-2.8998 2.8998zm0-1.2c.9389.0006 1.7003-.7601 1.7008-1.6989.0005-.9388-.7602-1.7003-1.699-1.7007h-.0018c-.9388.0004-1.6994.7619-1.699 1.7007.0005.9381.761 1.6985 1.699 1.699zM11.865 12.858c0 1.6199-1.2979 2.9378-2.8977 2.9378s-2.8998-1.314-2.8998-2.9358 1.1799-2.8597 2.8998-2.8597c.6359 0 1.2239.134 1.6998.484v-1.68a.6.6 0 0 1 1.2 0v4.0537h-.002zm-2.8977 1.7399c.9388.0005 1.7002-.7602 1.7007-1.699.0005-.9388-.7602-1.7003-1.699-1.7007h-.0017c-.9389.0004-1.6995.7619-1.699 1.7007.0004.9381.7608 1.6985 1.699 1.699zm-6.0675 1.1979C1.2983 15.7957 0 14.4974 0 12.8959s1.2983-2.8997 2.8998-2.8997 2.8997 1.2982 2.8997 2.8997c0 1.5999-1.2999 2.8998-2.8997 2.8998zm0-1.2c.9388.0006 1.7002-.7601 1.7007-1.699.0005-.9387-.7602-1.7002-1.699-1.7006h-.0017c-.9388.0004-1.6995.7619-1.699 1.7007.0004.9381.7608 1.6985 1.699 1.699z"/></svg></i>Odoo</div></div></div>
+</div></section>
+<section class="band" id="pricing"><div class="wrap"><div class="price">
+<div><span class="label">Custom pricing</span><h2>Every business is different. So is your price.</h2>
+<p class="lead">We do not sell fixed plans. First we show you the demo with your business; then we send you a fixed proposal: what the agent does, what it connects to and the monthly cost.</p>
+<div class="btns"><a class="btn btn-white" href="#demo">Get your demo</a><a class="btn btn-wa" href="https://wa.me/34677612799?text=Hi%2C%20I%20would%20like%20a%20Zenia%20proposal%20for%20my%20business" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88M20.46 3.49A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.42"/></svg>Message us on WhatsApp</a></div>
+<p class="check">We reply within 24 hours · No commitment</p></div>
+<ul><li><span><b>Based on your volume</b>You pay for what your business needs, not for a plan that does not fit.</span></li>
+<li><span><b>Built with your information</b>Prices, hours and rules of your business, reviewed by you before going live.</span></li>
+<li><span><b>Hands-on support</b>On WhatsApp, with someone who knows your case.</span></li></ul>
+</div></div></section>
+<section class="band alt" id="demo"><div class="wrap"><div class="demo-box">
+<div><span class="label">Your demo in 48 h</span><h2>Try it with your business before deciding anything</h2>
+<p class="lead">Leave us your website and contact. We set up the agent with your business's public information and send you a link to try it the way your customers would.</p>
+<ol class="how-demo"><li><i>1</i><span><b>You send us your website</b>One minute, no calls.</span></li>
+<li><i>2</i><span><b>We build your demo</b>With your services, hours and locations, public data only.</span></li>
+<li><i>3</i><span><b>You try it on your phone</b>And if it fits, we spend 30 minutes on your real questions.</span></li></ol></div>
+<form class="form" novalidate>
+<div class="f" style="display:grid;gap:14px">
+<label>Your business website<input name="web" type="text" inputmode="url" autocomplete="url" placeholder="www.yourbusiness.com" required></label>
+<label>Your name<input name="nombre" type="text" autocomplete="given-name" placeholder="Name"></label>
+<label>WhatsApp or email<input name="contacto" type="text" autocomplete="tel" placeholder="+1 555 000 0000" required></label>
+<label>Sector<select name="sector"><option value="Clínica">Clinic</option><option value="Taller">Auto shop</option><option value="Autoescuela">Driving school</option><option value="Otro">Other</option></select></label>
+<button class="btn btn-white" type="submit">Get my demo</button>
+<small>We only use this to send you the demo. See our <a href="/privacy/">privacy policy</a>.</small></div>
+<div class="ok" role="status"><b>Received.</b> We will message you within 24 hours with your demo link. If you prefer, <a href="https://wa.me/34677612799?text=Hi%2C%20I%20just%20asked%20for%20my%20demo%20on%20the%20Zenia%20website" target="_blank" rel="noopener">message us on WhatsApp</a>.</div>
+</form></div></div></section>
+<section class="band" id="faq"><div class="wrap">
+<div class="head center"><span class="label">FAQ</span><h2>Frequently asked questions</h2>
+<p class="lead">Anything else? <a href="https://wa.me/34677612799?text=Hi%2C%20I%20have%20a%20question%20about%20Zenia" target="_blank" rel="noopener" style="color:var(--accent)">Message us on WhatsApp</a>.</p></div>
+<div class="faq"><details><summary>Does the agent replace my team?</summary><p>No. It handles the repetitive questions, books and reminds. Anything that needs a person (complaints, special cases, emergencies) goes to your team with the whole conversation, and your team can step into any chat at any time.</p></details><details><summary>Where does it get its information?</summary><p>From your website, your prices and your rules. You review it before it goes live. What it does not know, it does not make up: it passes it to your team.</p></details><details><summary>Do I need a new WhatsApp number?</summary><p>We work with the official WhatsApp Business API. You can use your current number or a new one; on the call we explain the options and what each one involves.</p></details><details><summary>What does it connect to?</summary><p>WhatsApp Business API, Google Calendar, Calendly, HubSpot, Zoho CRM and Odoo, among others. If you use something else, we will look at it in the demo.</p></details><details><summary>How much does it cost?</summary><p>It depends on your conversation volume and what needs connecting. After showing you the demo with your business, we send you a fixed proposal with the monthly price.</p></details><details><summary>How does the 48-hour demo work?</summary><p>You leave us your website and we set up an agent with your public information. We send you a link to try it as if you were a customer, nothing to install.</p></details></div></div></section>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does the agent replace my team?", "acceptedAnswer": {"@type": "Answer", "text": "No. It handles the repetitive questions, books and reminds. Anything that needs a person (complaints, special cases, emergencies) goes to your team with the whole conversation, and your team can step into any chat at any time."}}, {"@type": "Question", "name": "Where does it get its information?", "acceptedAnswer": {"@type": "Answer", "text": "From your website, your prices and your rules. You review it before it goes live. What it does not know, it does not make up: it passes it to your team."}}, {"@type": "Question", "name": "Do I need a new WhatsApp number?", "acceptedAnswer": {"@type": "Answer", "text": "We work with the official WhatsApp Business API. You can use your current number or a new one; on the call we explain the options and what each one involves."}}, {"@type": "Question", "name": "What does it connect to?", "acceptedAnswer": {"@type": "Answer", "text": "WhatsApp Business API, Google Calendar, Calendly, HubSpot, Zoho CRM and Odoo, among others. If you use something else, we will look at it in the demo."}}, {"@type": "Question", "name": "How much does it cost?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on your conversation volume and what needs connecting. After showing you the demo with your business, we send you a fixed proposal with the monthly price."}}, {"@type": "Question", "name": "How does the 48-hour demo work?", "acceptedAnswer": {"@type": "Answer", "text": "You leave us your website and we set up an agent with your public information. We send you a link to try it as if you were a customer, nothing to install."}}]}</script>
+<section class="wrap"><div class="final">
+<h2>Shall we look at it with your business?</h2><p class="lead">We show you the demo with your information in 48 hours. No commitment.</p>
+<div class="btns"><a class="btn btn-white" href="#demo">Get your demo</a><a class="btn btn-ghost" href="https://calendly.com/zeladauriartef/30min" target="_blank" rel="noopener">Book 30 minutes</a></div>
+</div></section>
+<section class="band mas"><div class="wrap"><h2 class="mas-h">More from Zenia</h2><div class="mas-cols"><div><b>Client cases</b><p><a href="/cases/global-watch-buyers-ai-acquisition.html">Global Watch Buyers</a> · <a href="/cases/throwin-salt-gaia-ebay-whatsapp.html">Throwin’ Salt Co.</a> · <a href="/cases/croian-hein-private-cellar-switzerland.html">Croian &amp; Hein</a> · <a href="/cases/cicero-public-affairs-spain-italy.html">Cicero</a> · <a href="/cases/boutique-law-firm-latam.html">Boutique law firm</a> · <a href="/cases/">All cases</a></p></div><div><b>Resources</b><p><a href="/blog/">Blog</a> · <a href="/en/ai-bookkeeping-importer-chicago.html">AI bookkeeping for importers: Chicago</a> · <a href="/en/ai-bookkeeping-importer-dallas.html">Dallas</a> · <a href="/en/ai-bookkeeping-importer-atlanta.html">Atlanta</a> · <a href="/en/ai-bookkeeping-importer-doral.html">Doral</a> · <a href="/about.html">About Zenia</a></p></div><div><b>En español</b><p><a href="/es/" data-lang="es">Inicio</a> · <a href="/es/clinicas/" data-lang="es">Clínicas</a> · <a href="/es/talleres/" data-lang="es">Talleres</a> · <a href="/es/autoescuelas/" data-lang="es">Autoescuelas</a> · <a href="/es/cobertura.html" data-lang="es">Sectores y ciudades</a></p></div></div></div></section>
+</main><footer><div class="wrap">
+<div class="foot"><div><a class="brand" href="/"><svg viewBox="0 0 140 140" aria-hidden="true"><defs><linearGradient id="zb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563EB"/><stop offset="1" stop-color="#3B82F6"/></linearGradient><linearGradient id="zv" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366F1"/><stop offset="1" stop-color="#7C3AED"/></linearGradient></defs><rect width="140" height="140" rx="30" fill="#111A2E"/><path d="M70 18Q18 18 18 38v19q0 6 6 6h64Z" fill="url(#zb)"/><path d="M70 122q52 0 52-20V83q0-6-6-6H52Z" fill="url(#zv)"/></svg><span>Zenia</span></a><p>AI agents for your business WhatsApp, with your calendar and a custom CRM.</p></div>
+<div><b>Product</b><a href="#how-it-works">How it works</a><a href="#product">Custom CRM</a><a href="#pricing">Pricing</a><a href="#demo">Get your demo</a></div>
+<div><b>Zenia</b><a href="/cases/">Cases</a><a href="/blog/">Blog</a><a href="/about.html">About</a><a href="/es/" data-lang="es">Español</a></div>
+<div><b>Contact</b><a href="mailto:fabrizzio.zelada@zeniapartners.com">fabrizzio.zelada@zeniapartners.com</a><a href="https://wa.me/34677612799?text=Hi%2C%20I%27m%20coming%20from%20the%20Zenia%20website%20and%20would%20like%20more%20information" target="_blank" rel="noopener">WhatsApp +34 677 612 799</a><a href="https://calendly.com/zeladauriartef/30min" target="_blank" rel="noopener">Book a call</a></div></div>
+<div class="foot-bottom"><span>© 2026 Zenia Partners · Madrid</span><span><a href="/privacy/" style="text-decoration:none">Privacy</a> · <a href="/es/" data-lang="es" style="text-decoration:none">Español</a></span></div>
+</div></footer>
+<a class="wa-float" href="https://wa.me/34677612799?text=Hi%2C%20I%27m%20coming%20from%20the%20Zenia%20website%20and%20would%20like%20more%20information" target="_blank" rel="noopener" aria-label="Message us on WhatsApp" data-directo><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88M20.46 3.49A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.42"/></svg></a>
+<script type="application/json" id="z2-data">{"negocios": {"clinica": {"nombre": "Dental clinic · example", "inicial": "C", "vertical": "clinica", "saludo": "Hi! I'm the clinic's assistant. I can help with appointments, prices and opening hours. What do you need?", "cita": {"chip": "Book an appointment", "p": "Hi, I'd like to book a teeth cleaning", "intro": "Of course! These are the next free slots for a cleaning:", "servicio": "teeth cleaning"}, "preguntas": [{"p": "Is the first visit free?", "r": "Yes, the first visit is free: the dentist checks you and you leave with a written quote. Shall I find you a slot?"}, {"p": "Are you open on Saturdays?", "r": "Yes, Saturdays from 10 am to 2 pm. Weekdays from 9:30 am to 8:30 pm, no lunch break."}, {"p": "Can I pay for braces in installments?", "r": "Yes, you can pay monthly. We'll go through the details at your first visit, quote in hand."}, {"p": "I have a really bad toothache", "r": "Sorry to hear that. I'm letting reception know right now so they call you and give you the first free slot today."}]}, "taller": {"nombre": "Auto repair shop · example", "inicial": "T", "vertical": "taller", "saludo": "Hi! I'm the shop's assistant. I can give you prices, book you in and tell you how your car is doing. How can I help?", "cita": {"chip": "Book a service", "p": "I'd like to bring my car in for a service this week", "intro": "Sure, these are the next free slots for a service:", "servicio": "car service"}, "preguntas": [{"p": "How much is an oil change?", "r": "It depends on the engine and the oil it takes. Send me make, model and year and I'll give you the exact price."}, {"p": "Do you have courtesy cars?", "r": "Yes, for repairs longer than a day, subject to availability. I can book one with your appointment if you need it."}, {"p": "Can you do a pre-inspection check?", "r": "Yes: we check it before your inspection and tell you what needs fixing. Want me to book you in?"}, {"p": "Is my car ready? Plate 7ABC123", "r": "I'm passing your plate to the shop manager to confirm. As soon as he replies, I'll message you here."}]}, "autoescuela": {"nombre": "Driving school · example", "inicial": "A", "vertical": "autoescuela", "saludo": "Hi! I'm the driving school's assistant. I can tell you prices, packages and how to sign up. What do you need?", "cita": {"chip": "I want to sign up", "p": "Hi, I want to get my driving licence", "intro": "Great! Let's book a visit to sign you up. These slots are free:", "servicio": "sign-up visit"}, "preguntas": [{"p": "How much does the licence cost?", "r": "We have packages with theory and driving lessons. I'll send you the price of each one and what it includes."}, {"p": "Can I do the theory online?", "r": "Yes: practice tests on your phone and, if you like, classes at the school in the afternoon."}, {"p": "How many lessons will I need?", "r": "It depends on each student. We assess it in your first lesson and tell you how many we recommend."}, {"p": "I need to change my test date", "r": "The office handles that with the testing authority. I'm passing them your name so they call you today."}]}}, "guion": {"nombre": "Dental clinic · example", "pasos": [["The patient messages on WhatsApp", "Any time. Even at 11:40 pm, after you have closed."], ["The agent answers with your information", "Treatments, prices, hours and locations from your website, in your tone."], ["It offers real slots from your calendar", "It reads your calendar and only offers free times."], ["It books and logs it in your CRM", "The appointment lands in the calendar and the patient record, no typing."], ["It sends a reminder the day before", "And if the patient can't make it, it reschedules in the same chat."], ["Clinical questions go to your team", "Pain, emergencies or medical doubts: reception gets the whole conversation."]], "mensajes": [{"dir": "tag", "t": "Monday · 11:40 pm", "paso": 0}, {"dir": "in", "t": "Hi, do you have an appointment for a cleaning this week?", "paso": 0}, {"dir": "out", "t": "Hi! Yes. A cleaning takes about 30 minutes and the first visit is free. Mornings or afternoons?", "paso": 1}, {"dir": "in", "t": "Afternoon", "paso": 1}, {"dir": "out", "t": "These are free at our Midtown clinic:", "botones": ["Thursday 5:00 pm", "Thursday 6:30 pm", "Friday 5:30 pm"], "elegido": 0, "paso": 2}, {"dir": "in", "t": "Thursday 5 pm. Laura Gomez", "paso": 2}, {"dir": "out", "t": "Done, Laura: cleaning on Thursday at 5:00 pm at Midtown. It's in the calendar.", "paso": 3}, {"dir": "tag", "t": "Wednesday · 6:00 pm", "paso": 4}, {"dir": "out", "t": "Hi Laura, a reminder of your appointment tomorrow at 5:00 pm. Reply \"yes\" to confirm or tell me if you need to change it.", "paso": 4}, {"dir": "in", "t": "Yes. By the way, my gums bleed a little, is that normal?", "paso": 5}, {"dir": "out", "t": "Best to have the hygienist look at it tomorrow. I'm passing your message on so they know before your visit.", "paso": 5}]}}</script>
+<script src="/assets/z2/z2.js?v=1794679759" defer></script>
 <script>document.addEventListener("click",function(e){var t=e.target,a=t.closest?t.closest('a[href*="wa.me"]'):null;if(!a)return;try{navigator.sendBeacon("https://gaia-relojes.onrender.com/gwb/lead",JSON.stringify({site:"zenia",path:location.pathname+location.search,ref:document.referrer||""}))}catch(r){}},true);</script>
 <script src="/assets/qualify.js?v=4" defer></script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "eceeed460f6d465bba3b970417d5f6b0"}'></script>

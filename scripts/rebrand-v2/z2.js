@@ -6,8 +6,22 @@
   var doc = document;
   var DATA = {};
   try { DATA = JSON.parse(doc.getElementById('z2-data').textContent); } catch (e) {}
-  var DIAS = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
-  var HORAS = { clinica: ['10:30', '17:00', '12:00'], taller: ['9:00', '16:30', '11:00'], autoescuela: ['18:00', '11:00', '19:00'] };
+  var EN = (doc.documentElement.lang || '').toLowerCase().indexOf('en') === 0;
+  var T = EN ? {
+    dias: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+    horas: { clinica: ['10:30 am', '5:00 pm', '12:00 pm'], taller: ['9:00 am', '4:30 pm', '11:00 am'], autoescuela: ['6:00 pm', '11:00 am', '7:00 pm'] },
+    manana: 'tomorrow', el: '', a: ' at ', hoy: 'Today', escribiendo: 'typing…', linea: 'online',
+    nombre: 'What name should I book it under?', cliente: 'Laura Gomez',
+    listo: function (c, h) { return 'Done, Laura: ' + c + (h.indexOf('tomorrow') === 0 ? ' ' : ' on ') + h + '. I\'ll send you a reminder here the day before.'; },
+    otra: 'Start again', locale: 'en'
+  } : {
+    dias: ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'],
+    horas: { clinica: ['10:30', '17:00', '12:00'], taller: ['9:00', '16:30', '11:00'], autoescuela: ['18:00', '11:00', '19:00'] },
+    manana: 'mañana', el: 'el ', a: ' a las ', hoy: 'Hoy', escribiendo: 'escribiendo…', linea: 'en línea',
+    nombre: '¿A nombre de quién lo reservo?', cliente: 'Laura Gómez', listo: function (c, h) { return 'Listo, Laura: ' + c + ' ' + h + '. Te mando un recordatorio por aquí el día antes.'; },
+    otra: 'Volver a empezar', locale: 'es'
+  };
+  var DIAS = T.dias, HORAS = T.horas;
   function hora() { var d = new Date(); return d.getHours() + ':' + ('0' + d.getMinutes()).slice(-2); }
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
   function huecos(v) {
@@ -15,7 +29,7 @@
     while (out.length < 3) {
       d.setDate(d.getDate() + 1); n++;
       if (d.getDay() === 0) continue;
-      out.push((n === 1 ? 'mañana' : 'el ' + DIAS[d.getDay()] + ' ' + d.getDate()) + ' a las ' + h[out.length]);
+      out.push((n === 1 ? T.manana : T.el + DIAS[d.getDay()] + ' ' + d.getDate()) + T.a + h[out.length]);
     }
     return out;
   }
@@ -38,16 +52,16 @@
   };
   Chat.prototype.typing = function (ms, then) {
     var self = this;
-    this.status.textContent = 'escribiendo…'; this.status.classList.add('typing');
+    this.status.textContent = T.escribiendo; this.status.classList.add('typing');
     var t = doc.createElement('div'); t.className = 'typing-bubble'; t.innerHTML = '<i></i><i></i><i></i>';
     this.body.appendChild(t); this.scroll();
-    this.timer = setTimeout(function () { t.remove(); self.status.textContent = 'en línea'; self.status.classList.remove('typing'); then(); }, ms);
+    this.timer = setTimeout(function () { t.remove(); self.status.textContent = T.linea; self.status.classList.remove('typing'); then(); }, ms);
   };
   Chat.prototype.load = function (d) {
     clearTimeout(this.timer); this.busy = false;
     this.d = JSON.parse(JSON.stringify(d));
     this.name.textContent = d.nombre; this.avatar.textContent = d.inicial || d.nombre.charAt(0);
-    this.body.innerHTML = '<div class="chat-day">Hoy</div>';
+    this.body.innerHTML = '<div class="chat-day">' + T.hoy + '</div>';
     if (d.saludo) this.bubble('out', d.saludo);
     this.chipsPaint();
   };
@@ -64,7 +78,7 @@
       b.onclick = function () { self.pregunta(i); }; self.chips.appendChild(b); hay = true;
     });
     if (!hay) {
-      var r = doc.createElement('button'); r.type = 'button'; r.textContent = 'Volver a empezar';
+      var r = doc.createElement('button'); r.type = 'button'; r.textContent = T.otra;
       r.onclick = function () { self.load(self.orig); }; this.chips.appendChild(r);
     }
     this.chips.scrollLeft = 0;
@@ -91,11 +105,11 @@
           b.classList.add('tapped');
           var h = b.textContent; self.bubble('in', h);
           self.typing(900, function () {
-            self.bubble('out', '¿A nombre de quién lo reservo?');
+            self.bubble('out', T.nombre);
             self.timer = setTimeout(function () {
-              self.bubble('in', 'Laura Gómez');
+              self.bubble('in', T.cliente);
               self.typing(1200, function () {
-                self.bubble('out', 'Listo, Laura: ' + c.servicio + ' ' + h + '. Te mando un recordatorio por aquí el día antes.');
+                self.bubble('out', T.listo(c.servicio, h));
                 self.busy = false;
               });
             }, 800);
@@ -140,15 +154,15 @@
     var correr = function () {
       tm.forEach(clearTimeout); tm = []; corriendo = true;
       [].forEach.call(feed, function (li) { li.hidden = true; li.classList.remove('nuevo'); });
-      body.innerHTML = '<div class="chat-day">Hoy</div>';
+      body.innerHTML = '<div class="chat-day">' + T.hoy + '</div>';
       var t = 400;
       DATA.guion.mensajes.forEach(function (m) {
         if (m.dir === 'out') {
-          tm.push(setTimeout(function () { status.textContent = 'escribiendo…'; status.classList.add('typing'); }, t));
+          tm.push(setTimeout(function () { status.textContent = T.escribiendo; status.classList.add('typing'); }, t));
           t += 900;
         }
         tm.push(setTimeout(function () {
-          status.textContent = 'en línea'; status.classList.remove('typing');
+          status.textContent = T.linea; status.classList.remove('typing');
           paso(m.paso);
           var extra = m.botones ? '<span class="msg-buttons">' + m.botones.map(function (b, i) { return '<button type="button" disabled class="' + (i === m.elegido ? 'tapped' : '') + '">' + esc(b) + '</button>'; }).join('') + '</span>' : '';
           pon(m.dir, m.t, extra);
@@ -202,11 +216,16 @@
       var carga = JSON.stringify({
         site: 'zenia', kind: 'qualify', src: 'demo-form', brand: v('sector') || 'Otro', model: 'Ver mi demo',
         name: v('nombre').slice(0, 80), contact: v('contacto').slice(0, 120), city: v('web').slice(0, 120),
-        year: doc.title.slice(0, 30), locale: 'es', path: location.pathname, ref: doc.referrer || ''
+        year: doc.title.slice(0, 30), locale: T.locale, path: location.pathname, ref: doc.referrer || ''
       });
       try { if (!qa) { if (navigator.sendBeacon) navigator.sendBeacon('https://gaia-relojes.onrender.com/gwb/lead', carga); else fetch('https://gaia-relojes.onrender.com/gwb/lead', { method: 'POST', body: carga, keepalive: true }); } } catch (err) {}
       f.classList.add('sent');
     });
+  });
+
+  /* ---------- idioma elegido a mano: lo recuerda la redirección de la portada inglesa ---------- */
+  [].forEach.call(doc.querySelectorAll('a[data-lang]'), function (a) {
+    a.addEventListener('click', function () { try { localStorage.setItem('zenia-lang-v2', a.getAttribute('data-lang')); } catch (e) {} });
   });
 
   /* ---------- menú del móvil: se cierra al elegir ---------- */

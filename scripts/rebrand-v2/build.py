@@ -634,7 +634,7 @@ def hero(label, h1a, h1b, lead, seg, datos_nombre, foto=True):
     if seg:
         segh = '<div class="seg" role="group" aria-label="Prueba como cliente de">' + ''.join(
             f'<button type="button" data-k="{k}" aria-pressed="false">{E(NICHOS[k]["sector"])}</button>' for k in seg) + '</div>'
-    integ = ''.join(f'<span>{s}{E(n)}</span>' for n, s in INTEG[:3])
+    integ = ''.join(f'<span><i>{s}</i>{E(n)}</span>' for n, s in INTEG[:3])
     return f'''<section class="hero">{bg}<div class="hero-glow"></div><div class="wrap">
 <div><span class="label">{E(label)}</span>
 <h1>{E(h1a)} <span class="hl">{E(h1b)}</span></h1>

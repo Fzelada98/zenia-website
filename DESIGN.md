@@ -1,5 +1,13 @@
 # DESIGN.md: zeniapartners.com
 
+> **14-nov-2026: rebrand v2 («modo producto») EN VIVO en español.** La portada `es/index.html` y las
+> páginas `es/clinicas/`, `es/talleres/` y `es/autoescuelas/` se generan con
+> `python3 scripts/rebrand-v2/build.py .` (leer `scripts/rebrand-v2/LEEME.md` antes de tocarlas;
+> NO editar su HTML a mano: se pisa en la siguiente construcción). Sistema: Manrope, casi negro
+> `#070B13`, azul del logo `#7AA2FF`/`#2563EB`, hoja `/assets/z2/z2.css` y `/assets/z2/z2.js`.
+> Lo que sigue en este documento describe la portada en INGLÉS (`index.html`, `styles/home.css`),
+> que aún no se ha migrado.
+
 Sistema de diseño de las DOS portadas de Zenia Partners (`index.html` en inglés y `es/index.html`
 en español) desde el 3 de noviembre de 2026. Las portadas cargan `styles/home.css`; las ~560
 landings por sector y ciudad siguen con `styles/main.css` y no se tocan desde aquí.

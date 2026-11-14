@@ -12,4 +12,7 @@ demo como llamada a la acción), nunca su logo, textos ni clientes.
   Teléfono y panel = negocio de EJEMPLO, rotulado. Sin «10x», «-40 %», etc. de la portada anterior.
 - Formulario «tu demo en 48 h»: beacon a gaia {site:zenia, kind:qualify, src:demo-form,
   model:"Ver mi demo", city:<web>} → aviso de lead por correo (notifier).
-- Pendiente de su OK antes de publicar. Inglés después.
+- **EN VIVO desde el 14-nov-2026** (commits 04e76b4 y 7e775c7): portada ES + 3 nichos, imágenes para
+  compartir `assets/images/og-z2-*.jpg`, sitemap con los 3 nichos, GA4 sin cookies + Cloudflare.
+  Inglés pendiente. El guard (`~/.zenia-seo-guard/inject_ctas.py`) ya no depende del botón flotante
+  de esta portada (usa `~/.zenia-seo-guard/float_canon.html`).

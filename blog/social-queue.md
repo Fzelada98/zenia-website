@@ -10932,3 +10932,19 @@ Full stack, integration-depth table and 2-week rollout (WhatsApp live day 10, ph
 #WhatsAppBusinessAPI #ConversationalAI #Mindbody #SystemsEngineering
 
 ---
+## 2026-11-14 — Webhooks for WhatsApp Business API (EN LinkedIn → Zenia Partners company page)
+
+Most WhatsApp Business API integrations break in the same place: the webhook layer.
+
+The failure modes are predictable. Teams validate the handshake verify_token, then forget the per-request HMAC-SHA256 signature from the App Secret (two different keys, constantly confused). They parse the JSON body before computing the signature, so the comparison never matches. They run the model inference inline inside the HTTP handler, blow past Meta's 20-second deadline, and watch events drop.
+
+Our production pattern: edge handler validates signature on raw body, pushes the event to a durable queue (Redis Streams or SQS) and returns 200 under 300 ms P95. A separate worker deduplicates on `messages[i].id` with a 7-day TTL, hydrates context from the CRM, and calls the LLM. Every event is persisted to a write-ahead log before any state mutation on the contact, which is also what you reach for when a customer disputes "I never got that message."
+
+Meta's 3 MB payload ceiling plus batched events inside a single POST are the two details that cost you most in the first week if the parser only processes `messages[0]`.
+
+Full write-up with the handshake flow, the five main event types, and the reference architecture: https://zeniapartners.com/blog/webhooks-whatsapp-business-api.html
+
+#WhatsAppBusinessAPI #WebhookSecurity #BackendEngineering #SystemsArchitecture
+
+---
+

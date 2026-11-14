@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Demo para Autoescuelas Rayo · Zenia Partners</title>
+<meta name="description" content="Demo privada: así contestaría el WhatsApp de Autoescuelas Rayo un agente de IA.">
+<link rel="icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/demo/assets/demo.css?v=1">
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "eceeed460f6d465bba3b970417d5f6b0"}'></script>
+</head>
+<body>
+<header class="wrap top"><a class="wordmark" href="https://zeniapartners.com/es/">ZENIA</a><small>Demo privada<span class="largo"> para Autoescuelas Rayo</span></small></header>
+<main>
+<section class="wrap hero">
+  <p class="eyebrow">Preparada para Autoescuelas Rayo</p>
+  <h1>Así contestaría el WhatsApp de <em>Autoescuelas Rayo</em></h1>
+  <p class="lead">Un agente de IA que responde a tus futuros alumnos en segundos, también de noche y en fin de semana, con la información de tu web, y los apunta.</p>
+  <p class="hint"><span class="dot"></span><span><b>Pruébalo:</b> toca una pregunta debajo del chat, como haría un alumno desde el móvil.</span></p>
+</section>
+<div class="wrap scene">
+  <div class="crm" aria-label="CRM a medida de Autoescuelas Rayo">
+    <div class="crm-top"><span class="crm-brand">Autoescuelas Rayo <span>· CRM a medida</span></span><span class="crm-live">En directo</span></div>
+    <div class="crm-kpis">
+      <div class="crm-kpi"><small>Respondidas por el agente</small><strong id="kOk">0</strong></div>
+      <div class="crm-kpi"><small>Citas reservadas</small><strong id="kCita">0</strong></div>
+      <div class="crm-kpi"><small>Pasadas a tu equipo</small><strong id="kEsc">0</strong></div>
+    </div>
+    <div class="crm-section">
+      <p class="crm-title"><b>Conversaciones de esta visita</b><em>5 sedes</em></p>
+      <table class="crm-table"><thead><tr><th>Hora</th><th>Motivo</th><th class="opt">Detalle</th><th>Estado</th></tr></thead>
+      <tbody id="crmRows"><tr class="crm-empty"><td colspan="4">Aún no hay conversaciones: toca una pregunta en el WhatsApp.</td></tr></tbody></table>
+    </div>
+    <div class="crm-card" id="crmCard" hidden>
+      <div><small>Contacto</small>Laura Gómez (ejemplo)</div>
+      <div><small>Origen</small>WhatsApp · atendido por el agente</div>
+      <div><small>Servicio</small><span data-k="servicio"></span></div>
+      <div><small>Sede</small><span data-k="sede"></span></div>
+      <div><small>Cuándo</small><span data-k="cuando"></span></div>
+      <div><small>Recordatorio</small>El día antes, por WhatsApp</div>
+    </div>
+  </div>
+  <div class="phone" style="--brand:#2563EB">
+    <div class="phone-status" aria-hidden="true"><span id="phoneTime">9:41</span><span><svg viewBox="0 0 16 12"><path fill="currentColor" d="M0 9h2v3H0zM4 6h2v6H4zM8 3h2v9H8zM12 0h2v12h-2z"/></svg><svg viewBox="0 0 24 12"><rect x=".5" y=".5" width="20" height="11" rx="2.5" fill="none" stroke="currentColor"/><rect x="2" y="2" width="16" height="8" rx="1.5" fill="currentColor"/></svg></span></div>
+    <div class="chat">
+      <div class="chat-head"><span class="chat-avatar" aria-hidden="true">A</span><div class="chat-who"><strong>Autoescuelas Rayo</strong><span class="chat-status" id="chatStatus">en línea</span></div></div>
+      <div class="chat-body" id="chatBody" aria-live="polite">
+        <div class="chat-day">Hoy</div>
+        <div class="chat-lock">Los mensajes están cifrados de extremo a extremo.</div>
+        <div class="chat-day">Toca una pregunta de abajo para empezar</div>
+      </div>
+      <div class="chips" id="chips" role="group" aria-label="Preguntas de ejemplo"></div>
+      <div class="chat-input" aria-hidden="true"><span>Mensaje</span><i></i></div>
+    </div>
+    <noscript><p style="color:#fff;padding:12px">Activa JavaScript para probar la demo.</p></noscript>
+  </div>
+</div>
+<section class="band"><div class="wrap">
+  <p class="eyebrow">Qué cambia</p>
+  <h2>Lo que cambia en <em>Autoescuelas Rayo</em></h2>
+  <div class="grid3">
+    <div class="glass"><h3>Hoy</h3><p>Las cinco oficinas comparten un único teléfono y un único WhatsApp donde llegan a la vez dudas de puntos, carnet B, moto y CAP, y fuera del horario de oficina esas consultas esperan.</p></div>
+    <div class="glass"><h3>Con el agente</h3><p>Contesta en segundos a cualquier hora, reparte cada consulta a su sede y reserva sin que nadie tenga que coger el teléfono.</p></div>
+    <div class="glass"><h3>Tu equipo</h3><p>Ve cada conversación en el CRM, con su sede y su motivo, y solo entra en lo que necesita una persona.</p></div>
+  </div>
+  <div class="sedes" aria-label="Sedes"><span>Puente de Vallecas - Av. de la Albufera 264 (recuperación de puntos)</span><span>Vallecas - Av. de la Albufera 110</span><span>Ensanche de Vallecas - Congosto 8</span><span>Moratalaz - Hacienda de Pavones 120</span><span>Puente de Vallecas - Av. de Rafael Alberti 20 (CAP)</span></div>
+</div></section>
+<section class="band cta"><div class="wrap">
+  <h2>¿Lo vemos con <em>tus preguntas</em>?</h2>
+  <p class="lead">En 30 minutos te enseño cómo quedaría conectado a tu agenda y a tu WhatsApp, con las preguntas que de verdad os hacen tus alumnos. Sin compromiso.</p>
+  <div class="btns"><a class="btn btn-primary" href="https://calendly.com/zeladauriartef/30min" target="_blank" rel="noopener">Reservar 30 minutos</a><a class="btn btn-ghost" href="https://wa.me/34677612799?text=Hola%20Fabrizzio%2C%20he%20visto%20la%20demo%20de%20Autoescuelas%20Rayo%20y%20me%20gustar%C3%ADa%20verlo%20con%20m%C3%A1s%20calma." target="_blank" rel="noopener">Escribir por WhatsApp</a></div>
+  <p class="note">Demo preparada por Zenia Partners con la información pública de autoescuelasrayo.com, consultada en noviembre de 2026. No está conectada a la agenda de Autoescuelas Rayo: los huecos y el nombre del alumno son de ejemplo. En el agente real, lo que no sabe lo pasa a una persona de tu equipo.</p>
+</div></section>
+</main>
+<footer><div class="wrap"><span>Zenia Partners · Madrid</span><a href="https://zeniapartners.com/es/">zeniapartners.com</a></div></footer>
+<script type="application/json" id="demo-data">{"nombre": "Autoescuelas Rayo", "vertical": "autoescuela", "conversacion": [{"pregunta": "Hola, ¿cuánto cuesta sacarse el carnet de coche con vosotros?", "respuesta": "El Pack todo incluido del carnet B manual son 845 € e incluye 20 clases prácticas. Si prefieres automático, tienes la oferta de matrícula + 3 clases de 45 min por 117 €. ¿Te cuento qué incluye cada uno?", "tipo": "precio"}, {"pregunta": "¿Abrís el fin de semana?", "respuesta": "Sí, la oficina de Av. de la Albufera 264 abre sábados, domingos y festivos de 9:00 a 13:00, sobre todo para recuperación de puntos. El resto de oficinas atienden de lunes a viernes, por la mañana y por la tarde.", "tipo": "horario"}, {"pregunta": "Vivo en Moratalaz, ¿tenéis algo cerca?", "respuesta": "Sí, tenemos oficina en C/ Hacienda de Pavones 120, cerca del metro Artilleros y Pavones. Abre de lunes a viernes de 10:00 a 14:00 y de 17:00 a 21:00, y ahí te informan del carnet B, moto, teórica y prácticas.", "tipo": "sede"}, {"pregunta": "Si me lo saco en automático, ¿puedo conducir coches con marchas?", "respuesta": "Con el examen en automático tu permiso B lleva el código 78 y solo te habilita para automáticos. Si más adelante quieres conducir manuales, solo tienes que repetir el examen práctico con un coche de marchas.", "tipo": "info"}, {"pregunta": "Me han retirado el carnet por una sentencia, ¿qué curso me toca?", "respuesta": "Depende de la duración de la sentencia y de tu situación con la DGT, así que prefiero que lo revise contigo un compañero de recuperación de puntos. Le paso tu caso y te escribe. ¿Me dices cuánto dura la retirada?", "tipo": "derivar"}], "cita_demo": {"pregunta": "Quiero pedir cita para matricularme del carnet B en la oficina de Congosto", "servicio": "matrícula permiso B", "sede": "Ensanche de Vallecas (C/ del Congosto, 8)", "respuesta_intro": "¡Genial! Te busco hueco en la oficina de Congosto 8 para la matrícula del carnet B. Tengo estos:", "chip": "Quiero apuntarme"}}</script>
+<script src="/demo/assets/demo.js?v=1"></script>
+</body>
+</html>

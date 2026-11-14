@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Demo para Propdental · Zenia Partners</title>
+<meta name="description" content="Demo privada: así contestaría el WhatsApp de Propdental un agente de IA.">
+<link rel="icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/demo/assets/demo.css?v=1">
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "eceeed460f6d465bba3b970417d5f6b0"}'></script>
+</head>
+<body>
+<header class="wrap top"><a class="wordmark" href="https://zeniapartners.com/es/">ZENIA</a><small>Demo privada<span class="largo"> para Propdental</span></small></header>
+<main>
+<section class="wrap hero">
+  <p class="eyebrow">Preparada para Propdental</p>
+  <h1>Así contestaría el WhatsApp de <em>Propdental</em></h1>
+  <p class="lead">Un agente de IA que responde a tus pacientes en segundos, también de noche y en fin de semana, con la información de tu web, y les reserva la cita.</p>
+  <p class="hint"><span class="dot"></span><span><b>Pruébalo:</b> toca una pregunta debajo del chat, como haría un paciente desde el móvil.</span></p>
+</section>
+<div class="wrap scene">
+  <div class="crm" aria-label="CRM a medida de Propdental">
+    <div class="crm-top"><span class="crm-brand">Propdental <span>· CRM a medida</span></span><span class="crm-live">En directo</span></div>
+    <div class="crm-kpis">
+      <div class="crm-kpi"><small>Respondidas por el agente</small><strong id="kOk">0</strong></div>
+      <div class="crm-kpi"><small>Citas reservadas</small><strong id="kCita">0</strong></div>
+      <div class="crm-kpi"><small>Pasadas a tu equipo</small><strong id="kEsc">0</strong></div>
+    </div>
+    <div class="crm-section">
+      <p class="crm-title"><b>Conversaciones de esta visita</b><em>6 sedes</em></p>
+      <table class="crm-table"><thead><tr><th>Hora</th><th>Motivo</th><th class="opt">Detalle</th><th>Estado</th></tr></thead>
+      <tbody id="crmRows"><tr class="crm-empty"><td colspan="4">Aún no hay conversaciones: toca una pregunta en el WhatsApp.</td></tr></tbody></table>
+    </div>
+    <div class="crm-card" id="crmCard" hidden>
+      <div><small>Contacto</small>Laura Gómez (ejemplo)</div>
+      <div><small>Origen</small>WhatsApp · atendido por el agente</div>
+      <div><small>Servicio</small><span data-k="servicio"></span></div>
+      <div><small>Sede</small><span data-k="sede"></span></div>
+      <div><small>Cuándo</small><span data-k="cuando"></span></div>
+      <div><small>Recordatorio</small>El día antes, por WhatsApp</div>
+    </div>
+  </div>
+  <div class="phone" style="--brand:#2563EB">
+    <div class="phone-status" aria-hidden="true"><span id="phoneTime">9:41</span><span><svg viewBox="0 0 16 12"><path fill="currentColor" d="M0 9h2v3H0zM4 6h2v6H4zM8 3h2v9H8zM12 0h2v12h-2z"/></svg><svg viewBox="0 0 24 12"><rect x=".5" y=".5" width="20" height="11" rx="2.5" fill="none" stroke="currentColor"/><rect x="2" y="2" width="16" height="8" rx="1.5" fill="currentColor"/></svg></span></div>
+    <div class="chat">
+      <div class="chat-head"><span class="chat-avatar" aria-hidden="true">P</span><div class="chat-who"><strong>Propdental</strong><span class="chat-status" id="chatStatus">en línea</span></div></div>
+      <div class="chat-body" id="chatBody" aria-live="polite">
+        <div class="chat-day">Hoy</div>
+        <div class="chat-lock">Los mensajes están cifrados de extremo a extremo.</div>
+        <div class="chat-day">Toca una pregunta de abajo para empezar</div>
+      </div>
+      <div class="chips" id="chips" role="group" aria-label="Preguntas de ejemplo"></div>
+      <div class="chat-input" aria-hidden="true"><span>Mensaje</span><i></i></div>
+    </div>
+    <noscript><p style="color:#fff;padding:12px">Activa JavaScript para probar la demo.</p></noscript>
+  </div>
+</div>
+<section class="band"><div class="wrap">
+  <p class="eyebrow">Qué cambia</p>
+  <h2>Lo que cambia en <em>Propdental</em></h2>
+  <div class="grid3">
+    <div class="glass"><h3>Hoy</h3><p>Cada clínica atiende su propio teléfono y su propio WhatsApp, las urgencias van a un tercer número y el formulario solo promete una llamada de lunes a viernes en horario de clínica, así que quien escribe por la tarde-noche o el fin de semana, o pregunta por Gràcia antes de que abra, se queda esperando.</p></div>
+    <div class="glass"><h3>Con el agente</h3><p>Contesta en segundos a cualquier hora, reparte cada consulta a su sede y reserva sin que nadie tenga que coger el teléfono.</p></div>
+    <div class="glass"><h3>Tu equipo</h3><p>Ve cada conversación en el CRM, con su sede y su motivo, y solo entra en lo que necesita una persona.</p></div>
+  </div>
+  <div class="sedes" aria-label="Sedes"><span>Sants (Barcelona)</span><span>Sant Martí (Barcelona)</span><span>Nou Barris (Barcelona)</span><span>Badalona</span><span>L&#x27;Hospitalet de Llobregat</span><span>Gràcia (próxima apertura, aún no abierta)</span></div>
+</div></section>
+<section class="band cta"><div class="wrap">
+  <h2>¿Lo vemos con <em>tus preguntas</em>?</h2>
+  <p class="lead">En 30 minutos te enseño cómo quedaría conectado a tu agenda y a tu WhatsApp, con las preguntas que de verdad os hacen tus pacientes. Sin compromiso.</p>
+  <div class="btns"><a class="btn btn-primary" href="https://calendly.com/zeladauriartef/30min" target="_blank" rel="noopener">Reservar 30 minutos</a><a class="btn btn-ghost" href="https://wa.me/34677612799?text=Hola%20Fabrizzio%2C%20he%20visto%20la%20demo%20de%20Propdental%20y%20me%20gustar%C3%ADa%20verlo%20con%20m%C3%A1s%20calma." target="_blank" rel="noopener">Escribir por WhatsApp</a></div>
+  <p class="note">Demo preparada por Zenia Partners con la información pública de propdental.es, consultada en noviembre de 2026. No está conectada a la agenda de Propdental: los huecos y el nombre del paciente son de ejemplo. En el agente real, lo que no sabe lo pasa a una persona de tu equipo.</p>
+</div></section>
+</main>
+<footer><div class="wrap"><span>Zenia Partners · Madrid</span><a href="https://zeniapartners.com/es/">zeniapartners.com</a></div></footer>
+<script type="application/json" id="demo-data">{"nombre": "Propdental", "vertical": "clinica", "conversacion": [{"pregunta": "¿Cuánto cuesta un implante?", "respuesta": "El implante sin corona es de 490 € y el tratamiento completo, con implante y corona, parte de 990 €. El precio final de tu caso te lo damos por escrito en la primera visita, que es gratuita. ¿Te busco cita?", "tipo": "precio"}, {"pregunta": "¿Abrís los sábados?", "respuesta": "Atendemos de lunes a viernes, de 10:00 a 14:00 y de 15:00 a 19:00. En Sant Martí, Nou Barris y Badalona el fin de semana está cerrado; si necesitas sábado en otra clínica, te lo confirma el equipo. ¿Te busco hueco entre semana?", "tipo": "horario"}, {"pregunta": "Vivo en Gràcia, ¿tenéis clínica allí?", "respuesta": "La clínica de Gràcia, en Carrer del Torrent de l'Olla 197, todavía no está abierta. Mientras tanto puedes venir a cualquiera de las cinco abiertas: Sants, Sant Martí, Nou Barris, Badalona o L'Hospitalet. ¿Cuál te va mejor?", "tipo": "sede"}, {"pregunta": "Se me ha roto una muela y me duele mucho", "respuesta": "Siento que estés así. Por aquí no puedo valorarlo: llama al 624 31 25 83 y te dicen qué clínica puede verte (de lunes a viernes, en horario de clínica). Fuera de horario, el 061; si es una emergencia, el 112.", "tipo": "urgencia"}, {"pregunta": "¿Puedo pagarlo a plazos? ¿Cuántos meses y con intereses?", "respuesta": "Sí, se puede financiar con una entidad financiera, que estudia cada solicitud. Los plazos y las condiciones te los explica el equipo de tu clínica cuando tengas el presupuesto, y los recibes por escrito antes de firmar. ¿Te paso con ellos?", "tipo": "derivar"}], "cita_demo": {"pregunta": "Quiero pedir cita para la primera visita de implantes en Sants", "servicio": "primera visita gratuita (implantes)", "sede": "Sants (Barcelona)", "respuesta_intro": "Perfecto, te busco hueco para la primera visita gratuita en nuestra clínica de Sants, en Carrer de Sants 151. Tengo estos:", "chip": "Pedir cita"}}</script>
+<script src="/demo/assets/demo.js?v=1"></script>
+</body>
+</html>

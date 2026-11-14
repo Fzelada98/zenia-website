@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HP0VQSEL68"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-HP0VQSEL68');
+</script>
+
+<title>Webhooks WhatsApp Business API: Guía Técnica 2026 | ZENIA</title>
+<meta name="description" content="Guía técnica para webhooks de WhatsApp Business API: handshake, payload JSON, eventos, seguridad y arquitectura para pymes en 2026.">
+<link rel="canonical" href="https://zeniapartners.com/blog/webhooks-whatsapp-business-api.html">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+
+<!-- Hreflang -->
+<link rel="alternate" hreflang="es" href="https://zeniapartners.com/blog/webhooks-whatsapp-business-api.html">
+<link rel="alternate" hreflang="x-default" href="https://zeniapartners.com/blog/webhooks-whatsapp-business-api.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Webhooks de WhatsApp Business API: Guía Técnica 2026">
+<meta property="og:description" content="Handshake, payloads JSON, eventos de mensaje y estado, seguridad y arquitectura: todo lo que necesitas saber para integrar webhooks de WhatsApp Business API.">
+<meta property="og:url" content="https://zeniapartners.com/blog/webhooks-whatsapp-business-api.html">
+<meta property="og:site_name" content="ZENIA">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="https://zeniapartners.com/assets/images/og-image.png">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Webhooks de WhatsApp Business API: Guía Técnica 2026">
+<meta name="twitter:description" content="Handshake, payloads JSON, eventos de mensaje y estado, seguridad y arquitectura para webhooks de WhatsApp Business API.">
+<meta name="twitter:image" content="https://zeniapartners.com/assets/images/og-image.png">
+
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="author" content="Fabrizzio Zelada">
+<meta name="theme-color" content="#0A0F1C">
+
+<!-- JSON-LD Article -->
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Webhooks de WhatsApp Business API: Guía Técnica 2026", "description": "Guía técnica para configurar webhooks de WhatsApp Business API en pymes: handshake, payload JSON, eventos de mensaje y estado, seguridad y arquitectura.", "author": {"@type": "Person", "name": "Fabrizzio Zelada", "jobTitle": "Founder", "worksFor": {"@type": "Organization", "@id": "https://zeniapartners.com/#organization", "name": "Zenia Partners", "url": "https://zeniapartners.com/"}}, "publisher": {"@type": "Organization", "@id": "https://zeniapartners.com/#organization", "name": "Zenia Partners", "url": "https://zeniapartners.com/"}, "datePublished": "2026-11-14", "dateModified": "2026-11-14", "mainEntityOfPage": "https://zeniapartners.com/blog/webhooks-whatsapp-business-api.html", "inLanguage": "es", "keywords": ["webhooks whatsapp business api", "whatsapp cloud api webhook", "configurar webhook whatsapp", "payload whatsapp business api", "whatsapp business api 2026"], "image": "https://zeniapartners.com/assets/images/og-image.png"}</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #3B82F6;
+    --accent-violet: #6366F1;
+    --bg-dark: #0A0F1C;
+    --bg-card: rgba(17, 24, 39, 0.6);
+    --text-primary: #F1F5F9;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+    --border: rgba(148, 163, 184, 0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; background: var(--bg-dark); color: var(--text-primary); line-height: 1.8; }
+  .blog-nav { padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 60px; position: sticky; top: 0; background: rgba(10, 15, 28, 0.85); backdrop-filter: blur(12px); z-index: 100; }
+  .blog-nav .container { max-width: 1200px; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+  .blog-nav .nav-logo-link { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-primary); font-weight: 700; font-size: 1.1rem; }
+  .blog-nav .nav-main-links { display: flex; list-style: none; gap: 28px; margin: 0; padding: 0; }
+  .blog-nav .nav-main-links li { margin: 0; }
+  .blog-nav .nav-main-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
+  .blog-nav .nav-main-links a:hover { color: var(--text-primary); }
+  .blog-nav .nav-main-links a.active { color: var(--primary); }
+  .blog-nav .nav-cta-btn { background: var(--primary); color: #fff; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: filter 0.2s; white-space: nowrap; }
+  .blog-nav .nav-cta-btn:hover { filter: brightness(1.1); }
+  @media (max-width: 860px) {
+    .blog-nav .nav-main-links { display: none; }
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+  .blog-header { margin-bottom: 48px; }
+  .blog-meta { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px; }
+  .blog-header h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); line-height: 1.3; margin-bottom: 16px; }
+  .blog-header p.lead { font-size: 1.1rem; color: var(--text-secondary); line-height: 1.7; }
+  .blog-content h2 { font-size: 1.4rem; margin: 48px 0 16px; color: var(--text-primary); }
+  .blog-content h3 { font-size: 1.15rem; margin: 32px 0 12px; color: var(--text-primary); }
+  .blog-content p { color: var(--text-secondary); margin-bottom: 20px; }
+  .blog-content ul, .blog-content ol { color: var(--text-secondary); margin-bottom: 20px; padding-left: 24px; }
+  .blog-content li { margin-bottom: 8px; }
+  .blog-content strong { color: var(--text-primary); }
+  .blog-content a { color: var(--primary); text-decoration: underline; }
+  .blog-content a:hover { color: var(--accent-violet); }
+  .blog-content blockquote { border-left: 3px solid var(--primary); padding-left: 20px; margin: 24px 0; font-style: italic; color: var(--text-secondary); }
+  .blog-content table { width: 100%; border-collapse: collapse; margin: 24px 0; }
+  .blog-content th, .blog-content td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); font-size: 0.95rem; }
+  .blog-content th { color: var(--text-primary); font-weight: 600; background: var(--bg-card); }
+  .blog-cta { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 40px; text-align: center; margin: 60px 0; }
+  .blog-cta h3 { margin-bottom: 12px; }
+  .blog-cta p { color: var(--text-secondary); margin-bottom: 20px; }
+  .blog-cta a { display: inline-block; padding: 12px 28px; background: var(--primary); color: white; border-radius: 8px; text-decoration: none; font-weight: 600; }
+  .blog-cta a:hover { background: var(--accent-violet); }
+  .blog-related { margin: 60px 0 0; }
+  .blog-related h3 { margin-bottom: 20px; }
+  .blog-related a { display: block; padding: 16px 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 12px; text-decoration: none; color: var(--text-primary); font-weight: 600; transition: border-color 0.3s; }
+  .blog-related a:hover { border-color: var(--primary); }
+  .blog-related a span { display: block; font-size: 0.85rem; color: var(--text-muted); font-weight: 400; margin-top: 4px; }
+  .blog-footer { padding: 40px 0; border-top: 1px solid var(--border); margin-top: 60px; text-align: center; color: var(--text-muted); font-size: 0.85rem; }
+  .blog-footer a { color: var(--primary); text-decoration: none; }
+  .text-gradient { background: linear-gradient(135deg, var(--primary), var(--accent-violet)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+</style>
+<!--zx:head--><meta name="zx-page" content="blog"><meta name="zx-negocio" content="tu pyme"><meta name="zx-wa" content="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20sobre%20webhooks%20de%20WhatsApp%20Business%20API%20y%20quiero%20integrarlo%20en%20mi%20negocio"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&amp;family=Space+Grotesk:wght@700&amp;display=swap"><link rel="stylesheet" href="/assets/zx-blog.css?v=5">
+<!--/zx:head--></head>
+<body>
+
+<nav class="blog-nav">
+  <div class="container">
+    <a href="/es/" class="nav-logo-link">
+      <svg class="zenia-mark" viewBox="0 0 140 140" fill="none" width="32" height="32">
+        <defs>
+          <linearGradient id="zg-b" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#2563EB"/>
+            <stop offset="100%" stop-color="#3B82F6"/>
+          </linearGradient>
+          <linearGradient id="zg-v" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#6366F1"/>
+            <stop offset="100%" stop-color="#7C3AED"/>
+          </linearGradient>
+        </defs>
+        <rect width="140" height="140" rx="28" fill="#0F172A"/>
+        <path d="M 70 18 Q 18 18 18 38 L 18 57 Q 18 63 24 63 L 88 63 Z" fill="url(#zg-b)"/>
+        <path d="M 70 122 Q 122 122 122 102 L 122 83 Q 122 77 116 77 L 52 77 Z" fill="url(#zg-v)"/>
+      </svg>
+      <span>ZENIA</span>
+    </a>
+    <ul class="nav-main-links">
+      <li><a href="/es/#opportunities">Oportunidades IA</a></li>
+      <li><a href="/es/#services">Servicios</a></li>
+      <li><a href="/es/#process">Proceso</a></li>
+      <li><a href="/es/#impact">Impacto</a></li>
+      <li><a href="/blog/" class="active">Blog</a></li>
+    </ul>
+    <a href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20sobre%20webhooks%20de%20WhatsApp%20Business%20API%20y%20quiero%20integrarlo%20en%20mi%20negocio" class="nav-cta-btn" data-zx-src="nav" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88M20.46 3.49A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.42"/></svg><span><span class="zx-l">Escríbenos por </span>WhatsApp</span></a>
+  </div>
+</nav>
+
+<article class="container">
+  <header class="blog-header">
+    <div class="blog-meta">14 de noviembre, 2026 &middot; Fabrizzio Zelada &middot; 11 min de lectura</div>
+    <h1><span class="text-gradient">Webhooks de WhatsApp Business API:</span> guía técnica para pymes en 2026</h1>
+    <p class="lead"><strong>Respuesta corta:</strong> un webhook de WhatsApp Business API es un endpoint HTTPS público que Meta llama cada vez que ocurre un evento en tu número (mensaje entrante, cambio de estado, plantilla aprobada). Configurarlo bien requiere un handshake con token, verificar la firma HMAC-SHA256 de cada petición, responder en menos de 20 segundos con HTTP 200 y almacenar el evento antes de procesarlo. En esta guía de noviembre de 2026 explicamos el handshake, los payloads reales, la arquitectura mínima para producción y los errores que tiran la integración en la primera semana.</p>
+  </header>
+
+  <div class="blog-content">
+
+    <p class="pillar-callout"><strong>Lee también:</strong> antes de tocar webhooks conviene tener claro el modelo de acceso: lee nuestra <a href="/blog/whatsapp-business-api-para-pymes.html">guía de WhatsApp Business API para pymes</a> y la <a href="/blog/proveedor-whatsapp-business-api-espana.html">comparativa de proveedores en España</a>.</p>
+
+
+    <h2>¿Qué es un webhook de WhatsApp Business API y por qué lo necesitas?</h2>
+
+    <p>Un webhook es la vía por la que Meta te notifica en tiempo real los eventos que ocurren en tu número de WhatsApp Business. En vez de que tu backend pregunte cada pocos segundos si hay mensajes nuevos (polling, prohibido en la Cloud API), Meta hace una petición HTTPS POST a la URL que configuras cuando el evento se produce.</p>
+
+    <p>Sin webhook, no hay integración posible con un <a href="/blog/crm-con-whatsapp-integrado.html">CRM conectado a WhatsApp</a>, un agente de IA personalizado, ni un sistema de atribución por canal. El webhook es la columna vertebral de todo lo que viene después: el agente responde porque recibió un evento <code>messages</code>; el dashboard marca el mensaje como leído porque llegó un <code>statuses</code> con valor <code>read</code>; la campaña de carrito abandonado se detiene porque entró un <code>message_template_status_update</code>.</p>
+
+    <p>Según la <a href="https://developers.facebook.com/documentation/business-messaging/whatsapp/webhooks/overview" target="_blank" rel="noopener">documentación oficial de Meta for Developers</a> (actualizada el 26 de junio de 2026), los permisos obligatorios son <code>whatsapp_business_messaging</code> para eventos de mensajes y llamadas, y <code>whatsapp_business_management</code> para el resto. Sin esos permisos tu webhook no recibe nada, aunque la URL esté bien configurada.</p>
+
+    <p>En Zenia Partners configuramos webhooks de WhatsApp Business API para pymes españolas y latinoamericanas. En la mayoría de casos no construimos el endpoint desde cero: lo integramos sobre la infraestructura del cliente (su CRM, su <a href="/blog/automatizacion-whatsapp-negocios.html">agente de IA personalizado</a>) o sobre nuestra plataforma. En los dos escenarios los retos técnicos son los mismos y son los que vamos a desgranar.</p>
+
+    <h2>¿Cómo funciona el handshake de verificación de webhook?</h2>
+
+    <p>Antes de que Meta empiece a mandarte eventos, exige un handshake de validación. Si no lo pasas, la URL no se registra y no verás un solo POST. El handshake es un simple GET que Meta envía con tres parámetros en la query string.</p>
+
+    <h3>Paso 1: Meta envía un GET al endpoint</h3>
+
+    <p>Cuando guardas la URL en el panel de App de Meta, el servidor envía una petición <code>GET https://tu-endpoint/webhook?hub.mode=subscribe&amp;hub.verify_token=TU_TOKEN&amp;hub.challenge=1234567890</code>. El valor de <code>hub.verify_token</code> es el que tú definiste en el panel; <code>hub.challenge</code> es un número aleatorio que Meta genera para la prueba.</p>
+
+    <h3>Paso 2: Tu endpoint responde con el challenge en texto plano</h3>
+
+    <p>Tu backend debe comparar el <code>hub.verify_token</code> recibido con el que guardaste en una variable de entorno. Si coinciden, devuelves el valor de <code>hub.challenge</code> con un <code>Content-Type: text/plain</code> y HTTP 200. Si no coinciden, devuelves 403. En ningún caso devuelvas 500: Meta interpretará que el endpoint está caído y bloqueará futuros intentos durante 30 minutos.</p>
+
+    <h3>Paso 3: Meta registra la URL y empieza a enviar POSTs</h3>
+
+    <p>A partir de ese momento cada evento llega como <code>POST</code> con un cuerpo JSON (payload) y una cabecera <code>X-Hub-Signature-256</code>. Esa cabecera es la firma HMAC-SHA256 del cuerpo usando como clave el <strong>App Secret</strong> de tu aplicación de Meta, no el verify_token. Confundirlos es el error más común de la primera semana.</p>
+
+    <h3>Paso 4: Validación de firma en producción</h3>
+
+    <p>En producción tu endpoint debe calcular <code>hmac_sha256(app_secret, raw_body)</code> y compararlo (en tiempo constante, para evitar timing attacks) con el valor de <code>X-Hub-Signature-256</code> tras quitar el prefijo <code>sha256=</code>. Si no valida, devuelve 403 y descarta el evento. Esta validación es lo único que separa tu webhook de ser un endpoint abierto para cualquiera que descubra la URL.</p>
+
+    <p>Un detalle clave: la firma se calcula sobre el <strong>cuerpo crudo</strong>, antes de cualquier parseo a objeto. Si tu framework (Express, FastAPI, Rails) te da el body ya parseado, la firma no cuadrará nunca. Hay que capturar el raw body explícitamente.</p>
+
+    <!--zx:cta-->
+<aside class="zx-cta" aria-label="Zenia"><p class="zx-eyebrow">Agente de IA + CRM sobre WhatsApp Business API</p><p class="zx-cta-t" role="heading" aria-level="3">¿Quieres el webhook funcionando en producción?</p><p class="zx-cta-p">En Zenia Partners configuramos el proveedor de WhatsApp Business API, el webhook con validación de firma y el agente de IA personalizado conectado a tu CRM. Cuéntanos tu caso y te respondemos en menos de 24 h.</p><div class="zx-cta-stats"><a href="/es/caso-global-watch-buyers.html"><strong>831</strong><span>conversaciones de WhatsApp captadas para un cliente</span></a><a href="/es/caso-despacho-boutique.html"><strong>&lt;1 min</strong><span>de respuesta, 24/7, en un despacho de abogados</span></a></div><div class="zx-cta-act"><a class="zx-btn" href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20sobre%20webhooks%20de%20WhatsApp%20Business%20API%20y%20quiero%20integrarlo%20en%20mi%20negocio" target="_blank" rel="noopener" data-zx-src="inline"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88M20.46 3.49A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.42"/></svg><span>Escríbenos por WhatsApp</span></a><a class="zx-link" href="/es/casos.html">Ver casos reales</a></div></aside>
+<!--/zx:cta--><h2>Eventos y payloads principales que vas a recibir</h2>
+
+    <p>Meta agrupa todos los webhooks de WhatsApp Business bajo un mismo objeto: <code>whatsapp_business_account</code>. Dentro del array <code>entry.changes</code> llega un campo <code>field</code> que te dice qué tipo de evento es. Estos son los cinco que vas a manejar el 95% del tiempo.</p>
+
+    <div class="zx-table"><p class="zx-table-hint">Desliza para ver la tabla completa →</p><div class="zx-table-in"><table>
+      <tr><th>Campo <code>field</code></th><th>Cuándo se dispara</th><th>Dato clave del payload</th><th>Qué hacer en el backend</th></tr>
+      <tr><td><code>messages</code> (type=text, image, interactive, etc.)</td><td>Un usuario envía un mensaje a tu número</td><td><code>messages[0].from</code>, <code>id</code>, <code>timestamp</code>, <code>text.body</code></td><td>Encolar al agente de IA y responder &lt;20 s</td></tr>
+      <tr><td><code>statuses</code></td><td>Cambia el estado de un mensaje saliente (sent, delivered, read, failed)</td><td><code>statuses[0].status</code>, <code>recipient_id</code>, <code>conversation.origin.type</code></td><td>Actualizar el estado en el CRM, calcular SLA</td></tr>
+      <tr><td><code>message_template_status_update</code></td><td>Meta aprueba o rechaza una plantilla</td><td><code>event</code> (APPROVED, REJECTED), <code>reason</code></td><td>Reactivar o bloquear campañas que usen esa plantilla</td></tr>
+      <tr><td><code>phone_number_quality_update</code></td><td>Cambia la calidad del número (GREEN, YELLOW, RED)</td><td><code>current_quality</code>, <code>event</code></td><td>Alertar al equipo si baja a YELLOW o RED</td></tr>
+      <tr><td><code>account_update</code></td><td>Meta impone un ban, límite o cambio de tier</td><td><code>event</code>, <code>ban_info</code>, <code>restriction_info</code></td><td>Parada automática de envíos salientes</td></tr>
+    </table></div></div>
+
+    <p>El payload máximo que Meta envía es de <strong>3 MB</strong> por petición (según el <a href="https://developers.facebook.com/documentation/business-messaging/whatsapp/webhooks/reference/messages/status" target="_blank" rel="noopener">reference de status messages de Meta</a>). En la práctica el 99% de los eventos pesa menos de 10 KB, pero el límite existe porque un <code>messages</code> de tipo imagen con metadatos de contexto puede crecer rápido. Tu endpoint debe aceptar al menos 5 MB de body para evitar truncamientos en picos.</p>
+
+    <p>Un error silencioso frecuente: Meta agrupa varios eventos en un mismo POST. El array <code>entry[0].changes[0].value.messages</code> puede contener 1, 5 o 20 mensajes. Si tu código procesa solo el primero, pierdes el resto sin ver ningún error en los logs.</p>
+
+    <h2>Seguridad y buenas prácticas en producción</h2>
+
+    <p>Un webhook mal protegido es un vector de ataque directo a tu CRM. Estas son las cinco prácticas que aplicamos en toda implementación de Zenia Partners, y que encontramos ausentes en el 80% de endpoints que auditamos al tomar un cliente nuevo.</p>
+
+    <h3>1. Validar <code>X-Hub-Signature-256</code> en cada petición</h3>
+
+    <p>No basta con validarla una vez en pruebas. Cada POST debe pasar la verificación HMAC-SHA256. Si la firma no coincide, devuelve 403 y tira el evento al syslog con nivel warning. En Node.js: <code>crypto.timingSafeEqual(Buffer.from(sig), Buffer.from(expected))</code>.</p>
+
+    <h3>2. Responder HTTP 200 en menos de 20 segundos</h3>
+
+    <p>Meta retira el evento si tardas más de 20 segundos. Y si recibe 5xx o timeouts seguidos durante 7 días, desactiva el webhook. La regla es simple: tu endpoint valida firma, guarda el evento crudo en una cola (Redis, SQS, RabbitMQ) y devuelve 200. El procesamiento (llamada al modelo de IA, escritura en CRM, respuesta por WhatsApp) va en un worker aparte.</p>
+
+    <h3>3. Idempotencia por <code>messages[i].id</code></h3>
+
+    <p>Meta reenvía el mismo evento si no recibió el 200 a tiempo. El <code>id</code> del mensaje es único. Guarda cada id procesado con un TTL de 7 días y descarta duplicados. Sin esto, un pico de latencia se convierte en respuestas duplicadas al cliente y en un agente que se dispara dos veces.</p>
+
+    <h3>4. Allowlist de IPs no funciona</h3>
+
+    <p>Meta no publica rangos de IP estables para webhooks de Cloud API. Si pones un firewall por IP vas a bloquear eventos legítimos en cuanto roten los servidores. La firma HMAC es lo que te autentica, no la IP.</p>
+
+    <h3>5. Dead letter queue y observabilidad</h3>
+
+    <p>Todo evento que falle procesado tras 3 reintentos va a una DLQ para revisión humana. Métricas mínimas a monitorizar: tasa de eventos recibidos por minuto, latencia P50/P95/P99 del endpoint, tasa de 403 por firma inválida, mensajes en la DLQ. Sin esto, cuando el agente de IA deje de responder un sábado por la noche nadie se va a enterar hasta el lunes.</p>
+
+    <h2>¿Cuánto cuesta construir y operar un webhook de WhatsApp Business API?</h2>
+
+    <p>El coste real tiene tres capas: la Cloud API de Meta, la infraestructura donde corre el endpoint y el tiempo de ingeniería. Noviembre de 2026:</p>
+
+    <div class="zx-table"><p class="zx-table-hint">Desliza para ver la tabla completa →</p><div class="zx-table-in"><table>
+      <tr><th>Opción</th><th>Coste mensual</th><th>Tiempo de setup</th><th>Qué incluye</th><th>Para quién</th></tr>
+      <tr><td>Cloud API directa de Meta + endpoint propio</td><td>Coste por conversación de 24 h (según país) + 15-40 € de infra</td><td>2-4 semanas de ingeniería</td><td>Endpoint, cola, worker, validación firma, CRM</td><td>Equipo con dev backend fijo que quiere control total</td></tr>
+      <tr><td>BSP (360dialog, Twilio, Infobip, MessageBird)</td><td>Fee mensual del BSP (15-80 €) + coste por conversación de Meta</td><td>3-7 días</td><td>Webhook del BSP, panel, plantillas, soporte</td><td>Pymes sin backend o con equipo pequeño</td></tr>
+      <tr><td>Plataforma vertical (Zenia Partners)</td><td>Starter 997 € de setup + 297 €/mes, Growth 497 €/mes, Enterprise a medida</td><td>2-5 semanas</td><td>BSP, webhook, agente de IA personalizado, CRM a medida, integraciones</td><td>Pyme que quiere el resultado funcionando, no el proyecto</td></tr>
+      <tr><td>Construir de cero sin proveedor</td><td>0 € si ya tienes infra, pero 40-120 h de ingeniería</td><td>4-8 semanas</td><td>Lo que decidas</td><td>Equipos técnicos con tiempo y sin urgencia</td></tr>
+    </table></div></div>
+
+    <p>Zenia Partners es una agencia con sede en Madrid que trabaja con pymes en España y Latinoamérica. Construimos un agente de IA personalizado sobre WhatsApp y web que responde en menos de un minuto, cualifica leads y agenda citas 24/7, todo conectado al CRM con atribución por canal. Si tu caso encaja en la última columna de la tabla (quieres el resultado, no el proyecto), la implementación arranca con setup 997 € + 297 €/mes (plan Starter, octubre de 2026).</p>
+
+    <p>Si en cambio tu equipo tiene dev backend y solo necesita orientación técnica, publicamos esta guía precisamente porque creemos que entender la capa de abajo te hace mejor cliente de cualquier proveedor (incluidos nosotros).</p>
+
+    <h2>Arquitectura de referencia para un webhook en producción</h2>
+
+    <p>Esta es la arquitectura que desplegamos por defecto. Se puede simplificar para proyectos pequeños, pero cada componente resuelve un problema real que aparece en cuanto el tráfico pasa de 500 eventos al día.</p>
+
+    <h3>Componente 1: Edge handler (función serverless o contenedor ligero)</h3>
+
+    <p>Vercel, Cloudflare Workers, AWS Lambda o un Fastify en Fly.io. Su única responsabilidad: validar firma, encolar el raw body y devolver 200. Nada de modelos de IA ni queries al CRM aquí. Latencia objetivo P95 inferior a 300 ms.</p>
+
+    <h3>Componente 2: Cola persistente</h3>
+
+    <p>Redis Streams, AWS SQS, Google Pub/Sub o RabbitMQ. El evento vive aquí hasta que un worker lo procesa. Esto desacopla el ritmo de Meta (que te envía picos) del ritmo del backend (que puede saturarse).</p>
+
+    <h3>Componente 3: Worker con reintentos exponenciales</h3>
+
+    <p>Lee de la cola, deduplica por <code>messages[i].id</code>, enriquece con contexto del CRM, llama al modelo de IA y envía la respuesta por la Graph API de WhatsApp. Reintentos con backoff: 1s, 5s, 30s, 2m. Tras 3 fallos, al DLQ.</p>
+
+    <h3>Componente 4: CRM con write-ahead log</h3>
+
+    <p>Cada evento se registra en una tabla de eventos antes de modificar el estado del contacto. Si algo falla, puedes reproducir la conversación entera a partir del log. No es opcional: en el momento en que un cliente te acuse de no haber recibido un mensaje, este log es tu prueba.</p>
+
+    <h3>Componente 5: Observabilidad</h3>
+
+    <p>Prometheus + Grafana, Datadog o la combinación que tu equipo use. Los cuatro gráficos imprescindibles: tasa de eventos recibidos, latencia del edge handler, longitud de la cola y errores del worker. Alertas en PagerDuty o Opsgenie para cola inflada y worker caído.</p>
+
+    <h2>Preguntas frecuentes</h2>
+
+    <h3>¿Cuál es la diferencia entre el verify_token y el App Secret?</h3>
+
+    <p>El <code>verify_token</code> es una cadena que tú defines y se usa solo durante el handshake inicial (el GET que Meta envía al registrar la URL). El App Secret es una clave que Meta te asigna en tu aplicación y es la que se usa como clave HMAC para firmar cada POST de eventos. Confundirlos es el error más común y provoca que todas las firmas devuelvan 403.</p>
+
+    <h3>¿Por qué mi webhook recibe el handshake pero no los eventos?</h3>
+
+    <p>La causa casi siempre es que tu aplicación de Meta no está suscrita a los campos concretos (<code>messages</code>, <code>statuses</code>, etc.) en el panel de WhatsApp Business Account. El handshake valida la URL, pero las suscripciones a campos son un paso separado que hay que activar manualmente para cada WABA.</p>
+
+    <h3>¿Puedo usar un único webhook para varios números de WhatsApp Business?</h3>
+
+    <p>Sí. Si todos los números cuelgan de la misma WhatsApp Business Account, un solo endpoint recibe todos los eventos y los diferencias por el campo <code>entry[0].changes[0].value.metadata.phone_number_id</code>. Si están en WABAs distintas, necesitas una URL por WABA o un routing interno a partir de la cabecera <code>X-Hub-Signature-256</code> con App Secrets distintos.</p>
+
+    <h3>¿Qué pasa si mi endpoint cae durante unas horas?</h3>
+
+    <p>Meta reintenta durante un periodo (minutos a horas, depende del tipo de evento) y luego descarta los eventos no entregados. Si la caída supera los 7 días, Meta desactiva el webhook y hay que reactivarlo manualmente. Por eso la cola persistente es crítica: te permite estar fuera durante minutos sin perder nada.</p>
+
+    <h3>¿Se puede desarrollar webhooks sin un dominio público?</h3>
+
+    <p>Para pruebas, sí: con ngrok o Cloudflare Tunnel expones tu localhost. Para producción no vale: el certificado TLS debe ser válido y la URL estable. Meta no acepta IPs ni dominios self-signed.</p>
+
+    <h3>¿El webhook está disponible en la WhatsApp Business App (no API)?</h3>
+
+    <p>No. La WhatsApp Business App gratuita no expone webhooks ni API. Para webhooks necesitas WhatsApp Business Platform (Cloud API o On-Premises API), que es un producto distinto con su propia facturación por conversación.</p>
+
+    <div class="blog-cta">
+      <h3>¿Quieres el webhook y el agente de IA en producción sin dolor?</h3>
+      <p>En Zenia Partners montamos la infraestructura completa: proveedor de WhatsApp Business API, webhook validado, agente de IA personalizado y CRM a medida. Cuéntanos tu caso y te respondemos en menos de 24 h.</p>
+<p data-zenia-oportunidad="1">Todo esto parte de lo mismo: <a href="/es/automatizacion-whatsapp-negocios.html">automatizar WhatsApp con IA</a> para que ningún mensaje se quede sin responder.</p>
+
+      <a href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20sobre%20webhooks%20de%20WhatsApp%20Business%20API%20y%20quiero%20integrarlo%20en%20mi%20negocio" target="_blank" rel="noopener">Hablar por WhatsApp ahora</a> <a style="background:transparent;border:1px solid var(--border);color:var(--text-secondary);margin-left:10px" href="https://calendly.com/zeladauriartef/30min">Agendar llamada gratuita</a>
+    </div>
+<div class="blog-related" data-zenia-money-links="1">
+  <h3>Ponlo en marcha en tu negocio</h3>
+      <a href="/blog/whatsapp-business-api-para-pymes.html">WhatsApp Business API para pymes<span>Guía de acceso, proveedores y costes reales de WhatsApp Business API para pequeñas y medianas empresas.</span></a>
+  <a href="/blog/proveedor-whatsapp-business-api-espana.html">Proveedor de WhatsApp Business API en España<span>Comparativa de proveedores BSP, fees, tiempos de activación y soporte en castellano.</span></a>
+  <a href="/blog/precios-whatsapp-business-api-2026.html">Precios de WhatsApp Business API en 2026<span>Tarifas por conversación, categorías marketing/utility/authentication y cómo estimar el gasto mensual.</span></a>
+  <a href="/es/index.html">CRM a medida + agente de IA<span>Implementación completa: WhatsApp Business API, webhook, agente de IA personalizado y CRM.</span></a>
+</div>
+
+
+    <div class="blog-related">
+      <h3>Artículos relacionados</h3>
+      <a href="/blog/integrar-crm-con-whatsapp-business.html">Integrar CRM con WhatsApp Business: arquitectura y pasos técnicos<span>Guía práctica para conectar tu CRM a WhatsApp Business API con webhook, API de envío y sincronización bidireccional.</span></a>
+      <a href="/blog/handoff-agente-ia-a-humano-whatsapp.html">Handoff del agente de IA al humano por WhatsApp<span>Cómo diseñar el paso de IA a agente humano manteniendo contexto y sin romper la conversación.</span></a>
+      <a href="/blog/cumplimiento-rgpd-whatsapp-business-pymes.html">Cumplimiento RGPD en WhatsApp Business para pymes<span>Consentimiento, base legal, retención y derechos ARCO aplicados a conversaciones por WhatsApp.</span></a>
+      </div>
+
+  </div>
+
+<div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 24px; margin: 40px 0;" data-zenia-internal-links="landings">
+  <h3 style="color: #F1F5F9; margin-bottom: 12px; font-size: 1.05rem;">¿Buscas una integración completa?</h3>
+  <p style="color: #94A3B8; margin-bottom: 16px; font-size: 0.95rem;">Zenia Partners cubre desde el BSP hasta el CRM y el agente de IA. Entra en la guía que mejor te encaje:</p>
+  <div>
+      <a href="/es/automatizacion-whatsapp-negocios.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Automatización WhatsApp con IA →</a>
+      <a href="/blog/whatsapp-cloud-api-vs-whatsapp-business-app.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Cloud API vs Business App →</a>
+      <a href="/blog/integrar-crm-con-whatsapp-business.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Integrar CRM con WhatsApp →</a>
+      <a href="/es/index.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Zenia Partners (home) →</a>
+  </div>
+</div>
+
+</article>
+
+<footer class="blog-footer">
+  <div class="container">
+    <p>&copy; 2026 ZENIA. Todos los derechos reservados. | <a href="/">Inicio</a> | <a href="/blog/">Blog</a></p>
+  </div>
+</footer>
+
+<div style="text-align:center; padding:16px 24px; background:#0A0F1C; color:#64748B; font-size:0.85rem; border-top:1px solid rgba(255,255,255,0.04);"><a href="/es/cobertura.html" style="color:#94A3B8; text-decoration:none;">Ver cobertura completa</a></div>
+<a href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20sobre%20webhooks%20de%20WhatsApp%20Business%20API%20y%20quiero%20integrarlo%20en%20mi%20negocio" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp" data-directo style="position:fixed;bottom:24px;right:24px;z-index:9998;background:#25D366;color:white;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(37,211,102,0.4);transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 20px rgba(37,211,102,0.5)'" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 16px rgba(37,211,102,0.4)'">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<script>document.addEventListener("click",function(e){var t=e.target,a=t.closest?t.closest('a[href*="wa.me"]'):null;if(!a)return;try{navigator.sendBeacon("https://gaia-relojes.onrender.com/gwb/lead",JSON.stringify({site:"zenia",path:location.pathname+location.search,ref:document.referrer||""}))}catch(r){}},true);</script>
+<script src="/assets/qualify.js?v=4" defer></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "eceeed460f6d465bba3b970417d5f6b0"}'></script>
+<!--zx:js--><script src="/assets/zx.js?v=5" defer></script>
+<!--/zx:js--></body>
+</html>

@@ -344,3 +344,21 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px;margin-top:clamp(72p
 .hero .wrap>*,.how>*,.demo-box>*,.price>*,.cases>*,.cards3>*,.niches>*,.pains>*,.feats>*,.hub>*,.foot>*{min-width:0}
 @media (max-width:760px){.hub{width:100%}.hub-col,.hub-col:first-child{width:100%;grid-template-columns:minmax(0,1fr) minmax(0,1fr);justify-items:stretch}.hub-node{white-space:normal;font-size:13.5px;min-width:0;line-height:1.25}}
 .hero h1.largo{font-size:clamp(2.15rem,5.2vw,4.1rem)}
+/* CRM por sector */
+.seg-panel{margin:34px auto 0}
+.app-wrap[hidden]{display:none}
+.app-wrap .tabs{margin-top:22px}
+.crm-points{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;max-width:1040px;margin:22px auto 0}
+@media (max-width:820px){.crm-points{grid-template-columns:minmax(0,1fr)}}
+.crm-points div{border:1px solid var(--line);border-radius:14px;padding:16px 18px;background:rgba(255,255,255,.02);min-width:0}
+.crm-points b{display:block;color:var(--ink);margin-bottom:4px}
+.crm-points span{color:var(--ink-2);font-size:15px}
+/* CRM que se rellena en «Así funciona» */
+.crm-feed{margin-top:18px;border:1px solid var(--line-accent);border-radius:16px;background:#0D1424;padding:14px 16px}
+.crm-feed p{display:flex;justify-content:space-between;align-items:center;margin:0 0 10px;font-size:14px}
+.crm-dot{font-size:12px;color:var(--wa);display:flex;align-items:center;gap:6px}
+.crm-dot::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--wa)}
+.crm-feed ul{list-style:none;margin:0;padding:0;display:grid;gap:6px;min-height:40px}
+.crm-feed li{font-size:14px;color:var(--ink-2);padding:8px 10px;border-radius:10px;background:rgba(255,255,255,.03);border-left:3px solid var(--accent)}
+.crm-feed li.nuevo{animation:rowin .9s ease-out}
+@keyframes rowin{from{background:rgba(37,99,235,.35)}to{background:rgba(255,255,255,.03)}}

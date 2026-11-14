@@ -111,9 +111,9 @@
     var claves = Object.keys(DATA.negocios);
     var abrir = function (k) {
       chat.orig = DATA.negocios[k]; chat.load(DATA.negocios[k]);
-      [].forEach.call(doc.querySelectorAll('.seg button'), function (b) { b.setAttribute('aria-pressed', b.dataset.k === k ? 'true' : 'false'); });
+      [].forEach.call(doc.querySelectorAll('.hero-phone .seg button'), function (b) { b.setAttribute('aria-pressed', b.dataset.k === k ? 'true' : 'false'); });
     };
-    [].forEach.call(doc.querySelectorAll('.seg button'), function (b) { b.addEventListener('click', function () { abrir(b.dataset.k); }); });
+    [].forEach.call(doc.querySelectorAll('.hero-phone .seg button'), function (b) { b.addEventListener('click', function () { abrir(b.dataset.k); }); });
     abrir(claves[0]);
     var t = live.querySelector('.phone-status span'); if (t) t.textContent = hora();
   }
@@ -126,8 +126,10 @@
     var tm = [], corriendo = false;
     how.querySelector('.chat-who strong').textContent = DATA.guion.nombre;
     how.querySelector('.chat-avatar').textContent = DATA.guion.nombre.charAt(0);
+    var feed = doc.querySelectorAll('.crm-feed li');
     var paso = function (n) {
       [].forEach.call(steps, function (li, i) { li.classList.toggle('on', i === n); li.classList.toggle('done', i < n); });
+      [].forEach.call(feed, function (li) { var v = +li.dataset.paso <= n; if (v && li.hidden) { li.hidden = false; li.classList.add('nuevo'); } });
     };
     var pon = function (dir, txt, extra) {
       var m = doc.createElement('div');
@@ -137,6 +139,7 @@
     };
     var correr = function () {
       tm.forEach(clearTimeout); tm = []; corriendo = true;
+      [].forEach.call(feed, function (li) { li.hidden = true; li.classList.remove('nuevo'); });
       body.innerHTML = '<div class="chat-day">Hoy</div>';
       var t = 400;
       DATA.guion.mensajes.forEach(function (m) {
@@ -173,9 +176,19 @@
           var on = x === b; x.setAttribute('aria-selected', on ? 'true' : 'false');
           var p = doc.getElementById(x.getAttribute('aria-controls')); if (p) p.hidden = !on;
         });
-        var side = doc.querySelectorAll('.app-side span[data-tab]');
+        var wrap = tabs.closest('.app-wrap') || doc;
+        var side = wrap.querySelectorAll('.app-side span[data-tab]');
         [].forEach.call(side, function (s) { s.classList.toggle('on', s.dataset.tab === b.getAttribute('aria-controls')); });
       });
+    });
+  });
+
+  /* ---------- CRM por sector: cambiar de panel ---------- */
+  [].forEach.call(doc.querySelectorAll('.seg-panel button'), function (b) {
+    b.addEventListener('click', function () {
+      var k = b.dataset.panel;
+      [].forEach.call(doc.querySelectorAll('.seg-panel button'), function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      [].forEach.call(doc.querySelectorAll('.app-wrap[data-panel]'), function (w) { w.hidden = w.dataset.panel !== k; });
     });
   });
 

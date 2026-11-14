@@ -319,55 +319,169 @@ def tarjetas_nichos():
 def como_funciona(k, titulo):
     g = GUION[k]
     pasos = ''.join(f'<li><div><b>{E(a)}</b><span>{E(b)}</span></div></li>' for a, b in g['pasos'])
+    feed = ''.join(f'<li data-paso="{n}" hidden>{E(t)}</li>' for n, t in CRM_PASOS[k])
     return f'''<section class="band alt" id="como-funciona"><div class="wrap">
 <div class="head"><span class="label">Así funciona</span><h2>{titulo}</h2>
 <p class="lead">Mira una conversación completa: el agente atiende, reserva, recuerda y sabe cuándo pasarle el chat a una persona.</p></div>
-<div class="how"><div><ol class="steps">{pasos}</ol><button class="replay" type="button">Volver a reproducir</button></div>
+<div class="how"><div><ol class="steps">{pasos}</ol>
+<div class="crm-feed" aria-live="polite"><p><b>En tu CRM</b><span class="crm-dot">en directo</span></p><ul>{feed}</ul></div>
+<button class="replay" type="button">Volver a reproducir</button></div>
 {phone('auto', g['nombre'], g['nombre'][0])}</div>
 </div></section>
 '''
 
 
-def producto():
-    return '''<section class="band" id="producto"><div class="wrap">
-<div class="head center"><span class="label">Míralo por dentro</span><h2>Todo tu WhatsApp en un solo panel</h2>
-<p class="lead">Conversaciones, citas y clientes en tu CRM, hecho a la medida de cómo trabajas. Y el agente, con interruptores que controlas tú.</p></div>
-<div class="tabs" role="tablist">
-<button role="tab" aria-selected="true" aria-controls="p-conv">Conversaciones</button>
-<button role="tab" aria-selected="false" aria-controls="p-citas">Citas</button>
-<button role="tab" aria-selected="false" aria-controls="p-cli">Clientes</button>
-<button role="tab" aria-selected="false" aria-controls="p-agente">Agente</button></div>
-<div class="app"><div class="app-bar"><i></i><i></i><i></i><span>CRM de tu negocio · hecho por Zenia</span></div>
-<div class="app-body"><div class="app-side"><b>''' + MARK + '''Tu clínica</b>
-<span data-tab="p-conv" class="on">Conversaciones</span><span data-tab="p-citas">Citas</span><span data-tab="p-cli">Clientes</span><span>Campañas</span><span data-tab="p-agente">Agente</span></div>
+PANELES = {
+    'clinica': {
+        'marca': 'Tu clínica', 'fichas': 'Pacientes', 'agenda': 'Agenda',
+        'convs': [('Ana P.', 'esc', 'A tu equipo', 'Me duele mucho una muela…'),
+                  ('Laura Gómez', 'cita', 'Cita', 'Jueves 17:00 · limpieza'),
+                  ('Marcos R.', 'ok', 'Respondido', '¿Ortodoncia a plazos?'),
+                  ('+34 6•• ••• 412', 'ok', 'Respondido', '¿Abrís los sábados?'),
+                  ('Pedro L.', 'cita', 'Cita', 'Cambia su cita al viernes')],
+        'hilo': [('in', 'Hola, ¿tenéis cita para una limpieza esta semana?'), ('out', '¡Hola! Sí. La primera visita es gratis. ¿Mejor por la mañana o por la tarde?'),
+                 ('in', 'Por la tarde'), ('out', 'Tengo jueves a las 17:00 o a las 18:30, o viernes a las 17:30.'),
+                 ('in', 'Jueves 17:00. Laura Gómez'), ('out', 'Hecho, Laura: jueves a las 17:00 en Chamberí. Te lo recuerdo el día antes.')],
+        'tag': 'Cita creada en la agenda de Chamberí · 23:44',
+        'kpis': [('Citas esta semana', '38'), ('Reservadas por el agente', '21'), ('Confirmadas por recordatorio', '33'), ('Cambiadas por chat', '4')],
+        'agenda_cols': ['Cuándo', 'Paciente', 'Tratamiento', 'Sede', 'Profesional', 'Estado'],
+        'agenda_rows': [['Jue 17:00', 'Laura Gómez', 'Limpieza', 'Chamberí', 'Higienista', ('cita', 'Por el agente')],
+                        ['Jue 18:30', 'Diego Marín', 'Revisión', 'Chamberí', 'Dra. Ruiz', ('ok', 'Confirmada')],
+                        ['Vie 10:00', 'Carmen Vidal', 'Primera visita', 'Salamanca', 'Dr. Soto', ('cita', 'Por el agente')],
+                        ['Vie 12:00', 'Pedro Lima', 'Ortodoncia', 'Salamanca', 'Dra. Ruiz', ('ok', 'Confirmada')],
+                        ['Vie 17:30', 'Ana Pérez', 'Urgencia', 'Chamberí', 'Dr. Soto', ('esc', 'Por recepción')]],
+        'fichas_cols': ['Paciente', 'Último contacto', 'Tratamiento de interés', 'Próxima cita', 'Sede', 'Origen'],
+        'fichas_rows': [['Laura Gómez', 'Hoy, 23:44', 'Limpieza', 'Jueves 17:00', 'Chamberí', 'WhatsApp'],
+                        ['Marcos Ruiz', 'Hoy, 19:10', 'Ortodoncia invisible', '—', 'Salamanca', 'Google'],
+                        ['Carmen Vidal', 'Ayer', 'Implantes', 'Viernes 10:00', 'Salamanca', 'Instagram'],
+                        ['Pedro Lima', 'Lunes', 'Ortodoncia', 'Viernes 12:00', 'Salamanca', 'WhatsApp']],
+        'toggles': [('Responder fuera de horario', 'Noches, fines de semana y festivos.', 1),
+                    ('Reservar en la agenda de cada sede', 'Solo en huecos libres del profesional que toca.', 1),
+                    ('Recordatorio el día antes', 'Con opción de confirmar o cambiar.', 1),
+                    ('Pasar lo clínico a recepción', 'Dolor, urgencias y dudas médicas.', 1),
+                    ('Pedir reseña después de la visita', 'Solo si la visita fue bien.', 0)]},
+    'taller': {
+        'marca': 'Tu taller', 'fichas': 'Vehículos', 'agenda': 'Taller',
+        'convs': [('Javier M.', 'ok', 'Presupuesto', '¿Pastillas de freno?'),
+                  ('Lucía R.', 'cita', 'Listo', '¿Está listo mi coche?'),
+                  ('Pedro S.', 'esc', 'Jefe de taller', 'Ruido raro en la dirección'),
+                  ('+34 6•• ••• 208', 'ok', 'Respondido', '¿Abrís el sábado?'),
+                  ('Ana T.', 'cita', 'Cita', 'Pre-ITV el miércoles')],
+        'hilo': [('in', 'Buenas, ¿cuánto me cobráis por cambiar las pastillas de freno?'), ('out', '¡Buenas! ¿Me dices marca, modelo y año del coche?'),
+                 ('in', 'Seat León de 2019'), ('out', 'Te paso el presupuesto con pastillas delanteras y mano de obra. ¿Te reservo hueco?'),
+                 ('in', 'Miércoles a las 9. Matrícula 1234 KLM'), ('out', 'Reservado: miércoles 9:00, Seat León 1234 KLM.')],
+        'tag': 'Presupuesto y cita creados · Seat León 1234 KLM',
+        'kpis': [('Coches en taller hoy', '14'), ('Citas reservadas por el agente', '9'), ('Presupuestos enviados', '17'), ('Avisos «coche listo»', '11')],
+        'agenda_cols': ['Entrada', 'Cliente', 'Vehículo', 'Trabajo', 'Centro', 'Estado'],
+        'agenda_rows': [['Mié 9:00', 'Javier Martín', 'Seat León · 1234 KLM', 'Pastillas de freno', 'Alcorcón', ('cita', 'Por el agente')],
+                        ['Mié 9:30', 'Ana Torres', 'Toyota Yaris · 5678 HJK', 'Pre-ITV', 'Alcorcón', ('ok', 'En taller')],
+                        ['Mié 10:00', 'Lucía Romero', 'VW Golf · 9012 LMN', 'Revisión', 'Móstoles', ('ok', 'Listo para recoger')],
+                        ['Mié 11:30', 'Pedro Sanz', 'Kia Ceed · 3456 GHT', 'Dirección', 'Móstoles', ('esc', 'Diagnóstico')],
+                        ['Mié 16:30', 'Raúl Gil', 'Ford Focus · 7890 JKL', 'Neumáticos', 'Alcorcón', ('cita', 'Por el agente')]],
+        'fichas_cols': ['Matrícula', 'Vehículo', 'Cliente', 'Último trabajo', 'Próxima ITV', 'Origen'],
+        'fichas_rows': [['1234 KLM', 'Seat León 2019', 'Javier Martín', 'Pastillas (hoy)', 'Mar 2027', 'WhatsApp'],
+                        ['5678 HJK', 'Toyota Yaris 2016', 'Ana Torres', 'Pre-ITV (hoy)', 'Nov 2026', 'Google'],
+                        ['9012 LMN', 'VW Golf 2021', 'Lucía Romero', 'Revisión 30.000 km', 'May 2027', 'WhatsApp'],
+                        ['3456 GHT', 'Kia Ceed 2018', 'Pedro Sanz', 'Dirección (en curso)', 'Ene 2027', 'Recomendación']],
+        'toggles': [('Pedir marca, modelo y matrícula', 'Antes de dar cualquier precio.', 1),
+                    ('Reservar en la agenda de cada centro', 'Según el tipo de trabajo.', 1),
+                    ('Avisar cuando el coche está listo', 'En cuanto tu equipo lo marca como terminado.', 1),
+                    ('Recordatorio de ITV y revisiones', 'Un mes antes, con hueco para reservar.', 1),
+                    ('Pedir reseña al recoger el coche', 'Solo si el trabajo fue bien.', 0)]},
+    'autoescuela': {
+        'marca': 'Tu autoescuela', 'fichas': 'Alumnos', 'agenda': 'Prácticas',
+        'convs': [('Marta R.', 'cita', 'Matrícula', 'Pack de 15 prácticas'),
+                  ('Iván G.', 'ok', 'Respondido', '¿Precio del carné A2?'),
+                  ('Sara L.', 'cita', 'Cambiada', 'Cambiar la práctica del martes'),
+                  ('+34 6•• ••• 731', 'ok', 'Respondido', '¿El teórico es online?'),
+                  ('Diego P.', 'esc', 'Secretaría', 'Fecha de examen')],
+        'hilo': [('in', 'Hola! Cuánto cuesta sacarse el B con vosotros?'), ('out', '¡Hola! Tenemos tres packs con teórico y prácticas. Te mando el precio de cada uno.'),
+                 ('in', 'Me interesa el de 15 prácticas'), ('out', 'Para matricularte, pásate con el DNI. ¿Te va bien el viernes a las 18:00?'),
+                 ('in', 'Sí. Soy Marta Ruiz'), ('out', 'Apuntada, Marta: viernes a las 18:00 en secretaría, pack de 15 prácticas.')],
+        'tag': 'Alumna creada · pack de 15 prácticas · origen: Instagram',
+        'kpis': [('Prácticas esta semana', '64'), ('Reservadas o cambiadas por chat', '18'), ('Matrículas de la semana', '7'), ('En seguimiento', '12')],
+        'agenda_cols': ['Cuándo', 'Alumno', 'Tipo', 'Profesor', 'Vehículo', 'Estado'],
+        'agenda_rows': [['Lun 8:00', 'Sara López', 'Práctica B', 'Javier', 'Clio · 2233 MNB', ('cita', 'Cambiada por chat')],
+                        ['Lun 9:00', 'Iván García', 'Práctica A2', 'Rocío', 'MT-07', ('ok', 'Confirmada')],
+                        ['Lun 18:00', 'Marta Ruiz', 'Matrícula', 'Secretaría', '—', ('cita', 'Por el agente')],
+                        ['Mar 10:00', 'Diego Peña', 'Examen práctico', 'Javier', 'Clio · 2233 MNB', ('esc', 'Secretaría')],
+                        ['Mar 17:00', 'Lara Gil', 'Práctica B', 'Rocío', 'Ibiza · 4455 KJH', ('ok', 'Confirmada')]],
+        'fichas_cols': ['Alumno', 'Pack', 'Prácticas hechas', 'Teórico', 'Examen', 'Origen'],
+        'fichas_rows': [['Marta Ruiz', '15 prácticas', '0 / 15', 'Pendiente', '—', 'Instagram'],
+                        ['Sara López', '20 prácticas', '12 / 20', 'Aprobado', 'Dic 2026', 'WhatsApp'],
+                        ['Iván García', 'A2', '5 / 10', 'Aprobado', '—', 'Google'],
+                        ['Diego Peña', '15 prácticas', '15 / 15', 'Aprobado', 'Martes', 'Recomendación']],
+        'toggles': [('Contestar precios y packs', 'Con lo que incluye cada uno.', 1),
+                    ('Reservar la visita de matrícula', 'En los huecos de secretaría.', 1),
+                    ('Cambiar prácticas por chat', 'Solo con 24 h de antelación.', 1),
+                    ('Seguimiento a quien no se matriculó', 'A los 3 días, con lo que preguntó.', 1),
+                    ('Avisos de examen', 'El día antes, con hora y lugar.', 0)]},
+}
+
+CRM_PASOS = {
+    'clinica': [(0, 'Nuevo contacto: Laura Gómez · WhatsApp'), (2, 'Interés: limpieza · tarde'), (3, 'Cita creada: jueves 17:00 · Chamberí'),
+                (4, 'Recordatorio enviado · cita confirmada'), (5, 'Aviso a recepción: duda sobre las encías')],
+    'taller': [(0, 'Nuevo contacto: WhatsApp'), (1, 'Vehículo: Seat León 2019'), (3, 'Cita: miércoles 9:00 · 1234 KLM'),
+               (4, 'Estado: listo para recoger · aviso enviado'), (5, 'Al jefe de taller: ruido en la dirección')],
+    'autoescuela': [(0, 'Nuevo interesado: WhatsApp · 22:55'), (1, 'Interés: pack de 15 prácticas'), (3, 'Alumna creada: Marta Ruiz · matrícula viernes'),
+                    (4, 'Recordatorio enviado: traer DNI'), (5, 'A secretaría: teórico suspendido en otra autoescuela')],
+}
+
+
+def _app(k, idx):
+    P = PANELES[k]
+    pid = lambda t: f'p-{k}-{t}'
+    side = (f'<span data-tab="{pid("conv")}" class="on">Conversaciones</span><span data-tab="{pid("agenda")}">{E(P["agenda"])}</span>'
+            f'<span data-tab="{pid("fichas")}">{E(P["fichas"])}</span><span>Campañas</span><span data-tab="{pid("agente")}">Agente</span>')
+    ON = ' class="on"'
+    convs = ''.join(f'<div{ON if i == 1 else ""}><b>{E(n)} <span class="state {c}">{E(s)}</span></b>{E(t)}</div>' for i, (n, c, s, t) in enumerate(P['convs']))
+    hilo = ''.join(f'<div class="b {"in" if d == "in" else "out"}">{E(t)}</div>' for d, t in P['hilo'])
+    kp = ''.join(f'<div class="kpi"><small>{E(a)}</small><strong>{E(b)}</strong></div>' for a, b in P['kpis'])
+    def tabla(cols, rows):
+        th = ''.join(f'<th>{E(c)}</th>' for c in cols)
+        tr = ''
+        for r in rows:
+            celdas = ''
+            for j, c in enumerate(r):
+                if isinstance(c, tuple):
+                    celdas += f'<td><span class="state {c[0]}">{E(c[1])}</span></td>'
+                else:
+                    celdas += f'<td>{"<b>" + E(c) + "</b>" if j == 0 else E(c)}</td>'
+            tr += f'<tr>{celdas}</tr>'
+        return f'<div class="tbl-wrap"><table class="tbl"><thead><tr>{th}</tr></thead><tbody>{tr}</tbody></table></div>'
+    tog = ''.join(f'<div class="toggle"><span><b>{E(a)}</b>{E(b)}</span><i class="sw{"" if on else " off"}"></i></div>' for a, b, on in P['toggles'])
+    tabs = (f'<div class="tabs" role="tablist"><button role="tab" aria-selected="true" aria-controls="{pid("conv")}">Conversaciones</button>'
+            f'<button role="tab" aria-selected="false" aria-controls="{pid("agenda")}">{E(P["agenda"])}</button>'
+            f'<button role="tab" aria-selected="false" aria-controls="{pid("fichas")}">{E(P["fichas"])}</button>'
+            f'<button role="tab" aria-selected="false" aria-controls="{pid("agente")}">Agente</button></div>')
+    return f'''<div class="app-wrap" data-panel="{k}"{"" if idx == 0 else " hidden"}>{tabs}
+<div class="app"><div class="app-bar"><i></i><i></i><i></i><span>CRM de {E(P["marca"].replace("Tu ", "tu "))} · hecho por Zenia</span></div>
+<div class="app-body"><div class="app-side"><b>{MARK}{E(P["marca"])}</b>{side}</div>
 <div class="app-main">
-<div class="app-panel" id="p-conv" role="tabpanel"><div class="convs"><div class="convs-list">
-<div><b>Ana P. <span class="state esc">A tu equipo</span></b>Me duele mucho una muela…</div>
-<div class="on"><b>Laura Gómez <span class="state cita">Cita</span></b>Jueves 17:00, limpieza</div>
-<div><b>Marcos R. <span class="state ok">Respondido</span></b>¿Ortodoncia a plazos?</div>
-<div><b>+34 6•• ••• 412 <span class="state ok">Respondido</span></b>¿Abrís los sábados?</div>
-<div><b>Pedro L. <span class="state cita">Cita</span></b>Cambia su cita al viernes</div></div>
-<div class="thread"><div class="b in">Hola, ¿tenéis cita para una limpieza esta semana?</div><div class="b out">¡Hola! Sí. La primera visita es gratis. ¿Mejor por la mañana o por la tarde?</div><div class="b in">Por la tarde</div><div class="b out">Tengo jueves a las 17:00 o a las 18:30, o viernes a las 17:30.</div><div class="b in">Jueves 17:00. Laura Gómez</div><div class="b out">Hecho, Laura: jueves a las 17:00 en Chamberí. Te lo recuerdo el día antes.</div><span class="tag">Cita creada en la agenda · 23:44</span></div></div></div>
-<div class="app-panel" id="p-citas" role="tabpanel" hidden><div class="kpis"><div class="kpi"><small>Citas esta semana</small><strong>38</strong></div><div class="kpi"><small>Reservadas por el agente</small><strong>21</strong></div><div class="kpi"><small>Confirmadas por recordatorio</small><strong>33</strong></div><div class="kpi"><small>Cambiadas por chat</small><strong>4</strong></div></div>
-<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Cuándo</th><th>Paciente</th><th>Tratamiento</th><th>Sede</th><th>Estado</th></tr></thead><tbody>
-<tr><td><b>Jue 17:00</b></td><td>Laura Gómez</td><td>Limpieza</td><td>Chamberí</td><td><span class="state cita">Por el agente</span></td></tr>
-<tr><td><b>Jue 18:30</b></td><td>Diego Marín</td><td>Revisión</td><td>Chamberí</td><td><span class="state ok">Confirmada</span></td></tr>
-<tr><td><b>Vie 10:00</b></td><td>Carmen Vidal</td><td>Primera visita</td><td>Salamanca</td><td><span class="state cita">Por el agente</span></td></tr>
-<tr><td><b>Vie 12:00</b></td><td>Pedro Lima</td><td>Ortodoncia</td><td>Salamanca</td><td><span class="state ok">Confirmada</span></td></tr>
-<tr><td><b>Vie 17:30</b></td><td>Ana Pérez</td><td>Urgencia</td><td>Chamberí</td><td><span class="state esc">Por recepción</span></td></tr></tbody></table></div></div>
-<div class="app-panel" id="p-cli" role="tabpanel" hidden><div class="tbl-wrap"><table class="tbl"><thead><tr><th>Cliente</th><th>Último contacto</th><th>Interés</th><th>Próxima cita</th><th>Origen</th></tr></thead><tbody>
-<tr><td><b>Laura Gómez</b></td><td>Hoy, 23:44</td><td>Limpieza</td><td>Jueves 17:00</td><td>WhatsApp</td></tr>
-<tr><td><b>Marcos Ruiz</b></td><td>Hoy, 19:10</td><td>Ortodoncia invisible</td><td>—</td><td>Google</td></tr>
-<tr><td><b>Carmen Vidal</b></td><td>Ayer</td><td>Implantes</td><td>Viernes 10:00</td><td>Instagram</td></tr>
-<tr><td><b>Pedro Lima</b></td><td>Lunes</td><td>Ortodoncia</td><td>Viernes 12:00</td><td>WhatsApp</td></tr></tbody></table></div></div>
-<div class="app-panel" id="p-agente" role="tabpanel" hidden><div class="toggles">
-<div class="toggle"><span><b>Responder fuera de horario</b>Noches, fines de semana y festivos.</span><i class="sw"></i></div>
-<div class="toggle"><span><b>Reservar en la agenda</b>Solo en huecos libres de cada sede.</span><i class="sw"></i></div>
-<div class="toggle"><span><b>Recordatorio el día antes</b>Con opción de confirmar o cambiar.</span><i class="sw"></i></div>
-<div class="toggle"><span><b>Pasar lo clínico a recepción</b>Dolor, urgencias y dudas médicas.</span><i class="sw"></i></div>
-<div class="toggle"><span><b>Pedir reseña después de la visita</b>Solo si la visita fue bien.</span><i class="sw off"></i></div></div></div>
-</div></div></div>
-<p class="app-note">Panel con datos de ejemplo. Cada CRM se hace a la medida del negocio.</p>
+<div class="app-panel" id="{pid("conv")}" role="tabpanel"><div class="convs"><div class="convs-list">{convs}</div><div class="thread">{hilo}<span class="tag">{E(P["tag"])}</span></div></div></div>
+<div class="app-panel" id="{pid("agenda")}" role="tabpanel" hidden><div class="kpis">{kp}</div>{tabla(P["agenda_cols"], P["agenda_rows"])}</div>
+<div class="app-panel" id="{pid("fichas")}" role="tabpanel" hidden>{tabla(P["fichas_cols"], P["fichas_rows"])}</div>
+<div class="app-panel" id="{pid("agente")}" role="tabpanel" hidden><div class="toggles">{tog}</div></div>
+</div></div></div></div>'''
+
+
+def producto(claves):
+    seg = ''
+    if len(claves) > 1:
+        seg = '<div class="seg seg-panel" role="group" aria-label="Ver el CRM de">' + ''.join(
+            f'<button type="button" data-panel="{k}" aria-pressed="{"true" if i == 0 else "false"}">{E(NICHOS[k]["sector"])}</button>' for i, k in enumerate(claves)) + '</div>'
+    apps = ''.join(_app(k, i) for i, k in enumerate(claves))
+    sub = ('Cada negocio tiene su CRM: con los campos, los estados y las vistas de su sector, y conectado a su WhatsApp y a su agenda. Cambia de sector y mira cómo cambia.'
+           if len(claves) > 1 else 'Con los campos, los estados y las vistas de tu sector, conectado a tu WhatsApp y a tu agenda. Lo que pasa en el chat entra solo.')
+    return f'''<section class="band" id="producto"><div class="wrap">
+<div class="head center"><span class="label">CRM integrado y a tu medida</span><h2>Tu CRM, hecho para tu negocio y conectado a tu WhatsApp</h2>
+<p class="lead">{sub}</p></div>
+{seg}{apps}
+<div class="crm-points">
+<div><b>A tu medida</b><span>Tus campos (tratamiento, matrícula, pack), tus estados y tus vistas. No una plantilla.</span></div>
+<div><b>Integrado</b><span>WhatsApp, agenda y tu programa actual: cada conversación, cita y aviso entra solo.</span></div>
+<div><b>Tuyo</b><span>Tu equipo entra en cualquier chat, ve todo el historial y los datos son de tu negocio.</span></div></div>
+<p class="app-note">Panel con datos de ejemplo.</p>
 </div></section>
 '''
 
@@ -517,11 +631,15 @@ def hero(label, h1a, h1b, lead, seg, datos_nombre, foto=True):
 
 
 def logos():
-    t = [('Global Watch Buyers', '/cases/img/gwb-mark.svg', 'Relojes de lujo · 33 países', '/es/caso-global-watch-buyers.html'),
-         ('Throwin’ Salt Co.', '/cases/img/ts-mark.png', 'Relojes de alta gama · EE. UU.', '/es/caso-throwin-salt-gaia.html'),
+    t = [('Global Watch Buyers', '/cases/img/gwb-emblem.png', 'Luxury Watch Buyers · 33 países', '/es/caso-global-watch-buyers.html'),
          ('Croian & Hein', '/cases/img/croian-mark.svg', 'Vinos raros · Suiza', '/es/caso-croian-hein.html'),
+         ('Migrafácil', '/cases/img/migrafacil-mark.png', 'Trabajar y estudiar en Europa', None),
+         ('Throwin’ Salt Co.', '/cases/img/ts-mark.png', 'Luxury Timepieces · EE. UU.', '/es/caso-throwin-salt-gaia.html'),
          ('Cicero', '/cases/img/cicero-mark.svg', 'Asuntos públicos con IA', '/es/caso-cicero.html')]
-    tiles = ''.join(f'<a class="logo-tile" href="{u}"><img src="{s}" alt="" loading="lazy"><span>{E(n)}<em>{E(d)}</em></span></a>' for n, s, d, u in t)
+    tiles = ''
+    for n, src, d, u in t:
+        dentro = f'<img src="{src}" alt="" loading="lazy"><span>{E(n)}<em>{E(d)}</em></span>'
+        tiles += f'<a class="logo-tile" href="{u}">{dentro}</a>' if u else f'<div class="logo-tile">{dentro}</div>'
     return f'<section class="logos"><div class="wrap"><small>Negocios que ya trabajan con Zenia</small><div class="logo-row">{tiles}</div></div></section>\n'
 
 
@@ -547,7 +665,7 @@ def portada():
 <p class="other">¿Otro sector? Restaurantes, inmobiliarias, gimnasios o despachos: <a href="{E(wa('Hola, quiero ver si Zenia encaja en mi sector'))}" target="_blank" rel="noopener">escríbenos y lo vemos</a>.</p></div></section>
 '''
               + como_funciona('clinica', 'Una cita completa, sin que toques el móvil').replace('band alt', 'band')
-              + producto() + cifras() + casos() + integraciones() + precio() + form_demo()
+              + producto(list(NICHOS.keys())) + cifras() + casos() + integraciones() + precio() + form_demo()
               + faq(FAQ_GENERAL) + final('¿Lo vemos con tu negocio?', 'Te enseñamos la demo con tu información en 48 h. Sin compromiso.')
               + '</main>' + footer() + scripts(datos))
     return cuerpo
@@ -567,7 +685,7 @@ def nicho(k):
 <div class="feats">{''.join(f'<div class="feat"><h3>{E(a)}</h3><p>{E(b)}</p></div>' for a, b in n['feats'])}</div></div></section>
 '''
             + como_funciona(k, 'Así lo vive tu ' + {'clinica': 'paciente', 'taller': 'cliente', 'autoescuela': 'alumno'}[k]).replace('band alt', 'band')
-            + integraciones() + form_demo(n['sector'], n['quien'])
+            + producto([k]) + integraciones() + form_demo(n['sector'], n['quien'])
             + faq(n['faqs'] + FAQ_GENERAL[:4] + FAQ_GENERAL[5:])
             + f'''<section class="band" style="padding-top:0"><div class="wrap center"><p class="muted" style="margin:0 0 14px">También trabajamos con</p><div class="btns" style="margin-top:0">{otros}<a class="btn btn-ghost" href="{PRE}/es/">Todos los sectores</a></div></div></section>
 '''

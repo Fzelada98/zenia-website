@@ -10948,3 +10948,23 @@ Full write-up with the handshake flow, the five main event types, and the refere
 
 ---
 
+## 2026-11-14 — Quality Rating in WhatsApp Business API (EN LinkedIn → Zenia Partners company page)
+
+Running WhatsApp Business API at volume means instrumenting one signal most teams ignore until the number goes red: the per-number quality rating.
+
+Meta recomputes it on a 7-day sliding window from blocks, reports and template feedback, weighted by recency. Above roughly 2-3 percent blocks on a template, quality tilts. Yellow freezes tier progression (the 250 → 1K → 10K → 100K → unlimited ladder); red can downgrade the current limit and, if the state persists, restrict the number outright. Since October 7 2025, tier capacity is shared at the portfolio level, so provisioning extra numbers buys isolation, not capacity.
+
+The agent stack we ship treats quality_rating as a first-class metric:
+- Hourly poll on /{phone-number-id}, stored as a time series with change alerts to Slack.
+- On yellow, tool-selection middleware auto-pauses marketing templates and holds utility traffic.
+- New templates ship behind a 48-hour canary at 5-10 percent of volume before full rollout.
+- Application-level rate limit sits at 70 percent of the current tier, so urgent utility traffic always has headroom.
+- A segmentation filter runs every outbound against the opt-in, bounce and inactivity table before the Graph API call.
+
+Treat the quality rating like a SLO: alert before the breach, not after.
+
+Full breakdown with the input signals, the recovery playbook and the monitoring stack: https://zeniapartners.com/blog/calidad-numero-whatsapp-business-api.html
+
+#WhatsAppBusinessAPI #PlatformEngineering #SRE #ConversationalAI
+
+---

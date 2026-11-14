@@ -10916,3 +10916,19 @@ Full architecture, PIMS integration levels and 4-5 week rollout: https://zeniapa
 #WhatsAppBusinessAPI #ConversationalAI #VeterinaryTech #SystemsEngineering
 
 ---
+
+## 2026-11-14 — AI Receptionist for Yoga Studios (EN LinkedIn → Zenia Partners company page)
+
+How we architect the front-desk slice for a boutique yoga studio so the owner can teach 15-25 hours a week without missing trial students.
+
+Inbound surfaces (Twilio voice as primary with sub-second TTFB on a low-latency speech-to-speech model, WhatsApp Business Cloud API via BSP, Instagram Graph API DM, website widget) collapse into one intake event with the caller's prior records pre-hydrated from the booking platform. Scheduling writeback goes directly against the Mindbody Public API where coverage is deep (client create, class enrollment, waitlist swap, charge against stored payment method) and falls back to a middleware layer plus Zapier bridge for Momence, where only new-client creation and booking are first-class and waitlist actions need confirmation hooks. Zen Planner, Vagaro, Punchpass and Marianatek each get their own capability matrix so the agent never promises a flow the platform cannot write.
+
+A static refuse-list sits in tool-selection middleware, not in the system prompt: any mention of injury, pain, pregnancy or chronic condition forces a route_to_owner() call and locks out booking tools so the model cannot improvise. Same lock-out for pricing negotiation, teacher-bio generation, 200-hour YTT enrollment, out-of-policy refunds.
+
+Operational targets we instrument on a 1-owner 4-contract-teacher Austin vinyasa+slow-flow studio over 90 days: missed-touch rate 37 to 0 percent (every inbound answered under 30s, 24/7), trial-to-member 24 to 38 percent, class no-show 18 to 8 percent via a 24h/2h/30m WhatsApp cadence, monthly member churn 6.8 to 5.1 percent, failed-payment auto-pay recovery 22 to 63 percent on a one-tap Stripe retry link.
+
+Full stack, integration-depth table and 2-week rollout (WhatsApp live day 10, phone live day 14): https://zeniapartners.com/blog/ai-receptionist-for-yoga-studios.html
+
+#WhatsAppBusinessAPI #ConversationalAI #Mindbody #SystemsEngineering
+
+---

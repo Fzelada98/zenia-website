@@ -151,7 +151,7 @@ GUION = {
 NICHOS = {
     'clinica': {
         'slug': 'clinicas', 'menu': 'Clínicas', 'sector': 'Clínica', 'quien': 'pacientes',
-        'title': 'Agente de IA para el WhatsApp de tu clínica dental o estética | Zenia',
+        'title': 'Agente de IA para clínicas: WhatsApp, citas y CRM | Zenia',
         'desc': 'Un agente de IA en el WhatsApp de tu clínica: responde al momento, reserva por sede y especialidad, recuerda la cita y pasa lo clínico a tu equipo.',
         'label': 'Para clínicas dentales y estéticas',
         'h1': ('Tu clínica contesta, cita y recuerda', 'sin dejar a nadie en visto'),
@@ -175,7 +175,7 @@ NICHOS = {
                  ('¿Y si tengo varias clínicas?', 'El agente sabe qué sede le queda mejor a cada paciente y reserva en la agenda de esa sede. Puede ser un solo número para todas o uno por clínica.')]},
     'taller': {
         'slug': 'talleres', 'menu': 'Talleres', 'sector': 'Taller', 'quien': 'clientes',
-        'title': 'Agente de IA para el WhatsApp de tu taller o centro de neumáticos | Zenia',
+        'title': 'Agente de IA para talleres: WhatsApp, citas y CRM | Zenia',
         'desc': 'Un agente de IA en el WhatsApp de tu taller: pide marca y modelo, da presupuestos con tus precios, reserva hueco por centro y avisa cuando el coche está listo.',
         'label': 'Para talleres y centros de neumáticos',
         'h1': ('Tu taller da presupuestos y citas por WhatsApp', 'mientras tú estás con el coche'),
@@ -199,8 +199,8 @@ NICHOS = {
                  ('¿Sirve para varios talleres?', 'Sí: sabe qué centro hace cada trabajo y reserva en la agenda de ese centro.')]},
     'autoescuela': {
         'slug': 'autoescuelas', 'menu': 'Autoescuelas', 'sector': 'Autoescuela', 'quien': 'alumnos',
-        'title': 'Agente de IA para el WhatsApp de tu autoescuela | Zenia',
-        'desc': 'Un agente de IA en el WhatsApp de tu autoescuela: contesta precios y packs, reserva la matrícula y las prácticas y hace seguimiento a quien preguntó y no se apuntó.',
+        'title': 'Agente de IA para autoescuelas: WhatsApp y CRM | Zenia',
+        'desc': 'Un agente de IA en el WhatsApp de tu autoescuela: contesta precios y packs, reserva matrícula y prácticas y vuelve a escribir a quien no se apuntó.',
         'label': 'Para autoescuelas',
         'h1': ('Tu autoescuela matricula por WhatsApp', 'también a las once de la noche'),
         'lead': 'Un agente de IA en el WhatsApp de tu autoescuela que contesta precios y packs, reserva la matrícula y las prácticas, y escribe de nuevo a quien preguntó y no se apuntó. Secretaría se queda con lo importante.',
@@ -234,7 +234,16 @@ FAQ_GENERAL = [
 
 
 # ---------------------------------------------------------------- piezas
-def head(title, desc, canon, extra=''):
+GA = '''<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HP0VQSEL68"></script>
+<script>gtag('js',new Date());gtag('config','G-HP0VQSEL68');</script>'''
+HREFLANG_HOME = '''<link rel="alternate" hreflang="en" href="https://zeniapartners.com/">
+<link rel="alternate" hreflang="es" href="https://zeniapartners.com/es/">
+<link rel="alternate" hreflang="x-default" href="https://zeniapartners.com/">'''
+
+
+def head(title, desc, canon, extra='', og='og-z2-home.jpg'):
     robots = '<meta name="robots" content="noindex,nofollow">' if PREVIEW else '<meta name="robots" content="index,follow">'
     return f'''<!DOCTYPE html>
 <html lang="es">
@@ -251,12 +260,20 @@ def head(title, desc, canon, extra=''):
 <meta property="og:title" content="{E(title)}">
 <meta property="og:description" content="{E(desc)}">
 <meta property="og:url" content="{E(canon)}">
-<meta property="og:image" content="https://zeniapartners.com/assets/images/og-home-es.jpg">
+<meta property="og:image" content="https://zeniapartners.com/assets/images/{og}">
+<meta property="og:image:secure_url" content="https://zeniapartners.com/assets/images/{og}">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Zenia Partners">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://zeniapartners.com/assets/images/{og}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="/assets/z2/z2.css?v={V}">
+{'' if PREVIEW else GA}
 {extra}
 </head>
 <body>
@@ -352,7 +369,7 @@ PANELES = {
                         ['Vie 17:30', 'Ana Pérez', 'Urgencia', 'Chamberí', 'Dr. Soto', ('esc', 'Por recepción')]],
         'fichas_cols': ['Paciente', 'Último contacto', 'Tratamiento de interés', 'Próxima cita', 'Sede', 'Origen'],
         'fichas_rows': [['Laura Gómez', 'Hoy, 23:44', 'Limpieza', 'Jueves 17:00', 'Chamberí', 'WhatsApp'],
-                        ['Marcos Ruiz', 'Hoy, 19:10', 'Ortodoncia invisible', '—', 'Salamanca', 'Google'],
+                        ['Marcos Ruiz', 'Hoy, 19:10', 'Ortodoncia invisible', 'Sin cita', 'Salamanca', 'Google'],
                         ['Carmen Vidal', 'Ayer', 'Implantes', 'Viernes 10:00', 'Salamanca', 'Instagram'],
                         ['Pedro Lima', 'Lunes', 'Ortodoncia', 'Viernes 12:00', 'Salamanca', 'WhatsApp']],
         'toggles': [('Responder fuera de horario', 'Noches, fines de semana y festivos.', 1),
@@ -403,13 +420,13 @@ PANELES = {
         'agenda_cols': ['Cuándo', 'Alumno', 'Tipo', 'Profesor', 'Vehículo', 'Estado'],
         'agenda_rows': [['Lun 8:00', 'Sara López', 'Práctica B', 'Javier', 'Clio · 2233 MNB', ('cita', 'Cambiada por chat')],
                         ['Lun 9:00', 'Iván García', 'Práctica A2', 'Rocío', 'MT-07', ('ok', 'Confirmada')],
-                        ['Lun 18:00', 'Marta Ruiz', 'Matrícula', 'Secretaría', '—', ('cita', 'Por el agente')],
+                        ['Lun 18:00', 'Marta Ruiz', 'Matrícula', 'Secretaría', 'No aplica', ('cita', 'Por el agente')],
                         ['Mar 10:00', 'Diego Peña', 'Examen práctico', 'Javier', 'Clio · 2233 MNB', ('esc', 'Secretaría')],
                         ['Mar 17:00', 'Lara Gil', 'Práctica B', 'Rocío', 'Ibiza · 4455 KJH', ('ok', 'Confirmada')]],
         'fichas_cols': ['Alumno', 'Pack', 'Prácticas hechas', 'Teórico', 'Examen', 'Origen'],
-        'fichas_rows': [['Marta Ruiz', '15 prácticas', '0 / 15', 'Pendiente', '—', 'Instagram'],
+        'fichas_rows': [['Marta Ruiz', '15 prácticas', '0 / 15', 'Pendiente', 'Sin fecha', 'Instagram'],
                         ['Sara López', '20 prácticas', '12 / 20', 'Aprobado', 'Dic 2026', 'WhatsApp'],
-                        ['Iván García', 'A2', '5 / 10', 'Aprobado', '—', 'Google'],
+                        ['Iván García', 'A2', '5 / 10', 'Aprobado', 'Sin fecha', 'Google'],
                         ['Diego Peña', '15 prácticas', '15 / 15', 'Aprobado', 'Martes', 'Recomendación']],
         'toggles': [('Contestar precios y packs', 'Con lo que incluye cada uno.', 1),
                     ('Reservar la visita de matrícula', 'En los huecos de secretaría.', 1),
@@ -643,6 +660,30 @@ def logos():
     return f'<section class="logos"><div class="wrap"><small>Negocios que ya trabajan con Zenia</small><div class="logo-row">{tiles}</div></div></section>\n'
 
 
+MAS = [
+    ('CRM por sector', [('/es/crm-restaurantes.html', 'Restaurantes'), ('/es/crm-gimnasios.html', 'Gimnasios'), ('/es/crm-salones-belleza.html', 'Salones de belleza'),
+                        ('/es/crm-clinicas.html', 'Clínicas'), ('/es/crm-hoteles.html', 'Hoteles'), ('/es/crm-inmobiliarias.html', 'Inmobiliarias'),
+                        ('/es/crm-cafeterias.html', 'Cafeterías'), ('/es/crm-retail.html', 'Retail'), ('/es/crm-ecommerce.html', 'Ecommerce'),
+                        ('/es/crm-wellness.html', 'Wellness'), ('/es/crm-academias.html', 'Academias'), ('/es/crm-medicos.html', 'Médicos'),
+                        ('/es/crm-consultorias.html', 'Consultorías'), ('/es/crm-abogados.html', 'Abogados'), ('/es/crm-fotografos.html', 'Fotógrafos'),
+                        ('/es/crm-pymes.html', 'PYMEs'), ('/es/crm-negocios-pequenos.html', 'Negocios pequeños'), ('/es/crm-whatsapp.html', 'CRM con WhatsApp'),
+                        ('/es/automatizacion-whatsapp-negocios.html', 'Automatizar WhatsApp')]),
+    ('Agente de IA por sector', [('/blog/agente-ia-para-clinicas-esteticas.html', 'Clínicas estéticas'), ('/blog/agente-ia-para-clinicas-dentales.html', 'Clínicas dentales'),
+                                 ('/blog/agente-ia-para-peluquerias.html', 'Peluquerías'), ('/blog/agente-ia-para-fisioterapia.html', 'Fisioterapia'),
+                                 ('/blog/agente-ia-para-podologos.html', 'Podólogos'), ('/blog/agente-ia-para-clinicas-veterinarias.html', 'Veterinarias'),
+                                 ('/blog/agente-ia-para-farmacias.html', 'Farmacias'), ('/blog/agente-ia-para-gimnasios.html', 'Gimnasios'),
+                                 ('/blog/agente-ia-para-psicologos.html', 'Psicólogos'), ('/blog/agente-ia-para-centros-de-masajes.html', 'Centros de masajes'),
+                                 ('/blog/agente-ia-para-abogados.html', 'Abogados'), ('/blog/', 'Todos los sectores')]),
+    ('Por ciudad', [('/es/crm-madrid.html', 'Agencia de IA en Madrid'), ('/es/crm-barcelona.html', 'Barcelona'), ('/es/crm-valencia.html', 'Valencia'),
+                    ('/es/crm-sevilla.html', 'Sevilla'), ('/es/crm-malaga.html', 'Málaga'), ('/es/cobertura.html', 'Ver cobertura completa')]),
+]
+
+
+def mas_sectores():
+    cols = ''.join(f'<div><b>{E(t)}</b><p>' + ' · '.join(f'<a href="{u}">{E(n)}</a>' for u, n in ls) + '</p></div>' for t, ls in MAS)
+    return f'<section class="band mas"><div class="wrap"><h2 class="mas-h">Más sectores y ciudades</h2><div class="mas-cols">{cols}</div></div></section>\n'
+
+
 # ---------------------------------------------------------------- páginas
 def portada():
     canon = 'https://zeniapartners.com/es/'
@@ -651,9 +692,9 @@ def portada():
                       'name': 'Zenia Partners', 'url': 'https://zeniapartners.com/', 'logo': 'https://zeniapartners.com/assets/logos/zenia-logo.png',
                       'email': 'fabrizzio.zelada@zeniapartners.com', 'areaServed': ['ES', 'LATAM'],
                       'description': 'Agentes de IA para el WhatsApp de negocios, con agenda y CRM a medida.'}, ensure_ascii=False)
-    h = head('Agentes de IA para el WhatsApp de tu negocio, con agenda y CRM | Zenia',
-             'Zenia pone un agente de IA en el WhatsApp de tu negocio: contesta al momento, reserva en tu agenda y registra cada conversación en tu CRM. Pide tu demo en 48 h.',
-             canon, f'<script type="application/ld+json">{org}</script>')
+    h = head('Agente de IA para WhatsApp con agenda y CRM a medida | Zenia',
+             'Zenia pone un agente de IA en el WhatsApp de tu negocio: contesta al momento, reserva en tu agenda y registra cada chat en tu CRM. Tu demo en 48 h.',
+             canon, HREFLANG_HOME + f'\n<script type="application/ld+json">{org}</script>')
     cuerpo = (h + nav(True) + '<main id="main">'
               + hero('Agentes de IA para WhatsApp', 'Tu WhatsApp atiende, agenda y', 'vende 24/7',
                      'Zenia pone un agente de IA en el WhatsApp de tu negocio. Contesta en segundos con tu información, reserva en tu agenda y deja cada conversación en tu CRM. Lo que necesita a una persona, te lo pasa.',
@@ -667,7 +708,7 @@ def portada():
               + como_funciona('clinica', 'Una cita completa, sin que toques el móvil').replace('band alt', 'band')
               + producto(list(NICHOS.keys())) + cifras() + casos() + integraciones() + precio() + form_demo()
               + faq(FAQ_GENERAL) + final('¿Lo vemos con tu negocio?', 'Te enseñamos la demo con tu información en 48 h. Sin compromiso.')
-              + '</main>' + footer() + scripts(datos))
+              + mas_sectores() + '</main>' + footer() + scripts(datos))
     return cuerpo
 
 
@@ -676,7 +717,7 @@ def nicho(k):
     canon = f'https://zeniapartners.com/es/{n["slug"]}/'
     datos = {'negocios': {k: NEGOCIOS[k]}, 'guion': GUION[k]}
     otros = ''.join(f'<a class="btn btn-ghost" href="{PRE}/es/{NICHOS[o]["slug"]}/">{E(NICHOS[o]["menu"])}</a>' for o in NICHOS if o != k)
-    h = head(n['title'], n['desc'], canon)
+    h = head(n['title'], n['desc'], canon, og=f"og-z2-{n['slug']}.jpg")
     return (h + nav(False) + '<main id="main">'
             + hero(n['label'], n['h1'][0], n['h1'][1], n['lead'], None, NEGOCIOS[k]['nombre'], foto=False).replace('<h1>', '<h1 class="largo">', 1)
             + f'''<section class="band"><div class="wrap"><div class="head"><span class="label">El problema</span><h2>{E(n['dolor_h2'])}</h2></div>

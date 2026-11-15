@@ -10968,3 +10968,19 @@ Full breakdown with the input signals, the recovery playbook and the monitoring 
 #WhatsAppBusinessAPI #PlatformEngineering #SRE #ConversationalAI
 
 ---
+## 2026-11-15 — ROI of a WhatsApp AI Agent (EN LinkedIn → Zenia Partners company page)
+
+The reason most AI-agent ROI reports don't survive the first quarterly review is instrumentation, not model quality.
+
+If the WhatsApp agent runs without channel-level attribution in the CRM, four of the five value drivers collapse into noise: rescued leads look like direct traffic, out-of-hours conversions get credited to whoever follows up on Monday, and no-show reduction disappears into the booking system. All that's left is a weak "hours saved" number that any CFO can push back on.
+
+The architecture we ship treats attribution as a first-class concern. Event-sourced pipeline on the WhatsApp Cloud API webhook (signature-validated, deduped on messages[i].id), a write-ahead log for every state mutation, and a per-conversation record in the CRM stamped with origin, intent class, LLM confidence, handoff reason and downstream deal id. Deflection rate, handoff rate, payback-to-date and lead-to-close-by-channel are then queries, not estimates.
+
+Market anchors worth knowing: Fin.ai's 2026 industry analysis pegs AI resolution at 0.50-2.00 USD against 6-13.50 USD for human; Gartner projects 80 percent autonomous resolution on common intents by 2029 with 30 percent operational cost reduction; Entagl's 32,581-conversation study puts sub-60-second responses at 35.1 percent lead conversion. The variance across those three sources is exactly why the on-platform metrics matter more than the external benchmark.
+
+Full breakdown with the ROI formula, the KPIs to wire into the dashboard and a worked example at 1,500 conversations/month: https://zeniapartners.com/blog/roi-agente-ia-whatsapp-metricas.html
+
+#WhatsAppBusinessAPI #AIAgents #DataEngineering #ConversationalAI
+
+---
+

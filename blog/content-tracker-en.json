@@ -1,7 +1,16 @@
 {
-  "lastRun": "2026-11-14T12:00Z",
+  "lastRun": "2026-11-15T12:00Z",
   "market": "US/UK small business",
   "posts": [
+    {
+      "slug": "ai-enabled-crm-for-roofing",
+      "keyword": "ai-enabled crm for roofing",
+      "tier": 0,
+      "cluster": "trades",
+      "status": "published",
+      "date": "2026-11-15",
+      "note": "striking-loop hit (2026-11-15): 17 impressions, pos 15.0. Query was printing on /blog/roofing-crm-with-ai.html, whose title targets 'Roofing CRM with AI' not 'AI-Enabled CRM for Roofing' head-on, and there was no dedicated ai-enabled-crm-for-roofing.html file. Dedicated US-focused buyer's guide (~2,450 words): defines AI-enabled vs rules-based for roofing CRMs (unstructured input, homeowner-grade output, pre-qualification, exception routing), 5 problems only an AI-enabled CRM solves well (speed to first reply on storm leads with Roofr 2026 5-min/30-min/24-hr conversion curve, inspection-to-contract close rate, supplement tracking with Xactimate/EagleView/adjuster-letter parsing, 30/60/90-day dormant reactivation on 11-18% close, CSR load 300->800-1000 jobs/CSR), reference architecture (WhatsApp Business API + Twilio SMS/Voice + website chat + Redis/BullMQ queue + Claude 4.7 Opus/Haiku split + EagleView/Roofr/Hover API + Xactimate PDF parser + QuickBooks Online + state-specific contract compliance TX 4102/FL AOB/CA 7159), 4-crew Dallas-Fort Worth 90-day case (first reply p95 4h20m->41s, insurance close 31->47%, retail close 24->38%, supplement value $4,100->$5,280 +29%, 38 dormant contracts recovered, CSR hours 34->11, $412k signed above pre-period vs $7,400 setup + $1,650/mo), vendor table (AccuLynx $100-120/user/mo reported, JobNimbus $199-225/mo base + $20-75/user, Roofr $89/mo unlimited seats, ServiceTitan/FieldRoutes quote-only, Rooflink $120/user, ZENIA custom $7,400 setup + $797+/mo), 2026 pricing bands ($15-35k year-one), 2-week rollout. Cross-link added from /blog/roofing-crm-with-ai.html using 'ai-enabled crm for roofing' as anchor text."
+    },
     {
       "slug": "ai-receptionist-for-yoga-studios",
       "keyword": "ai receptionist for yoga studios",

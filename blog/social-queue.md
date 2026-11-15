@@ -10984,3 +10984,19 @@ Full breakdown with the ROI formula, the KPIs to wire into the dashboard and a w
 
 ---
 
+
+## 2026-11-15 — AI-Enabled CRM for Roofing (EN LinkedIn → Zenia Partners company page)
+
+In roofing the margin isn't in the install, it's in supplement capture and the reply time on the first touch after a hail event.
+
+The system we ship to US operators between 1 and 15 crews consolidates both into one record. Meta WhatsApp Business API, Twilio SMS (10DLC registered) and Twilio Voice collapse into a single webhook. BullMQ on Redis absorbs storm-day bursts so 429s from the Graph or carrier side never drop a lead. An LLM (Claude Opus for intent plus slot extraction, Haiku for high-volume triage) writes against a strict JSON schema: cause_of_loss, insurance_carrier, deductible, square_footage, roof_age, access_notes. Below a confidence of 0.72 the turn routes to a human.
+
+The supplement loop is a vision-capable model with a validated schema on top: Xactimate PDFs and adjuster letters in, flagged underpaid line items (code items, steep-slope, R&R flashing, ice-and-water) out, draft request letter in the carrier's own language. Supplement cycle time compresses from 3-6 weeks to 7-12 days. EagleView, Roofr and Hover APIs pull pitch and square footage at lead-creation time so the sales rep walks in pre-qualified.
+
+Two performance anchors from a DFW 4-crew deployment: first reply p95 4h 20m → 41 seconds, insurance inspection-to-contract 31% → 47% across 90 days.
+
+Full architecture, the vendor landscape (AccuLynx, JobNimbus, Roofr, ServiceTitan, Rooflink) and the 2-week rollout: https://zeniapartners.com/blog/ai-enabled-crm-for-roofing.html
+
+#WhatsAppBusinessAPI #PlatformEngineering #AIAgents #RoofingTech
+
+---

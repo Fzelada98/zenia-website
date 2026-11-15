@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-11-15T00:00:00+00:00",
+  "lastRun": "2026-11-15T06:00:00+00:00",
   "posts": [
+    {
+      "slug": "agente-ia-multiidioma-whatsapp",
+      "keyword": "agente de IA multiidioma para WhatsApp",
+      "tier": 2,
+      "cluster": "arquitectura-agente-ia",
+      "status": "published",
+      "date": "2026-11-15",
+      "source": "matrix-generated"
+    },
     {
       "slug": "roi-agente-ia-whatsapp-metricas",
       "keyword": "roi agente de ia en whatsapp",

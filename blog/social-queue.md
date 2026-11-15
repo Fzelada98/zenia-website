@@ -11000,3 +11000,20 @@ Full architecture, the vendor landscape (AccuLynx, JobNimbus, Roofr, ServiceTita
 #WhatsAppBusinessAPI #PlatformEngineering #AIAgents #RoofingTech
 
 ---
+
+
+## 2026-11-15 — Multilingual AI Agent on WhatsApp (EN LinkedIn → Zenia Partners company page)
+
+Most multilingual WhatsApp agents fail at the plumbing, not the model.
+
+External language classifiers break on short messages and code-switching (Spanglish, portuñol). Moving detection into the LLM's reasoning step, Ada reported in October 2025 that tool-call recall on language updates jumped from 78.6% to 97.9%. One fewer hop, one fewer failure mode.
+
+The stack on WhatsApp Business API: BSP webhook (360dialog or Meta Cloud API, signature-validated), the message routed in its original language to a single LLM pass that detects, reasons and responds in-place (no roundtrip translation, 400 to 900 ms saved per turn), a per-contact language field in the CRM that persists across sessions, and a template registry mapping template_id → language_code → approval_state. Meta approves each language variant separately and does not translate body or variables, so that registry is what keeps a 24-hour reminder from silently breaking in one locale while working in another.
+
+Human escalation is the only place translation enters the flow: a two-column view for the operator (original and target language) with the response translated before send.
+
+Full architecture plus the sectors where this pays back inside a quarter: https://zeniapartners.com/blog/agente-ia-multiidioma-whatsapp.html
+
+#WhatsAppBusinessAPI #AIAgents #PlatformEngineering #ConversationalAI
+
+---

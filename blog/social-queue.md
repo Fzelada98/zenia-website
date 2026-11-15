@@ -11033,3 +11033,19 @@ Full architecture, POS/middleware integration table and the 14-day rollout: http
 #WhatsAppBusinessAPI #PlatformEngineering #AIAgents #RestaurantTech
 
 ---
+
+## 2026-11-15 — WhatsApp Business API Latency (EN LinkedIn → Zenia Partners company page)
+
+Most "slow WhatsApp agent" postmortems mix four tramos into one number and then blame the model.
+
+End-to-end latency on WhatsApp Business Cloud API decomposes into: webhook in (Meta → your endpoint, Meta requires median <250 ms and <1% over 1 s), internal processing (parse + LLM + CRM lookup), Send API outbound (your server → graph.facebook.com), and device delivery (Meta's queue → the user's handset). The user perceives the sum. Observability has to measure the parts.
+
+The pattern that holds in production: respond 200 to the webhook synchronously, enqueue in Redis/SQS/Kafka, process asynchronously, hold an HTTP/2 pool against graph.facebook.com per phone_number_id so TLS handshakes amortize to zero, split the LLM path into a small router model and a large reasoner only when the intent warrants it, and run the backend in eu-west-1 or eu-west-3 for ES/LATAM traffic to avoid 80-150 ms of transatlantic RTT per call. Four histograms in OpenTelemetry with buckets at 50/100/250/500/1000/2500 ms, one per tramo, are the minimum to debug anything.
+
+Realistic SLOs with this shape: webhook ack p99 <1 s, Send API p95 <400 ms from EU, end-to-end p95 under 8 s for text, under 12 s with a CRM lookup in the critical path.
+
+The four tramos, the measurement recipe, the five typical causes of high latency and a minimal runbook: https://zeniapartners.com/blog/latencia-whatsapp-business-api.html
+
+#WhatsAppBusinessAPI #PlatformEngineering #Observability #AIAgents
+
+---

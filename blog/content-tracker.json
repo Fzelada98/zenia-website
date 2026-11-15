@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-11-15T06:00:00+00:00",
+  "lastRun": "2026-11-15T14:00:00+00:00",
   "posts": [
+    {
+      "slug": "latencia-whatsapp-business-api",
+      "keyword": "latencia whatsapp business api",
+      "tier": 2,
+      "cluster": "whatsapp-technical",
+      "status": "published",
+      "date": "2026-11-15",
+      "source": "matrix-generated"
+    },
     {
       "slug": "agente-ia-multiidioma-whatsapp",
       "keyword": "agente de IA multiidioma para WhatsApp",

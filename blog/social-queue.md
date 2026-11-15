@@ -11017,3 +11017,19 @@ Full architecture plus the sectors where this pays back inside a quarter: https:
 #WhatsAppBusinessAPI #AIAgents #PlatformEngineering #ConversationalAI
 
 ---
+
+## 2026-11-15 — AI Agent for Ghost Kitchens (EN LinkedIn → Zenia Partners company page)
+
+Multi-brand ghost kitchen stacks fail at the front door, not the kitchen.
+
+The real bottleneck is the inbound edge: four virtual brands, one Toast KDS, an Otter middleware layer across DoorDash/Uber Eats/Grubhub, and a Google Voice number nobody answers. Aug 2026 industry benchmarks put QSR call answer at 59.9% and the revenue leak at ~$73k/location/year. The engineering fix is to collapse voice + four WhatsApp Business numbers + four IG inboxes + four web storefronts + Google Business chat into one agent process with a brand-scoped context.
+
+The architecture that ships: Twilio Programmable Voice with sub-500ms STT and a brand-specific opener resolved from the inbound DID, four WhatsApp BSP numbers (one per brand, DLC-registered), a single LLM pass holding four per-brand system prompts + menus + allergen matrices + stop-sell state, Toast API for menu reads and order injection into the correct brand's KDS queue, Otter webhooks for aggregator stop-sell sync, Stripe payment intents for catering deposits with 24h-expiring links. The agent reads the brand context on each turn; switching brands is a scope change, not a redeploy.
+
+Two anchors from a Chicago 4-brand/1,100 sq ft deployment: call answer 22.6% → 98.4%, direct-channel share of gross 3% → 19% in 90 days, which translates into a 5.3-point drop in blended effective aggregator take.
+
+Full architecture, POS/middleware integration table and the 14-day rollout: https://zeniapartners.com/blog/ai-agent-for-ghost-kitchens.html
+
+#WhatsAppBusinessAPI #PlatformEngineering #AIAgents #RestaurantTech
+
+---

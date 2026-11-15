@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-11-15T12:00Z",
+  "lastRun": "2026-11-15T22:00Z",
   "market": "US/UK small business",
   "posts": [
     {
@@ -1210,7 +1210,9 @@
       "keyword": "ai agent for ghost kitchens",
       "tier": 3,
       "cluster": "food",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-11-15",
+      "note": "Tier-3 pending build from tracker. No uncovered English striking-distance queries remained in seo/striking-latest.md (all qualifying EN queries pos 8-30, imp >= 5 already have dedicated head-on pages: ai-receptionist-for-photographers, ai-receptionist-for-videographers, ai-crm-for-pest-control, ai-enabled-crm-for-roofing, ai-enabled-crm-for-pest-control, click-to-chat-ads-guide). Skipped the next-listed pending ai-agent-for-videographers because the sibling ai-receptionist-for-videographers piece shipped only 6 days ago (2026-11-09) and would cannibalize. 2,450-word US-focused multi-brand ghost kitchen build. IBISWorld US ghost kitchen $2.9bn 2026 shrinking 2.2% CAGR 2020-2025 context. 2026 aggregator commission tables (DoorDash 15/25/30%+6% pickup, Uber Eats Lite raised to 20% on 2026-03-11 + Plus 25% / 30% Uber One + Premium 30%, Grubhub 5-20% marketing + 10% delivery + processing, effective all-in 30-40%). Aug 2026 call-answer benchmarks (QSR 59.9%, fast casual 75.3%, pizza 93.1%; $73k revenue leak/location; 5.5-ring abandonment threshold; Maple 900+ loc dataset lunch 18 / dinner 23 / weekend 27 percent miss rates). Oaklins July 2026 restaurant-tech consolidation note. 4-brand West Loop Chicago 1,100 sq ft 90-day case (wings + smash burger + Mediterranean bowl + Korean rice bowl on Toast KDS + Otter: call answer 22.6->98.4%, median first response 6h 40m -> 41s, direct-channel share of gross 3->19%, blended effective aggregator take 31.4 -> 26.1%, catering booked 8/47 -> 24/51, Google reviews 29 -> 112, owner admin 16-20 to 3-5 hrs/wk, net 90-day lift ~$22,300 on $4,900 setup + $797/mo). Brand-voice separation inside one agent (4 WhatsApp Business numbers + 4 IG inboxes + 1 unified voice line with dynamic opener per GBP). POS/middleware integration table (Toast, Square for Restaurants, Lavu, Clover, Otter, Deliverect, Chowly, ChowNow, Owner.com, Stripe, WhatsApp BSP + Twilio Voice). 5-step launch order. 6 hard guardrails (no allergen clearance without human SOP, no price negotiation, no refund issuance, no confirm without Stripe webhook success, FCC 2024 voice-AI disclosure in first 10s, no catering without signed one-pager). 2026 US pricing bands Starter $1,500-$2,500 + $349-$597/mo (1-2 brands), Working $3,500-$5,500 + $797-$1,397/mo (3-5), Multi-location $6,500-$12,000 + $1,800-$3,500/mo (5+ brands, 2+ kitchens). 14-day rollout with 72h shadow mode. 5 KPIs (call answer >95%, direct-channel share 15%+ by day 90, blended aggregator take drop 3-6 points, catering booked 45%+, 30-day direct repeat 35%+). Who-this-is-not-for section. No chatbot language, no em-dashes. Cross-linked to ai-agent-for-caterers, ai-agent-for-food-trucks, ai-agent-for-ice-cream-shops, ai-agent-for-restaurants, whatsapp-automation-business-guide."
     },
     {
       "slug": "ai-agent-for-handyman-businesses",

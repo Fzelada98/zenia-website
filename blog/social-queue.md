@@ -11079,3 +11079,16 @@ Full architecture, HOA intake workflow and the 14-day rollout: https://zeniapart
 #WhatsAppBusinessAPI #PlatformEngineering #AIAgents #FieldServiceSoftware
 
 ---
+## 2026-11-16 — Christmas WhatsApp Campaigns for SMBs (EN LinkedIn → Zenia Partners company page)
+
+November campaign messages generate 1.72 €/msg vs 1.03 € annual mean (Chatarmin Benchmark 2026, 11.8M messages). The 67% delta turns December into a throughput problem, not a marketing one.
+
+The pattern we ship for an SMB WhatsApp Christmas campaign: BSP fan-out over Cloud API with template routing auto-classified by payload (UTILITY vs MARKETING), a per-WABA token-bucket limiter capped at 90% of the current tier (250 → 1,000 → 10,000 daily conversations), opt-in ledger in Postgres with cryptographic timestamps for RGPD audit, and a single stateless AI agent processing replies with idempotent CRM writes. Segment cohorts live in the CRM, not the plantilla; the template is the pipe, segmentation is upstream.
+
+Two production numbers from a 4,000-contact SMB on Black Friday 2026: delivery rate 97.3%, block rate 0.4%. That second number is the one that keeps the WABA green through December peak (Meta demotes quality above 1.5%).
+
+Full breakdown with calendar by week, template categories, segmentation cohorts and KPIs that survive scrutiny: https://zeniapartners.com/blog/campanas-navidad-pymes-whatsapp-2026.html
+
+#WhatsAppBusinessAPI #PlatformEngineering #AIAgents #Observability
+
+---

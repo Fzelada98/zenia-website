@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HP0VQSEL68"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-HP0VQSEL68');
+</script>
+
+<title>Rate Limits de WhatsApp Business API 2026 | ZENIA</title>
+<meta name="description" content="Rate limits de WhatsApp Business API: tiers 250 a ilimitado, throughput 80 a 1000 mps, errores 429 y cómo escalar sin bloqueos en 2026.">
+<link rel="canonical" href="https://zeniapartners.com/blog/rate-limits-whatsapp-business-api.html">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+
+<!-- Hreflang -->
+<link rel="alternate" hreflang="es" href="https://zeniapartners.com/blog/rate-limits-whatsapp-business-api.html">
+<link rel="alternate" hreflang="x-default" href="https://zeniapartners.com/blog/rate-limits-whatsapp-business-api.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Rate Limits de WhatsApp Business API: tiers, throughput y escalado">
+<meta property="og:description" content="Rate limits de WhatsApp Business API en 2026: tiers de conversaciones, throughput por segundo, errores 429 y cómo escalar sin que te bloqueen.">
+<meta property="og:url" content="https://zeniapartners.com/blog/rate-limits-whatsapp-business-api.html">
+<meta property="og:site_name" content="ZENIA">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="https://zeniapartners.com/assets/images/og-image.png">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Rate Limits de WhatsApp Business API: tiers, throughput y escalado">
+<meta name="twitter:description" content="Rate limits de WhatsApp Business API 2026: tiers, throughput de 80 a 1000 mps y gestión de errores 429.">
+<meta name="twitter:image" content="https://zeniapartners.com/assets/images/og-image.png">
+
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="author" content="Fabrizzio Zelada">
+<meta name="theme-color" content="#0A0F1C">
+
+<!-- JSON-LD Article -->
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Rate Limits de WhatsApp Business API: tiers, throughput y cómo escalar en 2026", "description": "Guía técnica de los rate limits de WhatsApp Business API: tiers de conversaciones, throughput por segundo, quality rating, errores 429 y estrategia de escalado.", "author": {"@type": "Person", "name": "Fabrizzio Zelada", "jobTitle": "Founder", "worksFor": {"@type": "Organization", "@id": "https://zeniapartners.com/#organization", "name": "Zenia Partners", "url": "https://zeniapartners.com/"}}, "publisher": {"@type": "Organization", "@id": "https://zeniapartners.com/#organization", "name": "Zenia Partners", "url": "https://zeniapartners.com/"}, "datePublished": "2026-11-16", "dateModified": "2026-11-16", "mainEntityOfPage": "https://zeniapartners.com/blog/rate-limits-whatsapp-business-api.html", "inLanguage": "es", "keywords": ["rate limits whatsapp business api", "whatsapp business api tiers", "throughput whatsapp cloud api", "error 429 whatsapp", "quality rating whatsapp business"], "image": "https://zeniapartners.com/assets/images/og-image.png"}</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #3B82F6;
+    --accent-violet: #6366F1;
+    --bg-dark: #0A0F1C;
+    --bg-card: rgba(17, 24, 39, 0.6);
+    --text-primary: #F1F5F9;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+    --border: rgba(148, 163, 184, 0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; background: var(--bg-dark); color: var(--text-primary); line-height: 1.8; }
+  .blog-nav { padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 60px; position: sticky; top: 0; background: rgba(10, 15, 28, 0.85); backdrop-filter: blur(12px); z-index: 100; }
+  .blog-nav .container { max-width: 1200px; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+  .blog-nav .nav-logo-link { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-primary); font-weight: 700; font-size: 1.1rem; }
+  .blog-nav .nav-main-links { display: flex; list-style: none; gap: 28px; margin: 0; padding: 0; }
+  .blog-nav .nav-main-links li { margin: 0; }
+  .blog-nav .nav-main-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
+  .blog-nav .nav-main-links a:hover { color: var(--text-primary); }
+  .blog-nav .nav-main-links a.active { color: var(--primary); }
+  .blog-nav .nav-cta-btn { background: var(--primary); color: #fff; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: filter 0.2s; white-space: nowrap; }
+  .blog-nav .nav-cta-btn:hover { filter: brightness(1.1); }
+  @media (max-width: 860px) {
+    .blog-nav .nav-main-links { display: none; }
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+  .blog-header { margin-bottom: 48px; }
+  .blog-meta { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px; }
+  .blog-header h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); line-height: 1.3; margin-bottom: 16px; }
+  .blog-header p.lead { font-size: 1.1rem; color: var(--text-secondary); line-height: 1.7; }
+  .blog-content h2 { font-size: 1.4rem; margin: 48px 0 16px; color: var(--text-primary); }
+  .blog-content h3 { font-size: 1.15rem; margin: 32px 0 12px; color: var(--text-primary); }
+  .blog-content p { color: var(--text-secondary); margin-bottom: 20px; }
+  .blog-content ul, .blog-content ol { color: var(--text-secondary); margin-bottom: 20px; padding-left: 24px; }
+  .blog-content li { margin-bottom: 8px; }
+  .blog-content strong { color: var(--text-primary); }
+  .blog-content a { color: var(--primary); text-decoration: underline; }
+  .blog-content a:hover { color: var(--accent-violet); }
+  .blog-content blockquote { border-left: 3px solid var(--primary); padding-left: 20px; margin: 24px 0; font-style: italic; color: var(--text-secondary); }
+  .blog-content table { width: 100%; border-collapse: collapse; margin: 24px 0; }
+  .blog-content th, .blog-content td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); font-size: 0.95rem; }
+  .blog-content th { color: var(--text-primary); font-weight: 600; background: var(--bg-card); }
+  .blog-cta { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 40px; text-align: center; margin: 60px 0; }
+  .blog-cta h3 { margin-bottom: 12px; }
+  .blog-cta p { color: var(--text-secondary); margin-bottom: 20px; }
+  .blog-cta a { display: inline-block; padding: 12px 28px; background: var(--primary); color: white; border-radius: 8px; text-decoration: none; font-weight: 600; }
+  .blog-cta a:hover { background: var(--accent-violet); }
+  .blog-related { margin: 60px 0 0; }
+  .blog-related h3 { margin-bottom: 20px; }
+  .blog-related a { display: block; padding: 16px 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 12px; text-decoration: none; color: var(--text-primary); font-weight: 600; transition: border-color 0.3s; }
+  .blog-related a:hover { border-color: var(--primary); }
+  .blog-related a span { display: block; font-size: 0.85rem; color: var(--text-muted); font-weight: 400; margin-top: 4px; }
+  .blog-footer { padding: 40px 0; border-top: 1px solid var(--border); margin-top: 60px; text-align: center; color: var(--text-muted); font-size: 0.85rem; }
+  .blog-footer a { color: var(--primary); text-decoration: none; }
+  .text-gradient { background: linear-gradient(135deg, var(--primary), var(--accent-violet)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+</style>
+<!--zx:head--><meta name="zx-page" content="blog"><meta name="zx-negocio" content="tu empresa"><meta name="zx-wa" content="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20%C2%ABRate%20Limits%20de%20WhatsApp%20Business%20API%C2%BB%20y%20quiero%20ver%20c%C3%B3mo%20escalar%20mi%20WABA"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&amp;family=Space+Grotesk:wght@700&amp;display=swap"><link rel="stylesheet" href="/assets/zx-blog.css?v=5">
+<!--/zx:head--></head>
+<body>
+
+<nav class="blog-nav">
+  <div class="container">
+    <a href="/es/" class="nav-logo-link">
+      <svg class="zenia-mark" viewBox="0 0 140 140" fill="none" width="32" height="32">
+        <defs>
+          <linearGradient id="zg-b" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#2563EB"/>
+            <stop offset="100%" stop-color="#3B82F6"/>
+          </linearGradient>
+          <linearGradient id="zg-v" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#6366F1"/>
+            <stop offset="100%" stop-color="#7C3AED"/>
+          </linearGradient>
+        </defs>
+        <rect width="140" height="140" rx="28" fill="#0F172A"/>
+        <path d="M 70 18 Q 18 18 18 38 L 18 57 Q 18 63 24 63 L 88 63 Z" fill="url(#zg-b)"/>
+        <path d="M 70 122 Q 122 122 122 102 L 122 83 Q 122 77 116 77 L 52 77 Z" fill="url(#zg-v)"/>
+      </svg>
+      <span>ZENIA</span>
+    </a>
+    <ul class="nav-main-links">
+      <li><a href="/es/#opportunities">Oportunidades IA</a></li>
+      <li><a href="/es/#services">Servicios</a></li>
+      <li><a href="/es/#process">Proceso</a></li>
+      <li><a href="/es/#impact">Impacto</a></li>
+      <li><a href="/blog/" class="active">Blog</a></li>
+    </ul>
+    <a href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20%C2%ABRate%20Limits%20de%20WhatsApp%20Business%20API%C2%BB%20y%20quiero%20ver%20c%C3%B3mo%20escalar%20mi%20WABA" class="nav-cta-btn" data-zx-src="nav" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88M20.46 3.49A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.42"/></svg><span><span class="zx-l">Escríbenos por </span>WhatsApp</span></a>
+  </div>
+</nav>
+
+<article class="container">
+  <header class="blog-header">
+    <div class="blog-meta">16 de noviembre, 2026 &middot; Fabrizzio Zelada &middot; 13 min de lectura</div>
+    <h1><span class="text-gradient">Rate Limits de WhatsApp Business API:</span> tiers, throughput y cómo escalar en 2026</h1>
+    <p class="lead"><strong>Respuesta corta:</strong> WhatsApp Business API tiene dos tipos de rate limits independientes. El throughput va de 80 a 1.000 mensajes por segundo por número, según upgrade automático. Las conversaciones iniciadas al día siguen tiers de 250, 1.000, 10.000, 100.000 y ilimitado, y suben solo si tu quality rating se mantiene en Medium o High. Todos los números de un portfolio comparten el mismo cupo desde octubre de 2025, así que añadir un segundo número no duplica la capacidad.</p>
+  </header>
+
+  <div class="blog-content">
+
+    <p class="pillar-callout"><strong>Lee también:</strong> para el stack completo y la elección de proveedor, lee la <a href="/blog/proveedor-whatsapp-business-api-espana.html">guía de proveedores de WhatsApp Business API en España</a> y la pieza sobre <a href="/blog/latencia-whatsapp-business-api.html">latencia real en WhatsApp Business API</a>.</p>
+
+    <h2>¿Qué son los rate limits de WhatsApp Business API?</h2>
+
+    <p>WhatsApp Business API, también llamada Cloud API cuando se aloja en Meta, tiene varias capas de rate limiting que trabajan en paralelo. Un mensaje que falla con error 429 puede haber chocado contra cualquiera de ellas, así que antes de tocar código hay que saber qué límite se superó. Las capas documentadas por Meta y los partners oficiales son estas:</p>
+
+    <ul>
+      <li><strong>Throughput (mensajes por segundo):</strong> cuántos mensajes puedes enviar por segundo desde un mismo número. Va de 80 a 1.000 mps según upgrade automático.</li>
+      <li><strong>Messaging tiers (conversaciones iniciadas al día):</strong> cuántas conversaciones puedes abrir con usuarios únicos en 24 horas. Tiers de 250, 1.000, 10.000, 100.000 e ilimitado.</li>
+      <li><strong>Per-recipient:</strong> cuántos mensajes puedes mandar a un mismo número en una ventana corta. Si el agente escribe 15 veces seguidas al mismo contacto, salta el error 131056.</li>
+      <li><strong>App-level (Graph API):</strong> volumen total de llamadas por aplicación de Meta. Sube con el tamaño del tráfico y no se amplía manualmente.</li>
+    </ul>
+
+    <p>El error 429 es la respuesta HTTP que agrupa todas estas capas. Lo que cambia es el código interno de Meta dentro del cuerpo de la respuesta. Según la documentación de errores de Meta Developers y los partners 360dialog y WATI, los códigos más habituales son 130429 para throughput, 131056 para per-recipient, 131048 por quality restrictions y 80007 para rate limit global del WABA. Como ya aclaramos en la <a href="/blog/latencia-whatsapp-business-api.html">pieza de latencia</a>, un throttle visible como 429 no es un fallo de red, es la plataforma protegiéndose.</p>
+
+    <h2>Throughput: 80 a 1.000 mensajes por segundo por número</h2>
+
+    <p>La <a href="https://developers.facebook.com/documentation/business-messaging/whatsapp/throughput">documentación oficial de Meta</a> deja clara la regla. Cada número de WhatsApp Business registrado en Cloud API arranca con 80 mensajes por segundo (mps) salientes. Ese techo sube automáticamente hasta 1.000 mps cuando se cumplen dos condiciones: haber llegado al tier de conversaciones ilimitado y no haber recibido spam reports en los 7 días previos.</p>
+
+    <p>Si usas Coexistence (la ruta que deja seguir usando la app de WhatsApp Business junto a la API), el techo saliente baja a 20 mps. Es la diferencia relevante cuando se compara una implementación directa sobre Cloud API frente a una integración híbrida mal diseñada. En volumen de hostelería, retail o clínica media no suele importar. En campañas masivas sí.</p>
+
+    <h3>Cuándo 80 mps se queda corto</h3>
+
+    <p>Un agente de IA personalizado que atiende conversaciones 1 a 1 nunca satura 80 mps. Donde el throughput importa es en el envío masivo: recordatorios al amanecer, campañas de reactivación, broadcasts de cierre o promociones de Black Friday. Hacer la cuenta:</p>
+
+    <ul>
+      <li>10.000 recordatorios a las 09:00 a 80 mps = 125 segundos de ventana. Aceptable.</li>
+      <li>100.000 mensajes de campaña en una hora = 27,7 mps sostenidos. Entra en 80 mps sin despeinarse.</li>
+      <li>500.000 mensajes en 30 minutos = 277 mps. Aquí ya necesitas upgrade o colas inteligentes.</li>
+    </ul>
+
+    <p>Para proyectos grandes conviene saber que el throughput se otorga por número, no por WABA. Mantener dos números con 80 mps cada uno te da 160 mps efectivos, pero el tier diario de conversaciones se cuenta a nivel portfolio desde la actualización de octubre de 2025.</p>
+
+    <h2>Messaging Tiers: del tier 0 al ilimitado</h2>
+
+    <p>Los messaging tiers son el segundo rate limit y el que más confusión genera. No miden mensajes por segundo, miden cuántas conversaciones nuevas puedes abrir con usuarios distintos en 24 horas. Una conversación es cualquier template marketing, utility o authentication enviado a un contacto que no haya iniciado conversación en las últimas 24 horas.</p>
+
+    <p>La tabla resume los tiers según la documentación de Meta Developers y los partners oficiales (datos de noviembre de 2026, sujetos a cambios por Meta):</p>
+
+    <table>
+      <tr><th>Tier</th><th>Conversaciones únicas / 24h</th><th>Requisitos para subir</th><th>Tiempo de upgrade</th></tr>
+      <tr><td>Tier 0</td><td>250</td><td>Default al crear WABA</td><td>Inmediato al verificar negocio</td></tr>
+      <tr><td>Tier 1</td><td>1.000</td><td>Business Verification completada o 1.000 conversaciones calidad alta en 30 días</td><td>6 a 72 horas</td></tr>
+      <tr><td>Tier 2</td><td>10.000</td><td>Quality rating Medium/High + 500 conversaciones recientes</td><td>Automático</td></tr>
+      <tr><td>Tier 3</td><td>100.000</td><td>Quality rating Medium/High + 5.000 conversaciones recientes</td><td>Automático</td></tr>
+      <tr><td>Tier 4</td><td>Ilimitado</td><td>Quality rating High + 50.000 conversaciones recientes</td><td>Automático</td></tr>
+    </table>
+
+    <p>Dato clave: desde octubre de 2025 los tiers se calculan a nivel portfolio. Si tienes dos números en la misma WABA, los dos comparten el cupo del tier. Montar varios números para intentar duplicar capacidad ya no funciona como workaround. Lo confirman la documentación oficial y los posts recientes de <a href="https://www.wati.io/en/blog/wati-mcp-agent-whatsapp-rate-limits/">WATI</a> y <a href="https://wetarseel.ai/whatsapp-api-rate-limits-messaging-tiers/">Wetarseel</a>.</p>
+
+    <h3>Qué cuenta como conversación iniciada</h3>
+
+    <p>Un error frecuente: pensar que las respuestas a mensajes entrantes consumen tier. No lo hacen. Dentro de la ventana de 24 horas después de que un usuario escribe, puedes contestar lo que quieras sin tocar el cupo. Lo que sí cuenta son los templates salientes a contactos fuera de esa ventana: notificaciones de pedido, recordatorios programados, campañas de marketing, reactivaciones.</p>
+
+    <p>Por eso un negocio con tráfico orgánico alto, como un restaurante que recibe reservas por WhatsApp, puede operar sin apenas rozar los tiers aunque tenga miles de mensajes diarios. Y por eso una campaña bien segmentada de reactivación en estética o retail puede agotar tier 2 en una mañana.</p>
+
+    <h2>Quality Rating: la palanca que sube o baja los tiers</h2>
+
+    <p>El quality rating se calcula por número y se muestra en WhatsApp Manager con tres estados: Green (High), Yellow (Medium) y Red (Low). Lo bajan los bloqueos y marcas de spam que te hacen los usuarios en los últimos 7 días. Lo suben las conversaciones completadas sin fricción.</p>
+
+    <p>Las reglas de interacción quality-rating / tiers, según la documentación de 360dialog y las guías de <a href="https://learn.rasayel.io/en/blog/whatsapp-message-limit-quality-rating/">Rasayel</a> y <a href="https://chatarmin.com/en/blog/whats-app-messaging-limits">Chatarmin</a>:</p>
+
+    <ul>
+      <li>Si el quality rating baja a Low, Meta marca el número con <strong>Flagged</strong>. No pierdes el tier actual, pero no puedes subir al siguiente hasta recuperar Medium o High.</li>
+      <li>Si el número lleva flagged 7 días, algunas guías reportan que Meta aplica downgrade automático de un tier. Otras fuentes citan que ese downgrade está deprecado desde finales de 2025. En la práctica conviene asumir que ocurre.</li>
+      <li>Para subir de tier hace falta volumen Y calidad. Volumen significa haber enviado conversaciones equivalentes a aproximadamente la mitad del tier actual en los últimos 7 días. Calidad significa Medium o High.</li>
+    </ul>
+
+    <p>El quality rating es el lugar donde más diferencia hace la arquitectura del agente de IA personalizado. Un agente mal entrenado que fuerza plantillas en frío a listas sin opt-in explícito rompe el rating en 48 horas. Un agente con <a href="/blog/doble-opt-in-whatsapp-business.html">doble opt-in bien implementado</a>, segmentación por intención real y templates utility en lugar de marketing cuando aplica mantiene el rating en Green indefinidamente.</p>
+
+    <h2>Errores 429 y códigos internos: qué significa cada uno</h2>
+
+    <p>Cuando la API responde con HTTP 429, el payload incluye un código interno que te dice qué capa se tocó. Los más frecuentes en implementaciones reales:</p>
+
+    <table>
+      <tr><th>Código</th><th>Significado</th><th>Qué hacer</th></tr>
+      <tr><td>130429</td><td>Throughput excedido en el número (mps)</td><td>Añadir cola, backoff exponencial, revisar picos</td></tr>
+      <tr><td>131056</td><td>Per-pair rate limit (muchos mensajes a un mismo recipient)</td><td>Esperar y reintentar solo a ese contacto; seguir con otros</td></tr>
+      <tr><td>131048</td><td>Restricción por quality rating</td><td>Pausar campañas marketing, auditar opt-ins, esperar recuperación</td></tr>
+      <tr><td>80007</td><td>Rate limit a nivel WABA (quality-based)</td><td>Revisar quality rating y pacing global; reducir ritmo</td></tr>
+      <tr><td>4</td><td>App-level call volume (Graph API)</td><td>Optimizar llamadas: cache, webhooks en lugar de polling</td></tr>
+    </table>
+
+    <p>Los códigos conflictan entre fuentes. La documentación de Meta Developers es la referencia primaria. Los posts de 360dialog, WATI y ChakraHQ son útiles pero hay que validar siempre contra la respuesta real de la API en producción, no contra el blog del partner.</p>
+
+    <h2>Estrategia práctica para no chocar con los limits</h2>
+
+    <p>Una implementación de agente de IA en WhatsApp Business API que no quiere pelear con rate limits se diseña con cuatro piezas. Todas se ven más adelante con más detalle en nuestras piezas sobre <a href="/blog/webhooks-whatsapp-business-api.html">webhooks</a> y <a href="/blog/calidad-numero-whatsapp-business-api.html">calidad del número</a>.</p>
+
+    <h3>1. Cola de salida con backoff exponencial</h3>
+
+    <p>No se manda contra la API de Meta directamente. Entre el agente y la API hay una cola (Redis, SQS, RabbitMQ, lo que encaje). Cada envío fallido con 429 se reintenta con backoff exponencial empezando en el valor del header <code>Retry-After</code>. Si Meta no devuelve ese header, 1s, 2s, 4s, 8s, 16s con jitter. Sin cola propia, cualquier pico moderado tira la operación.</p>
+
+    <h3>2. Pacing por tier, no por throughput</h3>
+
+    <p>El throughput de 80 mps rara vez es el limitante real. El limitante real son los tiers diarios. El pacing útil es: cuántas conversaciones nuevas puedo iniciar hoy sin pasar del 90% de mi tier. El agente de IA personalizado consulta un contador antes de disparar un template, no antes de cada envío.</p>
+
+    <h3>3. Webhooks en lugar de polling</h3>
+
+    <p>Las llamadas a la Graph API para consultar estado de mensaje, perfil de usuario o listados consumen el rate limit a nivel de app. Si cada conversación se traduce en 5 llamadas de polling, en volumen medio se acaba el cupo. Todo lo que puede responderse con webhook, se responde con webhook. Reduce coste de infraestructura y prácticamente elimina los 429 por Graph API.</p>
+
+    <h3>4. Opt-in doble y quality monitoring</h3>
+
+    <p>El quality rating es un KPI operativo. Se mira todos los días en el dashboard, no solo cuando Meta notifica un downgrade. Con doble opt-in y segmentación por intención, el rating Green es sostenible. Sin eso, los números se queman en meses y toca pedir uno nuevo.</p>
+
+    <!--zx:cta-->
+<aside class="zx-cta" aria-label="Zenia"><p class="zx-eyebrow">WhatsApp Business API + agente de IA</p><p class="zx-cta-t" role="heading" aria-level="3">¿Necesitas escalar WhatsApp sin que te bloqueen?</p><p class="zx-cta-p">Construimos agentes de IA personalizados sobre WhatsApp Business API con cola propia, monitorización de quality rating y pacing por tier. Cuéntanos tu caso y te respondemos en menos de 24 h.</p><div class="zx-cta-stats"><a href="/es/caso-global-watch-buyers.html"><strong>831</strong><span>conversaciones captadas por WhatsApp para un cliente</span></a><a href="/es/caso-despacho-boutique.html"><strong>&lt;1 min</strong><span>de respuesta, 24/7, en un despacho de abogados</span></a></div><div class="zx-cta-act"><a class="zx-btn" href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20%C2%ABRate%20Limits%20de%20WhatsApp%20Business%20API%C2%BB%20y%20quiero%20ver%20c%C3%B3mo%20escalar%20mi%20WABA" target="_blank" rel="noopener" data-zx-src="inline"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88M20.46 3.49A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.42"/></svg><span>Escríbenos por WhatsApp</span></a><a class="zx-link" href="/es/casos.html">Ver casos reales</a></div></aside>
+<!--/zx:cta-->
+
+    <h2>Comparativa de proveedores por capacidad y precio</h2>
+
+    <p>Los rate limits dependen de Meta, pero la forma de exponerlos al cliente varía por proveedor. Esta comparativa es sobre proveedores comunes para pymes en España y Latinoamérica, con datos de octubre de 2026 verificables en las páginas oficiales:</p>
+
+    <table>
+      <tr><th>Proveedor</th><th>Modelo</th><th>Precio mensual aprox.</th><th>Para quién encaja</th></tr>
+      <tr><td>Meta Cloud API directo</td><td>Pago por conversación</td><td>Solo coste Meta</td><td>Equipos técnicos con infra propia</td></tr>
+      <tr><td>360dialog</td><td>BSP tradicional</td><td>Desde ~49 €/mes + Meta</td><td>Volumen medio con partner oficial</td></tr>
+      <tr><td>Twilio WhatsApp</td><td>Pago por uso</td><td>Variable + Meta</td><td>Empresas ya en stack Twilio</td></tr>
+      <tr><td>Zenia Partners</td><td>Agente IA + CRM a medida</td><td>997 € setup + 297 €/mes (Starter)</td><td>Pymes que quieren el sistema operativo, no la API suelta</td></tr>
+    </table>
+
+    <p>Honestidad: si tu equipo técnico puede montar y mantener cola, quality monitoring, webhook server y CRM, Meta Cloud API directo es la opción más barata. Si lo que buscas es un sistema cerrado que ya atiende, cualifica y agenda por WhatsApp sin preocuparte de la infra, el modelo de Zenia Partners ahorra 2 a 4 meses de desarrollo y una ingeniería dedicada. El BSP tradicional queda en medio: te resuelve la conexión pero no el producto.</p>
+
+    <h2>Qué hacemos nosotros con los rate limits</h2>
+
+    <p>Zenia Partners es una agencia con base en Madrid que trabaja con pymes de España y Latinoamérica. Lo que construimos sobre WhatsApp Business API es un agente de IA personalizado conectado a un CRM a medida, que responde en menos de un minuto, cualifica leads y agenda citas 24/7 con atribución por canal. Planes: Starter con 997 € de setup y 297 €/mes, Growth a 497 €/mes y Enterprise a medida. Octubre de 2026, sujeto a actualización de precios.</p>
+
+    <p>Nuestro stack maneja los cuatro frentes de rate limit por defecto: cola Redis con backoff exponencial, contador de tier por WABA, pacing de templates por hora y dashboard de quality rating con alertas cuando baja de Medium. La idea es que el dueño del negocio no vea nunca un error 429, solo las métricas de respuesta y conversión.</p>
+
+    <h2>Preguntas frecuentes</h2>
+
+    <h3>¿Qué diferencia hay entre throughput y messaging tier en WhatsApp Business API?</h3>
+    <p>El throughput mide mensajes por segundo (80 a 1.000 mps según upgrade automático). El messaging tier mide cuántas conversaciones nuevas puedes iniciar con usuarios distintos en 24 horas (250, 1.000, 10.000, 100.000 o ilimitado). Son límites independientes y se cuentan por separado.</p>
+
+    <h3>¿Puedo pedir a Meta que me suba el tier manualmente?</h3>
+    <p>No existe un formulario estándar para forzar un upgrade. Los upgrades son automáticos cuando se cumplen volumen y quality rating. Meta Support puede revisar casos puntuales, pero la decisión final sigue siendo algorítmica. Pedir el upgrade acelerado no es un proceso fiable y no debe formar parte del plan de escalado.</p>
+
+    <h3>¿Cómo evito que el quality rating baje y me frene el escalado?</h3>
+    <p>Con doble opt-in explícito antes de cualquier template marketing, segmentación por intención real, uso de templates utility en lugar de marketing cuando el contexto es transaccional, y revisión semanal del rating en WhatsApp Manager. Si baja a Medium, pausa campañas en frío inmediatamente; si baja a Low, deja de iniciar conversaciones hasta recuperar.</p>
+
+    <h3>¿Los tiers se cuentan por número o por WABA?</h3>
+    <p>Desde octubre de 2025 se cuentan a nivel portfolio. Un WABA con dos números comparte el mismo cupo de tier. Añadir números ya no sirve para duplicar capacidad diaria. Sí sirve para multiplicar el throughput (mps), que se otorga por número.</p>
+
+    <h3>¿Qué hago si recibo error 429 en producción?</h3>
+    <p>Primero, lee el código interno del payload: 130429 es throughput, 131056 es per-recipient, 131048 es quality, 80007 es WABA. Segundo, aplica backoff exponencial respetando el header Retry-After si viene. Tercero, revisa el quality rating en WhatsApp Manager: si ha bajado, pausa campañas antes de seguir reintentando.</p>
+
+    <h3>¿Los agentes de IA personalizados afectan al quality rating?</h3>
+    <p>Pueden afectar en los dos sentidos. Un agente bien diseñado, con opt-in, respuestas útiles y escalado a humano cuando no sabe, sube el rating porque reduce bloqueos. Un agente mal configurado que insiste con plantillas en frío o no entiende el idioma lo hunde. El rating refleja comportamiento, no tecnología.</p>
+
+    <div class="blog-cta">
+      <h3>¿Listo para escalar WhatsApp Business API sin bloqueos?</h3>
+      <p>En Zenia Partners montamos agentes de IA personalizados sobre WhatsApp Business API con cola propia, pacing por tier y monitorización de quality rating. Sistema operativo en 5 semanas. Agenda una llamada de 30 minutos.</p>
+<p data-zenia-oportunidad="1">Todo esto parte de lo mismo: <a href="/es/automatizacion-whatsapp-negocios.html">automatizar WhatsApp con IA</a> con una arquitectura que aguanta producción.</p>
+
+      <a href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20%C2%ABRate%20Limits%20de%20WhatsApp%20Business%20API%C2%BB%20y%20quiero%20ver%20c%C3%B3mo%20escalar%20mi%20WABA" target="_blank" rel="noopener">Hablar por WhatsApp ahora</a> <a style="background:transparent;border:1px solid var(--border);color:var(--text-secondary);margin-left:10px" href="https://calendly.com/zeladauriartef/30min">Agendar llamada gratuita</a>
+    </div>
+
+<div class="blog-related" data-zenia-money-links="1">
+  <h3>Sigue leyendo</h3>
+  <a href="/blog/latencia-whatsapp-business-api.html">Latencia de WhatsApp Business API: p50, p95 y cómo medirla<span>Latencia real por capas y cómo auditar la ruta completa del mensaje.</span></a>
+  <a href="/blog/webhooks-whatsapp-business-api.html">Webhooks de WhatsApp Business API: setup y buenas prácticas<span>Receptor fiable, firma, retries y control de orden en los eventos.</span></a>
+  <a href="/blog/calidad-numero-whatsapp-business-api.html">Calidad del número en WhatsApp Business API<span>Qué baja el quality rating y cómo recuperarlo sin perder el número.</span></a>
+</div>
+
+    <div class="blog-related">
+      <h3>Artículos relacionados</h3>
+      <a href="/blog/proveedor-whatsapp-business-api-espana.html">Proveedor de WhatsApp Business API en España: comparativa 2026<span>BSPs oficiales, costes y qué mirar antes de firmar.</span></a>
+      <a href="/blog/doble-opt-in-whatsapp-business.html">Doble opt-in en WhatsApp Business: cómo implementarlo<span>Opt-in explícito y segmentación para proteger el quality rating.</span></a>
+      <a href="/blog/whatsapp-business-api-para-pymes.html">WhatsApp Business API para pymes: guía 2026<span>Cuándo pasar de la app a la API y qué cambia operativamente.</span></a>
+    </div>
+
+  </div>
+
+<div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 24px; margin: 40px 0;" data-zenia-internal-links="landings">
+  <h3 style="color: #F1F5F9; margin-bottom: 12px; font-size: 1.05rem;">¿Quieres pasarlo a producción?</h3>
+  <p style="color: #94A3B8; margin-bottom: 16px; font-size: 0.95rem;">Estas son las páginas con las implementaciones listas:</p>
+  <div>
+      <a href="/es/automatizacion-whatsapp-negocios.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Automatizar WhatsApp con IA →</a>
+      <a href="/es/crm-restaurantes.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">CRM con IA para restaurantes →</a>
+      <a href="/es/" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Zenia Partners (home) →</a>
+  </div>
+</div>
+
+</article>
+
+<footer class="blog-footer">
+  <div class="container">
+    <p>&copy; 2026 ZENIA. Todos los derechos reservados. | <a href="/">Inicio</a> | <a href="/blog/">Blog</a></p>
+  </div>
+</footer>
+
+<div style="text-align:center; padding:16px 24px; background:#0A0F1C; color:#64748B; font-size:0.85rem; border-top:1px solid rgba(255,255,255,0.04);"><a href="/es/cobertura.html" style="color:#94A3B8; text-decoration:none;">Ver cobertura completa</a></div>
+<a href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20%C2%ABRate%20Limits%20de%20WhatsApp%20Business%20API%C2%BB%20y%20quiero%20ver%20c%C3%B3mo%20escalar%20mi%20WABA" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp" data-directo style="position:fixed;bottom:24px;right:24px;z-index:9998;background:#25D366;color:white;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(37,211,102,0.4);transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 20px rgba(37,211,102,0.5)'" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 16px rgba(37,211,102,0.4)'">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<script>document.addEventListener("click",function(e){var t=e.target,a=t.closest?t.closest('a[href*="wa.me"]'):null;if(!a)return;try{navigator.sendBeacon("https://gaia-relojes.onrender.com/gwb/lead",JSON.stringify({site:"zenia",path:location.pathname+location.search,ref:document.referrer||""}))}catch(r){}},true);</script>
+<script src="/assets/qualify.js?v=4" defer></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "eceeed460f6d465bba3b970417d5f6b0"}'></script>
+<!--zx:js--><script src="/assets/zx.js?v=5" defer></script>
+</body>
+</html>

@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-11-16T06:00:00+00:00",
+  "lastRun": "2026-11-16T22:00:00+00:00",
   "posts": [
+    {
+      "slug": "campanas-navidad-pymes-whatsapp-2026",
+      "keyword": "campañas de navidad whatsapp pymes 2026",
+      "tier": 2,
+      "cluster": "pymes-seasonal",
+      "status": "published",
+      "date": "2026-11-16",
+      "source": "matrix-generated"
+    },
     {
       "slug": "rate-limits-whatsapp-business-api",
       "keyword": "rate limits whatsapp business api",

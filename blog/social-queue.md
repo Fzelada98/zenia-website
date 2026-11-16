@@ -11105,3 +11105,16 @@ Full architecture, inquiry scripts, DMS/CRM/lender stack table and 14-day rollou
 #MarineTech #WhatsAppBusinessAPI #AIAgents #DealerSoftware
 
 ---
+## 2026-11-16 — AI Agent for Insurance Brokerages (EN LinkedIn → Zenia Partners company page)
+
+Spain had 57,467 registered insurance distributors in 2024, down 2,566 YoY (Pérez-Llorca legal note, Jan 2026). The long tail is sub-10-employee brokerages running on eBroker, Sibila (MPM Software) or Avant2, with no engineering team on payroll.
+
+Stack that holds up for a mid-size brokerage AI agent: WhatsApp BSP (Cloud API) on the existing broker phone number, a stateless LLM pass per turn with policy wordings and rating tables indexed in a RAG store (not open ChatGPT), tariff lookups via the comparison engine's API (Abacus, SNS Sol) or BSP tool calls, template pre-approval pipeline for renewal reminders fired 30-45 days before expiry under Meta's UTILITY category, CRM write-back to eBroker/Sibila/Avant2 as structured records, and a hard escalation rule: anything that falls under Ley 22/2007 "asesoramiento personalizado" or life/decesos/health routes to the human mediator with the full transcript. The agent prepares the contract, the mediator signs.
+
+Two sector numbers worth citing: SegurCaixa Adeslas automated 85% of customer interactions in 2 months (Hubtype case study); Mutua Madrileña's WhatsApp assistant covers 1,000+ topics on a legacy integration (Infobip case study).
+
+Full architecture, integration patterns with the Spanish incumbent CRMs and the DGSFP compliance notes: https://zeniapartners.com/blog/agente-ia-para-corredurias-de-seguros.html
+
+#InsurTech #WhatsAppBusinessAPI #PlatformEngineering #AIAgents
+
+---

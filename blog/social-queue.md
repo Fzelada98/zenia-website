@@ -11092,3 +11092,16 @@ Full breakdown with calendar by week, template categories, segmentation cohorts 
 #WhatsAppBusinessAPI #PlatformEngineering #AIAgents #Observability
 
 ---
+## 2026-11-16 — AI Agent for Boat Dealers (EN LinkedIn → Zenia Partners company page)
+
+US marine dealers set appointments on 19% of inbound sales calls vs 92% in automotive (Powersports Business, Oct 2025, pontoon brand study). Boating Industry's long-standing guidance puts the useful first-contact window at 30-60 minutes. Reality on the floor: 4-6h median first reply, longer on Sundays. That is the gap we built for.
+
+Stack for a US marine dealership AI agent: Twilio voice + SMS fronting the number, WhatsApp BSP (Cloud API) as the primary text channel, webhook ingest from Rollick + Boat Trader + YachtWorld + manufacturer-site lead posts with dedupe keyed on phone + email + HIN against a Lightspeed EVO or DX1 DMS inventory feed, a stateless LLM pass that handles 6 inquiry types (new-specific, new-open, pre-owned/trade, service, parts, finance-only), trade-in intake capturing HIN via image + engine hours per engine + trailer separately, finance pre-qual routing by credit band (Yamaha Motor Finance / Priority One / Medallion / LightStream), and deal write-back to the DMS as structured records so the sales desk picks up without re-keying. Sea-trial calendar is a distinct resource from the showroom calendar with weather, tide and ramp slot rules.
+
+Two production numbers from a 3-store Tampa Bay pontoon and center-console dealer, 90 days: median first reply 4h 11m → 38s (p95 1m 42s), trade-in packet completeness at first pass 31% → 84%. The second number is what shortens lead-to-lender-submit from 2.4 to 0.6 business days.
+
+Full architecture, inquiry scripts, DMS/CRM/lender stack table and 14-day rollout: https://zeniapartners.com/blog/ai-agent-for-boat-dealers.html
+
+#MarineTech #WhatsAppBusinessAPI #AIAgents #DealerSoftware
+
+---

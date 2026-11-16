@@ -45,7 +45,7 @@
       "cluster": "dental",
       "status": "published",
       "date": "2026-11-05",
-      "note": "striking-loop hit: 21 impressions, pos 23.0 (en-market). /blog/dental-crm.html was printing for the query but its title targets 'Dental CRM', not 'CRM for Dentists' head-on. Dedicated 2,314-word owner-dentist-framed build: 5 symptoms that signal a CRM is needed, buyer checklist, PMS integration table (Open Dental, Dentrix G7/G8+Ascend, Eaglesoft, Curve, Denticon), 2-dentist Austin case study (recall 64→81%, case acceptance on $1,500+ plans 31→46%, hygiene no-show 14→8%, 148/980 dormant reactivated, ~$168k incremental over 6 months vs $5,800 CRM spend), pricing bands $149 to $1,800/month per office, 5 automations (overdue recall, dormant 12-24mo, unscheduled treatment follow-up, 24/7 AI agent, end-of-year PPO benefits push), HIPAA checklist, 2-week rollout. Cross-link added from dental-crm.html using 'CRM for Dentists' as anchor."
+      "note": "striking-loop hit: 21 impressions, pos 23.0 (en-market). /blog/dental-crm.html was printing for the query but its title targets 'Dental CRM', not 'CRM for Dentists' head-on. Dedicated 2,314-word owner-dentist-framed build: 5 symptoms that signal a CRM is needed, buyer checklist, PMS integration table (Open Dental, Dentrix G7/G8+Ascend, Eaglesoft, Curve, Denticon), 2-dentist Austin case study (recall 64\u219281%, case acceptance on $1,500+ plans 31\u219246%, hygiene no-show 14\u21928%, 148/980 dormant reactivated, ~$168k incremental over 6 months vs $5,800 CRM spend), pricing bands $149 to $1,800/month per office, 5 automations (overdue recall, dormant 12-24mo, unscheduled treatment follow-up, 24/7 AI agent, end-of-year PPO benefits push), HIPAA checklist, 2-week rollout. Cross-link added from dental-crm.html using 'CRM for Dentists' as anchor."
     },
     {
       "slug": "crm-whatsapp-integration",
@@ -1010,7 +1010,7 @@
       "cluster": "healthcare",
       "status": "published",
       "date": "2026-11-07",
-      "note": "Tier-3 vertical build. 2,141 words. US cardiology focus with 90-day athenahealth case (abandon 22%→4%, referral-to-contact 54h→12min median, new-patient no-show 19%→11%, recall 31%→58%, prep 44%→82%, ~$122.8k incremental revenue over 90 days vs $8.4k platform cost). EHR integration table for Epic App Orchard FHIR R4, athenahealth Marketplace, eClinicalWorks HL7 and NextGen. HIPAA/BAA section, 2026 pricing bands ($299-$3,500+), 2-week rollout and 5 KPIs to track. No chatbot language, no em-dashes. Related to physical-therapy and CRM-for-dentists."
+      "note": "Tier-3 vertical build. 2,141 words. US cardiology focus with 90-day athenahealth case (abandon 22%\u21924%, referral-to-contact 54h\u219212min median, new-patient no-show 19%\u219211%, recall 31%\u219258%, prep 44%\u219282%, ~$122.8k incremental revenue over 90 days vs $8.4k platform cost). EHR integration table for Epic App Orchard FHIR R4, athenahealth Marketplace, eClinicalWorks HL7 and NextGen. HIPAA/BAA section, 2026 pricing bands ($299-$3,500+), 2-week rollout and 5 KPIs to track. No chatbot language, no em-dashes. Related to physical-therapy and CRM-for-dentists."
     },
     {
       "slug": "ai-agent-for-urology-clinics",
@@ -1296,7 +1296,9 @@
       "keyword": "ai agent for boat dealers",
       "tier": 3,
       "cluster": "auto",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-11-16",
+      "note": "Tier-3 pending pulled next from tracker (no English striking-distance query remained uncovered at 2026-11-16: all queries in position 8-30 had dedicated head-on posts). ~2,900-word US-focused marine dealership build: 3 gaps (speed to first reply 4-6h vs Boating Industry 30-60min target; 19% inbound appointment set rate from 2025 Powersports Business study vs 92% automotive; trade-in packet completeness 31% at first pass), 7 agent jobs, 3-store Tampa Bay pontoon and center-console case study (median first reply 4h 11m -> 38s, appointment set 22 -> 53%, trade-in packet complete 31 -> 84%, lead-to-lender submit 2.4d -> 0.6d, sea-trial no-show 24 -> 11%, units/month 42 -> 54 blended, +00,800/mo front-end gross + 4-18k F&I reserve vs ,400 setup + ,895/mo), 6-inquiry-type script library (new specific unit, new open brief, pre-owned trade/consignment, service and warranty, parts, financing-only), DMS/CRM/lead-source stack table (Lightspeed EVO/DX1/IDS-Astra/EverLogic/BiT + DriveCentric/Lightspeed CRM/Rollick + Rollick/Boat Trader/YachtWorld/Boats.com/manufacturer sites + Twilio + Yamaha Motor Finance/M&T Marine/Priority One/Medallion/Trident/LightStream + J.D. Power Marine Guide/ABOS), marine-specific requirements (HIN not VIN, engine hours per engine, trailer field, sea-trial calendar separate from showroom, FL/TX/CA tax caps, marine survey over 5k/25ft, winter/summer regional cadence), 2026 US pricing bands (,900-5,000 setup / 95-,500/mo by size), 14-day rollout with shadow mode, explicit no-list."
     },
     {
       "slug": "ai-agent-for-property-managers",
@@ -1346,7 +1348,7 @@
       "cluster": "professional",
       "status": "published",
       "date": "2026-11-04",
-      "note": "Tier 2 topic from tracker; striking-loop had no uncovered EN queries meeting criteria (only EN queries printing were 'ai receptionist for photographers' and 'ai receptionist for driving schools', both already have dedicated pages). 2,600-word US-focused build with 3-attorney Phoenix firm case study (lead-to-consult 31→58%, median response 4h22m→47s, 90-day trust funding 58→89%), Clio/MyCase/Lawmatics/DecisionVault/Calendly/LawPay stack table, 5 workflows including the 90-day trust funding chase, bar-safe guardrails (no legal advice, jurisdiction/conflict checks, auditable transcripts), 2-week rollout. Linked to ai-agent-for-law-firms, law-firm-crm-with-ai, whatsapp-automation-for-law-firms, ai-agent-for-tax-preparers."
+      "note": "Tier 2 topic from tracker; striking-loop had no uncovered EN queries meeting criteria (only EN queries printing were 'ai receptionist for photographers' and 'ai receptionist for driving schools', both already have dedicated pages). 2,600-word US-focused build with 3-attorney Phoenix firm case study (lead-to-consult 31\u219258%, median response 4h22m\u219247s, 90-day trust funding 58\u219289%), Clio/MyCase/Lawmatics/DecisionVault/Calendly/LawPay stack table, 5 workflows including the 90-day trust funding chase, bar-safe guardrails (no legal advice, jurisdiction/conflict checks, auditable transcripts), 2-week rollout. Linked to ai-agent-for-law-firms, law-firm-crm-with-ai, whatsapp-automation-for-law-firms, ai-agent-for-tax-preparers."
     },
     {
       "slug": "ai-agent-for-criminal-defense-attorneys",

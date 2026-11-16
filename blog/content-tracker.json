@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-11-16T22:00:00+00:00",
+  "lastRun": "2026-11-16T22:03:00+00:00",
   "posts": [
+    {
+      "slug": "agente-ia-para-corredurias-de-seguros",
+      "keyword": "agente de IA para corredurías de seguros",
+      "tier": 2,
+      "cluster": "seguros-corredurias",
+      "status": "published",
+      "date": "2026-11-16",
+      "source": "matrix-expansion"
+    },
     {
       "slug": "campanas-navidad-pymes-whatsapp-2026",
       "keyword": "campañas de navidad whatsapp pymes 2026",

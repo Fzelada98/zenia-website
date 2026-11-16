@@ -11049,3 +11049,17 @@ The four tramos, the measurement recipe, the five typical causes of high latency
 #WhatsAppBusinessAPI #PlatformEngineering #Observability #AIAgents
 
 ---
+
+## 2026-11-16 - Rate Limits WhatsApp Business API
+
+WhatsApp Business API throttles at four independent layers: 80 to 1,000 mps per number, daily conversation tiers from 250 to unlimited (portfolio-wide since Oct 2025), per-recipient, and app-level Graph calls.
+
+A single 429 from Meta doesn't tell you which one you hit. The payload code does: 130429 throughput, 131056 per-recipient, 131048 quality restriction, 80007 WABA-wide.
+
+Our WABA stack runs a Redis outbox with exponential backoff honoring Retry-After, a per-WABA tier counter that caps template sends at 90% of the current cap, and quality-rating alerts the moment it drops below Medium. Webhooks replace polling everywhere Graph allows it, which cuts app-level 429s near zero.
+
+Full breakdown of tiers, codes and backoff strategy: https://zeniapartners.com/blog/rate-limits-whatsapp-business-api.html
+
+#WhatsAppBusinessAPI #PlatformEngineering #Backoff #AIAgents
+
+---

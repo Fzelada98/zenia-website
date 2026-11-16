@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-11-15T14:00:00+00:00",
+  "lastRun": "2026-11-16T06:00:00+00:00",
   "posts": [
+    {
+      "slug": "rate-limits-whatsapp-business-api",
+      "keyword": "rate limits whatsapp business api",
+      "tier": 2,
+      "cluster": "whatsapp-technical",
+      "status": "published",
+      "date": "2026-11-16",
+      "source": "matrix-generated"
+    },
     {
       "slug": "latencia-whatsapp-business-api",
       "keyword": "latencia whatsapp business api",

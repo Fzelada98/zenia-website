@@ -11063,3 +11063,17 @@ Full breakdown of tiers, codes and backoff strategy: https://zeniapartners.com/b
 #WhatsAppBusinessAPI #PlatformEngineering #Backoff #AIAgents
 
 ---
+
+## 2026-11-16 — AI Agent for Fencing Contractors (EN LinkedIn → Zenia Partners company page)
+
+US fence construction is $20bn with 313,000 operators, zero companies above 5% share, and 2.9% 5-yr CAGR (IBISWorld June 2026). Invoca's July 2026 home services benchmark: 52% inbound call answer rate. That's the pipeline leak we built for.
+
+The stack that holds up for a multi-crew residential fencing contractor: Twilio Programmable Voice with sub-500ms STT and an FCC 2024 TCPA disclosure injected in the first 10s of greeting, WhatsApp BSP (Cloud API) as primary text channel, a single LLM pass carrying the HOA packet matrix (indexed by ZIP + HOA name) + material pricing (per-linear-foot bands per state) + estimator radius calendar reads, Jobber or ServiceTitan writes on quote acceptance, Stripe payment intents for the deposit gate on signed one-pager PDFs (webhook success is the only trigger for install calendar writes). The agent is stateless per turn; all state lives in the CRM.
+
+Two production numbers from a 3-crew Phoenix deployment, 90 days: median first-reply 6h 42m → 44s all-hours, deposit-at-signature 54% → 88%. The second number is what the deposit-gated scheduling pattern buys.
+
+Full architecture, HOA intake workflow and the 14-day rollout: https://zeniapartners.com/blog/ai-agent-for-fencing-contractors.html
+
+#WhatsAppBusinessAPI #PlatformEngineering #AIAgents #FieldServiceSoftware
+
+---

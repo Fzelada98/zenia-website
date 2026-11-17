@@ -11176,3 +11176,17 @@ Full breakdown with the 7-workflow spec, stack table, refuse-list, 2026 US prici
 #VideoProduction #WhatsAppBusinessAPI #AIAgents #PlatformEngineering
 
 ---
+## 2026-11-17 - Verificación empresa WhatsApp Business
+
+The first infra gate when standing up WhatsApp Business API for a client is not latency, retries, or template approval — it's Meta Business Verification. Skip it and the WABA is hard-capped at 250 unique recipients per 24h; every marketing template above that line is silently dropped.
+
+What actually passes verification on the first try is a documentation-alignment problem, not a legal one. Legal name must be byte-exact between the portfolio, the domain's WHOIS/owner records, and the registry document (a trailing "S.L." vs "SL" is a rejection). Domain must be verified under Brand Safety with DNS resolving on both v4 and v6 and no proxy returning 403 to Meta's fetcher. PDFs native, not phone photos; corporate email that responds; same entity on every field.
+
+Reference window from our pipeline: 4-day median approval when those five items are clean, vs. the 3-7 day Meta range quoted by 360dialog. After approval the number moves from tier 250 to tier 1,000, display name goes into automatic review, and real throughput engineering (p95 latency, webhook idempotency, template categorization) can actually start.
+
+Full checklist, document table by country, and the five rejection causes we see most often: https://zeniapartners.com/blog/verificacion-empresa-whatsapp-business.html
+
+#WhatsAppBusinessAPI #PlatformEngineering #MessagingInfrastructure #Meta
+
+---
+

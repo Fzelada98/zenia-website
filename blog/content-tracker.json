@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-11-16T22:03:00+00:00",
+  "lastRun": "2026-11-17T06:10:00+00:00",
   "posts": [
+    {
+      "slug": "integrar-twilio-con-whatsapp-business",
+      "keyword": "integrar twilio con whatsapp business",
+      "tier": 2,
+      "cluster": "crm-integraciones",
+      "status": "published",
+      "date": "2026-11-17",
+      "source": "matrix-generated"
+    },
     {
       "slug": "agente-ia-para-corredurias-de-seguros",
       "keyword": "agente de IA para corredurías de seguros",

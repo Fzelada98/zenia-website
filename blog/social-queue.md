@@ -10662,6 +10662,8 @@ Full technical writeup (RGPD checklist, 2026 price bands, 4-week rollout): https
 
 ## 2026-11-10 - EN - AI Agent for Boxing Gyms
 
+<!-- PUBLISHED:make-webhook at 2026-11-17T09:30:03Z -->
+
 **Target: Zenia Partners company page - technical/B2B audience (CTOs, engineers, fitness-platform teams)**
 
 A boxing gym looks like a simple booking problem until you look at the schedule: three distinct resource pools (group-class slots, one-on-one coach pad sessions, open-gym access) that live on different ends of Mindbody, Zen Planner, TeamUp, PushPress or Gymdesk, plus the kids program on a waiver-gated age gate that half the vendor APIs do not expose cleanly.

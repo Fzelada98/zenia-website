@@ -11146,3 +11146,19 @@ Full breakdown with the stack table, refuse-list, 2026 US pricing bands and 14-d
 #SolarTech #WhatsAppBusinessAPI #VoiceAI #PlatformEngineering
 
 ---
+
+## 2026-11-17 - Conector PrestaShop con Business Central
+
+PrestaShop Webservice (REST) ↔ Dynamics 365 Business Central (OData v4, OAuth 2.0). Four entities move: orders and customers upstream, catalog and stock downstream. Idempotency key = PrestaShop ID on orders/customers, BC item number on catalog/stock.
+
+Non-obvious failure mode: PrestaShop webhook subscriptions expire after 3 days unless renewed. Silent breakage, "Monday drama" where 40 weekend orders never reached BC.
+
+Where a middleware (Azure Functions + Service Bus, or n8n self-hosted) beats a packaged connector: per-customer price lists, multi-warehouse stock, seasonal traffic spikes that would otherwise saturate BC.
+
+On top of the data layer, a personalized AI agent on WhatsApp Business API reads live stock and order status straight from BC instead of PrestaShop's cached values, which cuts "where is my order" tickets to near zero.
+
+Full architecture, entity table, idempotency keys and the 5 mistakes we see in week one: https://zeniapartners.com/blog/conector-prestashop-business-central.html
+
+#PlatformEngineering #ERP #BusinessCentral #WhatsAppBusinessAPI
+
+---

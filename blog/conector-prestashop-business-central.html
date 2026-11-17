@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HP0VQSEL68"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-HP0VQSEL68');
+</script>
+
+<title>Conector PrestaShop con Business Central: Guía 2026 | ZENIA</title>
+<meta name="description" content="Conector PrestaShop con Business Central en 2026: arquitectura, sincronización de pedidos, stock y precios, costes reales y cuándo usar middleware propio.">
+<link rel="canonical" href="https://zeniapartners.com/blog/conector-prestashop-business-central.html">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+
+<!-- Hreflang -->
+<link rel="alternate" hreflang="es" href="https://zeniapartners.com/blog/conector-prestashop-business-central.html">
+<link rel="alternate" hreflang="x-default" href="https://zeniapartners.com/blog/conector-prestashop-business-central.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Conector PrestaShop con Business Central: Guía Técnica 2026">
+<meta property="og:description" content="Cómo conectar PrestaShop con Microsoft Dynamics 365 Business Central en 2026: pedidos, stock, precios, middleware y capa CRM con WhatsApp.">
+<meta property="og:url" content="https://zeniapartners.com/blog/conector-prestashop-business-central.html">
+<meta property="og:site_name" content="ZENIA">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="https://zeniapartners.com/assets/images/og-image.png">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Conector PrestaShop con Business Central: Guía Técnica 2026">
+<meta name="twitter:description" content="Arquitectura real para conectar PrestaShop con Business Central: pedidos, stock, precios, middleware y capa CRM con WhatsApp.">
+<meta name="twitter:image" content="https://zeniapartners.com/assets/images/og-image.png">
+
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="author" content="Fabrizzio Zelada">
+<meta name="theme-color" content="#0A0F1C">
+
+<!-- JSON-LD Article -->
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Conector PrestaShop con Business Central: Guía Técnica 2026", "description": "Cómo conectar PrestaShop con Microsoft Dynamics 365 Business Central en 2026: arquitectura, sincronización de pedidos, stock y precios, costes y capa CRM con WhatsApp.", "author": {"@type": "Person", "name": "Fabrizzio Zelada", "jobTitle": "Founder", "worksFor": {"@type": "Organization", "@id": "https://zeniapartners.com/#organization", "name": "Zenia Partners", "url": "https://zeniapartners.com/"}}, "publisher": {"@type": "Organization", "@id": "https://zeniapartners.com/#organization", "name": "Zenia Partners", "url": "https://zeniapartners.com/"}, "datePublished": "2026-11-17", "dateModified": "2026-11-17", "mainEntityOfPage": "https://zeniapartners.com/blog/conector-prestashop-business-central.html", "inLanguage": "es", "keywords": ["conector prestashop con business central", "prestashop business central", "integrar prestashop dynamics 365", "conector ecommerce erp", "sincronizar pedidos prestashop bc"], "image": "https://zeniapartners.com/assets/images/og-image.png"}</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #3B82F6;
+    --accent-violet: #6366F1;
+    --bg-dark: #0A0F1C;
+    --bg-card: rgba(17, 24, 39, 0.6);
+    --text-primary: #F1F5F9;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+    --border: rgba(148, 163, 184, 0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; background: var(--bg-dark); color: var(--text-primary); line-height: 1.8; }
+  .blog-nav { padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 60px; position: sticky; top: 0; background: rgba(10, 15, 28, 0.85); backdrop-filter: blur(12px); z-index: 100; }
+  .blog-nav .container { max-width: 1200px; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+  .blog-nav .nav-logo-link { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-primary); font-weight: 700; font-size: 1.1rem; }
+  .blog-nav .nav-main-links { display: flex; list-style: none; gap: 28px; margin: 0; padding: 0; }
+  .blog-nav .nav-main-links li { margin: 0; }
+  .blog-nav .nav-main-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
+  .blog-nav .nav-main-links a:hover { color: var(--text-primary); }
+  .blog-nav .nav-main-links a.active { color: var(--primary); }
+  .blog-nav .nav-cta-btn { background: var(--primary); color: #fff; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: filter 0.2s; white-space: nowrap; }
+  .blog-nav .nav-cta-btn:hover { filter: brightness(1.1); }
+  @media (max-width: 860px) {
+    .blog-nav .nav-main-links { display: none; }
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+  .blog-header { margin-bottom: 48px; }
+  .blog-meta { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px; }
+  .blog-header h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); line-height: 1.3; margin-bottom: 16px; }
+  .blog-header p.lead { font-size: 1.1rem; color: var(--text-secondary); line-height: 1.7; }
+  .blog-content h2 { font-size: 1.4rem; margin: 48px 0 16px; color: var(--text-primary); }
+  .blog-content h3 { font-size: 1.15rem; margin: 32px 0 12px; color: var(--text-primary); }
+  .blog-content p { color: var(--text-secondary); margin-bottom: 20px; }
+  .blog-content ul, .blog-content ol { color: var(--text-secondary); margin-bottom: 20px; padding-left: 24px; }
+  .blog-content li { margin-bottom: 8px; }
+  .blog-content strong { color: var(--text-primary); }
+  .blog-content a { color: var(--primary); text-decoration: underline; }
+  .blog-content a:hover { color: var(--accent-violet); }
+  .blog-content blockquote { border-left: 3px solid var(--primary); padding-left: 20px; margin: 24px 0; font-style: italic; color: var(--text-secondary); }
+  .blog-content table { width: 100%; border-collapse: collapse; margin: 24px 0; }
+  .blog-content th, .blog-content td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); font-size: 0.95rem; }
+  .blog-content th { color: var(--text-primary); font-weight: 600; background: var(--bg-card); }
+  .blog-cta { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 40px; text-align: center; margin: 60px 0; }
+  .blog-cta h3 { margin-bottom: 12px; }
+  .blog-cta p { color: var(--text-secondary); margin-bottom: 20px; }
+  .blog-cta a { display: inline-block; padding: 12px 28px; background: var(--primary); color: white; border-radius: 8px; text-decoration: none; font-weight: 600; }
+  .blog-cta a:hover { background: var(--accent-violet); }
+  .blog-related { margin: 60px 0 0; }
+  .blog-related h3 { margin-bottom: 20px; }
+  .blog-related a { display: block; padding: 16px 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 12px; text-decoration: none; color: var(--text-primary); font-weight: 600; transition: border-color 0.3s; }
+  .blog-related a:hover { border-color: var(--primary); }
+  .blog-related a span { display: block; font-size: 0.85rem; color: var(--text-muted); font-weight: 400; margin-top: 4px; }
+  .blog-footer { padding: 40px 0; border-top: 1px solid var(--border); margin-top: 60px; text-align: center; color: var(--text-muted); font-size: 0.85rem; }
+  .blog-footer a { color: var(--primary); text-decoration: none; }
+  .text-gradient { background: linear-gradient(135deg, var(--primary), var(--accent-violet)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+</style>
+<!--zx:head--><meta name="zx-page" content="blog"><meta name="zx-negocio" content="tu ecommerce"><meta name="zx-wa" content="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20%C2%ABConector%20PrestaShop%20con%20Business%20Central%C2%BB%20y%20quiero%20ver%20c%C3%B3mo%20aplicarlo%20en%20mi%20negocio"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&amp;family=Space+Grotesk:wght@700&amp;display=swap"><link rel="stylesheet" href="/assets/zx-blog.css?v=5">
+<!--/zx:head--></head>
+<body>
+
+<nav class="blog-nav">
+  <div class="container">
+    <a href="/es/" class="nav-logo-link">
+      <svg class="zenia-mark" viewBox="0 0 140 140" fill="none" width="32" height="32">
+        <defs>
+          <linearGradient id="zg-b" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#2563EB"/>
+            <stop offset="100%" stop-color="#3B82F6"/>
+          </linearGradient>
+          <linearGradient id="zg-v" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#6366F1"/>
+            <stop offset="100%" stop-color="#7C3AED"/>
+          </linearGradient>
+        </defs>
+        <rect width="140" height="140" rx="28" fill="#0F172A"/>
+        <path d="M 70 18 Q 18 18 18 38 L 18 57 Q 18 63 24 63 L 88 63 Z" fill="url(#zg-b)"/>
+        <path d="M 70 122 Q 122 122 122 102 L 122 83 Q 122 77 116 77 L 52 77 Z" fill="url(#zg-v)"/>
+      </svg>
+      <span>ZENIA</span>
+    </a>
+    <ul class="nav-main-links">
+      <li><a href="/es/#opportunities">Oportunidades IA</a></li>
+      <li><a href="/es/#services">Servicios</a></li>
+      <li><a href="/es/#process">Proceso</a></li>
+      <li><a href="/es/#impact">Impacto</a></li>
+      <li><a href="/blog/" class="active">Blog</a></li>
+    </ul>
+    <a href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20%C2%ABConector%20PrestaShop%20con%20Business%20Central%C2%BB%20y%20quiero%20ver%20c%C3%B3mo%20aplicarlo%20en%20mi%20negocio" class="nav-cta-btn" data-zx-src="nav" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88M20.46 3.49A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.42"/></svg><span><span class="zx-l">Escríbenos por </span>WhatsApp</span></a>
+  </div>
+</nav>
+
+<article class="container">
+  <header class="blog-header">
+    <div class="blog-meta">17 de noviembre, 2026 &middot; Fabrizzio Zelada &middot; 11 min de lectura</div>
+    <h1><span class="text-gradient">Conector PrestaShop con Business Central:</span> Guía Técnica 2026</h1>
+    <p class="lead"><strong>Respuesta corta:</strong> un conector PrestaShop con Business Central sincroniza pedidos, clientes, productos y stock entre la tienda y el ERP usando la API Webservice de PrestaShop y la API REST de Dynamics 365 Business Central. En noviembre de 2026 hay tres caminos reales: extensión AL dedicada (p. ej. ECOSIRE o Softera.eCom), app de AppSource estándar (Gerber Systems) o middleware propio con colas de mensajes. Precios de arranque desde 995 € (APIcenter) y despliegues de 2 a 4 semanas según el proveedor.</p>
+  </header>
+
+  <div class="blog-content">
+
+    <p class="pillar-callout"><strong>Lee también:</strong> Si tu caso es sumar WhatsApp a la pila, revisa la guía hermana: <a href="/blog/integrar-prestashop-con-whatsapp-business.html">integrar PrestaShop con WhatsApp Business</a>. Este artículo cubre el lado ERP.</p>
+
+
+    <h2>¿Qué hace exactamente un conector PrestaShop con Business Central?</h2>
+
+    <p>PrestaShop lidera cuota entre tiendas pequeñas y medianas en España: según el ranking de plataformas de ecommerce de WMTips (noviembre de 2026), PrestaShop es la segunda plataforma con un 18,9% de cuota, por detrás de WooCommerce. Microsoft Dynamics 365 Business Central, por su parte, es el ERP cloud preferido para pymes y empresas medianas en Europa. El punto donde se cruzan ambos mundos es precisamente este conector.</p>
+
+    <p>Un conector PrestaShop con Business Central no es un simple exportador CSV. Es un flujo bidireccional que mantiene cuatro entidades sincronizadas en tiempo casi real:</p>
+
+    <ul>
+      <li><strong>Pedidos</strong> de PrestaShop hacia documentos de venta en Business Central (albaranes, facturas, envíos).</li>
+      <li><strong>Clientes</strong> y direcciones de facturación hacia la ficha de cliente en BC, manteniendo el ID de PrestaShop como clave para evitar duplicados.</li>
+      <li><strong>Catálogo</strong> (productos, combinaciones, descripciones, imágenes y precios) desde BC hacia la tienda, para que el ERP sea la fuente única de verdad del catálogo.</li>
+      <li><strong>Stock</strong> real por almacén desde BC hacia PrestaShop, para evitar vender producto que no existe físicamente.</li>
+    </ul>
+
+    <p>La API usada por PrestaShop es la Webservice REST documentada por el proyecto. La API de Business Central es la de Dynamics 365 Business Central Web Services con OData v4 y OAuth 2.0. Entre ambas se coloca el conector, que puede ser una extensión AL instalada en el tenant de BC, una app estándar de AppSource o un middleware externo con colas.</p>
+
+    <p>Zenia Partners, agencia basada en Madrid que trabaja con pymes en España y Latinoamérica, se ocupa de la capa conversacional que suele faltar en estos proyectos: un <a href="/blog/automatizacion-whatsapp-negocios.html">agente de IA personalizado</a> en WhatsApp y web que consulta estado de pedidos sincronizado desde BC, cualifica carritos abandonados y agenda citas 24/7.</p>
+
+    <h2>¿Qué conector elegir en 2026? Comparativa real</h2>
+
+    <p>Tras revisar los proveedores activos en noviembre de 2026, estas son las cuatro opciones realistas para conectar PrestaShop con Dynamics 365 Business Central. Los precios y plazos vienen de las páginas públicas de cada proveedor y de Microsoft AppSource.</p>
+
+    <div class="zx-table"><p class="zx-table-hint">Desliza para ver la tabla completa →</p><div class="zx-table-in"><table>
+      <tr><th>Opción</th><th>Tipo</th><th>Precio inicial</th><th>Despliegue</th><th>Mejor para</th></tr>
+      <tr><td>ECOSIRE D365BC Connector</td><td>Extensión AL por tenant</td><td>A medida</td><td>2-4 semanas</td><td>Pymes que ya tienen partner BC y quieren soporte directo</td></tr>
+      <tr><td>Gerber Systems (AppSource)</td><td>App estándar de AppSource</td><td>A medida</td><td>Días</td><td>Tiendas con catálogo simple y ganas de autoservicio</td></tr>
+      <tr><td>APIcenter PrestaShop ↔ BC</td><td>Middleware SaaS</td><td>Desde 995 €/año (según APIcenter)</td><td>1-2 semanas</td><td>Casos con varias tiendas o múltiples canales</td></tr>
+      <tr><td>Middleware propio (Azure Functions, n8n, Make)</td><td>A medida</td><td>Variable, típicamente 3.000-12.000 € setup</td><td>4-8 semanas</td><td>Reglas de precios complejas, B2B, varias divisas o integraciones adicionales con CRM</td></tr>
+    </table></div></div>
+
+    <p>Honestidad: si tu catálogo tiene menos de 500 SKU, un único almacén y no necesitas sincronizar precios escalonados, un conector listo para usar como el de Gerber Systems o ECOSIRE suele ser suficiente. Zenia Partners no es el proveedor óptimo en ese escenario. Donde Zenia Partners aporta valor es cuando el conector es solo una pieza de un stack mayor con CRM, atención por WhatsApp y automatización post-venta.</p>
+
+    <h3>Cuándo vale la pena un middleware propio</h3>
+
+    <p>Un artículo técnico de Xictron (septiembre de 2026, sobre Shopware pero aplicable a PrestaShop) resume bien la regla: en cuanto aparecen reglas de negocio no triviales (precios por cliente, varios idiomas, impuestos regionales, catálogos por tienda), un middleware desacopla los dos sistemas mediante un broker, absorbe picos de carga y permite logging y reintentos centralizados. Advierte además de un detalle operativo: las suscripciones a webhooks de PrestaShop expiran a los 3 días si no se renuevan, algo que un middleware bien diseñado gestiona por ti.</p>
+
+    <p>Las opciones típicas para ese middleware propio: Azure Functions + Service Bus (coherente con el stack Microsoft que ya tiene BC), n8n autoalojado o Make.com para prototipar flujos.</p>
+
+    <!--zx:cta-->
+<aside class="zx-cta" aria-label="Zenia"><p class="zx-eyebrow">CRM a medida + agente de IA</p><p class="zx-cta-t" role="heading" aria-level="3">¿Quieres el conector y además un agente de IA en WhatsApp?</p><p class="zx-cta-p">Montamos la integración PrestaShop-Business Central y añadimos encima un agente de IA personalizado que atiende, cualifica y hace seguimiento por WhatsApp con los datos reales del ERP. Cuéntanos tu stack y te respondemos en menos de 24 h.</p><div class="zx-cta-stats"><a href="/es/caso-global-watch-buyers.html"><strong>831</strong><span>conversaciones de WhatsApp captadas para un cliente</span></a><a href="/es/caso-despacho-boutique.html"><strong>&lt;1 min</strong><span>de respuesta, 24/7, con datos del ERP</span></a></div><div class="zx-cta-act"><a class="zx-btn" href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20%C2%ABConector%20PrestaShop%20con%20Business%20Central%C2%BB%20y%20quiero%20ver%20c%C3%B3mo%20aplicarlo%20en%20mi%20negocio" target="_blank" rel="noopener" data-zx-src="inline"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88M20.46 3.49A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.42"/></svg><span>Escríbenos por WhatsApp</span></a><a class="zx-link" href="/es/casos.html">Ver casos reales</a></div></aside>
+<!--/zx:cta--><h2>Arquitectura típica: qué entidades viajan en cada dirección</h2>
+
+    <p>Independientemente del conector elegido, la topología de datos es siempre la misma. Business Central es la fuente de verdad del catálogo y del stock; PrestaShop es la fuente de verdad de pedidos y clientes nuevos. El conector arbitra el flujo con claves estables.</p>
+
+    <div class="zx-table"><p class="zx-table-hint">Desliza para ver la tabla completa →</p><div class="zx-table-in"><table>
+      <tr><th>Entidad</th><th>Fuente de verdad</th><th>Dirección</th><th>Frecuencia típica</th><th>Clave de idempotencia</th></tr>
+      <tr><td>Pedidos</td><td>PrestaShop</td><td>PrestaShop → BC</td><td>Casi en tiempo real (webhook)</td><td>ID de pedido PS</td></tr>
+      <tr><td>Clientes</td><td>PrestaShop (alta nueva)</td><td>PrestaShop → BC</td><td>Al crearse el pedido</td><td>ID de cliente PS + email</td></tr>
+      <tr><td>Productos y combinaciones</td><td>Business Central</td><td>BC → PrestaShop</td><td>Cada 15-60 min o manual</td><td>Nº de artículo BC</td></tr>
+      <tr><td>Stock por almacén</td><td>Business Central</td><td>BC → PrestaShop</td><td>Cada 5-15 min</td><td>Nº de artículo + código almacén</td></tr>
+      <tr><td>Precios</td><td>Business Central</td><td>BC → PrestaShop</td><td>Según cambio</td><td>Nº de artículo + lista de precios</td></tr>
+      <tr><td>Facturas</td><td>Business Central</td><td>BC → PrestaShop (opcional)</td><td>Al validar factura en BC</td><td>Nº de factura BC</td></tr>
+    </table></div></div>
+
+    <p>La clave de idempotencia es lo que impide crear pedidos o clientes duplicados cuando un webhook se reintenta tras una caída o un timeout. ECOSIRE indica expresamente en su documentación que usa los IDs de PrestaShop como clave estable; cualquier middleware propio debe replicar ese patrón.</p>
+
+    <h2>Errores típicos al implementar el conector (y cómo evitarlos)</h2>
+
+    <p>Tras revisar documentación de ECOSIRE, Gerber Systems, Softera y la propia guía de PrestaShop sobre ERPs, hay cinco errores que se repiten casi siempre en los primeros proyectos y que conviene anticipar.</p>
+
+    <h3>1. No renovar las suscripciones a webhooks de PrestaShop</h3>
+
+    <p>Los webhooks de PrestaShop expiran a los 3 días. Si tu conector no los renueva automáticamente, el flujo se cae en silencio: los pedidos se siguen cobrando en la tienda, pero no entran en Business Central. El síntoma es un "lunes dramático" donde se encuentran 40 pedidos del fin de semana sin facturar.</p>
+
+    <h3>2. Confundir la fuente de verdad del stock</h3>
+
+    <p>El stock tiene que vivir en el ERP. Si cualquier operación de almacén (una devolución, un traspaso entre tiendas, un ajuste manual) solo se refleja en PrestaShop, acabas vendiendo producto que no existe. La regla: toda alta de stock entra por BC y se sincroniza hacia abajo.</p>
+
+    <h3>3. Sincronizar precios sin lista de precios dedicada</h3>
+
+    <p>Business Central permite listas de precios por canal. Crea una específica llamada "PrestaShop" o "ECOM" y conecta el sincronizador contra ella. Si sincronizas contra la lista de precios general, cualquier cambio interno para un cliente concreto o un comercial se propaga al ecommerce. Es el error que más daño reputacional causa.</p>
+
+    <h3>4. Enviar al cliente el estado de pedido desde PrestaShop en vez de desde BC</h3>
+
+    <p>PrestaShop cambia el estado cuando se procesa el pago. BC lo cambia cuando el almacén realmente prepara, embala y envía. Si tu correo transaccional dice "enviado" cuando en BC todavía está "preparando", generas tickets de atención al cliente innecesarios. Zenia Partners suele colocar aquí un agente de IA personalizado en WhatsApp que consulta el estado real de BC bajo demanda.</p>
+
+    <h3>5. No separar los entornos sandbox</h3>
+
+    <p>Business Central permite crear un sandbox gratuito con una copia del production. PrestaShop puedes clonarlo en un subdominio. Nunca pruebes mapeos ni cambios de esquema contra el entorno vivo: un error de sincronización con 2.000 SKU puede dejarte la tienda 6 horas fuera de servicio.</p>
+
+    <h2>¿Cuánto cuesta un conector PrestaShop con Business Central en 2026?</h2>
+
+    <p>Los precios públicos en noviembre de 2026 varían en función del modelo. Resumen directo:</p>
+
+    <ul>
+      <li><strong>APIcenter</strong> publica un pricing escalonado por flujos con arranque desde 995 € al año. No incluye desarrollo a medida.</li>
+      <li><strong>ECOSIRE</strong> vende el conector como extensión AL por tenant, con un periodo de soporte post-lanzamiento. El coste depende del scope y no está publicado; indica un despliegue de 2 a 4 semanas.</li>
+      <li><strong>Gerber Systems</strong> publica su extensión en Microsoft AppSource; requiere suscripción activa de Business Central (Essentials desde 70 USD por usuario y mes según precios de Microsoft en 2026).</li>
+      <li><strong>Middleware propio</strong> construido sobre Azure Functions o n8n: habitualmente 3.000 a 12.000 € de setup y 60 a 300 € al mes de infraestructura, según volumen.</li>
+    </ul>
+
+    <p>Para contexto, Zenia Partners trabaja con pymes con los siguientes planes recurrentes (vigentes en noviembre de 2026):</p>
+
+    <ul>
+      <li><strong>Starter:</strong> 997 € de setup + 297 €/mes. Incluye un CRM conectado, un agente de IA personalizado en WhatsApp y los flujos básicos.</li>
+      <li><strong>Growth:</strong> 497 €/mes. Añade integración con ERP (BC, SAP, Holded, otros), automatizaciones de carrito abandonado y atribución por canal.</li>
+      <li><strong>Enterprise:</strong> a medida. Para proyectos con middleware dedicado, varias tiendas o integraciones complejas.</li>
+    </ul>
+
+    <p>Zenia Partners no vende el conector como producto aislado: lo implementa cuando ya hay un partner de BC activo o cuando tiene sentido como parte de un stack mayor que incluye capa conversacional y CRM. Si solo necesitas el conector técnico y nada más, un partner Microsoft certificado o ECOSIRE son opciones más directas.</p>
+
+    <h2>¿Dónde encaja la capa de agente de IA en WhatsApp?</h2>
+
+    <p>Una vez que el conector mueve los datos, aparece una oportunidad que suele quedar sobre la mesa: usar esos datos vivos de BC para conversar con el cliente en el canal donde ya está, que en España es WhatsApp (Statista reporta más del 90% de penetración en 2026).</p>
+
+    <p>Casos típicos que Zenia Partners construye sobre este stack:</p>
+
+    <ul>
+      <li><strong>Estado de pedido real por WhatsApp:</strong> el cliente pregunta "¿dónde está mi pedido?" y el agente consulta BC en caliente, no la caché desactualizada de PrestaShop.</li>
+      <li><strong>Carritos abandonados cualificados:</strong> antes de reactivar, el agente verifica stock real en BC; si no hay producto, propone una alternativa en lugar de hacer perder el tiempo al cliente.</li>
+      <li><strong>Ventas cruzadas por histórico:</strong> con el historial de compras ya centralizado en BC, el agente sugiere productos complementarios basados en lo que el cliente ya tiene, no en lo que el ecommerce quiere empujar esa semana.</li>
+      <li><strong>Pre-cobro y pagos recurrentes:</strong> para modelos B2B con facturación periódica, el agente envía recordatorio y link de pago cuando BC marca la factura como "próxima a vencer".</li>
+    </ul>
+
+    <h2>Checklist técnica antes de empezar</h2>
+
+    <p>Si has decidido avanzar con el proyecto, estos son los requisitos mínimos que tu equipo (o tu partner) debería confirmar antes de firmar nada:</p>
+
+    <ul>
+      <li><strong>Versión de Business Central:</strong> Dynamics 365 Business Central Online 2024 wave 2 o superior. Las versiones on-premise siguen soportadas pero suelen requerir pasarela OData propia.</li>
+      <li><strong>Versión de PrestaShop:</strong> 1.7.8 o PrestaShop 8.x. Para 9.x (en beta durante 2026) verifica compatibilidad con el conector que elijas.</li>
+      <li><strong>Webservice de PrestaShop activo</strong> con clave API dedicada al conector y permisos granulares por recurso.</li>
+      <li><strong>Registro de aplicación en Azure AD</strong> para el flujo OAuth 2.0 contra las Web Services de BC. Consent del administrador del tenant.</li>
+      <li><strong>Maestro de artículos limpio en BC:</strong> cada SKU con un único número de artículo, fotos y descripciones listas para publicarse.</li>
+      <li><strong>Mapeo de IVA y categorías fiscales</strong> entre BC y PrestaShop, idealmente antes del kickoff.</li>
+      <li><strong>Entorno sandbox en BC</strong> y copia espejo de PrestaShop para todas las pruebas.</li>
+      <li><strong>Plan de rollback:</strong> procedimiento para pausar la sincronización sin perder datos si algo falla en producción.</li>
+    </ul>
+
+    <h2>¿Qué tipo de proyecto se beneficia más de este conector?</h2>
+
+    <p>No todo ecommerce con BC necesita un conector a medida. Estos son los perfiles donde el ROI es más claro:</p>
+
+    <ul>
+      <li><strong>Pymes con más de 300 pedidos/mes:</strong> por debajo de ese volumen, carga manual con exportaciones puede bastar.</li>
+      <li><strong>Catálogos con más de 1.000 SKU:</strong> el mantenimiento manual deja de ser viable.</li>
+      <li><strong>Operaciones con varios almacenes:</strong> la vista de stock unificada de BC es insustituible.</li>
+      <li><strong>B2B con listas de precios por cliente:</strong> necesita BC como fuente de verdad y PrestaShop solo como front conversacional.</li>
+      <li><strong>Marcas D2C con atención al cliente intensiva:</strong> encaja bien la capa de agente de IA personalizado sobre el conector.</li>
+      <li><strong>Operaciones con picos estacionales (Black Friday, campañas puntuales):</strong> el middleware con colas protege a BC de saturación.</li>
+    </ul>
+
+    <h2>Preguntas frecuentes</h2>
+
+    <h3>¿Existe un conector oficial de Microsoft para PrestaShop con Business Central?</h3>
+
+    <p>No. Microsoft distribuye un conector nativo de Shopify dentro de Business Central, pero no hay conector oficial para PrestaShop ni para Magento. Todos los conectores son de terceros (ECOSIRE, Gerber Systems, Softera, APIcenter y similares) o soluciones a medida.</p>
+
+    <h3>¿Puedo usar el conector si mi Business Central es on-premise?</h3>
+
+    <p>Sí, pero con matices. La mayoría de conectores asumen BC Online con endpoints OData públicos. En on-premise hay que exponer las Web Services detrás de una pasarela o Azure Application Proxy. Suele añadir entre 1 y 2 semanas al proyecto.</p>
+
+    <h3>¿Cuánto tarda de verdad un despliegue?</h3>
+
+    <p>Para un catálogo de menos de 2.000 SKU, una sola tienda y un almacén, el rango realista es de 2 a 4 semanas con un conector listo para usar (ECOSIRE, Gerber Systems). Con middleware a medida o reglas B2B, 4 a 8 semanas. No creas plazos de 48 horas: no incluyen limpieza de datos ni pruebas serias.</p>
+
+    <h3>¿Se puede tener el conector funcionando y encima añadir WhatsApp para atención?</h3>
+
+    <p>Sí, y es el patrón más común en 2026. El conector se ocupa de mover datos entre PrestaShop y BC; por encima, un agente de IA personalizado en WhatsApp consume los datos de BC y conversa con el cliente. Zenia Partners construye esa capa sobre cualquiera de los conectores mencionados.</p>
+
+    <h3>¿Qué hacer con los pedidos atrasados mientras se despliega?</h3>
+
+    <p>Durante el periodo de despliegue, mantén la operativa actual (carga manual o CSV) en paralelo. Solo corta cuando el sandbox haya pasado 48 horas sin incidencias con tráfico real replicado. Hacer el corte de golpe suele crear duplicados que limpiar luego a mano.</p>
+
+    <h3>¿El conector cumple RGPD?</h3>
+
+    <p>El conector mueve datos personales (nombre, dirección, email, teléfono) entre dos sistemas propios. No hay transferencia internacional si tu BC está en región EU y tu PrestaShop también. Añade el proveedor del conector al registro de actividades y, si usas middleware externo, firma DPA con ellos. Es trámite estándar.</p>
+
+    <h2>Qué paso dar ahora</h2>
+
+    <p>Si estás evaluando el conector, el orden razonable es: primero identifica si tu partner de Business Central ya tiene uno recomendado; si no, compara ECOSIRE, Gerber Systems y APIcenter con el stack que tienes. Si tu caso involucra atención por WhatsApp, varias tiendas o reglas de negocio no triviales, escríbenos y vemos si el enfoque middleware + capa de agente de IA tiene sentido para ti.</p>
+
+    <div class="blog-cta">
+      <h3>¿Quieres conector PrestaShop con Business Central y además WhatsApp?</h3>
+      <p>Zenia Partners implementa el conector adecuado para tu caso y añade por encima un agente de IA personalizado en WhatsApp que usa los datos vivos de Business Central. Agenda una llamada técnica de 30 minutos y revisamos tu stack.</p>
+<p data-zenia-oportunidad="1">Caso relacionado: <a href="/es/automatizacion-whatsapp-negocios.html">automatizar WhatsApp con IA</a> conectado al ERP para que nunca respondas con stock desactualizado.</p>
+
+      <a href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20%C2%ABConector%20PrestaShop%20con%20Business%20Central%C2%BB%20y%20quiero%20ver%20c%C3%B3mo%20aplicarlo%20en%20mi%20negocio" target="_blank" rel="noopener">Hablar por WhatsApp ahora</a> <a style="background:transparent;border:1px solid var(--border);color:var(--text-secondary);margin-left:10px" href="https://calendly.com/zeladauriartef/30min">Agendar llamada gratuita</a>
+    </div>
+<div class="blog-related" data-zenia-money-links="1">
+  <h3>Ponlo en marcha en tu ecommerce</h3>
+  <a href="/blog/integrar-prestashop-con-whatsapp-business.html">Integrar PrestaShop con WhatsApp Business: Guía 2026<span>Módulos, flujos de pedidos, carritos abandonados y ROI real al conectar PrestaShop con WhatsApp.</span></a>
+  <a href="/blog/crm-para-ecommerce-espana-2026.html">CRM para ecommerce en España 2026<span>Cómo elegir CRM para ecommerce con integraciones con ERP y pasarelas de pago.</span></a>
+  <a href="/blog/software-automatizacion-ecommerce.html">Software de automatización para ecommerce<span>Panorama de herramientas: pros y contras reales en 2026.</span></a>
+  <a href="/blog/recuperar-carritos-abandonados-whatsapp.html">Recuperar carritos abandonados por WhatsApp<span>Flujos tipo, tasas de recuperación y copy que convierte.</span></a>
+</div>
+
+
+    <div class="blog-related">
+      <h3>Artículos relacionados</h3>
+      <a href="/blog/integrar-twilio-con-whatsapp-business.html">Integrar Twilio con WhatsApp Business: guía técnica 2026<span>Arquitectura, costes y sandbox para conectar Twilio Programmable Messaging con WhatsApp Business API.</span></a>
+      <a href="/blog/atencion-al-cliente-ecommerce-ia.html">Atención al cliente en ecommerce con IA<span>Casos de uso, métricas y cómo encaja un agente de IA en tu operativa.</span></a>
+      <a href="/blog/agente-ia-ventas-ecommerce.html">Agente de IA para ventas en ecommerce<span>Qué puede automatizar hoy un agente conversacional sobre PrestaShop o Shopify.</span></a>
+      </div>
+
+  </div>
+
+<div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 24px; margin: 40px 0;" data-zenia-internal-links="landings">
+  <h3 style="color: #F1F5F9; margin-bottom: 12px; font-size: 1.05rem;">¿Buscas un CRM conversacional conectado a tu ERP?</h3>
+  <p style="color: #94A3B8; margin-bottom: 16px; font-size: 0.95rem;">Zenia Partners trabaja con ecommerce en estos verticales. Revisa la guía específica:</p>
+  <div>
+      <a href="/es/crm-ecommerce.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">CRM para ecommerce →</a>
+      <a href="/es/crm-retail.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">CRM para retail →</a>
+      <a href="/es/automatizacion-whatsapp-negocios.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Automatización WhatsApp →</a>
+      <a href="/es/index.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Ver Zenia Partners →</a>
+  </div>
+</div>
+
+</article>
+
+<footer class="blog-footer">
+  <div class="container">
+    <p>&copy; 2026 ZENIA. Todos los derechos reservados. | <a href="/">Inicio</a> | <a href="/blog/">Blog</a></p>
+  </div>
+</footer>
+
+<div style="text-align:center; padding:16px 24px; background:#0A0F1C; color:#64748B; font-size:0.85rem; border-top:1px solid rgba(255,255,255,0.04);"><a href="/es/cobertura.html" style="color:#94A3B8; text-decoration:none;">Ver cobertura completa</a></div>
+<a href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20%C2%ABAutomatizar%20Reservas%20en%20Restaurantes%20por%20WhatsApp%C2%BB%20y%20quiero%20ver%20c%C3%B3mo%20aplicarlo%20en%20mi%20negocio" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp" data-directo style="position:fixed;bottom:24px;right:24px;z-index:9998;background:#25D366;color:white;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(37,211,102,0.4);transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 20px rgba(37,211,102,0.5)'" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 16px rgba(37,211,102,0.4)'">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<script>document.addEventListener("click",function(e){var t=e.target,a=t.closest?t.closest('a[href*="wa.me"]'):null;if(!a)return;try{navigator.sendBeacon("https://gaia-relojes.onrender.com/gwb/lead",JSON.stringify({site:"zenia",path:location.pathname+location.search,ref:document.referrer||""}))}catch(r){}},true);</script>
+<script src="/assets/qualify.js?v=4" defer></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "eceeed460f6d465bba3b970417d5f6b0"}'></script>
+<!--zx:js--><script src="/assets/zx.js?v=5" defer></script>
+<!--/zx:js--></body>
+</html>

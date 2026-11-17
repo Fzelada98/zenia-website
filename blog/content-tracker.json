@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-11-17T06:10:00+00:00",
+  "lastRun": "2026-11-17T14:00:00+00:00",
   "posts": [
+    {
+      "slug": "conector-prestashop-business-central",
+      "keyword": "conector prestashop con business central",
+      "tier": 2,
+      "cluster": "ecommerce-integraciones",
+      "status": "published",
+      "date": "2026-11-17",
+      "source": "striking"
+    },
     {
       "slug": "integrar-twilio-con-whatsapp-business",
       "keyword": "integrar twilio con whatsapp business",

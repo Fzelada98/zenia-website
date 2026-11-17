@@ -11118,3 +11118,16 @@ Full architecture, integration patterns with the Spanish incumbent CRMs and the 
 #InsurTech #WhatsAppBusinessAPI #PlatformEngineering #AIAgents
 
 ---
+## 2026-11-17 — Integrating Twilio with WhatsApp Business (EN LinkedIn → Zenia Partners company page)
+
+Meta switched WhatsApp Business billing from per-conversation to per-template-sent in July 2025 (confirmed in Twilio's own October 2026 notice). Every architecture decision that assumes the old conversation window as a cost unit is now wrong, and the BSP you pick stops being a commercial question and becomes a throughput and category-recategorization problem.
+
+Stack we ship when a client insists on Twilio over Cloud API: Programmable Messaging as the egress plane, HMAC-SHA1 verification on the inbound webhook against X-Twilio-Signature (sandbox skips it, production must not), a 200 OK ack in under 100 ms from the ingress handler with the payload dropped into a Redis/SQS queue so the LLM turn runs asynchronously and never trips Twilio's retry window, exponential backoff on 5xx with idempotency keyed on MessageSid, and a template dispatcher that reads Meta's category webhook to catch utility → marketing recategorizations before they double the per-message cost. The 24h session window stays enforced in the orchestrator, not in prompts: outside it, only approved templates.
+
+Reference latency figures to size SLOs against: Knock's public WhatsApp benchmark (Jul-Oct 2026) reports p50 563 ms / p90 1,073 ms / p99 1,493 ms for message delivery. Any BSP layer that adds more than ~200 ms on top of that is paying for itself in wall-clock, not just dollars.
+
+Full teardown, sandbox-to-production checklist, error code map (63007, 63016, template recategorization) and the Twilio-vs-Cloud-API trade-off table: https://zeniapartners.com/blog/integrar-twilio-con-whatsapp-business.html
+
+#WhatsAppBusinessAPI #PlatformEngineering #Twilio #AIAgents
+
+---

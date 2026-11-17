@@ -11162,3 +11162,17 @@ Full architecture, entity table, idempotency keys and the 5 mistakes we see in w
 #PlatformEngineering #ERP #BusinessCentral #WhatsAppBusinessAPI
 
 ---
+
+## 2026-11-17 — AI Agent for Videographers (EN LinkedIn → Zenia Partners company page)
+
+Video businesses are harder to automate than photo. Decision window is 7-21 days (vs same-week), delivery sits at 8-16 weeks for a wedding film and 10-20 business days for a highlights reel, and the add-on math branches on drone/Part 107, music licensing (Musicbed/Soundstripe/Artlist) and corporate usage rights. A photo-studio agent dropped unchanged leaks bookings at exactly those joints.
+
+Architecture that holds: one AI layer on WhatsApp Business API (Meta Cloud or 360dialog BSP) + Instagram DM via Meta Graph + Twilio SMS + website form, with a shared conversation store and a single CRM write path into HoneyBook / Dubsado / Studio Ninja / Táve / Vidlead. Qualification writes a typed JSON record (date, location, duration, deliverables, usage_rights enum, budget_band) on first reply, not free text. Post-production cadence runs off edit-queue state, not a date trigger: webhook from Frame.io or Vimeo flips the client thread into delivery mode and dispatches the second-payment invoice. The 24h session window stays enforced in the orchestrator; outside it, only approved templates.
+
+Reference 90-day metric from a 2-shooter Austin studio (24 weddings/yr at $6.4k, 48 corporate days/yr at $1,950): average first reply 11h → 48s, inquiry-to-discovery-call 24% → 49%, retainer-within-72h 56% → 93%, monthly booked revenue $20,070 → $38,470 at $497/mo + $997 setup. Refuse-list (no hard quote, no delivery date not on the edit calendar, no usage rights negotiation, no music licensing opinion) is in the prompt scaffolding, not the knowledge base.
+
+Full breakdown with the 7-workflow spec, stack table, refuse-list, 2026 US pricing bands and 2-week rollout: https://zeniapartners.com/blog/ai-agent-for-videographers.html
+
+#VideoProduction #WhatsAppBusinessAPI #AIAgents #PlatformEngineering
+
+---

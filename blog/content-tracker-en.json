@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-11-17T09:10Z",
+  "lastRun": "2026-11-17T17:30Z",
   "market": "US/UK small business",
   "posts": [
     {
@@ -1177,7 +1177,9 @@
       "keyword": "ai agent for videographers",
       "tier": 3,
       "cluster": "creative",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-11-17",
+      "note": "Full-funnel AI agent build for video businesses, distinct from the receptionist sibling. 2-shooter Austin composite case (24 weddings/yr at $6.4k, 48 corporate days/yr at $1,950): avg first reply 11h to 48s, inquiry-to-call 24 to 49 percent, call-to-booked 38 to 52 percent, retainer 72h 56 to 93 percent, monthly booked revenue $20,070 to $38,470 (+$18,400) at $497/mo + $997 setup. 7 workflows (triage, qualification, discovery booking, contract/retainer chase, pre-production T-30/T-14/T-3, post-production with Vimeo/Frame.io, reviews and anniversary reactivation). Video-specific differentiators from the photo sibling: longer delivery 8-16 wk vs 3-6 wk, drone/Part 107 and music licensing add-on math, corporate usage rights quoting, 7-21 day decision window with 4-touch nurture. Stack table (HoneyBook/Dubsado/Studio Ninja/Taeve/17hats/Vidlead/Captura + Google Cal/Acuity + Frame.io/Vimeo/Pixieset + Musicbed/Soundstripe/Artlist + WhatsApp BSP). Explicit refuse-list (hard quote, delivery date, usage rights negotiation, discount, music licensing opinion, legal). 2026 US pricing bands (DIY $199-349/mo, mid-market $449-799/mo + $997-2500 setup, custom $997-1800/mo + $3500-8000 setup). 2-week rollout. Cross-links to ai-receptionist-for-videographers (front-desk) and ai-agent-for-photographers (sibling)."
     },
     {
       "slug": "ai-agent-for-dj-services",

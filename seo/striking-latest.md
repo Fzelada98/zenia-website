@@ -28,4 +28,4 @@ Consultas donde zeniapartners.com ya imprime en posición 4-30 (últimos 8 días
 | 7.1 | 16 | agente ia despachos abogados gestion expedientes | /blog/agente-ia-despachos-abogados-gestion-expedientes.html |
 | 25.8 | 16 | ai receptionist for solar energy | /blog/ai-agent-for-solar-installers.html |
 | 29.4 | 16 | chatbot para empresas malaga | /blog/agentes-inteligentes-ia-malaga.html |
-| 18.7 | 16 | conector prestashop con business central | /blog/integrar-prestashop-con-whatsapp-business.html |
+| 18.7 | 16 | conector prestashop con business central | /blog/integrar-prestashop-con-whatsapp-business.html · nuevo refuerzo: [conector prestashop con business central](/blog/conector-prestashop-business-central.html) |

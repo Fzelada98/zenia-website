@@ -1,7 +1,16 @@
 {
-  "lastRun": "2026-11-16T22:00Z",
+  "lastRun": "2026-11-17T09:10Z",
   "market": "US/UK small business",
   "posts": [
+    {
+      "slug": "ai-receptionist-for-solar-energy",
+      "keyword": "ai receptionist for solar energy",
+      "tier": 0,
+      "cluster": "trades",
+      "status": "published",
+      "date": "2026-11-17",
+      "note": "striking-loop hit (2026-11-17): 16 impressions, pos 25.8. Query was printing on /blog/ai-agent-for-solar-installers.html, whose title targets 'AI Agent for Solar Installers' not 'AI Receptionist for Solar Energy' head-on; no dedicated ai-receptionist-for-solar-energy.html existed. Dedicated US-focused front-desk build (~2,390 words) scoped tight to the receptionist pattern (distinct from the full-funnel installers article): defines the front desk as voice+WhatsApp+web-chat+IG under one AI agent, 7 front-desk jobs (first-ring pickup under 3s, 7-field qualification across homeowner-status/address/bill/utility/roof type/battery/financing, live site-survey booking with drive-zone-aware calendar, after-hours triage, post-contract install status, 30/60/90-day dormant reactivation, out-of-scope handoff for commercial/battery-only/renter), 2026 OBBBA policy context (25D ended Dec 2025, TPO dominant at ~55 percent, payment-driven homeowner), 3-crew Phoenix 60-day case study (business-hours pickup 61->99 percent, after-hours 0->97 percent, median first reply 4h 48m->38s, form-fill to survey 22->41 percent, survey to contract 31->37 percent, +24 signed contracts at $26.8k ACV = ~$643k vs $1,800 setup + $647/mo, CSR 27->9 hrs/week), stack table (Enerflo/Solo/Aurora CRM/HubSpot/Salesforce + Twilio+Vapi/Retell+Claude or myaifrontdesk/Dialzara/Sameday/Thoughtly + Meta Cloud/360dialog/Twilio BSP + 10DLC SMS + OpenSolar/Aurora/Sighten proposal), explicit refuse-list (hard quote, ROI, tax advice, NEM policy, financing negotiation, structural), 2026 US pricing bands ($249-$8,000 setup + $249-$1,200/mo vs human answering $1.25-$2.80/min and CSR $38k-$55k/yr), 2-week WhatsApp-first then voice rollout with day-30 review criteria. Cross-link added from /blog/ai-agent-for-solar-installers.html using 'AI receptionist for solar energy' as anchor text."
+    },
     {
       "slug": "ai-enabled-crm-for-roofing",
       "keyword": "ai-enabled crm for roofing",

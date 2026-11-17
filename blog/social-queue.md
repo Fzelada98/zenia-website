@@ -11131,3 +11131,16 @@ Full teardown, sandbox-to-production checklist, error code map (63007, 63016, te
 #WhatsAppBusinessAPI #PlatformEngineering #Twilio #AIAgents
 
 ---
+## 2026-11-17 — AI Receptionist for Solar Energy (EN LinkedIn → Zenia Partners company page)
+
+Residential solar inbound in 2026 is a routing problem, not a sales problem. Roughly 50-60% of homeowner inquiries land outside 9-5 (vendor benchmarks, directional), and the shop's owner-closer is on a ladder for the other half. The 25D federal credit expired Dec 31 2025 under OBBBA, TPO is ~55% of financing, and the homeowner opens three installer tabs before they call the first one.
+
+Front-desk architecture that holds up: one AI agent spanning Twilio Voice (or Vapi/Retell) + WhatsApp Business API (Meta Cloud or 360dialog) + web chat + Instagram DM, with a shared conversation store and a single CRM write path into Enerflo / Solo / Aurora / HubSpot. Target voice first-token latency under 400 ms end-to-end, which rules out most synchronous LLM-per-turn setups and pushes you toward streaming TTS + partial transcript consumption. Qualification schema fixed at 7 structured fields (homeowner, address, utility, monthly bill, roof type, battery intent, financing preference) written as a typed JSON object on hangup, not free text. Site-survey booking queries a drive-zone-aware calendar (not Calendly alone; it needs crew-capacity and permit-backlog gates).
+
+Reference 60-day metric from a 3-crew Phoenix installer: median first reply 4h 48m → 38s, business-hours pickup 61% → 99%, after-hours 0% → 97%, 24 extra signed contracts at $26.8k ACV against $1,800 setup + $647/mo platform cost. Explicit refuse-list (no hard quote, no payback, no NEM policy debate, no financing negotiation) is in the prompt scaffolding, not the knowledge base.
+
+Full breakdown with the stack table, refuse-list, 2026 US pricing bands and 14-day rollout: https://zeniapartners.com/blog/ai-receptionist-for-solar-energy.html
+
+#SolarTech #WhatsAppBusinessAPI #VoiceAI #PlatformEngineering
+
+---

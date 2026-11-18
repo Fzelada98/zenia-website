@@ -11235,3 +11235,18 @@ Full breakdown with the four program types, vertical examples, integration table
 #WhatsAppBusinessAPI #AIAgents #PlatformEngineering #CustomerLoyalty
 
 ---
+
+## 2026-11-18 - AI Agent for Chimney Sweeps
+
+Wiring an AI front desk in front of a chimney sweep's field-service stack (ServiceTitan, Housecall Pro, Jobber, Smart Service) is a seasonality problem, not a reasoning one.
+
+Four infra decisions carry the build. First, calendar writeback has to respect drive-zone rules programmatically — a cached H3 index keyed on service area ZIPs returns at most two offer windows per request, never a raw calendar; this is what kept dispatcher hours at 19/wk instead of 44 in the 3-truck Columbus deployment. Second, the annual recall engine runs as a nightly cron over `last_service_date + 11 months`, queueing WhatsApp utility templates with a one-tap booking link; idempotency key is `(customer_id, service_year)` to survive retries and prevent double-sends across the 10-week fall ramp. Third, deposit-at-booking is a hard Stripe/Square PaymentIntent before the slot is committed to the CRM — not a post-booking email — which is what moved the no-show rate from 14% to 6%. Fourth, qualification routes NFPA 211 Level 2 triggers (real-estate sale, post-fire, appliance swap, suspected creosote stage 3) to a human estimator before a slot is quoted; the agent holds a typed `inspection_level` enum and refuses to price anything beyond the Level 1 flat rate.
+
+Reference 90-day numbers from the Columbus sweep: business-hours pickup 72 → 99%, median first reply 3h12m → 18s, call-to-booking 38 → 57%, annual recall bookings 7% → 24%. p95 voice time-to-first-word stayed under 850ms on the Vapi+Claude path.
+
+Full build with the 7 agent jobs, stack table and 2-week WhatsApp-first rollout: https://zeniapartners.com/blog/ai-agent-for-chimney-sweeps.html
+
+#WhatsAppBusinessAPI #AIAgents #FieldServiceInfrastructure #VoiceAI
+
+---
+

@@ -299,7 +299,7 @@
   src=(src||'web-it').replace(/[^a-z0-9_-]/gi,'').slice(0,24);
   var wa=document.querySelector('.js-wa'); if(wa){wa.href='https://wa.me/34677612799?text='+encodeURIComponent('Buongiorno, vorrei una demo di Cicero ('+src+')');}
   var ml=document.querySelector('.js-mail'); if(ml){ml.href='mailto:fabrizzio.zelada@zeniapartners.com?subject='+encodeURIComponent('Demo di Cicero ('+src+')');}
-  function beacon(site){ try{ navigator.sendBeacon('https://gaia-relojes.onrender.com/gwb/lead', JSON.stringify({site:site,path:location.pathname+'?src='+src,ref:document.referrer||''})); }catch(e){} }
+  function beacon(site){ try{ navigator.sendBeacon('https://zenia-leads.onrender.com/lead', JSON.stringify({site:site,path:location.pathname+'?src='+src,ref:document.referrer||''})); }catch(e){} }
   try{gtag('event','cicero_view',{src:src,lang:'it'});}catch(e){}
   document.addEventListener('click',function(e){var t=e.target,a=t.closest?t.closest('.js-wa,.js-mail'):null;if(a){beacon('cicero');try{gtag('event','cicero_cta_click',{src:src,lang:'it',cta:a.classList.contains('js-wa')?'whatsapp':'email'});}catch(e){}}},true);
 })();

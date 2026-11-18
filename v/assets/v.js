@@ -4,7 +4,7 @@
   var D = {}; try { D = JSON.parse(document.getElementById('v-data').textContent); } catch (e) {}
   var v = document.getElementById('vid'), b = document.getElementById('play');
   var qa = /[?&]qa\b/.test(location.search) || location.hostname === 'localhost' || location.hostname === '127.0.0.1' || navigator.webdriver;
-  var URL_ = 'https://gaia-relojes.onrender.com/gwb/lead', hecho = {};
+  var URL_ = 'https://zenia-leads.onrender.com/lead', hecho = {};
   function aviso(kind) {
     if (qa || hecho[kind] || !navigator.sendBeacon) return; hecho[kind] = 1;
     try { navigator.sendBeacon(URL_, JSON.stringify({ site: 'zenia-demo', kind: kind, brand: D.nombre, path: location.pathname, ref: document.referrer || '' })); } catch (e) {}

@@ -43,7 +43,7 @@ FONTS = ('<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
 
 BEACON = ('<script>document.addEventListener("click",function(e){var t=e.target,'
           'a=t.closest?t.closest(\'a[href*="wa.me"]\'):null;if(!a)return;'
-          'try{navigator.sendBeacon("https://gaia-relojes.onrender.com/gwb/lead",'
+          'try{navigator.sendBeacon("https://zenia-leads.onrender.com/lead",'
           'JSON.stringify({site:"zenia",path:location.pathname+location.search,ref:document.referrer||""}))}'
           'catch(r){}},true);</script>')
 QUALIFY = '<script src="/assets/qualify.js?v=4" defer></script>'

@@ -508,7 +508,7 @@ def scripts():
     js = json.dumps(datos, ensure_ascii=False).replace('</', '<\\/')
     return f'''<script type="application/json" id="z2-data">{js}</script>
 <script src="/assets/z2/z2.js?v={V}" defer></script>
-<script>document.addEventListener("click",function(e){{var t=e.target,a=t.closest?t.closest('a[href*="wa.me"]'):null;if(!a)return;try{{navigator.sendBeacon("https://gaia-relojes.onrender.com/gwb/lead",JSON.stringify({{site:"zenia",path:location.pathname+location.search,ref:document.referrer||""}}))}}catch(r){{}}}},true);</script>
+<script>document.addEventListener("click",function(e){{var t=e.target,a=t.closest?t.closest('a[href*="wa.me"]'):null;if(!a)return;try{{navigator.sendBeacon("https://zenia-leads.onrender.com/lead",JSON.stringify({{site:"zenia",path:location.pathname+location.search,ref:document.referrer||""}}))}}catch(r){{}}}},true);</script>
 <script src="/assets/qualify.js?v=4" defer></script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{{"token": "{CF}"}}'></script>
 </body>

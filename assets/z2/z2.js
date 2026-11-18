@@ -218,7 +218,7 @@
         name: v('nombre').slice(0, 80), contact: v('contacto').slice(0, 120), city: v('web').slice(0, 120),
         year: doc.title.slice(0, 30), locale: T.locale, path: location.pathname, ref: doc.referrer || ''
       });
-      try { if (!qa) { if (navigator.sendBeacon) navigator.sendBeacon('https://gaia-relojes.onrender.com/gwb/lead', carga); else fetch('https://gaia-relojes.onrender.com/gwb/lead', { method: 'POST', body: carga, keepalive: true }); } } catch (err) {}
+      try { if (!qa) { if (navigator.sendBeacon) navigator.sendBeacon('https://zenia-leads.onrender.com/lead', carga); else fetch('https://zenia-leads.onrender.com/lead', { method: 'POST', body: carga, keepalive: true }); } } catch (err) {}
       f.classList.add('sent');
     });
   });

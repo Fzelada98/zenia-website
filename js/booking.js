@@ -119,7 +119,7 @@ function submitBookingForm(e) {
   // Copia al registro de leads (25-sep-2026): el backend de arriba es una caja
   // negra y estas respuestas nunca llegaban al aviso de leads.
   try {
-    navigator.sendBeacon('https://gaia-relojes.onrender.com/gwb/lead', JSON.stringify({
+    navigator.sendBeacon('https://zenia-leads.onrender.com/lead', JSON.stringify({
       site: 'zenia', path: location.pathname, ref: document.referrer || '', kind: 'booking',
       name: data.company, condition: data.size, model: data.area,
       papers: data.onlinePresence.slice(0, 40),

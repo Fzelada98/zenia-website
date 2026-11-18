@@ -124,12 +124,12 @@
   try {
     var qa = /[?&]qa\b/.test(location.search) || location.hostname === 'localhost' || location.hostname === '127.0.0.1' || navigator.webdriver;
     if (!qa && navigator.sendBeacon) {
-      navigator.sendBeacon('https://gaia-relojes.onrender.com/gwb/lead', JSON.stringify({ site: 'zenia-demo', kind: 'demo', brand: D.nombre, path: location.pathname, ref: document.referrer || '' }));
+      navigator.sendBeacon('https://zenia-leads.onrender.com/lead', JSON.stringify({ site: 'zenia-demo', kind: 'demo', brand: D.nombre, path: location.pathname, ref: document.referrer || '' }));
     }
     document.addEventListener('click', function (e) {
       var a = e.target.closest && e.target.closest('a[href*="wa.me"],a[href*="calendly.com"]');
       if (!a || qa) return;
-      navigator.sendBeacon('https://gaia-relojes.onrender.com/gwb/lead', JSON.stringify({ site: 'zenia', src: 'demo', brand: D.nombre, path: location.pathname, ref: document.referrer || '' }));
+      navigator.sendBeacon('https://zenia-leads.onrender.com/lead', JSON.stringify({ site: 'zenia', src: 'demo', brand: D.nombre, path: location.pathname, ref: document.referrer || '' }));
     }, true);
   } catch (e) {}
 })();

@@ -29,7 +29,7 @@
  */
 (function () {
   "use strict";
-  var ENDPOINT = "https://gaia-relojes.onrender.com/gwb/lead";
+  var ENDPOINT = "https://zenia-leads.onrender.com/lead";
   var NUM = "34677612799";
 
   var TXT = {

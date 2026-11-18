@@ -303,7 +303,7 @@
   var m=document.querySelector('.js-mail'); if(m){m.href='mailto:fabrizzio.zelada@zeniapartners.com?subject='+encodeURIComponent('Demo de Cicero ('+src+')');}
 
   // medición: vista de página y clics de CTA hacia el sistema de leads de Zenia
-  function beacon(site){ try{ navigator.sendBeacon('https://gaia-relojes.onrender.com/gwb/lead', JSON.stringify({site:site,path:location.pathname+'?src='+src,ref:document.referrer||''})); }catch(e){} }
+  function beacon(site){ try{ navigator.sendBeacon('https://zenia-leads.onrender.com/lead', JSON.stringify({site:site,path:location.pathname+'?src='+src,ref:document.referrer||''})); }catch(e){} }
   try{gtag('event','cicero_view',{src:src});}catch(e){}
   document.addEventListener('click',function(e){var t=e.target,a=t.closest?t.closest('.js-wa,.js-mail'):null;if(a){beacon('cicero');try{gtag('event','cicero_cta_click',{src:src,cta:a.classList.contains('js-wa')?'whatsapp':'email'});}catch(e){}}},true);
 })();

@@ -11205,3 +11205,17 @@ Full breakdown with the four-flow spec, SIS integration table, plan pricing and 
 #WhatsAppBusinessAPI #AIAgents #PlatformEngineering #EdTech
 
 ---
+
+## 2026-11-18 - AI Agent for Septic Companies
+
+Wiring an AI agent in front of a septic hauler's dispatch stack (ServiceTitan, Jobber, Housecall Pro, QuoteIQ, PumpDocket) is primarily a routing problem, not a reasoning one.
+
+Four infra decisions carry the build. First, the voice path: Twilio PSTN → Vapi/Retell session → Claude for dialogue, with a strict 6-field JSON output per turn (job_type enum, urgency, system_type, last_pump_iso, sewage_inside bool, pump_alarm bool). Everything downstream reads the enum, not the transcript. Second, route-aware booking: the agent queries today+tomorrow's assigned jobs by truck_id, clusters open slots by ZIP against a cached H3 index, and returns at most two offer windows — never a free calendar — which is what moved stops/truck/day from 4.1 to 5.6 in a 4-truck NC deployment. Third, cycle-based reminder engine runs as a nightly job over `last_pump_date + recommended_interval_months`, queueing WhatsApp utility templates at T-30d/T-14d and a Twilio voice callback at T-5d; idempotency key is `(customer_id, cycle_id)` to survive retries. Fourth, the on-call page is structured JSON over PagerDuty/Opsgenie, not a voicemail blob, so the tech's callback starts at second 0, not second 90.
+
+Reference 90-day numbers from the NC hauler: after-hours live pickup 0 → 97%, median web-form first reply 5h48m → 41s, emergency in-hour booking 38 → 74%, 1,412 cycle reminders sent with 23% conversion (324 pump-outs). p95 voice time-to-first-word stayed under 900ms.
+
+Full build with the 6-question triage, stack table and 2-week rollout: https://zeniapartners.com/blog/ai-agent-for-septic-companies.html
+
+#WhatsAppBusinessAPI #AIAgents #FieldServiceInfrastructure #VoiceAI
+
+---

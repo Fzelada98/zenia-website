@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-11-17T17:30Z",
+  "lastRun": "2026-11-18T09:00Z",
   "market": "US/UK small business",
   "posts": [
     {
@@ -1255,7 +1255,9 @@
       "keyword": "ai agent for septic companies",
       "tier": 3,
       "cluster": "trades",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-11-18",
+      "note": "Tier-3 pending pulled next from tracker (no English striking-distance query remained uncovered at 2026-11-18: all top EN queries in position 8-30 have dedicated head-on posts). ~2,570-word US-focused build for septic haulers/installers/inspectors: 7 agent jobs (24/7 first-ring pickup, emergency vs routine triage with 6-question script, route-aware booking, inspection/pump-cycle reminders 30/14/5-day cadence, deposit+location capture, dormant reactivation, human handoff), 4-truck Charlotte-area 90-day case (business-hours pickup 71->99 percent, after-hours 0->97 percent, median first reply 5h48m->41s, emergency in-hour booking 38->74 percent, 1,412 cycle reminders sent at 23 percent conversion = 324 pump-outs booked, stops/truck/day 4.1->5.6, cancellations 19->8 percent, CSR hours 46->18/wk, ~$141,500 net lift at $4,035 all-in), stack table (ServiceTitan/Jobber $39-$349/Housecall Pro $49-$149/QuoteIQ/PumpDocket/ManageMart + Twilio+Vapi/Retell or Dialzara/Sameday/Thoughtly + Meta Cloud/360dialog WhatsApp + 10DLC Twilio/Telnyx SMS + Claude + Stripe/Square), 6-question emergency script in full, explicit refuse-list (no hard pricing without visual, no code/regulatory advice, no 1,500+ gal commercial without human, medical escalation to 911, no trip-fee negotiation), 2026 US pricing bands ($249-$6,500 setup / $149-$2,400/mo by truck count) vs part-time CSR $1,800-$3,500/mo and live answering $900-$2,800/mo, 2-week rollout (W1 data+WhatsApp+triage+dormant sweep, W2 voice+deposits+cycle reminders+route-aware+day-30 review criteria). Linked to ai-booking-agent-for-plumbing, roofing-crm-with-ai, whatsapp-crm-small-business."
     },
     {
       "slug": "ai-agent-for-chimney-sweeps",

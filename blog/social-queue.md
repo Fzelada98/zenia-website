@@ -11192,6 +11192,8 @@ Full checklist, document table by country, and the five rejection causes we see 
 
 ## 2026-11-18 - Agente de IA para academias de música
 
+<!-- PUBLISHED:make-webhook at 2026-11-18T09:30:05Z -->
+
 Wiring an AI agent on top of a music school's SIS (Kydemy, DreamClass, Teachworks, Jackrabbit Music, ASIMUT) is mostly an integration problem, not a model problem.
 
 The front door is WhatsApp Business Platform with four flow paths: enrollment (writes to student + class resources on the SIS), lesson reminders (reads the next-7-day schedule and fires utility templates at T-24h and T-2h), payment chase (reacts to failed-charge events and opens a service window with a Stripe or Bizum link), and reactivation (cron over inactivity thresholds at 30, 60 and 90 days).

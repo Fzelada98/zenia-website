@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-11-17T22:00:00+00:00",
+  "lastRun": "2026-11-18T00:00:00+00:00",
   "posts": [
+    {
+      "slug": "agente-ia-para-academias-de-musica",
+      "keyword": "agente de IA para academias de musica",
+      "tier": 1,
+      "cluster": "academias-musica",
+      "status": "published",
+      "date": "2026-11-18",
+      "source": "matrix-expansion"
+    },
     {
       "slug": "conector-prestashop-business-central",
       "keyword": "conector prestashop con business central",

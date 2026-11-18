@@ -11190,3 +11190,18 @@ Full checklist, document table by country, and the five rejection causes we see 
 
 ---
 
+## 2026-11-18 - Agente de IA para academias de música
+
+Wiring an AI agent on top of a music school's SIS (Kydemy, DreamClass, Teachworks, Jackrabbit Music, ASIMUT) is mostly an integration problem, not a model problem.
+
+The front door is WhatsApp Business Platform with four flow paths: enrollment (writes to student + class resources on the SIS), lesson reminders (reads the next-7-day schedule and fires utility templates at T-24h and T-2h), payment chase (reacts to failed-charge events and opens a service window with a Stripe or Bizum link), and reactivation (cron over inactivity thresholds at 30, 60 and 90 days).
+
+Two non-obvious infra decisions carry the project. First, service-window conversations initiated by the parent are free after Meta's 2025 repricing, which flips the unit economics: be generous replying, strict on outbound templates. Second, most SIS vendors do not expose a clean webhook for failed charges, so a polling adapter with idempotency keys on the agent side beats patching the vendor.
+
+Target p95 for first-token response under 1.5s. Reject-on-schedule-conflict rate (agent refusing a slot the SIS actually blocks) should be zero, which means consistent reads not cached reads.
+
+Full breakdown with the four-flow spec, SIS integration table, plan pricing and rollout timeline: https://zeniapartners.com/blog/agente-ia-para-academias-de-musica.html
+
+#WhatsAppBusinessAPI #AIAgents #PlatformEngineering #EdTech
+
+---

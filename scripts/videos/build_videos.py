@@ -7,7 +7,9 @@ a reproducir y cuando lo ven entero (registro en gaia, site «zenia-demo», kind
 La lista de prospectos vive fuera del repo.
 
 Uso: python3 scripts/videos/build_videos.py <prospectos-video.json> [RAÍZ_DEL_SITIO]
-Cada elemento: {nicho: clinicas|talleres|autoescuelas, slug, codigo, nombre}. Escribe v/<slug>-<codigo>/index.html. Idempotente."""
+Cada elemento: {nicho: clinicas|talleres|autoescuelas|inmobiliarias|veterinarias, slug, codigo, nombre} y, si hace falta,
+«tu» (p. ej. «vuestro hospital») o «cerrada» para afinar el texto de ese negocio. Escribe v/<slug>-<codigo>/index.html. Idempotente.
+Cada nicho lleva la duración de su vídeo («seg») y la página a la que enlaza el logo («enlace»)."""
 import html
 import json
 import os
@@ -18,9 +20,12 @@ VERSION = '1'
 WA = '34677612799'
 CALENDLY = 'https://calendly.com/zeladauriartef/30min'
 N = {
-    'clinicas': dict(tu='vuestra clínica', un='una clínica', cerrada='cuando la clínica está cerrada'),
-    'talleres': dict(tu='vuestro taller', un='un taller', cerrada='cuando el taller está cerrado'),
-    'autoescuelas': dict(tu='vuestra autoescuela', un='una autoescuela', cerrada='cuando la autoescuela está cerrada'),
+    'clinicas': dict(tu='vuestra clínica', un='una clínica', cerrada='cuando la clínica está cerrada', seg=78, enlace='/es/clinicas/'),
+    'talleres': dict(tu='vuestro taller', un='un taller', cerrada='cuando el taller está cerrado', seg=78, enlace='/es/talleres/'),
+    'autoescuelas': dict(tu='vuestra autoescuela', un='una autoescuela', cerrada='cuando la autoescuela está cerrada', seg=78, enlace='/es/autoescuelas/'),
+    # 18-nov-2026: dos nichos más (todavía sin página propia de nicho: el logo lleva a la portada)
+    'inmobiliarias': dict(tu='vuestra inmobiliaria', un='una inmobiliaria', cerrada='cuando la oficina está cerrada', seg=80, enlace='/es/'),
+    'veterinarias': dict(tu='vuestra clínica', un='una clínica veterinaria', cerrada='fuera del horario de consulta', seg=80, enlace='/es/'),
 }
 MARK = ('<svg viewBox="0 0 140 140" aria-hidden="true"><defs><linearGradient id="zb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563EB"/>'
         '<stop offset="1" stop-color="#3B82F6"/></linearGradient><linearGradient id="zv" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366F1"/>'
@@ -31,7 +36,7 @@ WA_ICO = ('<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path
 
 def pagina(p):
     e = lambda s: html.escape(str(s or ''), quote=True)
-    n = N[p['nicho']]; nombre = p['nombre']
+    n = dict(N[p['nicho']], **{k: p[k] for k in ('tu', 'cerrada') if p.get(k)}); nombre = p['nombre']
     wa = f'https://wa.me/{WA}?text=' + urllib.parse.quote(f'Hola, Fabrizzio. Soy de {nombre}. He visto el vídeo y quiero ver la demo con nuestro negocio.')
     mail = ('mailto:fabrizzio.zelada@zeniapartners.com?subject=' + urllib.parse.quote(f'Demo para {nombre}')
             + '&body=' + urllib.parse.quote(f'Hola, Fabrizzio:\n\nHe visto el vídeo. Me interesa ver la demo con {nombre}.\n\n'))
@@ -41,13 +46,13 @@ def pagina(p):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>{e(nombre)}: 78 segundos sobre vuestro WhatsApp | Zenia</title>
-<meta name="description" content="Un vídeo de 78 segundos: qué pasa con los mensajes que llegan {e(n['cerrada'])} y cómo los contesta un agente de IA.">
+<title>{e(nombre)}: {n['seg']} segundos sobre vuestro WhatsApp | Zenia</title>
+<meta name="description" content="Un vídeo de {n['seg']} segundos: qué pasa con los mensajes que llegan {e(n['cerrada'])} y cómo los contesta un agente de IA.">
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
 <meta name="theme-color" content="#070B13">
 <meta property="og:type" content="video.other">
-<meta property="og:title" content="{e(nombre)}: 78 segundos sobre vuestro WhatsApp">
+<meta property="og:title" content="{e(nombre)}: {n['seg']} segundos sobre vuestro WhatsApp">
 <meta property="og:description" content="Qué pasa con los mensajes que llegan {e(n['cerrada'])}, y cómo los contesta un agente de IA.">
 <meta property="og:image" content="https://zeniapartners.com/v/media/zenia-{p['nicho']}.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -56,11 +61,11 @@ def pagina(p):
 <link rel="stylesheet" href="/v/assets/v.css?v={VERSION}">
 </head>
 <body>
-<header class="top"><a class="brand" href="https://zeniapartners.com/es/{p['nicho']}/">{MARK}<span>Zenia</span></a><small>Vídeo para <b>{e(nombre)}</b></small></header>
+<header class="top"><a class="brand" href="https://zeniapartners.com{n['enlace']}">{MARK}<span>Zenia</span></a><small>Vídeo para <b>{e(nombre)}</b></small></header>
 <main class="wrap">
   <div class="txt">
     <p class="label">Preparado para {e(nombre)}</p>
-    <h1>78 segundos sobre el WhatsApp de <span>{e(n['tu'])}</span></h1>
+    <h1>{n['seg']} segundos sobre el WhatsApp de <span>{e(n['tu'])}</span></h1>
     <p class="lead">Qué pasa con los mensajes que llegan {e(n['cerrada'])}, y cómo los contesta un agente de IA en vuestro propio WhatsApp.</p>
     <div class="cta desk">
       <p class="q">¿Lo vemos con {e(nombre)}?</p>
@@ -70,7 +75,7 @@ def pagina(p):
   </div>
   <div class="player" id="player">
     <video id="vid" playsinline preload="metadata" poster="/v/media/zenia-{p['nicho']}.jpg" src="/v/media/zenia-{p['nicho']}.mp4"></video>
-    <button class="play" id="play" type="button" aria-label="Reproducir el vídeo con sonido"><i></i><span>Ver el vídeo · 78 s</span></button>
+    <button class="play" id="play" type="button" aria-label="Reproducir el vídeo con sonido"><i></i><span>Ver el vídeo · {n['seg']} s</span></button>
   </div>
   <div class="cta mob">
     <p class="q">¿Lo vemos con {e(nombre)}?</p>
@@ -78,7 +83,7 @@ def pagina(p):
     <div class="btns"><a class="btn wa" href="{e(wa)}" target="_blank" rel="noopener">{WA_ICO}Quiero mi demo</a><a class="btn ghost" href="{e(mail)}">Responder por correo</a><a class="btn ghost" href="{CALENDLY}" target="_blank" rel="noopener">Reservar 30 minutos</a></div>
   </div>
 </main>
-<footer><span>Fabrizzio Zelada · Zenia Partners · Madrid</span><span>Las pantallas del vídeo son de ejemplo. <a href="https://zeniapartners.com/es/{p['nicho']}/">zeniapartners.com</a></span></footer>
+<footer><span>Fabrizzio Zelada · Zenia Partners · Madrid</span><span>Las pantallas del vídeo son de ejemplo. <a href="https://zeniapartners.com{n['enlace']}">zeniapartners.com</a></span></footer>
 <script type="application/json" id="v-data">{datos}</script>
 <script src="/v/assets/v.js?v={VERSION}" defer></script>
 </body>

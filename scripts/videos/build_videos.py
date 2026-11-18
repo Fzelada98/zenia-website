@@ -9,7 +9,11 @@ La lista de prospectos vive fuera del repo.
 Uso: python3 scripts/videos/build_videos.py <prospectos-video.json> [RAÍZ_DEL_SITIO]
 Cada elemento: {nicho: clinicas|talleres|autoescuelas|inmobiliarias|veterinarias, slug, codigo, nombre} y, si hace falta,
 «tu» (p. ej. «vuestro hospital») o «cerrada» para afinar el texto de ese negocio. Escribe v/<slug>-<codigo>/index.html. Idempotente.
-Cada nicho lleva la duración de su vídeo («seg») y la página a la que enlaza el logo («enlace»)."""
+Cada nicho lleva la duración de su vídeo («seg») y la página a la que enlaza el logo («enlace»).
+
+19-nov-2026, prueba A/B: una ficha con "variante": "B" lleva SU vídeo (v/media/p/<slug>-<codigo>.mp4 y .jpg, medio minuto,
+el WhatsApp con el nombre del negocio; lo hace «Vídeos por nicho/v2/hacer.py») y otro texto. Las demás no cambian.
+Las páginas generadas desde ese día llevan además el contador de Cloudflare (respaldo si gaia no guarda las reproducciones)."""
 import html
 import json
 import os
@@ -27,6 +31,8 @@ N = {
     'inmobiliarias': dict(tu='vuestra inmobiliaria', un='una inmobiliaria', cerrada='cuando la oficina está cerrada', seg=80, enlace='/es/'),
     'veterinarias': dict(tu='vuestra clínica', un='una clínica veterinaria', cerrada='fuera del horario de consulta', seg=80, enlace='/es/'),
 }
+NOCHE = {'clinicas': '21:45', 'talleres': '21:00', 'autoescuelas': '23:00', 'inmobiliarias': '22:30', 'veterinarias': '22:00'}   # hora del mensaje en el vídeo B
+CF = '<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon=\'{"token": "eceeed460f6d465bba3b970417d5f6b0"}\'></script>'
 MARK = ('<svg viewBox="0 0 140 140" aria-hidden="true"><defs><linearGradient id="zb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563EB"/>'
         '<stop offset="1" stop-color="#3B82F6"/></linearGradient><linearGradient id="zv" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366F1"/>'
         '<stop offset="1" stop-color="#7C3AED"/></linearGradient></defs><rect width="140" height="140" rx="30" fill="#111A2E"/>'
@@ -41,6 +47,8 @@ def pagina(p):
     mail = ('mailto:fabrizzio.zelada@zeniapartners.com?subject=' + urllib.parse.quote(f'Demo para {nombre}')
             + '&body=' + urllib.parse.quote(f'Hola, Fabrizzio:\n\nHe visto el vídeo. Me interesa ver la demo con {nombre}.\n\n'))
     datos = json.dumps({'nombre': nombre, 'nicho': p['nicho']}, ensure_ascii=False).replace('</', '<\\/')
+    if p.get('variante') == 'B':
+        return pagina_b(p, n, wa, mail, datos)
     return f'''<!DOCTYPE html>
 <html lang="es">
 <head>
@@ -59,7 +67,7 @@ def pagina(p):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="/v/assets/v.css?v={VERSION}">
-</head>
+{CF if p.get('tanda', '') >= '2026-11-19' else ''}</head>
 <body>
 <header class="top"><a class="brand" href="https://zeniapartners.com{n['enlace']}">{MARK}<span>Zenia</span></a><small>Vídeo para <b>{e(nombre)}</b></small></header>
 <main class="wrap">
@@ -84,6 +92,59 @@ def pagina(p):
   </div>
 </main>
 <footer><span>Fabrizzio Zelada · Zenia Partners · Madrid</span><span>Las pantallas del vídeo son de ejemplo. <a href="https://zeniapartners.com{n['enlace']}">zeniapartners.com</a></span></footer>
+<script type="application/json" id="v-data">{datos}</script>
+<script src="/v/assets/v.js?v={VERSION}" defer></script>
+</body>
+</html>
+'''
+
+
+def pagina_b(p, n, wa, mail, datos):
+    """Variante B: el vídeo es del propio negocio (su nombre en la cabecera del WhatsApp)."""
+    e = lambda s: html.escape(str(s or ''), quote=True)
+    nombre = p['nombre']; noche = NOCHE[p['nicho']]; seg = int(p.get('seg') or 33); med = f"/v/media/p/{p['slug']}-{p['codigo']}"
+    cta = (f'''<p class="q">¿Lo vemos con {e(nombre)}?</p>
+      <p class="s">En 48 horas te preparo una demo con la información de la web de {e(nombre)}. Sin compromiso.</p>
+      <div class="btns"><a class="btn wa" href="{e(wa)}" target="_blank" rel="noopener">{WA_ICO}Quiero mi demo</a><a class="btn ghost" href="{e(mail)}">Responder por correo</a><a class="btn ghost" href="{CALENDLY}" target="_blank" rel="noopener">Reservar 30 minutos</a></div>''')
+    return f'''<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{e(nombre)}: el WhatsApp de las {noche} | Zenia</title>
+<meta name="description" content="Medio minuto con el WhatsApp de {e(nombre)}: el mismo mensaje dos veces, primero sin nadie al otro lado y después con un agente de IA.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
+<meta name="theme-color" content="#070B13">
+<meta property="og:type" content="video.other">
+<meta property="og:title" content="{e(nombre)}: el WhatsApp de las {noche}">
+<meta property="og:description" content="El mismo mensaje, dos veces: sin nadie al otro lado y con un agente de IA contestando.">
+<meta property="og:image" content="https://zeniapartners.com{med}.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/v/assets/v.css?v={VERSION}">
+{CF}</head>
+<body>
+<header class="top"><a class="brand" href="https://zeniapartners.com{n['enlace']}">{MARK}<span>Zenia</span></a><small>Vídeo para <b>{e(nombre)}</b></small></header>
+<main class="wrap">
+  <div class="txt">
+    <p class="label">Preparado para {e(nombre)}</p>
+    <h1>Son las {noche} y alguien escribe a <span>{e(nombre)}</span></h1>
+    <p class="lead">El mismo mensaje, dos veces: primero sin nadie al otro lado y después con un agente de IA contestando. Dura medio minuto.</p>
+    <div class="cta desk">
+      {cta}
+    </div>
+  </div>
+  <div class="player" id="player">
+    <video id="vid" playsinline preload="metadata" poster="{med}.jpg" src="{med}.mp4"></video>
+    <button class="play" id="play" type="button" aria-label="Reproducir el vídeo con sonido"><i></i><span>Ver el vídeo · {seg} s</span></button>
+  </div>
+  <div class="cta mob">
+    {cta}
+  </div>
+</main>
+<footer><span>Fabrizzio Zelada · Zenia Partners · Madrid</span><span>La conversación del vídeo es de ejemplo. <a href="https://zeniapartners.com{n['enlace']}">zeniapartners.com</a></span></footer>
 <script type="application/json" id="v-data">{datos}</script>
 <script src="/v/assets/v.js?v={VERSION}" defer></script>
 </body>

@@ -11221,3 +11221,17 @@ Full build with the 6-question triage, stack table and 2-week rollout: https://z
 #WhatsAppBusinessAPI #AIAgents #FieldServiceInfrastructure #VoiceAI
 
 ---
+
+## 2026-11-18 - Programas de Fidelización con WhatsApp
+
+A loyalty program on WhatsApp is not a template blast; it's a transactional surface sitting on top of the CRM.
+
+Four infra decisions carry the build. First, source of truth: phone-keyed contact in the CRM holds points ledger, tier state, consent timestamp and canonical compra history; the WhatsApp conversation is a view, not the store. Second, write path from POS/webstore (Shopify, WooCommerce, PrestaShop, Square, SumUp) is a webhook with an idempotency key per order_id; points append must land under 400ms p95 so the agent can quote the new balance in the same session. Third, the agent is tool-calling, not prompt-only: balance, redeem, opt-out and tier-check are typed functions against the CRM; free-form prompting a loyalty balance is how programs lose trust the first week. Fourth, service-window discipline: inbound balance/redeem traffic is free under Meta's 2025 pricing, while outbound expiry and tier-up notifications are utility templates pre-approved; mixing the two is what kills unit economics.
+
+Two numbers from the write-up: Meta Business reports WhatsApp business message open rates above 90%, several times email; EY 2025 via eMarketer finds 60% of users will install a brand app for points but only 15-25% stay active at 6 months — the "no new install" path is what sustains engagement.
+
+Full breakdown with the four program types, vertical examples, integration table and 2026 Zenia Partners pricing: https://zeniapartners.com/blog/programas-de-fidelizacion-con-whatsapp.html
+
+#WhatsAppBusinessAPI #AIAgents #PlatformEngineering #CustomerLoyalty
+
+---

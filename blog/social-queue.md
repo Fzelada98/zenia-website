@@ -11250,3 +11250,17 @@ Full build with the 7 agent jobs, stack table and 2-week WhatsApp-first rollout:
 
 ---
 
+## 2026-11-18 - Agente IA Alquiler Vacacional
+
+Running an AI agent in front of a short-term rental PMS is less a model problem and less a CX problem, more a sync problem.
+
+Three design decisions carry the build. First, inventory source of truth lives in the PMS (Avantio, Hostaway, Octorate, Lodgify, 365Villas, ICNEA) — the agent reads availability via the PMS API and never touches OTA calendars directly; iCal is a fallback with a 5-10 min staleness budget that explicitly degrades the booking flow to "we'll confirm in a minute" instead of silently overbooking. Second, Airbnb's native inbox is not addressable by third parties until the 2027 agent that Brian Chesky announced ships, so the first outbound message on a confirmed reservation is a utility template carrying your WhatsApp Business API number; from message two the conversation lives on WABA with full webhook and context. Third, since Meta's October 2026 change the per-template cost model made session windows irrelevant — we batch guest comms into four approved utility templates (confirmation, check-in with keycode, 48h reminder, post-stay) and cap marketing templates at one per booking cycle. Target median first reply under 60s on WABA; model path is a Claude agent over a typed guest/property/booking schema with RAG over per-property FAQ markdown.
+
+Reference numbers on a 20-property Spanish operator: 25-40h/month of operator time removed, 70-80% autoresolve on check-in Qs, measurable lift on Airbnb/Booking communication score above 4.9/5 after 3 months.
+
+Full build with cost table, PMS integration matrix and the implementation plan: https://zeniapartners.com/blog/agente-ia-alquiler-vacacional.html
+
+#WhatsAppBusinessAPI #AIAgents #PropertyManagement #PlatformEngineering
+
+---
+

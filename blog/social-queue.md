@@ -11296,3 +11296,18 @@ Full build with the 7 agent jobs, 3-tier stack table and 14-day rollout: https:/
 #WhatsAppBusinessAPI #AIAgents #FieldServiceInfrastructure #VoiceAI
 
 ---
+
+
+## 2026-11-19 - Chatbots for SMBs in Málaga: what breaks at the edges (EN)
+
+Running a per-SMB AI agent across a long tail of small Málaga businesses (1 to 15 employees, high tourist Costa del Sol traffic) stops being a model problem and becomes a routing, state and billing problem.
+
+Three infra decisions carry the build. First, tenant isolation is per-WhatsApp-Business-Account, not per-user: each tenant gets its own BSP-mapped WABA, its own typed `AgentPolicy` (languages, escalation thresholds, allowed CRM writes) and its own retrieval index — collapsing tenants into a shared prompt is cheap in tokens and expensive when a bilingual ES/EN tenant suddenly bleeds answers into a neighbor's conversation. Second, latency budget is split explicitly: p50 inbound-to-first-token holds at 680ms with the LLM call behind a 1200ms hard timeout, because above that line Costa del Sol customers simply call the next number on Google Maps. Third, Meta's August 2026 switch from per-conversation to per-token pricing for Business Agent messages broke every unit-cost model we had — we now bill tenants on measured tokens-per-resolved-intent with a 7-day rolling cap and surface the breakdown in their CRM, otherwise a bursty weekend of Costa del Sol English-language traffic silently eats a Starter plan.
+
+Reference numbers across the Málaga SMB cohort on WhatsApp Business API + Claude + custom CRM: p50 first reply 42s, intent-resolution without human handoff 79%, median tokens/resolved-intent 1,420 on ES-only tenants and 2,180 on bilingual ES/EN tenants.
+
+Full breakdown with the three-tier provider table (local consultancies, SaaS platforms, custom agent) and the five vendor-selection questions: https://zeniapartners.com/blog/chatbots-para-empresas-en-malaga.html
+
+#WhatsAppBusinessAPI #AIAgents #PlatformEngineering #MultiTenant
+
+---

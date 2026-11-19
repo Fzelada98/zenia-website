@@ -11264,3 +11264,19 @@ Full build with cost table, PMS integration matrix and the implementation plan: 
 
 ---
 
+## 2026-11-19 - Software gestión restaurante hostelería 2026
+
+Treating a restaurant stack as "pick one POS" is how you end up without a customer layer three years in.
+
+The 2026 stack is three layers, not one. POS/till (Last.app, Glop, HIOPOS, Cegid Revo Xef, Ágora) owns cash, kitchen and comanda — 35-90 €/month/site, solved. Reservations (CoverManager, TheFork, Resy) owns slot inventory, deposits and waitlist — webhook-fed, also solved. The customer layer — identity resolution across phone/email/order_id, WhatsApp Business API inbound with a typed agent over reservation + table + allergen schema, attribution by channel — is the layer nobody owns because every POS vendor claims to own it in the brochure and fails to in the API.
+
+Two infra notes on the customer layer we build at Zenia Partners. First, it's non-destructive: the POS keeps writing tickets, we bind to its REST or intermediate-integration bus and mirror reservation/availability state; the agent never becomes the source of truth for inventory. Second, the agent is tool-calling, not prompt-only: `check_availability`, `hold_slot`, `confirm_reservation`, `escalate_human` are typed functions against the POS/reservation APIs with idempotency keys on `(phone, slot_start)`. Median first reply target on WhatsApp under 60s p95, including a sub-second availability roundtrip against CoverManager/TheFork.
+
+Reference datapoint from Alimarket's 2026 Hardware & Software for Restauración report: 83.5% of Spanish restaurants have "some digital tool" but only 15.9% are highly digitalized (BCC Innovation + Delectatech). The gap is almost entirely the customer layer.
+
+Full comparative with pricing, four operator profiles and the five questions to ask every vendor: https://zeniapartners.com/blog/software-gestion-restaurante-hosteleria-2026.html
+
+#WhatsAppBusinessAPI #AIAgents #PlatformEngineering #RestaurantTech
+
+---
+

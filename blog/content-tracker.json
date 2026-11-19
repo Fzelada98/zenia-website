@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-11-18T22:00:00+00:00",
+  "lastRun": "2026-11-19T00:00:00+00:00",
   "posts": [
+    {
+      "slug": "software-gestion-restaurante-hosteleria-2026",
+      "keyword": "software gestion restaurante hosteleria",
+      "tier": 1,
+      "cluster": "restaurantes-pillar",
+      "status": "published",
+      "date": "2026-11-19",
+      "source": "matrix-long-tail"
+    },
     {
       "slug": "agente-ia-alquiler-vacacional",
       "keyword": "agente ia alquiler vacacional",

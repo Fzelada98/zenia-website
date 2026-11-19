@@ -11280,3 +11280,17 @@ Full comparative with pricing, four operator profiles and the five questions to 
 
 ---
 
+
+## 2026-11-19 - AI Agent for Irrigation Companies (EN)
+
+Running an AI agent in front of an irrigation dispatch stack is less a voice problem and more a scheduling-primitives problem.
+
+Four infra decisions carry the build. First, the call router runs on four typed intake lanes (install, repair, startup/winterization, backflow) — a typed `IntakeLane` enum routes before model inference, which is what keeps median first-word latency under 850ms on the Vapi + Claude path and prevents the agent from freelancing a quote on an install the owner needs to walk. Second, seasonal booking is keyed on ZIP-level first-frost dates cached as a per-region table, not model-inferred — the dormant reactivation job queues WhatsApp utility templates against `last_winterization_date` with a weekly batch cap of 200 per route and an idempotency key on `(customer_id, service_year)`. Third, after-hours triage collapses to one hard gate: "is water running right now that you cannot shut off?" — a boolean that pages the on-call tech via Twilio SMS with the address and skips the normal booking path; false-positive pages are tracked as a first-class SLI and held under 2/month. Fourth, the backflow job carries a typed deadline attached to the water account, with 30-day and 7-day cron reminders and a post-job webhook that emails the signed certificate to the utility; the agent refuses to interpret pass/fail and only the licensed tester signs.
+
+Reference 90-day numbers from the DFW 2-truck deployment: business-hours pickup 68 → 99%, after-hours 0 → 96%, median first reply 4h12m → 42s, dormant-to-winterization conversion 11.6 → 31.7%, office assistant phone hours 23 → 8/wk.
+
+Full build with the 7 agent jobs, 3-tier stack table and 14-day rollout: https://zeniapartners.com/blog/ai-agent-for-irrigation-companies.html
+
+#WhatsAppBusinessAPI #AIAgents #FieldServiceInfrastructure #VoiceAI
+
+---

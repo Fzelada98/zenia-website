@@ -1281,7 +1281,9 @@
       "keyword": "ai agent for irrigation companies",
       "tier": 3,
       "cluster": "trades",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-11-19",
+      "note": "Tracker tier-3 topic. ~2,230-word US-focused build: defines AI agent as one system across voice/WhatsApp/web chat/SMS with CRM + calendar writeback, 4-lane intake (install, repair, startup/winterization, backflow), 7 agent jobs (first-ring pickup, 8-field repair qualification across controller brand/zones/symptom/pressure/warranty, seasonal startup+winterization booking off ZIP first-frost dates, backflow test scheduling with 30/7-day deadline reminders and certificate email to water utility, after-hours triage with 'water running right now' decision, 30/60/90-day dormant reactivation from Jan 15, out-of-scope handoff for drainage/landscape lighting/well pump), 2-truck Dallas-Fort Worth 90-day case (business-hours pickup 68->99%, after-hours 0->96%, median first reply 4h 12m->42s, repair booking 44->58%, dormant winterization reactivation 11.6->31.7% with 107 booked jobs, office assistant 23->8 hrs/wk, +~$32,900 net at $265 repair ticket and $148 winterization ticket vs $1,900 setup + $647/mo), 3-tier stack table (lean $149-399/mo with Dialzara/Goodcall + Jobber/Housecall Pro; mid $449-1,100/mo with Twilio+Vapi/Retell+Claude + Jobber/FieldPulse + HubSpot; enterprise ServiceTitan $2,000+/5 users), 2026 US pricing bands (Jobber $29/mo annual, FieldPulse $99-249/mo, ServiceTitan $245-400/tech/mo + $5k-50k impl), explicit refuse-list (hard quotes >$500, backflow pass-fail interpretation, water pressure design, warranty negotiation, HOA/ordinance), day-30 review criteria (business-hours pickup >95%, after-hours >90%, first reply <90s, repair booking >50%, false-positive emergency pages <2/mo), 14-day rollout, 3 honest limits (parts availability, install walks, licensing). Index card added, sitemap entry added."
     },
     {
       "slug": "ai-agent-for-mobile-detailers",

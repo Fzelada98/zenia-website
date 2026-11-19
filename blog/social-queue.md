@@ -11325,3 +11325,16 @@ Full build with the 7 agent jobs, DMS stack table and 14-day rollout: https://ze
 #WhatsAppBusinessAPI #AIAgents #DealerTech #VoiceAI
 
 ---
+## 2026-11-19 - Mejor CRM para Clínicas Dentales en Barcelona
+
+Building an AI agent for a dental clinic in Barcelona is less about chat UX and more about a clean integration contract with the clinical PMS. Four infra decisions carry the architecture.
+
+First, the dental-CRM adapter is per-vendor, not generic: Gesden ONE, Clinic Cloud, Dentalink and Pabau each expose different auth surfaces and appointment payloads (OAuth2 + REST on Pabau, API-key + SOAP on Gesden, webhook-first on Clinic Cloud), and the `AppointmentSlot` struct maps to a different schema per vendor. The agent reads live agenda state rather than caching slots, which is what keeps it from double-booking two higienistas at 18:00 on a Thursday. Second, data boundaries are explicit by design: the agent sees agenda metadata and basic patient contact, nothing else. Odontograma, radiographs and treatment plans stay inside the clinical PMS, which is how we stay inside Art. 9 GDPR and the LOPDGDD for datos de categoría especial. Third, WhatsApp Business API runs through a verified BSP on the clinic's own display number, routed via an intent classifier before any model call; that keeps per-message cost under €0.02 all-in and median first reply under 60 seconds, 24/7. Fourth, the human-handoff gate is a typed `EscalationReason` enum (urgency_keyword, payment_dispute, repeated_misunderstanding, patient_requests_human) and pages recepción with the full thread context, not a raw dump.
+
+Reference numbers for the Barcelona market: 61% of dental leads expect a reply in under 15 minutes (Invisalign Spain, 2024), and the cost per qualified ortho/implant lead on Google Ads in the Eixample and Sarrià sits at €55-85 in November 2026 (SEMrush public data). Losing a Sunday-night Instagram DM has a measurable P&L signature.
+
+Full build with the dental-CRM comparative table, 4-week rollout and per-vendor integration notes: https://zeniapartners.com/blog/mejor-crm-para-clinicas-dentales-en-barcelona.html
+
+#WhatsAppBusinessAPI #AIAgents #HealthTech #DentalTech
+
+---

@@ -11311,3 +11311,17 @@ Full breakdown with the three-tier provider table (local consultancies, SaaS pla
 #WhatsAppBusinessAPI #AIAgents #PlatformEngineering #MultiTenant
 
 ---
+
+## 2026-11-19 - AI Agent for RV Dealers (EN)
+
+Running an AI agent in front of an RV dealership stack is less a lead-response problem and more a DMS write-back and typed-intake problem.
+
+Four infra decisions carry the build. First, the DMS adapter is per-vendor, not generic: IDS Astra, Lightspeed EVO, DX1 and Blue Sky RV each expose different auth surfaces (OAuth2 for Lightspeed, API-key for DX1, broker-channel webhook for IDS Astra), and the trade record schema differs enough that a `TradeIntake` struct maps to a different payload per DMS. Second, the RV trade intake carries a typed 17-digit VIN decoder against the RVIA data standard (not a free-text note): `decode_vin` returns a structured `{year, make, model, length_ft, slide_count, chassis_type}` and refuses to proceed if the checksum fails, which is what keeps the used car manager from appraising on bad data. Third, the finance pre-qual lane is split explicitly: soft-pull via 700Credit or Dealertrack is a tool call with a PCI-aware form link for SSN-last-4 and DOB, while hard-pull is a hard refuse at the agent layer and stays with a human underwriter. Fourth, after-hours routing runs a typed `ServiceEmergency` boolean gate — a stuck slide-out on a Class A rolling through town Sunday pages the on-call manager via Twilio SMS; everything else queues to the service drive's Monday-morning slot pool, with false-positive pages held as a first-class SLI under 2/month.
+
+Reference 90-day numbers from a 3-store Midwest towable deployment (220 units, IDS Astra + WhatsApp BSP + Vapi/Twilio + Claude 4.7 Opus/Haiku split): median first reply 4h 37m → 44s, business-hours call pickup 71 → 98%, after-hours 0 → 96%, inbound call appointment set rate 24 → 58%, F&I pre-approval before store visit 18 → 61%.
+
+Full build with the 7 agent jobs, DMS stack table and 14-day rollout: https://zeniapartners.com/blog/ai-agent-for-rv-dealers.html
+
+#WhatsAppBusinessAPI #AIAgents #DealerTech #VoiceAI
+
+---

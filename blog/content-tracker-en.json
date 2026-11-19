@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-11-18T09:00Z",
+  "lastRun": "2026-11-19T18:00Z",
   "market": "US/UK small business",
   "posts": [
     {
@@ -54,7 +54,7 @@
       "cluster": "dental",
       "status": "published",
       "date": "2026-11-05",
-      "note": "striking-loop hit: 21 impressions, pos 23.0 (en-market). /blog/dental-crm.html was printing for the query but its title targets 'Dental CRM', not 'CRM for Dentists' head-on. Dedicated 2,314-word owner-dentist-framed build: 5 symptoms that signal a CRM is needed, buyer checklist, PMS integration table (Open Dental, Dentrix G7/G8+Ascend, Eaglesoft, Curve, Denticon), 2-dentist Austin case study (recall 64\u219281%, case acceptance on $1,500+ plans 31\u219246%, hygiene no-show 14\u21928%, 148/980 dormant reactivated, ~$168k incremental over 6 months vs $5,800 CRM spend), pricing bands $149 to $1,800/month per office, 5 automations (overdue recall, dormant 12-24mo, unscheduled treatment follow-up, 24/7 AI agent, end-of-year PPO benefits push), HIPAA checklist, 2-week rollout. Cross-link added from dental-crm.html using 'CRM for Dentists' as anchor."
+      "note": "striking-loop hit: 21 impressions, pos 23.0 (en-market). /blog/dental-crm.html was printing for the query but its title targets 'Dental CRM', not 'CRM for Dentists' head-on. Dedicated 2,314-word owner-dentist-framed build: 5 symptoms that signal a CRM is needed, buyer checklist, PMS integration table (Open Dental, Dentrix G7/G8+Ascend, Eaglesoft, Curve, Denticon), 2-dentist Austin case study (recall 64→81%, case acceptance on $1,500+ plans 31→46%, hygiene no-show 14→8%, 148/980 dormant reactivated, ~$168k incremental over 6 months vs $5,800 CRM spend), pricing bands $149 to $1,800/month per office, 5 automations (overdue recall, dormant 12-24mo, unscheduled treatment follow-up, 24/7 AI agent, end-of-year PPO benefits push), HIPAA checklist, 2-week rollout. Cross-link added from dental-crm.html using 'CRM for Dentists' as anchor."
     },
     {
       "slug": "crm-whatsapp-integration",
@@ -1019,7 +1019,7 @@
       "cluster": "healthcare",
       "status": "published",
       "date": "2026-11-07",
-      "note": "Tier-3 vertical build. 2,141 words. US cardiology focus with 90-day athenahealth case (abandon 22%\u21924%, referral-to-contact 54h\u219212min median, new-patient no-show 19%\u219211%, recall 31%\u219258%, prep 44%\u219282%, ~$122.8k incremental revenue over 90 days vs $8.4k platform cost). EHR integration table for Epic App Orchard FHIR R4, athenahealth Marketplace, eClinicalWorks HL7 and NextGen. HIPAA/BAA section, 2026 pricing bands ($299-$3,500+), 2-week rollout and 5 KPIs to track. No chatbot language, no em-dashes. Related to physical-therapy and CRM-for-dentists."
+      "note": "Tier-3 vertical build. 2,141 words. US cardiology focus with 90-day athenahealth case (abandon 22%→4%, referral-to-contact 54h→12min median, new-patient no-show 19%→11%, recall 31%→58%, prep 44%→82%, ~$122.8k incremental revenue over 90 days vs $8.4k platform cost). EHR integration table for Epic App Orchard FHIR R4, athenahealth Marketplace, eClinicalWorks HL7 and NextGen. HIPAA/BAA section, 2026 pricing bands ($299-$3,500+), 2-week rollout and 5 KPIs to track. No chatbot language, no em-dashes. Related to physical-therapy and CRM-for-dentists."
     },
     {
       "slug": "ai-agent-for-urology-clinics",
@@ -1299,7 +1299,9 @@
       "keyword": "ai agent for rv dealers",
       "tier": 3,
       "cluster": "auto",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-11-19",
+      "note": "tier-3 tracker pick (2026-11-19): All English striking queries already have direct-match posts; moved to next pending topic. US-focused AI-agent build (~2,530 words) for an RV dealership against a tough 2026 market: RVIA fall 2026 RoadSigns cut wholesale shipments to ~290,000 units vs 342,200 in 2025, Statistical Surveys reported new retail -19.0% YoY in May and towables -19.6%, Rapidious tracked average days on inventory for used Class A climbing from 172 (March) to 330 (June), and RVIA forecasts stabilization in 2027. 7 agent jobs (24/7 first-ring pickup, 11-field qualification with towable vs motorized split, drive-time-aware appointment booking, trade intake with 17-digit RV VIN decode, soft-pull finance pre-qual, after-hours service triage, 30/60/90-day dormant reactivation on 600-2,000 unsold ups), 3-store Midwest towable dealer 90-day case (220 units, 84% towable 16% Class C, $38M run rate; median first reply 4h 37m->44s, biz-hours pickup 71->98%, after-hours 0->96%, inbound-call appointment set rate 24->58%, lead-to-walk-in 11->22%, F&I pre-approval before store visit 18->61%, units moved 46->59/mo over 90 days, aged used stock >120 days 38->21 units, floor-plan interest run rate $42,100->$29,700/mo = -$12,400/mo, BDC first-touch hours 112->36/wk, $175k incremental gross + $37.2k floor-plan savings vs $6,800 setup + $4,350/90 days), stack table (IDS Astra for RV-only DMS, Lightspeed EVO with RevPay July 2026, DX1 PDS-certified, Blue Sky RV, Dealertrack RV + Meta Cloud API/360dialog/Twilio BSP + 10DLC + Vapi/Retell/Thoughtly/Sameday/Dialzara/myaifrontdesk + Claude 4.7 Opus/Haiku split + 700Credit/Dealertrack/RouteOne/M&T/Alliant/GoodSam + RVTrader/RVT/Rollick/FB Marketplace/VDP/Google LSA), explicit refuse-list (hard price commits, trade valuations, hard credit decisions, mechanical diagnosis, towing/payload beyond basic chart, out-of-scope manufacturers Thor/Forest River/Grand Design/Winnebago), 2026 US pricing bands ($249-$6,500/mo + $0-$25,000 setup vs Midwest BDC rep $42-$58k fully loaded), 14-day rollout."
     },
     {
       "slug": "ai-agent-for-motorcycle-dealers",
@@ -1365,7 +1367,7 @@
       "cluster": "professional",
       "status": "published",
       "date": "2026-11-04",
-      "note": "Tier 2 topic from tracker; striking-loop had no uncovered EN queries meeting criteria (only EN queries printing were 'ai receptionist for photographers' and 'ai receptionist for driving schools', both already have dedicated pages). 2,600-word US-focused build with 3-attorney Phoenix firm case study (lead-to-consult 31\u219258%, median response 4h22m\u219247s, 90-day trust funding 58\u219289%), Clio/MyCase/Lawmatics/DecisionVault/Calendly/LawPay stack table, 5 workflows including the 90-day trust funding chase, bar-safe guardrails (no legal advice, jurisdiction/conflict checks, auditable transcripts), 2-week rollout. Linked to ai-agent-for-law-firms, law-firm-crm-with-ai, whatsapp-automation-for-law-firms, ai-agent-for-tax-preparers."
+      "note": "Tier 2 topic from tracker; striking-loop had no uncovered EN queries meeting criteria (only EN queries printing were 'ai receptionist for photographers' and 'ai receptionist for driving schools', both already have dedicated pages). 2,600-word US-focused build with 3-attorney Phoenix firm case study (lead-to-consult 31→58%, median response 4h22m→47s, 90-day trust funding 58→89%), Clio/MyCase/Lawmatics/DecisionVault/Calendly/LawPay stack table, 5 workflows including the 90-day trust funding chase, bar-safe guardrails (no legal advice, jurisdiction/conflict checks, auditable transcripts), 2-week rollout. Linked to ai-agent-for-law-firms, law-firm-crm-with-ai, whatsapp-automation-for-law-firms, ai-agent-for-tax-preparers."
     },
     {
       "slug": "ai-agent-for-criminal-defense-attorneys",

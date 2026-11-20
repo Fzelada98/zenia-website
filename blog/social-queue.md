@@ -11338,3 +11338,16 @@ Full build with the dental-CRM comparative table, 4-week rollout and per-vendor 
 #WhatsAppBusinessAPI #AIAgents #HealthTech #DentalTech
 
 ---
+## 2026-11-20 - Cobrar por WhatsApp: payments pipeline for SMBs
+
+Building a "charge in WhatsApp" flow for Spanish SMBs in 2026 is less a UX problem and more a pipeline-correctness problem: WhatsApp Pay is still unshipped in the EU, so the agent has to orchestrate an external PSP without breaking the chat as source of truth.
+
+Four infra decisions carry the build. First, the PSP adapter is per-vendor, not generic: Stripe Payment Links, Bizum Negocios (bank-mediated SNCE), SumUp and Monei each expose different webhook contracts, idempotency semantics and refund paths, and a typed `PaymentIntent` struct maps to a different payload per PSP. Second, the agent never sees PAN or CVV: a typed `PaymentRequest` emits a signed pay-by-link into the WABA session, and the 3DS2 challenge stays inside the PSP's PCI scope; the chat only ever receives tokens and status transitions. Third, the webhook is the source of truth, not the chat: `charge.succeeded` closes the loop in the agent state machine, updates the CRM lead stage and triggers invoice emission against Holded or Quipu; we treat chat-side "¿ya ha llegado?" messages as read-only queries against that state, which eliminates the double-charge class entirely. Fourth, Bizum Negocios is treated as a first-class rail under Orden HAC/747/2025 (monthly AEAT reporting since Jan-2026), with the business account IBAN isolated from the owner's personal Bizum to keep the tax trail clean.
+
+Reference pipeline numbers across the SMB cohort on WhatsApp Business API + Stripe + custom CRM: p50 presupuesto-aceptado to payment-confirmed 4m 12s (vs 5 days on the classic email/transfer loop), webhook-to-invoice emission p95 under 3s, chargeback rate 0.11% on card and 0 on Bizum, median per-conversation cost €0.04 on Meta's service-conversation pricing restored on 1-oct-2026.
+
+Full write-up with the pay-by-link comparison table, legal notes (PSD2, HAC/747/2025) and agent architecture: https://zeniapartners.com/blog/cobrar-por-whatsapp-pymes.html
+
+#WhatsAppBusinessAPI #AIAgents #Payments #PlatformEngineering
+
+---

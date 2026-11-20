@@ -11377,3 +11377,16 @@ Full write-up with the per-campaign cost table, open-rate benchmarks, 7-step rol
 #WhatsAppBusinessAPI #AIAgents #PlatformEngineering #SaaS
 
 ---
+## 2026-11-20 - AI Agent for Notaries (EN)
+
+Building an AI agent for a US notary business is less a UX problem and more a jurisdictional-correctness pipeline, because the wrong turn is not a bad reply, it is unauthorized practice of law and a state-board complaint on the notary's commission.
+
+Four infra decisions carry the build. First, the refuse-list is emitted as a typed `AgentRefusal` enum (legal_interpretation, acknowledgment_vs_jurat, capacity_assessment, cross_state_ron, pii_storage, apostille_eta) and evaluated before any model call, which keeps the agent on intake-scheduling-receipt scope and off anything a notary commission does not cover. Second, the dispatcher adapter is per-marketplace, not generic: Snapdocs Notary Connect, CloseWise, NotaryDash and Signing Order each expose different order payloads (webhook push on Snapdocs, inbound email parsing on the longer tail), and the typed `SigningOrder` struct normalizes signer, address, document count, scanback, print tray and fee reference before the calendar write. Third, calendar booking is drive-time-aware: a per-ZIP distance matrix refreshed weekly against the OSRM road layer prevents the 2:00 PM Katy, 2:45 PM Woodlands collision that costs a 2-notary shop ~$900/week in forfeited travel fees. Fourth, state-of-signer is validated on every RON inquiry through a lookup against the notary's active commissions (TX, CA, FL, NY and so on), and a signer outside those states gets a typed `OutOfScope` refusal with the right partner handoff instead of a quote.
+
+Reference numbers from a 2-notary Houston shop over 90 days on WhatsApp + Vapi voice + web chat + 10DLC SMS wired to NotaryAssist and Snapdocs Notary Connect: business-hours call pickup 71% to 99%, after-hours 0% to 97%, median first reply 3h 14m to 41s, appointment set rate 38% to 61%, AR days 29 to 11 via Stripe link inside the T+10 receipt, zero refuse-list breaches over 2,100 conversations.
+
+Full write-up with 7 agent jobs, the 2026 notary stack, UPL refuse-list, 2026 US pricing bands and 2-week rollout: https://zeniapartners.com/blog/ai-agent-for-notaries.html
+
+#WhatsAppBusinessAPI #AIAgents #LegalTech #PlatformEngineering
+
+---

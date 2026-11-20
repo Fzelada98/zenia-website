@@ -1343,7 +1343,9 @@
       "keyword": "ai agent for notaries",
       "tier": 3,
       "cluster": "professional",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-11-20",
+      "note": "US notary playbook (~2,400 words). 7 jobs (first-ring pickup, 10-field intake, drive-time-aware calendar, after-hours triage, RON session prep, T-24/T-2/T+10 reminders, dormant reactivation). Explicit UPL refuse-list (no legal interpretation, no choosing acknowledgment vs jurat, no PII storage). 2-notary Houston 90-day case (pickup 71->99 percent, after-hours 0->97 percent, first reply 3h 14m->41s, appt set 38->61 percent, 118 incremental signings, ~$19,400 at $1,497 setup + $547/mo). Stack table (NotaryAssist/NotaryGadget/NotaryBoard/NotaryNext + Snapdocs/CloseWise/NotaryDash + BlueNotary/OneNotary/Proof/NotaryCam/DocVerify/Secured Signing + Vapi/Retell/Dialzara/Thoughtly + WhatsApp Cloud API via 360dialog/Twilio/Gupshup + Stripe/Square/QBP). 2026 US pricing bands ($997-$4,900 setup, $297-$1,650/mo). 2-week WhatsApp-first rollout. Backed by NNA 49-state RON count and Cal.com native WhatsApp notary templates."
     },
     {
       "slug": "ai-agent-for-tax-preparers",

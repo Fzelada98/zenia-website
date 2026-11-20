@@ -11364,3 +11364,16 @@ Full write-up with the stack table, DMS integration points, 2026 US pricing band
 #WhatsAppBusinessAPI #AIAgents #DealerTech #Powersports
 
 ---
+## 2026-11-20 - WhatsApp Marketing for SMBs: infra for not getting banned by Meta
+
+Running WhatsApp marketing for SMBs in Spain is less a creative problem and more a platform-compliance pipeline, and the architecture has to assume Meta will degrade the number before the campaigns do.
+
+Four infra decisions carry the build. First, the template pipeline is category-aware, not generic: Meta charges €0.0585 per marketing template delivered in Spain and €0.0166 per utility (official rate since 1-oct-2026), and auto-recategorization at billing time silently moves "utility" templates into the marketing bucket when the content is promotional. The template registry we ship versions every variant with a typed `TemplateCategory` enum, a diff against the last approved copy and a pre-flight classifier that rejects anything that would be recategorized, which is what keeps the per-message cost stable instead of drifting 3.5x overnight. Second, WhatsApp Business Platform runs on Cloud API through a verified BSP on the SMB's display number, with the inbound side routed through an intent classifier before any model call; median first reply lands under 60 seconds across broadcast reply, inbound organic, click-to-WhatsApp ad landing and web chat, which is the real multiplier on the 79-94% opt-in open rate (Klaviyo and Chatarmin 2026 benchmarks). Third, the CRM adapter is append-only with a typed `CampaignEvent` log and per-channel attribution, so a reactivation that closes 11 days later through organic WhatsApp still gets credited to the broadcast that seeded it, which fixes the "is this working" question most SMB stacks answer wrong. Fourth, a quality-rating monitor samples the number's `MessagingHealth` state every 60 seconds and freezes outbound if the rating slips below `HIGH`, which has saved three client numbers from a full-ban event this year.
+
+Reference numbers from the SMB cohort on WhatsApp Business API + typed template registry + agent-fronted inbound: outbound broadcast delivery p95 11s per 1k contacts, template rejection rate at Meta review under 4% versus the industry self-reported ~18%, opt-in-to-first-purchase median 38 hours, quality-rating degradation events zero over 90 days on the active cohort.
+
+Full write-up with the per-campaign cost table, open-rate benchmarks, 7-step rollout and the Meta-bans-your-number failure list: https://zeniapartners.com/blog/whatsapp-marketing-para-pymes.html
+
+#WhatsAppBusinessAPI #AIAgents #PlatformEngineering #SaaS
+
+---

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HP0VQSEL68"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-HP0VQSEL68');
+</script>
+
+<title>Automatizar Encuestas de Satisfaccion por WhatsApp | ZENIA</title>
+<meta name="description" content="Automatiza encuestas CSAT y NPS por WhatsApp con IA. Dispara tras cada venta o ticket, logra 40-50% de respuesta y envia los datos a tu CRM.">
+<link rel="canonical" href="https://zeniapartners.com/blog/automatizar-encuestas-satisfaccion-whatsapp.html">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+
+<!-- Hreflang -->
+<link rel="alternate" hreflang="es" href="https://zeniapartners.com/blog/automatizar-encuestas-satisfaccion-whatsapp.html">
+<link rel="alternate" hreflang="x-default" href="https://zeniapartners.com/blog/automatizar-encuestas-satisfaccion-whatsapp.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Automatizar Encuestas de Satisfaccion por WhatsApp con IA">
+<meta property="og:description" content="Automatiza encuestas CSAT y NPS por WhatsApp con IA. 40-50% de respuesta frente al 5-10% del email. Guia practica con plantillas y ROI.">
+<meta property="og:url" content="https://zeniapartners.com/blog/automatizar-encuestas-satisfaccion-whatsapp.html">
+<meta property="og:site_name" content="ZENIA">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="https://zeniapartners.com/assets/images/og-image.png">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Automatizar Encuestas de Satisfaccion por WhatsApp con IA">
+<meta name="twitter:description" content="Automatiza encuestas CSAT y NPS por WhatsApp con IA. 40-50% de respuesta frente al 5-10% del email.">
+<meta name="twitter:image" content="https://zeniapartners.com/assets/images/og-image.png">
+
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="author" content="Fabrizzio Zelada">
+<meta name="theme-color" content="#0A0F1C">
+
+<!-- JSON-LD Article -->
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Automatizar Encuestas de Satisfaccion por WhatsApp con IA", "description": "Guia practica para automatizar encuestas CSAT y NPS por WhatsApp. Benchmarks de respuesta, plantillas de preguntas, integracion con CRM y flujo paso a paso.", "author": {"@type": "Person", "name": "Fabrizzio Zelada", "jobTitle": "Founder", "worksFor": {"@type": "Organization", "@id": "https://zeniapartners.com/#organization", "name": "Zenia Partners", "url": "https://zeniapartners.com/"}}, "publisher": {"@type": "Organization", "@id": "https://zeniapartners.com/#organization", "name": "Zenia Partners", "url": "https://zeniapartners.com/"}, "datePublished": "2026-11-20", "dateModified": "2026-11-20", "mainEntityOfPage": "https://zeniapartners.com/blog/automatizar-encuestas-satisfaccion-whatsapp.html", "inLanguage": "es", "keywords": ["automatizar encuestas satisfaccion whatsapp", "encuesta csat whatsapp", "nps whatsapp automatico", "encuesta satisfaccion cliente whatsapp", "agente de IA personalizado encuestas", "WhatsApp Business API encuestas"], "image": "https://zeniapartners.com/assets/images/og-image.png"}</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #3B82F6;
+    --accent-violet: #6366F1;
+    --bg-dark: #0A0F1C;
+    --bg-card: rgba(17, 24, 39, 0.6);
+    --text-primary: #F1F5F9;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+    --border: rgba(148, 163, 184, 0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; background: var(--bg-dark); color: var(--text-primary); line-height: 1.8; }
+  .blog-nav { padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 60px; position: sticky; top: 0; background: rgba(10, 15, 28, 0.85); backdrop-filter: blur(12px); z-index: 100; }
+  .blog-nav .container { max-width: 1200px; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+  .blog-nav .nav-logo-link { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-primary); font-weight: 700; font-size: 1.1rem; }
+  .blog-nav .nav-main-links { display: flex; list-style: none; gap: 28px; margin: 0; padding: 0; }
+  .blog-nav .nav-main-links li { margin: 0; }
+  .blog-nav .nav-main-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
+  .blog-nav .nav-main-links a:hover { color: var(--text-primary); }
+  .blog-nav .nav-main-links a.active { color: var(--primary); }
+  .blog-nav .nav-cta-btn { background: var(--primary); color: #fff; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: filter 0.2s; white-space: nowrap; }
+  .blog-nav .nav-cta-btn:hover { filter: brightness(1.1); }
+  @media (max-width: 860px) {
+    .blog-nav .nav-main-links { display: none; }
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+  .blog-header { margin-bottom: 48px; }
+  .blog-meta { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px; }
+  .blog-header h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); line-height: 1.3; margin-bottom: 16px; }
+  .blog-header p.lead { font-size: 1.1rem; color: var(--text-secondary); line-height: 1.7; }
+  .blog-content h2 { font-size: 1.4rem; margin: 48px 0 16px; color: var(--text-primary); }
+  .blog-content h3 { font-size: 1.15rem; margin: 32px 0 12px; color: var(--text-primary); }
+  .blog-content p { color: var(--text-secondary); margin-bottom: 20px; }
+  .blog-content ul, .blog-content ol { color: var(--text-secondary); margin-bottom: 20px; padding-left: 24px; }
+  .blog-content li { margin-bottom: 8px; }
+  .blog-content strong { color: var(--text-primary); }
+  .blog-content a { color: var(--primary); text-decoration: underline; }
+  .blog-content a:hover { color: var(--accent-violet); }
+  .blog-content blockquote { border-left: 3px solid var(--primary); padding-left: 20px; margin: 24px 0; font-style: italic; color: var(--text-secondary); }
+  .blog-content table { width: 100%; border-collapse: collapse; margin: 24px 0; }
+  .blog-content th, .blog-content td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); font-size: 0.95rem; }
+  .blog-content th { color: var(--text-primary); font-weight: 600; background: var(--bg-card); }
+  .blog-cta { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 40px; text-align: center; margin: 60px 0; }
+  .blog-cta h3 { margin-bottom: 12px; }
+  .blog-cta p { color: var(--text-secondary); margin-bottom: 20px; }
+  .blog-cta a { display: inline-block; padding: 12px 28px; background: var(--primary); color: white; border-radius: 8px; text-decoration: none; font-weight: 600; }
+  .blog-cta a:hover { background: var(--accent-violet); }
+  .blog-related { margin: 60px 0 0; }
+  .blog-related h3 { margin-bottom: 20px; }
+  .blog-related a { display: block; padding: 16px 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 12px; text-decoration: none; color: var(--text-primary); font-weight: 600; transition: border-color 0.3s; }
+  .blog-related a:hover { border-color: var(--primary); }
+  .blog-related a span { display: block; font-size: 0.85rem; color: var(--text-muted); font-weight: 400; margin-top: 4px; }
+  .blog-footer { padding: 40px 0; border-top: 1px solid var(--border); margin-top: 60px; text-align: center; color: var(--text-muted); font-size: 0.85rem; }
+  .blog-footer a { color: var(--primary); text-decoration: none; }
+  .text-gradient { background: linear-gradient(135deg, var(--primary), var(--accent-violet)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+</style>
+<script type="application/ld+json" data-zenia-faq="1">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "es", "mainEntity": [{"@type": "Question", "name": "¿Puedo lanzar encuestas masivas por WhatsApp sin que me suspendan el numero?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, siempre que uses la WhatsApp Business API con una plantilla aprobada por Meta en la categoria utility y tengas opt-in del contacto. El envio masivo desde WhatsApp Business App no esta permitido y suele acabar en suspension por baja calidad."}}, {"@type": "Question", "name": "¿Que tasa de respuesta puedo esperar frente al email?", "acceptedAnswer": {"@type": "Answer", "text": "Los proveedores de encuestas (Zonka Feedback, ChatDaddy, Infobip) reportan 40-50% en WhatsApp frente a 5-15% del email. Las cifras varian mucho por sector, por lo que conviene medir con tu propia base durante 30 dias antes de fijar objetivos."}}, {"@type": "Question", "name": "¿CSAT, NPS o CES? ¿Cual mido por WhatsApp?", "acceptedAnswer": {"@type": "Answer", "text": "CSAT (1-5) despues de una compra o atencion puntual, NPS (0-10) una vez al trimestre para medir fidelidad general, y CES (1-7) tras una resolucion de incidencia. WhatsApp favorece preguntas cortas, asi que lo habitual es 1 pregunta cerrada mas 1 abierta opcional."}}, {"@type": "Question", "name": "¿Como se envian los resultados al CRM automaticamente?", "acceptedAnswer": {"@type": "Answer", "text": "Con un webhook de la WhatsApp Business API que escribe la respuesta en el campo del contacto (score, texto libre, timestamp). Si la nota es menor o igual a 6 se crea una tarea al equipo de soporte; si es 9 o 10 se dispara la plantilla de peticion de reseña en Google."}}, {"@type": "Question", "name": "¿Cuanto tarda ZENIA en montar el flujo de encuestas?", "acceptedAnswer": {"@type": "Answer", "text": "Entre 2 y 3 semanas: semana 1 definimos preguntas y aprobamos la plantilla con Meta; semana 2 integramos CRM y webhook; semana 3 arrancamos con el 10% del trafico para calibrar y escalamos al 100%."}}, {"@type": "Question", "name": "¿Puedo hacer encuestas solo con WhatsApp Business App gratis?", "acceptedAnswer": {"@type": "Answer", "text": "Para menos de 50 encuestas al mes y envio manual, si: creas mensaje con botones de respuesta rapida. Para envio automatico tras una compra o ticket, necesitas la API y un orquestador (CRM o plataforma tipo Zenia, Twilio o Infobip)."}}]}</script>
+<!--zx:head--><meta name="zx-page" content="blog"><meta name="zx-negocio" content="tu negocio"><meta name="zx-wa" content="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20%C2%ABAutomatizar%20Encuestas%20de%20Satisfacci%C3%B3n%20por%20WhatsApp%C2%BB%20y%20quiero%20ver%20c%C3%B3mo%20aplicarlo%20en%20mi%20negocio"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&amp;family=Space+Grotesk:wght@700&amp;display=swap"><link rel="stylesheet" href="/assets/zx-blog.css?v=5">
+<!--/zx:head--></head>
+<body>
+
+<nav class="blog-nav">
+  <div class="container">
+    <a href="/es/" class="nav-logo-link">
+      <svg class="zenia-mark" viewBox="0 0 140 140" fill="none" width="32" height="32">
+        <defs>
+          <linearGradient id="zg-b" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#2563EB"/>
+            <stop offset="100%" stop-color="#3B82F6"/>
+          </linearGradient>
+          <linearGradient id="zg-v" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#6366F1"/>
+            <stop offset="100%" stop-color="#7C3AED"/>
+          </linearGradient>
+        </defs>
+        <rect width="140" height="140" rx="28" fill="#0F172A"/>
+        <path d="M 70 18 Q 18 18 18 38 L 18 57 Q 18 63 24 63 L 88 63 Z" fill="url(#zg-b)"/>
+        <path d="M 70 122 Q 122 122 122 102 L 122 83 Q 122 77 116 77 L 52 77 Z" fill="url(#zg-v)"/>
+      </svg>
+      <span>ZENIA</span>
+    </a>
+    <ul class="nav-main-links">
+      <li><a href="/es/#opportunities">Oportunidades IA</a></li>
+      <li><a href="/es/#services">Servicios</a></li>
+      <li><a href="/es/#process">Proceso</a></li>
+      <li><a href="/es/#impact">Impacto</a></li>
+      <li><a href="/blog/" class="active">Blog</a></li>
+    </ul>
+    <a href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20%C2%ABAutomatizar%20Encuestas%20de%20Satisfacci%C3%B3n%20por%20WhatsApp%C2%BB%20y%20quiero%20ver%20c%C3%B3mo%20aplicarlo%20en%20mi%20negocio" class="nav-cta-btn" data-zx-src="nav" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88M20.46 3.49A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.42"/></svg><span><span class="zx-l">Escríbenos por </span>WhatsApp</span></a>
+  </div>
+</nav>
+
+<article class="container">
+  <header class="blog-header">
+    <div class="blog-meta">20 de noviembre, 2026 &middot; Fabrizzio Zelada &middot; 11 min de lectura</div>
+    <h1><span class="text-gradient">Automatizar encuestas de satisfacción por WhatsApp:</span> guía de CSAT y NPS conversacional</h1>
+    <p class="lead"><strong>Respuesta corta:</strong> automatizar encuestas de satisfacción por WhatsApp significa disparar una pregunta corta (CSAT, NPS o CES) justo después de una compra, cierre de ticket o visita, mediante la WhatsApp Business API con una plantilla aprobada por Meta y opt-in previo. Los proveedores del sector (Zonka Feedback, ChatDaddy, Infobip) reportan tasas de respuesta del 40-50% frente al 5-15% del email, y las respuestas vuelven a tu CRM via webhook para disparar acciones automáticas: alerta al equipo si la nota es baja, petición de reseña en Google si es alta.</p>
+  </header>
+
+  <div class="blog-content">
+
+    <p class="pillar-callout"><strong>Lee también:</strong> este flujo encaja dentro de la <a href="/es/automatizacion-whatsapp-negocios.html">automatización de WhatsApp para pymes</a>. Si tu base de clientes está dispersa entre email y teléfono, también te interesa la <a href="/blog/integrar-crm-con-whatsapp-business.html">integración CRM + WhatsApp Business</a>.</p>
+
+    <h2>¿Qué significa automatizar encuestas de satisfacción por WhatsApp?</h2>
+
+    <p>Automatizar encuestas de satisfacción por WhatsApp es disparar una pregunta corta al cliente, de forma automática y en el canal que ya usa a diario, justo cuando la experiencia está fresca: minutos después de una compra, al cerrar un ticket de soporte o al día siguiente de una visita. La encuesta no la envía una persona: la dispara un evento del CRM a través de la WhatsApp Business API con una plantilla aprobada por Meta (categoría <em>utility</em>) y opt-in previo del contacto.</p>
+
+    <p>Las tres métricas habituales son CSAT, NPS y CES. <strong>CSAT</strong> (del inglés <em>Customer Satisfaction Score</em>) pregunta "¿Cómo valoras tu experiencia?" con escala 1 a 5 y se dispara tras una interacción concreta. <strong>NPS</strong> (<em>Net Promoter Score</em>) pregunta "¿Recomendarías esta empresa a un conocido?" en escala 0 a 10 y se mide cada trimestre para evaluar la fidelidad general. <strong>CES</strong> (<em>Customer Effort Score</em>) pregunta "¿Qué tan fácil te resultó?" tras resolver una incidencia, en escala 1 a 7.</p>
+
+    <p>El valor no está en la pregunta sino en lo que ocurre después. Una encuesta por WhatsApp sin automatización es un dato suelto. Una encuesta por WhatsApp automatizada escribe el score en el CRM, abre una tarea al responsable si la nota es baja, dispara un cupón de agradecimiento si es alta y alimenta un dashboard que tu equipo mira cada lunes.</p>
+
+    <h2>¿Por qué WhatsApp supera al email para CSAT y NPS?</h2>
+
+    <p>La respuesta corta es que WhatsApp tiene una tasa de respuesta sensiblemente mayor que el email y llega al cliente donde ya está, sin fricción de abrir una app distinta. Las cifras vienen de proveedores de encuestas (no de estudios independientes) y hay que leerlas con cautela, pero la diferencia es consistente entre fuentes.</p>
+
+    <div class="zx-table"><p class="zx-table-hint">Desliza para ver la tabla completa →</p><div class="zx-table-in"><table>
+      <tr><th>Canal</th><th>Tasa de respuesta tipica</th><th>Tiempo medio de respuesta</th><th>Fuente</th></tr>
+      <tr><td>WhatsApp Business API</td><td>40-50%</td><td>minutos</td><td>Zonka Feedback 2026</td></tr>
+      <tr><td>WhatsApp (encuesta conversacional)</td><td>40-60%</td><td>&lt; 1 hora</td><td>ChatDaddy, Infobip</td></tr>
+      <tr><td>Email (B2B NPS)</td><td>12,4% de media (4,5-39,3% segun sector)</td><td>24-72 horas</td><td>Bain &amp; Company (cita de Qualaroo)</td></tr>
+      <tr><td>Email (estudio multisector)</td><td>3,24% de media</td><td>24-72 horas</td><td>Retently Survey Response Rate Study</td></tr>
+      <tr><td>SMS</td><td>20-30%</td><td>minutos</td><td>Zonka Feedback</td></tr>
+    </table></div></div>
+
+    <p>Las fuentes no coinciden entre sí (Retently y Bain &amp; Company dan cifras muy distintas para email) porque la tasa de respuesta depende del sector, del momento y de la base. Lo útil no es creerse un número exacto sino el orden de magnitud: una encuesta por WhatsApp suele multiplicar por entre 3 y 10 la respuesta de la misma pregunta por email.</p>
+
+    <p>Aurora Inbox (proveedor de atención en WhatsApp) sitúa un <strong>CSAT saludable para atención por WhatsApp entre el 80% y el 92%</strong> y considera excelente un NPS entre +30 y +60 en Latinoamérica. Si tu CSAT baja de 75% hay un problema estructural, no de muestreo.</p>
+
+    <h2>El flujo de automatización paso a paso</h2>
+
+    <p>Un flujo de encuestas automatizado por WhatsApp tiene seis partes bien diferenciadas. Si falta alguna, la cadena se rompe y los datos no llegan al CRM.</p>
+
+    <h3>Paso 1: Evento disparador</h3>
+
+    <p>El CRM detecta un evento de negocio: factura pagada, pedido entregado, ticket cerrado en Zendesk, cita completada en el sistema de agenda. Ese evento es el que marca <em>cuándo</em> se envía la encuesta. La recomendación habitual: 30 minutos después para compras simples, 24 horas después para visitas a local, 48 horas para instalaciones y entregas.</p>
+
+    <h3>Paso 2: Verificación de opt-in y ventana de 24 horas</h3>
+
+    <p>Antes de enviar, el sistema comprueba dos cosas. Primero, que el contacto haya dado opt-in explícito para recibir comunicación por WhatsApp (en el formulario de compra, en el ticket de atención, en un enlace a la política de privacidad). Segundo, si el último mensaje del cliente tiene menos de 24 horas estamos en ventana de servicio y podemos enviar un texto libre; si no, hay que usar una plantilla <em>utility</em> aprobada por Meta.</p>
+
+    <h3>Paso 3: Envío de la plantilla aprobada</h3>
+
+    <p>La plantilla tiene que estar validada por Meta en categoría <em>utility</em>, no <em>marketing</em>: una encuesta post-compra no es marketing, es una solicitud de feedback sobre un servicio prestado. La aprobación suele tardar entre 15 minutos y 24 horas. Una plantilla CSAT típica:</p>
+
+    <blockquote>Hola {{1}}, soy el asistente de {{2}}. Nos encantaría saber cómo valoras tu experiencia de hoy. Elige una opción del 1 al 5, donde 5 es excelente. Gracias por tu tiempo.</blockquote>
+
+    <p>Con botones de respuesta rápida para cada número. Botones, no texto libre: la tasa de respuesta sube entre 15 y 25 puntos porcentuales porque el cliente responde con un toque.</p>
+
+    <h3>Paso 4: Recepción vía webhook y enriquecimiento</h3>
+
+    <p>El cliente pulsa el botón. La WhatsApp Business API envía un evento al webhook del CRM con tres datos: el número de teléfono, el valor del botón pulsado y el timestamp. El CRM identifica al contacto, escribe el score en el campo correspondiente (csat_score, csat_date, csat_event_id) y actualiza el perfil.</p>
+
+    <h3>Paso 5: Rama condicional según la nota</h3>
+
+    <p>Aquí está el valor real del flujo automatizado, no en el envío:</p>
+
+    <ul>
+      <li><strong>Nota 1 o 2 (detractor):</strong> el sistema crea una tarea en el CRM para el responsable del cliente, con prioridad alta y SLA de 24 horas. El agente de IA personalizado puede además enviar un mensaje de seguimiento: "Lamentamos que la experiencia no haya sido buena, {{1}} te contactará mañana para entender qué pasó".</li>
+      <li><strong>Nota 3 (neutro):</strong> se marca el contacto como "necesita seguimiento" y entra en una secuencia de reactivación a 15 días.</li>
+      <li><strong>Nota 4 o 5 (promotor):</strong> se dispara automáticamente una plantilla de petición de reseña en Google con un enlace directo a tu ficha de My Business. Es el momento de máxima afinidad: la tasa de conversión a reseña está entre 8% y 18%.</li>
+    </ul>
+
+    <h3>Paso 6: Cierre y análisis</h3>
+
+    <p>Los scores se agregan en un dashboard con tendencia semanal, media mensual y comparativa por canal, por producto o por responsable. Esto es lo que convierte una encuesta aislada en un sistema de mejora continua.</p>
+
+    <h2>Qué plantillas usar: CSAT, NPS y CES</h2>
+
+    <p>Tres plantillas resuelven el 90% de los casos. No hace falta un cuestionario de 15 preguntas: en WhatsApp la gente responde una pregunta cerrada y, como mucho, una abierta opcional.</p>
+
+    <div class="zx-table"><p class="zx-table-hint">Desliza para ver la tabla completa →</p><div class="zx-table-in"><table>
+      <tr><th>Metrica</th><th>Pregunta sugerida</th><th>Escala</th><th>Cuando dispararla</th></tr>
+      <tr><td>CSAT</td><td>¿Como valoras tu experiencia de hoy con {{marca}}?</td><td>1 a 5 (botones)</td><td>30 min - 24 h despues de una interaccion puntual</td></tr>
+      <tr><td>NPS</td><td>¿Cuanto recomendarias {{marca}} a un amigo o colega?</td><td>0 a 10 (botones agrupados: 0-6, 7-8, 9-10)</td><td>Una vez al trimestre, a toda la base activa</td></tr>
+      <tr><td>CES</td><td>¿Que tan facil fue resolver tu consulta?</td><td>1 a 7 (botones)</td><td>Al cerrar un ticket de soporte</td></tr>
+      <tr><td>Pregunta abierta</td><td>¿Que podriamos mejorar? (opcional)</td><td>Texto libre, max. 200 caracteres</td><td>Solo si la nota es menor o igual a 3</td></tr>
+    </table></div></div>
+
+    <p>La pregunta abierta solo se dispara cuando hay margen de mejora, no a todo el mundo. Si pides texto libre a un promotor neutro, la tasa de respuesta se desploma y pierdes el insight.</p>
+
+    <h2>Las integraciones que necesitas (y que no)</h2>
+
+    <p>Un flujo de encuestas automatizado por WhatsApp apoya en tres piezas obligatorias y dos opcionales.</p>
+
+    <p><strong>Obligatorias:</strong></p>
+
+    <ul>
+      <li><strong>WhatsApp Business API</strong> a través de un BSP (Business Solution Provider) como Meta Cloud API, Twilio, 360dialog o Infobip. Sin esto no hay envío automático.</li>
+      <li><strong>CRM con webhooks</strong> que dispare el envío al cerrar un evento y reciba la respuesta. HubSpot, Zoho, Pipedrive, Salesforce y los CRM a medida sirven todos.</li>
+      <li><strong>Orquestador</strong>: el componente que une evento, envío y respuesta. Puede ser el propio CRM si tiene esa capacidad, o una plataforma intermedia (Zenia Partners, n8n, Make, Zapier).</li>
+    </ul>
+
+    <p><strong>Opcionales, pero recomendables:</strong></p>
+
+    <ul>
+      <li><strong>Dashboard</strong> (Looker Studio, Metabase, PowerBI) para analizar tendencias y segmentar por producto, canal o responsable.</li>
+      <li><strong>Agente de IA personalizado</strong> para enriquecer el seguimiento: responder preguntas del cliente en el mismo hilo, categorizar la respuesta abierta (producto, atención, precio, logística) y resumir al responsable.</li>
+    </ul>
+
+    <p>Lo que <em>no</em> necesitas es una plataforma dedicada a encuestas (SurveyMonkey, Typeform) ni un Google Forms. El mensaje y la respuesta viven en el mismo canal donde el cliente ya habla contigo.</p>
+
+    <h2>Errores comunes al automatizar encuestas por WhatsApp</h2>
+
+    <p>En las implementaciones que revisamos en Zenia Partners, estos cinco errores se repiten en el 80% de los casos:</p>
+
+    <ol>
+      <li><strong>Enviar la encuesta sin opt-in explícito.</strong> El Reglamento General de Protección de Datos exige consentimiento informado para contactar por WhatsApp con fines de calidad; Meta puede suspender el número si recibe reportes de spam.</li>
+      <li><strong>Lanzar la plantilla como <em>marketing</em> en vez de <em>utility</em>.</strong> La categoría equivocada hace que Meta la rechace o la cobre a tarifa de marketing (hasta 7 veces más cara, según la tabla de precios de WhatsApp Business de octubre de 2026).</li>
+      <li><strong>Usar texto libre en lugar de botones.</strong> Un CSAT con botones 1-5 tiene entre 15 y 25 puntos porcentuales más de respuesta que el mismo CSAT con texto libre.</li>
+      <li><strong>No disparar nada cuando la nota es baja.</strong> Una encuesta sin seguimiento es un papel mojado. El valor está en la tarea automática que se crea cuando el detractor responde.</li>
+      <li><strong>Enviar la encuesta demasiado tarde.</strong> Pasadas 72 horas la memoria de la experiencia se diluye: la tasa de respuesta cae a la mitad y el feedback pierde granularidad.</li>
+    </ol>
+
+    <h2>¿Cuánto cuesta y en cuánto tiempo se monta?</h2>
+
+    <p>El coste real de automatizar encuestas por WhatsApp tiene tres partidas: el coste por conversación de Meta, la plataforma que orquesta y el tiempo de puesta en marcha.</p>
+
+    <p><strong>Coste por conversación (Meta, tarifa de octubre de 2026):</strong></p>
+
+    <ul>
+      <li>Conversación <em>utility</em> iniciada por la empresa (encuesta post-venta): 0,03 a 0,06 euros por conversación en España; 0,005 a 0,015 euros en América Latina.</li>
+      <li>Conversación <em>service</em> iniciada por el cliente (respuesta a una duda dentro de las 24 h): gratis desde noviembre de 2024.</li>
+    </ul>
+
+    <p>Un comercio con 500 encuestas al mes paga entre 15 y 30 euros en tarifa Meta. No es lo que marca la diferencia en el presupuesto.</p>
+
+    <p><strong>Plataforma orquestadora:</strong> entre 0 euros (si tu CRM ya tiene webhooks y plantillas) y 297-497 euros al mes (una solución completa con agente de IA personalizado, dashboard y soporte). En Zenia Partners el plan Starter (997 € setup + 297 €/mes) incluye el flujo de encuestas CSAT y NPS dentro del mismo CRM; el plan Growth (497 €/mes) añade NPS por segmento y análisis automático de respuestas abiertas.</p>
+
+    <p><strong>Tiempo de implementación:</strong> entre 2 y 3 semanas en un negocio con CRM ya instalado. Semana 1 definimos preguntas y aprobamos la plantilla con Meta, semana 2 integramos CRM y webhook, semana 3 arrancamos con el 10% del tráfico para calibrar y escalamos al 100%. Si no hay CRM todavía, hay que sumar las 2-3 semanas del setup del CRM.</p>
+
+    <h2>Comparativa de opciones para pymes</h2>
+
+    <p>No todas las empresas necesitan el mismo nivel. Esta comparativa honesta incluye cuando Zenia Partners <em>no</em> es la mejor opción:</p>
+
+    <div class="zx-table"><p class="zx-table-hint">Desliza para ver la tabla completa →</p><div class="zx-table-in"><table>
+      <tr><th>Opcion</th><th>Coste mensual</th><th>Setup</th><th>Para quien</th></tr>
+      <tr><td>WhatsApp Business App + botones manuales</td><td>0 €</td><td>Horas</td><td>Negocio con menos de 50 encuestas/mes, envio manual, sin CRM</td></tr>
+      <tr><td>Formulario Typeform + enlace por WhatsApp</td><td>25-75 €</td><td>1 dia</td><td>Equipos que ya usan Typeform, aceptan la fricción de abrir enlace</td></tr>
+      <tr><td>SleekFlow / Trengo + WhatsApp API (plantilla CSAT)</td><td>99-199 €</td><td>1-2 semanas</td><td>Pymes con CRM sencillo, equipo tecnico interno</td></tr>
+      <tr><td>Zenia Partners Starter (CRM + agente de IA + encuestas)</td><td>297 € + 997 € setup</td><td>2-3 semanas</td><td>Pymes espanolas y LATAM que quieren todo integrado y que cada detractor abra una tarea con SLA</td></tr>
+      <tr><td>Zenia Partners Growth (encuestas por segmento + analisis IA)</td><td>497 €</td><td>3-4 semanas</td><td>Empresas con mas de 1.000 contactos activos y varios responsables</td></tr>
+    </table></div></div>
+
+    <p>Si tienes 30 encuestas al mes y las puedes mandar tu, Zenia Partners es excesivo: empieza con la app gratis y botones de respuesta rápida. Si pasas de 300 encuestas al mes o necesitas que cada nota baja abra una tarea automática al responsable, un orquestador con CRM compensa desde el primer mes.</p>
+
+    <h2>Un ejemplo numérico: taller de 400 servicios al mes</h2>
+
+    <p>Un taller mecánico con 400 servicios al mes que automatiza encuestas CSAT por WhatsApp 24 horas después de la entrega:</p>
+
+    <ul>
+      <li>Tasa de envío: 400 encuestas/mes.</li>
+      <li>Tasa de respuesta estimada (benchmark Zonka 40-50%, uso el punto medio): 180 respuestas/mes.</li>
+      <li>Si el 60% son promotores (nota 4 o 5): 108 promotores al mes. Tasa de conversión a reseña en Google del 10%: 10,8 reseñas nuevas al mes.</li>
+      <li>Si el 15% son detractores (nota 1 o 2): 27 detractores. Si el equipo recupera a 10 de ellos con una llamada y un vale, con ticket medio de 220 €, son 2.200 € de ingresos salvados.</li>
+      <li>Coste Meta: 400 x 0,04 € = 16 €/mes. Coste plataforma: 297 €/mes. Total 313 €.</li>
+    </ul>
+
+    <p>El retorno neto estimado está por encima de los 1.800 € al mes solo por detractores recuperados, sin contar el valor SEO local de 10 reseñas mensuales nuevas en Google. Son números ilustrativos: la tasa real depende del sector, del momento y de la calidad de la base.</p>
+
+    <h2>Cumplimiento: lo que exige RGPD y Meta</h2>
+
+    <p>Automatizar encuestas por WhatsApp sin tener los papeles en orden puede costarte el número (suspensión de Meta por baja calidad) y una sanción de la Agencia Española de Protección de Datos. Checklist mínimo:</p>
+
+    <ul>
+      <li>Opt-in explícito guardado con fecha, IP y texto exacto del consentimiento.</li>
+      <li>Mención en la política de privacidad del uso de WhatsApp para calidad de servicio.</li>
+      <li>Plantilla aprobada por Meta en categoría <em>utility</em>, no <em>marketing</em>.</li>
+      <li>Opción clara de darse de baja ("Responde BAJA para no recibir más encuestas") en cada mensaje.</li>
+      <li>Retención de los datos conforme a tu política; no mantener respuestas anónimas más de 24 meses salvo justificación.</li>
+    </ul>
+
+    <p>Más detalle en nuestra <a href="/blog/cumplimiento-rgpd-whatsapp-business-pymes.html">guía de cumplimiento RGPD en WhatsApp Business para pymes</a>.</p>
+
+    <!--zx:cta-->
+<aside class="zx-cta" aria-label="Zenia"><p class="zx-eyebrow">CRM a medida + agente de IA</p><p class="zx-cta-t" role="heading" aria-level="3">¿Quieres encuestas CSAT y NPS por WhatsApp funcionando en tu empresa?</p><p class="zx-cta-p">Montamos el CRM y el agente de IA personalizado que disparan la encuesta, reciben la respuesta y abren tarea al responsable cuando la nota es baja. Cuéntanos tu caso y te respondemos en menos de 24 h.</p><div class="zx-cta-stats"><a href="/es/caso-global-watch-buyers.html"><strong>831</strong><span>conversaciones de WhatsApp captadas para un cliente</span></a><a href="/es/caso-despacho-boutique.html"><strong>&lt;1 min</strong><span>de respuesta, 24/7, en un despacho de abogados</span></a></div><div class="zx-cta-act"><a class="zx-btn" href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20%C2%ABAutomatizar%20Encuestas%20de%20Satisfacci%C3%B3n%20por%20WhatsApp%C2%BB%20y%20quiero%20ver%20c%C3%B3mo%20aplicarlo%20en%20mi%20negocio" target="_blank" rel="noopener" data-zx-src="inline"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88M20.46 3.49A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.42"/></svg><span>Escríbenos por WhatsApp</span></a><a class="zx-link" href="/es/casos.html">Ver casos reales</a></div></aside>
+<!--/zx:cta--><h2>Preguntas frecuentes</h2>
+
+    <h3>¿Puedo lanzar encuestas masivas por WhatsApp sin que me suspendan el número?</h3>
+
+    <p>Sí, siempre que uses la WhatsApp Business API con una plantilla aprobada por Meta en la categoría <em>utility</em> y tengas opt-in del contacto. El envío masivo desde WhatsApp Business App (la app gratuita) no está permitido y suele acabar en suspensión por baja calidad. Con la API, Meta tolera volúmenes altos siempre que la tasa de bloqueo por el receptor se mantenga por debajo del 2%.</p>
+
+    <h3>¿Qué tasa de respuesta puedo esperar frente al email?</h3>
+
+    <p>Los proveedores de encuestas (Zonka Feedback, ChatDaddy, Infobip) reportan entre 40% y 50% en WhatsApp frente al 5% al 15% del email. Las cifras varían mucho por sector y por relación previa con el cliente, por lo que conviene medir con tu propia base durante 30 días antes de fijar objetivos duros. Un dato útil de referencia: Bain &amp; Company, citado por Qualaroo, sitúa la media de respuesta a NPS por email B2B en 12,4%, con un rango real entre 4,5% y 39,3%.</p>
+
+    <h3>¿CSAT, NPS o CES? ¿Cuál mido por WhatsApp?</h3>
+
+    <p>CSAT (1 a 5) después de una compra o atención puntual, NPS (0 a 10) una vez al trimestre para medir fidelidad general, y CES (1 a 7) tras una resolución de incidencia. WhatsApp favorece preguntas cortas con botones, así que lo habitual es una pregunta cerrada más una abierta opcional reservada a los detractores.</p>
+
+    <h3>¿Cómo se envían los resultados al CRM automáticamente?</h3>
+
+    <p>Con un webhook de la WhatsApp Business API que escribe la respuesta en el campo del contacto (score, texto libre, timestamp). Desde ese campo se disparan tus reglas: si la nota es menor o igual a 6 se crea una tarea al equipo de soporte con SLA de 24 horas; si es 9 o 10 se envía automáticamente la plantilla de petición de reseña en Google. Esta lógica es la que convierte la encuesta en un sistema de mejora continua, no solo en un número.</p>
+
+    <h3>¿Cuánto tarda Zenia Partners en montar el flujo de encuestas?</h3>
+
+    <p>Entre 2 y 3 semanas si ya existe CRM: semana 1 definimos preguntas y aprobamos la plantilla con Meta; semana 2 integramos CRM y webhook; semana 3 arrancamos con el 10% del tráfico para calibrar y escalamos al 100%. Si no hay CRM todavía, hay que sumar las 2-3 semanas del setup del CRM, dentro del plan Starter de Zenia Partners (997 € setup + 297 €/mes a noviembre de 2026).</p>
+
+    <h3>¿Puedo hacer encuestas solo con WhatsApp Business App gratis?</h3>
+
+    <p>Para menos de 50 encuestas al mes con envío manual, sí: creas un mensaje con botones de respuesta rápida y vas enviando desde el teléfono. Para envío automático tras una compra o un ticket, necesitas la WhatsApp Business API y un orquestador (tu CRM, una plataforma tipo Zenia Partners, Twilio o Infobip).</p>
+
+    <div class="blog-cta">
+      <h3>¿Listo para automatizar las encuestas de satisfacción de tu empresa?</h3>
+      <p>En Zenia Partners, agencia basada en Madrid, implementamos CRM con agente de IA personalizado en WhatsApp para pymes de España y Latinoamérica. El flujo de encuestas CSAT y NPS está incluido desde el plan Starter (997 € setup + 297 €/mes). Agenda una llamada de 30 minutos y te mostramos cómo quedaría con tu base y tus procesos.</p>
+<p data-zenia-oportunidad="1">Todo esto parte de lo mismo: <a href="/es/automatizacion-whatsapp-negocios.html">automatizar WhatsApp con IA</a> para que ningún mensaje se quede sin responder y ninguna experiencia sin medir.</p>
+
+      <a href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20%C2%ABAutomatizar%20Encuestas%20de%20Satisfacci%C3%B3n%20por%20WhatsApp%C2%BB%20y%20quiero%20ver%20c%C3%B3mo%20aplicarlo%20en%20mi%20negocio" target="_blank" rel="noopener">Hablar por WhatsApp ahora</a> <a style="background:transparent;border:1px solid var(--border);color:var(--text-secondary);margin-left:10px" href="https://calendly.com/zeladauriartef/30min">Agendar llamada gratuita</a>
+    </div>
+<div class="blog-related" data-zenia-money-links="1">
+  <h3>Ponlo en marcha en tu negocio</h3>
+      <a href="/es/crm-restaurantes.html">CRM con IA para pymes<span>Agente de IA personalizado por WhatsApp 24/7 + CRM. Implementación completa, desde 297 €/mes.</span></a>
+  <a href="/blog/integrar-crm-con-whatsapp-business.html">Integrar CRM con WhatsApp Business<span>Guía técnica para unir tu CRM y la WhatsApp Business API con webhooks.</span></a>
+  <a href="/blog/cumplimiento-rgpd-whatsapp-business-pymes.html">Cumplimiento RGPD en WhatsApp Business<span>Opt-in, retención y plantillas: lo mínimo para operar sin sanciones.</span></a>
+  <a href="/blog/pedir-resenas-google-restaurante-automatico.html">Pedir reseñas en Google de forma automática<span>El paso lógico después de una encuesta con nota alta: convertir promotores en reseñas públicas.</span></a>
+</div>
+
+
+    <div class="blog-related">
+      <h3>Artículos relacionados</h3>
+      <a href="/blog/kpis-atencion-cliente-whatsapp-business.html">KPIs de atención al cliente en WhatsApp Business<span>Los 8 indicadores que miden si tu atención por WhatsApp funciona: tasa de respuesta, FRT, resolución al primer contacto y CSAT.</span></a>
+      <a href="/blog/respuesta-automatica-fuera-de-horario-whatsapp.html">Respuesta automática fuera de horario en WhatsApp<span>Cómo configurar la primera línea cuando tu equipo no está disponible y por qué importa para el CSAT.</span></a>
+      <a href="/blog/webhooks-whatsapp-business-api.html">Webhooks de WhatsApp Business API<span>La pieza técnica que recibe la respuesta a la encuesta y la escribe en tu CRM.</span></a>
+      </div>
+
+  </div>
+
+<div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 24px; margin: 40px 0;" data-zenia-internal-links="landings">
+  <h3 style="color: #F1F5F9; margin-bottom: 12px; font-size: 1.05rem;">¿Buscas automatizar más del flujo?</h3>
+  <p style="color: #94A3B8; margin-bottom: 16px; font-size: 0.95rem;">Las encuestas son un eslabón dentro de la automatización por WhatsApp. Estas guías cubren los otros eslabones:</p>
+  <div>
+      <a href="/es/automatizacion-whatsapp-negocios.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Automatización de WhatsApp (guía nacional) →</a>
+      <a href="/blog/integrar-crm-con-whatsapp-business.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Integrar CRM con WhatsApp Business →</a>
+      <a href="/blog/webhooks-whatsapp-business-api.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Webhooks WhatsApp Business API →</a>
+      <a href="/blog/cumplimiento-rgpd-whatsapp-business-pymes.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Cumplimiento RGPD WhatsApp Business →</a>
+  </div>
+</div>
+
+</article>
+
+<footer class="blog-footer">
+  <div class="container">
+    <p>&copy; 2026 ZENIA. Todos los derechos reservados. | <a href="/">Inicio</a> | <a href="/blog/">Blog</a></p>
+  </div>
+</footer>
+
+<div style="text-align:center; padding:16px 24px; background:#0A0F1C; color:#64748B; font-size:0.85rem; border-top:1px solid rgba(255,255,255,0.04);"><a href="/es/cobertura.html" style="color:#94A3B8; text-decoration:none;">Ver cobertura completa</a></div>
+<a href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20%C2%ABAutomatizar%20Encuestas%20de%20Satisfacci%C3%B3n%20por%20WhatsApp%C2%BB%20y%20quiero%20ver%20c%C3%B3mo%20aplicarlo%20en%20mi%20negocio" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp" data-directo style="position:fixed;bottom:24px;right:24px;z-index:9998;background:#25D366;color:white;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(37,211,102,0.4);transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 20px rgba(37,211,102,0.5)'" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 16px rgba(37,211,102,0.4)'">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<script>document.addEventListener("click",function(e){var t=e.target,a=t.closest?t.closest('a[href*="wa.me"]'):null;if(!a)return;try{navigator.sendBeacon("https://zenia-leads.onrender.com/lead",JSON.stringify({site:"zenia",path:location.pathname+location.search,ref:document.referrer||""}))}catch(r){}},true);</script>
+<script src="/assets/qualify.js?v=4" defer></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "eceeed460f6d465bba3b970417d5f6b0"}'></script>
+<!--zx:js--><script src="/assets/zx.js?v=5" defer></script>
+<!--/zx:js--></body>
+</html>

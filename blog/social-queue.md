@@ -11390,3 +11390,16 @@ Full write-up with 7 agent jobs, the 2026 notary stack, UPL refuse-list, 2026 US
 #WhatsAppBusinessAPI #AIAgents #LegalTech #PlatformEngineering
 
 ---
+## 2026-11-20 - Automating CSAT/NPS surveys over WhatsApp
+
+Automating a CSAT or NPS survey over WhatsApp is 90% plumbing and 10% survey design. The architecture has to assume Meta will push back on the number before the survey copy ever does.
+
+Four infra decisions carry the build. First, the trigger side lives on the CRM, not the survey tool: a typed `SurveyEvent` enum (order_closed, ticket_resolved, visit_completed, invoice_paid) fires 30 minutes to 72 hours after the real business event, which is the only window where the memory of the experience is fresh enough to stop the response rate halving. Second, the template layer is category-aware; a satisfaction survey ships as a utility-category template through the Cloud API, not marketing, which keeps the per-message cost on Metas October 2026 tariff at ~0.04 EUR in Spain and ~0.01 EUR in LATAM instead of the 3-7x marketing bucket. Third, the response channel is a WhatsApp interactive template with button payloads, not free text, and a webhook that writes `csat_score`, `csat_event_id`, `csat_ts` into the contact on first byte. Fourth, the branching runs on the CRM side after the write: score <= 6 opens a ticket with 24h SLA to the account owner; score >= 9 fires the Google review template from the same hilo, which is where the public-review conversion lives.
+
+Reference numbers worth stealing. Response rate on button templates lands 40-50% versus 5-15% on email across Zonka Feedback, ChatDaddy and Infobip reporting in 2026, with button vs free-text lifting response another 15-25 percentage points on the same audience. Opt-in-to-first-response median under 20 minutes on the API path. Zero quality-rating degradation events over 90 days on the active cohort when the template is approved as utility and opt-in is logged with timestamp, IP and consent text.
+
+Full write-up with the plantilla, the webhook contract, the branching rules and the Meta-suspends-your-number failure list: https://zeniapartners.com/blog/automatizar-encuestas-satisfaccion-whatsapp.html
+
+#WhatsAppBusinessAPI #CustomerExperience #AIEngineering #PlatformEngineering
+
+---

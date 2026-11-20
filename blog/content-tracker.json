@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-11-20T14:15:00+00:00",
+  "lastRun": "2026-11-20T22:05:00+00:00",
   "posts": [
+    {
+      "slug": "automatizar-encuestas-satisfaccion-whatsapp",
+      "keyword": "automatizar encuestas de satisfaccion con whatsapp",
+      "tier": 2,
+      "cluster": "encuestas-satisfaccion-whatsapp",
+      "status": "published",
+      "date": "2026-11-20",
+      "source": "matrix-generated"
+    },
     {
       "slug": "whatsapp-marketing-para-pymes",
       "keyword": "whatsapp marketing para pymes",

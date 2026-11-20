@@ -11351,3 +11351,16 @@ Full write-up with the pay-by-link comparison table, legal notes (PSD2, HAC/747/
 #WhatsAppBusinessAPI #AIAgents #Payments #PlatformEngineering
 
 ---
+## 2026-11-20 - AI Agent for Motorcycle Dealers (EN)
+
+Building an AI agent for a US motorcycle dealership is a DMS integration problem, not a chatbot UX problem. The hard part sits in the plumbing between the live inventory feed and the sales-floor CRM, and four decisions carry the architecture.
+
+First, the DMS adapter is per-vendor, not generic: Lightspeed EVO/NXT (CDK Global Recreation), DX1, Blackpurl, Dominion Powersports, Trader and Ideal each expose different auth surfaces and inventory payloads (REST + API-key on Blackpurl and DX1, legacy SOAP/ODBC pulls on Lightspeed EVO, a thin Graph-style read on Dominion), and the `StockUnit` struct maps to a different schema per DMS. Inventory is read live on every inbound turn rather than cached beyond 10 minutes, which is what stops the agent quoting a VIN that got sold on the floor at 11:00 a.m. Second, the voice layer runs Twilio + Vapi/Retell with Claude 4.7 behind a strict refuse-list emitted as a typed `AgentRefusal` enum (price_quote_without_rule, financing_approval, trade_dollar_value, legal_topic, warranty_dispute), which lets F&I keep the credit conversation and keeps the agent out of regulated territory. Third, the WhatsApp Business API runs via a verified BSP on the dealership's display number, routed through an intent classifier before any model call; per-message cost lands under $0.02 all-in with median first reply under 60 seconds across voice, WhatsApp, 10DLC SMS, IG DM and web chat. Fourth, the CRM write-back is append-only with a typed `LeadEvent` log, which keeps the salesperson's first callback informed by the whole thread instead of a summary.
+
+Reference numbers from a 2-rooftop Phoenix build over 90 days on WhatsApp + voice + web chat + SMS wired to the DMS: business-hours call pickup 68% to 99.1%, after-hours 0% to 96%, median first reply to a web form 4h 11m to 41s, p95 DMS-to-agent inventory freshness 7s.
+
+Full write-up with the stack table, DMS integration points, 2026 US pricing bands and 2-week rollout: https://zeniapartners.com/blog/ai-agent-for-motorcycle-dealers.html
+
+#WhatsAppBusinessAPI #AIAgents #DealerTech #Powersports
+
+---

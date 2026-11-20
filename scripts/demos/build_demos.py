@@ -69,6 +69,10 @@ def pagina(d):
     }[vert]
     con_agente = (f'Contesta en segundos a cualquier hora, reparte cada consulta a su sede y reserva sin que nadie tenga que coger el teléfono.'
                   if n_sedes > 1 else 'Contesta en segundos a cualquier hora y reserva sin que nadie tenga que coger el teléfono.')
+    # precios inventados con permiso del negocio (campo "precios_ejemplo" de la ficha): se rotula dentro del chat y en la nota
+    ej = bool(d.get('precios_ejemplo'))
+    aviso_precios = '        <div class="chat-lock">Los precios de esta demo son de ejemplo.</div>\n' if ej else ''
+    nota_precios = ' Los precios que da el agente también son de ejemplo: con tu tarifa real daría el precio exacto.' if ej else ''
     data_json = json.dumps(datos, ensure_ascii=False).replace('</', '<\\/')
     return f'''<!DOCTYPE html>
 <html lang="es">
@@ -122,7 +126,7 @@ def pagina(d):
       <div class="chat-body" id="chatBody" aria-live="polite">
         <div class="chat-day">Hoy</div>
         <div class="chat-lock">Los mensajes están cifrados de extremo a extremo.</div>
-        <div class="chat-day">Toca una pregunta de abajo para empezar</div>
+{aviso_precios}        <div class="chat-day">Toca una pregunta de abajo para empezar</div>
       </div>
       <div class="chips" id="chips" role="group" aria-label="Preguntas de ejemplo"></div>
       <div class="chat-input" aria-hidden="true"><span>Mensaje</span><i></i></div>
@@ -144,7 +148,7 @@ def pagina(d):
   <h2>¿Lo vemos con <em>tus preguntas</em>?</h2>
   <p class="lead">En 30 minutos te enseño cómo quedaría conectado a tu agenda y a tu WhatsApp, con las preguntas que de verdad os hacen tus {varios}. Sin compromiso.</p>
   <div class="btns"><a class="btn btn-primary" href="{CALENDLY}" target="_blank" rel="noopener">Reservar 30 minutos</a><a class="btn btn-ghost" href="https://wa.me/{WA}?text={wa_txt}" target="_blank" rel="noopener">Escribir por WhatsApp</a></div>
-  <p class="note">Demo preparada por Zenia Partners con la información pública de {e(host)}, consultada en noviembre de 2026. No está conectada a la agenda de {e(nombre)}: los huecos y el nombre del {uno} son de ejemplo. En el agente real, lo que no sabe lo pasa a una persona de tu equipo.</p>
+  <p class="note">Demo preparada por Zenia Partners con la información pública de {e(host)}, consultada en noviembre de 2026. No está conectada a la agenda de {e(nombre)}: los huecos y el nombre del {uno} son de ejemplo.{nota_precios} En el agente real, lo que no sabe lo pasa a una persona de tu equipo.</p>
 </div></section>
 </main>
 <footer><div class="wrap"><span>Zenia Partners · Madrid</span><a href="{BASE}/es/">zeniapartners.com</a></div></footer>

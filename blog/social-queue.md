@@ -11455,3 +11455,16 @@ Full write-up with the 7 jobs, the refuse list and the 2-week rollout: https://z
 #WhatsAppBusinessAPI #AIEngineering #HealthcareInfrastructure #PlatformEngineering
 
 ---
+## 2026-11-21 - Gym member reactivation as a check-in-stream problem, not a CRM feature
+
+Member reactivation at a 600-member gym is a check-in-stream problem, not a CRM feature. The hard part is turning the gym management system's attendance events (Trainingym, Resasports, Perfect Gym, Virtuagym webhooks) into a per-member inactivity streak counter that is correct when the webhook drops, the clock skews, or the member swipes twice at the turnstile.
+
+Four decisions carry the build. First, idempotency on the detection side: streak increments key off `(member_id, iso_day)` with a trailing-7-day rollup, so duplicate check-in events from a flaky RFID reader do not reset a legitimate inactive flag. Second, the 14/28/60-day thresholds are not timers, they are windowed queries over the last 90 days of visits, because a member who comes once in week 2 and disappears again is a different conversation than a member steadily tapering. Third, the agent reads attendance frequency, modality preference, assigned trainer and open support tickets before composing each of the 3 WhatsApp messages, which is what separates a 1% win-back (Club OS via Athletech News) from the 8-15% structured benchmark (Rework citing IHRSA 2024). Fourth, business-initiated sends go through Meta-approved templates on WhatsApp Business API, free-text inside the 24h session; utility conversations are priced at 0.0138 EUR in Spain as of Nov 2026, so cost per reactivated member lands around €0.30 of messaging over a 45-day sequence.
+
+Reference numbers from the gym cohort we run (480-900 members, Trainingym + WhatsApp Cloud API + Claude on the agent): p95 writeback to the management system 1.8s under normal load, 0 duplicate sends under 90 days of retry traffic, response rate 28% on message 1 / 16% on message 2 / 10% on message 3, effective reactivation (2+ visits in 30 days) 9.4% of inactive-blando cohort.
+
+Full architecture, the 3-window sequence and the 4 KPIs that matter: https://zeniapartners.com/blog/reactivar-socios-inactivos-gimnasio.html
+
+#WhatsAppBusinessAPI #PlatformEngineering #AIEngineering #FitnessInfrastructure
+
+---

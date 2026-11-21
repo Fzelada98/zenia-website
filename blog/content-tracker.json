@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-11-21T14:10:00+00:00",
+  "lastRun": "2026-11-21",
   "posts": [
     {
       "slug": "recordatorios-cita-estetica-automatico",
@@ -5193,6 +5193,15 @@
       "status": "published",
       "date": "2026-11-21",
       "source": "matrix-expansion"
+    },
+    {
+      "slug": "reactivar-socios-inactivos-gimnasio",
+      "keyword": "reactivar socios inactivos gimnasio",
+      "tier": 1,
+      "cluster": "gimnasios",
+      "status": "published",
+      "date": "2026-11-21",
+      "source": "keyword-matrix-tier1"
     }
   ]
 }

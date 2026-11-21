@@ -11416,3 +11416,16 @@ Full write-up with the 72h / 24h / 2h sequence, the stop rules and the common wa
 #WhatsAppBusinessAPI #AIAgents #PlatformEngineering #SaaS
 
 ---
+## 2026-11-21 - Agile CRM to WhatsApp as a bridge pipeline, not a channel
+
+The Agile CRM to WhatsApp integration is a bridge problem, not a channel problem, because Agile has no first-party Meta Business Platform channel: every working deployment in 2026 is Agile + webhook + BSP + inbox, held together by a contract the two sides agreed on.
+
+Four decisions carry the build. First, the phone number is the merge key, not the Agile contact id: Meta sends you an E.164 number on the inbound webhook and Agile returns a numeric id on lookup, so the bridge normalizes to E.164 before any `contacts/search` call against the Agile REST API, or you double-create contacts at a 6-8% rate under real traffic. Second, Agile's webhook is event-shaped and the BSP's is message-shaped, so a typed `ConversationEvent` struct sits between them with session id, direction, template name or free-text, and a monotonic sequence number; this is what lets the AI agent reply in under 60 seconds while the writeback to Agile queues on a BullMQ worker with retry backoff, instead of blocking the message pipeline on CRM availability. Third, Meta's August 2026 token-based pricing for AI replies (~$2 per million tokens, ~4-5c per typical reply) makes prompt caching non-optional: the system prompt plus service catalog gets cached per conversation turn, and tool definitions are pinned, cutting token spend 55-70% on the same answer quality. Fourth, degradation mode: when Agile's API is unreachable for over 20 seconds, the AI agent still answers first and the writeback queues with TTL 24h, because an unanswered WhatsApp is a lost lead but a late CRM note is a nuisance.
+
+Reference numbers from a 4-user Dallas agency cohort on Agile CRM Regular + Twilio BSP + Respond.io + Claude on the agent: median first-reply latency 47s end to end (p95 2.1s LLM + 9s BSP + 3s inbound webhook), bridge writeback p95 1.4s to Agile under normal load, bridge failure rate 0.3% over 60 days with zero lost messages, token cost per reply ~4.2c on cached prompts versus ~11c cold.
+
+Full write-up with the three bolt-on paths, the decision table and the 2026 Meta pricing math: https://zeniapartners.com/blog/agile-crm-whatsapp-integration.html
+
+#WhatsAppBusinessAPI #AIEngineering #PlatformEngineering #CRM
+
+---

@@ -11403,3 +11403,16 @@ Full write-up with the plantilla, the webhook contract, the branching rules and 
 #WhatsAppBusinessAPI #CustomerExperience #AIEngineering #PlatformEngineering
 
 ---
+## 2026-11-21 - Appointment reminders for salons as a WhatsApp Business API pipeline
+
+Building appointment reminders for salons is less a copy problem and more a calendar-sync pipeline, because the hard parts are state convergence between the salon's scheduler and the WhatsApp side, not the message text.
+
+Four infra decisions carry the build. First, the scheduler adapter is per-system, not generic: Flowww, Treatwell, Shortcuts and plain Google Calendar each expose a different event shape (REST on Flowww Growth, iCal on the long tail), and a typed `Appointment` struct normalizes client id, treatment id, professional id, start, duration, preparation flags and consent status before any message is scheduled; this is what lets the 72h "preparation" wave fire only for treatments that actually need it instead of blasting every slot. Second, outbound runs on WhatsApp Business Platform through Cloud API, with the three waves (72h / 24h / 2h) as separate utility templates in Meta's October 2026 tariff (~0.008-0.015 EUR per utility conversation in Spain), and quick-reply buttons on the 24h template (Confirm / Reschedule / Cancel) write back to the scheduler through the same adapter so a cancel on WhatsApp frees the slot in Flowww inside 400 ms. Third, a rescue loop runs on the CRM side: a cancelled slot triggers a ranked notification to the waitlist (three sequential offers, 30-minute response window each), which is where a cancellation stops being a loss and starts being a reassignment. Fourth, stop rules are mandatory: once a contact confirms, the subsequent impacts flip to informational payloads and drop the confirmation ask, which is the single change that keeps the number's `MessagingHealth` rating above `HIGH`.
+
+Reference numbers from the salon and estetica cohort on WhatsApp Business API + typed scheduler adapter + waitlist rescue: median scheduler write latency 380 ms end to end, 24h-template response rate 62-74% on button quick-reply versus 28-35% on free-text templates, no-show rate on treated bookings 4-6% versus the Rework 2026 benchmark of 10-20% on salons without a reminder flow, quality-rating degradation events zero over 90 days on the active cohort.
+
+Full write-up with the 72h / 24h / 2h sequence, the stop rules and the common ways teams melt their WhatsApp number trying to build this: https://zeniapartners.com/blog/recordatorios-cita-estetica-automatico.html
+
+#WhatsAppBusinessAPI #AIAgents #PlatformEngineering #SaaS
+
+---

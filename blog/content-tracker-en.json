@@ -1,7 +1,16 @@
 {
-  "lastRun": "2026-11-20T00:00Z",
+  "lastRun": "2026-11-21T00:00Z",
   "market": "US/UK small business",
   "posts": [
+    {
+      "slug": "agile-crm-whatsapp-integration",
+      "keyword": "agile crm whatsapp",
+      "tier": 0,
+      "cluster": "whatsapp-crm",
+      "status": "published",
+      "date": "2026-11-21",
+      "note": "striking-loop hit (2026-11-21): 12 impressions, pos 15.1. Query 'agile crm whatsapp' was printing on /blog/whatsapp-crm-pymes-guia.html (Spanish) with no head-on English post. New dedicated English post (~2,500 body words): defines that Agile CRM has no native WhatsApp Business Platform channel in 2026, walks the three bolt-on paths (Path 1 Agile + Zapier/Make/n8n at $140-$220/mo for <500 msgs, Path 2 Agile + BSP inbox bridge Respond.io/Trengo/Wati at $260-$420/mo for 500-5k msgs, Path 3 migrate to HubSpot Starter $20/user/mo, Zoho Bigin $9/user/mo, Kommo ~$15/user/mo, or Pipedrive + Respond.io), 2026 pricing-change context (August token-based AI reply pricing ~$2/M tokens ~4-5c/reply, October service messages lose free tier, per-message billing since July 2025), decision table matching situation to path, 4-person Dallas marketing agency Path 2 case study (first reply 2h40m -> 47s, qualified conv 19 -> 34 percent, discovery calls 14 -> 31/mo, Agile CRM deals from WhatsApp 9 -> 22/mo, owner hours 11-14 -> 3-4/wk, +$55k engagements in 60 days at $380/mo stack), 5 AI agent jobs (sub-60s first reply, 5-8 field qualification, calendar booking, 30/60/90d dormant reactivation, handoff with summary), features worth keeping vs replacing in Agile, 5 common setup mistakes, 14-day WhatsApp-first then migration rollout, FAQ. Cross-link added from /blog/whatsapp-crm-pymes-guia.html using 'agile crm whatsapp' as anchor text."
+    },
     {
       "slug": "ai-receptionist-for-solar-energy",
       "keyword": "ai receptionist for solar energy",

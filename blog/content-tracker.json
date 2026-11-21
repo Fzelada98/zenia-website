@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-11-21T06:10:00+00:00",
+  "lastRun": "2026-11-21T14:10:00+00:00",
   "posts": [
     {
       "slug": "recordatorios-cita-estetica-automatico",
@@ -5184,6 +5184,15 @@
       "cluster": "payments",
       "status": "published",
       "date": "2026-11-20"
+    },
+    {
+      "slug": "green-tick-whatsapp-business-cuenta-oficial",
+      "keyword": "green tick whatsapp business",
+      "tier": 2,
+      "cluster": "whatsapp-business-api",
+      "status": "published",
+      "date": "2026-11-21",
+      "source": "matrix-expansion"
     }
   ]
 }

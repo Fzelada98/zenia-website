@@ -11429,3 +11429,16 @@ Full write-up with the three bolt-on paths, the decision table and the 2026 Meta
 #WhatsAppBusinessAPI #AIEngineering #PlatformEngineering #CRM
 
 ---
+## 2026-11-21 - Green tick on WhatsApp Business: an engineering checklist, not a marketing badge
+
+The WhatsApp "green tick" is still called green, but Meta's 2025 cross-platform verification unification turned it blue. Underneath it is unchanged: an Official Business Account flag granted manually by Trust & Safety on top of a provisioned WhatsApp Business Account on the API, never on the standalone Business app.
+
+What the API exposes to your services does not change when OBA lands. Rate limits (Tier 1 1k / Tier 2 10k / Tier 3 100k conversations per 24h), per-conversation pricing (0.0636 EUR marketing and 0.0138 EUR utility in Spain as of Nov 2026), latency SLOs on the Cloud API send endpoint, and webhook delivery guarantees are identical with or without the badge. What changes is one byte in the header: display name plus logo plus verified mark replace the raw E.164 on every inbound from an unsaved contact.
+
+The review catches four infrastructure gaps most often. Business Portfolio not verified at Meta level (not WABA level), 2FA missing on at least one admin seat, number quality rating below green at any point in the trailing seven days, and a display name that does not match public search results for the brand. The last one eats most applications we see: Trust & Safety discounts paid coverage and press-release pipelines, so the evidence attached has to be organic hits, Wikipedia or LinkedIn Company Page history, and third-party backlinks indexed by Google at review time.
+
+Full application flow, rejection patterns and plan-B stack: https://zeniapartners.com/blog/green-tick-whatsapp-business-cuenta-oficial.html
+
+#WhatsAppBusinessAPI #PlatformEngineering #MessagingInfrastructure #B2B
+
+---

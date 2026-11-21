@@ -11442,3 +11442,16 @@ Full application flow, rejection patterns and plan-B stack: https://zeniapartner
 #WhatsAppBusinessAPI #PlatformEngineering #MessagingInfrastructure #B2B
 
 ---
+## 2026-11-21 - AI receptionist for chiropractic: a PMS-writeback problem, not a voice-bot problem
+
+An AI receptionist for a chiropractic office looks like a voice problem from the outside and is a practice-management-system writeback problem from the inside. The latency floor on voice is cheap in 2026; the hard part is a two-way contract with ChiroTouch, Genesis or ChiroSpring that stays correct while the CA is also booking at the counter.
+
+Four infra decisions carry the build. First, the PMS adapter is per-platform, not generic: ChiroTouch exposes a vendor-approved REST partner API over OAuth2, Genesis publishes a FHIR-flavored endpoint behind its ONC certification, and ChiroSpring ships a narrower set of appointment and patient scopes; a typed `Appointment` struct normalizes patient id, provider id, visit code, duration, and care-plan sequence before any slot is held, which is what prevents the double-book that kills trust in week two. Second, the care-plan schedule is a frequency, not an event: the agent writes the next three to five visits as a single transaction with an idempotency key keyed on `(patient_id, plan_segment, iso_week)`, so a dropped webhook on the BSP side does not replay as duplicate appointments on retry. Third, real-time eligibility runs on a separate queue: Pverify, Office Ally and Change Healthcare each return a 270/271 payload per PPO, and the agent caches the 271 for 24 hours per patient-plan pair, because running eligibility on every reminder would melt your clearinghouse budget. Fourth, HIPAA has the strongest say on the transport: BAA signed with Twilio, Vapi, Anthropic enterprise, and the clearinghouse before a single PHI payload crosses a wire, and recordings/transcripts retain on separate 30 and 60 day lifecycles with audit log always-on.
+
+Reference numbers from a 2-DC Charlotte cohort on ChiroTouch + Twilio voice + WhatsApp Cloud API + Pverify + Claude on the agent: median PMS writeback 1.1s p50 and 2.7s p95, idempotent dedup rate 0.0% double-bookings over 90 days, eligibility 271 hit rate 94% on the PPO mix, call-to-booked-NP 38% to 57%, no-show rate on care-plan visits 14% to 6% under confirm-on-button templates.
+
+Full write-up with the 7 jobs, the refuse list and the 2-week rollout: https://zeniapartners.com/blog/ai-receptionist-for-chiropractors.html
+
+#WhatsAppBusinessAPI #AIEngineering #HealthcareInfrastructure #PlatformEngineering
+
+---

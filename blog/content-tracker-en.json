@@ -3,6 +3,15 @@
   "market": "US/UK small business",
   "posts": [
     {
+      "slug": "ai-receptionist-for-chiropractors",
+      "keyword": "ai receptionist for chiropractors",
+      "tier": 1,
+      "cluster": "healthcare",
+      "status": "published",
+      "date": "2026-11-21",
+      "note": "Dedicated US-focused front-desk build (~2,390 words) scoped tight to the chiropractic receptionist pattern (distinct from the broader ai-agent-for-chiropractors funnel article): why chiropractic phones are different (long new-patient calls, high-frequency schedule, standing CA), 7 jobs (first-ring pickup, 7-field qualification with chief complaint/onset/insurance, PMS writeback, 2-3x/wk care-plan rebooking, real-time eligibility on BCBS/Aetna/United/Cigna/Humana, 14/30/60/90d dormant recall, clinical handoff), 2-DC Charlotte 90-day case (live answer 61->98%, after-hours 0->96%, call-to-booked NP 38->57%, NP shows 11->21/mo, no-shows 14->6%, 31 reactivations, care-plan conversion 49->58%, CA phone hours 21->7/wk, ~$27k return vs $1,197 setup + $597/mo), stack table (ChiroTouch ~$139/mo, Genesis $97/user/mo ONC-certified, ChiroSpring $149/mo, ChiroFusion, zHealth, Jane + Twilio/Vapi/Retell or myaifrontdesk/Dialzara/Sameday/Thoughtly + Meta Cloud/360dialog/Twilio BSP + 10DLC + Pverify/Office Ally/Change Healthcare + Jotform HIPAA + Stripe/Square/ChiroHealthUSA/CareCredit), explicit refuse-list (clinical advice, fracture/stroke/cauda equina handoff, pricing negotiation, telehealth where restricted), HIPAA BAA checklist (carrier, LLM, clearinghouse, forms; 30-60d retention; role-based access), 2026 US pricing bands ($149-$4,500/mo vs $17-26/hr receptionist), 2-week rollout with overflow-first then primary."
+    },
+    {
       "slug": "agile-crm-whatsapp-integration",
       "keyword": "agile crm whatsapp",
       "tier": 0,

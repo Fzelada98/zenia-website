@@ -11520,3 +11520,18 @@ Full stack, PMS adapter notes, HIPAA guardrails and the 90-day instrumentation: 
 #VoiceAI #WhatsAppBusinessAPI #PlatformEngineering #HealthTech #PharmacyTech
 
 ---
+## 2026-11-22 - Engineering a WhatsApp campaign system for Spain's January sales window
+
+January 7, 2027 is D-day for Spain's winter sales. Here is the architecture we ship for SMBs that want WhatsApp Business API live by then, instead of discovering on January 5 that their templates are still PENDING.
+
+Stack: WhatsApp Business API via a BSP (Meta Cloud API or 360dialog), a template submission pipeline that pre-registers all four marketing categories (preview VIP, launch, cart abandonment, final call) with Meta's review API 3 to 6 weeks early, and a stateful agent on the inbound side running under a p95 latency budget of 2.5s including CRM writeback.
+
+Rate-limit math is the blocker, not creativity. A tier-1 number caps at 1,000 unique business-initiated conversations a day. A 5,000-contact base needs tier escalation (1k, 10k, 100k) with clean message quality before campaign day, not during it. We gate every template with a health check (block rate under 2%, read rate over 70%) so a degrading sequence self-mutes before Meta demotes the number.
+
+Observed ceilings from Chatarmin Benchmark 2026: 72% median per-brand open rate, 11.8% CTR, 0.37% opt-out per message. That is the envelope that justifies the ~€0.0616 per marketing conversation in Spain against retail email at 22% open and 1.8% CTR.
+
+Full breakdown of the four template categories, the double opt-in flow we built for RGPD, ROI math for a 5,000-contact base, and the December readiness calendar: https://zeniapartners.com/blog/campanas-rebajas-enero-whatsapp-pymes-2027.html
+
+#WhatsAppBusinessAPI #PlatformEngineering #RetailTech #B2BTech
+
+---

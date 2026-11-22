@@ -16,7 +16,9 @@
       "keyword": "ai agent for pharmacies",
       "tier": 1,
       "cluster": "healthcare",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-11-22",
+      "note": "Tier 1 tracker build. All EN striking queries (pos 8-30, impressions >=5) on 2026-11-22 already covered by dedicated head-on posts, so routed to tracker. 2,394-word US-focused build for independent community pharmacies anchored on APhA staffing-vs-volume context and the 2026 J.D. Power Pharmacy Study brick-and-mortar slip. 7 agent jobs (refill intake on voice+WhatsApp with PMS write-back, status check, pickup/hours, transfer-in intake, dormant chronic recall, pickup reminder+ready-for-pickup, after-hours triage). 2-pharmacist 5-tech Columbus independent 90-day case (420 scripts/day, PioneerRx): business-hours live pickup 61->99%, after-hours 0->96%, refill capture 68->94% (+310 refills/mo), abandon 21->3%, tech phone time 31->9 hrs/wk, 164/287 chronic patients reactivated over 60 days, +$27,400 net cash return vs $3,891 cost in first 90 days. Stack table custom (Twilio+Vapi/Retell+Claude Haiku/Sonnet, Meta Cloud via 360dialog/Gupshup/Twilio BSP, 10DLC, HubSpot/Postgres) vs off-the-shelf (VOXO, myaifrontdesk pharmacy, Ringlyn, Pharmie, Frontdesk, Hyperleap, Streebo), with PMS options PioneerRx (reported ~$500/mo)/PrimeRx/Liberty/Micro Merchant/Rx30/BestRx. 2026 US pricing bands ($299-$1,497/mo + $0-$4,500 setup), PMS AI line item ($250-$450/mo), WhatsApp BSP service-conversation pricing after Oct 2026 change ($200-$400/mo). Guardrails: no controlled substances, no clinical/dosing, PHI verification, PA no-promise, insured-copay from adjudication only, C-II transfer=pharmacist, in-person vaccine screening. HIPAA BAA stack + NABP state-board policy note. 2-week WhatsApp-first then after-hours voice then overflow rollout with day-30 review criteria. Who-should-not-do-this gate (API-closed PMS, <120 scripts/day, >40% LTC/compounding/340B, no SMS/WhatsApp consent). Linked to ai-agent-for-pediatric-clinics and ai-agent-for-mental-health-clinics."
     },
     {
       "slug": "ai-agent-for-senior-living-facilities",

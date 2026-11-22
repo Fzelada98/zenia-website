@@ -11507,3 +11507,16 @@ Full comparative with public prices, the 7-point decision checklist and the inte
 #WhatsAppBusinessAPI #PlatformEngineering #AIEngineering #FitnessInfrastructure
 
 ---
+## 2026-11-22 - The independent pharmacy phone is a write-back problem, not a voice problem
+
+Shipping an AI agent in front of a 400-script-a-day independent pharmacy looks like a voice project, but 90% of the work is on the write path, not the audio.
+
+Architecture we are running in production: Twilio Voice (SIP from the existing in-store PBX) + Vapi for turn-taking + Claude Haiku on the intake brain under a 650ms response budget, with Meta Cloud API via a BSP (360dialog/Gupshup) and a 10DLC-registered number sharing the same session state. The hard part is the write-back to the pharmacy management system: PioneerRx, PrimeRx and Liberty each expose refill intake differently (REST on one, IVR hook on another, a middleware bridge on the third), so the orchestrator owns per-PMS adapters and an idempotency key keyed by (patient_id, rx_number, requested_fill_date) so a dropped socket does not double-queue. BAA chain (voice, LLM, BSP, CRM) is the first commit, not the last. Controlled substances and anything therapeutic are a hard refuse-list enforced on the brain's system prompt, not a post-hoc filter.
+
+Three numbers from a 420-script/day Columbus independent on PioneerRx: business-hours live pickup moved from 61 to 99 percent at p95 under 2s to first token, refill capture (API write succeeds and is visible in the fill queue within 5s of the call ending) went from 68 to 94 percent, and the agent writes an idempotent request in a median 380ms round trip so the patient hears the pickup window on the same call.
+
+Full stack, PMS adapter notes, HIPAA guardrails and the 90-day instrumentation: https://zeniapartners.com/blog/ai-agent-for-pharmacies.html
+
+#VoiceAI #WhatsAppBusinessAPI #PlatformEngineering #HealthTech #PharmacyTech
+
+---

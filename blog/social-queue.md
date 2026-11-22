@@ -11481,3 +11481,16 @@ Full breakdown of categories, the 7 rejection causes with sources, and the webho
 #WhatsAppBusinessAPI #PlatformEngineering #AIEngineering #B2BTech
 
 ---
+## 2026-11-22 - Home care intake is now a latency and compliance problem, not a staffing one
+
+Shipping an AI agent in front of a non-medical home care agency's intake looks less like "automation" and more like building a small real-time distributed system with a BAA attached.
+
+Architecture we are running in production: Vapi for voice (ElevenLabs/Cartesia TTS, Whisper-stream ASR) wired to Claude Haiku on the intake brain under a 700ms turn-taking budget; Meta Cloud API via a BSP (360dialog/Gupshup) for WhatsApp, same brain; a 10DLC-registered Twilio number for SMS; one orchestrator that owns session state across all three transports and writes back to WellSky Personal Care or AlayaCare via REST. The BAA chain (voice provider, LLM provider, BSP, CRM) is a prerequisite, not a checkbox at the end. Dormant family reactivation is a time-indexed job on the lead table at day 30/60/90, not a drip campaign.
+
+Three hard performance numbers from a 42-caregiver Phoenix cohort: after-hours live-answer 0 to 97 percent at p95 under 3s pickup, median first reply across channels 3h 41m to 52s, and the CRM writeback round trip stays under 450ms so the caller hears the booking confirmation on the same call. TCPA/10DLC consent is captured as a single record covering voice+SMS+WhatsApp, not three records, which keeps the lead lifecycle sane downstream.
+
+Full stack choices, compliance rails and the 90-day instrumentation: https://zeniapartners.com/blog/ai-agent-for-home-care-agencies.html
+
+#VoiceAI #WhatsAppBusinessAPI #PlatformEngineering #HealthTech #B2BTech
+
+---

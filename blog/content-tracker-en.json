@@ -1,7 +1,310 @@
 {
-  "lastRun": "2026-11-21T00:00Z",
+  "lastRun": "2026-11-22T00:00Z",
   "market": "US/UK small business",
   "posts": [
+    {
+      "slug": "ai-agent-for-home-care-agencies",
+      "keyword": "ai agent for home care agencies",
+      "tier": 1,
+      "cluster": "healthcare",
+      "status": "published",
+      "date": "2026-11-22",
+      "note": "Tier 1 tracker build. All EN striking queries (pos 8-30, impressions >=5) on 2026-11-22 (ai receptionist for photographers 47 imp, ai receptionist for yoga studios 22 imp, ai crm for pest control 19 imp) were already covered by dedicated head-on posts, so routed to tracker. 2,571-word US-focused build for non-medical home care agencies anchored on AxisCare's 91% AI-adoption finding and HCAOA's June 2026 speed-to-lead note. 7 intake-agent jobs (first-ring pickup, 8-field ADL+payer qualification, calendar-aware consult booking, 30/60/90 dormant family reactivation, caregiver recruiting intake, shift-reminder loops, out-of-scope handoff), 42-caregiver Phoenix 90-day case (business-hours live-answer 71->99 percent, after-hours 0->97 percent, median first reply 3h 41m->52s, inquiries 58->84/mo, inquiry-to-consult 36->61 percent, started clients 9->25/mo, 14 reactivated families, caregiver applicants 22->57/mo, coordinator hours 38->14/wk, ~$27,500/mo net GP + $11,200 deposits vs $2,400 setup + $897/mo), stack table with reported 2026 pricing for WellSky Personal Care/AlayaCare/AxisCare/CareSmartz360/HHAeXchange/Smartcare, agent-layer spec (Vapi+Retell+Claude Haiku+Meta Cloud API via 360dialog/Gupshup/Twilio+10DLC+Stripe), four compliance rails (BAA scope, TCPA/10DLC inbound-first path, explicit refuse-list including Medicare Part A coverage claims and medication dosing, voice disclosure), US 2026 pricing bands ($249-$1,497/mo), 2-week WhatsApp-first then voice rollout, who-should-not-do-this-yet gate. IBISWorld market-size numbers ($173.6B-$191.6B, 4.6-6.7% CAGR) noted with source conflict. Linked to ai-agent-for-mental-health-clinics, ai-agent-for-physical-therapy-clinics, whatsapp-business-automation, crm-whatsapp-integration."
+    },
+    {
+      "slug": "ai-agent-for-pharmacies",
+      "keyword": "ai agent for pharmacies",
+      "tier": 1,
+      "cluster": "healthcare",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-senior-living-facilities",
+      "keyword": "ai agent for senior living facilities",
+      "tier": 1,
+      "cluster": "healthcare",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-hospice-agencies",
+      "keyword": "ai agent for hospice agencies",
+      "tier": 1,
+      "cluster": "healthcare",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-assisted-living",
+      "keyword": "ai agent for assisted living",
+      "tier": 1,
+      "cluster": "healthcare",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-urgent-care-clinics",
+      "keyword": "ai agent for urgent care clinics",
+      "tier": 1,
+      "cluster": "healthcare",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-med-aesthetics-clinics",
+      "keyword": "ai agent for medical aesthetics clinics",
+      "tier": 2,
+      "cluster": "beauty",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-hair-restoration-clinics",
+      "keyword": "ai agent for hair restoration clinics",
+      "tier": 2,
+      "cluster": "beauty",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-laser-hair-removal",
+      "keyword": "ai agent for laser hair removal clinics",
+      "tier": 2,
+      "cluster": "beauty",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-lash-studios",
+      "keyword": "ai agent for lash studios",
+      "tier": 2,
+      "cluster": "beauty",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-waxing-studios",
+      "keyword": "ai agent for waxing studios",
+      "tier": 3,
+      "cluster": "beauty",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-massage-therapists",
+      "keyword": "ai agent for massage therapists",
+      "tier": 2,
+      "cluster": "wellness",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-acupuncture-clinics",
+      "keyword": "ai agent for acupuncture clinics",
+      "tier": 2,
+      "cluster": "wellness",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-nutritionists",
+      "keyword": "ai agent for nutritionists",
+      "tier": 2,
+      "cluster": "wellness",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-dietitians",
+      "keyword": "ai agent for dietitians",
+      "tier": 2,
+      "cluster": "wellness",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-life-coaches",
+      "keyword": "ai agent for life coaches",
+      "tier": 2,
+      "cluster": "coaching",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-business-coaches",
+      "keyword": "ai agent for business coaches",
+      "tier": 2,
+      "cluster": "coaching",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-doulas",
+      "keyword": "ai agent for doulas",
+      "tier": 3,
+      "cluster": "wellness",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-lactation-consultants",
+      "keyword": "ai agent for lactation consultants",
+      "tier": 3,
+      "cluster": "wellness",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-wedding-officiants",
+      "keyword": "ai agent for wedding officiants",
+      "tier": 3,
+      "cluster": "events",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-event-planners",
+      "keyword": "ai agent for event planners",
+      "tier": 2,
+      "cluster": "events",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-party-rentals",
+      "keyword": "ai agent for party rentals",
+      "tier": 2,
+      "cluster": "events",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-bounce-house-rentals",
+      "keyword": "ai agent for bounce house rentals",
+      "tier": 3,
+      "cluster": "events",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-escape-rooms",
+      "keyword": "ai agent for escape rooms",
+      "tier": 3,
+      "cluster": "entertainment",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-bowling-alleys",
+      "keyword": "ai agent for bowling alleys",
+      "tier": 3,
+      "cluster": "entertainment",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-golf-courses",
+      "keyword": "ai agent for golf courses",
+      "tier": 2,
+      "cluster": "entertainment",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-driving-ranges",
+      "keyword": "ai agent for driving ranges",
+      "tier": 3,
+      "cluster": "entertainment",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-tennis-clubs",
+      "keyword": "ai agent for tennis clubs",
+      "tier": 3,
+      "cluster": "fitness",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-pickleball-clubs",
+      "keyword": "ai agent for pickleball clubs",
+      "tier": 2,
+      "cluster": "fitness",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-dog-boarding",
+      "keyword": "ai agent for dog boarding",
+      "tier": 2,
+      "cluster": "pets",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-dog-training",
+      "keyword": "ai agent for dog training",
+      "tier": 2,
+      "cluster": "pets",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-mobile-vet",
+      "keyword": "ai agent for mobile veterinarians",
+      "tier": 3,
+      "cluster": "pets",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-equine-vets",
+      "keyword": "ai agent for equine veterinarians",
+      "tier": 3,
+      "cluster": "pets",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-auto-body-shops",
+      "keyword": "ai agent for auto body shops",
+      "tier": 2,
+      "cluster": "auto",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-tire-shops",
+      "keyword": "ai agent for tire shops",
+      "tier": 2,
+      "cluster": "auto",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-used-car-dealers",
+      "keyword": "ai agent for used car dealers",
+      "tier": 2,
+      "cluster": "auto",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-car-rental-agencies",
+      "keyword": "ai agent for car rental agencies",
+      "tier": 3,
+      "cluster": "auto",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-limo-services",
+      "keyword": "ai agent for limo services",
+      "tier": 3,
+      "cluster": "auto",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-jewelry-stores",
+      "keyword": "ai agent for jewelry stores",
+      "tier": 3,
+      "cluster": "retail",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-mattress-stores",
+      "keyword": "ai agent for mattress stores",
+      "tier": 3,
+      "cluster": "retail",
+      "status": "pending"
+    },
+    {
+      "slug": "ai-agent-for-furniture-stores",
+      "keyword": "ai agent for furniture stores",
+      "tier": 2,
+      "cluster": "retail",
+      "status": "pending"
+    },
+    {
+      "slug": "whatsapp-automation-for-home-care-agencies",
+      "keyword": "whatsapp automation for home care agencies",
+      "tier": 2,
+      "cluster": "whatsapp-crm",
+      "status": "pending"
+    },
+    {
+      "slug": "home-care-crm-with-ai",
+      "keyword": "home care crm with ai",
+      "tier": 1,
+      "cluster": "healthcare",
+      "status": "pending"
+    },
     {
       "slug": "ai-receptionist-for-chiropractors",
       "keyword": "ai receptionist for chiropractors",

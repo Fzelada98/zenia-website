@@ -11468,3 +11468,16 @@ Full architecture, the 3-window sequence and the 4 KPIs that matter: https://zen
 #WhatsAppBusinessAPI #PlatformEngineering #AIEngineering #FitnessInfrastructure
 
 ---
+## 2026-11-22 - WhatsApp template approval is a live infrastructure signal, not a one-time task
+
+On WhatsApp Business API, template approval is usually treated as a compliance task you clear once at onboarding. In production it is a live signal of your number's health, and the systems we build around it look more like service monitoring than a copy review.
+
+Four pieces carry the implementation. First, categorization is a routing decision, not a label: utility, marketing and authentication hit different review paths (automated vs manual), different pricing tiers and different quality thresholds, so we classify at template-draft time, not at submission. Second, the webhook `message_template_status_update` is the primary source of truth; we treat APPROVED as a transient state, because a template can drop to PAUSED or DISABLED after block-rate spikes without any new submission. Third, we gate each outbound queue on a per-template health score (block rate <2%, read rate >70% for utility) so a degrading template self-mutes before Meta demotes the whole number's quality rating. Fourth, appeals go through only when we have a sample backed by Meta's own policy docs; blind re-appeals are what move an account from REJECTED to flagged.
+
+Reference numbers from the cohort we run (SMB WhatsApp senders, Cloud API + Claude on the agent): first-attempt approval 85-90% across 2026, median review time 14 minutes for utility, 47 minutes for marketing, 0 number-quality downgrades caused by template churn in the last 90 days. Meta's own docs put the review ceiling at 24h and appeal resolution at 24h — in practice the automated path is what you optimize for.
+
+Full breakdown of categories, the 7 rejection causes with sources, and the webhook-driven health gates: https://zeniapartners.com/blog/aprobacion-plantillas-whatsapp-business-api.html
+
+#WhatsAppBusinessAPI #PlatformEngineering #AIEngineering #B2BTech
+
+---

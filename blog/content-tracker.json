@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-11-21",
+  "lastRun": "2026-11-22",
   "posts": [
+    {
+      "slug": "aprobacion-plantillas-whatsapp-business-api",
+      "keyword": "aprobacion plantillas whatsapp business api",
+      "tier": 2,
+      "cluster": "whatsapp-technical",
+      "status": "published",
+      "date": "2026-11-22",
+      "source": "matrix-generated"
+    },
     {
       "slug": "recordatorios-cita-estetica-automatico",
       "keyword": "recordatorios cita estetica automatico",

@@ -11494,3 +11494,16 @@ Full stack choices, compliance rails and the 90-day instrumentation: https://zen
 #VoiceAI #WhatsAppBusinessAPI #PlatformEngineering #HealthTech #B2BTech
 
 ---
+## 2026-11-22 - Picking a gym management system in Madrid is now a CRM-boundary problem, not a software feature list
+
+Picking a software stack for a 1,200-member gym in Madrid used to be about reservations, SEPA billing and access control. In 2026 the decision is where the CRM boundary lives, because the retention layer is what moves the P&L and almost no gym management system covers it well.
+
+Four architecture notes from the operators we build for. First, the base system (Virtuagym, Trainingym, WodBuster, GREETIK, Mindbody) owns the system of record for cuotas, SEPA mandates and turnstile events; we do not try to replace it. Second, inactivity detection is a windowed query over the last 90 days of check-in webhooks keyed by (member_id, iso_day), not a cron, so a flaky RFID reader or a dropped webhook does not reset the streak. Third, outbound to the member goes through WhatsApp Business API on Meta-approved templates, with a per-template health gate (block rate <2%, read rate >70%) so a degrading sequence self-mutes before Meta demotes the number. Fourth, the agent brain (Claude Haiku on the dialog loop) reads the member record, pending cuotas, last 90-day attendance and assigned trainer before composing each message, which is what separates a 1% win-back from the 8-15% IHRSA/Rework benchmark.
+
+Reference numbers from the Madrid gym cohort we run (400-1,500 members, base system + WhatsApp Cloud API): p95 writeback to the base system 1.9s under normal load, 0 duplicate reactivation sends in the last 90 days, -22% monthly churn vs the previous 6 months on the inactive-blando cohort. Public market context from DBK/INFORMA (Jan 2026): 4,600 gyms in Spain as of Sept 2025, +3.5% YoY, Madrid, Cataluña and Andalucía concentrate ~60% of the park.
+
+Full comparative with public prices, the 7-point decision checklist and the integration pattern on top of the existing base system: https://zeniapartners.com/blog/software-gestion-socios-gimnasio-madrid.html
+
+#WhatsAppBusinessAPI #PlatformEngineering #AIEngineering #FitnessInfrastructure
+
+---

@@ -4,7 +4,7 @@ Consultas donde zeniapartners.com ya imprime en posición 4-30 (últimos 8 días
 
 | Posición | Impresiones | Consulta | Página que imprime |
 |---|---|---|---|
-| 8.4 | 86 | crm sports world | /blog/mejor-crm-para-gimnasios-en-cdmx.html |
+| 8.4 | 86 | [crm sports world](/blog/crm-sports-world.html) | /blog/mejor-crm-para-gimnasios-en-cdmx.html |
 | 8.1 | 76 | click to chat ads | /blog/click-to-chat-ads-guia-meta-2026.html |
 | 12.9 | 58 | ai receptionist for photographers | /blog/ai-receptionist-for-photographers.html |
 | 21.4 | 38 | carta digital para restaurantes | /blog/carta-digital-qr-restaurante.html |

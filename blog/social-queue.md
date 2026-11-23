@@ -11576,3 +11576,16 @@ Full stack, per-CRM adapter notes, and the 2-week rollout: https://zeniapartners
 #VoiceAI #WhatsAppBusinessAPI #PlatformEngineering #HealthTech
 
 ---
+## 2026-11-23 - CRM for a 30-club gym chain is an identity-resolution problem, not a messaging project
+
+Multi-site gym chains in Mexico and LATAM (Sports World, Smart Fit, Planet Fitness) leak on one engineering surface: resolving the same member across 30+ clubs where each site runs its own access-control reader, billing module and class-reservation module, plus a central operational suite like Zenoti or Virtuagym that is not always the source of truth. The CRM problem looks like WhatsApp; it is actually identity resolution and write-back under latency.
+
+Stack we ship for cadenas de gimnasios on top of Zenoti/Virtuagym/Glofox: member identity layer with deterministic match on phone + national ID + probabilistic fallback on visit pattern, Meta Cloud API via a BSP (360dialog or Gupshup) with templated + session messages for billing and retention and an agent-driven intake under a 700ms first-token budget, visit-frequency and failed-payment signal piped from access control and billing webhooks into a churn score written back every 15 minutes, adapters per operational suite (Zenoti REST, Virtuagym via Zapier on their tier, Glofox custom webhooks), and an idempotency key on (member_id, club_id, event_id) so a retried write never double-charges or double-books.
+
+Benchmarks on the table: HFA 2025 puts annual retention at 66.4% across 175 companies and 17,000+ sites in 27 countries, Gymdesk's 4,594-gym panel measures 2-3.5% monthly churn with the January spike, and Rework estimates 15-20% of cancellations are involuntary (card expiry, bounced charge), which is the band that moves if you write a recovery link back into WhatsApp inside 24h of the failed charge.
+
+Full architecture, per-platform adapter notes and 2026 price bands: https://zeniapartners.com/blog/crm-sports-world.html
+
+#AIEngineering #WhatsAppBusinessAPI #PlatformEngineering #CRM
+
+---

@@ -11563,3 +11563,16 @@ Full architecture and integration notes: https://zeniapartners.com/blog/reservas
 #WhatsAppBusinessAPI #PlatformEngineering #RestaurantTech #B2BTech
 
 ---
+## 2026-11-23 - Senior living inquiry response is a stateful nurture problem across a 70-120 day window, not a voicebot
+
+A senior living AI agent that only picks up the phone at 9:47pm wins the first inquiry and loses the move-in 90 days later. The engineering job is holding state across a 70 to 120 day decision window and writing it back into Yardi RentCafe Senior CRM, Enquire, Eldermark or ALIS, each with a different API surface.
+
+Stack we run in production: Twilio Voice + Vapi for turn-taking + Claude Haiku on intake under a 700ms first-token budget, Meta Cloud API via a BSP (360dialog or Gupshup) and a 10DLC-registered Twilio number sharing the same session state across voice, SMS, WhatsApp, IG and web chat. CallRail/Invoca for call-level UTM attribution. The CRM adapter layer is where platforms diverge: Yardi RentCafe Senior CRM exposes REST for prospects/tours/deposits/move-ins, Enquire ships REST plus Zapier on the admissions workflow, Eldermark tiers API access, ALIS writes to a residency lifecycle model, MatrixCare pairs with Aline CRM over an August 2026 integration. Nurture state lives in Postgres keyed by (community_id, prospect_id) with an idempotency key on every outbound touch so a replay never double-messages the family.
+
+Two numbers from a 140-unit Raleigh IL/AL community on Yardi (92 IL + 48 AL): median first reply across all channels moved from 4h 12m to 48s all hours, and tour booking writes back to the counselor calendar with CRM visibility in a p95 of 1.9s from call-end. Peak inbound sits 7-10pm local time weekdays and Sunday afternoon, so the autoscaler is tuned around the adult-child inquiry window, not business hours.
+
+Full stack, per-CRM adapter notes, and the 2-week rollout: https://zeniapartners.com/blog/ai-agent-for-senior-living-facilities.html
+
+#VoiceAI #WhatsAppBusinessAPI #PlatformEngineering #HealthTech
+
+---

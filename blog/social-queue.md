@@ -11535,3 +11535,16 @@ Full breakdown of the four template categories, the double opt-in flow we built 
 #WhatsAppBusinessAPI #PlatformEngineering #RetailTech #B2BTech
 
 ---
+## 2026-11-23 - The dance studio AI receptionist is a write-back problem on top of a legacy enrollment stack
+
+Shipping an AI receptionist in front of a 280-dancer multi-location studio looks like a voice project. 80% of the engineering is on the write path into the dance studio management system, not on the audio side.
+
+Stack we run in production: Twilio Voice (SIP from the owner's existing OpenPhone number) + Vapi for turn-taking + Claude Haiku on the intake brain under a 600ms first-token budget, with Meta Cloud API via a BSP (360dialog or Gupshup) and a 10DLC-registered number sharing the same session state. The write-back is where the platforms diverge: Jackrabbit Dance exposes a documented REST API with family/dancer/enrollment/payment endpoints, DanceStudio-Pro routes through Zapier on the Premier tier, The Studio Director has no documented real-time write API so vendors fall back to a confirmed-link flow, iClassPro has a usable REST surface. The orchestrator owns per-platform adapters and an idempotency key keyed by (family_id, dancer_id, class_id, requested_start_date) so a dropped socket does not double-enroll a dancer.
+
+Three numbers from a 2-location Raleigh studio on Jackrabbit Dance, 280 enrolled dancers: median first reply across phone/WhatsApp/IG moved from over 2 hours to 41 seconds all hours, enrollment write-back is visible in the family portal in a p95 of 2.1s from call-end, and the agent writes an idempotent enrollment in a median 420ms round trip so the parent hears the confirmed start date on the same call. Peak traffic hits 3-8pm weekdays and all day Saturday, so the autoscaler is tuned around those blocks, not a flat baseline.
+
+Full stack, adapter notes per platform, and the 2-week rollout: https://zeniapartners.com/blog/ai-receptionist-for-dance-studios.html
+
+#VoiceAI #WhatsAppBusinessAPI #PlatformEngineering #AIEngineering
+
+---

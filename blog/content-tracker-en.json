@@ -1,7 +1,16 @@
 {
-  "lastRun": "2026-11-22T00:00Z",
+  "lastRun": "2026-11-23T00:00Z",
   "market": "US/UK small business",
   "posts": [
+    {
+      "slug": "ai-receptionist-for-dance-studios",
+      "keyword": "ai receptionist for dance studios",
+      "tier": 1,
+      "cluster": "fitness-kids-activities",
+      "status": "published",
+      "date": "2026-11-23",
+      "note": "Striking-loop build for 2026-11-23. Query 'ai receptionist for dance studios' at pos 14.6 / 16 impressions in the striking report, printing from /blog/ai-receptionist-for-yoga-studios.html; no existing head-on post (only ai-agent-for-dance-studios.html exists). 2,396-word US-focused build. Added anchor-text link 'ai receptionist for dance studios' from the yoga studios receptionist page to this new post. 7 agent jobs (phone pickup during class blocks, trial/placement booking, class moves & make-ups, failed-tuition rescue, reminder cadence, dormant & recital-season reactivation, out-of-scope handoff). 2-location Raleigh studio case (280 dancers, Jackrabbit Dance, $125/mo tuition): missed touches 41%->under 2%, trials 9->17/wk, trial-to-enrolled 28%->41%, no-show 19%->8%, monthly attrition 6.4%->4.7%, failed-payment recovery 24%->67%, admin hours 11-14->2-3/wk, net +$2,800/mo tuition + $1,230/mo recovered payments vs $449/mo + $997 setup. Stack: Jackrabbit Dance/DanceStudio-Pro/The Studio Director/iClassPro/Akada/Mindbody + Twilio/Vonage/OpenPhone + WhatsApp Business API (BSP) + Meta Business Platform + Stripe/Square/Jackrabbit ePayments + GBP. Integration-depth notes: Jackrabbit deepest public API, DanceStudio-Pro Premier+Zapier, The Studio Director confirmed-link flow, iClassPro REST, Akada/Mindbody mixed. Hard refuse-list (injury clearance, tuition negotiation, competition audition slot, costume fit, teacher bio improvisation, out-of-policy refunds). US pricing bands ($199-$799+/mo + $497-$1,997 setup). 2-week rollout (WhatsApp first, phone last). IBISWorld 2026 market-size numbers ($5.0bn / 14,622 studios + $3.2bn dance schools segment / 10,176). Research sources flagged as vendor-marketing (AgentZap 62% missed, 67% no voicemail); Zenoti 2026 69% walk-away cited as cleaner adjacent-vertical data. Linked to ai-agent-for-dance-studios, ai-receptionist-for-yoga-studios, ai-receptionist-for-martial-arts-schools, ai-receptionist-for-driving-schools."
+    },
     {
       "slug": "ai-agent-for-home-care-agencies",
       "keyword": "ai agent for home care agencies",

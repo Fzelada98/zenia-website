@@ -11548,3 +11548,18 @@ Full stack, adapter notes per platform, and the 2-week rollout: https://zeniapar
 #VoiceAI #WhatsAppBusinessAPI #PlatformEngineering #AIEngineering
 
 ---
+## 2026-11-23 - NYE restaurant bookings on WhatsApp are an idempotency problem, not a conversational AI project
+
+Peak-week load profile: 3-4x normal WhatsApp inbound between Dec 20 and Dec 31, ten structured fields per reservation (deposit amount, per-diner allergens, menu variant, time slot, headcount deadline), and a 72h hard cutoff after which any headcount reduction is billed at 100%. Running this with a human operator in the loop is where restaurants leak revenue the week the ticket is at its annual peak.
+
+The stack we ship for this on the Spain market: WhatsApp Business API via a BSP (360dialog or Gupshup), an LLM intake with a strict JSON schema per field, a payment-link webhook (Stripe, Redsys or Bizum) that flips the reservation from `pending` to `guaranteed` inside the same chat, three timed reminders at 10d / 72h / 24h written back to CoverManager or TheFork reservation APIs, and an idempotency key on `(phone, date, slot)` so a retried message does not double-book.
+
+Three load-bearing design calls: deposit capture happens inside the chat so there is no app switch, RGPD consent and cancellation policy are stored next to the exact message timestamp of explicit acceptance, and escalation to a human arrives with full context JSON instead of a chat link.
+
+Benchmarks on the table: TheFork Spain (April 2026) puts median no-show at 3.3% nationally, CoverManager's 9,500-restaurant panel reports 2-4% on deposit-secured bookings, and NYE handled without a deposit flow typically sits in the 8-12% band.
+
+Full architecture and integration notes: https://zeniapartners.com/blog/reservas-nochevieja-restaurante-whatsapp.html
+
+#WhatsAppBusinessAPI #PlatformEngineering #RestaurantTech #B2BTech
+
+---

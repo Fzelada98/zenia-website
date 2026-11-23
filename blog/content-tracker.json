@@ -1,6 +1,15 @@
 {
-  "lastRun": "2026-11-22",
+  "lastRun": "2026-11-23",
   "posts": [
+    {
+      "slug": "como-entrenar-un-agente-de-ia-para-mi-negocio",
+      "keyword": "como entrenar un agente de IA para mi negocio",
+      "tier": 1,
+      "cluster": "agente-ia-training",
+      "status": "published",
+      "date": "2026-11-23",
+      "source": "matrix-generated"
+    },
     {
       "slug": "campanas-rebajas-enero-whatsapp-pymes-2027",
       "keyword": "campañas rebajas de enero whatsapp pymes 2027",

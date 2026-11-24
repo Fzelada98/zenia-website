@@ -22,8 +22,11 @@ BASE = 'https://zeniapartners.com'
 CALENDLY = 'https://calendly.com/zeladauriartef/30min'
 WA = '34677612799'
 
-PERSONA = {'clinica': ('paciente', 'pacientes'), 'taller': ('cliente', 'clientes'), 'autoescuela': ('alumno', 'alumnos')}
-CHIP_CITA = {'clinica': 'Pedir cita', 'taller': 'Pedir cita en el taller', 'autoescuela': 'Quiero apuntarme'}
+PERSONA = {'clinica': ('paciente', 'pacientes'), 'taller': ('cliente', 'clientes'), 'autoescuela': ('alumno', 'alumnos'),
+           # 24-nov-2026: sectores de la semana de la demo gratis
+           'academia': ('alumno', 'alumnos'), 'estetica': ('cliente', 'clientes'), 'gimnasio': ('socio', 'socios'), 'estudio': ('alumno', 'alumnos'), 'coches': ('comprador', 'compradores')}
+CHIP_CITA = {'clinica': 'Pedir cita', 'taller': 'Pedir cita en el taller', 'autoescuela': 'Quiero apuntarme',
+             'academia': 'Quiero matricularme', 'estetica': 'Pedir cita', 'gimnasio': 'Probar un día', 'estudio': 'Reservar clase de prueba', 'coches': 'Quiero verlo'}
 
 
 def codigo(slug):
@@ -66,6 +69,11 @@ def pagina(d):
         'clinica': 'Un agente de IA que responde a tus pacientes en segundos, también de noche y en fin de semana, con la información de tu web, y les reserva la cita.',
         'taller': 'Un agente de IA que responde a tus clientes en segundos, también fuera de horario, con la información de tu web, y les reserva el hueco en el taller.',
         'autoescuela': 'Un agente de IA que responde a tus futuros alumnos en segundos, también de noche y en fin de semana, con la información de tu web, y los apunta.',
+        'academia': 'Un agente de IA que responde a tus futuros alumnos en segundos, también de noche y en fin de semana, con la información de tu web, y los cita para matricularse.',
+        'estetica': 'Un agente de IA que responde a tus clientes en segundos, también de noche y en fin de semana, con la información de tu web, y les reserva la cita.',
+        'gimnasio': 'Un agente de IA que responde en segundos a quien pregunta por tus cuotas, también de noche y en fin de semana, con la información de tu web, y le reserva la sesión de prueba.',
+        'estudio': 'Un agente de IA que responde en segundos a quien pregunta por tus clases, también de noche y en fin de semana, con la información de tu web, y le reserva la clase de prueba.',
+        'coches': 'Un agente de IA que responde en segundos a quien pregunta por un coche, también de noche y en fin de semana, con la información de tu web, y concierta la visita.',
     }[vert]
     con_agente = (f'Contesta en segundos a cualquier hora, reparte cada consulta a su sede y reserva sin que nadie tenga que coger el teléfono.'
                   if n_sedes > 1 else 'Contesta en segundos a cualquier hora y reserva sin que nadie tenga que coger el teléfono.')

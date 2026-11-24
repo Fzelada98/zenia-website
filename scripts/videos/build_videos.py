@@ -7,7 +7,7 @@ a reproducir y cuando lo ven entero (registro en gaia, site «zenia-demo», kind
 La lista de prospectos vive fuera del repo.
 
 Uso: python3 scripts/videos/build_videos.py <prospectos-video.json> [RAÍZ_DEL_SITIO]
-Cada elemento: {nicho: clinicas|talleres|autoescuelas|inmobiliarias|veterinarias, slug, codigo, nombre} y, si hace falta,
+Cada elemento: {nicho: clinicas|talleres|autoescuelas|inmobiliarias|veterinarias|academias|estetica|laser|gimnasios|estudios|coches, slug, codigo, nombre} y, si hace falta,
 «tu» (p. ej. «vuestro hospital») o «cerrada» para afinar el texto de ese negocio. Escribe v/<slug>-<codigo>/index.html. Idempotente.
 Cada nicho lleva la duración de su vídeo («seg») y la página a la que enlaza el logo («enlace»).
 
@@ -30,8 +30,16 @@ N = {
     # 18-nov-2026: dos nichos más (todavía sin página propia de nicho: el logo lleva a la portada)
     'inmobiliarias': dict(tu='vuestra inmobiliaria', un='una inmobiliaria', cerrada='cuando la oficina está cerrada', seg=80, enlace='/es/'),
     'veterinarias': dict(tu='vuestra clínica', un='una clínica veterinaria', cerrada='fuera del horario de consulta', seg=80, enlace='/es/'),
+    # 24-nov-2026: nichos nuevos, solo con vídeo propio (variante B) y la demo gratis como gancho ("oferta": "demo-gratis")
+    'academias': dict(tu='vuestra academia', un='una academia', cerrada='cuando la academia está cerrada', seg=33, enlace='/es/'),
+    'estetica': dict(tu='vuestro centro', un='un centro de estética', cerrada='cuando el centro está cerrado', seg=33, enlace='/es/'),
+    'laser': dict(tu='vuestro centro', un='un centro de depilación láser', cerrada='cuando el centro está cerrado', seg=33, enlace='/es/'),
+    'gimnasios': dict(tu='vuestro centro', un='un gimnasio', cerrada='cuando no hay nadie en recepción', seg=33, enlace='/es/'),
+    'estudios': dict(tu='vuestro estudio', un='un estudio', cerrada='cuando el estudio está cerrado', seg=33, enlace='/es/'),
+    'coches': dict(tu='vuestra exposición', un='una compraventa', cerrada='cuando la exposición está cerrada', seg=33, enlace='/es/'),
 }
-NOCHE = {'clinicas': '21:45', 'talleres': '21:00', 'autoescuelas': '23:00', 'inmobiliarias': '22:30', 'veterinarias': '22:00'}   # hora del mensaje en el vídeo B
+NOCHE = {'clinicas': '21:45', 'talleres': '21:00', 'autoescuelas': '23:00', 'inmobiliarias': '22:30', 'veterinarias': '22:00',   # hora del mensaje en el vídeo B
+         'academias': '22:30', 'estetica': '22:15', 'laser': '22:15', 'gimnasios': '22:45', 'estudios': '22:20', 'coches': '22:40'}
 CF = '<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon=\'{"token": "eceeed460f6d465bba3b970417d5f6b0"}\'></script>'
 MARK = ('<svg viewBox="0 0 140 140" aria-hidden="true"><defs><linearGradient id="zb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563EB"/>'
         '<stop offset="1" stop-color="#3B82F6"/></linearGradient><linearGradient id="zv" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366F1"/>'
@@ -103,9 +111,68 @@ def pagina_b(p, n, wa, mail, datos):
     """Variante B: el vídeo es del propio negocio (su nombre en la cabecera del WhatsApp)."""
     e = lambda s: html.escape(str(s or ''), quote=True)
     nombre = p['nombre']; noche = NOCHE[p['nicho']]; seg = int(p.get('seg') or 33); med = f"/v/media/p/{p['slug']}-{p['codigo']}"
+    if p.get('oferta') == 'demo-gratis':
+        return pagina_gratis(p, n, datos, noche, seg, med)
     cta = (f'''<p class="q">¿Lo vemos con {e(nombre)}?</p>
       <p class="s">En 48 horas te preparo una demo con la información de la web de {e(nombre)}. Sin compromiso.</p>
       <div class="btns"><a class="btn wa" href="{e(wa)}" target="_blank" rel="noopener">{WA_ICO}Quiero mi demo</a><a class="btn ghost" href="{e(mail)}">Responder por correo</a><a class="btn ghost" href="{CALENDLY}" target="_blank" rel="noopener">Reservar 30 minutos</a></div>''')
+    return f'''<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{e(nombre)}: el WhatsApp de las {noche} | Zenia</title>
+<meta name="description" content="Medio minuto con el WhatsApp de {e(nombre)}: el mismo mensaje dos veces, primero sin nadie al otro lado y después con un agente de IA.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
+<meta name="theme-color" content="#070B13">
+<meta property="og:type" content="video.other">
+<meta property="og:title" content="{e(nombre)}: el WhatsApp de las {noche}">
+<meta property="og:description" content="El mismo mensaje, dos veces: sin nadie al otro lado y con un agente de IA contestando.">
+<meta property="og:image" content="https://zeniapartners.com{med}.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/v/assets/v.css?v={VERSION}">
+{CF}</head>
+<body>
+<header class="top"><a class="brand" href="https://zeniapartners.com{n['enlace']}">{MARK}<span>Zenia</span></a><small>Vídeo para <b>{e(nombre)}</b></small></header>
+<main class="wrap">
+  <div class="txt">
+    <p class="label">Preparado para {e(nombre)}</p>
+    <h1>Son las {noche} y alguien escribe a <span>{e(nombre)}</span></h1>
+    <p class="lead">El mismo mensaje, dos veces: primero sin nadie al otro lado y después con un agente de IA contestando. Dura medio minuto.</p>
+    <div class="cta desk">
+      {cta}
+    </div>
+  </div>
+  <div class="player" id="player">
+    <video id="vid" playsinline preload="metadata" poster="{med}.jpg" src="{med}.mp4"></video>
+    <button class="play" id="play" type="button" aria-label="Reproducir el vídeo con sonido"><i></i><span>Ver el vídeo · {seg} s</span></button>
+  </div>
+  <div class="cta mob">
+    {cta}
+  </div>
+</main>
+<footer><span>Fabrizzio Zelada · Zenia Partners · Madrid</span><span>La conversación del vídeo es de ejemplo. <a href="https://zeniapartners.com{n['enlace']}">zeniapartners.com</a></span></footer>
+<script type="application/json" id="v-data">{datos}</script>
+<script src="/v/assets/v.js?v={VERSION}" defer></script>
+</body>
+</html>
+'''
+
+
+def pagina_gratis(p, n, datos, noche, seg, med):
+    """24-nov-2026: mismo vídeo propio, pero el gancho es la DEMO GRATIS (se pide con un toque) y no hay botón de Calendly
+    (las llamadas las propone Fabrizzio a partir de las 19:00)."""
+    e = lambda s: html.escape(str(s or ''), quote=True)
+    nombre = p['nombre']
+    wa = f'https://wa.me/{WA}?text=' + urllib.parse.quote(f'Hola, Fabrizzio. Soy de {nombre}. He visto el vídeo y quiero la demo gratis con nuestro negocio.')
+    mail = ('mailto:fabrizzio.zelada@zeniapartners.com?subject=' + urllib.parse.quote(f'Demo gratis para {nombre}')
+            + '&body=' + urllib.parse.quote(f'Hola, Fabrizzio:\n\nHe visto el vídeo. Quiero la demo gratis con {nombre}.\n\n'))
+    cta = (f'''<p class="q">Pruébalo gratis con {e(nombre)}</p>
+      <p class="s">En 48 horas te preparo una demo con la información de la web de {e(nombre)}, para que la pruebes en el móvil. Gratis y sin compromiso.</p>
+      <div class="btns"><a class="btn wa" href="{e(wa)}" target="_blank" rel="noopener">{WA_ICO}Quiero mi demo gratis</a><a class="btn ghost" href="{e(mail)}">Pedirla por correo</a></div>''')
     return f'''<!DOCTYPE html>
 <html lang="es">
 <head>

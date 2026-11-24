@@ -11619,3 +11619,18 @@ Full stack table (Axxess, HCHB, MatrixCare, WellSky, CareVoyant), HIPAA BAA scop
 #AIEngineering #Healthcare #WhatsAppBusinessAPI #PlatformEngineering
 
 ---
+## 2026-11-24 - Appearing in ChatGPT for local queries is a schema + citation-graph pipeline, not a prompt-engineering problem
+
+A local SMB in Spain or LATAM in November 2026 runs the usual Google Business plus Instagram stack. The engineering problem that puts the business inside the 1.2% of locations ChatGPT actually recommends (SOCi 2026 Local Visibility Index, 350k+ locations) is not writing better copy. It is wiring a citation graph the model can resolve, and a WhatsApp agent fast enough to catch the demand once it lands.
+
+Stack we ship for the vertical: CMS-level JSON-LD generators for LocalBusiness and FAQPage with sameAs out to Google Business Profile, Foursquare, Apple Maps Business Connect, Yelp and Bing Places, a NAP reconciler that writes to the four directories through their APIs and alerts on drift (SOCi reports only 68% of contact info in ChatGPT and Perplexity matches the GBP of record), a robots.txt policy that whitelists OAI-SearchBot and PerplexityBot while keeping GPTBot training off the table per client, a weekly monitoring harness (Peec AI + Otterly over ChatGPT, Perplexity and Gemini with rotating geo-IPs) writing a time-series of brand mentions and first-position rate, and a Meta Cloud API agent behind the same content under a sub-60-second response SLA so the user that landed on the site from an AI answer cannot bounce before a human-sounding reply hits WhatsApp.
+
+Two load-bearing design calls: Foursquare Places is treated as a first-class write target because StudioMeyer's analysis puts it behind 60-70% of ChatGPT's first-position local picks, and the FAQ blocks are published as semantic chunks sized to the citation window the models actually pull (roughly 100-200 words per Q/A), not as long-form prose the model paraphrases and drops.
+
+Benchmarks on the table: SOCi 2026 reports that visibility in ChatGPT's local recommendations is roughly 30x harder than ranking in Google's local pack, BrightLocal Consumer Search Behavior 2026 shows 45% of consumers now ask generative AI for local business recommendations, and Analytify reports only 7.9% of local searches trigger a Google AI Overview compared to 86.7% on business-intent queries (Peec AI, April 2026).
+
+Full write-up including the LocalBusiness and FAQPage schema we ship by default, the robots.txt snippet and the 5-step rollout: https://zeniapartners.com/blog/como-aparecer-en-chatgpt-negocios-locales.html
+
+#AIEngineering #GEO #AEO #PlatformEngineering
+
+---

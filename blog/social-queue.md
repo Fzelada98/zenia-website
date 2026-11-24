@@ -11649,3 +11649,18 @@ Full CRM stack table (Yardi, Enquire, Welcomehome, ALIS, Eldermark, PointClickCa
 #AIEngineering #Healthcare #WhatsAppBusinessAPI #PlatformEngineering
 
 ---
+## 2026-11-24 - Average ticket in a 3-chair salon is a CRM write-back and recommendation-latency problem, not a pricing one
+
+A typical urban hair salon in Spain in November 2026 runs 350-600 appointments a month across 2-4 chairs with a mean ticket in the 28-38 EUR band. The engineering problem that moves that number 15-20% is not a price list rewrite; it is making the right add-on and retail recommendation visible to the stylist before the client sits down and then landing a WhatsApp follow-up fast enough to catch the retail purchase window.
+
+Stack we ship for the vertical: Meta Cloud API through a BSP under a sub-60-second first-reply SLA, a lightweight recommender keyed on (service_id, hair_profile_id, last_color_formula_id) with an exception layer for allergies and refused upsells, idempotent write-back from the WhatsApp agent into the salon software (Treatwell, Booksy, Fresha, Shortcuts, or a custom Postgres CRM when the incumbent has no public API), a 24h pre-visit confirmation template that prefills the complement ask into the stylist's tablet view, and a +3 day retail follow-up with a one-tap payment link so the product sale does not die between the chair and the next visit.
+
+Two load-bearing design calls: the recommender writes the stylist's accepted/declined log back to the client record on every visit so the agent never re-pitches a refused service, and the retail follow-up is template-approved under WhatsApp utility category rules so the 48-72h marketing window does not collide with the 24h customer service window.
+
+Benchmarks on the table: Zenoti estimates a 10-15% average-ticket lift in 60 days from guided per-visit upselling across salons running their stack, Keystone for Stanpa reports a 44% ticket-medio increase in Spanish beauty services between 2017 and 2025, and Upliora's 2026 scan of the Spanish market puts advanced-software with AI adoption at 8% of the 100k-salon base, so the operational delta is wider than in verticals already saturated with tooling.
+
+Full breakdown with the 4-week rollout, the per-lever impact table and the EUR numbers for a 3-chair salon: https://zeniapartners.com/blog/aumentar-ticket-medio-peluqueria.html
+
+#AIEngineering #CRM #WhatsAppBusinessAPI #PlatformEngineering
+
+---

@@ -11604,3 +11604,18 @@ Full comparative table (TheFork vs CoverManager vs HubSpot vs Zenia Partners), Z
 #WhatsAppBusinessAPI #PlatformEngineering #RestaurantTech #B2BTech
 
 ---
+## 2026-11-24 - Hospice intake is a referral-state problem across EMR, fax and voice, not a receptionist upgrade
+
+A US hospice agency at 100-150 ADC runs 30-60 referrals per month across fax from the hospital, encrypted email from the SNF, phone from the physician office and WhatsApp from the family. The engineering problem is not the voice front end; it is holding referral state consistently across Axxess, Homecare Homebase, MatrixCare, WellSky or CareVoyant while the referring hospital case manager, the admission RN and the family all move the record at the same time.
+
+Stack we ship for the vertical: Vapi or Retell on voice with Twilio or Telnyx (sub-700ms turn-taking, ElevenLabs or Cartesia voices), Claude Haiku for the deterministic 11-field intake path and Claude Sonnet for exception cases (open chemotherapy, dual-eligible with managed care, VA concurrent care), Meta Cloud API through a BSP for WhatsApp and 10DLC for US SMS where providers prefer it, Documo or Concord Cloud Fax for secure referral send and receive, an idempotent referral-write adapter per EMR (Axxess REST is the deepest public API, MatrixCare via FHIR through Total Triage/CareXM, Homecare Homebase via partner integration or SFTP batch depending on contract), and a three-stage status-push bus back to the referral source (received, RN scheduled, admitted) keyed on (referring_facility_id, patient_mrn) so a late fax does not create a duplicate episode.
+
+Two load-bearing design calls: the voice agent minimizes PHI at the audio layer and never reads the Medicare beneficiary identifier back on the line, and the admission-visit booking writes to the EMR before confirming with the family so the UX cannot promise a time the RN calendar lost in a race.
+
+Benchmarks on the table: MedPAC March 2026 shows Medicare hospice utilization crossing a new high in 2024 with median LOS 18 days and about a quarter of enrollees dying inside 5 days, Hospice Advisors benchmarks a 1-hour industry first response and 3.5-hour high-performer referral-to-admission average, and BerryDunn recommends an 8-hour operational target. A 112-ADC Nashville nonprofit case moved referral-to-admit-visit from 22h to 5.1h and 90-day conversion from 47% to 71%.
+
+Full stack table (Axxess, HCHB, MatrixCare, WellSky, CareVoyant), HIPAA BAA scope including the model, TCPA/10DLC posture and the refuse-list: https://zeniapartners.com/blog/ai-agent-for-hospice-agencies.html
+
+#AIEngineering #Healthcare #WhatsAppBusinessAPI #PlatformEngineering
+
+---

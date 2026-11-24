@@ -11589,3 +11589,18 @@ Full architecture, per-platform adapter notes and 2026 price bands: https://zeni
 #AIEngineering #WhatsAppBusinessAPI #PlatformEngineering #CRM
 
 ---
+## 2026-11-24 - Restaurant CRM in Zaragoza is a reservation-state and TPV write-back problem, not a WhatsApp project
+
+A mid-size restaurant in the Zaragoza market (1,650 restaurants in the province per Gobierno de Aragón, Jan 2025) runs 45-90 inbound WhatsApp reservation threads per shift during Pilares and ordinary weekends alike. The engineering problem is not the model; it is holding reservation state across WhatsApp, the agenda and the TPV and getting the no-show lifecycle to settle idempotently.
+
+Stack we ship for the vertical on top of CoverManager/TheFork + Revo/Camarero10/Agora/Glop: Meta Cloud API via a BSP (360dialog or Gupshup) with templated plus session messages, an LLM intake under a 700ms first-token budget emitting a strict JSON schema per reservation (date, slot, headcount, allergens, zone, language, deposit required), reservation-write adapters per reservation system (CoverManager REST, TheFork partner API, CSV fallback where no API exists), TPV write-backs (Revo and Camarero10 expose REST on the enterprise tier; Agora and Glop via webhook bridges) so the ficha del cliente enriches on every ticket, a scheduler publishing three reminder windows at 48h, 24h and 3h written back to the reservation API with an idempotency key on (phone, date, slot), and a human-escalation payload that carries full conversation JSON plus the last 90 days of visit history.
+
+Two load-bearing design calls: cancellation flows back to CoverManager or TheFork with an atomic release so the waitlist bot can offer the slot in the same second the chat cancels, and the agent writes to the reservation system before replying to the diner so the UX cannot promise a slot that lost a race.
+
+Benchmarks on the table: TheFork Spain (April 2026) reports median no-show at 3.3% nationally, reminder-secured bookings sit at 2-4% in CoverManager's 9,500-restaurant panel, and 34% of reservation requests arrive outside 10:00 to 23:00 local time, which is the band that disappears without an agent that answers at 2am.
+
+Full comparative table (TheFork vs CoverManager vs HubSpot vs Zenia Partners), Zaragoza pricing and a 5-week rollout: https://zeniapartners.com/blog/mejor-crm-para-restaurantes-en-zaragoza.html
+
+#WhatsAppBusinessAPI #PlatformEngineering #RestaurantTech #B2BTech
+
+---

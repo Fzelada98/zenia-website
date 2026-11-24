@@ -11634,3 +11634,18 @@ Full write-up including the LocalBusiness and FAQPage schema we ship by default,
 #AIEngineering #GEO #AEO #PlatformEngineering
 
 ---
+## 2026-11-24 - Assisted living intake is a CRM write-back and state-machine problem, not a voice front end
+
+A standalone US assisted living community at 60-100 units runs 40-80 qualified inquiries per month across a website form, A Place for Mom and Caring.com feeds, hospital discharge planner calls, and WhatsApp from adult children at 9pm. The engineering problem is not the voice agent; it is holding lead state consistently across Yardi Senior CRM, Enquire, Welcomehome, ALIS/Medtelligent or Eldermark while the sales counselor, the director of resident services and the family all mutate the record in parallel on a 30-70 day decision window.
+
+Stack we ship for the vertical: Vapi or Retell on voice with Twilio or Telnyx (sub-700ms turn-taking, ElevenLabs or Cartesia voices), Claude Haiku on the deterministic 9-field qualification path (ADLs, mobility, continence, cognition flags, payer path including VA Aid and Attendance and Medicaid waiver by state), Claude Sonnet on exception cases (memory care crossover, LTC policy benefit verification, out-of-state adult-child virtual tour), Meta Cloud API through a BSP for WhatsApp and 10DLC for US SMS, an idempotent lead-write adapter per CRM (Yardi REST deepest footprint, Enquire webhooks, Welcomehome API, Eldermark structured import with Zapier bridge), and CallRail or Invoca for attribution back to A Place for Mom and direct referral sources keyed on (source_id, prospect_id) so a re-inquiry 11 months later does not create a duplicate.
+
+Two load-bearing design calls: the agent writes to the CRM before confirming with the family so the UX cannot promise a tour slot that lost a race against the counselor's own calendar, and the state licensure layer (TX A/B/C, CA RCFE, NY ALR/ALP, FL ECC/LMH/LNS, OH RCF + AL waiver) is a policy table keyed off the community's license ID, not free-text in the prompt.
+
+Benchmarks on the table: NIC MAP Q3 2026 shows AL occupancy at 89.1% up from 88.3% in Q2 with half of 31 Primary Markets over 90%, Aline's Q2 2026 Benchmark Snapshot puts AL inquiry-to-tour at 34% and tour-to-move-in at 46% with web-sourced AL converting to a scheduled tour at 57%, and Vye 2026 Growth Insights reports 53% of senior living web inquiries get no reply inside two hours. A 76-unit Columbus standalone AL moved median first reply from 3h 54m to 51s and trailing-12-month occupancy from 82% to 93% across 90 days.
+
+Full CRM stack table (Yardi, Enquire, Welcomehome, ALIS, Eldermark, PointClickCare), HIPAA BAA scope including the LLM, Fair Housing refuse-list and state licensure variability: https://zeniapartners.com/blog/ai-agent-for-assisted-living.html
+
+#AIEngineering #Healthcare #WhatsAppBusinessAPI #PlatformEngineering
+
+---

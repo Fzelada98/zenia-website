@@ -515,10 +515,19 @@ def cifras():
 '''
 
 
+CASO_MF_DESTACADO = '''<style>.cv{display:grid;grid-template-columns:minmax(0,280px) minmax(0,1fr);gap:clamp(24px,4.5vw,60px);align-items:center;margin-top:48px;padding:clamp(18px,3vw,34px);border:1px solid var(--line);border-radius:24px;background:var(--surface)}.cv-vid{position:relative;aspect-ratio:9/16;border-radius:18px;overflow:hidden;background:#030b1a;box-shadow:0 30px 80px rgba(0,0,0,.45)}.cv-vid video{width:100%;height:100%;object-fit:cover;display:block}.cv-play{position:absolute;inset:0;display:grid;place-items:center;background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.4));border:0;cursor:pointer;color:#fff;padding:0}.cv-play span{width:76px;height:76px;border-radius:50%;background:rgba(10,15,26,.45);border:1.5px solid rgba(255,255,255,.7);display:grid;place-items:center}.cv-play svg{width:26px;height:26px;margin-left:4px}.cv-txt h3{font-size:clamp(1.5rem,2.7vw,2.15rem);line-height:1.14;letter-spacing:-.02em}.cv-txt p{color:var(--ink-2);margin:14px 0 0;max-width:54ch}.cv-go{display:inline-block;margin-top:22px;color:var(--accent);font-weight:700;text-decoration:none}.cv+.cases{margin-top:18px}@media(max-width:760px){.cv{grid-template-columns:1fr}.cv-vid{width:100%;max-width:290px;margin:0 auto}}</style>
+<div class="cv"><div class="cv-vid"><video playsinline preload="none" poster="/assets/video/caso-migrafacil-poster.jpg" aria-label="Vídeo del caso Migrafácil, 41 segundos"><source src="/assets/video/caso-migrafacil.mp4" type="video/mp4"></video><button class="cv-play" type="button" aria-label="Reproducir el vídeo del caso Migrafácil" onclick="var v=this.previousElementSibling;v.controls=true;v.play();this.remove()"><span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></span></button></div>
+<div class="cv-txt"><span class="label">Migrafácil · caso en vídeo</span><h3>Había medio millón de euros en los comentarios. Y nadie los estaba leyendo.</h3>
+<p>Un vídeo con 586.000 vistas y cientos de personas pidiendo información que nadie alcanzaba a responder. Leímos los 941 comentarios con IA, encontramos 175 personas con intención real y construimos el agente y el CRM que hoy las atienden.</p>
+<div class="case-nums"><div><b>941</b><span>comentarios leídos con IA</span></div><div><b>175</b><span>personas con intención real</span></div><div><b>&lt; 1 min</b><span>de respuesta, 24/7</span></div></div>
+<a class="cv-go" href="/es/caso-migrafacil.html">Ver el caso →</a></div></div>
+'''
+
+
 def casos():
     return '''<section class="band" id="casos"><div class="wrap">
 <div class="head"><span class="label">Casos</span><h2>Ya funciona en negocios reales</h2></div>
-<div class="cases">
+''' + CASO_MF_DESTACADO + '''<div class="cases">
 <a class="case" href="/es/caso-global-watch-buyers.html"><div class="case-img" style="background-image:url(/cases/img/gwb-agente-poster.webp)" role="img" aria-label="El agente de Global Watch Buyers atendiendo por WhatsApp"></div>
 <div class="case-txt"><span class="label">Global Watch Buyers</span><h3>Vendedores de relojes de lujo de 33 países, atendidos por WhatsApp</h3>
 <p>Páginas en 13 idiomas, WhatsApp con cualificación y un agente de IA que contesta, cualifica y agenda.</p>
@@ -734,6 +743,42 @@ def nicho(k):
             + '</main>' + footer() + scripts(datos))
 
 
+def caso_migrafacil():
+    canon = 'https://zeniapartners.com/es/caso-migrafacil.html'
+    ld = json.dumps({'@context': 'https://schema.org', '@type': 'VideoObject', 'name': 'Caso Migrafácil: había medio millón de euros en los comentarios',
+                     'description': 'Cómo Zenia convirtió la audiencia de TikTok de Migrafácil en conversaciones atendidas y medidas con un agente de IA y un CRM a medida.',
+                     'thumbnailUrl': 'https://zeniapartners.com/assets/video/caso-migrafacil-poster.jpg', 'contentUrl': 'https://zeniapartners.com/assets/video/caso-migrafacil.mp4',
+                     'uploadDate': '2026-11-24', 'duration': 'PT41S', 'inLanguage': 'es'}, ensure_ascii=False)
+    h = head('Caso Migrafácil: de viral a medible con IA | Zenia',
+             'Un vídeo con 586.000 vistas y cientos de comentarios sin responder. Leímos 941 con IA, hallamos 175 personas con intención y montamos el agente y el CRM que las atienden.',
+             canon, f'<script type="application/ld+json">{ld}</script>', og='og-caso-migrafacil.jpg')
+    estilo = '<style>.cm-n{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-top:40px;border-top:1px solid var(--line)}.cm-n div{padding:26px 22px 4px 0}.cm-n div+div{padding-left:24px;border-left:1px solid var(--line)}.cm-n b{display:block;font-size:clamp(1.7rem,3.2vw,2.5rem);font-weight:700;letter-spacing:-.03em}.cm-n span{display:block;margin-top:6px;font-size:14.5px;color:var(--ink-3);line-height:1.4}.cm-l{margin:34px 0 0;padding:0;list-style:none;max-width:70ch}.cm-l li{padding:16px 0;border-top:1px solid var(--line);color:var(--ink-2)}.cm-l li b{color:var(--ink)}.cm-big{font-size:clamp(2.6rem,7vw,5rem);font-weight:700;letter-spacing:-.04em;margin:26px 0 0;line-height:1}.cm-nota{font-size:13.5px;color:var(--ink-3);margin-top:34px;max-width:70ch}@media(max-width:760px){.cm-n{grid-template-columns:repeat(2,minmax(0,1fr))}.cm-n div:nth-child(3){padding-left:0;border-left:0}.cm-n div:nth-child(n+3){border-top:1px solid var(--line)}}</style>'
+    video = CASO_MF_DESTACADO.split('</style>')[0] + '</style>'
+    vid = CASO_MF_DESTACADO.split('<div class="cv">')[1].split('<div class="cv-txt">')[0]
+    return (h + nav(False) + '<main id="main">' + video + estilo
+            + f'''<section class="band"><div class="wrap"><div class="cv" style="margin-top:0;border:0;background:none;padding:0">{vid}
+<div class="cv-txt"><span class="label">Caso real · Migrafácil</span><h1 class="largo" style="font-size:clamp(2rem,4.6vw,3.4rem);line-height:1.08">Había medio millón de euros en los comentarios</h1>
+<p class="lead">Migrafácil acompaña a quienes quieren estudiar y trabajar en Europa. En TikTok ya tenía lo más difícil de conseguir: atención. Faltaba un sistema que respondiera a todos, al instante.</p>
+<div class="btns"><a class="btn btn-white" href="#demo">Pide tu demo</a><a class="btn btn-ghost" href="/es/casos.html">Más casos</a></div></div></div></div></section>
+<section class="band alt"><div class="wrap"><div class="head"><span class="label">El punto de partida</span><h2>Un solo vídeo, 586.000 vistas</h2>
+<p class="lead">La comunidad ya superaba las 38.000 personas y un vídeo se había disparado. El problema no era el alcance: era lo que venía después. Cientos de personas pidiendo información, y responder a mano a ese ritmo era imposible.</p></div>
+<div class="cm-n"><div><b>586.000</b><span>vistas en un solo vídeo</span></div><div><b>5.113</b><span>veces compartido</span></div><div><b>4.338</b><span>veces guardado</span></div><div><b>1.000</b><span>comentarios</span></div></div></div></section>
+<section class="band"><div class="wrap"><div class="head"><span class="label">El hallazgo</span><h2>Leímos los 941 comentarios con IA</h2>
+<p class="lead">En seis vídeos encontramos 175 personas con intención real de contratar un servicio que cuesta 3.000 €. Haz la multiplicación.</p></div>
+<p class="cm-big">525.000 €</p><p class="muted" style="margin:10px 0 0">en demanda potencial sin atender (175 × 3.000 €). No son ventas: es lo que había sobre la mesa.</p></div></section>
+<section class="band alt"><div class="wrap"><div class="head"><span class="label">Lo que construimos</span><h2>El sistema que no duerme</h2></div>
+<ul class="cm-l"><li><b>Un agente de IA que responde en menos de 1 minuto,</b> las 24 horas, con la información real del servicio.</li>
+<li><b>Califica cada caso</b> (país, objetivo, plazos y presupuesto) y agenda la llamada con la asesora.</li>
+<li><b>Un CRM a medida</b> que muestra de dónde llegó cada persona, qué tan lista está para contratar y cuál es el siguiente paso.</li>
+<li><b>74 guías publicadas</b> para que Google y los asistentes de IA lo recomienden.</li></ul></div></section>
+<section class="band"><div class="wrap"><div class="head"><span class="label">Los primeros resultados</span><h2>De viral a medible</h2></div>
+<div class="cm-n"><div><b>+100.000</b><span>vistas en 5 días con los vídeos que editamos</span></div><div><b>7 de 10</b><span>contactos llegan desde TikTok; antes no se medía ninguno</span></div><div><b>&lt; 1 min</b><span>de respuesta, a cualquier hora</span></div><div><b>ChatGPT</b><span>ya lo recomienda: varios contactos llegaron por ahí</span></div></div>
+<p class="cm-nota">Diego y los comentarios que aparecen en el vídeo son ejemplos ilustrativos. Las cifras son reales, de noviembre de 2026.</p></div></section>
+'''
+            + form_demo() + final('Tu audiencia ya existe. Falta el sistema.', 'Te enseñamos la demo con la información de tu negocio en 48 h. Sin compromiso.')
+            + '</main>' + footer() + scripts({'negocios': NEGOCIOS, 'guion': GUION['clinica']}))
+
+
 def escribir(ruta, txt):
     os.makedirs(os.path.dirname(ruta), exist_ok=True)
     open(ruta, 'w', encoding='utf-8').write(txt)
@@ -748,3 +793,4 @@ if __name__ == '__main__':
     escribir(os.path.join(base, 'es/index.html'), portada())
     for k in NICHOS:
         escribir(os.path.join(base, f'es/{NICHOS[k]["slug"]}/index.html'), nicho(k))
+    escribir(os.path.join(base, 'es/caso-migrafacil.html'), caso_migrafacil())

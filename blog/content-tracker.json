@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-11-24",
+  "lastRun": "2026-11-25",
   "posts": [
     {
       "slug": "aumentar-ticket-medio-peluqueria",
@@ -5283,6 +5283,15 @@
       "status": "published",
       "date": "2026-11-21",
       "source": "keyword-matrix-tier1"
+    },
+    {
+      "slug": "bonos-regalo-peluqueria-navidad-whatsapp",
+      "keyword": "bonos regalo peluqueria navidad whatsapp",
+      "tier": 2,
+      "cluster": "belleza",
+      "status": "published",
+      "date": "2026-11-25",
+      "source": "keyword-matrix-tier2-seasonal"
     }
   ]
 }

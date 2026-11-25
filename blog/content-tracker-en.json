@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-11-24T00:00Z",
+  "lastRun": "2026-11-25T00:00Z",
   "market": "US/UK small business",
   "posts": [
     {
@@ -61,7 +61,8 @@
       "keyword": "ai agent for urgent care clinics",
       "tier": 1,
       "cluster": "healthcare",
-      "status": "pending"
+      "status": "published",
+      "date": "2026-11-25"
     },
     {
       "slug": "ai-agent-for-med-aesthetics-clinics",

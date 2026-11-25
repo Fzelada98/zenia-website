@@ -11679,3 +11679,19 @@ Full write-up with the comparison table (marketplace vs vertical software vs man
 #AIEngineering #CRM #WhatsAppBusinessAPI #PlatformEngineering
 
 ---
+
+## 2026-11-25 - Urgent care's missed-call problem is a telephony-plus-EMR-write problem, not a staffing one
+
+The typical US urgent care operator misses around 30% of inbound calls (Experity, 2026) and some chains sit at 33% before intervention (Flip, 2026). The engineering problem that drives the missed-call rate to zero is not more clerks; it is a HIPAA-covered agent in front of the EMR with a deterministic write-back path and a policy table keyed off the clinic's state license ID.
+
+Stack we ship for the vertical: SIP trunking into the clinic's existing number with sub-3-second answer, a HIPAA BAA that covers the LLM (Anthropic through AWS Bedrock, Azure OpenAI, Vertex) plus telephony plus recording store plus clearinghouse, a real-time 270/271 eligibility round-trip through Change Healthcare, Availity or Waystar, idempotent appointment write-back into Experity Connect, athenaOne, Practice Velocity or eCW with the chief complaint and insurance attached at creation (not nightly batch), a state-license-keyed refuse-list for triage severity and controlled-substance flags, and WhatsApp Business utility templates for 24h/2h reminders scoped outside PHI.
+
+Two load-bearing design calls: the EMR write carries the full intake payload at the moment of booking so a failed write triggers a 5-minute human callback instead of a silently orphaned slot, and the WhatsApp channel is BAA-scoped to confirmations and insurance card photo capture only, with lab results routed to the HIPAA portal or BAA-covered SMS.
+
+Benchmarks on the table: a 4-location Northeast operator moved the missed-call rate from 26% to 0% inside 30 days with 62% of intake AI-handled and the no-show rate on AI-booked slots at 11.4% vs a 19.2% baseline (Hello Patient, April 2026). MGMA Stat (August 2026) reports 32% of medical groups saw higher no-show rates in 2026 than in 2025, so the delta is widening.
+
+Full write-up with the EMR stack table, the refuse-list, HIPAA/TCPA/WhatsApp compliance scope and the 2-week rollout: https://zeniapartners.com/blog/ai-agent-for-urgent-care-clinics.html
+
+#AIEngineering #Healthcare #WhatsAppBusinessAPI #PlatformEngineering
+
+---

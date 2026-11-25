@@ -11710,3 +11710,16 @@ Full write-up with the three Meta-allowed automation layers, the vendor comparis
 #AIEngineering #InstagramAPI #WhatsAppBusinessAPI #PlatformEngineering
 
 ---
+## 2026-11-25 - A home care CRM with AI is three write-back problems stacked, not a CRM feature flag
+
+Picking a home care CRM in 2026 is really picking three adapters at once: a sub-60s intake surface across voice + WhatsApp + web form that writes a structured client record, a caregiver matcher that scores on more than zip + shift (preferences, drive radius, dementia experience, 4-week clock-in punctuality), and a single transaction that writes client + authorization + care plan + EVV schedule + billing rate back to the system of record. Vendor "AI Assistant" widgets that only summarize email miss all three.
+
+Stack we ship on top of AxisCare, AlayaCare, WellSky Personal Care or HHAeXchange: Twilio Voice + Vapi for turn-taking + Claude Haiku on intake under a 700ms first-token budget, Meta Cloud API via a BSP (360dialog or Gupshup) and a 10DLC-registered Twilio number sharing session state across voice/SMS/WhatsApp/web chat/IG, an orchestration service that posts client+authorization+visit candidates to the CRM over REST with an idempotency key on (agency_id, lead_id, event_id) so a retried write never double-creates a case, and a matching service that reads caregiver availability/EVV compliance/custom-field preferences and ranks top-5 with explainable features for the scheduler. State lives in Postgres keyed by (agency_id, lead_id, caregiver_id); 21st Century Cures Act EVV stays in the CRM as system of record for Medicaid waiver.
+
+Two numbers from a 42-caregiver Atlanta private-duty agency on AxisCare: median first reply moved from 3h 41m to 52s across all channels, and median time from consult to shift fill moved from 5.1 days to 1.6 days through the AI matcher ranking over 57 new applicants/month instead of 22. Peak inbound is 9pm-10pm weekdays (adult-child inquiry window) and Sunday afternoon, so the autoscaler is tuned there, not business hours.
+
+Full buyer's checklist, vendor comparison, 90-day case and 2-week rollout: https://zeniapartners.com/blog/home-care-crm-with-ai.html
+
+#AIEngineering #WhatsAppBusinessAPI #PlatformEngineering #HealthTech
+
+---

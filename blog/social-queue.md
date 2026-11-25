@@ -11723,3 +11723,20 @@ Full buyer's checklist, vendor comparison, 90-day case and 2-week rollout: https
 #AIEngineering #WhatsAppBusinessAPI #PlatformEngineering #HealthTech
 
 ---
+
+## 2026-11-25 - Spanish Christmas-party reservations as a chat-state-machine problem, not a bot problem
+
+Christmas-party season in Spain generates roughly 60–120 group inquiries per month per urban restaurant: WhatsApp threads of 20–40 messages each, deposits via Bizum, allergen lists, invoicing payloads. TheFork puts 72% of these groups at 10-top tables; Hostelería de España places menus at 30–45 EUR (42% of orders) or 45–55 EUR (32%).
+
+Treating that as a chat pipeline, not a bot:
+– Inbound WhatsApp Business API messages hit an intent router that promotes a group booking to a dedicated state machine: consult → menu catalogue → Stripe payment-link → allergen table (14 EU categories) → T-1 confirmation.
+– The deposit is a payment-link webhook flipping the row to confirmed; a scheduled worker frees the table at T-24h if unpaid.
+– All writebacks (CoverManager, TheFork API, CRM) happen before the chat reply, so retries and cancellations don't desync state.
+
+Latency budget: <15s to the first structured response, <60s to the menu-PDF reply with price tiers. No-show drops from the 8–14% baseline to 2–4% when the deposit lives inside the thread, not in a separate Bizum ask.
+
+Reply if you're sizing WhatsApp Business API template quotas for a hospitality group through this December.
+
+#restauranttech #customerretention #AI #WhatsAppBusiness
+
+---

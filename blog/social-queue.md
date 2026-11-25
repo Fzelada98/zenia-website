@@ -11664,3 +11664,18 @@ Full breakdown with the 4-week rollout, the per-lever impact table and the EUR n
 #AIEngineering #CRM #WhatsAppBusinessAPI #PlatformEngineering
 
 ---
+## 2026-11-25 - Gift card sales in a hair salon are a webhook-timing and template-category problem, not a creative one
+
+A typical Spanish hair salon in November 2026 takes 250-400 WhatsApp messages with buy-a-gift intent across the 15 Nov - 5 Jan window, and roughly 62% of them land outside staffed hours. The engineering problem that moves conversion from the manual 18% to the 32-36% band is not the card artwork; it is making the payment-link-to-PDF-emission latency deterministic and keeping utility vs marketing WhatsApp template categories cleanly separated across the campaign window.
+
+Stack we ship for the vertical: Meta Cloud API through a BSP, Stripe Checkout or Redsys with a signed webhook back to the agent for idempotent PDF generation (sub-30s from capture to delivery), Claude Haiku on the deterministic 3-field qualification path (amount, recipient name, expiry), Claude Sonnet on exception cases (service-specific vouchers, bridal packs, multi-session bonds), and idempotent write-back into Flowww, Shortcuts, Treatwell or Booksy keyed on (phone, voucher_code) so a re-redemption in February does not double-book the chair.
+
+Two load-bearing design calls: the PDF is emitted only after the Stripe webhook verifies the charge, not on the Checkout redirect, so a declined card at the 3DS step never ships a valid voucher; and the 15-day pre-expiry nudge is sent under the utility template category rather than marketing, which keeps it inside the WhatsApp 24h-plus-utility rules without a separate opt-in.
+
+Benchmarks on the table: Zenoti reports Nov-Dec gift card sales run 5x the rest of the year combined and 2024 salon gift card growth hit 93% YoY; Treatwell puts Black Friday plus Christmas at 30% of the annual revenue of Spanish beauty businesses; AgendaPro cites 15-20% industry breakage on gift cards, which sets the real-cash recognition timing for the P&L.
+
+Full write-up with the comparison table (marketplace vs vertical software vs manual link vs AI agent), the 90-day return estimate for a 1,200-client salon and the 2-3 week rollout: https://zeniapartners.com/blog/bonos-regalo-peluqueria-navidad-whatsapp.html
+
+#AIEngineering #CRM #WhatsAppBusinessAPI #PlatformEngineering
+
+---

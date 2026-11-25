@@ -11695,3 +11695,18 @@ Full write-up with the EMR stack table, the refuse-list, HIPAA/TCPA/WhatsApp com
 #AIEngineering #Healthcare #WhatsAppBusinessAPI #PlatformEngineering
 
 ---
+## 2026-11-25 - Automating Instagram Direct is a webhook-signature-and-handoff problem, not a bot problem
+
+The reason the average brand still sits at 10+ hour reply times on Instagram DMs (Crisp 2026, Spur 2026) is not operator fatigue; it is that nobody wired the Messaging API to a CRM with a deterministic handoff into the channel where the ticket actually closes. For SMBs doing 30-500 DMs/day in beauty, F&B, retail, clinics or legal, Instagram is the discovery channel and WhatsApp is the close channel, and they have to share one timeline.
+
+Stack we ship for the vertical: Meta Graph API with the Instagram Messaging product and an app bound to the connected Facebook Page, webhook endpoints that validate the X-Hub-Signature-256 HMAC before the agent ever sees the payload, idempotent writes into the CRM keyed on (ig_user_id, mid) so a Meta retry never duplicates a lead, intent classification on Claude Haiku for the deterministic 60% of messages (price, hours, stock, match-to-catalog) and Claude Sonnet on the exception path, and a handoff template that opens a WhatsApp Business API thread with the inherited conversation context when the agent detects purchase intent so the 24h customer-care window on WhatsApp starts cleanly.
+
+Two load-bearing design calls: the Instagram Messaging API is free for user-initiated conversations and that is the only mode we rely on, so no proactive DMs into cold accounts, which is what gets accounts rate-limited; and the handoff from IG to WhatsApp happens via an agent-sent wa.me link that captures explicit opt-in, so the policy trail is clean before Meta Business Agent per-message pricing on non-template responses lands in H2 2026 (Meta for Developers, 2026).
+
+Benchmarks on the table: Mailchimp cites Meta's own figure of about 150M people messaging businesses on Instagram every month; vendor-platform data (ManyChat, Respond.io) puts automated message-to-response under 5 seconds vs 4-8 hours manual, which collapses the 10-hour median gap and moves the lead conversion window back inside the day of intent.
+
+Full write-up with the three Meta-allowed automation layers, the vendor comparison table with real 2026 pricing (ManyChat, Respond.io, Meta Business Agent, Zenia Partners), the 4-6 week rollout and what still gets accounts banned: https://zeniapartners.com/blog/automatizar-instagram-direct-pymes.html
+
+#AIEngineering #InstagramAPI #WhatsAppBusinessAPI #PlatformEngineering
+
+---

@@ -20,7 +20,7 @@ Consultas donde zeniapartners.com ya imprime en posición 4-30 (últimos 8 días
 | 27.2 | 19 | carta restaurante digital | /blog/carta-digital-qr-restaurante.html |
 | 6.5 | 17 | agencia crm madrid | /blog/agencia-crm-madrid.html |
 | 8.6 | 16 | fideliza clientes con whatsapp | /blog/fideliza-clientes-con-whatsapp.html |
-| 12.4 | 16 | whatsapp multiagente | /blog/whatsapp-business-multiagente-equipos-comerciales.html |
+| 12.4 | 16 | whatsapp multiagente | /blog/whatsapp-business-multiagente-equipos-comerciales.html → nuevo refuerzo: [whatsapp multiagente](/blog/whatsapp-multiagente.html) |
 | 23.8 | 16 | agencia crm barcelona | /es/crm-barcelona.html |
 | 4.0 | 16 | agente ia clinicas gestion citas telefonicas | /blog/agente-ia-clinicas-gestion-citas-telefonicas.html |
 | 18.6 | 16 | chatbot whatsapp restaurante | /blog/chatbot-whatsapp-restaurantes.html |

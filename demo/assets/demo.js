@@ -39,10 +39,11 @@
   }
 
   function huecos() {
-    var out = [], d = new Date(), h = HORAS[D.vertical] || HORAS.clinica, dias = 0;
+    var out = [], d = new Date(), h = D.cita_demo.horas || HORAS[D.vertical] || HORAS.clinica, dias = 0, abre = D.cita_demo.dias;
     while (out.length < 3) {
       d.setDate(d.getDate() + 1); dias++;
       if (d.getDay() === 0) continue;   // domingo cerrado
+      if (abre && abre.indexOf(d.getDay()) < 0) continue;   // días de atención del negocio (ficha: cita_demo.dias)
       var dia = dias === 1 ? 'mañana' : 'el ' + DIAS[d.getDay()] + ' ' + d.getDate();
       out.push(dia + ' a las ' + h[out.length]);
     }

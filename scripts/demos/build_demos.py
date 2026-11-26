@@ -60,7 +60,9 @@ def pagina(d):
                          for q in d['conversacion']],
         'cita_demo': {'pregunta': d['cita_demo']['pregunta'], 'servicio': minus(d['cita_demo']['servicio']),
                       'sede': d['cita_demo']['sede'], 'respuesta_intro': d['cita_demo']['respuesta_intro'],
-                      'chip': CHIP_CITA[vert]},
+                      'chip': CHIP_CITA[vert],
+                      # 26-nov-2026: horas y días de los huecos de ejemplo a medida del negocio (p. ej. secretaría solo de tarde, de lunes a jueves)
+                      **{k: d['cita_demo'][k] for k in ('horas', 'dias') if d['cita_demo'].get(k)}},
     }
     wa_txt = urllib.parse.quote(f'Hola Fabrizzio, he visto la demo de {nombre} y me gustaría verlo con más calma.')
     n_sedes = len(sedes)
@@ -82,6 +84,14 @@ def pagina(d):
     aviso_precios = '        <div class="chat-lock">Los precios de esta demo son de ejemplo.</div>\n' if ej else ''
     nota_precios = ' Los precios que da el agente también son de ejemplo: con tu tarifa real daría el precio exacto.' if ej else ''
     data_json = json.dumps(datos, ensure_ascii=False).replace('</', '<\\/')
+    # 26-nov-2026: fichas con "sin_calendly" (regla: las llamadas las propone Fabrizzio a partir de las 19:00, sin enlace de agenda)
+    if d.get('sin_calendly'):
+        cta_final = (f'<p class="lead">Dime a qué hora te viene bien a partir de las 19:00 y te llamo yo: en 30 minutos te enseño cómo quedaría conectado a tu agenda y a tu WhatsApp, con las preguntas que de verdad les hacen tus {varios}. Sin compromiso.</p>\n'
+                     f'  <div class="btns"><a class="btn btn-primary" href="https://wa.me/{WA}?text={wa_txt}" target="_blank" rel="noopener">Escribir por WhatsApp</a>'
+                     f'<a class="btn btn-ghost" href="mailto:fabrizzio.zelada@zeniapartners.com?subject={urllib.parse.quote("Demo de " + nombre)}">Responder por correo</a></div>')
+    else:
+        cta_final = (f'<p class="lead">En 30 minutos te enseño cómo quedaría conectado a tu agenda y a tu WhatsApp, con las preguntas que de verdad os hacen tus {varios}. Sin compromiso.</p>\n'
+                     f'  <div class="btns"><a class="btn btn-primary" href="{CALENDLY}" target="_blank" rel="noopener">Reservar 30 minutos</a><a class="btn btn-ghost" href="https://wa.me/{WA}?text={wa_txt}" target="_blank" rel="noopener">Escribir por WhatsApp</a></div>')
     return f'''<!DOCTYPE html>
 <html lang="es">
 <head>
@@ -154,8 +164,7 @@ def pagina(d):
 </div></section>
 <section class="band cta"><div class="wrap">
   <h2>¿Lo vemos con <em>tus preguntas</em>?</h2>
-  <p class="lead">En 30 minutos te enseño cómo quedaría conectado a tu agenda y a tu WhatsApp, con las preguntas que de verdad os hacen tus {varios}. Sin compromiso.</p>
-  <div class="btns"><a class="btn btn-primary" href="{CALENDLY}" target="_blank" rel="noopener">Reservar 30 minutos</a><a class="btn btn-ghost" href="https://wa.me/{WA}?text={wa_txt}" target="_blank" rel="noopener">Escribir por WhatsApp</a></div>
+  {cta_final}
   <p class="note">Demo preparada por Zenia Partners con la información pública de {e(host)}, consultada en noviembre de 2026. No está conectada a la agenda de {e(nombre)}: los huecos y el nombre del {uno} son de ejemplo.{nota_precios} En el agente real, lo que no sabe lo pasa a una persona de tu equipo.</p>
 </div></section>
 </main>

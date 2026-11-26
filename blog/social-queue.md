@@ -11786,3 +11786,17 @@ Full architecture comparison (linked-devices app vs BSP platform vs CRM + AI age
 #WhatsAppBusinessAPI #PlatformEngineering #AIEngineering #B2B
 
 ---
+## 2026-11-26 - Acupuncture clinic booking as a 24/7 state machine with HIPAA guardrails
+
+For a two-room US acupuncture clinic the loss happens between 7 PM and 9 AM, not during treatment. Inbound hits four surfaces (Google Maps CTA, Zocdoc, IG DM, website form), the practitioner is in session, and a 32% YoY rise in medical no-shows (MGMA 2026) compounds anything the front desk misses.
+
+Reference stack for a Jane App / Unified Practice / SimplePractice clinic: Meta WhatsApp Cloud API via BSP with a signed BAA, Claude on AWS Bedrock BAA for the LLM layer, Postgres state table keyed on (clinic_id, patient_id) that drives qualification → eligibility prompt (CPT 97810-97814) → slot hold → intake/consent push → 48h/2h reminders → no-show re-book inside 60 min → recare cadence on paid-session count. PHI minimization at the prompt boundary: outbound templates carry first name + appointment context only, never diagnoses.
+
+Two numbers from the 90-day modeled case: first-reply median moved from ~3h to under 60 s across all four surfaces, and the lead-to-booking rate moved from 38% to 58% once the slot hold lived inside the same WhatsApp turn rather than an email callback.
+
+Full build (EHR write-back targets, BAA checklist, 5-automation sequence, 2-week rollout): https://zeniapartners.com/blog/ai-agent-for-acupuncture-clinics.html
+
+#HealthTech #WhatsAppBusinessAPI #PlatformEngineering #AIEngineering
+
+---
+

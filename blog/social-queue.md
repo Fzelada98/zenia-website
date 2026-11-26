@@ -11770,3 +11770,19 @@ Full architecture, PatientNow/Nextech/Pabau/Zenoti write-back table, HIPAA + FTC
 #HealthTech #WhatsAppBusinessAPI #PlatformEngineering #AIEngineering
 
 ---
+
+## 2026-11-26 - Multi-agent WhatsApp as a tenant + routing problem, not a shared inbox
+
+A shared mobile with linked devices scales to 1-3 users, max. Past that the problem is not UX, it is tenancy: credentials per agent, assignment under the 24h session clock, template quota accounting per conversation, and single-writer guarantees when a human and an AI can both reply on the same thread.
+
+Reference stack for a 10-agent team on Meta Cloud API via BSP: per-agent OAuth tokens off a service account, a Postgres state table keyed on (number_id, conversation_id) with round-robin / skill / idle-weight routing, a 24h session clock that flips the send path to pre-approved utility templates when it expires, and idempotency on template sends so a retry during a Meta rate-limit does not double-bill.
+
+Latency budget we hold to: AI first-token on new conversation under 900 ms, assignment hop to the right human under 1.5 s, template delivery median under 8 s. Session quality tier stays Green only when opt-in writebacks (RGPD) precede the first outbound.
+
+Two cost anchors verified for Spain, Nov 2026: Meta marketing at ~€0.0509 and utility at ~€0.0166 per message (meetergo), and 1,000 service messages per number per month free from Oct 1, 2026 (respond.io). Those two numbers decide what belongs in a template vs the free-tier window.
+
+Full architecture comparison (linked-devices app vs BSP platform vs CRM + AI agent), Meta verification steps and the 2026 Spain price table: https://zeniapartners.com/blog/whatsapp-multiagente.html
+
+#WhatsAppBusinessAPI #PlatformEngineering #AIEngineering #B2B
+
+---

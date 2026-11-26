@@ -111,8 +111,11 @@ def pagina_b(p, n, wa, mail, datos):
     """Variante B: el vídeo es del propio negocio (su nombre en la cabecera del WhatsApp)."""
     e = lambda s: html.escape(str(s or ''), quote=True)
     nombre = p['nombre']; noche = NOCHE[p['nicho']]; seg = int(p.get('seg') or 33); med = f"/v/media/p/{p['slug']}-{p['codigo']}"
+    if p.get('media'):                                            # 24-nov-2026: vídeos fuera del repo de la web (p. ej. https://fzelada98.github.io/zenia-videos/p)
+        med = f"{p['media'].rstrip('/')}/{p['slug']}-{p['codigo']}"
+    og = med if med.startswith('http') else 'https://zeniapartners.com' + med
     if p.get('oferta') == 'demo-gratis':
-        return pagina_gratis(p, n, datos, noche, seg, med)
+        return pagina_gratis(p, n, datos, noche, seg, med, og)
     cta = (f'''<p class="q">¿Lo vemos con {e(nombre)}?</p>
       <p class="s">En 48 horas te preparo una demo con la información de la web de {e(nombre)}. Sin compromiso.</p>
       <div class="btns"><a class="btn wa" href="{e(wa)}" target="_blank" rel="noopener">{WA_ICO}Quiero mi demo</a><a class="btn ghost" href="{e(mail)}">Responder por correo</a><a class="btn ghost" href="{CALENDLY}" target="_blank" rel="noopener">Reservar 30 minutos</a></div>''')
@@ -129,7 +132,7 @@ def pagina_b(p, n, wa, mail, datos):
 <meta property="og:type" content="video.other">
 <meta property="og:title" content="{e(nombre)}: el WhatsApp de las {noche}">
 <meta property="og:description" content="El mismo mensaje, dos veces: sin nadie al otro lado y con un agente de IA contestando.">
-<meta property="og:image" content="https://zeniapartners.com{med}.jpg">
+<meta property="og:image" content="{og}.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
@@ -162,7 +165,7 @@ def pagina_b(p, n, wa, mail, datos):
 '''
 
 
-def pagina_gratis(p, n, datos, noche, seg, med):
+def pagina_gratis(p, n, datos, noche, seg, med, og):
     """24-nov-2026: mismo vídeo propio, pero el gancho es la DEMO GRATIS (se pide con un toque) y no hay botón de Calendly
     (las llamadas las propone Fabrizzio a partir de las 19:00)."""
     e = lambda s: html.escape(str(s or ''), quote=True)
@@ -186,7 +189,7 @@ def pagina_gratis(p, n, datos, noche, seg, med):
 <meta property="og:type" content="video.other">
 <meta property="og:title" content="{e(nombre)}: el WhatsApp de las {noche}">
 <meta property="og:description" content="El mismo mensaje, dos veces: sin nadie al otro lado y con un agente de IA contestando.">
-<meta property="og:image" content="https://zeniapartners.com{med}.jpg">
+<meta property="og:image" content="{og}.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">

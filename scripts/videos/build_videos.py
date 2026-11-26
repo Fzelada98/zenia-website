@@ -174,7 +174,7 @@ def pagina_gratis(p, n, datos, noche, seg, med, og):
     mail = ('mailto:fabrizzio.zelada@zeniapartners.com?subject=' + urllib.parse.quote(f'Demo gratis para {nombre}')
             + '&body=' + urllib.parse.quote(f'Hola, Fabrizzio:\n\nHe visto el vídeo. Quiero la demo gratis con {nombre}.\n\n'))
     cta = (f'''<p class="q">Pruébalo gratis con {e(nombre)}</p>
-      <p class="s">En 48 horas te preparo una demo con la información de la web de {e(nombre)}, para que la pruebes en el móvil. Gratis y sin compromiso.</p>
+      <p class="s">En 48 horas, en el equipo te preparamos una demo con la información de la web de {e(nombre)}, para que la pruebes en el móvil. Gratis y sin compromiso.</p>
       <div class="btns"><a class="btn wa" href="{e(wa)}" target="_blank" rel="noopener">{WA_ICO}Quiero mi demo gratis</a><a class="btn ghost" href="{e(mail)}">Pedirla por correo</a></div>''')
     return f'''<!DOCTYPE html>
 <html lang="es">

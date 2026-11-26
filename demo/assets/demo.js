@@ -70,9 +70,64 @@
     chips.classList.toggle('fin', chips.scrollWidth <= chips.clientWidth + 2);
   }
 
+  // 26-nov-2026: demos con «ia»: true en sus datos. El visitante escribe lo que quiera y contesta un
+  // agente de IA real (zenia-leads /demo/chat) con la información del negocio. Si falla, el guion de siempre.
+  var IA = !!D.ia, hist = [], sid = Math.random().toString(36).slice(2, 12),
+      QA = /[?&]qa\b/.test(location.search) || location.hostname === 'localhost' || navigator.webdriver;
+  function preguntarIA(texto, alFallar) {
+    busy = true;
+    bubble('in', texto);
+    hist.push({ rol: 'cliente', texto: texto });
+    status.textContent = 'escribiendo…'; status.classList.add('typing');
+    var t = document.createElement('div'); t.className = 'typing-bubble'; t.innerHTML = '<i></i><i></i><i></i>';
+    body.appendChild(t); scroll();
+    var t0 = Date.now(), fin = function (d) {
+      setTimeout(function () {
+        t.remove(); status.textContent = 'en línea'; status.classList.remove('typing');
+        if (!d || !d.respuesta) {
+          hist.pop();
+          if (alFallar) { alFallar(); return; }
+          bubble('out', 'Perdona, se me ha cortado la conexión un momento. ¿Me lo repites?'); busy = false; return;
+        }
+        bubble('out', d.respuesta);
+        hist.push({ rol: 'agente', texto: d.respuesta });
+        if (d.cita && d.cita.cuando) {
+          n.cita++; fila('Cita', (d.cita.servicio || 'Cita') + (d.cita.nombre ? ' · ' + d.cita.nombre : ''), 'Cita reservada', 'cita');
+          var card = document.getElementById('crmCard'); card.hidden = false;
+          if (d.cita.nombre) card.firstElementChild.lastChild.textContent = d.cita.nombre;
+          card.querySelector('[data-k=servicio]').textContent = d.cita.servicio || '';
+          card.querySelector('[data-k=sede]').textContent = D.cita_demo.sede;
+          card.querySelector('[data-k=cuando]').textContent = d.cita.cuando;
+        } else if (d.pasar_a_equipo) { n.esc++; fila(MOTIVO.derivar, texto, 'Pasado a tu equipo', 'esc'); }
+        else { n.ok++; fila(MOTIVO[d.motivo] || 'Información', texto, 'Respondido', 'ok'); }
+        busy = false;
+      }, Math.max(0, 900 - (Date.now() - t0)));
+    };
+    fetch('https://zenia-leads.onrender.com/demo/chat', {
+      method: 'POST', headers: { 'Content-Type': 'text/plain' },
+      body: JSON.stringify({ slug: location.pathname.split('/').filter(Boolean).pop(), mensajes: hist, sid: sid, qa: !!QA })
+    }).then(function (r) { return r.ok ? r.json() : null; }).then(fin, function () { fin(null); });
+  }
+  if (IA) {
+    var caja = document.querySelector('.chat-input');
+    caja.removeAttribute('aria-hidden');
+    caja.innerHTML = '<input type="text" maxlength="600" placeholder="Escribe un mensaje" aria-label="Escribe un mensaje" style="flex:1;min-width:0;background:var(--wa-head);color:var(--wa-text);border:0;border-radius:22px;padding:11px 16px;font:inherit;font-size:16px;outline:none">' +
+      '<button type="button" aria-label="Enviar" style="width:42px;height:42px;border-radius:50%;background:#00A884;border:0;flex:none;cursor:pointer;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="20" height="20"><path fill="#fff" d="M3 20.5 21 12 3 3.5 3 10l12 2-12 2z"/></svg></button>';
+    var campo = caja.querySelector('input'), enviarBtn = caja.querySelector('button');
+    var mandar = function () { var v = campo.value.trim(); if (!v || busy) return; campo.value = ''; preguntarIA(v); };
+    enviarBtn.onclick = mandar;
+    campo.addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); mandar(); } });
+    var pista = document.querySelector('.hint span:last-child');
+    if (pista) pista.innerHTML = '<b>Pruébalo:</b> escribe lo que preguntaría un alumno, lo que quieras, o toca una sugerencia. Contesta un agente de IA de verdad.';
+    var aviso = body.querySelectorAll('.chat-day'); if (aviso.length) aviso[aviso.length - 1].textContent = 'Escribe abajo o toca una sugerencia';
+  }
+
   function pregunta(i) {
-    if (busy) return; busy = true;
-    var q = D.conversacion[i]; q._usada = true; pintarChips();
+    if (busy) return;
+    var q = D.conversacion[i];
+    if (IA) { q._usada = true; pintarChips(); preguntarIA(q.pregunta, function () { hist.push({ rol: 'cliente', texto: q.pregunta }); bubble('out', q.respuesta); hist.push({ rol: 'agente', texto: q.respuesta }); n.ok++; fila(MOTIVO[q.tipo] || 'Información', q.pregunta, 'Respondido', 'ok'); busy = false; }); return; }
+    busy = true;
+    q._usada = true; pintarChips();
     bubble('in', q.pregunta);
     typing(espera(q.respuesta), function () {
       bubble('out', q.respuesta);
@@ -83,7 +138,9 @@
   }
 
   function cita() {
-    if (busy) return; busy = true;
+    if (busy) return;
+    if (IA) { D._citaHecha = true; pintarChips(); preguntarIA(D.cita_demo.pregunta); return; }
+    busy = true;
     var c = D.cita_demo; D._citaHecha = true; pintarChips();
     bubble('in', c.pregunta);
     typing(espera(c.respuesta_intro), function () {

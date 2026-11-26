@@ -5328,6 +5328,15 @@
       "status": "published",
       "date": "2026-11-25",
       "source": "keyword-matrix-tier2-seasonal"
+    },
+    {
+      "slug": "atencion-24-horas-whatsapp-pymes",
+      "keyword": "atencion 24 horas whatsapp pymes",
+      "tier": 2,
+      "cluster": "whatsapp-technical",
+      "status": "published",
+      "date": "2026-11-26",
+      "source": "generated-matrix"
     }
   ]
 }

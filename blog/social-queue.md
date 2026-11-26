@@ -11800,3 +11800,18 @@ Full build (EHR write-back targets, BAA checklist, 5-automation sequence, 2-week
 
 ---
 
+## 2026-11-26 - 24/7 WhatsApp support for SMBs as a 4-piece stack, not a night shift
+
+The failure mode in SMB WhatsApp support is not bandwidth, it is state. A gerente-on-call model collapses once inbound crosses 30 messages/day across three non-overlapping windows (07-09, 14-15, 22-00:30), which is where 38-52% of traffic actually lands for a Spanish services SMB.
+
+Reference stack for 24/7 coverage on a single number: WhatsApp Business Cloud API via a BSP (360dialog / Twilio / Gupshup) on a verified Meta number, an AI agent with LLM inference p95 under 1.5 s and read/write access to a Postgres state table keyed on (phone_number_id, wa_conversation_id), a declarative handoff policy (intent + sentiment + hard rules) that routes to a human bandeja at business hours or to a prioritized morning queue otherwise, and SLO instrumentation on TTFM p50/p95, resolution-without-human, Meta quality rating and template approval latency.
+
+Two anchor numbers verified for Spain, Nov 2026: Meta pricing at ~€0.0509 / marketing msg and ~€0.0166 / utility msg (meetergo), and 1,000 free service messages/number/month from Oct 1, 2026 (respond.io). Those two values decide the template-vs-free-window split for the entire message plan.
+
+Uptime target we hold to: 99.5% monthly on the agent, quality rating in Green (Yellow tolerated under 24h), 55-75% resolution-without-human. Below 55% the prompt or the CRM data model is the bug, not the LLM.
+
+Full stack, 30-day rollout, SLA contract clauses and the 2026 ES price table: https://zeniapartners.com/blog/atencion-24-horas-whatsapp-pymes.html
+
+#WhatsAppBusinessAPI #PlatformEngineering #AIEngineering #B2B
+
+---

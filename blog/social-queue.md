@@ -11740,3 +11740,19 @@ Reply if you're sizing WhatsApp Business API template quotas for a hospitality g
 #restauranttech #customerretention #AI #WhatsAppBusiness
 
 ---
+## 2026-11-26 - Dental no-shows as a message-queue + writeback problem, not a reminder cron
+
+A dental no-show isn't solved by a single SMS cron. It's a durable state machine on WhatsApp Business API with three writebacks (practice-management system, CRM, waitlist queue) and a per-patient risk score that gates the 72h / 24h / 2h reminder chain.
+
+Reference stack for a 2-chair clinic on Gesden or Klinikare: Meta Cloud API via BSP, utility templates pre-approved per flow (confirm, reminder, reschedule, fill-slot), a Postgres state table keyed on (clinic_id, patient_id, appointment_id) with idempotency on template sends, and a Kafka topic for freed slots that fans out to top-N waitlist candidates ranked by treatment, chair, professional and channel opt-in.
+
+Latency budget we hold to: first-token on the reschedule intent under 900 ms, template delivery median under 8 s, full round-trip (patient reply, agenda writeback, confirmation) under 45 s.
+
+Two hard numbers from the write-up: 22.95% reduction in no-shows vs manual reminders across 1,604,184 appointments in 64 dental practices (published study), and the classic Dental Economics experiment that moved the baseline from 31% to 14% with text alone. Dynamic waitlist writeback on top compresses the long tail toward 4-6%.
+
+Full architecture, benchmark table and 4-6 week rollout: https://zeniapartners.com/blog/reducir-no-shows-clinica-dental-whatsapp.html
+
+#DentalTech #WhatsAppBusinessAPI #PlatformEngineering #AIEngineering
+
+---
+

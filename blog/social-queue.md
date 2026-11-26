@@ -11756,3 +11756,17 @@ Full architecture, benchmark table and 4-6 week rollout: https://zeniapartners.c
 
 ---
 
+
+## 2026-11-26 - Hair restoration lead funnel as a multi-channel state machine, not a form submit
+
+Hair restoration clinic leads enter from four channels (paid Meta, Google search, Instagram DM, TikTok) in different time zones and with a 7-21 day decision window across 3-5 comparison clinics. Treating that as a chatbot deflection layer loses the economics; the unit here is one consult at $4,000-$15,000 case value, not one captured form.
+
+Reference stack for a 2-surgeon FUE clinic on PatientNow or Nextech: Meta Cloud API via BSP (+ Twilio BAA for voice, both on signed BAAs), Claude Haiku/Sonnet via AWS Bedrock BAA for LLM, S3 BAA bucket with 6-year retention for scalp photo intake, Postgres state machine keyed on (clinic_id, lead_id) that fans the inquiry through Norwood capture → financing pre-qual (CareCredit/PatientFi API soft-pull) → consult booking with $100-$300 Stripe deposit → pre-op checklist → post-op day-10/90 photo check-in. Dormant branch at day 7/21/60/150 writes TCPA-express-consent timestamps before any marketing send.
+
+Two hard numbers from the 90-day case: first-reply median moved from 3h 52m to 48s across voice/WhatsApp/IG DM/web chat, and consult show rate moved from 61% to 91% once the deposit lived inside the booking turn, not in a follow-up email.
+
+Full architecture, PatientNow/Nextech/Pabau/Zenoti write-back table, HIPAA + FTC Endorsement Guide refuse-list, and 2-week rollout: https://zeniapartners.com/blog/ai-agent-for-hair-restoration-clinics.html
+
+#HealthTech #WhatsAppBusinessAPI #PlatformEngineering #AIEngineering
+
+---

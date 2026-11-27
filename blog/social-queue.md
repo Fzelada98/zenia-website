@@ -11846,3 +11846,19 @@ Full build (booking stack, HIPAA + TCPA + FTC guardrails, state scope-of-practic
 #HealthTech #WhatsAppBusinessAPI #PlatformEngineering #AIEngineering
 
 ---
+## 2026-11-27 - Dental CRM for a Valencia clinic is a stack choice, not a software choice
+
+The failure mode in dental CRMs is a single-vendor suite that nails the odontogram but ships WhatsApp as a checkbox. The receptionist still copies numbers from one tab to another and no-show stays at the Spain baseline that Elsevier cites, 12-19% on medical appointments.
+
+Reference stack for a 3-chair Valencia clinic: Gesden or Clinic Cloud as the dental core (odontogram, VeriFactu-aligned billing, EU residency), Meta WhatsApp Business Cloud API via BSP, an LLM agent writing into a thin state table keyed on (clinic_id, patient_id) holding (next_appt_at, treatment_plan_id, budget_status, last_no_show_at, reminder_window), and webhooks into the dental core for slot read/write. Triage classes resolved before the LLM: urgencia, primera_visita, revision, ortodoncia, estetica.
+
+Latency budget we hold to: inbound WhatsApp to first outbound under 60 s on p95, slot write-back under 8 s, 24 h reminder with two-tap confirm that collapses no-show from ~14% to 6-7% inside the first quarter.
+
+Cost anchor, Nov 2026: Meta utility message ~€0.0166 vs voice minute >€0.20, so the reminder channel decision is not aesthetic.
+
+Full comparative, 7-module checklist and the 4-6 week integration plan: https://zeniapartners.com/blog/mejor-crm-para-clinicas-dentales-en-valencia.html
+
+#HealthTech #WhatsAppBusinessAPI #PlatformEngineering #AIEngineering
+
+---
+

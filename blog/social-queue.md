@@ -11862,3 +11862,19 @@ Full comparative, 7-module checklist and the 4-6 week integration plan: https://
 
 ---
 
+## 2026-11-27 - Lash studio retention as a service-complete webhook, not a reminder sequence
+
+The failure mode of a lash studio AI agent is not first-reply latency, it is the rebook moment. Pre-booking the next fill at checkout is the single lever Zenoti's 2026 Beauty & Wellness benchmark treats as decisive (<50% fill retention = weak, 70%+ = compounding). Doing it at the front desk fails because the artist is cleaning up. Doing it from a nightly export fails because the client is already home.
+
+Reference stack for a 3-bed US studio on Boulevard: Boulevard Public API with an appointment.completed webhook subscription (p95 inside 6 s), Meta WhatsApp Cloud API via BSP (360dialog / Twilio / Gupshup), Claude Haiku for the turn with a strict refuse-list keyed on (allergy_prior_reaction, post_lasik_60d, chemo_active, pregnancy, state_scope_of_practice), Stripe $25-$75 deposit links generated inside the service conversation, and a Postgres state table keyed on (studio_id, client_id) holding (last_set_type, curl, length, fill_interval_target, patch_test_passed_at, deposit_status, next_due_at).
+
+Latency budget we hold to: service-complete webhook to outbound WhatsApp rebook under 15 s (chair still warm), deposit link click to confirmed appointment under 5 s API write-back, no-show instant-waitlist fill under 20 min median.
+
+Two anchor numbers from the modeled 90-day case: in-chair rebook 38% to 81% once the rebook turn lived inside the appointment.completed window instead of a next-day message, and fill retention 51% to 76% at the client cohort level.
+
+Full build (7 agent jobs, Boulevard vs Mindbody vs Zenoti API depth, TCPA + state cosmetology refuse-list, 2-week rollout): https://zeniapartners.com/blog/ai-agent-for-lash-studios.html
+
+#BeautyTech #WhatsAppBusinessAPI #PlatformEngineering #AIEngineering
+
+---
+

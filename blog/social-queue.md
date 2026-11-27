@@ -11830,3 +11830,19 @@ Full architecture, 5 common failure modes and the CoverManager / TheFork integra
 #RestaurantTech #WhatsAppBusinessAPI #PlatformEngineering #AIEngineering
 
 ---
+
+## 2026-11-27 - Laser hair removal booking as a state-keyed routing problem, not a receptionist replacement
+
+The failure mode in laser hair removal AI agents is not latency, it is device routing. An alexandrite slot assigned to a Fitzpatrick V from a free-text prompt is how a clinic ends up in a burn claim. The policy belongs in a table, not in the system prompt.
+
+Reference stack for a 2-room US clinic on Zenoti: Meta WhatsApp Cloud API via BSP (360dialog / Twilio / Gupshup) with a signed BAA, Claude on AWS Bedrock BAA for the LLM layer, a Postgres state table keyed on (clinic_id, client_id) that holds (fitzpatrick_type, contraindication_vector, treatment_area_mask, patch_test_passed_at, package_id, sessions_consumed, next_due_at), and a declarative routing policy that maps (fitzpatrick_type in {V, VI}, area_mask) to Nd:YAG rooms only. Zenoti V1 API write-back p95 under 8 s, carrying the full intake payload at appointment creation, not a nightly export.
+
+Two anchor numbers from the modeled 90-day case: first-reply median moved from 2h 48m to 47 s across voice + WhatsApp + Instagram DM + web chat, and series finish rate (session 6 attendance / session 1 attendance) moved from 58% to 81% once in-chair rebook lived inside the same WhatsApp turn instead of a next-day call back.
+
+SLO we hold to: 99.5% monthly on the agent, refuse-list hit-rate visible in a per-clinic dashboard, zero device-misroute events on Fitzpatrick V/VI within the first 90 days.
+
+Full build (booking stack, HIPAA + TCPA + FTC guardrails, state scope-of-practice refuse-list, 2-week rollout): https://zeniapartners.com/blog/ai-agent-for-laser-hair-removal.html
+
+#HealthTech #WhatsAppBusinessAPI #PlatformEngineering #AIEngineering
+
+---

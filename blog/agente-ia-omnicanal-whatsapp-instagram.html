@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HP0VQSEL68"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-HP0VQSEL68');
+</script>
+
+<title>Agente de IA omnicanal para pymes | ZENIA</title>
+<meta name="description" content="Guía técnica para montar un agente de IA omnicanal en WhatsApp, Instagram y web. Arquitectura, integraciones y precios 2026 en España y LATAM.">
+<link rel="canonical" href="https://zeniapartners.com/blog/agente-ia-omnicanal-whatsapp-instagram.html">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+
+<!-- Hreflang -->
+<link rel="alternate" hreflang="es" href="https://zeniapartners.com/blog/agente-ia-omnicanal-whatsapp-instagram.html">
+<link rel="alternate" hreflang="x-default" href="https://zeniapartners.com/blog/agente-ia-omnicanal-whatsapp-instagram.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Agente de IA omnicanal para pymes: WhatsApp, Instagram y web">
+<meta property="og:description" content="Cómo se construye un agente de IA que atiende WhatsApp, Instagram y web con un solo cerebro, un solo CRM y respuesta en menos de 1 minuto.">
+<meta property="og:url" content="https://zeniapartners.com/blog/agente-ia-omnicanal-whatsapp-instagram.html">
+<meta property="og:site_name" content="ZENIA">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="https://zeniapartners.com/assets/images/og-image.png">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Agente de IA omnicanal para pymes: WhatsApp, Instagram y web">
+<meta name="twitter:description" content="Arquitectura, integraciones y precios 2026 de un agente de IA omnicanal para pymes en España y LATAM.">
+<meta name="twitter:image" content="https://zeniapartners.com/assets/images/og-image.png">
+
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="author" content="Fabrizzio Zelada">
+<meta name="theme-color" content="#0A0F1C">
+
+<!-- JSON-LD Article -->
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Agente de IA omnicanal para pymes: WhatsApp, Instagram y web", "description": "Guía técnica para montar un agente de IA omnicanal en WhatsApp, Instagram y web. Arquitectura, integraciones, latencias y precios 2026 en España y LATAM.", "author": {"@type": "Person", "name": "Fabrizzio Zelada", "jobTitle": "Founder", "worksFor": {"@type": "Organization", "@id": "https://zeniapartners.com/#organization", "name": "Zenia Partners", "url": "https://zeniapartners.com/"}}, "publisher": {"@type": "Organization", "@id": "https://zeniapartners.com/#organization", "name": "Zenia Partners", "url": "https://zeniapartners.com/"}, "datePublished": "2026-11-27", "dateModified": "2026-11-27", "mainEntityOfPage": "https://zeniapartners.com/blog/agente-ia-omnicanal-whatsapp-instagram.html", "inLanguage": "es", "keywords": ["agente de ia omnicanal", "omnicanal pymes", "whatsapp instagram agente ia", "agente ia multicanal", "crm omnicanal ia", "arquitectura agente ia"], "image": "https://zeniapartners.com/assets/images/og-image.png"}</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #3B82F6;
+    --accent-violet: #6366F1;
+    --bg-dark: #0A0F1C;
+    --bg-card: rgba(17, 24, 39, 0.6);
+    --text-primary: #F1F5F9;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+    --border: rgba(148, 163, 184, 0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; background: var(--bg-dark); color: var(--text-primary); line-height: 1.8; }
+  .blog-nav { padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 60px; position: sticky; top: 0; background: rgba(10, 15, 28, 0.85); backdrop-filter: blur(12px); z-index: 100; }
+  .blog-nav .container { max-width: 1200px; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+  .blog-nav .nav-logo-link { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-primary); font-weight: 700; font-size: 1.1rem; }
+  .blog-nav .nav-main-links { display: flex; list-style: none; gap: 28px; margin: 0; padding: 0; }
+  .blog-nav .nav-main-links li { margin: 0; }
+  .blog-nav .nav-main-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
+  .blog-nav .nav-main-links a:hover { color: var(--text-primary); }
+  .blog-nav .nav-main-links a.active { color: var(--primary); }
+  .blog-nav .nav-cta-btn { background: var(--primary); color: #fff; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: filter 0.2s; white-space: nowrap; }
+  .blog-nav .nav-cta-btn:hover { filter: brightness(1.1); }
+  @media (max-width: 860px) {
+    .blog-nav .nav-main-links { display: none; }
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+  .blog-header { margin-bottom: 48px; }
+  .blog-meta { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px; }
+  .blog-header h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); line-height: 1.3; margin-bottom: 16px; }
+  .blog-header p.lead { font-size: 1.1rem; color: var(--text-secondary); line-height: 1.7; }
+  .blog-content h2 { font-size: 1.4rem; margin: 48px 0 16px; color: var(--text-primary); }
+  .blog-content h3 { font-size: 1.15rem; margin: 32px 0 12px; color: var(--text-primary); }
+  .blog-content p { color: var(--text-secondary); margin-bottom: 20px; }
+  .blog-content ul, .blog-content ol { color: var(--text-secondary); margin-bottom: 20px; padding-left: 24px; }
+  .blog-content li { margin-bottom: 8px; }
+  .blog-content strong { color: var(--text-primary); }
+  .blog-content a { color: var(--primary); text-decoration: underline; }
+  .blog-content a:hover { color: var(--accent-violet); }
+  .blog-content blockquote { border-left: 3px solid var(--primary); padding-left: 20px; margin: 24px 0; font-style: italic; color: var(--text-secondary); }
+  .blog-content table { width: 100%; border-collapse: collapse; margin: 24px 0; }
+  .blog-content th, .blog-content td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); color: var(--text-secondary); font-size: 0.95rem; }
+  .blog-content th { color: var(--text-primary); font-weight: 600; background: var(--bg-card); }
+  .blog-cta { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 40px; text-align: center; margin: 60px 0; }
+  .blog-cta h3 { margin-bottom: 12px; }
+  .blog-cta p { color: var(--text-secondary); margin-bottom: 20px; }
+  .blog-cta a { display: inline-block; padding: 12px 28px; background: var(--primary); color: white; border-radius: 8px; text-decoration: none; font-weight: 600; }
+  .blog-cta a:hover { background: var(--accent-violet); }
+  .blog-related { margin: 60px 0 0; }
+  .blog-related h3 { margin-bottom: 20px; }
+  .blog-related a { display: block; padding: 16px 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 12px; text-decoration: none; color: var(--text-primary); font-weight: 600; transition: border-color 0.3s; }
+  .blog-related a:hover { border-color: var(--primary); }
+  .blog-related a span { display: block; font-size: 0.85rem; color: var(--text-muted); font-weight: 400; margin-top: 4px; }
+  .blog-footer { padding: 40px 0; border-top: 1px solid var(--border); margin-top: 60px; text-align: center; color: var(--text-muted); font-size: 0.85rem; }
+  .blog-footer a { color: var(--primary); text-decoration: none; }
+  .text-gradient { background: linear-gradient(135deg, var(--primary), var(--accent-violet)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+</style>
+<script type="application/ld+json" data-zenia-faq="1">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "es", "mainEntity": [{"@type": "Question", "name": "¿Qué es un agente de IA omnicanal?", "acceptedAnswer": {"@type": "Answer", "text": "Es un agente de IA personalizado que atiende al cliente en WhatsApp, Instagram DM, Messenger, web chat y correo con un único cerebro, una única memoria y un único CRM detrás. El cliente no repite información cuando cambia de canal y el equipo humano lo ve todo en una misma bandeja."}}, {"@type": "Question", "name": "¿Puedo usar el mismo número de WhatsApp y las mismas cuentas de Instagram?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Se conecta tu número existente a WhatsApp Business API y se vincula tu cuenta de Instagram y de Facebook Messenger a través de Meta Business Suite. No hace falta cambiar número ni abrir cuentas nuevas."}}, {"@type": "Question", "name": "¿Cuánto cuesta montar un agente de IA omnicanal en 2026?", "acceptedAnswer": {"@type": "Answer", "text": "En Zenia Partners, Starter cuesta 997 € de setup y 297 €/mes. Growth sube a 497 €/mes cuando hace falta integrar más canales o un CRM externo. Enterprise se cotiza a medida. A eso se suma el coste variable de los mensajes de WhatsApp Business API, que suele ir entre 20 y 90 euros al mes para una pyme."}}, {"@type": "Question", "name": "¿Qué latencia de respuesta es razonable para un agente omnicanal?", "acceptedAnswer": {"@type": "Answer", "text": "Un agente bien diseñado responde el primer mensaje en menos de un minuto en los tres canales. En WhatsApp y Messenger la latencia típica está entre 2 y 8 segundos. En Instagram DM puede subir a 10-20 segundos por los límites del propio API de Meta."}}, {"@type": "Question", "name": "¿Puedo mantener mi CRM actual o hace falta uno nuevo?", "acceptedAnswer": {"@type": "Answer", "text": "Se puede integrar el agente con HubSpot, Zoho, Pipedrive, Odoo, Salesforce, Holded o un CRM propio por API. Si la pyme no tiene CRM, se monta uno ligero propio dentro del propio sistema de Zenia. Lo importante es que haya un único lugar donde el agente escriba y lea el perfil del cliente."}}, {"@type": "Question", "name": "¿Qué pasa cuando el agente no sabe responder?", "acceptedAnswer": {"@type": "Answer", "text": "Hace un handoff a un humano con todo el contexto: canal original, historial, intención detectada y datos del cliente en el CRM. La conversación sigue en la misma ventana, sin que el cliente tenga que repetir nada."}}]}</script>
+<!--zx:head--><meta name="zx-page" content="blog"><meta name="zx-negocio" content="tu pyme"><meta name="zx-wa" content="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20%C2%ABAgente%20de%20IA%20omnicanal%20para%20pymes%C2%BB%20y%20quiero%20ver%20c%C3%B3mo%20aplicarlo%20en%20mi%20negocio"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&amp;family=Space+Grotesk:wght@700&amp;display=swap"><link rel="stylesheet" href="/assets/zx-blog.css?v=5">
+<!--/zx:head--></head>
+<body>
+
+<nav class="blog-nav">
+  <div class="container">
+    <a href="/es/" class="nav-logo-link">
+      <svg class="zenia-mark" viewBox="0 0 140 140" fill="none" width="32" height="32">
+        <defs>
+          <linearGradient id="zg-b" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#2563EB"/>
+            <stop offset="100%" stop-color="#3B82F6"/>
+          </linearGradient>
+          <linearGradient id="zg-v" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#6366F1"/>
+            <stop offset="100%" stop-color="#7C3AED"/>
+          </linearGradient>
+        </defs>
+        <rect width="140" height="140" rx="28" fill="#0F172A"/>
+        <path d="M 70 18 Q 18 18 18 38 L 18 57 Q 18 63 24 63 L 88 63 Z" fill="url(#zg-b)"/>
+        <path d="M 70 122 Q 122 122 122 102 L 122 83 Q 122 77 116 77 L 52 77 Z" fill="url(#zg-v)"/>
+      </svg>
+      <span>ZENIA</span>
+    </a>
+    <ul class="nav-main-links">
+      <li><a href="/es/#opportunities">Oportunidades IA</a></li>
+      <li><a href="/es/#services">Servicios</a></li>
+      <li><a href="/es/#process">Proceso</a></li>
+      <li><a href="/es/#impact">Impacto</a></li>
+      <li><a href="/blog/" class="active">Blog</a></li>
+    </ul>
+    <a href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20%C2%ABAgente%20de%20IA%20omnicanal%20para%20pymes%C2%BB%20y%20quiero%20ver%20c%C3%B3mo%20aplicarlo%20en%20mi%20negocio" class="nav-cta-btn" data-zx-src="nav" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88M20.46 3.49A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.42"/></svg><span><span class="zx-l">Escríbenos por </span>WhatsApp</span></a>
+  </div>
+</nav>
+
+<article class="container">
+  <header class="blog-header">
+    <div class="blog-meta">27 de noviembre, 2026 &middot; Fabrizzio Zelada &middot; 11 min de lectura</div>
+    <h1><span class="text-gradient">Agente de IA omnicanal para pymes:</span> WhatsApp, Instagram y web con un solo cerebro</h1>
+    <p class="lead"><strong>Respuesta corta:</strong> un agente de IA omnicanal para pymes es un agente de IA personalizado que atiende WhatsApp, Instagram DM, Messenger y chat web desde un único modelo con memoria compartida y un CRM detrás. Se monta sobre WhatsApp Business API, la Messenger Platform de Meta y un widget web propio, con un orquestador que mantiene el estado del cliente entre canales. En Zenia Partners se despliega en 3 a 5 semanas desde 297 €/mes y responde el primer mensaje en menos de un minuto, independientemente del canal.</p>
+  </header>
+
+  <div class="blog-content">
+
+    <p class="pillar-callout"><strong>Lee también:</strong> este post es parte del cluster técnico sobre arquitectura de agentes. Si todavía estás decidiendo canal único o varios, lee también <a href="/blog/agente-ia-personalizado-vs-chatbot-generico.html">agente de IA personalizado vs chatbot genérico</a> y <a href="/blog/whatsapp-business-api-para-pymes.html">WhatsApp Business API para pymes</a>.</p>
+
+    <h2>¿Qué canales cubre un agente de IA omnicanal en 2026?</h2>
+
+    <p>En Zenia Partners una implementación estándar en noviembre de 2026 cubre cinco superficies: WhatsApp (sobre la Cloud API de Meta), Instagram Direct, Facebook Messenger, chat web embebido y correo electrónico. Teléfono por voz y SMS se añaden como extensión cuando el proyecto lo justifica. El criterio para ser "omnicanal" no es solo integrar varios canales: es que el agente mantenga el mismo estado del cliente aunque el cliente salte de Instagram a WhatsApp y luego a web en la misma semana.</p>
+
+    <p>La tabla siguiente compara lo que cambia entre canales a nivel técnico. Los límites están publicados por Meta en su documentación oficial (Meta for Developers, noviembre de 2026).</p>
+
+    <div class="zx-table"><p class="zx-table-hint">Desliza para ver la tabla completa →</p><div class="zx-table-in"><table>
+      <tr><th>Canal</th><th>API</th><th>Ventana de respuesta</th><th>Multimedia</th><th>Mensajes salientes</th></tr>
+      <tr><td>WhatsApp</td><td>WhatsApp Cloud API / BSP</td><td>24 h desde el último mensaje del usuario</td><td>Imagen, audio, documento, vídeo, ubicación, contactos</td><td>Solo con plantillas aprobadas fuera de la ventana</td></tr>
+      <tr><td>Instagram DM</td><td>Messenger Platform (Instagram)</td><td>24 h + 7 días con etiquetas humanas</td><td>Imagen, vídeo, historias reaccionadas</td><td>Solo dentro de la ventana o con human agent tag</td></tr>
+      <tr><td>Messenger</td><td>Messenger Platform (Facebook)</td><td>24 h estándar</td><td>Imagen, vídeo, ficheros</td><td>Con message tags concretos: compra, evento, cuenta</td></tr>
+      <tr><td>Web chat</td><td>Widget propio (WebSocket)</td><td>Sin ventana</td><td>Depende del widget</td><td>Sin límite, pero el usuario debe estar en la web</td></tr>
+      <tr><td>Correo</td><td>SMTP / IMAP + API transaccional</td><td>Sin ventana</td><td>Adjuntos</td><td>Sin límite, sujeto a reputación de dominio</td></tr>
+    </table></div></div>
+
+    <p>La diferencia que más duele en producción es la ventana de servicio de WhatsApp e Instagram. Cada vez que el agente quiere iniciar una conversación proactiva (un recordatorio, una campaña, una alerta) tiene que hacerlo con una <a href="/blog/aprobacion-plantillas-whatsapp-business-api.html">plantilla aprobada por Meta</a> o con una etiqueta válida; si no, el mensaje se rechaza o cuesta más. Un agente omnicanal serio enruta las comunicaciones proactivas al canal donde la ventana está abierta y, si ninguna lo está, reconstruye la campaña con plantillas en WhatsApp o human agent tag en Instagram.</p>
+
+    <h2>Arquitectura de un agente omnicanal: cómo funciona por debajo</h2>
+
+    <p>Un agente de IA personalizado omnicanal se divide en cinco bloques. Cada bloque se puede sustituir sin romper los demás, lo que evita el lock-in de las plataformas cerradas tipo "todo en uno".</p>
+
+    <h3>1. Capa de ingesta por canal</h3>
+
+    <p>Un webhook por canal recibe los eventos de Meta (WhatsApp Cloud API, Messenger, Instagram), del widget web y del servidor de correo. Cada evento se normaliza a un formato interno común: canal, user_id externo, user_id interno, tipo (texto, imagen, audio, estado), payload y metadatos de hora y conversación. En Zenia esa capa corre sobre funciones serverless para absorber picos y una cola (SQS o equivalente) para desacoplar la recepción del procesamiento del modelo.</p>
+
+    <h3>2. Identity resolution</h3>
+
+    <p>Es la pieza más olvidada en implementaciones baratas. El mismo humano puede llegar por tres identidades distintas (número de WhatsApp, usuario de Instagram, email) y el agente tiene que saber que es la misma persona para no volver a preguntar cosas. Se resuelve con reglas deterministas (mismo email verificado, mismo teléfono) más una capa fuzzy sobre nombre y perfil. Si la pyme ya tiene CRM, la tabla de contactos del CRM manda. Si no, se construye una tabla propia de identity_contacts con una fila por persona y varias filas en identity_handles.</p>
+
+    <h3>3. Orquestador y modelo</h3>
+
+    <p>El orquestador es el que decide cuándo responde el modelo, cuándo llama a una tool y cuándo escala a humano. El modelo base recomendado en 2026 para pymes es GPT-4o-mini, Gemini 1.5 Flash o Claude 3.5 Haiku, por coste y latencia; los modelos grandes se reservan para casos complejos (contratos, PDF, razonamiento multi-paso). Todo el estado del cliente (últimas 20 interacciones de cualquier canal, perfil, estado de intención) se le pasa en el system prompt o por tools con RAG sobre el perfil del CRM.</p>
+
+    <h3>4. Capa de acciones (tools)</h3>
+
+    <p>Las tools son las acciones reales: crear reserva, agendar cita, consultar stock, cualificar lead, abrir ticket, enviar presupuesto, cobrar por Stripe. Cada tool se define con un JSON schema estricto y un contrato de idempotencia (el agente puede llamarla dos veces por reintento sin duplicar la reserva). En Zenia se usan tools por REST con autenticación por JWT y rate limit por tenant.</p>
+
+    <h3>5. Observabilidad</h3>
+
+    <p>Cada conversación se loguea con trace_id único, canal, modelo usado, tokens de entrada y salida, latencia por paso y resultado de cada tool. Encima se construyen dashboards de tiempo medio de primera respuesta por canal, tasa de resolución sin humano, coste por conversación y deriva del modelo. Sin esta capa es imposible saber si el agente mejora o empeora cuando se cambia un prompt.</p>
+
+    <h2>¿Cuánto cuesta montar un agente de IA omnicanal?</h2>
+
+    <p>El coste tiene tres componentes: licencias del software, coste variable de los mensajes y servicios profesionales de implementación. Los números abajo son precios reales de noviembre de 2026 en España y LATAM.</p>
+
+    <div class="zx-table"><p class="zx-table-hint">Desliza para ver la tabla completa →</p><div class="zx-table-in"><table>
+      <tr><th>Plan</th><th>Setup</th><th>Mensual</th><th>Incluye</th><th>Mejor para</th></tr>
+      <tr><td>Zenia Starter</td><td>997 &euro;</td><td>297 &euro;/mes</td><td>Agente en WhatsApp y web, CRM propio, 1 integración, 500 conversaciones/mes</td><td>Pymes que arrancan con 2 canales</td></tr>
+      <tr><td>Zenia Growth</td><td>997 &euro;</td><td>497 &euro;/mes</td><td>WhatsApp + Instagram + Messenger + web + email, 3 integraciones, 2000 conversaciones/mes, dashboard omnicanal</td><td>Pymes con alto volumen y varios canales activos</td></tr>
+      <tr><td>Zenia Enterprise</td><td>A medida</td><td>A medida</td><td>Alta disponibilidad, SLA, modelos privados, VPC dedicada</td><td>Grupos de varios locales o fintech</td></tr>
+      <tr><td>Intercom Fin + omnicanal</td><td>No publicado</td><td>Desde 0,99 USD por resolución (Fin) + Pro desde 85 USD/asiento</td><td>Ticketing con IA, Instagram y WhatsApp vía add-on</td><td>Empresas medianas ya en Intercom</td></tr>
+      <tr><td>Freshdesk Omnichannel</td><td>No publicado</td><td>Pro 95 USD/agente/mes</td><td>Chat, email, teléfono, canales sociales, WhatsApp vía add-on</td><td>Empresas con equipo de soporte amplio</td></tr>
+      <tr><td>Montar in-house con WhatsApp Cloud API</td><td>15.000-40.000 &euro; dev</td><td>Coste de mensajes + hosting + modelos (300-1500 &euro;/mes)</td><td>Lo que decida el equipo de ingeniería</td><td>Equipos técnicos con ingenieros senior en nómina</td></tr>
+    </table></div></div>
+
+    <p>Precios de Intercom y Freshdesk tomados de sus páginas oficiales (intercom.com/pricing y freshworks.com/freshdesk/pricing, noviembre de 2026). Para la opción in-house, el rango viene de presupuestos reales de desarrollo observados en el mercado español a 55-80 €/hora durante 3-6 meses. Cuando aparece una pyme diciendo "me lo hago con n8n y GPT-4", el coste no es cero: es la nómina del ingeniero que lo mantiene cuando Meta rompe un webhook.</p>
+
+    <p>Por encima del fijo mensual hay un coste variable: WhatsApp Business API cobra por conversación iniciada por la empresa (marketing, utilidad, autenticación, servicio). En España una pyme con 500-2000 conversaciones salientes al mes paga típicamente entre 20 y 90 euros al mes por este concepto (Meta WhatsApp Business Platform pricing, octubre de 2026). Instagram y Messenger, dentro de la ventana de 24 horas, son gratuitos.</p>
+
+    <p>Zenia Partners es una agencia con sede en Madrid que trabaja con pymes en España y Latinoamérica. Construye un agente de IA personalizado en WhatsApp, Instagram, web y CRM que responde en menos de un minuto, cualifica y agenda 24/7, con atribución por canal. Más contexto en <a href="/es/">la home de Zenia Partners</a> y en la guía de <a href="/blog/automatizacion-whatsapp-negocios.html">automatización WhatsApp para negocios</a>.</p>
+
+    <!--zx:cta-->
+<aside class="zx-cta" aria-label="Zenia"><p class="zx-eyebrow">CRM a medida + agente de IA omnicanal</p><p class="zx-cta-t" role="heading" aria-level="3">¿Quieres esto funcionando en tu pyme?</p><p class="zx-cta-p">Montamos el CRM y el agente de IA omnicanal que atienden WhatsApp, Instagram y web con el mismo cerebro. Cuéntanos tu caso y te respondemos en menos de 24 h.</p><div class="zx-cta-stats"><a href="/es/caso-global-watch-buyers.html"><strong>831</strong><span>conversaciones de WhatsApp captadas para un cliente</span></a><a href="/es/caso-despacho-boutique.html"><strong>&lt;1 min</strong><span>de respuesta, 24/7, en un despacho de abogados</span></a></div><div class="zx-cta-act"><a class="zx-btn" href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20%C2%ABAgente%20de%20IA%20omnicanal%20para%20pymes%C2%BB%20y%20quiero%20ver%20c%C3%B3mo%20aplicarlo%20en%20mi%20negocio" target="_blank" rel="noopener" data-zx-src="inline"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88M20.46 3.49A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.42"/></svg><span>Escríbenos por WhatsApp</span></a><a class="zx-link" href="/es/casos.html">Ver casos reales</a></div></aside>
+<!--/zx:cta--><h2>Integraciones que importan: CRM, calendarios, pagos</h2>
+
+    <p>Un agente que solo sabe conversar no cierra negocio. Las integraciones que mueven la aguja son las que convierten una conversación en una fila de datos útil para el equipo comercial o operativo. Estas son las que pedimos todas las semanas en Zenia y lo que aporta cada una:</p>
+
+    <ul>
+      <li><strong>CRM:</strong> HubSpot, Zoho, Pipedrive, Odoo, Salesforce, Holded, Bitrix24 o un CRM propio. El agente escribe cada lead con fuente (canal), consentimiento, tags de intención y un resumen de la conversación. Es lo que permite atribución real por canal y seguimiento comercial.</li>
+      <li><strong>Calendario:</strong> Google Calendar, Outlook 365, Calendly, CoverManager, Fresha. Imprescindible para cualquier agente que agende citas o reservas.</li>
+      <li><strong>Pagos:</strong> Stripe, Redsys, Mercado Pago, PayPal. Enlaces de pago firmados, señales de reserva, ventas directas desde WhatsApp e Instagram.</li>
+      <li><strong>Base de conocimiento:</strong> un bucket con PDFs, Notion, Google Drive o SharePoint indexado con RAG para que el agente responda preguntas sobre precios, políticas o productos sin inventar.</li>
+      <li><strong>Ticketing y helpdesk:</strong> Zendesk, Freshdesk, HubSpot Service. El handoff al humano se hace sobre el ticket, no sobre un PDF en Slack.</li>
+      <li><strong>Marketing automation:</strong> Brevo, Klaviyo, Mailchimp. El agente dispara secuencias por email cuando la ventana de WhatsApp se cierra.</li>
+    </ul>
+
+    <p>El error típico es montar 15 integraciones el primer mes. Un despliegue sano arranca con CRM, calendario y una base de conocimiento, y añade el resto solo cuando el equipo humano pide la pieza concreta. Cada integración extra añade superficie que puede romperse.</p>
+
+    <h2>Latencia, fiabilidad y qué pasa cuando algo falla</h2>
+
+    <p>En agentes conversacionales la fiabilidad no se mide en nueves sobre un dashboard de uptime. Se mide en tiempo medio de primera respuesta y en porcentaje de conversaciones que llegan a resolución sin fricción. Estos son los números que exigimos en producción en Zenia Partners en 2026.</p>
+
+    <div class="zx-table"><p class="zx-table-hint">Desliza para ver la tabla completa →</p><div class="zx-table-in"><table>
+      <tr><th>Métrica</th><th>Objetivo WhatsApp</th><th>Objetivo Instagram</th><th>Objetivo web chat</th></tr>
+      <tr><td>Tiempo de primera respuesta (p50)</td><td>&lt; 5 s</td><td>&lt; 10 s</td><td>&lt; 3 s</td></tr>
+      <tr><td>Tiempo de primera respuesta (p95)</td><td>&lt; 15 s</td><td>&lt; 25 s</td><td>&lt; 8 s</td></tr>
+      <tr><td>Tasa de resolución sin humano</td><td>75-85%</td><td>65-80%</td><td>70-85%</td></tr>
+      <tr><td>Disponibilidad del webhook (30 días)</td><td>99,9%</td><td>99,9%</td><td>99,95%</td></tr>
+      <tr><td>Fallos de tool con reintento exitoso</td><td>&lt; 2%</td><td>&lt; 2%</td><td>&lt; 2%</td></tr>
+    </table></div></div>
+
+    <p>Los fallos más caros no son del modelo, son de los proveedores. Meta se cae un par de veces al año y cuando el webhook de WhatsApp no puede entregar un evento, Meta reintenta hasta 24 horas con backoff. Si el endpoint responde con 5xx en el pico, el reintento llega cuando el cliente ya se ha ido. La respuesta correcta es siempre responder 200 OK rápido, encolar el evento y procesarlo aparte, en lugar de intentar generar la respuesta del modelo dentro del propio webhook.</p>
+
+    <p>El otro fallo frecuente es la deriva del modelo cuando se cambia un prompt sin regresión. En Zenia cada cambio de prompt pasa por un conjunto de 50-200 conversaciones de referencia que se replayan con la nueva versión y comparan contra la respuesta esperada. Sin ese paso, el agente "aprende" cosas raras cada vez que alguien edita la base de conocimiento.</p>
+
+    <h2>Cómo lo implementa Zenia Partners en 4 semanas</h2>
+
+    <p>El plan estándar para montar un agente de IA omnicanal en una pyme es de 4 semanas de implementación activa más una semana de estabilización. Más allá de eso ya es alcance adicional (nuevos canales, nuevos verticales dentro del mismo negocio, voz).</p>
+
+    <h3>Semana 1: discovery técnico y datos</h3>
+
+    <ul>
+      <li>Auditoría de canales existentes (número de WhatsApp, cuentas de Instagram y Facebook, web, CRM)</li>
+      <li>Alta en Meta Business Suite y verificación del negocio si hace falta</li>
+      <li>Extracción del histórico de conversaciones, si existe, para entrenar la base de conocimiento</li>
+      <li>Mapa de intenciones y flujos: 10-25 intenciones típicas por vertical</li>
+    </ul>
+
+    <h3>Semana 2: ingesta, identity y modelo base</h3>
+
+    <ul>
+      <li>Conexión de <a href="/blog/whatsapp-business-api-para-pymes.html">WhatsApp Cloud API</a> (número existente), Instagram DM, Messenger y widget web</li>
+      <li>Identity resolution contra el CRM del cliente</li>
+      <li>Primer prompt del agente, base de conocimiento inicial y reglas de handoff</li>
+      <li>Set de 50 conversaciones de referencia para regresión</li>
+    </ul>
+
+    <h3>Semana 3: tools y acciones reales</h3>
+
+    <ul>
+      <li>Tool de agenda (<a href="/blog/integrar-calendly-con-whatsapp-business.html">Calendly</a> o Google Calendar) y de reserva</li>
+      <li>Tool de pago (<a href="/blog/integrar-stripe-con-whatsapp-business.html">Stripe</a> o Redsys) si aplica</li>
+      <li>Tool de escalado a humano con ticket en el CRM o en el helpdesk</li>
+      <li>Plantillas de WhatsApp enviadas a aprobación de Meta: suele tardar entre 1 hora y 48 horas</li>
+    </ul>
+
+    <h3>Semana 4: pruebas, observabilidad y lanzamiento</h3>
+
+    <ul>
+      <li>Shadow mode: el agente lee los mensajes reales pero no responde, un humano aprueba</li>
+      <li>Dashboard omnicanal con tiempo de primera respuesta, resolución y coste por conversación</li>
+      <li>Activación gradual canal por canal, empezando por el de menor volumen</li>
+      <li>Documentación operativa para el equipo de la pyme</li>
+    </ul>
+
+    <p>A partir de la semana 5 la operativa entra en mejora continua: nuevas intenciones, afinado del prompt, nuevas plantillas. El cliente ve números reales desde el día 15.</p>
+
+    <h2>¿Cuándo no tiene sentido montar omnicanal?</h2>
+
+    <p>Vale la pena ser honesto sobre cuándo la decisión correcta es no montar nada. Un agente omnicanal no es la respuesta si:</p>
+
+    <ul>
+      <li>La pyme recibe menos de 50 conversaciones al mes. Con ese volumen el ahorro operativo no cubre el fijo; vale más resolver con atención manual bien hecha.</li>
+      <li>El equipo humano no quiere que una conversación entrante se resuelva sin pasar por él. Es una decisión válida, pero entonces el agente es un cualificador, no un cierre.</li>
+      <li>El CRM está vacío y nadie lo va a rellenar. Sin CRM el agente no tiene memoria y cada conversación arranca desde cero.</li>
+      <li>El producto o servicio exige firma manuscrita o presencia física pura (notaría, cirugía). Ahí la conversación es solo agenda.</li>
+    </ul>
+
+    <p>En el resto de los casos, un agente omnicanal reduce el coste por conversación un 60-85% y mantiene el tiempo de primera respuesta por debajo del minuto. Esa es la mejor señal para saber si vale el proyecto.</p>
+
+    <h2>Preguntas frecuentes</h2>
+
+    <h3>¿Qué es un agente de IA omnicanal?</h3>
+
+    <p>Es un agente de IA personalizado que atiende al cliente en WhatsApp, Instagram DM, Messenger, chat web y correo con un único cerebro, una única memoria y un único CRM detrás. El cliente no repite información cuando cambia de canal y el equipo humano lo ve todo en una misma bandeja.</p>
+
+    <h3>¿Puedo usar el mismo número de WhatsApp y las mismas cuentas de Instagram?</h3>
+
+    <p>Sí. Se conecta tu número existente a WhatsApp Business API y se vincula tu cuenta de Instagram y de Facebook Messenger a través de Meta Business Suite. No hace falta cambiar número ni abrir cuentas nuevas.</p>
+
+    <h3>¿Cuánto cuesta montar un agente de IA omnicanal en 2026?</h3>
+
+    <p>En Zenia Partners, Starter cuesta 997 € de setup y 297 €/mes. Growth sube a 497 €/mes cuando hace falta integrar más canales o un CRM externo. Enterprise se cotiza a medida. A eso se suma el coste variable de los mensajes de WhatsApp Business API, que suele ir entre 20 y 90 euros al mes para una pyme.</p>
+
+    <h3>¿Qué latencia de respuesta es razonable para un agente omnicanal?</h3>
+
+    <p>Un agente bien diseñado responde el primer mensaje en menos de un minuto en los tres canales. En WhatsApp y Messenger la latencia típica está entre 2 y 8 segundos. En Instagram DM puede subir a 10-20 segundos por los límites del propio API de Meta.</p>
+
+    <h3>¿Puedo mantener mi CRM actual o hace falta uno nuevo?</h3>
+
+    <p>Se puede integrar el agente con HubSpot, Zoho, Pipedrive, Odoo, Salesforce, Holded o un CRM propio por API. Si la pyme no tiene CRM, se monta uno ligero propio dentro del propio sistema de Zenia Partners. Lo importante es que haya un único lugar donde el agente escriba y lea el perfil del cliente.</p>
+
+    <h3>¿Qué pasa cuando el agente no sabe responder?</h3>
+
+    <p>Hace un handoff a un humano con todo el contexto: canal original, historial, intención detectada y datos del cliente en el CRM. La conversación sigue en la misma ventana, sin que el cliente tenga que repetir nada.</p>
+
+    <div class="blog-cta">
+      <h3>¿Listo para montar tu agente de IA omnicanal?</h3>
+      <p>En Zenia Partners desplegamos agentes de IA personalizados en WhatsApp, Instagram y web con un único CRM detrás. Setup en 4 semanas. Agenda una llamada de 30 minutos y te montamos la arquitectura adaptada a tu pyme.</p>
+<p data-zenia-oportunidad="1">Todo esto parte de lo mismo: <a href="/es/automatizacion-whatsapp-negocios.html">automatizar WhatsApp con IA</a> para que ningún mensaje se quede sin responder, ni en WhatsApp, ni en Instagram, ni en web.</p>
+
+      <a href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20%C2%ABAgente%20de%20IA%20omnicanal%20para%20pymes%C2%BB%20y%20quiero%20ver%20c%C3%B3mo%20aplicarlo%20en%20mi%20negocio" target="_blank" rel="noopener">Hablar por WhatsApp ahora</a> <a style="background:transparent;border:1px solid var(--border);color:var(--text-secondary);margin-left:10px" href="https://calendly.com/zeladauriartef/30min">Agendar llamada gratuita</a>
+    </div>
+<div class="blog-related" data-zenia-money-links="1">
+  <h3>Ponlo en marcha en tu negocio</h3>
+      <a href="/blog/agente-ia-personalizado-vs-chatbot-generico.html">Agente de IA personalizado vs chatbot genérico: diferencias reales<span>Qué diferencia hay entre un agente de IA personalizado y un flujo rígido de reglas, y cuál elegir...</span></a>
+      </div>
+
+
+    <div class="blog-related">
+      <h3>Artículos relacionados</h3>
+      <a href="/blog/whatsapp-business-api-para-pymes.html">WhatsApp Business API para pymes: qué es, cuánto cuesta y cómo contratarla<span>Guía técnica de WhatsApp Business API con proveedores, precios y plantillas en España 2026.</span></a>
+      <a href="/blog/handoff-agente-ia-a-humano-whatsapp.html">Handoff de agente de IA a humano en WhatsApp: patrones que funcionan<span>Cómo escalar de agente a humano sin perder el contexto ni el cliente.</span></a>
+      <a href="/blog/roi-agente-ia-whatsapp-metricas.html">ROI de un agente de IA en WhatsApp: métricas que importan<span>Las 6 métricas que miden si el agente mueve la aguja de verdad.</span></a>
+      </div>
+
+  </div>
+
+<div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 24px; margin: 40px 0;" data-zenia-internal-links="landings">
+  <h3 style="color: #F1F5F9; margin-bottom: 12px; font-size: 1.05rem;">Más sobre arquitectura del agente</h3>
+  <p style="color: #94A3B8; margin-bottom: 16px; font-size: 0.95rem;">Profundiza en piezas concretas del stack omnicanal:</p>
+  <div>
+      <a href="/blog/webhooks-whatsapp-business-api.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Webhooks de WhatsApp Business API →</a>
+      <a href="/blog/latencia-whatsapp-business-api.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Latencia de WhatsApp Business API →</a>
+      <a href="/blog/agente-ia-multiidioma-whatsapp.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Agente multiidioma en WhatsApp →</a>
+      <a href="/blog/aprobacion-plantillas-whatsapp-business-api.html" style="display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #60A5FA; text-decoration: none; font-size: 0.9rem;">Aprobación de plantillas en Meta →</a>
+  </div>
+</div>
+
+</article>
+
+<footer class="blog-footer">
+  <div class="container">
+    <p>&copy; 2026 ZENIA. Todos los derechos reservados. | <a href="/">Inicio</a> | <a href="/blog/">Blog</a></p>
+  </div>
+</footer>
+
+<div style="text-align:center; padding:16px 24px; background:#0A0F1C; color:#64748B; font-size:0.85rem; border-top:1px solid rgba(255,255,255,0.04);"><a href="/es/cobertura.html" style="color:#94A3B8; text-decoration:none;">Ver cobertura completa</a></div>
+<a href="https://wa.me/34677612799?text=Hola%2C%20he%20le%C3%ADdo%20vuestro%20art%C3%ADculo%20%C2%ABAgente%20de%20IA%20omnicanal%20para%20pymes%C2%BB%20y%20quiero%20ver%20c%C3%B3mo%20aplicarlo%20en%20mi%20negocio" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp" data-directo style="position:fixed;bottom:24px;right:24px;z-index:9998;background:#25D366;color:white;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(37,211,102,0.4);transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 20px rgba(37,211,102,0.5)'" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 16px rgba(37,211,102,0.4)'">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<script>document.addEventListener("click",function(e){var t=e.target,a=t.closest?t.closest('a[href*="wa.me"]'):null;if(!a)return;try{navigator.sendBeacon("https://zenia-leads.onrender.com/lead",JSON.stringify({site:"zenia",path:location.pathname+location.search,ref:document.referrer||""}))}catch(r){}},true);</script>
+<script src="/assets/qualify.js?v=4" defer></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "eceeed460f6d465bba3b970417d5f6b0"}'></script>
+<!--zx:js--><script src="/assets/zx.js?v=5" defer></script>
+<!--/zx:js--></body>
+</html>

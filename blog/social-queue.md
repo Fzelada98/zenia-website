@@ -11878,3 +11878,18 @@ Full build (7 agent jobs, Boulevard vs Mindbody vs Zenoti API depth, TCPA + stat
 
 ---
 
+## 2026-11-27 - Omnichannel AI agent is an identity problem, not a channel integration problem
+
+The naive omnichannel build wires WhatsApp Business API, Instagram Messenger Platform and a web widget to the same model and ships. It breaks within a month: the same human arrives from three handles (phone, ig_user_id, email) and the agent treats them as three prospects, so it re-qualifies, re-asks consent and cannot stitch attribution.
+
+Reference stack we hold to for a pyme with mid-5-figure monthly conversation volume: Meta WhatsApp Cloud API + Instagram and Messenger via Meta Business, a WebSocket web widget, all normalized to one event schema (channel, external_id, resolved_contact_id, intent, trace_id) behind an SQS fan-in. Identity resolution is deterministic first (verified email, E.164 phone) with a fuzzy fallback on display name, writing to one identity_contacts table the CRM reads.
+
+Latency budget: WhatsApp and Messenger p50 under 5 s, Instagram DM p50 under 10 s (bound by Meta IG API, not by us), web p50 under 3 s. Webhook endpoints return 200 inside 500 ms and push to queue so Meta's 24 h retry never catches us at the peak.
+
+Cost anchor, Nov 2026: WhatsApp utility conversations around €0.0166 in Spain, Instagram and Messenger inside the 24 h window are free, so the proactive channel decision is a cost decision before it is a UX one.
+
+Full architecture (ingest, identity, orchestrator, tools, observability) and the 4-week rollout: https://zeniapartners.com/blog/agente-ia-omnicanal-whatsapp-instagram.html
+
+#PlatformEngineering #WhatsAppBusinessAPI #AIEngineering #B2B
+
+---

@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-11-26",
+  "lastRun": "2026-11-27",
   "posts": [
     {
       "slug": "whatsapp-multiagente",
@@ -5337,6 +5337,15 @@
       "status": "published",
       "date": "2026-11-26",
       "source": "generated-matrix"
+    },
+    {
+      "slug": "lista-espera-restaurante-whatsapp",
+      "keyword": "lista de espera restaurante whatsapp",
+      "tier": 2,
+      "cluster": "restaurantes",
+      "status": "published",
+      "date": "2026-11-27",
+      "source": "keyword-matrix-expansion"
     }
   ]
 }

@@ -11815,3 +11815,18 @@ Full stack, 30-day rollout, SLA contract clauses and the 2026 ES price table: ht
 #WhatsAppBusinessAPI #PlatformEngineering #AIEngineering #B2B
 
 ---
+## 2026-11-27 - Restaurant waitlist as a sequential state machine on WhatsApp, not a broadcast
+
+The failure mode of a restaurant waitlist is not notification, it is concurrency. Broadcasting "a table opened" to the full queue produces two parties at the door for one table and a 1-star review. TheFork's 2025 Spain barometer puts no-show at 3.3%, with only 21% of restaurants running any kind of waitlist to absorb it.
+
+Reference stack for a 60-80 cover restaurant on CoverManager: WhatsApp Business Cloud API via BSP, an AI agent with read/write access to a Postgres state table keyed on (restaurant_id, service_date, slot), CoverManager webhooks for cancellations (p95 detection under 10 s), and a strict sequential dispatcher with a 7-10 minute confirmation window and automatic timeout to the next entry. Each waitlist row carries (party_size, target_slot, flex_min, flex_max, expires_at) so the matcher can fit a 4-top into a +/-15 window without manual input.
+
+Latency budget we hold to: cancellation webhook to outbound WhatsApp template under 15 s, candidate confirmation to formal PMS write-back under 5 s, full "empty table" window from 25-40 min manual to under 5 min automated.
+
+Cost anchor, Nov 2026: Meta utility messages at ~€0.0166 vs ~$0.05 SMS (TableCheck Mar 2026 simulation), so the waitlist belongs on WhatsApp once volume crosses ~200 messages/month per number.
+
+Full architecture, 5 common failure modes and the CoverManager / TheFork integration notes: https://zeniapartners.com/blog/lista-espera-restaurante-whatsapp.html
+
+#RestaurantTech #WhatsAppBusinessAPI #PlatformEngineering #AIEngineering
+
+---

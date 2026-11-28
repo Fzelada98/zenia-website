@@ -11909,3 +11909,18 @@ Full flow, deposit policy and 2026 pricing bands: https://zeniapartners.com/blog
 #RestaurantTech #WhatsAppBusinessAPI #PlatformEngineering #AIEngineering
 
 ---
+## 2026-11-28 - AI agent for massage therapists: the rebook-engine architecture
+
+How the rebook engine ships for a 2-therapist US massage practice on Mangomint.
+
+Ingest: Mangomint REST webhook on appointment-closed fires into an SQS queue. A state-machine wrapper around Claude Haiku handles intake and routing; Vapi with a <700 ms turn-taking budget runs voice; WhatsApp Cloud API through a 360dialog BSP runs messaging. Every booking, deposit and client-file write is a tool call with an explicit JSON schema. The agent never authors the SOAP note - that stays with the licensed therapist to satisfy state-board rules.
+
+Numbers from the Austin 90-day case: appointment-closed-to-rebook-message latency p50 at 2.1 s, WhatsApp first-reply p50 at 41 s, 60-minute no-show 12% to 3% with Stripe deposits captured inside a service conversation, rebook-at-service-complete 42% to 71%. Reminder cadence 72h/24h/2h; when a cancellation drops inside the 24h window, a ranked waitlist fan-out fills the slot in a median 23 minutes.
+
+Where it breaks: Acuity and Square Appointments webhook coverage is thinner than Mangomint or Jane App, so the auto-rebook fires from a nightly reconciliation job instead of a real-time appointment-closed event. We treat the webhook path as primary and the poll path as a cold-start fallback with an explicit lag SLO.
+
+Full stack, HIPAA + TCPA guardrails and 2026 pricing bands: https://zeniapartners.com/blog/ai-agent-for-massage-therapists.html
+
+#PlatformEngineering #WhatsAppBusinessAPI #AIEngineering #B2B
+
+---

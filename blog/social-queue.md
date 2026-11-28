@@ -11924,3 +11924,20 @@ Full stack, HIPAA + TCPA guardrails and 2026 pricing bands: https://zeniapartner
 #PlatformEngineering #WhatsAppBusinessAPI #AIEngineering #B2B
 
 ---
+## 2026-11-28 - Dental CRM for Málaga clinics: the WhatsApp stack on top of Gesden and Clinic Cloud
+
+How a dental CRM with an AI agent runs on top of the clinic's existing software (Gesden, Clinic Cloud, Dentalink) in a Málaga single-chair practice.
+
+Ingest: WhatsApp Cloud API via a European BSP, webhook returns 200 inside 500 ms and pushes to SQS. The agent is a state-machine wrapper around GPT-4.1 with tools for availability lookup, deposit capture (Stripe Checkout) and appointment write-back. The clinical software stays the system of record for the odontogram and the invoice; the CRM is the system of record for the lead, the source attribution and the conversation.
+
+Latency budget: first WhatsApp reply p50 under 45 s across business hours and off-hours, tool-call round-trip to the dental backend p95 under 1.2 s, handoff-to-human on urgency keyword in under 10 s. Multilingual intake (ES, EN, DE) runs on the same model with per-language guardrails for consent capture to keep GDPR Art. 7 clean.
+
+Numbers worth citing honestly: Klinikare (via Vozpópuli) puts missed-appointment cost at €2,500-€7,500/month per private clinic, and a Universidad Pontificia Comillas TFG on ~107,000 Spanish appointments estimates a median €1,300/month recovered when reminders are optimized rather than uniform. Those are the two defensible anchors; everything else is a case number.
+
+Where it breaks: Gesden ONE prices WhatsApp messages at €0.075 per message in its own channel, so cost control sits in the template catalogue, not in the runtime. Older on-prem installs without a stable API are handled via a nightly sync + CDC bridge, with WhatsApp as source of truth during the day and reconciliation at 03:00 local.
+
+Full comparison (Gesden, Clinic Cloud, Dentalink, Pabau, Zenia) and the 4-5 week rollout: https://zeniapartners.com/blog/mejor-crm-para-clinicas-dentales-en-malaga.html
+
+#HealthTech #WhatsAppBusinessAPI #PlatformEngineering #AIEngineering
+
+---

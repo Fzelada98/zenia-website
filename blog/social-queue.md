@@ -11893,3 +11893,19 @@ Full architecture (ingest, identity, orchestrator, tools, observability) and the
 #PlatformEngineering #WhatsAppBusinessAPI #AIEngineering #B2B
 
 ---
+
+## 2026-11-28 - Christmas group reservations on WhatsApp: the restaurant-flow architecture
+
+How the Christmas-group reservation flow runs for a 6-location restaurant group on WhatsApp.
+
+Ingest: Meta WhatsApp Cloud API webhook, 200 OK in under 500 ms, fan-in via SQS. The agent is a state-machine wrapper around GPT-4.1: intake → menu select → availability check (CoverManager REST) → deposit via Stripe Checkout → CRM write. Each transition is a tool call with an explicit JSON schema; free-form LLM output never touches the booking system directly.
+
+Hard numbers from the December 2025 campaign: p50 first response 11 s, deposit conversion 94% on initiated group bookings of 8+ covers, group no-show rate dropped from 14% to 4.1% with a 72h double-confirm template. Utility conversation cost around €0.0166 in Spain, so the proactive outbound budget is deterministic.
+
+Where it breaks: legacy PMSs without a public API. We fall back to a nightly sync job and treat WhatsApp as source of truth during the 20-day peak; reconciliation runs at 04:00 local.
+
+Full flow, deposit policy and 2026 pricing bands: https://zeniapartners.com/blog/menu-navidad-restaurante-whatsapp-2026.html
+
+#RestaurantTech #WhatsAppBusinessAPI #PlatformEngineering #AIEngineering
+
+---

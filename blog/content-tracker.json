@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-11-27",
+  "lastRun": "2026-11-28",
   "posts": [
     {
       "slug": "agente-ia-omnicanal-whatsapp-instagram",
@@ -5364,6 +5364,15 @@
       "status": "published",
       "date": "2026-11-27",
       "source": "keyword-matrix-expansion"
+    },
+    {
+      "slug": "menu-navidad-restaurante-whatsapp-2026",
+      "keyword": "menu de navidad restaurante whatsapp",
+      "tier": 2,
+      "cluster": "restaurantes",
+      "status": "published",
+      "date": "2026-11-28",
+      "source": "keyword-matrix-seasonal"
     }
   ]
 }
